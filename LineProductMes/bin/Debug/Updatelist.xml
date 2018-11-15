@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoUpdater>
+  <Description>Application autoUpdate</Description>
+  <Updater>
+    <Url>http://192.168.0.170/</Url>
+    <LastUpdateTime>2013-06-18</LastUpdateTime>
+  </Updater>
+  <Application applicationId="LineProductMes">
+    <EntryPoint>LineProductMes.exe</EntryPoint>
+    <Location>.</Location>
+    <VersionName>1.0.0.1</VersionName>
+    <VersionId>1</VersionId>
+  </Application>
+</AutoUpdater>

@@ -1,0 +1,4299 @@
+09:34:32.423  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:34:39.242 @EMP002 系统管理员
+09:34:39.246 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:42:36.337  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:42:56.606 @EMP002 系统管理员
+09:42:56.609 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:45:02.956  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:45:22.238 @EMP002 系统管理员
+09:45:22.240 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:46:05.735 @PAN001 20180922001
+09:46:05.737 @PAN002 0503
+09:46:05.739 @PAN003 喷涂车间
+09:46:05.740 @PAN004 0503
+09:46:05.741 @PAN005 喷涂车间
+09:46:05.743 @PAN006 2018/9/22 0:00:00
+09:46:05.744 @PAN007 
+09:46:05.746 @PAN008 
+09:46:05.747 @PAN009 False
+09:46:05.749 @PAN010 False
+09:46:05.750 @PAN011 0
+09:46:05.752 @PAN012 0
+09:46:05.755 @PAO001 20180922001
+09:46:05.757 @PAO002 GD201502090046
+09:46:05.758 @PAO003 202121399
+09:46:05.759 @PAO004 暖风机面板
+09:46:05.761 @PAO005 300
+09:46:05.762 @PAO006 24
+09:46:05.763 @PAO007 PCS
+09:46:05.765 @PAO008 
+09:46:05.766 @PAO009 03
+09:46:05.767 @PAO010 丝印
+09:46:05.769 @PAO011 12.000000
+09:46:05.771 @PAO012 12
+09:46:05.772 @PAO013 001
+09:46:05.776 @PAO001 20180922001
+09:46:05.777 @PAO002 GD201502090046
+09:46:05.779 @PAO003 202121399
+09:46:05.780 @PAO004 暖风机面板
+09:46:05.781 @PAO005 300
+09:46:05.783 @PAO006 24
+09:46:05.784 @PAO007 PCS
+09:46:05.785 @PAO008 
+09:46:05.787 @PAO009 21
+09:46:05.788 @PAO010 喷涂-组装
+
+09:46:05.790 @PAO011 12.000000
+09:46:05.791 @PAO012 12
+09:46:05.792 @PAO013 002
+09:46:05.795 @PAP001 20180922001
+09:46:05.796 @PPA002 10093
+09:46:05.798 @PPA003 陈林甫
+09:46:05.799 @PPA004 喷漆工
+09:46:05.800 @PPA005 
+09:46:05.801 @PPA006 
+09:46:05.802 @PPA007 2018/9/22 8:00:00
+09:46:05.804 @PPA008 2018/9/22 17:00:00
+09:46:05.805 @PPA009 12
+09:46:05.806 @PPA010 在职
+09:46:05.808 @PPA011 喷涂车间
+09:46:05.810 @PPA012 0
+09:46:05.812 @PPA013 9
+09:46:05.813 @PPA014 144.000000
+09:46:05.817 @PAP001 20180922001
+09:46:05.819 @PPA002 10094
+09:46:05.820 @PPA003 张正友
+09:46:05.821 @PPA004 喷漆工
+09:46:05.823 @PPA005 
+09:46:05.824 @PPA006 
+09:46:05.826 @PPA007 2018/9/22 8:00:00
+09:46:05.828 @PPA008 2018/9/22 17:00:00
+09:46:05.829 @PPA009 12
+09:46:05.830 @PPA010 在职
+09:46:05.832 @PPA011 喷涂车间
+09:46:05.833 @PPA012 0
+09:46:05.835 @PPA013 9
+09:46:05.837 @PPA014 144.000000
+09:46:05.840 @PAP001 20180922001
+09:46:05.841 @PPA002 10095
+09:46:05.843 @PPA003 王光
+09:46:05.844 @PPA004 喷漆工
+09:46:05.846 @PPA005 
+09:46:05.847 @PPA006 
+09:46:05.848 @PPA007 2018/9/22 8:00:00
+09:46:05.850 @PPA008 2018/9/22 17:00:00
+09:46:05.851 @PPA009 12
+09:46:05.852 @PPA010 在职
+09:46:05.853 @PPA011 喷涂车间
+09:46:05.855 @PPA012 0
+09:46:05.856 @PPA013 9
+09:46:05.858 @PPA014 144.000000
+09:46:05.861 @PAP001 20180922001
+09:46:05.862 @PPA002 10096
+09:46:05.864 @PPA003 钱均鹏
+09:46:05.865 @PPA004 喷漆工
+09:46:05.866 @PPA005 
+09:46:05.867 @PPA006 
+09:46:05.869 @PPA007 2018/9/22 8:00:00
+09:46:05.870 @PPA008 2018/9/22 17:00:00
+09:46:05.871 @PPA009 12
+09:46:05.872 @PPA010 在职
+09:46:05.874 @PPA011 喷涂车间
+09:46:05.875 @PPA012 0
+09:46:05.876 @PPA013 9
+09:46:05.877 @PPA014 144.000000
+09:46:05.880 @PAP001 20180922001
+09:46:05.881 @PPA002 10097
+09:46:05.883 @PPA003 陆秋云
+09:46:05.885 @PPA004 装配工
+09:46:05.886 @PPA005 
+09:46:05.888 @PPA006 
+09:46:05.889 @PPA007 2018/9/22 8:00:00
+09:46:05.890 @PPA008 2018/9/22 17:00:00
+09:46:05.892 @PPA009 12
+09:46:05.893 @PPA010 在职
+09:46:05.894 @PPA011 喷涂车间
+09:46:05.895 @PPA012 0
+09:46:05.896 @PPA013 9
+09:46:05.897 @PPA014 180.000000
+09:46:05.899 @PAP001 20180922001
+09:46:05.901 @PPA002 10098
+09:46:05.903 @PPA003 郁叶琴
+09:46:05.904 @PPA004 装配工
+09:46:05.906 @PPA005 
+09:46:05.908 @PPA006 
+09:46:05.909 @PPA007 2018/9/22 8:00:00
+09:46:05.911 @PPA008 2018/9/22 17:00:00
+09:46:05.913 @PPA009 12
+09:46:05.914 @PPA010 在职
+09:46:05.916 @PPA011 喷涂车间
+09:46:05.917 @PPA012 0
+09:46:05.918 @PPA013 9
+09:46:05.920 @PPA014 180.000000
+09:46:20.469 @PAN002 0503
+09:46:20.471 @PAN003 喷涂车间
+09:46:20.472 @PAN004 0503
+09:46:20.474 @PAN005 喷涂车间
+09:46:20.475 @PAN006 2018/9/22 0:00:00
+09:46:20.476 @PAN007 
+09:46:20.478 @PAN008 
+09:46:20.479 @PAN009 False
+09:46:20.481 @PAN010 False
+09:46:20.482 @PAN001 20180922002
+09:46:20.484 @PAN011 0
+09:46:20.485 @PAN012 0
+09:46:20.490 @PAO003 202121399
+09:46:20.492 @PAO004 暖风机面板
+09:46:20.493 @PAO005 300
+09:46:20.494 @PAO006 24.000000
+09:46:20.495 @PAO007 PCS
+09:46:20.496 @PAO008 
+09:46:20.498 @PAO009 03
+09:46:20.499 @PAO010 丝印
+09:46:20.501 @PAO011 12.000000
+09:46:20.502 @PAO012 12
+09:46:20.503 @idx 21
+09:46:20.504 @PAO002 GD201502090046
+09:46:20.505 @PAO013 001
+09:46:20.512 @PAO003 202121399
+09:46:20.513 @PAO004 暖风机面板
+09:46:20.514 @PAO005 300
+09:46:20.515 @PAO006 24.000000
+09:46:20.516 @PAO007 PCS
+09:46:20.518 @PAO008 
+09:46:20.519 @PAO009 21
+09:46:20.520 @PAO010 喷涂-组装
+
+09:46:20.522 @PAO011 12.000000
+09:46:20.523 @PAO012 12
+09:46:20.524 @idx 22
+09:46:20.526 @PAO002 GD201502090046
+09:46:20.527 @PAO013 002
+09:46:20.529 @PAO001 20180922002
+09:46:20.531 @PAO002 GD201503120005
+09:46:20.532 @PAO003 202121399
+09:46:20.533 @PAO004 暖风机面板
+09:46:20.535 @PAO005 480
+09:46:20.536 @PAO006 24
+09:46:20.538 @PAO007 PCS
+09:46:20.539 @PAO008 
+09:46:20.540 @PAO009 03
+09:46:20.541 @PAO010 丝印
+09:46:20.543 @PAO011 12.000000
+09:46:20.544 @PAO012 11
+09:46:20.545 @PAO013 001
+09:46:20.575 INSERT 语句与 FOREIGN KEY 约束"FK_MIKPAO_MIKPAN"冲突。该冲突发生于数据库"MIKE"，表"dbo.MIKPAN", column 'PAN001'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 StudentMgr.SqlHelper.ExecuteSqlTranDic(Dictionary`2 SQLString) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 962
+09:46:20.576 insert into MIKPAO(PAO001,PAO002,PAO003,PAO004,PAO005,PAO006,PAO007,PAO008,PAO009,PAO010,PAO011,PAO012,PAO013) values (@PAO001,@PAO002,@PAO003,@PAO004,@PAO005,@PAO006,@PAO007,@PAO008,@PAO009,@PAO010,@PAO011,@PAO012,@PAO013)
+09:47:25.812  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:49:36.431 @EMP002 系统管理员
+09:49:36.434 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:14:43.911  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:14:50.690 @EMP002 系统管理员
+10:14:50.694 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:15:18.212 选择列表中的列 'MIKPAO.PAO002' 无效，因为该列没有包含在聚合函数或 GROUP BY 子句中。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 StudentMgr.SqlHelper.ExecuteDataTable(SqlConnection conn, String cmdText, SqlParameter[] parameters) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 278
+10:15:18.213 SELECT PAO002,PAO003,PAO013,PAO005-SUM(PAO012) PAO FROM MIKPAO WHERE PAO001!='20180922002' AND PAO002='GD201503120005' AND PAO003='202121399' 
+10:16:14.486  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:16:20.090 @EMP002 系统管理员
+10:16:20.094 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:17:08.465 @PAN001 20180822001
+10:17:08.468 @PAN009 False
+10:17:14.204 @PAN001 20180822002
+10:17:14.207 @PAN009 False
+10:17:20.204 @PAN001 20180907001
+10:17:20.207 @PAN009 False
+10:17:45.433 @PAN001 20180922001
+10:17:45.435 @PAN002 0503
+10:17:45.437 @PAN003 喷涂车间
+10:17:45.439 @PAN004 0503
+10:17:45.441 @PAN005 喷涂车间
+10:17:45.442 @PAN006 2018/9/22 0:00:00
+10:17:45.444 @PAN007 
+10:17:45.446 @PAN008 
+10:17:45.448 @PAN009 False
+10:17:45.449 @PAN010 False
+10:17:45.451 @PAN011 0
+10:17:45.453 @PAN012 0
+10:17:45.456 @PAO001 20180922001
+10:17:45.458 @PAO002 GD201502090046
+10:17:45.460 @PAO003 202121399
+10:17:45.461 @PAO004 暖风机面板
+10:17:45.463 @PAO005 300
+10:17:45.465 @PAO006 24
+10:17:45.466 @PAO007 PCS
+10:17:45.468 @PAO008 
+10:17:45.470 @PAO009 03
+10:17:45.471 @PAO010 丝印
+10:17:45.473 @PAO011 12.000000
+10:17:45.474 @PAO012 100
+10:17:45.476 @PAO013 001
+10:17:45.478 @PAO001 20180922001
+10:17:45.480 @PAO002 GD201502090046
+10:17:45.481 @PAO003 202121399
+10:17:45.483 @PAO004 暖风机面板
+10:17:45.484 @PAO005 300
+10:17:45.485 @PAO006 24
+10:17:45.486 @PAO007 PCS
+10:17:45.487 @PAO008 
+10:17:45.489 @PAO009 21
+10:17:45.490 @PAO010 喷涂-组装
+
+10:17:45.491 @PAO011 12.000000
+10:17:45.492 @PAO012 100
+10:17:45.493 @PAO013 002
+10:17:45.496 @PAP001 20180922001
+10:17:45.498 @PPA002 10093
+10:17:45.499 @PPA003 陈林甫
+10:17:45.500 @PPA004 喷漆工
+10:17:45.502 @PPA005 
+10:17:45.503 @PPA006 
+10:17:45.504 @PPA007 2018/9/22 8:00:00
+10:17:45.505 @PPA008 2018/9/22 17:00:00
+10:17:45.507 @PPA009 0
+10:17:45.508 @PPA010 在职
+10:17:45.509 @PPA011 喷涂车间
+10:17:45.510 @PPA012 0
+10:17:45.512 @PPA013 9
+10:17:45.513 @PPA014 300.00000000000000000000000000
+10:17:45.517 @PAP001 20180922001
+10:17:45.518 @PPA002 10094
+10:17:45.520 @PPA003 张正友
+10:17:45.521 @PPA004 喷漆工
+10:17:45.522 @PPA005 
+10:17:45.524 @PPA006 
+10:17:45.525 @PPA007 2018/9/22 8:00:00
+10:17:45.526 @PPA008 2018/9/22 17:00:00
+10:17:45.527 @PPA009 0
+10:17:45.529 @PPA010 在职
+10:17:45.530 @PPA011 喷涂车间
+10:17:45.531 @PPA012 0
+10:17:45.533 @PPA013 9
+10:17:45.534 @PPA014 300.00000000000000000000000000
+10:17:45.536 @PAP001 20180922001
+10:17:45.538 @PPA002 10095
+10:17:45.539 @PPA003 王光
+10:17:45.540 @PPA004 喷漆工
+10:17:45.541 @PPA005 
+10:17:45.543 @PPA006 
+10:17:45.544 @PPA007 2018/9/22 8:00:00
+10:17:45.546 @PPA008 2018/9/22 17:00:00
+10:17:45.547 @PPA009 0
+10:17:45.548 @PPA010 在职
+10:17:45.549 @PPA011 喷涂车间
+10:17:45.551 @PPA012 0
+10:17:45.552 @PPA013 9
+10:17:45.553 @PPA014 300.00000000000000000000000000
+10:17:45.555 @PAP001 20180922001
+10:17:45.557 @PPA002 10096
+10:17:45.558 @PPA003 钱均鹏
+10:17:45.560 @PPA004 喷漆工
+10:17:45.561 @PPA005 
+10:17:45.563 @PPA006 
+10:17:45.564 @PPA007 2018/9/22 8:00:00
+10:17:45.565 @PPA008 2018/9/22 17:00:00
+10:17:45.566 @PPA009 0
+10:17:45.568 @PPA010 在职
+10:17:45.569 @PPA011 喷涂车间
+10:17:45.570 @PPA012 0
+10:17:45.571 @PPA013 9
+10:17:45.573 @PPA014 300.00000000000000000000000000
+10:17:45.575 @PAP001 20180922001
+10:17:45.577 @PPA002 10097
+10:17:45.578 @PPA003 陆秋云
+10:17:45.579 @PPA004 装配工
+10:17:45.581 @PPA005 
+10:17:45.582 @PPA006 
+10:17:45.583 @PPA007 2018/9/22 8:00:00
+10:17:45.584 @PPA008 2018/9/22 17:00:00
+10:17:45.586 @PPA009 0
+10:17:45.587 @PPA010 在职
+10:17:45.588 @PPA011 喷涂车间
+10:17:45.589 @PPA012 0
+10:17:45.591 @PPA013 9
+10:17:45.592 @PPA014 600.00000000000000000000000000
+10:17:45.594 @PAP001 20180922001
+10:17:45.595 @PPA002 10098
+10:17:45.596 @PPA003 郁叶琴
+10:17:45.598 @PPA004 装配工
+10:17:45.599 @PPA005 
+10:17:45.600 @PPA006 
+10:17:45.601 @PPA007 2018/9/22 8:00:00
+10:17:45.602 @PPA008 2018/9/22 17:00:00
+10:17:45.604 @PPA009 0
+10:17:45.605 @PPA010 在职
+10:17:45.607 @PPA011 喷涂车间
+10:17:45.609 @PPA012 0
+10:17:45.610 @PPA013 9
+10:17:45.611 @PPA014 600.00000000000000000000000000
+10:17:56.753 @PAN001 20180922002
+10:17:56.756 @PAN002 0503
+10:17:56.759 @PAN003 喷涂车间
+10:17:56.762 @PAN004 0503
+10:17:56.764 @PAN005 喷涂车间
+10:17:56.766 @PAN006 2018/9/22 0:00:00
+10:17:56.767 @PAN007 
+10:17:56.769 @PAN008 
+10:17:56.770 @PAN009 False
+10:17:56.771 @PAN010 False
+10:17:56.773 @PAN011 0
+10:17:56.774 @PAN012 0
+10:17:56.779 @PAO001 20180922002
+10:17:56.780 @PAO002 GD201502090046
+10:17:56.782 @PAO003 202121399
+10:17:56.784 @PAO004 暖风机面板
+10:17:56.785 @PAO005 300
+10:17:56.787 @PAO006 24
+10:17:56.789 @PAO007 PCS
+10:17:56.790 @PAO008 
+10:17:56.792 @PAO009 03
+10:17:56.793 @PAO010 丝印
+10:17:56.795 @PAO011 12.000000
+10:17:56.796 @PAO012 120
+10:17:56.797 @PAO013 001
+10:17:56.800 @PAO001 20180922002
+10:17:56.801 @PAO002 GD201502090046
+10:17:56.803 @PAO003 202121399
+10:17:56.804 @PAO004 暖风机面板
+10:17:56.805 @PAO005 300
+10:17:56.807 @PAO006 24
+10:17:56.808 @PAO007 PCS
+10:17:56.809 @PAO008 
+10:17:56.810 @PAO009 21
+10:17:56.812 @PAO010 喷涂-组装
+
+10:17:56.813 @PAO011 12.000000
+10:17:56.814 @PAO012 200
+10:17:56.816 @PAO013 002
+10:17:56.818 @PAP001 20180922002
+10:17:56.820 @PPA002 10093
+10:17:56.822 @PPA003 陈林甫
+10:17:56.823 @PPA004 喷漆工
+10:17:56.824 @PPA005 
+10:17:56.826 @PPA006 
+10:17:56.827 @PPA007 2018/9/22 8:00:00
+10:17:56.828 @PPA008 2018/9/22 17:00:00
+10:17:56.830 @PPA009 0
+10:17:56.831 @PPA010 在职
+10:17:56.832 @PPA011 喷涂车间
+10:17:56.833 @PPA012 0
+10:17:56.835 @PPA013 9
+10:17:56.836 @PPA014 360.000000
+10:17:56.843 @PAP001 20180922002
+10:17:56.844 @PPA002 10094
+10:17:56.846 @PPA003 张正友
+10:17:56.847 @PPA004 喷漆工
+10:17:56.848 @PPA005 
+10:17:56.850 @PPA006 
+10:17:56.851 @PPA007 2018/9/22 8:00:00
+10:17:56.852 @PPA008 2018/9/22 17:00:00
+10:17:56.854 @PPA009 0
+10:17:56.856 @PPA010 在职
+10:17:56.857 @PPA011 喷涂车间
+10:17:56.859 @PPA012 0
+10:17:56.861 @PPA013 9
+10:17:56.862 @PPA014 360.000000
+10:17:56.865 @PAP001 20180922002
+10:17:56.866 @PPA002 10095
+10:17:56.867 @PPA003 王光
+10:17:56.869 @PPA004 喷漆工
+10:17:56.870 @PPA005 
+10:17:56.871 @PPA006 
+10:17:56.873 @PPA007 2018/9/22 8:00:00
+10:17:56.874 @PPA008 2018/9/22 17:00:00
+10:17:56.875 @PPA009 0
+10:17:56.876 @PPA010 在职
+10:17:56.878 @PPA011 喷涂车间
+10:17:56.879 @PPA012 0
+10:17:56.880 @PPA013 9
+10:17:56.882 @PPA014 360.000000
+10:17:56.885 @PAP001 20180922002
+10:17:56.886 @PPA002 10096
+10:17:56.888 @PPA003 钱均鹏
+10:17:56.889 @PPA004 喷漆工
+10:17:56.890 @PPA005 
+10:17:56.892 @PPA006 
+10:17:56.893 @PPA007 2018/9/22 8:00:00
+10:17:56.894 @PPA008 2018/9/22 17:00:00
+10:17:56.895 @PPA009 0
+10:17:56.896 @PPA010 在职
+10:17:56.897 @PPA011 喷涂车间
+10:17:56.898 @PPA012 0
+10:17:56.900 @PPA013 9
+10:17:56.901 @PPA014 360.000000
+10:17:56.904 @PAP001 20180922002
+10:17:56.906 @PPA002 10097
+10:17:56.907 @PPA003 陆秋云
+10:17:56.908 @PPA004 装配工
+10:17:56.910 @PPA005 
+10:17:56.911 @PPA006 
+10:17:56.912 @PPA007 2018/9/22 8:00:00
+10:17:56.913 @PPA008 2018/9/22 17:00:00
+10:17:56.914 @PPA009 0
+10:17:56.916 @PPA010 在职
+10:17:56.918 @PPA011 喷涂车间
+10:17:56.919 @PPA012 0
+10:17:56.921 @PPA013 9
+10:17:56.922 @PPA014 1200.0000000000000000000000000
+10:17:56.927 @PAP001 20180922002
+10:17:56.928 @PPA002 10098
+10:17:56.930 @PPA003 郁叶琴
+10:17:56.932 @PPA004 装配工
+10:17:56.933 @PPA005 
+10:17:56.935 @PPA006 
+10:17:56.936 @PPA007 2018/9/22 8:00:00
+10:17:56.937 @PPA008 2018/9/22 17:00:00
+10:17:56.939 @PPA009 0
+10:17:56.940 @PPA010 在职
+10:17:56.941 @PPA011 喷涂车间
+10:17:56.943 @PPA012 0
+10:17:56.944 @PPA013 9
+10:17:56.945 @PPA014 1200.0000000000000000000000000
+10:18:08.956 @PAN001 20180922003
+10:18:08.960 @PAN002 0503
+10:18:08.967 @PAN003 喷涂车间
+10:18:08.970 @PAN004 0503
+10:18:08.972 @PAN005 喷涂车间
+10:18:08.974 @PAN006 2018/9/22 0:00:00
+10:18:08.976 @PAN007 
+10:18:08.977 @PAN008 
+10:18:08.979 @PAN009 False
+10:18:08.982 @PAN010 False
+10:18:08.983 @PAN011 0
+10:18:08.985 @PAN012 0
+10:18:08.988 @PAO001 20180922003
+10:18:08.989 @PAO002 GD201502090046
+10:18:08.991 @PAO003 202121399
+10:18:08.993 @PAO004 暖风机面板
+10:18:08.994 @PAO005 300
+10:18:08.996 @PAO006 24
+10:18:08.997 @PAO007 PCS
+10:18:08.998 @PAO008 
+10:18:09.000 @PAO009 03
+10:18:09.001 @PAO010 丝印
+10:18:09.003 @PAO011 12.000000
+10:18:09.004 @PAO012 80
+10:18:09.005 @PAO013 001
+10:18:09.007 @PAO001 20180922003
+10:18:09.009 @PAO002 GD201502090046
+10:18:09.011 @PAO003 202121399
+10:18:09.012 @PAO004 暖风机面板
+10:18:09.013 @PAO005 300
+10:18:09.014 @PAO006 24
+10:18:09.016 @PAO007 PCS
+10:18:09.017 @PAO008 
+10:18:09.018 @PAO009 21
+10:18:09.019 @PAO010 喷涂-组装
+
+10:18:09.021 @PAO011 12.000000
+10:18:09.022 @PAO012 0
+10:18:09.023 @PAO013 002
+10:18:09.026 @PAP001 20180922003
+10:18:09.028 @PPA002 10093
+10:18:09.029 @PPA003 陈林甫
+10:18:09.031 @PPA004 喷漆工
+10:18:09.032 @PPA005 
+10:18:09.033 @PPA006 
+10:18:09.035 @PPA007 2018/9/22 8:00:00
+10:18:09.036 @PPA008 2018/9/22 17:00:00
+10:18:09.037 @PPA009 0
+10:18:09.038 @PPA010 在职
+10:18:09.040 @PPA011 喷涂车间
+10:18:09.041 @PPA012 0
+10:18:09.042 @PPA013 9
+10:18:09.043 @PPA014 240.00000000000000000000000000
+10:18:09.045 @PAP001 20180922003
+10:18:09.047 @PPA002 10094
+10:18:09.048 @PPA003 张正友
+10:18:09.050 @PPA004 喷漆工
+10:18:09.051 @PPA005 
+10:18:09.052 @PPA006 
+10:18:09.054 @PPA007 2018/9/22 8:00:00
+10:18:09.055 @PPA008 2018/9/22 17:00:00
+10:18:09.056 @PPA009 0
+10:18:09.058 @PPA010 在职
+10:18:09.059 @PPA011 喷涂车间
+10:18:09.060 @PPA012 0
+10:18:09.061 @PPA013 9
+10:18:09.063 @PPA014 240.00000000000000000000000000
+10:18:09.065 @PAP001 20180922003
+10:18:09.066 @PPA002 10095
+10:18:09.068 @PPA003 王光
+10:18:09.069 @PPA004 喷漆工
+10:18:09.070 @PPA005 
+10:18:09.072 @PPA006 
+10:18:09.073 @PPA007 2018/9/22 8:00:00
+10:18:09.075 @PPA008 2018/9/22 17:00:00
+10:18:09.076 @PPA009 0
+10:18:09.077 @PPA010 在职
+10:18:09.078 @PPA011 喷涂车间
+10:18:09.080 @PPA012 0
+10:18:09.081 @PPA013 9
+10:18:09.082 @PPA014 240.00000000000000000000000000
+10:18:09.085 @PAP001 20180922003
+10:18:09.087 @PPA002 10096
+10:18:09.088 @PPA003 钱均鹏
+10:18:09.089 @PPA004 喷漆工
+10:18:09.091 @PPA005 
+10:18:09.092 @PPA006 
+10:18:09.093 @PPA007 2018/9/22 8:00:00
+10:18:09.094 @PPA008 2018/9/22 17:00:00
+10:18:09.096 @PPA009 0
+10:18:09.097 @PPA010 在职
+10:18:09.098 @PPA011 喷涂车间
+10:18:09.099 @PPA012 0
+10:18:09.101 @PPA013 9
+10:18:09.102 @PPA014 240.00000000000000000000000000
+10:18:09.105 @PAP001 20180922003
+10:18:09.106 @PPA002 10097
+10:18:09.108 @PPA003 陆秋云
+10:18:09.109 @PPA004 装配工
+10:18:09.110 @PPA005 
+10:18:09.111 @PPA006 
+10:18:09.113 @PPA007 2018/9/22 8:00:00
+10:18:09.114 @PPA008 2018/9/22 17:00:00
+10:18:09.116 @PPA009 0
+10:18:09.117 @PPA010 在职
+10:18:09.118 @PPA011 喷涂车间
+10:18:09.120 @PPA012 0
+10:18:09.121 @PPA013 9
+10:18:09.123 @PPA014 0.000000
+10:18:09.126 @PAP001 20180922003
+10:18:09.128 @PPA002 10098
+10:18:09.129 @PPA003 郁叶琴
+10:18:09.131 @PPA004 装配工
+10:18:09.133 @PPA005 
+10:18:09.134 @PPA006 
+10:18:09.135 @PPA007 2018/9/22 8:00:00
+10:18:09.136 @PPA008 2018/9/22 17:00:00
+10:18:09.138 @PPA009 0
+10:18:09.139 @PPA010 在职
+10:18:09.140 @PPA011 喷涂车间
+10:18:09.141 @PPA012 0
+10:18:09.143 @PPA013 9
+10:18:09.144 @PPA014 0.000000
+10:19:21.507  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:20:15.159 @EMP002 系统管理员
+10:20:15.161 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:25:13.101 @PAN002 0503
+10:25:13.103 @PAN003 喷涂车间
+10:25:13.104 @PAN004 0503
+10:25:13.106 @PAN005 喷涂车间
+10:25:13.108 @PAN006 2018/9/22 0:00:00
+10:25:13.109 @PAN007 
+10:25:13.111 @PAN008 
+10:25:13.112 @PAN009 False
+10:25:13.113 @PAN010 False
+10:25:13.115 @PAN001 20180922004
+10:25:13.116 @PAN011 0
+10:25:13.118 @PAN012 0
+10:25:13.120 @PAO003 202121399
+10:25:13.122 @PAO004 暖风机面板
+10:25:13.123 @PAO005 300
+10:25:13.125 @PAO006 24.000000
+10:25:13.126 @PAO007 PCS
+10:25:13.128 @PAO008 
+10:25:13.129 @PAO009 03
+10:25:13.130 @PAO010 丝印
+10:25:13.132 @PAO011 12.000000
+10:25:13.133 @PAO012 100
+10:25:13.134 @idx 24
+10:25:13.135 @PAO002 GD201502090046
+10:25:13.136 @PAO013 001
+10:25:13.139 @PAO003 202121399
+10:25:13.140 @PAO004 暖风机面板
+10:25:13.142 @PAO005 300
+10:25:13.143 @PAO006 24.000000
+10:25:13.144 @PAO007 PCS
+10:25:13.146 @PAO008 
+10:25:13.147 @PAO009 21
+10:25:13.148 @PAO010 喷涂-组装
+
+10:25:13.149 @PAO011 12.000000
+10:25:13.151 @PAO012 100
+10:25:13.152 @idx 25
+10:25:13.153 @PAO002 GD201502090046
+10:25:13.154 @PAO013 002
+10:25:13.157 @PAO001 20180922004
+10:25:13.158 @PAO002 GD201503120005
+10:25:13.159 @PAO003 202121399
+10:25:13.161 @PAO004 暖风机面板
+10:25:13.162 @PAO005 480
+10:25:13.163 @PAO006 24
+10:25:13.165 @PAO007 PCS
+10:25:13.166 @PAO008 
+10:25:13.167 @PAO009 03
+10:25:13.169 @PAO010 丝印
+10:25:13.170 @PAO011 12.000000
+10:25:13.171 @PAO012 240
+10:25:13.172 @PAO013 001
+10:25:13.196 INSERT 语句与 FOREIGN KEY 约束"FK_MIKPAO_MIKPAN"冲突。该冲突发生于数据库"MIKE"，表"dbo.MIKPAN", column 'PAN001'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 StudentMgr.SqlHelper.ExecuteSqlTranDic(Dictionary`2 SQLString) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 962
+10:25:13.197 insert into MIKPAO(PAO001,PAO002,PAO003,PAO004,PAO005,PAO006,PAO007,PAO008,PAO009,PAO010,PAO011,PAO012,PAO013) values (@PAO001,@PAO002,@PAO003,@PAO004,@PAO005,@PAO006,@PAO007,@PAO008,@PAO009,@PAO010,@PAO011,@PAO012,@PAO013)
+10:26:35.088  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:27:02.789 @EMP002 系统管理员
+10:27:02.791 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:28:43.964 @PAN002 0503
+10:28:43.966 @PAN003 喷涂车间
+10:28:43.967 @PAN004 0503
+10:28:43.969 @PAN005 喷涂车间
+10:28:43.970 @PAN006 2018/9/22 0:00:00
+10:28:43.971 @PAN007 
+10:28:43.973 @PAN008 
+10:28:43.974 @PAN009 False
+10:28:43.975 @PAN010 False
+10:28:43.976 @PAN001 20180922004
+10:28:43.978 @PAN011 0
+10:28:43.979 @PAN012 0
+10:28:43.985 @PAO003 202121399
+10:28:43.986 @PAO004 暖风机面板
+10:28:43.988 @PAO005 300
+10:28:43.989 @PAO006 24.000000
+10:28:43.990 @PAO007 PCS
+10:28:43.991 @PAO008 
+10:28:43.993 @PAO009 03
+10:28:43.994 @PAO010 丝印
+10:28:43.996 @PAO011 12.000000
+10:28:43.997 @PAO012 100
+10:28:43.998 @idx 24
+10:28:43.999 @PAO002 GD201502090046
+10:28:44.001 @PAO013 001
+10:28:44.008 @PAO003 202121399
+10:28:44.010 @PAO004 暖风机面板
+10:28:44.012 @PAO005 300
+10:28:44.013 @PAO006 24.000000
+10:28:44.015 @PAO007 PCS
+10:28:44.016 @PAO008 
+10:28:44.018 @PAO009 21
+10:28:44.019 @PAO010 喷涂-组装
+
+10:28:44.021 @PAO011 12.000000
+10:28:44.022 @PAO012 100
+10:28:44.024 @idx 25
+10:28:44.025 @PAO002 GD201502090046
+10:28:44.027 @PAO013 002
+10:28:44.029 @PAO001 20180922004
+10:28:44.031 @PAO002 GD201503120005
+10:28:44.032 @PAO003 202121399
+10:28:44.034 @PAO004 暖风机面板
+10:28:44.035 @PAO005 480
+10:28:44.036 @PAO006 24
+10:28:44.038 @PAO007 PCS
+10:28:44.039 @PAO008 
+10:28:44.040 @PAO009 03
+10:28:44.041 @PAO010 丝印
+10:28:44.043 @PAO011 12.000000
+10:28:44.044 @PAO012 240
+10:28:44.045 @PAO013 001
+10:28:44.059 INSERT 语句与 FOREIGN KEY 约束"FK_MIKPAO_MIKPAN"冲突。该冲突发生于数据库"MIKE"，表"dbo.MIKPAN", column 'PAN001'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 StudentMgr.SqlHelper.ExecuteSqlTranDic(Dictionary`2 SQLString) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 962
+10:28:44.061 insert into MIKPAO(PAO001,PAO002,PAO003,PAO004,PAO005,PAO006,PAO007,PAO008,PAO009,PAO010,PAO011,PAO012,PAO013) values (@PAO001,@PAO002,@PAO003,@PAO004,@PAO005,@PAO006,@PAO007,@PAO008,@PAO009,@PAO010,@PAO011,@PAO012,@PAO013)
+10:30:40.535 @PAN002 0503
+10:30:40.537 @PAN003 喷涂车间
+10:30:40.538 @PAN004 0503
+10:30:40.539 @PAN005 喷涂车间
+10:30:40.541 @PAN006 2018/9/22 0:00:00
+10:30:40.542 @PAN007 
+10:30:40.544 @PAN008 
+10:30:40.546 @PAN009 False
+10:30:40.547 @PAN010 False
+10:30:40.549 @PAN001 20180922004
+10:30:40.550 @PAN011 0
+10:30:40.551 @PAN012 0
+10:31:04.818 @PAO003 202121399
+10:31:04.820 @PAO004 暖风机面板
+10:31:04.822 @PAO005 300
+10:31:04.826 @PAO006 24.000000
+10:31:04.828 @PAO007 PCS
+10:31:04.832 @PAO008 
+10:31:04.834 @PAO009 03
+10:31:04.836 @PAO010 丝印
+10:31:04.837 @PAO011 12.000000
+10:31:04.838 @PAO012 100
+10:31:04.840 @idx 24
+10:31:04.841 @PAO002 GD201502090046
+10:31:04.842 @PAO013 001
+10:31:11.097 @PAO003 202121399
+10:31:11.101 @PAO004 暖风机面板
+10:31:11.103 @PAO005 300
+10:31:11.105 @PAO006 24.000000
+10:31:11.107 @PAO007 PCS
+10:31:11.109 @PAO008 
+10:31:11.111 @PAO009 21
+10:31:11.114 @PAO010 喷涂-组装
+
+10:31:11.117 @PAO011 12.000000
+10:31:11.120 @PAO012 100
+10:31:11.122 @idx 25
+10:31:11.125 @PAO002 GD201502090046
+10:31:11.127 @PAO013 002
+10:36:47.128  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:36:54.505 @EMP002 系统管理员
+10:36:54.508 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:37:25.124 @PAN002 0503
+10:37:25.126 @PAN003 喷涂车间
+10:37:25.128 @PAN004 0503
+10:37:25.129 @PAN005 喷涂车间
+10:37:25.131 @PAN006 2018/9/22 0:00:00
+10:37:25.132 @PAN007 
+10:37:25.134 @PAN008 
+10:37:25.135 @PAN009 False
+10:37:25.136 @PAN010 False
+10:37:25.138 @PAN001 20180922001
+10:37:25.139 @PAN011 0
+10:37:25.141 @PAN012 0
+10:37:25.148 @PAO003 202121399
+10:37:25.150 @PAO004 暖风机面板
+10:37:25.151 @PAO005 300
+10:37:25.153 @PAO006 24.000000
+10:37:25.154 @PAO007 PCS
+10:37:25.156 @PAO008 
+10:37:25.157 @PAO009 03
+10:37:25.158 @PAO010 丝印
+10:37:25.160 @PAO011 12.000000
+10:37:25.161 @PAO012 100
+10:37:25.163 @idx 24
+10:37:25.164 @PAO002 GD201502090046
+10:37:25.165 @PAO013 001
+10:37:25.168 @PAO003 202121399
+10:37:25.169 @PAO004 暖风机面板
+10:37:25.170 @PAO005 300
+10:37:25.172 @PAO006 24.000000
+10:37:25.173 @PAO007 PCS
+10:37:25.174 @PAO008 
+10:37:25.175 @PAO009 21
+10:37:25.177 @PAO010 喷涂-组装
+
+10:37:25.178 @PAO011 12.000000
+10:37:25.179 @PAO012 100
+10:37:25.181 @idx 25
+10:37:25.182 @PAO002 GD201502090046
+10:37:25.183 @PAO013 002
+10:37:25.185 @PAO001 20180922001
+10:37:25.187 @PAO002 GD201503120005
+10:37:25.188 @PAO003 202121399
+10:37:25.189 @PAO004 暖风机面板
+10:37:25.191 @PAO005 480
+10:37:25.193 @PAO006 24
+10:37:25.194 @PAO007 PCS
+10:37:25.195 @PAO008 
+10:37:25.196 @PAO009 03
+10:37:25.197 @PAO010 丝印
+10:37:25.199 @PAO011 12.000000
+10:37:25.200 @PAO012 240
+10:37:25.201 @PAO013 001
+10:37:25.204 @PAO001 20180922001
+10:37:25.205 @PAO002 GD201503120005
+10:37:25.206 @PAO003 202121399
+10:37:25.208 @PAO004 暖风机面板
+10:37:25.210 @PAO005 480
+10:37:25.211 @PAO006 24
+10:37:25.212 @PAO007 PCS
+10:37:25.213 @PAO008 
+10:37:25.214 @PAO009 21
+10:37:25.215 @PAO010 喷涂-组装
+
+10:37:25.217 @PAO011 12.000000
+10:37:25.218 @PAO012 240
+10:37:25.220 @PAO013 002
+10:37:25.222 @PPA003 陈林甫
+10:37:25.224 @PPA004 喷漆工
+10:37:25.225 @PPA005 
+10:37:25.227 @PPA006 
+10:37:25.228 @PPA007 2018/9/22 8:00:00
+10:37:25.229 @PPA008 2018/9/22 17:00:00
+10:37:25.230 @PPA009 0.000000
+10:37:25.232 @idx 41
+10:37:25.233 @PPA002 10093
+10:37:25.234 @PPA010 在职
+10:37:25.235 @PPA011 喷涂车间
+10:37:25.237 @PPA012 0
+10:37:25.238 @PPA013 9
+10:37:25.239 @PPA014 1020.0000000000000000000000000
+10:37:25.246 @PPA003 张正友
+10:37:25.248 @PPA004 喷漆工
+10:37:25.249 @PPA005 
+10:37:25.250 @PPA006 
+10:37:25.252 @PPA007 2018/9/22 8:00:00
+10:37:25.253 @PPA008 2018/9/22 17:00:00
+10:37:25.254 @PPA009 0.000000
+10:37:25.256 @idx 42
+10:37:25.257 @PPA002 10094
+10:37:25.259 @PPA010 在职
+10:37:25.260 @PPA011 喷涂车间
+10:37:25.261 @PPA012 0
+10:37:25.262 @PPA013 9
+10:37:25.264 @PPA014 1020.0000000000000000000000000
+10:37:25.266 @PPA003 王光
+10:37:25.268 @PPA004 喷漆工
+10:37:25.269 @PPA005 
+10:37:25.271 @PPA006 
+10:37:25.273 @PPA007 2018/9/22 8:00:00
+10:37:25.274 @PPA008 2018/9/22 17:00:00
+10:37:25.275 @PPA009 0.000000
+10:37:25.276 @idx 43
+10:37:25.278 @PPA002 10095
+10:37:25.279 @PPA010 在职
+10:37:25.281 @PPA011 喷涂车间
+10:37:25.283 @PPA012 0
+10:37:25.285 @PPA013 9
+10:37:25.286 @PPA014 1020.0000000000000000000000000
+10:37:25.292 @PPA003 钱均鹏
+10:37:25.294 @PPA004 喷漆工
+10:37:25.296 @PPA005 
+10:37:25.298 @PPA006 
+10:37:25.300 @PPA007 2018/9/22 8:00:00
+10:37:25.301 @PPA008 2018/9/22 17:00:00
+10:37:25.303 @PPA009 0.000000
+10:37:25.304 @idx 44
+10:37:25.306 @PPA002 10096
+10:37:25.307 @PPA010 在职
+10:37:25.308 @PPA011 喷涂车间
+10:37:25.309 @PPA012 0
+10:37:25.312 @PPA013 9
+10:37:25.314 @PPA014 1020.0000000000000000000000000
+10:37:25.317 @PPA003 陆秋云
+10:37:25.318 @PPA004 装配工
+10:37:25.320 @PPA005 
+10:37:25.321 @PPA006 
+10:37:25.323 @PPA007 2018/9/22 8:00:00
+10:37:25.324 @PPA008 2018/9/22 17:00:00
+10:37:25.325 @PPA009 0.000000
+10:37:25.326 @idx 45
+10:37:25.327 @PPA002 10097
+10:37:25.329 @PPA010 在职
+10:37:25.330 @PPA011 喷涂车间
+10:37:25.331 @PPA012 0
+10:37:25.333 @PPA013 9
+10:37:25.334 @PPA014 2040.0000000000000000000000000
+10:37:25.337 @PPA003 郁叶琴
+10:37:25.338 @PPA004 装配工
+10:37:25.340 @PPA005 
+10:37:25.341 @PPA006 
+10:37:25.342 @PPA007 2018/9/22 8:00:00
+10:37:25.344 @PPA008 2018/9/22 17:00:00
+10:37:25.345 @PPA009 0.000000
+10:37:25.346 @idx 46
+10:37:25.347 @PPA002 10098
+10:37:25.349 @PPA010 在职
+10:37:25.350 @PPA011 喷涂车间
+10:37:25.352 @PPA012 0
+10:37:25.353 @PPA013 9
+10:37:25.354 @PPA014 2040.0000000000000000000000000
+10:37:28.262 @PAN001 20180922001
+10:37:28.264 @PAN009 True
+10:44:23.594  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:44:29.774 @EMP002 系统管理员
+10:44:29.778 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:46:47.759 @LEC001 20180818001
+10:46:47.763 @LEC017 False
+10:46:56.188 @LEC001 20180825001
+10:46:56.191 @LEC017 False
+10:47:12.883 @LEC001 20180906001
+10:47:12.887 @LEC017 False
+10:47:19.343 @LEC001 20180907001
+10:47:19.346 @LEC017 False
+11:10:14.030  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:10:21.146 @EMP002 系统管理员
+11:10:21.148 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:11:02.425 列名 'O' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 StudentMgr.SqlHelper.ExecuteDataTable(SqlConnection conn, String cmdText, SqlParameter[] parameters) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 278
+11:11:02.427 SELECT 1 idx,LEH001,LEH002,LEH003,LEH004,LEH005,LEH006,LEH007,LEH008,LEH009,O U4 from MIKLEH  WHERE 1=1 AND LEH001='20180814001'
+11:11:58.203  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:12:40.700 @EMP002 系统管理员
+11:12:40.701 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:13:36.126 @LEF001 20180922001
+11:13:36.128 @LEF009 0506
+11:13:36.130 @LEF010 LED车间
+11:13:36.131 @LEF011 0506
+11:13:36.132 @LEF012 LED车间
+11:13:36.133 @LEF013 2018/9/22 0:00:00
+11:13:36.135 @LEF015 
+11:13:36.136 @LEF016 
+11:13:36.137 @LEF017 False
+11:13:36.141 @LEF018 False
+11:13:36.143 @LEF019 0
+11:13:36.144 @LEF020 0
+11:13:36.149 @LEG001 20180922001
+11:13:36.150 @LEG002 10016
+11:13:36.151 @LEG003 郭婧
+11:13:36.153 @LEG004 装配工
+11:13:36.154 @LEG005 2018/9/22 8:00:00
+11:13:36.155 @LEG006 2018/9/22 17:00:00
+11:13:36.157 @LEG007 0
+11:13:36.158 @LEG008 
+11:13:36.159 @LEG009 
+11:13:36.161 @LEG010 0
+11:13:36.162 @LEG011 
+11:13:36.163 @LEG012 在职
+11:13:36.164 @LEG013 LED车间
+11:13:36.166 @LEG014 9
+11:13:36.167 @LEG015 0
+11:13:36.169 @LEG016 0
+11:13:36.173 @LEG001 20180922001
+11:13:36.175 @LEG002 10017
+11:13:36.176 @LEG003 龙兴连
+11:13:36.177 @LEG004 装配工
+11:13:36.179 @LEG005 2018/9/22 8:00:00
+11:13:36.180 @LEG006 2018/9/22 17:00:00
+11:13:36.182 @LEG007 0
+11:13:36.183 @LEG008 
+11:13:36.184 @LEG009 
+11:13:36.185 @LEG010 0
+11:13:36.187 @LEG011 
+11:13:36.188 @LEG012 在职
+11:13:36.189 @LEG013 LED车间
+11:13:36.190 @LEG014 9
+11:13:36.191 @LEG015 0
+11:13:36.193 @LEG016 0
+11:13:36.196 @LEG001 20180922001
+11:13:36.197 @LEG002 10018
+11:13:36.199 @LEG003 刘付连
+11:13:36.200 @LEG004 装配工
+11:13:36.202 @LEG005 2018/9/22 8:00:00
+11:13:36.204 @LEG006 2018/9/22 17:00:00
+11:13:36.205 @LEG007 0
+11:13:36.207 @LEG008 
+11:13:36.209 @LEG009 
+11:13:36.210 @LEG010 0
+11:13:36.212 @LEG011 
+11:13:36.214 @LEG012 在职
+11:13:36.215 @LEG013 LED车间
+11:13:36.217 @LEG014 9
+11:13:36.220 @LEG015 0
+11:13:36.221 @LEG016 0
+11:13:36.224 @LEG001 20180922001
+11:13:36.226 @LEG002 10019
+11:13:36.228 @LEG003 聂付秋
+11:13:36.230 @LEG004 装配工
+11:13:36.231 @LEG005 2018/9/22 8:00:00
+11:13:36.232 @LEG006 2018/9/22 17:00:00
+11:13:36.234 @LEG007 0
+11:13:36.236 @LEG008 
+11:13:36.238 @LEG009 
+11:13:36.239 @LEG010 0
+11:13:36.241 @LEG011 
+11:13:36.243 @LEG012 在职
+11:13:36.244 @LEG013 LED车间
+11:13:36.246 @LEG014 9
+11:13:36.247 @LEG015 0
+11:13:36.248 @LEG016 0
+11:13:36.252 @LEG001 20180922001
+11:13:36.253 @LEG002 10020
+11:13:36.255 @LEG003 薛能米
+11:13:36.256 @LEG004 装配工
+11:13:36.258 @LEG005 2018/9/22 8:00:00
+11:13:36.260 @LEG006 2018/9/22 17:00:00
+11:13:36.261 @LEG007 0
+11:13:36.262 @LEG008 
+11:13:36.263 @LEG009 
+11:13:36.265 @LEG010 0
+11:13:36.266 @LEG011 
+11:13:36.267 @LEG012 在职
+11:13:36.268 @LEG013 LED车间
+11:13:36.269 @LEG014 9
+11:13:36.271 @LEG015 0
+11:13:36.272 @LEG016 0
+11:13:36.275 @LEG001 20180922001
+11:13:36.277 @LEG002 10021
+11:13:36.278 @LEG003 彭顺艳
+11:13:36.280 @LEG004 装配工
+11:13:36.282 @LEG005 2018/9/22 8:00:00
+11:13:36.283 @LEG006 2018/9/22 17:00:00
+11:13:36.285 @LEG007 0
+11:13:36.287 @LEG008 
+11:13:36.288 @LEG009 
+11:13:36.290 @LEG010 0
+11:13:36.292 @LEG011 
+11:13:36.294 @LEG012 在职
+11:13:36.296 @LEG013 LED车间
+11:13:36.297 @LEG014 9
+11:13:36.299 @LEG015 0
+11:13:36.300 @LEG016 0
+11:13:36.303 @LEG001 20180922001
+11:13:36.304 @LEG002 10022
+11:13:36.306 @LEG003 罗小琴
+11:13:36.308 @LEG004 装配工
+11:13:36.310 @LEG005 2018/9/22 8:00:00
+11:13:36.311 @LEG006 2018/9/22 17:00:00
+11:13:36.313 @LEG007 0
+11:13:36.314 @LEG008 
+11:13:36.317 @LEG009 
+11:13:36.319 @LEG010 0
+11:13:36.321 @LEG011 
+11:13:36.323 @LEG012 在职
+11:13:36.324 @LEG013 LED车间
+11:13:36.326 @LEG014 9
+11:13:36.327 @LEG015 0
+11:13:36.328 @LEG016 0
+11:13:36.331 @LEG001 20180922001
+11:13:36.333 @LEG002 10023
+11:13:36.334 @LEG003 吕红艳
+11:13:36.336 @LEG004 装配工
+11:13:36.337 @LEG005 2018/9/22 8:00:00
+11:13:36.339 @LEG006 2018/9/22 17:00:00
+11:13:36.340 @LEG007 0
+11:13:36.342 @LEG008 
+11:13:36.344 @LEG009 
+11:13:36.345 @LEG010 0
+11:13:36.347 @LEG011 
+11:13:36.348 @LEG012 在职
+11:13:36.349 @LEG013 LED车间
+11:13:36.350 @LEG014 9
+11:13:36.352 @LEG015 0
+11:13:36.354 @LEG016 0
+11:13:36.356 @LEG001 20180922001
+11:13:36.357 @LEG002 10024
+11:13:36.359 @LEG003 李朝粉
+11:13:36.361 @LEG004 装配工
+11:13:36.363 @LEG005 2018/9/22 8:00:00
+11:13:36.364 @LEG006 2018/9/22 17:00:00
+11:13:36.365 @LEG007 0
+11:13:36.367 @LEG008 
+11:13:36.369 @LEG009 
+11:13:36.370 @LEG010 0
+11:13:36.372 @LEG011 
+11:13:36.373 @LEG012 在职
+11:13:36.374 @LEG013 LED车间
+11:13:36.375 @LEG014 9
+11:13:36.377 @LEG015 0
+11:13:36.378 @LEG016 0
+11:13:36.380 @LEG001 20180922001
+11:13:36.382 @LEG002 10025
+11:13:36.383 @LEG003 陈文会
+11:13:36.385 @LEG004 装配工
+11:13:36.386 @LEG005 2018/9/22 8:00:00
+11:13:36.387 @LEG006 2018/9/22 17:00:00
+11:13:36.389 @LEG007 0
+11:13:36.390 @LEG008 
+11:13:36.391 @LEG009 
+11:13:36.392 @LEG010 0
+11:13:36.394 @LEG011 
+11:13:36.395 @LEG012 在职
+11:13:36.396 @LEG013 LED车间
+11:13:36.397 @LEG014 9
+11:13:36.398 @LEG015 0
+11:13:36.400 @LEG016 0
+11:13:36.403 @LEG001 20180922001
+11:13:36.405 @LEG002 10026
+11:13:36.406 @LEG003 平单单
+11:13:36.407 @LEG004 装配工
+11:13:36.409 @LEG005 2018/9/22 8:00:00
+11:13:36.410 @LEG006 2018/9/22 17:00:00
+11:13:36.412 @LEG007 0
+11:13:36.413 @LEG008 
+11:13:36.414 @LEG009 
+11:13:36.416 @LEG010 0
+11:13:36.417 @LEG011 
+11:13:36.418 @LEG012 在职
+11:13:36.420 @LEG013 LED车间
+11:13:36.421 @LEG014 9
+11:13:36.422 @LEG015 0
+11:13:36.423 @LEG016 0
+11:13:36.426 @LEG001 20180922001
+11:13:36.427 @LEG002 10027
+11:13:36.429 @LEG003 梁永琴
+11:13:36.430 @LEG004 装配工
+11:13:36.432 @LEG005 2018/9/22 8:00:00
+11:13:36.433 @LEG006 2018/9/22 17:00:00
+11:13:36.434 @LEG007 0
+11:13:36.435 @LEG008 
+11:13:36.437 @LEG009 
+11:13:36.438 @LEG010 0
+11:13:36.439 @LEG011 
+11:13:36.440 @LEG012 在职
+11:13:36.441 @LEG013 LED车间
+11:13:36.442 @LEG014 9
+11:13:36.444 @LEG015 0
+11:13:36.445 @LEG016 0
+11:13:36.447 @LEG001 20180922001
+11:13:36.448 @LEG002 10028
+11:13:36.450 @LEG003 胡孝明
+11:13:36.451 @LEG004 装配工
+11:13:36.452 @LEG005 2018/9/22 8:00:00
+11:13:36.453 @LEG006 2018/9/22 17:00:00
+11:13:36.455 @LEG007 0
+11:13:36.456 @LEG008 
+11:13:36.457 @LEG009 
+11:13:36.458 @LEG010 0
+11:13:36.460 @LEG011 
+11:13:36.461 @LEG012 在职
+11:13:36.462 @LEG013 LED车间
+11:13:36.464 @LEG014 9
+11:13:36.465 @LEG015 0
+11:13:36.466 @LEG016 0
+11:13:36.469 @LEG001 20180922001
+11:13:36.470 @LEG002 10029
+11:13:36.472 @LEG003 聂昌奎
+11:13:36.473 @LEG004 装配工
+11:13:36.475 @LEG005 2018/9/22 8:00:00
+11:13:36.476 @LEG006 2018/9/22 17:00:00
+11:13:36.478 @LEG007 0
+11:13:36.479 @LEG008 
+11:13:36.481 @LEG009 
+11:13:36.482 @LEG010 0
+11:13:36.483 @LEG011 
+11:13:36.485 @LEG012 在职
+11:13:36.486 @LEG013 LED车间
+11:13:36.487 @LEG014 9
+11:13:36.488 @LEG015 0
+11:13:36.489 @LEG016 0
+11:13:36.491 @LEG001 20180922001
+11:13:36.493 @LEG002 10030
+11:13:36.494 @LEG003 陶兴琴
+11:13:36.496 @LEG004 装配工
+11:13:36.497 @LEG005 2018/9/22 8:00:00
+11:13:36.498 @LEG006 2018/9/22 17:00:00
+11:13:36.500 @LEG007 0
+11:13:36.501 @LEG008 
+11:13:36.502 @LEG009 
+11:13:36.503 @LEG010 0
+11:13:36.504 @LEG011 
+11:13:36.506 @LEG012 在职
+11:13:36.507 @LEG013 LED车间
+11:13:36.508 @LEG014 9
+11:13:36.509 @LEG015 0
+11:13:36.511 @LEG016 0
+11:13:36.513 @LEG001 20180922001
+11:13:36.514 @LEG002 10031
+11:13:36.516 @LEG003 方宇
+11:13:36.517 @LEG004 装配工
+11:13:36.518 @LEG005 2018/9/22 8:00:00
+11:13:36.520 @LEG006 2018/9/22 17:00:00
+11:13:36.521 @LEG007 0
+11:13:36.522 @LEG008 
+11:13:36.524 @LEG009 
+11:13:36.525 @LEG010 0
+11:13:36.526 @LEG011 
+11:13:36.527 @LEG012 在职
+11:13:36.528 @LEG013 LED车间
+11:13:36.530 @LEG014 9
+11:13:36.531 @LEG015 0
+11:13:36.532 @LEG016 0
+11:13:36.534 @LEG001 20180922001
+11:13:36.536 @LEG002 10032
+11:13:36.537 @LEG003 段进连
+11:13:36.538 @LEG004 装配工
+11:13:36.539 @LEG005 2018/9/22 8:00:00
+11:13:36.541 @LEG006 2018/9/22 17:00:00
+11:13:36.543 @LEG007 0
+11:13:36.544 @LEG008 
+11:13:36.545 @LEG009 
+11:13:36.547 @LEG010 0
+11:13:36.548 @LEG011 
+11:13:36.549 @LEG012 在职
+11:13:36.550 @LEG013 LED车间
+11:13:36.551 @LEG014 9
+11:13:36.553 @LEG015 0
+11:13:36.554 @LEG016 0
+11:13:36.556 @LEG001 20180922001
+11:13:36.558 @LEG002 10033
+11:13:36.559 @LEG003 唐云云
+11:13:36.561 @LEG004 装配工
+11:13:36.562 @LEG005 2018/9/22 8:00:00
+11:13:36.563 @LEG006 2018/9/22 17:00:00
+11:13:36.564 @LEG007 0
+11:13:36.565 @LEG008 
+11:13:36.567 @LEG009 
+11:13:36.568 @LEG010 0
+11:13:36.569 @LEG011 
+11:13:36.570 @LEG012 在职
+11:13:36.572 @LEG013 LED车间
+11:13:36.573 @LEG014 9
+11:13:36.574 @LEG015 0
+11:13:36.576 @LEG016 0
+11:13:36.578 @LEG001 20180922001
+11:13:36.580 @LEG002 10034
+11:13:36.581 @LEG003 李大花
+11:13:36.582 @LEG004 装配工
+11:13:36.584 @LEG005 2018/9/22 8:00:00
+11:13:36.585 @LEG006 2018/9/22 17:00:00
+11:13:36.586 @LEG007 0
+11:13:36.588 @LEG008 
+11:13:36.589 @LEG009 
+11:13:36.590 @LEG010 0
+11:13:36.591 @LEG011 
+11:13:36.593 @LEG012 在职
+11:13:36.594 @LEG013 LED车间
+11:13:36.595 @LEG014 9
+11:13:36.596 @LEG015 0
+11:13:36.597 @LEG016 0
+11:13:36.600 @LEG001 20180922001
+11:13:36.601 @LEG002 10035
+11:13:36.603 @LEG003 黄史作
+11:13:36.604 @LEG004 装配工
+11:13:36.605 @LEG005 2018/9/22 8:00:00
+11:13:36.607 @LEG006 2018/9/22 17:00:00
+11:13:36.608 @LEG007 0
+11:13:36.609 @LEG008 
+11:13:36.610 @LEG009 
+11:13:36.612 @LEG010 0
+11:13:36.613 @LEG011 
+11:13:36.614 @LEG012 在职
+11:13:36.615 @LEG013 LED车间
+11:13:36.616 @LEG014 9
+11:13:36.618 @LEG015 0
+11:13:36.619 @LEG016 0
+11:13:36.622 @LEG001 20180922001
+11:13:36.623 @LEG002 10036
+11:13:36.624 @LEG003 罗昌梅
+11:13:36.625 @LEG004 装配工
+11:13:36.627 @LEG005 2018/9/22 8:00:00
+11:13:36.628 @LEG006 2018/9/22 17:00:00
+11:13:36.629 @LEG007 0
+11:13:36.631 @LEG008 
+11:13:36.632 @LEG009 
+11:13:36.634 @LEG010 0
+11:13:36.635 @LEG011 
+11:13:36.637 @LEG012 在职
+11:13:36.638 @LEG013 LED车间
+11:13:36.639 @LEG014 9
+11:13:36.641 @LEG015 0
+11:13:36.642 @LEG016 0
+11:13:36.645 @LEG001 20180922001
+11:13:36.646 @LEG002 10037
+11:13:36.647 @LEG003 赵雨婷
+11:13:36.649 @LEG004 装配工
+11:13:36.650 @LEG005 2018/9/22 8:00:00
+11:13:36.651 @LEG006 2018/9/22 17:00:00
+11:13:36.653 @LEG007 0
+11:13:36.654 @LEG008 
+11:13:36.655 @LEG009 
+11:13:36.656 @LEG010 0
+11:13:36.658 @LEG011 
+11:13:36.660 @LEG012 在职
+11:13:36.661 @LEG013 LED车间
+11:13:36.663 @LEG014 9
+11:13:36.664 @LEG015 0
+11:13:36.666 @LEG016 0
+11:13:36.670 @LEG001 20180922001
+11:13:36.672 @LEG002 10038
+11:13:36.673 @LEG003 余双双
+11:13:36.674 @LEG004 装配工
+11:13:36.675 @LEG005 2018/9/22 8:00:00
+11:13:36.677 @LEG006 2018/9/22 17:00:00
+11:13:36.678 @LEG007 0
+11:13:36.680 @LEG008 
+11:13:36.681 @LEG009 
+11:13:36.683 @LEG010 0
+11:13:36.684 @LEG011 
+11:13:36.686 @LEG012 在职
+11:13:36.687 @LEG013 LED车间
+11:13:36.689 @LEG014 9
+11:13:36.690 @LEG015 0
+11:13:36.692 @LEG016 0
+11:13:36.697 @LEH001 20180922001
+11:13:36.698 @LEH002 GD201503140003
+11:13:36.700 @LEH003 202121349
+11:13:36.701 @LEH004 F08D成品面板-LED
+11:13:36.702 @LEH005 
+11:13:36.703 @LEH006 PCS
+11:13:36.705 @LEH007 200
+11:13:36.706 @LEH008 0
+11:13:36.707 @LEH009 100
+11:13:36.708 @LEH010 
+11:13:36.709 @LEH011 
+11:13:36.711 @LEH012 
+11:18:30.346  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:18:36.523 @EMP002 系统管理员
+11:18:36.526 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:19:13.508 @LEF001 20180922002
+11:19:13.510 @LEF009 0506
+11:19:13.511 @LEF010 LED车间
+11:19:13.513 @LEF011 0506
+11:19:13.514 @LEF012 LED车间
+11:19:13.516 @LEF013 2018/9/22 0:00:00
+11:19:13.518 @LEF015 
+11:19:13.519 @LEF016 
+11:19:13.521 @LEF017 False
+11:19:13.522 @LEF018 False
+11:19:13.523 @LEF019 0
+11:19:13.524 @LEF020 0
+11:19:13.527 @LEG001 20180922002
+11:19:13.529 @LEG002 10016
+11:19:13.530 @LEG003 郭婧
+11:19:13.532 @LEG004 装配工
+11:19:13.533 @LEG005 2018/9/22 8:00:00
+11:19:13.535 @LEG006 2018/9/22 17:00:00
+11:19:13.536 @LEG007 0
+11:19:13.538 @LEG008 
+11:19:13.539 @LEG009 
+11:19:13.540 @LEG010 0
+11:19:13.541 @LEG011 
+11:19:13.543 @LEG012 在职
+11:19:13.544 @LEG013 LED车间
+11:19:13.545 @LEG014 9
+11:19:13.547 @LEG015 0
+11:19:13.548 @LEG016 0
+11:19:13.551 @LEG001 20180922002
+11:19:13.552 @LEG002 10017
+11:19:13.554 @LEG003 龙兴连
+11:19:13.555 @LEG004 装配工
+11:19:13.556 @LEG005 2018/9/22 8:00:00
+11:19:13.557 @LEG006 2018/9/22 17:00:00
+11:19:13.559 @LEG007 0
+11:19:13.560 @LEG008 
+11:19:13.561 @LEG009 
+11:19:13.563 @LEG010 0
+11:19:13.564 @LEG011 
+11:19:13.566 @LEG012 在职
+11:19:13.567 @LEG013 LED车间
+11:19:13.568 @LEG014 9
+11:19:13.569 @LEG015 0
+11:19:13.571 @LEG016 0
+11:19:13.573 @LEG001 20180922002
+11:19:13.574 @LEG002 10018
+11:19:13.576 @LEG003 刘付连
+11:19:13.577 @LEG004 装配工
+11:19:13.579 @LEG005 2018/9/22 8:00:00
+11:19:13.580 @LEG006 2018/9/22 17:00:00
+11:19:13.581 @LEG007 0
+11:19:13.583 @LEG008 
+11:19:13.584 @LEG009 
+11:19:13.585 @LEG010 0
+11:19:13.586 @LEG011 
+11:19:13.587 @LEG012 在职
+11:19:13.588 @LEG013 LED车间
+11:19:13.590 @LEG014 9
+11:19:13.591 @LEG015 0
+11:19:13.592 @LEG016 0
+11:19:13.595 @LEG001 20180922002
+11:19:13.596 @LEG002 10019
+11:19:13.598 @LEG003 聂付秋
+11:19:13.599 @LEG004 装配工
+11:19:13.600 @LEG005 2018/9/22 8:00:00
+11:19:13.601 @LEG006 2018/9/22 17:00:00
+11:19:13.603 @LEG007 0
+11:19:13.604 @LEG008 
+11:19:13.605 @LEG009 
+11:19:13.607 @LEG010 0
+11:19:13.608 @LEG011 
+11:19:13.609 @LEG012 在职
+11:19:13.611 @LEG013 LED车间
+11:19:13.612 @LEG014 9
+11:19:13.613 @LEG015 0
+11:19:13.615 @LEG016 0
+11:19:13.617 @LEG001 20180922002
+11:19:13.619 @LEG002 10020
+11:19:13.620 @LEG003 薛能米
+11:19:13.621 @LEG004 装配工
+11:19:13.623 @LEG005 2018/9/22 8:00:00
+11:19:13.624 @LEG006 2018/9/22 17:00:00
+11:19:13.625 @LEG007 0
+11:19:13.627 @LEG008 
+11:19:13.628 @LEG009 
+11:19:13.629 @LEG010 0
+11:19:13.631 @LEG011 
+11:19:13.632 @LEG012 在职
+11:19:13.635 @LEG013 LED车间
+11:19:13.636 @LEG014 9
+11:19:13.637 @LEG015 0
+11:19:13.639 @LEG016 0
+11:19:13.644 @LEG001 20180922002
+11:19:13.646 @LEG002 10021
+11:19:13.647 @LEG003 彭顺艳
+11:19:13.649 @LEG004 装配工
+11:19:13.650 @LEG005 2018/9/22 8:00:00
+11:19:13.651 @LEG006 2018/9/22 17:00:00
+11:19:13.653 @LEG007 0
+11:19:13.654 @LEG008 
+11:19:13.656 @LEG009 
+11:19:13.658 @LEG010 0
+11:19:13.659 @LEG011 
+11:19:13.663 @LEG012 在职
+11:19:13.665 @LEG013 LED车间
+11:19:13.667 @LEG014 9
+11:19:13.669 @LEG015 0
+11:19:13.670 @LEG016 0
+11:19:13.673 @LEG001 20180922002
+11:19:13.675 @LEG002 10022
+11:19:13.676 @LEG003 罗小琴
+11:19:13.678 @LEG004 装配工
+11:19:13.679 @LEG005 2018/9/22 8:00:00
+11:19:13.681 @LEG006 2018/9/22 17:00:00
+11:19:13.682 @LEG007 0
+11:19:13.683 @LEG008 
+11:19:13.684 @LEG009 
+11:19:13.685 @LEG010 0
+11:19:13.687 @LEG011 
+11:19:13.688 @LEG012 在职
+11:19:13.690 @LEG013 LED车间
+11:19:13.691 @LEG014 9
+11:19:13.692 @LEG015 0
+11:19:13.694 @LEG016 0
+11:19:13.696 @LEG001 20180922002
+11:19:13.698 @LEG002 10023
+11:19:13.699 @LEG003 吕红艳
+11:19:13.700 @LEG004 装配工
+11:19:13.702 @LEG005 2018/9/22 8:00:00
+11:19:13.703 @LEG006 2018/9/22 17:00:00
+11:19:13.704 @LEG007 0
+11:19:13.706 @LEG008 
+11:19:13.707 @LEG009 
+11:19:13.708 @LEG010 0
+11:19:13.710 @LEG011 
+11:19:13.711 @LEG012 在职
+11:19:13.712 @LEG013 LED车间
+11:19:13.713 @LEG014 9
+11:19:13.715 @LEG015 0
+11:19:13.716 @LEG016 0
+11:19:13.719 @LEG001 20180922002
+11:19:13.720 @LEG002 10024
+11:19:13.722 @LEG003 李朝粉
+11:19:13.723 @LEG004 装配工
+11:19:13.725 @LEG005 2018/9/22 8:00:00
+11:19:13.726 @LEG006 2018/9/22 17:00:00
+11:19:13.728 @LEG007 0
+11:19:13.729 @LEG008 
+11:19:13.730 @LEG009 
+11:19:13.731 @LEG010 0
+11:19:13.732 @LEG011 
+11:19:13.734 @LEG012 在职
+11:19:13.735 @LEG013 LED车间
+11:19:13.737 @LEG014 9
+11:19:13.739 @LEG015 0
+11:19:13.740 @LEG016 0
+11:19:13.742 @LEG001 20180922002
+11:19:13.743 @LEG002 10025
+11:19:13.745 @LEG003 陈文会
+11:19:13.746 @LEG004 装配工
+11:19:13.747 @LEG005 2018/9/22 8:00:00
+11:19:13.748 @LEG006 2018/9/22 17:00:00
+11:19:13.749 @LEG007 0
+11:19:13.750 @LEG008 
+11:19:13.752 @LEG009 
+11:19:13.754 @LEG010 0
+11:19:13.756 @LEG011 
+11:19:13.757 @LEG012 在职
+11:19:13.759 @LEG013 LED车间
+11:19:13.760 @LEG014 9
+11:19:13.761 @LEG015 0
+11:19:13.762 @LEG016 0
+11:19:13.764 @LEG001 20180922002
+11:19:13.766 @LEG002 10026
+11:19:13.767 @LEG003 平单单
+11:19:13.769 @LEG004 装配工
+11:19:13.771 @LEG005 2018/9/22 8:00:00
+11:19:13.772 @LEG006 2018/9/22 17:00:00
+11:19:13.773 @LEG007 0
+11:19:13.775 @LEG008 
+11:19:13.776 @LEG009 
+11:19:13.777 @LEG010 0
+11:19:13.778 @LEG011 
+11:19:13.780 @LEG012 在职
+11:19:13.781 @LEG013 LED车间
+11:19:13.782 @LEG014 9
+11:19:13.784 @LEG015 0
+11:19:13.785 @LEG016 0
+11:19:13.787 @LEG001 20180922002
+11:19:13.789 @LEG002 10027
+11:19:13.790 @LEG003 梁永琴
+11:19:13.792 @LEG004 装配工
+11:19:13.793 @LEG005 2018/9/22 8:00:00
+11:19:13.794 @LEG006 2018/9/22 17:00:00
+11:19:13.796 @LEG007 0
+11:19:13.797 @LEG008 
+11:19:13.799 @LEG009 
+11:19:13.800 @LEG010 0
+11:19:13.801 @LEG011 
+11:19:13.802 @LEG012 在职
+11:19:13.804 @LEG013 LED车间
+11:19:13.805 @LEG014 9
+11:19:13.806 @LEG015 0
+11:19:13.808 @LEG016 0
+11:19:13.810 @LEG001 20180922002
+11:19:13.811 @LEG002 10028
+11:19:13.813 @LEG003 胡孝明
+11:19:13.814 @LEG004 装配工
+11:19:13.816 @LEG005 2018/9/22 8:00:00
+11:19:13.818 @LEG006 2018/9/22 17:00:00
+11:19:13.819 @LEG007 0
+11:19:13.820 @LEG008 
+11:19:13.822 @LEG009 
+11:19:13.823 @LEG010 0
+11:19:13.824 @LEG011 
+11:19:13.825 @LEG012 在职
+11:19:13.827 @LEG013 LED车间
+11:19:13.828 @LEG014 9
+11:19:13.830 @LEG015 0
+11:19:13.831 @LEG016 0
+11:19:13.833 @LEG001 20180922002
+11:19:13.835 @LEG002 10029
+11:19:13.836 @LEG003 聂昌奎
+11:19:13.838 @LEG004 装配工
+11:19:13.839 @LEG005 2018/9/22 8:00:00
+11:19:13.840 @LEG006 2018/9/22 17:00:00
+11:19:13.842 @LEG007 0
+11:19:13.843 @LEG008 
+11:19:13.845 @LEG009 
+11:19:13.846 @LEG010 0
+11:19:13.847 @LEG011 
+11:19:13.849 @LEG012 在职
+11:19:13.850 @LEG013 LED车间
+11:19:13.851 @LEG014 9
+11:19:13.852 @LEG015 0
+11:19:13.853 @LEG016 0
+11:19:13.856 @LEG001 20180922002
+11:19:13.857 @LEG002 10030
+11:19:13.859 @LEG003 陶兴琴
+11:19:13.860 @LEG004 装配工
+11:19:13.861 @LEG005 2018/9/22 8:00:00
+11:19:13.863 @LEG006 2018/9/22 17:00:00
+11:19:13.864 @LEG007 0
+11:19:13.865 @LEG008 
+11:19:13.867 @LEG009 
+11:19:13.868 @LEG010 0
+11:19:13.869 @LEG011 
+11:19:13.870 @LEG012 在职
+11:19:13.872 @LEG013 LED车间
+11:19:13.873 @LEG014 9
+11:19:13.874 @LEG015 0
+11:19:13.876 @LEG016 0
+11:19:13.880 @LEG001 20180922002
+11:19:13.881 @LEG002 10031
+11:19:13.882 @LEG003 方宇
+11:19:13.884 @LEG004 装配工
+11:19:13.885 @LEG005 2018/9/22 8:00:00
+11:19:13.886 @LEG006 2018/9/22 17:00:00
+11:19:13.888 @LEG007 0
+11:19:13.889 @LEG008 
+11:19:13.890 @LEG009 
+11:19:13.891 @LEG010 0
+11:19:13.892 @LEG011 
+11:19:13.894 @LEG012 在职
+11:19:13.895 @LEG013 LED车间
+11:19:13.897 @LEG014 9
+11:19:13.898 @LEG015 0
+11:19:13.899 @LEG016 0
+11:19:13.901 @LEG001 20180922002
+11:19:13.903 @LEG002 10032
+11:19:13.904 @LEG003 段进连
+11:19:13.906 @LEG004 装配工
+11:19:13.907 @LEG005 2018/9/22 8:00:00
+11:19:13.909 @LEG006 2018/9/22 17:00:00
+11:19:13.910 @LEG007 0
+11:19:13.911 @LEG008 
+11:19:13.912 @LEG009 
+11:19:13.914 @LEG010 0
+11:19:13.915 @LEG011 
+11:19:13.917 @LEG012 在职
+11:19:13.918 @LEG013 LED车间
+11:19:13.919 @LEG014 9
+11:19:13.920 @LEG015 0
+11:19:13.921 @LEG016 0
+11:19:13.924 @LEG001 20180922002
+11:19:13.925 @LEG002 10033
+11:19:13.927 @LEG003 唐云云
+11:19:13.928 @LEG004 装配工
+11:19:13.929 @LEG005 2018/9/22 8:00:00
+11:19:13.930 @LEG006 2018/9/22 17:00:00
+11:19:13.932 @LEG007 0
+11:19:13.933 @LEG008 
+11:19:13.934 @LEG009 
+11:19:13.935 @LEG010 0
+11:19:13.936 @LEG011 
+11:19:13.937 @LEG012 在职
+11:19:13.939 @LEG013 LED车间
+11:19:13.940 @LEG014 9
+11:19:13.941 @LEG015 0
+11:19:13.942 @LEG016 0
+11:19:13.944 @LEG001 20180922002
+11:19:13.946 @LEG002 10034
+11:19:13.947 @LEG003 李大花
+11:19:13.948 @LEG004 装配工
+11:19:13.950 @LEG005 2018/9/22 8:00:00
+11:19:13.951 @LEG006 2018/9/22 17:00:00
+11:19:13.952 @LEG007 0
+11:19:13.953 @LEG008 
+11:19:13.954 @LEG009 
+11:19:13.956 @LEG010 0
+11:19:13.957 @LEG011 
+11:19:13.958 @LEG012 在职
+11:19:13.960 @LEG013 LED车间
+11:19:13.961 @LEG014 9
+11:19:13.962 @LEG015 0
+11:19:13.964 @LEG016 0
+11:19:13.966 @LEG001 20180922002
+11:19:13.968 @LEG002 10035
+11:19:13.969 @LEG003 黄史作
+11:19:13.970 @LEG004 装配工
+11:19:13.972 @LEG005 2018/9/22 8:00:00
+11:19:13.973 @LEG006 2018/9/22 17:00:00
+11:19:13.974 @LEG007 0
+11:19:13.976 @LEG008 
+11:19:13.977 @LEG009 
+11:19:13.978 @LEG010 0
+11:19:13.979 @LEG011 
+11:19:13.980 @LEG012 在职
+11:19:13.982 @LEG013 LED车间
+11:19:13.983 @LEG014 9
+11:19:13.984 @LEG015 0
+11:19:13.985 @LEG016 0
+11:19:13.988 @LEG001 20180922002
+11:19:13.989 @LEG002 10036
+11:19:13.990 @LEG003 罗昌梅
+11:19:13.992 @LEG004 装配工
+11:19:13.993 @LEG005 2018/9/22 8:00:00
+11:19:13.994 @LEG006 2018/9/22 17:00:00
+11:19:13.995 @LEG007 0
+11:19:13.997 @LEG008 
+11:19:13.998 @LEG009 
+11:19:13.999 @LEG010 0
+11:19:14.001 @LEG011 
+11:19:14.002 @LEG012 在职
+11:19:14.003 @LEG013 LED车间
+11:19:14.004 @LEG014 9
+11:19:14.006 @LEG015 0
+11:19:14.007 @LEG016 0
+11:19:14.010 @LEG001 20180922002
+11:19:14.011 @LEG002 10037
+11:19:14.012 @LEG003 赵雨婷
+11:19:14.014 @LEG004 装配工
+11:19:14.015 @LEG005 2018/9/22 8:00:00
+11:19:14.017 @LEG006 2018/9/22 17:00:00
+11:19:14.018 @LEG007 0
+11:19:14.019 @LEG008 
+11:19:14.021 @LEG009 
+11:19:14.022 @LEG010 0
+11:19:14.024 @LEG011 
+11:19:14.025 @LEG012 在职
+11:19:14.026 @LEG013 LED车间
+11:19:14.028 @LEG014 9
+11:19:14.029 @LEG015 0
+11:19:14.030 @LEG016 0
+11:19:14.033 @LEG001 20180922002
+11:19:14.034 @LEG002 10038
+11:19:14.035 @LEG003 余双双
+11:19:14.037 @LEG004 装配工
+11:19:14.038 @LEG005 2018/9/22 8:00:00
+11:19:14.039 @LEG006 2018/9/22 17:00:00
+11:19:14.041 @LEG007 0
+11:19:14.042 @LEG008 
+11:19:14.043 @LEG009 
+11:19:14.044 @LEG010 0
+11:19:14.045 @LEG011 
+11:19:14.046 @LEG012 在职
+11:19:14.047 @LEG013 LED车间
+11:19:14.049 @LEG014 9
+11:19:14.050 @LEG015 0
+11:19:14.051 @LEG016 0
+11:19:14.053 @LEH001 20180922002
+11:19:14.055 @LEH002 GD201503140003
+11:19:14.056 @LEH003 202121349
+11:19:14.057 @LEH004 F08D成品面板-LED
+11:19:14.059 @LEH005 
+11:19:14.060 @LEH006 PCS
+11:19:14.061 @LEH007 200
+11:19:14.062 @LEH008 0
+11:19:14.064 @LEH009 100
+11:19:14.065 @LEH010 
+11:19:14.066 @LEH011 
+11:19:14.067 @LEH012 
+11:31:49.662  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:31:54.508 @EMP002 系统管理员
+11:31:54.511 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:32:31.427 @LEC001 20180922001
+11:32:31.429 @LEC002 
+11:32:31.430 @LEC003 
+11:32:31.432 @LEC004 
+11:32:31.433 @LEC005 
+11:32:31.434 @LEC006 
+11:32:31.436 @LEC007 
+11:32:31.437 @LEC008 
+11:32:31.439 @LEC009 0504
+11:32:31.440 @LEC010 前加工车间
+11:32:31.441 @LEC011 0504
+11:32:31.442 @LEC012 前加工车间
+11:32:31.444 @LEC013 2018/9/22 0:00:00
+11:32:31.445 @LEC014 
+11:32:31.447 @LEC015 
+11:32:31.448 @LEC016 
+11:32:31.450 @LEC017 False
+11:32:31.451 @LEC018 False
+11:32:31.453 @LEC019 0
+11:32:31.454 @LEC020 0
+11:32:31.463 @LED001 20180922001
+11:32:31.465 @LED002 10040
+11:32:31.466 @LED003 杜福英
+11:32:31.468 @LED004 装配工
+11:32:31.469 @LED005 2018/9/22 8:00:00
+11:32:31.470 @LED006 2018/9/22 17:00:00
+11:32:31.471 @LED007 0
+11:32:31.473 @LED008 
+11:32:31.474 @LED009 
+11:32:31.475 @LED010 0
+11:32:31.477 @LED011 
+11:32:31.479 @LED012 在职
+11:32:31.481 @LED013 前加工车间
+11:32:31.483 @LED014 9
+11:32:31.484 @LED015 0
+11:32:31.486 @LED016 0
+11:32:31.490 @LED001 20180922001
+11:32:31.492 @LED002 10041
+11:32:31.493 @LED003 廖仁琼
+11:32:31.495 @LED004 装配工
+11:32:31.497 @LED005 2018/9/22 8:00:00
+11:32:31.498 @LED006 2018/9/22 17:00:00
+11:32:31.500 @LED007 0
+11:32:31.502 @LED008 
+11:32:31.503 @LED009 
+11:32:31.504 @LED010 0
+11:32:31.506 @LED011 
+11:32:31.508 @LED012 在职
+11:32:31.510 @LED013 前加工车间
+11:32:31.511 @LED014 9
+11:32:31.513 @LED015 0
+11:32:31.514 @LED016 0
+11:32:31.517 @LED001 20180922001
+11:32:31.518 @LED002 10042
+11:32:31.520 @LED003 李光艳
+11:32:31.521 @LED004 装配工
+11:32:31.522 @LED005 2018/9/22 8:00:00
+11:32:31.524 @LED006 2018/9/22 17:00:00
+11:32:31.526 @LED007 0
+11:32:31.527 @LED008 
+11:32:31.529 @LED009 
+11:32:31.531 @LED010 0
+11:32:31.533 @LED011 
+11:32:31.534 @LED012 在职
+11:32:31.536 @LED013 前加工车间
+11:32:31.538 @LED014 9
+11:32:31.539 @LED015 0
+11:32:31.541 @LED016 0
+11:32:31.544 @LED001 20180922001
+11:32:31.546 @LED002 10043
+11:32:31.547 @LED003 彭荣泽
+11:32:31.549 @LED004 装配工
+11:32:31.551 @LED005 2018/9/22 8:00:00
+11:32:31.553 @LED006 2018/9/22 17:00:00
+11:32:31.554 @LED007 0
+11:32:31.556 @LED008 
+11:32:31.557 @LED009 
+11:32:31.559 @LED010 0
+11:32:31.560 @LED011 
+11:32:31.562 @LED012 在职
+11:32:31.563 @LED013 前加工车间
+11:32:31.564 @LED014 9
+11:32:31.566 @LED015 0
+11:32:31.567 @LED016 0
+11:32:31.569 @LED001 20180922001
+11:32:31.571 @LED002 10044
+11:32:31.573 @LED003 何培凤
+11:32:31.575 @LED004 装配工
+11:32:31.576 @LED005 2018/9/22 8:00:00
+11:32:31.577 @LED006 2018/9/22 17:00:00
+11:32:31.579 @LED007 0
+11:32:31.580 @LED008 
+11:32:31.582 @LED009 
+11:32:31.583 @LED010 0
+11:32:31.584 @LED011 
+11:32:31.586 @LED012 在职
+11:32:31.587 @LED013 前加工车间
+11:32:31.588 @LED014 9
+11:32:31.590 @LED015 0
+11:32:31.592 @LED016 0
+11:32:31.594 @LED001 20180922001
+11:32:31.596 @LED002 10045
+11:32:31.597 @LED003 李朝伟
+11:32:31.598 @LED004 装配工
+11:32:31.600 @LED005 2018/9/22 8:00:00
+11:32:31.601 @LED006 2018/9/22 17:00:00
+11:32:31.602 @LED007 0
+11:32:31.604 @LED008 
+11:32:31.606 @LED009 
+11:32:31.607 @LED010 0
+11:32:31.608 @LED011 
+11:32:31.610 @LED012 在职
+11:32:31.611 @LED013 前加工车间
+11:32:31.613 @LED014 9
+11:32:31.615 @LED015 0
+11:32:31.616 @LED016 0
+11:32:31.619 @LED001 20180922001
+11:32:31.620 @LED002 10046
+11:32:31.622 @LED003 王培秀
+11:32:31.624 @LED004 装配工
+11:32:31.625 @LED005 2018/9/22 8:00:00
+11:32:31.627 @LED006 2018/9/22 17:00:00
+11:32:31.628 @LED007 0
+11:32:31.630 @LED008 
+11:32:31.631 @LED009 
+11:32:31.632 @LED010 0
+11:32:31.633 @LED011 
+11:32:31.635 @LED012 在职
+11:32:31.636 @LED013 前加工车间
+11:32:31.638 @LED014 9
+11:32:31.639 @LED015 0
+11:32:31.641 @LED016 0
+11:32:31.643 @LED001 20180922001
+11:32:31.644 @LED002 10047
+11:32:31.646 @LED003 谢武林
+11:32:31.647 @LED004 装配工
+11:32:31.649 @LED005 2018/9/22 8:00:00
+11:32:31.650 @LED006 2018/9/22 17:00:00
+11:32:31.652 @LED007 0
+11:32:31.653 @LED008 
+11:32:31.655 @LED009 
+11:32:31.656 @LED010 0
+11:32:31.657 @LED011 
+11:32:31.659 @LED012 在职
+11:32:31.660 @LED013 前加工车间
+11:32:31.662 @LED014 9
+11:32:31.663 @LED015 0
+11:32:31.665 @LED016 0
+11:32:31.668 @LED001 20180922001
+11:32:31.669 @LED002 10048
+11:32:31.671 @LED003 王程平
+11:32:31.672 @LED004 装配工
+11:32:31.674 @LED005 2018/9/22 8:00:00
+11:32:31.675 @LED006 2018/9/22 17:00:00
+11:32:31.676 @LED007 0
+11:32:31.677 @LED008 
+11:32:31.679 @LED009 
+11:32:31.680 @LED010 0
+11:32:31.681 @LED011 
+11:32:31.683 @LED012 在职
+11:32:31.685 @LED013 前加工车间
+11:32:31.686 @LED014 9
+11:32:31.687 @LED015 0
+11:32:31.689 @LED016 0
+11:32:31.691 @LED001 20180922001
+11:32:31.693 @LED002 10049
+11:32:31.694 @LED003 韩英
+11:32:31.696 @LED004 装配工
+11:32:31.697 @LED005 2018/9/22 8:00:00
+11:32:31.699 @LED006 2018/9/22 17:00:00
+11:32:31.701 @LED007 0
+11:32:31.702 @LED008 
+11:32:31.703 @LED009 
+11:32:31.704 @LED010 0
+11:32:31.705 @LED011 
+11:32:31.707 @LED012 在职
+11:32:31.708 @LED013 前加工车间
+11:32:31.709 @LED014 9
+11:32:31.712 @LED015 0
+11:32:31.714 @LED016 0
+11:32:31.716 @LED001 20180922001
+11:32:31.718 @LED002 10050
+11:32:31.719 @LED003 杨海霞
+11:32:31.721 @LED004 装配工
+11:32:31.723 @LED005 2018/9/22 8:00:00
+11:32:31.724 @LED006 2018/9/22 17:00:00
+11:32:31.725 @LED007 0
+11:32:31.727 @LED008 
+11:32:31.728 @LED009 
+11:32:31.730 @LED010 0
+11:32:31.732 @LED011 
+11:32:31.734 @LED012 在职
+11:32:31.735 @LED013 前加工车间
+11:32:31.737 @LED014 9
+11:32:31.738 @LED015 0
+11:32:31.740 @LED016 0
+11:32:31.743 @LED001 20180922001
+11:32:31.744 @LED002 10051
+11:32:31.745 @LED003 熊华美
+11:32:31.746 @LED004 装配工
+11:32:31.748 @LED005 2018/9/22 8:00:00
+11:32:31.749 @LED006 2018/9/22 17:00:00
+11:32:31.750 @LED007 0
+11:32:31.752 @LED008 
+11:32:31.753 @LED009 
+11:32:31.755 @LED010 0
+11:32:31.756 @LED011 
+11:32:31.758 @LED012 在职
+11:32:31.759 @LED013 前加工车间
+11:32:31.761 @LED014 9
+11:32:31.762 @LED015 0
+11:32:31.764 @LED016 0
+11:32:31.767 @LED001 20180922001
+11:32:31.769 @LED002 10052
+11:32:31.771 @LED003 孙琼莲
+11:32:31.772 @LED004 装配工
+11:32:31.774 @LED005 2018/9/22 8:00:00
+11:32:31.776 @LED006 2018/9/22 17:00:00
+11:32:31.777 @LED007 0
+11:32:31.779 @LED008 
+11:32:31.781 @LED009 
+11:32:31.782 @LED010 0
+11:32:31.784 @LED011 
+11:32:31.785 @LED012 在职
+11:32:31.787 @LED013 前加工车间
+11:32:31.789 @LED014 9
+11:32:31.790 @LED015 0
+11:32:31.792 @LED016 0
+11:32:31.795 @LED001 20180922001
+11:32:31.797 @LED002 10053
+11:32:31.799 @LED003 李林菊
+11:32:31.800 @LED004 装配工
+11:32:31.802 @LED005 2018/9/22 8:00:00
+11:32:31.803 @LED006 2018/9/22 17:00:00
+11:32:31.805 @LED007 0
+11:32:31.807 @LED008 
+11:32:31.809 @LED009 
+11:32:31.810 @LED010 0
+11:32:31.812 @LED011 
+11:32:31.813 @LED012 在职
+11:32:31.814 @LED013 前加工车间
+11:32:31.816 @LED014 9
+11:32:31.817 @LED015 0
+11:32:31.818 @LED016 0
+11:32:31.822 @LED001 20180922001
+11:32:31.823 @LED002 10054
+11:32:31.824 @LED003 吴群英
+11:32:31.826 @LED004 装配工
+11:32:31.827 @LED005 2018/9/22 8:00:00
+11:32:31.828 @LED006 2018/9/22 17:00:00
+11:32:31.830 @LED007 0
+11:32:31.831 @LED008 
+11:32:31.832 @LED009 
+11:32:31.834 @LED010 0
+11:32:31.837 @LED011 
+11:32:31.839 @LED012 在职
+11:32:31.840 @LED013 前加工车间
+11:32:31.841 @LED014 9
+11:32:31.843 @LED015 0
+11:32:31.844 @LED016 0
+11:32:31.847 @LED001 20180922001
+11:32:31.848 @LED002 10055
+11:32:31.850 @LED003 杨琴
+11:32:31.851 @LED004 装配工
+11:32:31.853 @LED005 2018/9/22 8:00:00
+11:32:31.854 @LED006 2018/9/22 17:00:00
+11:32:31.856 @LED007 0
+11:32:31.857 @LED008 
+11:32:31.858 @LED009 
+11:32:31.859 @LED010 0
+11:32:31.861 @LED011 
+11:32:31.862 @LED012 在职
+11:32:31.864 @LED013 前加工车间
+11:32:31.865 @LED014 9
+11:32:31.866 @LED015 0
+11:32:31.867 @LED016 0
+11:32:31.870 @LED001 20180922001
+11:32:31.872 @LED002 10056
+11:32:31.873 @LED003 韩艳
+11:32:31.874 @LED004 装配工
+11:32:31.876 @LED005 2018/9/22 8:00:00
+11:32:31.878 @LED006 2018/9/22 17:00:00
+11:32:31.879 @LED007 0
+11:32:31.881 @LED008 
+11:32:31.882 @LED009 
+11:32:31.884 @LED010 0
+11:32:31.886 @LED011 
+11:32:31.887 @LED012 在职
+11:32:31.888 @LED013 前加工车间
+11:32:31.889 @LED014 9
+11:32:31.891 @LED015 0
+11:32:31.892 @LED016 0
+11:32:31.894 @LED001 20180922001
+11:32:31.896 @LED002 10057
+11:32:31.898 @LED003 张瑜
+11:32:31.900 @LED004 装配工
+11:32:31.902 @LED005 2018/9/22 8:00:00
+11:32:31.903 @LED006 2018/9/22 17:00:00
+11:32:31.904 @LED007 0
+11:32:31.906 @LED008 
+11:32:31.907 @LED009 
+11:32:31.908 @LED010 0
+11:32:31.910 @LED011 
+11:32:31.911 @LED012 在职
+11:32:31.912 @LED013 前加工车间
+11:32:31.914 @LED014 9
+11:32:31.915 @LED015 0
+11:32:31.917 @LED016 0
+11:32:31.919 @LED001 20180922001
+11:32:31.921 @LED002 10058
+11:32:31.922 @LED003 李光云
+11:32:31.923 @LED004 装配工
+11:32:31.925 @LED005 2018/9/22 8:00:00
+11:32:31.926 @LED006 2018/9/22 17:00:00
+11:32:31.927 @LED007 0
+11:32:31.928 @LED008 
+11:32:31.930 @LED009 
+11:32:31.932 @LED010 0
+11:32:31.933 @LED011 
+11:32:31.935 @LED012 在职
+11:32:31.936 @LED013 前加工车间
+11:32:31.938 @LED014 9
+11:32:31.939 @LED015 0
+11:32:31.941 @LED016 0
+11:32:31.943 @LED001 20180922001
+11:32:31.945 @LED002 10059
+11:32:31.946 @LED003 唐春凤
+11:32:31.948 @LED004 装配工
+11:32:31.949 @LED005 2018/9/22 8:00:00
+11:32:31.951 @LED006 2018/9/22 17:00:00
+11:32:31.952 @LED007 0
+11:32:31.953 @LED008 
+11:32:31.954 @LED009 
+11:32:31.956 @LED010 0
+11:32:31.957 @LED011 
+11:32:31.958 @LED012 在职
+11:32:31.959 @LED013 前加工车间
+11:32:31.961 @LED014 9
+11:32:31.962 @LED015 0
+11:32:31.963 @LED016 0
+11:32:31.966 @LED001 20180922001
+11:32:31.967 @LED002 10060
+11:32:31.969 @LED003 陈朝香
+11:32:31.970 @LED004 装配工
+11:32:31.971 @LED005 2018/9/22 8:00:00
+11:32:31.973 @LED006 2018/9/22 17:00:00
+11:32:31.974 @LED007 0
+11:32:31.976 @LED008 
+11:32:31.977 @LED009 
+11:32:31.979 @LED010 0
+11:32:31.980 @LED011 
+11:32:31.982 @LED012 在职
+11:32:31.983 @LED013 前加工车间
+11:32:31.985 @LED014 9
+11:32:31.986 @LED015 0
+11:32:31.987 @LED016 0
+11:32:31.990 @LED001 20180922001
+11:32:31.992 @LED002 10061
+11:32:31.993 @LED003 张小婵
+11:32:31.995 @LED004 装配工
+11:32:31.997 @LED005 2018/9/22 8:00:00
+11:32:31.999 @LED006 2018/9/22 17:00:00
+11:32:32.000 @LED007 0
+11:32:32.002 @LED008 
+11:32:32.004 @LED009 
+11:32:32.005 @LED010 0
+11:32:32.006 @LED011 
+11:32:32.008 @LED012 在职
+11:32:32.010 @LED013 前加工车间
+11:32:32.012 @LED014 9
+11:32:32.013 @LED015 0
+11:32:32.015 @LED016 0
+11:32:32.018 @LED001 20180922001
+11:32:32.019 @LED002 10062
+11:32:32.021 @LED003 曾昭婵
+11:32:32.022 @LED004 装配工
+11:32:32.024 @LED005 2018/9/22 8:00:00
+11:32:32.025 @LED006 2018/9/22 17:00:00
+11:32:32.026 @LED007 0
+11:32:32.028 @LED008 
+11:32:32.029 @LED009 
+11:32:32.030 @LED010 0
+11:32:32.031 @LED011 
+11:32:32.033 @LED012 在职
+11:32:32.034 @LED013 前加工车间
+11:32:32.035 @LED014 9
+11:32:32.037 @LED015 0
+11:32:32.038 @LED016 0
+11:32:32.041 @LED001 20180922001
+11:32:32.043 @LED002 10063
+11:32:32.044 @LED003 牟飞
+11:32:32.046 @LED004 装配工
+11:32:32.048 @LED005 2018/9/22 8:00:00
+11:32:32.049 @LED006 2018/9/22 17:00:00
+11:32:32.051 @LED007 0
+11:32:32.052 @LED008 
+11:32:32.054 @LED009 
+11:32:32.055 @LED010 0
+11:32:32.056 @LED011 
+11:32:32.057 @LED012 在职
+11:32:32.059 @LED013 前加工车间
+11:32:32.061 @LED014 9
+11:32:32.062 @LED015 0
+11:32:32.064 @LED016 0
+11:32:32.067 @LED001 20180922001
+11:32:32.068 @LED002 10064
+11:32:32.070 @LED003 牟欢
+11:32:32.072 @LED004 装配工
+11:32:32.073 @LED005 2018/9/22 8:00:00
+11:32:32.074 @LED006 2018/9/22 17:00:00
+11:32:32.076 @LED007 0
+11:32:32.077 @LED008 
+11:32:32.078 @LED009 
+11:32:32.080 @LED010 0
+11:32:32.081 @LED011 
+11:32:32.082 @LED012 在职
+11:32:32.083 @LED013 前加工车间
+11:32:32.084 @LED014 9
+11:32:32.086 @LED015 0
+11:32:32.087 @LED016 0
+11:32:32.091 @LED001 20180922001
+11:32:32.092 @LED002 10065
+11:32:32.094 @LED003 陶炼
+11:32:32.095 @LED004 装配工
+11:32:32.096 @LED005 2018/9/22 8:00:00
+11:32:32.098 @LED006 2018/9/22 17:00:00
+11:32:32.099 @LED007 0
+11:32:32.101 @LED008 
+11:32:32.103 @LED009 
+11:32:32.104 @LED010 0
+11:32:32.105 @LED011 
+11:32:32.107 @LED012 在职
+11:32:32.108 @LED013 前加工车间
+11:32:32.109 @LED014 9
+11:32:32.111 @LED015 0
+11:32:32.112 @LED016 0
+11:32:32.114 @LED001 20180922001
+11:32:32.116 @LED002 10066
+11:32:32.117 @LED003 杜光斌
+11:32:32.119 @LED004 装配工
+11:32:32.120 @LED005 2018/9/22 8:00:00
+11:32:32.122 @LED006 2018/9/22 17:00:00
+11:32:32.123 @LED007 0
+11:32:32.124 @LED008 
+11:32:32.125 @LED009 
+11:32:32.127 @LED010 0
+11:32:32.128 @LED011 
+11:32:32.129 @LED012 在职
+11:32:32.131 @LED013 前加工车间
+11:32:32.132 @LED014 9
+11:32:32.134 @LED015 0
+11:32:32.136 @LED016 0
+11:32:32.138 @LED001 20180922001
+11:32:32.139 @LED002 10067
+11:32:32.141 @LED003 朱大艳
+11:32:32.143 @LED004 装配工
+11:32:32.144 @LED005 2018/9/22 8:00:00
+11:32:32.146 @LED006 2018/9/22 17:00:00
+11:32:32.148 @LED007 0
+11:32:32.149 @LED008 
+11:32:32.151 @LED009 
+11:32:32.152 @LED010 0
+11:32:32.153 @LED011 
+11:32:32.155 @LED012 在职
+11:32:32.157 @LED013 前加工车间
+11:32:32.158 @LED014 9
+11:32:32.159 @LED015 0
+11:32:32.161 @LED016 0
+11:32:32.163 @LED001 20180922001
+11:32:32.165 @LED002 10068
+11:32:32.167 @LED003 王银祥
+11:32:32.168 @LED004 装配工
+11:32:32.170 @LED005 2018/9/22 8:00:00
+11:32:32.171 @LED006 2018/9/22 17:00:00
+11:32:32.173 @LED007 0
+11:32:32.175 @LED008 
+11:32:32.176 @LED009 
+11:32:32.178 @LED010 0
+11:32:32.180 @LED011 
+11:32:32.181 @LED012 在职
+11:32:32.183 @LED013 前加工车间
+11:32:32.184 @LED014 9
+11:32:32.185 @LED015 0
+11:32:32.186 @LED016 0
+11:32:32.189 @LED001 20180922001
+11:32:32.191 @LED002 10069
+11:32:32.192 @LED003 王建琼
+11:32:32.194 @LED004 装配工
+11:32:32.195 @LED005 2018/9/22 8:00:00
+11:32:32.197 @LED006 2018/9/22 17:00:00
+11:32:32.199 @LED007 0
+11:32:32.200 @LED008 
+11:32:32.202 @LED009 
+11:32:32.203 @LED010 0
+11:32:32.205 @LED011 
+11:32:32.206 @LED012 在职
+11:32:32.208 @LED013 前加工车间
+11:32:32.209 @LED014 9
+11:32:32.211 @LED015 0
+11:32:32.212 @LED016 0
+11:32:32.215 @LEE001 20180922001
+11:32:32.217 @LEE002 GD201502090039
+11:32:32.218 @LEE003 202121339
+11:32:32.220 @LEE004 F17银色成品面板-LED
+11:32:32.221 @LEE005 银色
+11:32:32.223 @LEE006 PCS
+11:32:32.224 @LEE007 300
+11:32:32.226 @LEE008 0
+11:32:32.228 @LEE009 200
+11:32:32.231 @LEE001 20180922001
+11:32:32.233 @LEE002 GD201502090059
+11:32:32.234 @LEE003 202121339
+11:32:32.235 @LEE004 F17银色成品面板-LED
+11:32:32.236 @LEE005 银色
+11:32:32.237 @LEE006 PCS
+11:32:32.238 @LEE007 480
+11:32:32.240 @LEE008 0
+11:32:32.241 @LEE009 200
+11:34:40.355  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:34:46.161 @EMP002 系统管理员
+11:34:46.163 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:35:27.646 @LEC001 20180922002
+11:35:27.648 @LEC002 
+11:35:27.650 @LEC003 
+11:35:27.651 @LEC004 
+11:35:27.653 @LEC005 
+11:35:27.654 @LEC006 
+11:35:27.658 @LEC007 
+11:35:27.660 @LEC008 
+11:35:27.662 @LEC009 0504
+11:35:27.663 @LEC010 前加工车间
+11:35:27.664 @LEC011 0504
+11:35:27.665 @LEC012 前加工车间
+11:35:27.666 @LEC013 2018/9/22 0:00:00
+11:35:27.668 @LEC014 
+11:35:27.669 @LEC015 
+11:35:27.671 @LEC016 
+11:35:27.672 @LEC017 False
+11:35:27.674 @LEC018 False
+11:35:27.675 @LEC019 0
+11:35:27.676 @LEC020 0
+11:35:27.679 @LED001 20180922002
+11:35:27.681 @LED002 10040
+11:35:27.682 @LED003 杜福英
+11:35:27.684 @LED004 装配工
+11:35:27.685 @LED005 2018/9/22 8:00:00
+11:35:27.686 @LED006 2018/9/22 17:00:00
+11:35:27.687 @LED007 0
+11:35:27.689 @LED008 
+11:35:27.690 @LED009 
+11:35:27.692 @LED010 0
+11:35:27.693 @LED011 
+11:35:27.695 @LED012 在职
+11:35:27.696 @LED013 前加工车间
+11:35:27.697 @LED014 9
+11:35:27.699 @LED015 0
+11:35:27.700 @LED016 0
+11:35:27.702 @LED001 20180922002
+11:35:27.704 @LED002 10041
+11:35:27.705 @LED003 廖仁琼
+11:35:27.706 @LED004 装配工
+11:35:27.708 @LED005 2018/9/22 8:00:00
+11:35:27.709 @LED006 2018/9/22 17:00:00
+11:35:27.710 @LED007 0
+11:35:27.711 @LED008 
+11:35:27.713 @LED009 
+11:35:27.714 @LED010 0
+11:35:27.715 @LED011 
+11:35:27.717 @LED012 在职
+11:35:27.718 @LED013 前加工车间
+11:35:27.719 @LED014 9
+11:35:27.720 @LED015 0
+11:35:27.721 @LED016 0
+11:35:27.724 @LED001 20180922002
+11:35:27.725 @LED002 10042
+11:35:27.726 @LED003 李光艳
+11:35:27.728 @LED004 装配工
+11:35:27.729 @LED005 2018/9/22 8:00:00
+11:35:27.731 @LED006 2018/9/22 17:00:00
+11:35:27.732 @LED007 0
+11:35:27.733 @LED008 
+11:35:27.735 @LED009 
+11:35:27.736 @LED010 0
+11:35:27.737 @LED011 
+11:35:27.738 @LED012 在职
+11:35:27.740 @LED013 前加工车间
+11:35:27.741 @LED014 9
+11:35:27.743 @LED015 0
+11:35:27.745 @LED016 0
+11:35:27.748 @LED001 20180922002
+11:35:27.749 @LED002 10043
+11:35:27.750 @LED003 彭荣泽
+11:35:27.752 @LED004 装配工
+11:35:27.753 @LED005 2018/9/22 8:00:00
+11:35:27.755 @LED006 2018/9/22 17:00:00
+11:35:27.756 @LED007 0
+11:35:27.757 @LED008 
+11:35:27.758 @LED009 
+11:35:27.759 @LED010 0
+11:35:27.761 @LED011 
+11:35:27.762 @LED012 在职
+11:35:27.763 @LED013 前加工车间
+11:35:27.764 @LED014 9
+11:35:27.766 @LED015 0
+11:35:27.767 @LED016 0
+11:35:27.770 @LED001 20180922002
+11:35:27.771 @LED002 10044
+11:35:27.773 @LED003 何培凤
+11:35:27.774 @LED004 装配工
+11:35:27.775 @LED005 2018/9/22 8:00:00
+11:35:27.776 @LED006 2018/9/22 17:00:00
+11:35:27.778 @LED007 0
+11:35:27.780 @LED008 
+11:35:27.781 @LED009 
+11:35:27.783 @LED010 0
+11:35:27.784 @LED011 
+11:35:27.786 @LED012 在职
+11:35:27.787 @LED013 前加工车间
+11:35:27.788 @LED014 9
+11:35:27.790 @LED015 0
+11:35:27.791 @LED016 0
+11:35:27.794 @LED001 20180922002
+11:35:27.795 @LED002 10045
+11:35:27.797 @LED003 李朝伟
+11:35:27.798 @LED004 装配工
+11:35:27.800 @LED005 2018/9/22 8:00:00
+11:35:27.801 @LED006 2018/9/22 17:00:00
+11:35:27.802 @LED007 0
+11:35:27.804 @LED008 
+11:35:27.805 @LED009 
+11:35:27.807 @LED010 0
+11:35:27.809 @LED011 
+11:35:27.810 @LED012 在职
+11:35:27.812 @LED013 前加工车间
+11:35:27.814 @LED014 9
+11:35:27.816 @LED015 0
+11:35:27.817 @LED016 0
+11:35:27.820 @LED001 20180922002
+11:35:27.821 @LED002 10046
+11:35:27.823 @LED003 王培秀
+11:35:27.825 @LED004 装配工
+11:35:27.826 @LED005 2018/9/22 8:00:00
+11:35:27.828 @LED006 2018/9/22 17:00:00
+11:35:27.829 @LED007 0
+11:35:27.830 @LED008 
+11:35:27.832 @LED009 
+11:35:27.833 @LED010 0
+11:35:27.834 @LED011 
+11:35:27.836 @LED012 在职
+11:35:27.837 @LED013 前加工车间
+11:35:27.839 @LED014 9
+11:35:27.840 @LED015 0
+11:35:27.841 @LED016 0
+11:35:27.844 @LED001 20180922002
+11:35:27.845 @LED002 10047
+11:35:27.846 @LED003 谢武林
+11:35:27.848 @LED004 装配工
+11:35:27.849 @LED005 2018/9/22 8:00:00
+11:35:27.850 @LED006 2018/9/22 17:00:00
+11:35:27.852 @LED007 0
+11:35:27.853 @LED008 
+11:35:27.855 @LED009 
+11:35:27.856 @LED010 0
+11:35:27.857 @LED011 
+11:35:27.859 @LED012 在职
+11:35:27.860 @LED013 前加工车间
+11:35:27.862 @LED014 9
+11:35:27.863 @LED015 0
+11:35:27.865 @LED016 0
+11:35:27.868 @LED001 20180922002
+11:35:27.869 @LED002 10048
+11:35:27.871 @LED003 王程平
+11:35:27.872 @LED004 装配工
+11:35:27.874 @LED005 2018/9/22 8:00:00
+11:35:27.875 @LED006 2018/9/22 17:00:00
+11:35:27.876 @LED007 0
+11:35:27.878 @LED008 
+11:35:27.879 @LED009 
+11:35:27.880 @LED010 0
+11:35:27.881 @LED011 
+11:35:27.883 @LED012 在职
+11:35:27.884 @LED013 前加工车间
+11:35:27.885 @LED014 9
+11:35:27.887 @LED015 0
+11:35:27.888 @LED016 0
+11:35:27.890 @LED001 20180922002
+11:35:27.892 @LED002 10049
+11:35:27.893 @LED003 韩英
+11:35:27.895 @LED004 装配工
+11:35:27.896 @LED005 2018/9/22 8:00:00
+11:35:27.898 @LED006 2018/9/22 17:00:00
+11:35:27.900 @LED007 0
+11:35:27.901 @LED008 
+11:35:27.903 @LED009 
+11:35:27.904 @LED010 0
+11:35:27.905 @LED011 
+11:35:27.907 @LED012 在职
+11:35:27.908 @LED013 前加工车间
+11:35:27.909 @LED014 9
+11:35:27.910 @LED015 0
+11:35:27.912 @LED016 0
+11:35:27.914 @LED001 20180922002
+11:35:27.916 @LED002 10050
+11:35:27.917 @LED003 杨海霞
+11:35:27.919 @LED004 装配工
+11:35:27.920 @LED005 2018/9/22 8:00:00
+11:35:27.922 @LED006 2018/9/22 17:00:00
+11:35:27.923 @LED007 0
+11:35:27.924 @LED008 
+11:35:27.925 @LED009 
+11:35:27.927 @LED010 0
+11:35:27.928 @LED011 
+11:35:27.929 @LED012 在职
+11:35:27.931 @LED013 前加工车间
+11:35:27.933 @LED014 9
+11:35:27.934 @LED015 0
+11:35:27.935 @LED016 0
+11:35:27.938 @LED001 20180922002
+11:35:27.939 @LED002 10051
+11:35:27.940 @LED003 熊华美
+11:35:27.942 @LED004 装配工
+11:35:27.944 @LED005 2018/9/22 8:00:00
+11:35:27.945 @LED006 2018/9/22 17:00:00
+11:35:27.946 @LED007 0
+11:35:27.948 @LED008 
+11:35:27.949 @LED009 
+11:35:27.951 @LED010 0
+11:35:27.952 @LED011 
+11:35:27.953 @LED012 在职
+11:35:27.955 @LED013 前加工车间
+11:35:27.956 @LED014 9
+11:35:27.957 @LED015 0
+11:35:27.959 @LED016 0
+11:35:27.961 @LED001 20180922002
+11:35:27.963 @LED002 10052
+11:35:27.964 @LED003 孙琼莲
+11:35:27.966 @LED004 装配工
+11:35:27.968 @LED005 2018/9/22 8:00:00
+11:35:27.969 @LED006 2018/9/22 17:00:00
+11:35:27.971 @LED007 0
+11:35:27.973 @LED008 
+11:35:27.974 @LED009 
+11:35:27.975 @LED010 0
+11:35:27.977 @LED011 
+11:35:27.978 @LED012 在职
+11:35:27.980 @LED013 前加工车间
+11:35:27.981 @LED014 9
+11:35:27.982 @LED015 0
+11:35:27.984 @LED016 0
+11:35:27.986 @LED001 20180922002
+11:35:27.987 @LED002 10053
+11:35:27.989 @LED003 李林菊
+11:35:27.990 @LED004 装配工
+11:35:27.991 @LED005 2018/9/22 8:00:00
+11:35:27.993 @LED006 2018/9/22 17:00:00
+11:35:27.994 @LED007 0
+11:35:27.996 @LED008 
+11:35:27.997 @LED009 
+11:35:27.999 @LED010 0
+11:35:28.000 @LED011 
+11:35:28.001 @LED012 在职
+11:35:28.003 @LED013 前加工车间
+11:35:28.004 @LED014 9
+11:35:28.006 @LED015 0
+11:35:28.007 @LED016 0
+11:35:28.011 @LED001 20180922002
+11:35:28.013 @LED002 10054
+11:35:28.014 @LED003 吴群英
+11:35:28.016 @LED004 装配工
+11:35:28.017 @LED005 2018/9/22 8:00:00
+11:35:28.019 @LED006 2018/9/22 17:00:00
+11:35:28.020 @LED007 0
+11:35:28.021 @LED008 
+11:35:28.023 @LED009 
+11:35:28.024 @LED010 0
+11:35:28.026 @LED011 
+11:35:28.027 @LED012 在职
+11:35:28.028 @LED013 前加工车间
+11:35:28.029 @LED014 9
+11:35:28.031 @LED015 0
+11:35:28.032 @LED016 0
+11:35:28.034 @LED001 20180922002
+11:35:28.036 @LED002 10055
+11:35:28.037 @LED003 杨琴
+11:35:28.038 @LED004 装配工
+11:35:28.039 @LED005 2018/9/22 8:00:00
+11:35:28.040 @LED006 2018/9/22 17:00:00
+11:35:28.042 @LED007 0
+11:35:28.043 @LED008 
+11:35:28.044 @LED009 
+11:35:28.046 @LED010 0
+11:35:28.047 @LED011 
+11:35:28.048 @LED012 在职
+11:35:28.049 @LED013 前加工车间
+11:35:28.051 @LED014 9
+11:35:28.052 @LED015 0
+11:35:28.053 @LED016 0
+11:35:28.055 @LED001 20180922002
+11:35:28.057 @LED002 10056
+11:35:28.058 @LED003 韩艳
+11:35:28.059 @LED004 装配工
+11:35:28.061 @LED005 2018/9/22 8:00:00
+11:35:28.062 @LED006 2018/9/22 17:00:00
+11:35:28.064 @LED007 0
+11:35:28.065 @LED008 
+11:35:28.066 @LED009 
+11:35:28.068 @LED010 0
+11:35:28.069 @LED011 
+11:35:28.071 @LED012 在职
+11:35:28.072 @LED013 前加工车间
+11:35:28.073 @LED014 9
+11:35:28.074 @LED015 0
+11:35:28.076 @LED016 0
+11:35:28.078 @LED001 20180922002
+11:35:28.079 @LED002 10057
+11:35:28.081 @LED003 张瑜
+11:35:28.083 @LED004 装配工
+11:35:28.084 @LED005 2018/9/22 8:00:00
+11:35:28.085 @LED006 2018/9/22 17:00:00
+11:35:28.086 @LED007 0
+11:35:28.087 @LED008 
+11:35:28.088 @LED009 
+11:35:28.089 @LED010 0
+11:35:28.091 @LED011 
+11:35:28.093 @LED012 在职
+11:35:28.094 @LED013 前加工车间
+11:35:28.095 @LED014 9
+11:35:28.096 @LED015 0
+11:35:28.097 @LED016 0
+11:35:28.100 @LED001 20180922002
+11:35:28.102 @LED002 10058
+11:35:28.103 @LED003 李光云
+11:35:28.104 @LED004 装配工
+11:35:28.105 @LED005 2018/9/22 8:00:00
+11:35:28.107 @LED006 2018/9/22 17:00:00
+11:35:28.108 @LED007 0
+11:35:28.109 @LED008 
+11:35:28.111 @LED009 
+11:35:28.112 @LED010 0
+11:35:28.113 @LED011 
+11:35:28.114 @LED012 在职
+11:35:28.115 @LED013 前加工车间
+11:35:28.117 @LED014 9
+11:35:28.118 @LED015 0
+11:35:28.119 @LED016 0
+11:35:28.122 @LED001 20180922002
+11:35:28.123 @LED002 10059
+11:35:28.124 @LED003 唐春凤
+11:35:28.126 @LED004 装配工
+11:35:28.127 @LED005 2018/9/22 8:00:00
+11:35:28.128 @LED006 2018/9/22 17:00:00
+11:35:28.129 @LED007 0
+11:35:28.131 @LED008 
+11:35:28.132 @LED009 
+11:35:28.134 @LED010 0
+11:35:28.135 @LED011 
+11:35:28.137 @LED012 在职
+11:35:28.138 @LED013 前加工车间
+11:35:28.139 @LED014 9
+11:35:28.140 @LED015 0
+11:35:28.142 @LED016 0
+11:35:28.144 @LED001 20180922002
+11:35:28.145 @LED002 10060
+11:35:28.147 @LED003 陈朝香
+11:35:28.148 @LED004 装配工
+11:35:28.150 @LED005 2018/9/22 8:00:00
+11:35:28.151 @LED006 2018/9/22 17:00:00
+11:35:28.152 @LED007 0
+11:35:28.153 @LED008 
+11:35:28.155 @LED009 
+11:35:28.156 @LED010 0
+11:35:28.157 @LED011 
+11:35:28.158 @LED012 在职
+11:35:28.159 @LED013 前加工车间
+11:35:28.161 @LED014 9
+11:35:28.162 @LED015 0
+11:35:28.163 @LED016 0
+11:35:28.170 @LED001 20180922002
+11:35:28.172 @LED002 10061
+11:35:28.173 @LED003 张小婵
+11:35:28.174 @LED004 装配工
+11:35:28.176 @LED005 2018/9/22 8:00:00
+11:35:28.177 @LED006 2018/9/22 17:00:00
+11:35:28.178 @LED007 0
+11:35:28.180 @LED008 
+11:35:28.181 @LED009 
+11:35:28.182 @LED010 0
+11:35:28.184 @LED011 
+11:35:28.185 @LED012 在职
+11:35:28.186 @LED013 前加工车间
+11:35:28.187 @LED014 9
+11:35:28.188 @LED015 0
+11:35:28.189 @LED016 0
+11:35:28.192 @LED001 20180922002
+11:35:28.193 @LED002 10062
+11:35:28.194 @LED003 曾昭婵
+11:35:28.196 @LED004 装配工
+11:35:28.197 @LED005 2018/9/22 8:00:00
+11:35:28.199 @LED006 2018/9/22 17:00:00
+11:35:28.200 @LED007 0
+11:35:28.201 @LED008 
+11:35:28.203 @LED009 
+11:35:28.204 @LED010 0
+11:35:28.205 @LED011 
+11:35:28.206 @LED012 在职
+11:35:28.208 @LED013 前加工车间
+11:35:28.209 @LED014 9
+11:35:28.210 @LED015 0
+11:35:28.212 @LED016 0
+11:35:28.214 @LED001 20180922002
+11:35:28.215 @LED002 10063
+11:35:28.217 @LED003 牟飞
+11:35:28.218 @LED004 装配工
+11:35:28.219 @LED005 2018/9/22 8:00:00
+11:35:28.221 @LED006 2018/9/22 17:00:00
+11:35:28.222 @LED007 0
+11:35:28.223 @LED008 
+11:35:28.224 @LED009 
+11:35:28.226 @LED010 0
+11:35:28.227 @LED011 
+11:35:28.229 @LED012 在职
+11:35:28.230 @LED013 前加工车间
+11:35:28.231 @LED014 9
+11:35:28.232 @LED015 0
+11:35:28.234 @LED016 0
+11:35:28.236 @LED001 20180922002
+11:35:28.237 @LED002 10064
+11:35:28.239 @LED003 牟欢
+11:35:28.240 @LED004 装配工
+11:35:28.242 @LED005 2018/9/22 8:00:00
+11:35:28.243 @LED006 2018/9/22 17:00:00
+11:35:28.244 @LED007 0
+11:35:28.246 @LED008 
+11:35:28.247 @LED009 
+11:35:28.248 @LED010 0
+11:35:28.249 @LED011 
+11:35:28.251 @LED012 在职
+11:35:28.252 @LED013 前加工车间
+11:35:28.253 @LED014 9
+11:35:28.255 @LED015 0
+11:35:28.256 @LED016 0
+11:35:28.258 @LED001 20180922002
+11:35:28.260 @LED002 10065
+11:35:28.262 @LED003 陶炼
+11:35:28.263 @LED004 装配工
+11:35:28.264 @LED005 2018/9/22 8:00:00
+11:35:28.266 @LED006 2018/9/22 17:00:00
+11:35:28.267 @LED007 0
+11:35:28.268 @LED008 
+11:35:28.269 @LED009 
+11:35:28.271 @LED010 0
+11:35:28.272 @LED011 
+11:35:28.274 @LED012 在职
+11:35:28.275 @LED013 前加工车间
+11:35:28.276 @LED014 9
+11:35:28.278 @LED015 0
+11:35:28.279 @LED016 0
+11:35:28.281 @LED001 20180922002
+11:35:28.283 @LED002 10066
+11:35:28.284 @LED003 杜光斌
+11:35:28.286 @LED004 装配工
+11:35:28.287 @LED005 2018/9/22 8:00:00
+11:35:28.289 @LED006 2018/9/22 17:00:00
+11:35:28.290 @LED007 0
+11:35:28.291 @LED008 
+11:35:28.293 @LED009 
+11:35:28.294 @LED010 0
+11:35:28.295 @LED011 
+11:35:28.296 @LED012 在职
+11:35:28.297 @LED013 前加工车间
+11:35:28.299 @LED014 9
+11:35:28.300 @LED015 0
+11:35:28.301 @LED016 0
+11:35:28.304 @LED001 20180922002
+11:35:28.306 @LED002 10067
+11:35:28.307 @LED003 朱大艳
+11:35:28.309 @LED004 装配工
+11:35:28.310 @LED005 2018/9/22 8:00:00
+11:35:28.311 @LED006 2018/9/22 17:00:00
+11:35:28.312 @LED007 0
+11:35:28.313 @LED008 
+11:35:28.315 @LED009 
+11:35:28.316 @LED010 0
+11:35:28.317 @LED011 
+11:35:28.318 @LED012 在职
+11:35:28.320 @LED013 前加工车间
+11:35:28.321 @LED014 9
+11:35:28.322 @LED015 0
+11:35:28.324 @LED016 0
+11:35:28.326 @LED001 20180922002
+11:35:28.328 @LED002 10068
+11:35:28.329 @LED003 王银祥
+11:35:28.330 @LED004 装配工
+11:35:28.332 @LED005 2018/9/22 8:00:00
+11:35:28.333 @LED006 2018/9/22 17:00:00
+11:35:28.334 @LED007 0
+11:35:28.336 @LED008 
+11:35:28.337 @LED009 
+11:35:28.338 @LED010 0
+11:35:28.340 @LED011 
+11:35:28.341 @LED012 在职
+11:35:28.342 @LED013 前加工车间
+11:35:28.343 @LED014 9
+11:35:28.345 @LED015 0
+11:35:28.346 @LED016 0
+11:35:28.348 @LED001 20180922002
+11:35:28.350 @LED002 10069
+11:35:28.352 @LED003 王建琼
+11:35:28.353 @LED004 装配工
+11:35:28.355 @LED005 2018/9/22 8:00:00
+11:35:28.356 @LED006 2018/9/22 17:00:00
+11:35:28.357 @LED007 0
+11:35:28.359 @LED008 
+11:35:28.360 @LED009 
+11:35:28.361 @LED010 0
+11:35:28.362 @LED011 
+11:35:28.364 @LED012 在职
+11:35:28.365 @LED013 前加工车间
+11:35:28.366 @LED014 9
+11:35:28.367 @LED015 0
+11:35:28.368 @LED016 0
+11:35:28.371 @LEE001 20180922002
+11:35:28.373 @LEE002 GD201502090039
+11:35:28.374 @LEE003 202121339
+11:35:28.375 @LEE004 F17银色成品面板-LED
+11:35:28.377 @LEE005 银色
+11:35:28.378 @LEE006 PCS
+11:35:28.379 @LEE007 300
+11:35:28.381 @LEE008 0
+11:35:28.382 @LEE009 100
+11:35:28.384 @LEE001 20180922002
+11:35:28.386 @LEE002 GD201502090059
+11:35:28.387 @LEE003 202121339
+11:35:28.389 @LEE004 F17银色成品面板-LED
+11:35:28.390 @LEE005 银色
+11:35:28.391 @LEE006 PCS
+11:35:28.392 @LEE007 480
+11:35:28.394 @LEE008 0
+11:35:28.395 @LEE009 200
+11:38:22.739  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:04:25.931 @EMP002 系统管理员
+13:04:25.933 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:05:36.296 @LEF001 20180922003
+13:05:36.299 @LEF009 0506
+13:05:36.301 @LEF010 LED车间
+13:05:36.303 @LEF011 0506
+13:05:36.304 @LEF012 LED车间
+13:05:36.306 @LEF013 2018/9/22 0:00:00
+13:05:36.307 @LEF015 
+13:05:36.310 @LEF016 
+13:05:36.311 @LEF017 False
+13:05:36.313 @LEF018 False
+13:05:36.315 @LEF019 0
+13:05:36.317 @LEF020 0
+13:05:36.323 @LEG001 20180922003
+13:05:36.325 @LEG002 10016
+13:05:36.327 @LEG003 郭婧
+13:05:36.329 @LEG004 装配工
+13:05:36.330 @LEG005 2018/9/22 8:00:00
+13:05:36.332 @LEG006 2018/9/22 17:00:00
+13:05:36.333 @LEG007 0
+13:05:36.334 @LEG008 
+13:05:36.336 @LEG009 
+13:05:36.337 @LEG010 0
+13:05:36.338 @LEG011 
+13:05:36.339 @LEG012 在职
+13:05:36.340 @LEG013 LED车间
+13:05:36.341 @LEG014 9
+13:05:36.343 @LEG015 0
+13:05:36.344 @LEG016 0
+13:05:36.346 @LEG001 20180922003
+13:05:36.348 @LEG002 10017
+13:05:36.349 @LEG003 龙兴连
+13:05:36.351 @LEG004 装配工
+13:05:36.352 @LEG005 2018/9/22 8:00:00
+13:05:36.353 @LEG006 2018/9/22 17:00:00
+13:05:36.355 @LEG007 0
+13:05:36.356 @LEG008 
+13:05:36.357 @LEG009 
+13:05:36.358 @LEG010 0
+13:05:36.360 @LEG011 
+13:05:36.361 @LEG012 在职
+13:05:36.362 @LEG013 LED车间
+13:05:36.363 @LEG014 9
+13:05:36.365 @LEG015 0
+13:05:36.366 @LEG016 0
+13:05:36.368 @LEG001 20180922003
+13:05:36.370 @LEG002 10018
+13:05:36.371 @LEG003 刘付连
+13:05:36.372 @LEG004 装配工
+13:05:36.373 @LEG005 2018/9/22 8:00:00
+13:05:36.376 @LEG006 2018/9/22 17:00:00
+13:05:36.378 @LEG007 0
+13:05:36.380 @LEG008 
+13:05:36.381 @LEG009 
+13:05:36.382 @LEG010 0
+13:05:36.384 @LEG011 
+13:05:36.385 @LEG012 在职
+13:05:36.386 @LEG013 LED车间
+13:05:36.387 @LEG014 9
+13:05:36.389 @LEG015 0
+13:05:36.390 @LEG016 0
+13:05:36.393 @LEG001 20180922003
+13:05:36.395 @LEG002 10019
+13:05:36.396 @LEG003 聂付秋
+13:05:36.397 @LEG004 装配工
+13:05:36.399 @LEG005 2018/9/22 8:00:00
+13:05:36.400 @LEG006 2018/9/22 17:00:00
+13:05:36.401 @LEG007 0
+13:05:36.403 @LEG008 
+13:05:36.404 @LEG009 
+13:05:36.405 @LEG010 0
+13:05:36.407 @LEG011 
+13:05:36.409 @LEG012 在职
+13:05:36.410 @LEG013 LED车间
+13:05:36.411 @LEG014 9
+13:05:36.413 @LEG015 0
+13:05:36.414 @LEG016 0
+13:05:36.416 @LEG001 20180922003
+13:05:36.418 @LEG002 10020
+13:05:36.419 @LEG003 薛能米
+13:05:36.420 @LEG004 装配工
+13:05:36.421 @LEG005 2018/9/22 8:00:00
+13:05:36.423 @LEG006 2018/9/22 17:00:00
+13:05:36.424 @LEG007 0
+13:05:36.426 @LEG008 
+13:05:36.427 @LEG009 
+13:05:36.428 @LEG010 0
+13:05:36.429 @LEG011 
+13:05:36.431 @LEG012 在职
+13:05:36.432 @LEG013 LED车间
+13:05:36.433 @LEG014 9
+13:05:36.434 @LEG015 0
+13:05:36.436 @LEG016 0
+13:05:36.438 @LEG001 20180922003
+13:05:36.439 @LEG002 10021
+13:05:36.441 @LEG003 彭顺艳
+13:05:36.442 @LEG004 装配工
+13:05:36.443 @LEG005 2018/9/22 8:00:00
+13:05:36.444 @LEG006 2018/9/22 17:00:00
+13:05:36.445 @LEG007 0
+13:05:36.447 @LEG008 
+13:05:36.448 @LEG009 
+13:05:36.449 @LEG010 0
+13:05:36.451 @LEG011 
+13:05:36.452 @LEG012 在职
+13:05:36.453 @LEG013 LED车间
+13:05:36.454 @LEG014 9
+13:05:36.455 @LEG015 0
+13:05:36.457 @LEG016 0
+13:05:36.459 @LEG001 20180922003
+13:05:36.461 @LEG002 10022
+13:05:36.462 @LEG003 罗小琴
+13:05:36.463 @LEG004 装配工
+13:05:36.464 @LEG005 2018/9/22 8:00:00
+13:05:36.466 @LEG006 2018/9/22 17:00:00
+13:05:36.467 @LEG007 0
+13:05:36.468 @LEG008 
+13:05:36.469 @LEG009 
+13:05:36.471 @LEG010 0
+13:05:36.472 @LEG011 
+13:05:36.474 @LEG012 在职
+13:05:36.475 @LEG013 LED车间
+13:05:36.476 @LEG014 9
+13:05:36.477 @LEG015 0
+13:05:36.479 @LEG016 0
+13:05:36.481 @LEG001 20180922003
+13:05:36.483 @LEG002 10023
+13:05:36.484 @LEG003 吕红艳
+13:05:36.485 @LEG004 装配工
+13:05:36.487 @LEG005 2018/9/22 8:00:00
+13:05:36.489 @LEG006 2018/9/22 17:00:00
+13:05:36.490 @LEG007 0
+13:05:36.491 @LEG008 
+13:05:36.493 @LEG009 
+13:05:36.494 @LEG010 0
+13:05:36.495 @LEG011 
+13:05:36.497 @LEG012 在职
+13:05:36.498 @LEG013 LED车间
+13:05:36.499 @LEG014 9
+13:05:36.501 @LEG015 0
+13:05:36.502 @LEG016 0
+13:05:36.504 @LEG001 20180922003
+13:05:36.506 @LEG002 10024
+13:05:36.507 @LEG003 李朝粉
+13:05:36.509 @LEG004 装配工
+13:05:36.510 @LEG005 2018/9/22 8:00:00
+13:05:36.512 @LEG006 2018/9/22 17:00:00
+13:05:36.513 @LEG007 0
+13:05:36.514 @LEG008 
+13:05:36.516 @LEG009 
+13:05:36.517 @LEG010 0
+13:05:36.519 @LEG011 
+13:05:36.520 @LEG012 在职
+13:05:36.522 @LEG013 LED车间
+13:05:36.523 @LEG014 9
+13:05:36.524 @LEG015 0
+13:05:36.526 @LEG016 0
+13:05:36.528 @LEG001 20180922003
+13:05:36.529 @LEG002 10025
+13:05:36.531 @LEG003 陈文会
+13:05:36.532 @LEG004 装配工
+13:05:36.533 @LEG005 2018/9/22 8:00:00
+13:05:36.535 @LEG006 2018/9/22 17:00:00
+13:05:36.536 @LEG007 0
+13:05:36.538 @LEG008 
+13:05:36.539 @LEG009 
+13:05:36.540 @LEG010 0
+13:05:36.542 @LEG011 
+13:05:36.543 @LEG012 在职
+13:05:36.544 @LEG013 LED车间
+13:05:36.546 @LEG014 9
+13:05:36.547 @LEG015 0
+13:05:36.549 @LEG016 0
+13:05:36.551 @LEG001 20180922003
+13:05:36.553 @LEG002 10026
+13:05:36.555 @LEG003 平单单
+13:05:36.556 @LEG004 装配工
+13:05:36.557 @LEG005 2018/9/22 8:00:00
+13:05:36.559 @LEG006 2018/9/22 17:00:00
+13:05:36.560 @LEG007 0
+13:05:36.562 @LEG008 
+13:05:36.564 @LEG009 
+13:05:36.565 @LEG010 0
+13:05:36.567 @LEG011 
+13:05:36.568 @LEG012 在职
+13:05:36.570 @LEG013 LED车间
+13:05:36.571 @LEG014 9
+13:05:36.572 @LEG015 0
+13:05:36.573 @LEG016 0
+13:05:36.576 @LEG001 20180922003
+13:05:36.577 @LEG002 10027
+13:05:36.579 @LEG003 梁永琴
+13:05:36.580 @LEG004 装配工
+13:05:36.581 @LEG005 2018/9/22 8:00:00
+13:05:36.583 @LEG006 2018/9/22 17:00:00
+13:05:36.585 @LEG007 0
+13:05:36.586 @LEG008 
+13:05:36.587 @LEG009 
+13:05:36.589 @LEG010 0
+13:05:36.590 @LEG011 
+13:05:36.592 @LEG012 在职
+13:05:36.593 @LEG013 LED车间
+13:05:36.595 @LEG014 9
+13:05:36.596 @LEG015 0
+13:05:36.598 @LEG016 0
+13:05:36.600 @LEG001 20180922003
+13:05:36.602 @LEG002 10028
+13:05:36.603 @LEG003 胡孝明
+13:05:36.604 @LEG004 装配工
+13:05:36.605 @LEG005 2018/9/22 8:00:00
+13:05:36.607 @LEG006 2018/9/22 17:00:00
+13:05:36.608 @LEG007 0
+13:05:36.609 @LEG008 
+13:05:36.610 @LEG009 
+13:05:36.612 @LEG010 0
+13:05:36.613 @LEG011 
+13:05:36.615 @LEG012 在职
+13:05:36.616 @LEG013 LED车间
+13:05:36.617 @LEG014 9
+13:05:36.619 @LEG015 0
+13:05:36.620 @LEG016 0
+13:05:36.622 @LEG001 20180922003
+13:05:36.624 @LEG002 10029
+13:05:36.625 @LEG003 聂昌奎
+13:05:36.627 @LEG004 装配工
+13:05:36.628 @LEG005 2018/9/22 8:00:00
+13:05:36.629 @LEG006 2018/9/22 17:00:00
+13:05:36.630 @LEG007 0
+13:05:36.632 @LEG008 
+13:05:36.633 @LEG009 
+13:05:36.634 @LEG010 0
+13:05:36.635 @LEG011 
+13:05:36.636 @LEG012 在职
+13:05:36.637 @LEG013 LED车间
+13:05:36.639 @LEG014 9
+13:05:36.640 @LEG015 0
+13:05:36.641 @LEG016 0
+13:05:36.643 @LEG001 20180922003
+13:05:36.645 @LEG002 10030
+13:05:36.646 @LEG003 陶兴琴
+13:05:36.647 @LEG004 装配工
+13:05:36.649 @LEG005 2018/9/22 8:00:00
+13:05:36.650 @LEG006 2018/9/22 17:00:00
+13:05:36.651 @LEG007 0
+13:05:36.652 @LEG008 
+13:05:36.653 @LEG009 
+13:05:36.655 @LEG010 0
+13:05:36.656 @LEG011 
+13:05:36.657 @LEG012 在职
+13:05:36.658 @LEG013 LED车间
+13:05:36.659 @LEG014 9
+13:05:36.660 @LEG015 0
+13:05:36.662 @LEG016 0
+13:05:36.664 @LEG001 20180922003
+13:05:36.665 @LEG002 10031
+13:05:36.667 @LEG003 方宇
+13:05:36.668 @LEG004 装配工
+13:05:36.669 @LEG005 2018/9/22 8:00:00
+13:05:36.670 @LEG006 2018/9/22 17:00:00
+13:05:36.671 @LEG007 0
+13:05:36.673 @LEG008 
+13:05:36.674 @LEG009 
+13:05:36.675 @LEG010 0
+13:05:36.676 @LEG011 
+13:05:36.678 @LEG012 在职
+13:05:36.679 @LEG013 LED车间
+13:05:36.680 @LEG014 9
+13:05:36.681 @LEG015 0
+13:05:36.682 @LEG016 0
+13:05:36.684 @LEG001 20180922003
+13:05:36.686 @LEG002 10032
+13:05:36.687 @LEG003 段进连
+13:05:36.688 @LEG004 装配工
+13:05:36.690 @LEG005 2018/9/22 8:00:00
+13:05:36.691 @LEG006 2018/9/22 17:00:00
+13:05:36.692 @LEG007 0
+13:05:36.693 @LEG008 
+13:05:36.695 @LEG009 
+13:05:36.696 @LEG010 0
+13:05:36.697 @LEG011 
+13:05:36.698 @LEG012 在职
+13:05:36.699 @LEG013 LED车间
+13:05:36.700 @LEG014 9
+13:05:36.701 @LEG015 0
+13:05:36.702 @LEG016 0
+13:05:36.705 @LEG001 20180922003
+13:05:36.706 @LEG002 10033
+13:05:36.707 @LEG003 唐云云
+13:05:36.709 @LEG004 装配工
+13:05:36.710 @LEG005 2018/9/22 8:00:00
+13:05:36.711 @LEG006 2018/9/22 17:00:00
+13:05:36.712 @LEG007 0
+13:05:36.713 @LEG008 
+13:05:36.715 @LEG009 
+13:05:36.716 @LEG010 0
+13:05:36.717 @LEG011 
+13:05:36.718 @LEG012 在职
+13:05:36.719 @LEG013 LED车间
+13:05:36.720 @LEG014 9
+13:05:36.721 @LEG015 0
+13:05:36.723 @LEG016 0
+13:05:36.725 @LEG001 20180922003
+13:05:36.727 @LEG002 10034
+13:05:36.728 @LEG003 李大花
+13:05:36.729 @LEG004 装配工
+13:05:36.731 @LEG005 2018/9/22 8:00:00
+13:05:36.732 @LEG006 2018/9/22 17:00:00
+13:05:36.733 @LEG007 0
+13:05:36.734 @LEG008 
+13:05:36.735 @LEG009 
+13:05:36.737 @LEG010 0
+13:05:36.738 @LEG011 
+13:05:36.739 @LEG012 在职
+13:05:36.740 @LEG013 LED车间
+13:05:36.741 @LEG014 9
+13:05:36.742 @LEG015 0
+13:05:36.743 @LEG016 0
+13:05:36.746 @LEG001 20180922003
+13:05:36.747 @LEG002 10035
+13:05:36.748 @LEG003 黄史作
+13:05:36.749 @LEG004 装配工
+13:05:36.751 @LEG005 2018/9/22 8:00:00
+13:05:36.752 @LEG006 2018/9/22 17:00:00
+13:05:36.753 @LEG007 0
+13:05:36.755 @LEG008 
+13:05:36.756 @LEG009 
+13:05:36.757 @LEG010 0
+13:05:36.758 @LEG011 
+13:05:36.760 @LEG012 在职
+13:05:36.761 @LEG013 LED车间
+13:05:36.762 @LEG014 9
+13:05:36.763 @LEG015 0
+13:05:36.764 @LEG016 0
+13:05:36.767 @LEG001 20180922003
+13:05:36.768 @LEG002 10036
+13:05:36.769 @LEG003 罗昌梅
+13:05:36.771 @LEG004 装配工
+13:05:36.772 @LEG005 2018/9/22 8:00:00
+13:05:36.774 @LEG006 2018/9/22 17:00:00
+13:05:36.776 @LEG007 0
+13:05:36.777 @LEG008 
+13:05:36.779 @LEG009 
+13:05:36.780 @LEG010 0
+13:05:36.782 @LEG011 
+13:05:36.784 @LEG012 在职
+13:05:36.786 @LEG013 LED车间
+13:05:36.787 @LEG014 9
+13:05:36.789 @LEG015 0
+13:05:36.790 @LEG016 0
+13:05:36.793 @LEG001 20180922003
+13:05:36.795 @LEG002 10037
+13:05:36.797 @LEG003 赵雨婷
+13:05:36.798 @LEG004 装配工
+13:05:36.800 @LEG005 2018/9/22 8:00:00
+13:05:36.802 @LEG006 2018/9/22 17:00:00
+13:05:36.804 @LEG007 0
+13:05:36.805 @LEG008 
+13:05:36.807 @LEG009 
+13:05:36.809 @LEG010 0
+13:05:36.810 @LEG011 
+13:05:36.812 @LEG012 在职
+13:05:36.813 @LEG013 LED车间
+13:05:36.815 @LEG014 9
+13:05:36.816 @LEG015 0
+13:05:36.818 @LEG016 0
+13:05:36.820 @LEG001 20180922003
+13:05:36.822 @LEG002 10038
+13:05:36.823 @LEG003 余双双
+13:05:36.824 @LEG004 装配工
+13:05:36.825 @LEG005 2018/9/22 8:00:00
+13:05:36.826 @LEG006 2018/9/22 17:00:00
+13:05:36.828 @LEG007 0
+13:05:36.829 @LEG008 
+13:05:36.831 @LEG009 
+13:05:36.832 @LEG010 0
+13:05:36.833 @LEG011 
+13:05:36.834 @LEG012 在职
+13:05:36.836 @LEG013 LED车间
+13:05:36.837 @LEG014 9
+13:05:36.838 @LEG015 0
+13:05:36.839 @LEG016 0
+13:05:36.842 @LEH001 20180922003
+13:05:36.843 @LEH002 GD201502090062
+13:05:36.844 @LEH003 203011467
+13:05:36.845 @LEH004 LED组件-160
+13:05:36.847 @LEH005 
+13:05:36.848 @LEH006 PCS
+13:05:36.850 @LEH007 230
+13:05:36.851 @LEH008 0
+13:05:36.852 @LEH009 210
+13:05:36.853 @LEH010 
+13:05:36.854 @LEH011 
+13:05:36.856 @LEH012 
+14:30:11.570  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:30:18.650 @EMP002 系统管理员
+14:30:18.655 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:31:45.775 @LGN001 20180917001
+14:31:45.778 @LGN003 False
+14:32:12.544 @LGN001 20180922001
+14:32:12.545 @LGN002 2018/9/22 0:00:00
+14:32:12.547 @LGN005 0
+14:32:12.548 @LGN006 0
+14:32:12.550 @LGN007 计件
+14:32:12.559 @LOG001 20180922001
+14:32:12.561 @LOG002 XH201502100001
+14:32:12.562 @LOG003 001
+14:32:12.563 @LOG004 TCLNS-05A007
+14:32:12.565 @LOG005 13款二灯壁挂
+14:32:12.566 @LOG006 53
+14:32:12.568 @LOG007 0
+14:32:12.569 @LOG008 50
+14:32:12.570 @LOG009 0
+14:32:12.574 @LGP001 20180922001
+14:32:12.576 @LGP002 10002
+14:32:12.577 @LGP003 吴征义
+14:32:12.579 @LGP004 成品搬运工
+14:32:12.582 @LGP005 在职
+14:32:12.583 @LGP006 物流组
+14:32:12.585 @LGP007 
+14:32:12.587 @LGP008 
+14:32:12.588 @LGP009 2018/9/22 8:00:00
+14:32:12.589 @LGP010 2018/9/22 17:00:00
+14:32:12.590 @LGP011 9
+14:32:12.592 @LGP012 0
+14:32:12.593 @LGP013 0
+14:32:12.594 @LGP014 
+14:32:12.599 @LGP001 20180922001
+14:32:12.600 @LGP002 10003
+14:32:12.601 @LGP003 王世洪
+14:32:12.603 @LGP004 成品搬运工
+14:32:12.604 @LGP005 在职
+14:32:12.605 @LGP006 物流组
+14:32:12.607 @LGP007 
+14:32:12.608 @LGP008 
+14:32:12.609 @LGP009 2018/9/22 8:00:00
+14:32:12.610 @LGP010 2018/9/22 17:00:00
+14:32:12.612 @LGP011 9
+14:32:12.613 @LGP012 0
+14:32:12.615 @LGP013 0
+14:32:12.616 @LGP014 
+14:32:12.619 @LGP001 20180922001
+14:32:12.620 @LGP002 10004
+14:32:12.621 @LGP003 李守军
+14:32:12.622 @LGP004 成品搬运工
+14:32:12.624 @LGP005 在职
+14:32:12.625 @LGP006 物流组
+14:32:12.627 @LGP007 
+14:32:12.628 @LGP008 
+14:32:12.629 @LGP009 2018/9/22 8:00:00
+14:32:12.631 @LGP010 2018/9/22 17:00:00
+14:32:12.632 @LGP011 9
+14:32:12.634 @LGP012 0
+14:32:12.635 @LGP013 0
+14:32:12.636 @LGP014 
+14:32:12.638 @LGP001 20180922001
+14:32:12.640 @LGP002 10005
+14:32:12.641 @LGP003 陈波
+14:32:12.643 @LGP004 成品搬运工
+14:32:12.644 @LGP005 在职
+14:32:12.646 @LGP006 物流组
+14:32:12.647 @LGP007 
+14:32:12.648 @LGP008 
+14:32:12.650 @LGP009 2018/9/22 8:00:00
+14:32:12.651 @LGP010 2018/9/22 17:00:00
+14:32:12.652 @LGP011 9
+14:32:12.653 @LGP012 0
+14:32:12.655 @LGP013 0
+14:32:12.656 @LGP014 
+14:32:12.659 @LGP001 20180922001
+14:32:12.660 @LGP002 10006
+14:32:12.662 @LGP003 赵庆书
+14:32:12.663 @LGP004 成品搬运工
+14:32:12.665 @LGP005 在职
+14:32:12.666 @LGP006 物流组
+14:32:12.667 @LGP007 
+14:32:12.669 @LGP008 
+14:32:12.670 @LGP009 2018/9/22 8:00:00
+14:32:12.671 @LGP010 2018/9/22 17:00:00
+14:32:12.672 @LGP011 9
+14:32:12.673 @LGP012 0
+14:32:12.675 @LGP013 0
+14:32:12.676 @LGP014 
+14:32:12.679 @LGP001 20180922001
+14:32:12.680 @LGP002 10007
+14:32:12.682 @LGP003 朱志波
+14:32:12.683 @LGP004 成品搬运工
+14:32:12.684 @LGP005 在职
+14:32:12.686 @LGP006 物流组
+14:32:12.687 @LGP007 
+14:32:12.688 @LGP008 
+14:32:12.689 @LGP009 2018/9/22 8:00:00
+14:32:12.691 @LGP010 2018/9/22 17:00:00
+14:32:12.693 @LGP011 9
+14:32:12.694 @LGP012 0
+14:32:12.696 @LGP013 0
+14:32:12.697 @LGP014 
+14:32:12.700 @LGP001 20180922001
+14:32:12.701 @LGP002 10008
+14:32:12.702 @LGP003 杨彬洪
+14:32:12.704 @LGP004 发货员
+14:32:12.705 @LGP005 在职
+14:32:12.706 @LGP006 物流组
+14:32:12.707 @LGP007 
+14:32:12.709 @LGP008 
+14:32:12.710 @LGP009 2018/9/22 8:00:00
+14:32:12.712 @LGP010 2018/9/22 17:00:00
+14:32:12.713 @LGP011 9
+14:32:12.714 @LGP012 0
+14:32:12.716 @LGP013 0
+14:32:12.717 @LGP014 
+14:32:12.719 @LGP001 20180922001
+14:32:12.721 @LGP002 10009
+14:32:12.723 @LGP003 张之峰
+14:32:12.724 @LGP004 发货员
+14:32:12.726 @LGP005 在职
+14:32:12.727 @LGP006 物流组
+14:32:12.728 @LGP007 
+14:32:12.730 @LGP008 
+14:32:12.731 @LGP009 2018/9/22 8:00:00
+14:32:12.732 @LGP010 2018/9/22 17:00:00
+14:32:12.733 @LGP011 9
+14:32:12.735 @LGP012 0
+14:32:12.737 @LGP013 0
+14:32:12.739 @LGP014 
+14:32:12.741 @LGP001 20180922001
+14:32:12.743 @LGP002 10010
+14:32:12.745 @LGP003 胡福林
+14:32:12.746 @LGP004 发货员
+14:32:12.747 @LGP005 在职
+14:32:12.748 @LGP006 物流组
+14:32:12.749 @LGP007 
+14:32:12.750 @LGP008 
+14:32:12.752 @LGP009 2018/9/22 8:00:00
+14:32:12.753 @LGP010 2018/9/22 17:00:00
+14:32:12.754 @LGP011 9
+14:32:12.755 @LGP012 0
+14:32:12.756 @LGP013 0
+14:32:12.758 @LGP014 
+14:32:12.761 @LGP001 20180922001
+14:32:12.763 @LGP002 10011
+14:32:12.765 @LGP003 潘传慧
+14:32:12.767 @LGP004 发货员
+14:32:12.768 @LGP005 在职
+14:32:12.770 @LGP006 物流组
+14:32:12.771 @LGP007 
+14:32:12.772 @LGP008 
+14:32:12.774 @LGP009 2018/9/22 8:00:00
+14:32:12.775 @LGP010 2018/9/22 17:00:00
+14:32:12.776 @LGP011 9
+14:32:12.777 @LGP012 0
+14:32:12.779 @LGP013 0
+14:32:12.780 @LGP014 
+14:32:12.782 @LGP001 20180922001
+14:32:12.784 @LGP002 10012
+14:32:12.786 @LGP003 薛能有
+14:32:12.787 @LGP004 发货员
+14:32:12.788 @LGP005 在职
+14:32:12.790 @LGP006 物流组
+14:32:12.791 @LGP007 
+14:32:12.792 @LGP008 
+14:32:12.794 @LGP009 2018/9/22 8:00:00
+14:32:12.795 @LGP010 2018/9/22 17:00:00
+14:32:12.796 @LGP011 9
+14:32:12.797 @LGP012 0
+14:32:12.799 @LGP013 0
+14:32:12.801 @LGP014 
+14:32:12.803 @LGP001 20180922001
+14:32:12.805 @LGP002 10013
+14:32:12.806 @LGP003 杨友洪
+14:32:12.808 @LGP004 发货员
+14:32:12.809 @LGP005 在职
+14:32:12.810 @LGP006 物流组
+14:32:12.811 @LGP007 
+14:32:12.812 @LGP008 
+14:32:12.814 @LGP009 2018/9/22 8:00:00
+14:32:12.815 @LGP010 2018/9/22 17:00:00
+14:32:12.817 @LGP011 9
+14:32:12.818 @LGP012 0
+14:32:12.820 @LGP013 0
+14:32:12.821 @LGP014 
+14:32:12.824 @LGP001 20180922001
+14:32:12.825 @LGP002 10014
+14:32:12.827 @LGP003 朱严朝
+14:32:12.828 @LGP004 物流员
+14:32:12.830 @LGP005 在职
+14:32:12.832 @LGP006 物流组
+14:32:12.834 @LGP007 
+14:32:12.835 @LGP008 
+14:32:12.836 @LGP009 2018/9/22 8:00:00
+14:32:12.838 @LGP010 2018/9/22 17:00:00
+14:32:12.839 @LGP011 9
+14:32:12.840 @LGP012 0
+14:32:12.842 @LGP013 0
+14:32:12.843 @LGP014 
+14:35:11.741  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:35:26.673 @EMP002 系统管理员
+14:35:26.675 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:38:35.110  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:38:45.324 @EMP002 系统管理员
+14:38:45.326 @EMP033 d8d5d8714d15bca64516fcd5093fc1e
+14:38:48.148 @EMP002 系统管理员
+14:38:48.149 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:41:43.907 @LGN001 20180922002
+14:41:43.909 @LGN002 2018/9/22 0:00:00
+14:41:43.911 @LGN005 0
+14:41:43.912 @LGN006 0
+14:41:43.913 @LGN007 计件
+14:41:43.917 @LOG001 20180922002
+14:41:43.919 @LOG002 XH201502100001
+14:41:43.920 @LOG003 001
+14:41:43.922 @LOG004 TCLNS-05A007
+14:41:43.924 @LOG005 13款二灯壁挂
+14:41:43.925 @LOG006 53
+14:41:43.927 @LOG007 0
+14:41:43.929 @LOG008 3
+14:41:43.931 @LOG009 0
+14:41:43.934 @LGP001 20180922002
+14:41:43.936 @LGP002 10002
+14:41:43.937 @LGP003 吴征义
+14:41:43.939 @LGP004 成品搬运工
+14:41:43.940 @LGP005 在职
+14:41:43.942 @LGP006 物流组
+14:41:43.943 @LGP007 
+14:41:43.945 @LGP008 
+14:41:43.947 @LGP009 2018/9/22 8:00:00
+14:41:43.951 @LGP010 2018/9/22 17:00:00
+14:41:43.952 @LGP011 9
+14:41:43.954 @LGP012 0
+14:41:43.956 @LGP013 0
+14:41:43.957 @LGP014 
+14:41:43.960 @LGP001 20180922002
+14:41:43.962 @LGP002 10003
+14:41:43.964 @LGP003 王世洪
+14:41:43.965 @LGP004 成品搬运工
+14:41:43.967 @LGP005 在职
+14:41:43.969 @LGP006 物流组
+14:41:43.971 @LGP007 
+14:41:43.973 @LGP008 
+14:41:43.974 @LGP009 2018/9/22 8:00:00
+14:41:43.977 @LGP010 2018/9/22 17:00:00
+14:41:43.978 @LGP011 9
+14:41:43.980 @LGP012 0
+14:41:43.981 @LGP013 0
+14:41:43.983 @LGP014 
+14:41:43.986 @LGP001 20180922002
+14:41:43.988 @LGP002 10004
+14:41:43.989 @LGP003 李守军
+14:41:43.990 @LGP004 成品搬运工
+14:41:43.991 @LGP005 在职
+14:41:43.992 @LGP006 物流组
+14:41:43.994 @LGP007 
+14:41:43.995 @LGP008 
+14:41:43.997 @LGP009 2018/9/22 8:00:00
+14:41:43.999 @LGP010 2018/9/22 17:00:00
+14:41:44.001 @LGP011 9
+14:41:44.002 @LGP012 0
+14:41:44.003 @LGP013 0
+14:41:44.004 @LGP014 
+14:41:44.007 @LGP001 20180922002
+14:41:44.008 @LGP002 10005
+14:41:44.009 @LGP003 陈波
+14:41:44.011 @LGP004 成品搬运工
+14:41:44.012 @LGP005 在职
+14:41:44.013 @LGP006 物流组
+14:41:44.014 @LGP007 
+14:41:44.016 @LGP008 
+14:41:44.017 @LGP009 2018/9/22 8:00:00
+14:41:44.018 @LGP010 2018/9/22 17:00:00
+14:41:44.020 @LGP011 9
+14:41:44.021 @LGP012 0
+14:41:44.022 @LGP013 0
+14:41:44.023 @LGP014 
+14:41:44.025 @LGP001 20180922002
+14:41:44.027 @LGP002 10006
+14:41:44.028 @LGP003 赵庆书
+14:41:44.029 @LGP004 成品搬运工
+14:41:44.030 @LGP005 在职
+14:41:44.032 @LGP006 物流组
+14:41:44.034 @LGP007 
+14:41:44.035 @LGP008 
+14:41:44.036 @LGP009 2018/9/22 8:00:00
+14:41:44.037 @LGP010 2018/9/22 17:00:00
+14:41:44.039 @LGP011 9
+14:41:44.040 @LGP012 0
+14:41:44.041 @LGP013 0
+14:41:44.042 @LGP014 
+14:41:44.045 @LGP001 20180922002
+14:41:44.047 @LGP002 10007
+14:41:44.049 @LGP003 朱志波
+14:41:44.050 @LGP004 成品搬运工
+14:41:44.051 @LGP005 在职
+14:41:44.052 @LGP006 物流组
+14:41:44.054 @LGP007 
+14:41:44.055 @LGP008 
+14:41:44.057 @LGP009 2018/9/22 8:00:00
+14:41:44.058 @LGP010 2018/9/22 17:00:00
+14:41:44.059 @LGP011 9
+14:41:44.060 @LGP012 0
+14:41:44.061 @LGP013 0
+14:41:44.062 @LGP014 
+14:41:44.065 @LGP001 20180922002
+14:41:44.067 @LGP002 10008
+14:41:44.068 @LGP003 杨彬洪
+14:41:44.070 @LGP004 发货员
+14:41:44.071 @LGP005 在职
+14:41:44.072 @LGP006 物流组
+14:41:44.074 @LGP007 
+14:41:44.075 @LGP008 
+14:41:44.077 @LGP009 2018/9/22 8:00:00
+14:41:44.078 @LGP010 2018/9/22 17:00:00
+14:41:44.080 @LGP011 9
+14:41:44.081 @LGP012 0
+14:41:44.083 @LGP013 0
+14:41:44.085 @LGP014 
+14:41:44.087 @LGP001 20180922002
+14:41:44.089 @LGP002 10009
+14:41:44.090 @LGP003 张之峰
+14:41:44.092 @LGP004 发货员
+14:41:44.094 @LGP005 在职
+14:41:44.095 @LGP006 物流组
+14:41:44.097 @LGP007 
+14:41:44.098 @LGP008 
+14:41:44.099 @LGP009 2018/9/22 8:00:00
+14:41:44.100 @LGP010 2018/9/22 17:00:00
+14:41:44.101 @LGP011 9
+14:41:44.103 @LGP012 0
+14:41:44.104 @LGP013 0
+14:41:44.106 @LGP014 
+14:41:44.108 @LGP001 20180922002
+14:41:44.110 @LGP002 10010
+14:41:44.111 @LGP003 胡福林
+14:41:44.112 @LGP004 发货员
+14:41:44.114 @LGP005 在职
+14:41:44.115 @LGP006 物流组
+14:41:44.117 @LGP007 
+14:41:44.118 @LGP008 
+14:41:44.120 @LGP009 2018/9/22 8:00:00
+14:41:44.122 @LGP010 2018/9/22 17:00:00
+14:41:44.124 @LGP011 9
+14:41:44.126 @LGP012 0
+14:41:44.127 @LGP013 0
+14:41:44.129 @LGP014 
+14:41:44.132 @LGP001 20180922002
+14:41:44.133 @LGP002 10011
+14:41:44.135 @LGP003 潘传慧
+14:41:44.137 @LGP004 发货员
+14:41:44.138 @LGP005 在职
+14:41:44.140 @LGP006 物流组
+14:41:44.141 @LGP007 
+14:41:44.142 @LGP008 
+14:41:44.144 @LGP009 2018/9/22 8:00:00
+14:41:44.145 @LGP010 2018/9/22 17:00:00
+14:41:44.146 @LGP011 9
+14:41:44.147 @LGP012 0
+14:41:44.149 @LGP013 0
+14:41:44.150 @LGP014 
+14:41:44.152 @LGP001 20180922002
+14:41:44.154 @LGP002 10012
+14:41:44.155 @LGP003 薛能有
+14:41:44.157 @LGP004 发货员
+14:41:44.158 @LGP005 在职
+14:41:44.159 @LGP006 物流组
+14:41:44.161 @LGP007 
+14:41:44.162 @LGP008 
+14:41:44.163 @LGP009 2018/9/22 8:00:00
+14:41:44.164 @LGP010 2018/9/22 17:00:00
+14:41:44.165 @LGP011 9
+14:41:44.167 @LGP012 0
+14:41:44.168 @LGP013 0
+14:41:44.170 @LGP014 
+14:41:44.172 @LGP001 20180922002
+14:41:44.174 @LGP002 10013
+14:41:44.176 @LGP003 杨友洪
+14:41:44.177 @LGP004 发货员
+14:41:44.179 @LGP005 在职
+14:41:44.181 @LGP006 物流组
+14:41:44.183 @LGP007 
+14:41:44.185 @LGP008 
+14:41:44.186 @LGP009 2018/9/22 8:00:00
+14:41:44.188 @LGP010 2018/9/22 17:00:00
+14:41:44.189 @LGP011 9
+14:41:44.190 @LGP012 0
+14:41:44.191 @LGP013 0
+14:41:44.193 @LGP014 
+14:41:44.195 @LGP001 20180922002
+14:41:44.197 @LGP002 10014
+14:41:44.198 @LGP003 朱严朝
+14:41:44.199 @LGP004 物流员
+14:41:44.201 @LGP005 在职
+14:41:44.202 @LGP006 物流组
+14:41:44.204 @LGP007 
+14:41:44.205 @LGP008 
+14:41:44.206 @LGP009 2018/9/22 8:00:00
+14:41:44.207 @LGP010 2018/9/22 17:00:00
+14:41:44.208 @LGP011 9
+14:41:44.210 @LGP012 0
+14:41:44.211 @LGP013 0
+14:41:44.212 @LGP014 
+14:43:56.803  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:44:01.503 @EMP002 系统管理员
+14:44:01.505 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:27:30.627  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:27:41.023 @EMP002 系统管理员
+15:27:41.025 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:29:01.699  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:29:07.877 @EMP002 系统管理员
+15:29:07.879 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:41:19.154  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:41:41.395 @EMP002 系统管理员
+15:41:41.396 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:43:18.479 @ARS001 JYLF01
+15:43:18.481 @ARS002 JYLF01-四灯暖三合一
+15:43:18.482 @ARS003 013
+15:43:18.484 @ARS004 
+15:43:18.485 @ARS005 
+15:43:18.486 @ARS006 台
+15:43:18.487 @ARS007 M
+15:43:18.489 @ARS008 0
+15:43:18.490 @ARS009 0507
+15:43:18.491 @ARS011 0
+15:43:18.495 @ART001 JYLF01
+15:43:18.496 @ART002 27
+15:43:18.498 @ART003 附件
+15:43:18.500 @ART004 0.45
+15:43:18.501 @ART005 0
+15:43:18.502 @ART006 
+15:43:18.504 @ART007 
+15:43:18.505 @ART009 
+15:43:18.506 @ART010 否
+15:43:18.507 @ART011 001
+15:43:18.509 @ART012 0
+15:43:18.510 @ART013 
+15:45:09.222  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:46:53.816 @EMP002 系统管理员
+15:46:53.819 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:47:25.548 @ANT001 20180922001
+15:47:25.550 @ANT002 0507
+15:47:25.551 @ANT003 总装车间
+15:47:25.553 @ANT004 050708
+15:47:25.554 @ANT005 附件组
+15:47:25.555 @ANT008 2018/9/22 0:00:00
+15:47:25.556 @ANT009 0
+15:47:25.558 @ANT010 0
+15:47:25.563 @ANU001 20180922001
+15:47:25.565 @ANU002 20180707001
+15:47:25.567 @ANU003 GD201502090011
+15:47:25.569 @ANU004 JYLF01
+15:47:25.570 @ANU005 JYLF01-四灯暖三合一
+15:47:25.572 @ANU006 附件
+15:47:25.573 @ANU007 0.45
+15:47:25.574 @ANU008 050701
+15:47:25.576 @ANU009 1线
+15:47:25.577 @ANU010 200
+15:47:25.578 @ANU011 400
+15:47:25.583 @ANV001 20180922001
+15:47:25.584 @ANV002 10293
+15:47:25.585 @ANV003 韩秀金
+15:47:25.586 @ANV004 附件加工
+15:47:25.588 @ANV005 2018/9/22 8:00:00
+15:47:25.589 @ANV006 2018/9/22 17:00:00
+15:47:25.590 @ANV007 在职
+15:47:25.591 @ANV008 附件组
+15:47:25.592 @ANV009 9
+15:47:25.594 @ANV010 11.3
+15:47:25.598 @ANV001 20180922001
+15:47:25.599 @ANV002 10294
+15:47:25.601 @ANV003 黄春燕
+15:47:25.602 @ANV004 附件加工
+15:47:25.603 @ANV005 2018/9/22 8:00:00
+15:47:25.605 @ANV006 2018/9/22 17:00:00
+15:47:25.606 @ANV007 在职
+15:47:25.607 @ANV008 附件组
+15:47:25.608 @ANV009 9
+15:47:25.610 @ANV010 11.3
+15:47:25.614 @ANV001 20180922001
+15:47:25.615 @ANV002 10295
+15:47:25.617 @ANV003 薛能珍
+15:47:25.619 @ANV004 附件加工
+15:47:25.620 @ANV005 2018/9/22 8:00:00
+15:47:25.621 @ANV006 2018/9/22 17:00:00
+15:47:25.622 @ANV007 在职
+15:47:25.623 @ANV008 附件组
+15:47:25.625 @ANV009 9
+15:47:25.626 @ANV010 11.3
+15:47:25.629 @ANV001 20180922001
+15:47:25.630 @ANV002 10296
+15:47:25.632 @ANV003 何卫英
+15:47:25.633 @ANV004 附件加工
+15:47:25.634 @ANV005 2018/9/22 8:00:00
+15:47:25.635 @ANV006 2018/9/22 17:00:00
+15:47:25.636 @ANV007 在职
+15:47:25.638 @ANV008 附件组
+15:47:25.640 @ANV009 9
+15:47:25.641 @ANV010 11.3
+15:47:25.644 @ANV001 20180922001
+15:47:25.645 @ANV002 10297
+15:47:25.647 @ANV003 苏春
+15:47:25.648 @ANV004 附件加工
+15:47:25.650 @ANV005 2018/9/22 8:00:00
+15:47:25.651 @ANV006 2018/9/22 17:00:00
+15:47:25.652 @ANV007 在职
+15:47:25.653 @ANV008 附件组
+15:47:25.654 @ANV009 9
+15:47:25.655 @ANV010 11.3
+15:47:25.659 @ANV001 20180922001
+15:47:25.660 @ANV002 10298
+15:47:25.662 @ANV003 张丹丹
+15:47:25.663 @ANV004 附件加工
+15:47:25.664 @ANV005 2018/9/22 8:00:00
+15:47:25.665 @ANV006 2018/9/22 17:00:00
+15:47:25.667 @ANV007 在职
+15:47:25.668 @ANV008 附件组
+15:47:25.669 @ANV009 9
+15:47:25.670 @ANV010 11.3
+15:47:25.673 @ANV001 20180922001
+15:47:25.674 @ANV002 10299
+15:47:25.676 @ANV003 赵杰
+15:47:25.677 @ANV004 附件加工
+15:47:25.679 @ANV005 2018/9/22 8:00:00
+15:47:25.680 @ANV006 2018/9/22 17:00:00
+15:47:25.682 @ANV007 在职
+15:47:25.683 @ANV008 附件组
+15:47:25.685 @ANV009 9
+15:47:25.686 @ANV010 11.3
+15:47:25.689 @ANV001 20180922001
+15:47:25.691 @ANV002 10300
+15:47:25.692 @ANV003 汪国洋
+15:47:25.694 @ANV004 附件加工
+15:47:25.696 @ANV005 2018/9/22 8:00:00
+15:47:25.697 @ANV006 2018/9/22 17:00:00
+15:47:25.699 @ANV007 在职
+15:47:25.701 @ANV008 附件组
+15:47:25.702 @ANV009 9
+15:47:25.704 @ANV010 11.3
+15:47:37.365 @ANT001 20180922002
+15:47:37.368 @ANT002 0507
+15:47:37.370 @ANT003 总装车间
+15:47:37.372 @ANT004 050708
+15:47:37.374 @ANT005 附件组
+15:47:37.376 @ANT008 2018/9/22 0:00:00
+15:47:37.378 @ANT009 0
+15:47:37.380 @ANT010 0
+15:47:37.383 @ANU001 20180922002
+15:47:37.384 @ANU002 20180707001
+15:47:37.385 @ANU003 GD201502090011
+15:47:37.387 @ANU004 JYLF01
+15:47:37.388 @ANU005 JYLF01-四灯暖三合一
+15:47:37.389 @ANU006 附件
+15:47:37.390 @ANU007 0.45
+15:47:37.392 @ANU008 050701
+15:47:37.393 @ANU009 1线
+15:47:37.395 @ANU010 300
+15:47:37.396 @ANU011 400
+15:47:37.398 @ANV001 20180922002
+15:47:37.400 @ANV002 10293
+15:47:37.401 @ANV003 韩秀金
+15:47:37.402 @ANV004 附件加工
+15:47:37.403 @ANV005 2018/9/22 8:00:00
+15:47:37.404 @ANV006 2018/9/22 17:00:00
+15:47:37.405 @ANV007 在职
+15:47:37.407 @ANV008 附件组
+15:47:37.408 @ANV009 9
+15:47:37.409 @ANV010 16.9
+15:47:37.412 @ANV001 20180922002
+15:47:37.413 @ANV002 10294
+15:47:37.414 @ANV003 黄春燕
+15:47:37.415 @ANV004 附件加工
+15:47:37.417 @ANV005 2018/9/22 8:00:00
+15:47:37.418 @ANV006 2018/9/22 17:00:00
+15:47:37.419 @ANV007 在职
+15:47:37.423 @ANV008 附件组
+15:47:37.425 @ANV009 9
+15:47:37.427 @ANV010 16.9
+15:47:37.430 @ANV001 20180922002
+15:47:37.431 @ANV002 10295
+15:47:37.433 @ANV003 薛能珍
+15:47:37.434 @ANV004 附件加工
+15:47:37.435 @ANV005 2018/9/22 8:00:00
+15:47:37.436 @ANV006 2018/9/22 17:00:00
+15:47:37.438 @ANV007 在职
+15:47:37.439 @ANV008 附件组
+15:47:37.441 @ANV009 9
+15:47:37.443 @ANV010 16.9
+15:47:37.445 @ANV001 20180922002
+15:47:37.446 @ANV002 10296
+15:47:37.448 @ANV003 何卫英
+15:47:37.449 @ANV004 附件加工
+15:47:37.450 @ANV005 2018/9/22 8:00:00
+15:47:37.452 @ANV006 2018/9/22 17:00:00
+15:47:37.453 @ANV007 在职
+15:47:37.454 @ANV008 附件组
+15:47:37.455 @ANV009 9
+15:47:37.457 @ANV010 16.9
+15:47:37.459 @ANV001 20180922002
+15:47:37.461 @ANV002 10297
+15:47:37.462 @ANV003 苏春
+15:47:37.463 @ANV004 附件加工
+15:47:37.465 @ANV005 2018/9/22 8:00:00
+15:47:37.466 @ANV006 2018/9/22 17:00:00
+15:47:37.468 @ANV007 在职
+15:47:37.470 @ANV008 附件组
+15:47:37.471 @ANV009 9
+15:47:37.473 @ANV010 16.9
+15:47:37.475 @ANV001 20180922002
+15:47:37.476 @ANV002 10298
+15:47:37.478 @ANV003 张丹丹
+15:47:37.479 @ANV004 附件加工
+15:47:37.480 @ANV005 2018/9/22 8:00:00
+15:47:37.482 @ANV006 2018/9/22 17:00:00
+15:47:37.483 @ANV007 在职
+15:47:37.484 @ANV008 附件组
+15:47:37.486 @ANV009 9
+15:47:37.487 @ANV010 16.9
+15:47:37.490 @ANV001 20180922002
+15:47:37.491 @ANV002 10299
+15:47:37.492 @ANV003 赵杰
+15:47:37.494 @ANV004 附件加工
+15:47:37.495 @ANV005 2018/9/22 8:00:00
+15:47:37.496 @ANV006 2018/9/22 17:00:00
+15:47:37.497 @ANV007 在职
+15:47:37.499 @ANV008 附件组
+15:47:37.500 @ANV009 9
+15:47:37.501 @ANV010 16.9
+15:47:37.504 @ANV001 20180922002
+15:47:37.505 @ANV002 10300
+15:47:37.507 @ANV003 汪国洋
+15:47:37.508 @ANV004 附件加工
+15:47:37.510 @ANV005 2018/9/22 8:00:00
+15:47:37.511 @ANV006 2018/9/22 17:00:00
+15:47:37.513 @ANV007 在职
+15:47:37.515 @ANV008 附件组
+15:47:37.516 @ANV009 9
+15:47:37.517 @ANV010 16.9
+15:51:47.860  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:53:00.717 @EMP002 系统管理员
+15:53:00.721 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:54:51.217 @ANT001 20180922002
+15:54:51.219 @ANT002 0507
+15:54:51.221 @ANT003 总装车间
+15:54:51.222 @ANT004 050708
+15:54:51.223 @ANT005 附件组
+15:54:51.224 @ANT008 2018/9/22 0:00:00
+15:54:51.226 @ANT009 0
+15:54:51.227 @ANT010 0
+15:54:51.233 @ANU001 20180922002
+15:54:51.234 @ANU002 20180707001
+15:54:51.236 @ANU003 GD201502090011
+15:54:51.238 @ANU004 JYLF01
+15:54:51.240 @ANU005 JYLF01-四灯暖三合一
+15:54:51.241 @ANU006 附件
+15:54:51.243 @ANU007 0.45
+15:54:51.245 @ANU008 050701
+15:54:51.247 @ANU009 1线
+15:54:51.248 @ANU010 100
+15:54:51.250 @ANU011 400
+15:54:51.253 @ANV001 20180922002
+15:54:51.255 @ANV002 10293
+15:54:51.257 @ANV003 韩秀金
+15:54:51.259 @ANV004 附件加工
+15:54:51.261 @ANV005 2018/9/22 8:00:00
+15:54:51.262 @ANV006 2018/9/22 17:00:00
+15:54:51.264 @ANV007 在职
+15:54:51.266 @ANV008 附件组
+15:54:51.268 @ANV009 9
+15:54:51.269 @ANV010 5.7
+15:54:51.274 @ANV001 20180922002
+15:54:51.276 @ANV002 10294
+15:54:51.277 @ANV003 黄春燕
+15:54:51.279 @ANV004 附件加工
+15:54:51.281 @ANV005 2018/9/22 8:00:00
+15:54:51.282 @ANV006 2018/9/22 17:00:00
+15:54:51.284 @ANV007 在职
+15:54:51.285 @ANV008 附件组
+15:54:51.286 @ANV009 9
+15:54:51.287 @ANV010 5.7
+15:54:51.290 @ANV001 20180922002
+15:54:51.291 @ANV002 10295
+15:54:51.293 @ANV003 薛能珍
+15:54:51.295 @ANV004 附件加工
+15:54:51.296 @ANV005 2018/9/22 8:00:00
+15:54:51.297 @ANV006 2018/9/22 17:00:00
+15:54:51.299 @ANV007 在职
+15:54:51.300 @ANV008 附件组
+15:54:51.301 @ANV009 9
+15:54:51.302 @ANV010 5.7
+15:54:51.305 @ANV001 20180922002
+15:54:51.306 @ANV002 10296
+15:54:51.308 @ANV003 何卫英
+15:54:51.310 @ANV004 附件加工
+15:54:51.311 @ANV005 2018/9/22 8:00:00
+15:54:51.312 @ANV006 2018/9/22 17:00:00
+15:54:51.314 @ANV007 在职
+15:54:51.315 @ANV008 附件组
+15:54:51.316 @ANV009 9
+15:54:51.318 @ANV010 5.7
+15:54:51.320 @ANV001 20180922002
+15:54:51.321 @ANV002 10297
+15:54:51.323 @ANV003 苏春
+15:54:51.325 @ANV004 附件加工
+15:54:51.326 @ANV005 2018/9/22 8:00:00
+15:54:51.327 @ANV006 2018/9/22 17:00:00
+15:54:51.329 @ANV007 在职
+15:54:51.330 @ANV008 附件组
+15:54:51.332 @ANV009 9
+15:54:51.333 @ANV010 5.7
+15:54:51.335 @ANV001 20180922002
+15:54:51.337 @ANV002 10298
+15:54:51.338 @ANV003 张丹丹
+15:54:51.339 @ANV004 附件加工
+15:54:51.341 @ANV005 2018/9/22 8:00:00
+15:54:51.342 @ANV006 2018/9/22 17:00:00
+15:54:51.343 @ANV007 在职
+15:54:51.345 @ANV008 附件组
+15:54:51.346 @ANV009 9
+15:54:51.348 @ANV010 5.7
+15:54:51.350 @ANV001 20180922002
+15:54:51.351 @ANV002 10299
+15:54:51.353 @ANV003 赵杰
+15:54:51.354 @ANV004 附件加工
+15:54:51.356 @ANV005 2018/9/22 8:00:00
+15:54:51.358 @ANV006 2018/9/22 17:00:00
+15:54:51.359 @ANV007 在职
+15:54:51.361 @ANV008 附件组
+15:54:51.362 @ANV009 9
+15:54:51.363 @ANV010 5.7
+15:54:51.366 @ANV001 20180922002
+15:54:51.368 @ANV002 10300
+15:54:51.369 @ANV003 汪国洋
+15:54:51.370 @ANV004 附件加工
+15:54:51.372 @ANV005 2018/9/22 8:00:00
+15:54:51.373 @ANV006 2018/9/22 17:00:00
+15:54:51.375 @ANV007 在职
+15:54:51.376 @ANV008 附件组
+15:54:51.377 @ANV009 9
+15:54:51.379 @ANV010 5.7
+15:55:39.584  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:56:47.263 @EMP002 系统管理员
+15:56:47.264 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:57:16.380 @ANT001 20180922003
+15:57:16.382 @ANT002 0507
+15:57:16.383 @ANT003 总装车间
+15:57:16.385 @ANT004 050708
+15:57:16.387 @ANT005 附件组
+15:57:16.389 @ANT008 2018/9/22 0:00:00
+15:57:16.391 @ANT009 0
+15:57:16.392 @ANT010 0
+15:57:16.401 @ANU001 20180922003
+15:57:16.403 @ANU002 20180707001
+15:57:16.405 @ANU003 GD201502090011
+15:57:16.406 @ANU004 JYLF01
+15:57:16.409 @ANU005 JYLF01-四灯暖三合一
+15:57:16.411 @ANU006 附件
+15:57:16.413 @ANU007 0.45
+15:57:16.414 @ANU008 050701
+15:57:16.416 @ANU009 1线
+15:57:16.418 @ANU010 100
+15:57:16.420 @ANU011 400
+15:57:16.423 @ANV001 20180922003
+15:57:16.424 @ANV002 10293
+15:57:16.426 @ANV003 韩秀金
+15:57:16.428 @ANV004 附件加工
+15:57:16.429 @ANV005 2018/9/22 8:00:00
+15:57:16.431 @ANV006 2018/9/22 17:00:00
+15:57:16.433 @ANV007 在职
+15:57:16.435 @ANV008 附件组
+15:57:16.436 @ANV009 9
+15:57:16.438 @ANV010 5.7
+15:57:16.441 @ANV001 20180922003
+15:57:16.443 @ANV002 10294
+15:57:16.444 @ANV003 黄春燕
+15:57:16.446 @ANV004 附件加工
+15:57:16.447 @ANV005 2018/9/22 8:00:00
+15:57:16.450 @ANV006 2018/9/22 17:00:00
+15:57:16.451 @ANV007 在职
+15:57:16.453 @ANV008 附件组
+15:57:16.454 @ANV009 9
+15:57:16.456 @ANV010 5.7
+15:57:16.460 @ANV001 20180922003
+15:57:16.461 @ANV002 10295
+15:57:16.463 @ANV003 薛能珍
+15:57:16.465 @ANV004 附件加工
+15:57:16.466 @ANV005 2018/9/22 8:00:00
+15:57:16.468 @ANV006 2018/9/22 17:00:00
+15:57:16.470 @ANV007 在职
+15:57:16.472 @ANV008 附件组
+15:57:16.473 @ANV009 9
+15:57:16.475 @ANV010 5.7
+15:57:16.477 @ANV001 20180922003
+15:57:16.478 @ANV002 10296
+15:57:16.480 @ANV003 何卫英
+15:57:16.481 @ANV004 附件加工
+15:57:16.483 @ANV005 2018/9/22 8:00:00
+15:57:16.484 @ANV006 2018/9/22 17:00:00
+15:57:16.486 @ANV007 在职
+15:57:16.487 @ANV008 附件组
+15:57:16.489 @ANV009 9
+15:57:16.490 @ANV010 5.7
+15:57:16.492 @ANV001 20180922003
+15:57:16.494 @ANV002 10297
+15:57:16.496 @ANV003 苏春
+15:57:16.497 @ANV004 附件加工
+15:57:16.500 @ANV005 2018/9/22 8:00:00
+15:57:16.502 @ANV006 2018/9/22 17:00:00
+15:57:16.504 @ANV007 在职
+15:57:16.505 @ANV008 附件组
+15:57:16.507 @ANV009 9
+15:57:16.508 @ANV010 5.7
+15:57:16.512 @ANV001 20180922003
+15:57:16.514 @ANV002 10298
+15:57:16.515 @ANV003 张丹丹
+15:57:16.517 @ANV004 附件加工
+15:57:16.519 @ANV005 2018/9/22 8:00:00
+15:57:16.521 @ANV006 2018/9/22 17:00:00
+15:57:16.522 @ANV007 在职
+15:57:16.524 @ANV008 附件组
+15:57:16.525 @ANV009 9
+15:57:16.527 @ANV010 5.7
+15:57:16.530 @ANV001 20180922003
+15:57:16.531 @ANV002 10299
+15:57:16.533 @ANV003 赵杰
+15:57:16.534 @ANV004 附件加工
+15:57:16.535 @ANV005 2018/9/22 8:00:00
+15:57:16.539 @ANV006 2018/9/22 17:00:00
+15:57:16.540 @ANV007 在职
+15:57:16.542 @ANV008 附件组
+15:57:16.544 @ANV009 9
+15:57:16.546 @ANV010 5.7
+15:57:16.549 @ANV001 20180922003
+15:57:16.550 @ANV002 10300
+15:57:16.552 @ANV003 汪国洋
+15:57:16.553 @ANV004 附件加工
+15:57:16.555 @ANV005 2018/9/22 8:00:00
+15:57:16.557 @ANV006 2018/9/22 17:00:00
+15:57:16.558 @ANV007 在职
+15:57:16.560 @ANV008 附件组
+15:57:16.562 @ANV009 9
+15:57:16.563 @ANV010 5.7
+15:59:53.728  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:01:19.154 @EMP002 系统管理员
+16:01:19.156 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:06:07.055  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:06:44.439 @EMP002 系统管理员
+16:06:44.443 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:08:26.615 @ANT001 20180922003
+16:08:26.616 @ANT002 0507
+16:08:26.618 @ANT003 总装车间
+16:08:26.619 @ANT004 050708
+16:08:26.621 @ANT005 附件组
+16:08:26.622 @ANT008 2018/9/22 0:00:00
+16:08:26.623 @ANT009 0
+16:08:26.624 @ANT010 0
+16:08:26.629 @ANU001 20180922003
+16:08:26.631 @ANU002 20180707001
+16:08:26.633 @ANU003 GD201502090011
+16:08:26.634 @ANU004 JYLF01
+16:08:26.636 @ANU005 JYLF01-四灯暖三合一
+16:08:26.637 @ANU006 附件
+16:08:26.639 @ANU007 0.45
+16:08:26.640 @ANU008 050701
+16:08:26.642 @ANU009 1线
+16:08:26.643 @ANU010 100
+16:08:26.645 @ANU011 400
+16:08:26.648 @ANV001 20180922003
+16:08:26.650 @ANV002 10293
+16:08:26.651 @ANV003 韩秀金
+16:08:26.653 @ANV004 附件加工
+16:08:26.654 @ANV005 2018/9/22 8:00:00
+16:08:26.655 @ANV006 2018/9/22 17:00:00
+16:08:26.656 @ANV007 在职
+16:08:26.658 @ANV008 附件组
+16:08:26.659 @ANV009 9
+16:08:26.661 @ANV010 5.7
+16:08:26.663 @ANV001 20180922003
+16:08:26.665 @ANV002 10294
+16:08:26.666 @ANV003 黄春燕
+16:08:26.668 @ANV004 附件加工
+16:08:26.669 @ANV005 2018/9/22 8:00:00
+16:08:26.671 @ANV006 2018/9/22 17:00:00
+16:08:26.672 @ANV007 在职
+16:08:26.673 @ANV008 附件组
+16:08:26.674 @ANV009 9
+16:08:26.676 @ANV010 5.7
+16:08:26.678 @ANV001 20180922003
+16:08:26.680 @ANV002 10295
+16:08:26.681 @ANV003 薛能珍
+16:08:26.682 @ANV004 附件加工
+16:08:26.684 @ANV005 2018/9/22 8:00:00
+16:08:26.685 @ANV006 2018/9/22 17:00:00
+16:08:26.687 @ANV007 在职
+16:08:26.688 @ANV008 附件组
+16:08:26.690 @ANV009 9
+16:08:26.691 @ANV010 5.7
+16:08:26.694 @ANV001 20180922003
+16:08:26.696 @ANV002 10296
+16:08:26.697 @ANV003 何卫英
+16:08:26.698 @ANV004 附件加工
+16:08:26.700 @ANV005 2018/9/22 8:00:00
+16:08:26.701 @ANV006 2018/9/22 17:00:00
+16:08:26.702 @ANV007 在职
+16:08:26.703 @ANV008 附件组
+16:08:26.705 @ANV009 9
+16:08:26.706 @ANV010 5.7
+16:08:26.708 @ANV001 20180922003
+16:08:26.710 @ANV002 10297
+16:08:26.711 @ANV003 苏春
+16:08:26.712 @ANV004 附件加工
+16:08:26.714 @ANV005 2018/9/22 8:00:00
+16:08:26.716 @ANV006 2018/9/22 17:00:00
+16:08:26.717 @ANV007 在职
+16:08:26.718 @ANV008 附件组
+16:08:26.720 @ANV009 9
+16:08:26.721 @ANV010 5.7
+16:08:26.723 @ANV001 20180922003
+16:08:26.725 @ANV002 10298
+16:08:26.726 @ANV003 张丹丹
+16:08:26.728 @ANV004 附件加工
+16:08:26.729 @ANV005 2018/9/22 8:00:00
+16:08:26.730 @ANV006 2018/9/22 17:00:00
+16:08:26.732 @ANV007 在职
+16:08:26.733 @ANV008 附件组
+16:08:26.734 @ANV009 9
+16:08:26.735 @ANV010 5.7
+16:08:26.738 @ANV001 20180922003
+16:08:26.739 @ANV002 10299
+16:08:26.741 @ANV003 赵杰
+16:08:26.743 @ANV004 附件加工
+16:08:26.744 @ANV005 2018/9/22 8:00:00
+16:08:26.746 @ANV006 2018/9/22 17:00:00
+16:08:26.747 @ANV007 在职
+16:08:26.749 @ANV008 附件组
+16:08:26.750 @ANV009 9
+16:08:26.751 @ANV010 5.7
+16:08:26.754 @ANV001 20180922003
+16:08:26.756 @ANV002 10300
+16:08:26.757 @ANV003 汪国洋
+16:08:26.759 @ANV004 附件加工
+16:08:26.761 @ANV005 2018/9/22 8:00:00
+16:08:26.762 @ANV006 2018/9/22 17:00:00
+16:08:26.763 @ANV007 在职
+16:08:26.765 @ANV008 附件组
+16:08:26.766 @ANV009 9
+16:08:26.767 @ANV010 5.7
+16:10:18.293  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:10:22.975 @EMP002 系统管理员
+16:10:22.978 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:10:52.806 @ANT001 20180922004
+16:10:52.807 @ANT002 0507
+16:10:52.809 @ANT003 总装车间
+16:10:52.810 @ANT004 050708
+16:10:52.811 @ANT005 附件组
+16:10:52.813 @ANT008 2018/9/22 0:00:00
+16:10:52.814 @ANT009 0
+16:10:52.815 @ANT010 0
+16:10:52.820 @ANU001 20180922004
+16:10:52.822 @ANU002 20180707001
+16:10:52.823 @ANU003 GD201502090011
+16:10:52.825 @ANU004 JYLF01
+16:10:52.826 @ANU005 JYLF01-四灯暖三合一
+16:10:52.827 @ANU006 附件
+16:10:52.829 @ANU007 0.45
+16:10:52.830 @ANU008 050701
+16:10:52.832 @ANU009 1线
+16:10:52.833 @ANU010 200
+16:10:52.835 @ANU011 400
+16:10:52.837 @ANV001 20180922004
+16:10:52.838 @ANV002 10293
+16:10:52.840 @ANV003 韩秀金
+16:10:52.841 @ANV004 附件加工
+16:10:52.843 @ANV005 2018/9/22 8:00:00
+16:10:52.844 @ANV006 2018/9/22 17:00:00
+16:10:52.845 @ANV007 在职
+16:10:52.847 @ANV008 附件组
+16:10:52.848 @ANV009 9
+16:10:52.849 @ANV010 11.3
+16:10:52.853 @ANV001 20180922004
+16:10:52.855 @ANV002 10294
+16:10:52.856 @ANV003 黄春燕
+16:10:52.857 @ANV004 附件加工
+16:10:52.859 @ANV005 2018/9/22 8:00:00
+16:10:52.860 @ANV006 2018/9/22 17:00:00
+16:10:52.861 @ANV007 在职
+16:10:52.863 @ANV008 附件组
+16:10:52.864 @ANV009 9
+16:10:52.867 @ANV010 11.3
+16:10:52.870 @ANV001 20180922004
+16:10:52.871 @ANV002 10295
+16:10:52.873 @ANV003 薛能珍
+16:10:52.874 @ANV004 附件加工
+16:10:52.876 @ANV005 2018/9/22 8:00:00
+16:10:52.877 @ANV006 2018/9/22 17:00:00
+16:10:52.878 @ANV007 在职
+16:10:52.880 @ANV008 附件组
+16:10:52.881 @ANV009 9
+16:10:52.883 @ANV010 11.3
+16:10:52.885 @ANV001 20180922004
+16:10:52.887 @ANV002 10296
+16:10:52.888 @ANV003 何卫英
+16:10:52.889 @ANV004 附件加工
+16:10:52.891 @ANV005 2018/9/22 8:00:00
+16:10:52.892 @ANV006 2018/9/22 17:00:00
+16:10:52.893 @ANV007 在职
+16:10:52.894 @ANV008 附件组
+16:10:52.896 @ANV009 9
+16:10:52.897 @ANV010 11.3
+16:10:52.900 @ANV001 20180922004
+16:10:52.902 @ANV002 10297
+16:10:52.903 @ANV003 苏春
+16:10:52.905 @ANV004 附件加工
+16:10:52.906 @ANV005 2018/9/22 8:00:00
+16:10:52.907 @ANV006 2018/9/22 17:00:00
+16:10:52.908 @ANV007 在职
+16:10:52.910 @ANV008 附件组
+16:10:52.911 @ANV009 9
+16:10:52.912 @ANV010 11.3
+16:10:52.916 @ANV001 20180922004
+16:10:52.917 @ANV002 10298
+16:10:52.918 @ANV003 张丹丹
+16:10:52.920 @ANV004 附件加工
+16:10:52.921 @ANV005 2018/9/22 8:00:00
+16:10:52.923 @ANV006 2018/9/22 17:00:00
+16:10:52.924 @ANV007 在职
+16:10:52.925 @ANV008 附件组
+16:10:52.926 @ANV009 9
+16:10:52.927 @ANV010 11.3
+16:10:52.930 @ANV001 20180922004
+16:10:52.932 @ANV002 10299
+16:10:52.933 @ANV003 赵杰
+16:10:52.935 @ANV004 附件加工
+16:10:52.936 @ANV005 2018/9/22 8:00:00
+16:10:52.938 @ANV006 2018/9/22 17:00:00
+16:10:52.939 @ANV007 在职
+16:10:52.941 @ANV008 附件组
+16:10:52.942 @ANV009 9
+16:10:52.944 @ANV010 11.3
+16:10:52.946 @ANV001 20180922004
+16:10:52.947 @ANV002 10300
+16:10:52.949 @ANV003 汪国洋
+16:10:52.950 @ANV004 附件加工
+16:10:52.952 @ANV005 2018/9/22 8:00:00
+16:10:52.953 @ANV006 2018/9/22 17:00:00
+16:10:52.955 @ANV007 在职
+16:10:52.957 @ANV008 附件组
+16:10:52.958 @ANV009 9
+16:10:52.960 @ANV010 11.3

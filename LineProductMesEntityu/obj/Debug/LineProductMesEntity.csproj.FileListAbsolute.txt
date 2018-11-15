@@ -1,0 +1,9 @@
+D:\Project data\MiKe\LineProductMes\LineProductMesEntityu\bin\Debug\LineProductMesEntityu.dll
+D:\Project data\MiKe\LineProductMes\LineProductMesEntityu\bin\Debug\LineProductMesEntityu.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntityu.dll
+D:\Project data\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntityu.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntity.csprojResolveAssemblyReference.cache
+D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\bin\Debug\LineProductMesEntityu.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\bin\Debug\LineProductMesEntityu.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntityu.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntityu.pdb

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/21/2017 17:42:04" ReportInfo.Modified="09/11/2018 15:44:43" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuDp0rrsGaaTxKZA4VXKlQktKROBr30VM/vuYMUjh/myVA==">
+      <TableDataSource Name="Table" Alias="TableOne" DataType="System.Int32" Enabled="true" SelectCommand="SELECT ARS001 品号,ARS002 品名,ARS003 仓库,DDA003 仓库名称,ARS004 规格,ARS005 材质,ARS006 单位,ARS007 主要来源,'厂内生产件' 厂内生产件,ARS008 单头单位克重,ARS009 部门编号,DAA002 部门名称,ART011 序号,ART002 工艺编号,ART003 工艺名称,CONVERT(FLOAT,ART004) 工艺单价,CONVERT(FLOAT,ART005) 单身单位克重,ART006 机台编号,ART007 使用机台,ART009 备注,ART010 是否末级,ART012 工时,ART013 岗位 FROM MIKARS A INNER JOIN MIKART B ON A.ARS001=B.ART001 INNER JOIN TPADDA C ON A.ARS003=C.DDA001 INNER JOIN TPADAA D ON A.ARS009=D.DAA001">
+        <Column Name="品号" DataType="System.String"/>
+        <Column Name="品名" DataType="System.String"/>
+        <Column Name="仓库" DataType="System.String"/>
+        <Column Name="仓库名称" DataType="System.String"/>
+        <Column Name="规格" DataType="System.String"/>
+        <Column Name="材质" DataType="System.String"/>
+        <Column Name="单位" DataType="System.String"/>
+        <Column Name="主要来源" DataType="System.String"/>
+        <Column Name="厂内生产件" DataType="System.String"/>
+        <Column Name="单头单位克重" DataType="System.Decimal"/>
+        <Column Name="部门编号" DataType="System.String"/>
+        <Column Name="部门名称" DataType="System.String"/>
+        <Column Name="序号" DataType="System.String"/>
+        <Column Name="工艺编号" DataType="System.String"/>
+        <Column Name="工艺名称" DataType="System.String"/>
+        <Column Name="工艺单价" DataType="System.Double"/>
+        <Column Name="单身单位克重" DataType="System.Double"/>
+        <Column Name="机台编号" DataType="System.String"/>
+        <Column Name="使用机台" DataType="System.String"/>
+        <Column Name="备注" DataType="System.String"/>
+        <Column Name="是否末级" DataType="System.String"/>
+        <Column Name="工时" DataType="System.Int32"/>
+        <Column Name="岗位" DataType="System.String"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9" FirstPageSource="1" OtherPagesSource="1">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="37.8">
+      <TextObject Name="Text1" Width="1048.95" Height="37.8" Text="工艺信息" HorzAlign="Center" VertAlign="Center" Font="宋体, 20pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="74.15" Width="1047.06" Height="28.35" DataSource="Table">
+      <TextObject Name="Text9" Width="179.55" Height="28.35" Border.Lines="All" Text="[TableOne.品号]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text10" Left="179.55" Width="321.3" Height="28.35" Border.Lines="All" Text="[TableOne.品名]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text11" Left="500.85" Width="170.1" Height="28.35" Border.Lines="All" Text="[TableOne.规格]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text12" Left="670.95" Width="56.7" Height="28.35" Border.Lines="All" Text="[TableOne.序号]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text13" Left="727.65" Width="103.95" Height="28.35" Border.Lines="All" Text="[TableOne.工艺编号]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text14" Left="831.6" Width="103.95" Height="28.35" Border.Lines="All" Text="[TableOne.工艺名称]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text15" Left="935.55" Width="113.4" Height="28.35" Border.Lines="All" Text="[TableOne.工艺单价]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <DataHeaderBand Name="DataHeader1" Top="41.8" Width="1047.06" Height="28.35">
+        <TextObject Name="Text2" Width="179.55" Height="28.35" Border.Lines="All" Text="品号" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt"/>
+        <TextObject Name="Text3" Left="179.55" Width="321.3" Height="28.35" Border.Lines="All" Text="品名" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt"/>
+        <TextObject Name="Text4" Left="500.85" Width="170.1" Height="28.35" Border.Lines="All" Text="规格" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt"/>
+        <TextObject Name="Text5" Left="670.95" Width="56.7" Height="28.35" Border.Lines="All" Text="序号" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt"/>
+        <TextObject Name="Text6" Left="727.65" Width="103.95" Height="28.35" Border.Lines="All" Text="工艺编号" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt"/>
+        <TextObject Name="Text7" Left="831.6" Width="103.95" Height="28.35" Border.Lines="All" Text="工艺名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt"/>
+        <TextObject Name="Text8" Left="935.55" Width="113.4" Height="28.35" Border.Lines="All" Text="工艺单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt"/>
+      </DataHeaderBand>
+    </DataBand>
+  </ReportPage>
+</Report>

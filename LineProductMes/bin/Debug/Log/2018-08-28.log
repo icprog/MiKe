@@ -1,0 +1,486 @@
+09:39:36.011  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:39:42.322 @EMP002 系统管理员
+09:39:42.323 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:40:36.773  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:40:41.404 @EMP002 系统管理员
+09:40:41.406 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:41:45.992  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:41:54.883 @EMP002 系统管理员
+09:41:54.886 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:42:04.491 列名 'LOG001' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 StudentMgr.SqlHelper.ExecuteDataTable(SqlConnection conn, String cmdText, SqlParameter[] parameters) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 278
+09:42:04.493 SELECT idx,LGP001,LGP002,LGP003,LGP004,LGP005 FROM MIKLGP WHERE LOG001='20180828001'
+09:42:42.514  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:42:46.669 @EMP002 系统管理员
+09:42:46.671 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:10:53.584  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:11:04.521 @EMP002 系统管理员
+10:11:04.522 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:12:26.371  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:12:44.162 @EMP002 系统管理员
+10:12:44.164 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:13:42.374  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:15:04.544 @EMP002 系统管理员
+10:15:04.547 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:15:40.435  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:15:47.277 @EMP002 系统管理员
+10:15:47.279 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:16:52.663  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:17:00.952 @EMP002 系统管理员
+10:17:00.954 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:22:53.960  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:23:02.579 @EMP002 系统管理员
+10:23:02.581 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:23:58.885 列名 'LGO001' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 StudentMgr.SqlHelper.ExecuteDataTable(SqlConnection conn, String cmdText, SqlParameter[] parameters) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 278
+10:23:58.887 SELECT SUM(LOG008) LOG008 FROM MIKLGO WHERE LGO001!='20180828001' AND LOG002='XH201502100001' AND LOG003='001' 
+10:25:29.519  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:25:35.613  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:25:41.081 @EMP002 系统管理员
+10:25:41.083 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:14:50.781  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:14:59.069 @EMP002 系统管理员
+11:14:59.070 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:15:38.637 @LGN001 20180828001
+11:15:38.639 @LGN002 2018/8/28 0:00:00
+11:15:38.643 @LOG001 20180828001
+11:15:38.644 @LOG002 XH201502100001
+11:15:38.645 @LOG003 001
+11:15:38.647 @LOG004 TCLNS-05A007
+11:15:38.648 @LOG005 13款二灯壁挂
+11:15:38.649 @LOG006 53
+11:15:38.650 @LOG007 0
+11:15:38.651 @LOG008 30
+11:15:38.653 @LOG009 0
+11:15:38.662 @LOG001 20180828001
+11:15:38.663 @LOG002 XH201502100001
+11:15:38.665 @LOG003 002
+11:15:38.666 @LOG004 TCLNS-08A007
+11:15:38.667 @LOG005 13款三灯壁挂
+11:15:38.669 @LOG006 15
+11:15:38.670 @LOG007 0
+11:15:38.672 @LOG008 10
+11:15:38.673 @LOG009 0
+11:15:38.675 @LGP001 20180828001
+11:15:38.677 @LGP002 10002
+11:15:38.679 @LGP003 吴征义
+11:15:38.680 @LGP004 成品搬运工
+11:15:38.682 @LGP005 在职
+11:15:38.685 @LGP001 20180828001
+11:15:38.687 @LGP002 10011
+11:15:38.688 @LGP003 潘传慧
+11:15:38.689 @LGP004 发货员
+11:15:38.690 @LGP005 在职
+11:15:38.693 @LGP001 20180828001
+11:15:38.694 @LGP002 10013
+11:15:38.696 @LGP003 杨友洪
+11:15:38.697 @LGP004 发货员
+11:15:38.698 @LGP005 在职
+11:15:43.376 @LGN001 20180828002
+11:15:43.378 @LGN002 2018/8/28 0:00:00
+11:15:43.380 @LOG001 20180828002
+11:15:43.382 @LOG002 XH201502100001
+11:15:43.383 @LOG003 001
+11:15:43.385 @LOG004 TCLNS-05A007
+11:15:43.386 @LOG005 13款二灯壁挂
+11:15:43.387 @LOG006 53
+11:15:43.389 @LOG007 0.000000
+11:15:43.391 @LOG008 30
+11:15:43.392 @LOG009 0.000000
+11:15:43.396 @LOG001 20180828002
+11:15:43.398 @LOG002 XH201502100001
+11:15:43.399 @LOG003 002
+11:15:43.401 @LOG004 TCLNS-08A007
+11:15:43.402 @LOG005 13款三灯壁挂
+11:15:43.404 @LOG006 15
+11:15:43.405 @LOG007 0.000000
+11:15:43.407 @LOG008 10
+11:15:43.408 @LOG009 0.000000
+11:15:43.410 @LGP001 20180828002
+11:15:43.412 @LGP002 10002
+11:15:43.413 @LGP003 吴征义
+11:15:43.414 @LGP004 成品搬运工
+11:15:43.415 @LGP005 在职
+11:15:43.418 @LGP001 20180828002
+11:15:43.419 @LGP002 10011
+11:15:43.420 @LGP003 潘传慧
+11:15:43.422 @LGP004 发货员
+11:15:43.423 @LGP005 在职
+11:15:43.425 @LGP001 20180828002
+11:15:43.427 @LGP002 10013
+11:15:43.428 @LGP003 杨友洪
+11:15:43.429 @LGP004 发货员
+11:15:43.431 @LGP005 在职
+11:28:25.765  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:28:48.668 @EMP002 系统管理员
+11:28:48.672 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:32:25.921  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:32:31.460 @EMP002 系统管理员
+11:32:31.485 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:02:57.366  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:03:04.270 @EMP002 系统管理员
+13:03:04.271 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:18:06.499  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:18:11.399 @EMP002 系统管理员
+13:18:11.401 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:31:06.034  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:31:15.674 @EMP002 系统管理员
+13:31:15.677 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:33:21.119  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:33:31.833 @EMP002 系统管理员
+13:33:31.835 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:35:22.929  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:35:27.336 @EMP002 系统管理员
+13:35:27.338 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:36:10.881  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:36:14.986 @EMP002 系统管理员
+13:36:14.988 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:37:03.109  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:37:07.300 @EMP002 系统管理员
+13:37:07.302 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:38:20.722  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:38:24.874 @EMP002 系统管理员
+13:38:24.875 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:39:34.989  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:39:39.008 @EMP002 系统管理员
+13:39:39.010 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:40:32.227  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:40:37.871 @EMP002 系统管理员
+13:40:37.873 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:41:17.250  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:41:22.376 @EMP002 系统管理员
+13:41:22.377 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:42:04.492  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:42:08.798 @EMP002 系统管理员
+13:42:08.800 @EMP033 e51e6c4ea698bc872c5f2e504383ac59
+13:42:11.154 @EMP002 系统管理员
+13:42:11.180 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:42:37.713 @LEC001 20180825001
+13:42:37.717 @LEC017 False
+13:42:39.882 @LEC001 20180825001
+13:42:39.883 @LEC017 True
+13:42:53.415  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:42:57.699 @EMP002 系统管理员
+13:42:57.701 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:43:35.729  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:43:40.643 @EMP002 系统管理员
+13:43:40.645 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:44:55.947  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:45:00.707 @EMP002 系统管理员
+13:45:00.709 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:46:26.714  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:46:30.919 @EMP002 系统管理员
+13:46:30.922 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:47:44.341  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:47:48.497 @EMP002 系统管理员
+13:47:48.499 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:48:43.844  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:48:48.329 @EMP002 系统管理员
+13:48:48.331 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:49:13.717  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:49:19.697 @EMP002 系统管理员
+13:49:19.699 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:49:41.365  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:49:45.290 @EMP002 系统管理员
+13:49:45.292 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:50:08.858 @ANW001 20180707001
+13:50:08.861 @ANW020 True
+13:52:05.666  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:52:14.110 @EMP002 系统管理员
+13:52:14.113 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:53:19.855  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:53:24.149 @EMP002 系统管理员
+13:53:24.151 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:53:29.952  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:53:34.026 @EMP002 系统管理员
+13:53:34.029 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:54:31.273  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:54:36.272 @EMP002 系统管理员
+13:54:36.274 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:55:50.327  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:55:54.759 @EMP002 系统管理员
+13:55:54.762 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:56:30.933  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:57:04.134 @EMP002 系统管理员
+13:57:04.136 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:58:36.988  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:58:43.229 @EMP002 系统管理员
+13:58:43.230 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:11:01.538  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:11:08.418 @EMP002 系统管理员
+14:11:08.419 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:13:35.595  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:13:44.682 @EMP002 系统管理员
+14:13:44.686 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:14:15.921  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:14:21.414 @EMP002 系统管理员
+14:14:21.416 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:20:28.116  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:20:42.007 @EMP002 系统管理员
+14:20:42.008 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:21:46.988  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:21:51.411 @EMP002 系统管理员
+14:21:51.412 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:22:43.478  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:22:48.533 @EMP002 系统管理员
+14:22:48.534 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:24:57.463  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:25:03.686 @EMP002 系统管理员
+14:25:03.688 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:25:48.573  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:25:53.492 @EMP002 系统管理员
+14:25:53.494 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:46:26.071  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:47:43.072 @EMP002 系统管理员
+14:47:43.074 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:49:40.421 @LGN001 20180828001
+14:49:40.423 @LGN003 True
+15:04:54.065  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:04:59.770 @EMP002 系统管理员
+15:04:59.772 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:06:48.987  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:06:53.452 @EMP002 系统管理员
+15:06:53.453 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:09:01.066  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:09:07.498 @EMP002 系统管理员
+15:09:07.499 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:09:27.096  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:09:47.527 @EMP002 系统管理员
+15:09:47.529 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:10:53.211  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:10:59.035 @EMP002 系统管理员
+15:10:59.036 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:11:31.039  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:11:35.996 @EMP002 系统管理员
+15:11:35.997 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:33:38.365  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:33:46.325 @EMP002 系统管理员
+15:33:46.327 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:34:18.550  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:34:22.930 @EMP002 系统管理员
+15:34:22.934 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:34:50.255  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:34:54.503 @EMP002 系统管理员
+15:34:54.505 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:35:24.530  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:35:29.969 @EMP002 系统管理员
+15:35:29.971 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:35:54.043  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:36:11.312 @EMP002 系统管理员
+15:36:11.315 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:36:23.745 @LGN001 20180828001
+15:36:23.747 @LGN003 False
+15:36:26.274 @LGN001 20180828001
+15:36:26.277 @LGN003 True
+15:36:28.163 @LGN001 20180828001
+15:36:28.164 @LGN003 False
+15:36:35.239 @LGN001 20180828001
+15:36:35.241 @LGN003 True
+15:37:02.155  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:37:14.508 @EMP002 系统管理员
+15:37:14.511 @EMP033 17c3266b9875cad78364fa32fdb84d8b
+15:37:17.224 @EMP002 系统管理员
+15:37:17.226 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:37:51.980  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:38:04.020 @EMP002 系统管理员
+15:38:04.023 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:38:15.631 @LGN001 20180828001
+15:38:15.633 @LGN003 False
+15:39:53.793  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:39:58.136 @EMP002 系统管理员
+15:39:58.138 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:42:34.284 @LOG004 TCLNS-05A007
+15:42:34.286 @LOG005 13款二灯壁挂
+15:42:34.287 @LOG006 53
+15:42:34.289 @LOG007 0.000000
+15:42:34.290 @LOG008 30
+15:42:34.292 @LOG009 0.000000
+15:42:34.293 @idx 1
+15:42:34.294 @LOG002 XH201502100001
+15:42:34.296 @LOG003 001
+15:42:34.306 @LOG004 TCLNS-08A007
+15:42:34.308 @LOG005 13款三灯壁挂
+15:42:34.309 @LOG006 15
+15:42:34.310 @LOG007 0.000000
+15:42:34.312 @LOG008 10
+15:42:34.313 @LOG009 0.000000
+15:42:34.314 @idx 2
+15:42:34.315 @LOG002 XH201502100001
+15:42:34.316 @LOG003 002
+15:42:34.320 @LGP003 吴征义
+15:42:34.321 @LGP004 成品搬运工
+15:42:34.322 @LGP005 在职
+15:42:34.324 @idx 1
+15:42:34.325 @LGP002 10002
+15:42:34.330 @LGP003 潘传慧
+15:42:34.332 @LGP004 发货员
+15:42:34.334 @LGP005 在职
+15:42:34.335 @idx 2
+15:42:34.337 @LGP002 10011
+15:42:34.339 @LGP003 杨友洪
+15:42:34.341 @LGP004 发货员
+15:42:34.342 @LGP005 在职
+15:42:34.343 @idx 3
+15:42:34.345 @LGP002 10013

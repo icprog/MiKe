@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE044511-D4E4-4B87-B183-9D0A278681B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UIControl</RootNamespace>
+    <AssemblyName>UIControl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LanDe\LanDeOrderTest\LanDeQuery\bin\Debug\DevExpress.XtraGrid.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LineProductMes\bin\Debug\DevExpress.XtraLayout.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility">
+      <HintPath>..\Utility\bin\Debug\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="buttonReP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="buttonReP.Designer.cs">
+      <DependentUpon>buttonReP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buttonRePaint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="buttonRePaint.Designer.cs">
+      <DependentUpon>buttonRePaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CYBaseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawHelper.cs" />
+    <Compile Include="EllipseShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputControl.Designer.cs">
+      <DependentUpon>InputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushPanel\BorderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PushPanel\CaptionImageStyle.cs" />
+    <Compile Include="PushPanel\CaptionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PushPanel\CaptionStyle.cs" />
+    <Compile Include="PushPanel\ControlPaintEx.cs" />
+    <Compile Include="PushPanel\ControlState.cs" />
+    <Compile Include="PushPanel\Design\PanelDesigner.cs" />
+    <Compile Include="PushPanel\Design\PushPanelDesigner.cs" />
+    <Compile Include="PushPanel\Design\PushPanelItemDesigner.cs" />
+    <Compile Include="PushPanel\GraphicsPathHelper.cs" />
+    <Compile Include="PushPanel\ImageDc.cs" />
+    <Compile Include="PushPanel\InterpolationModeGraphics.cs" />
+    <Compile Include="PushPanel\NCPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PushPanel\PanelBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PushPanel\PanelColorTable.cs" />
+    <Compile Include="PushPanel\PushPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PushPanel\PushPanelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PushPanel\PushPanelItemCaptionClickEventArgs.cs" />
+    <Compile Include="PushPanel\RenderHelper.cs" />
+    <Compile Include="PushPanel\RoundStyle.cs" />
+    <Compile Include="PushPanel\SmoothingModeGraphics.cs" />
+    <Compile Include="SkinTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkinTextBox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkinTextBox.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TCWatermarkText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextLine.Designer.cs">
+      <DependentUpon>TextLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlConcellDev.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlConcellDev.Designer.cs">
+      <DependentUpon>UserControlConcellDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPag.Designer.cs">
+      <DependentUpon>UserControlPag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlConcell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlConcell.Designer.cs">
+      <DependentUpon>UserControlConcell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlWait.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlWait.Designer.cs">
+      <DependentUpon>UserControlWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win32\Callback\HookProc.cs" />
+    <Compile Include="Win32\CHARRANGE.cs" />
+    <Compile Include="Win32\ClassName.cs" />
+    <Compile Include="Win32\CLIPFORMAT.cs" />
+    <Compile Include="Win32\Com\DOCHOSTUIFLAG.cs" />
+    <Compile Include="Win32\Com\DOCHOSTUIINFO.cs" />
+    <Compile Include="Win32\Com\DWebBrowserEvents2.cs" />
+    <Compile Include="Win32\Com\ICustomDoc.cs" />
+    <Compile Include="Win32\Com\IDocHostUIHandler.cs" />
+    <Compile Include="Win32\Com\IDropTarget.cs" />
+    <Compile Include="Win32\Com\IOleCommandTarget.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceActiveObject.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceFrame.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceUIWindow.cs" />
+    <Compile Include="Win32\Com\IWebBrowser2.cs" />
+    <Compile Include="Win32\Com\OLECMDEXECOPT.cs" />
+    <Compile Include="Win32\Com\OLECMDF.cs" />
+    <Compile Include="Win32\Com\OLECMDID.cs" />
+    <Compile Include="Win32\Com\tagMSG.cs" />
+    <Compile Include="Win32\Com\tagOLECMD.cs" />
+    <Compile Include="Win32\Com\tagPOINT.cs" />
+    <Compile Include="Win32\Com\tagRECT.cs" />
+    <Compile Include="Win32\Const\AC.cs" />
+    <Compile Include="Win32\Const\AW.cs" />
+    <Compile Include="Win32\Const\CDDS.cs" />
+    <Compile Include="Win32\Const\CDRF.cs" />
+    <Compile Include="Win32\Const\CombineRgnStyles.cs" />
+    <Compile Include="Win32\Const\CS.cs" />
+    <Compile Include="Win32\Const\DCX.cs" />
+    <Compile Include="Win32\Const\DI.cs" />
+    <Compile Include="Win32\Const\EM.cs" />
+    <Compile Include="Win32\Const\ESB.cs" />
+    <Compile Include="Win32\Const\GCL.cs" />
+    <Compile Include="Win32\Const\GWL.cs" />
+    <Compile Include="Win32\Const\HC.cs" />
+    <Compile Include="Win32\Const\HITTEST.cs" />
+    <Compile Include="Win32\Const\HWND.cs" />
+    <Compile Include="Win32\Const\ICC.cs" />
+    <Compile Include="Win32\Const\ICON.cs" />
+    <Compile Include="Win32\Const\LPSTR.cs" />
+    <Compile Include="Win32\Const\MA.cs" />
+    <Compile Include="Win32\Const\NM.cs" />
+    <Compile Include="Win32\Const\OBJID.cs" />
+    <Compile Include="Win32\Const\PRF.cs" />
+    <Compile Include="Win32\Const\RDW.cs" />
+    <Compile Include="Win32\Const\RGN.cs" />
+    <Compile Include="Win32\Const\SB.cs" />
+    <Compile Include="Win32\Const\SBM.cs" />
+    <Compile Include="Win32\Const\SC.cs" />
+    <Compile Include="Win32\Const\SIF.cs" />
+    <Compile Include="Win32\Const\SS.cs" />
+    <Compile Include="Win32\Const\SW.cs" />
+    <Compile Include="Win32\Const\SWP.cs" />
+    <Compile Include="Win32\Const\TBM.cs" />
+    <Compile Include="Win32\Const\TCHT.cs" />
+    <Compile Include="Win32\Const\TCM.cs" />
+    <Compile Include="Win32\Const\TernaryRasterOperations.cs" />
+    <Compile Include="Win32\Const\TME.cs" />
+    <Compile Include="Win32\Const\TPM.cs" />
+    <Compile Include="Win32\Const\TTDT.cs" />
+    <Compile Include="Win32\Const\TTF.cs" />
+    <Compile Include="Win32\Const\TTI.cs" />
+    <Compile Include="Win32\Const\TTM.cs" />
+    <Compile Include="Win32\Const\TTN.cs" />
+    <Compile Include="Win32\Const\TTS.cs" />
+    <Compile Include="Win32\Const\VK.cs" />
+    <Compile Include="Win32\Const\WA.cs" />
+    <Compile Include="Win32\Const\WH.cs" />
+    <Compile Include="Win32\Const\WM.cs" />
+    <Compile Include="Win32\Const\WS.cs" />
+    <Compile Include="Win32\Const\WS_EX.cs" />
+    <Compile Include="Win32\Const\WVR.cs" />
+    <Compile Include="Win32\DVASPECT.cs" />
+    <Compile Include="Win32\FORMATETC.cs" />
+    <Compile Include="Win32\GETCLIPBOARDDATAFLAGS.cs" />
+    <Compile Include="Win32\GETOBJECTOPTIONS.cs" />
+    <Compile Include="Win32\Helper.cs" />
+    <Compile Include="Win32\HttpWebRequestHelper.cs" />
+    <Compile Include="Win32\IAdviseSink.cs" />
+    <Compile Include="Win32\IDataObject.cs" />
+    <Compile Include="Win32\IEnumFORMATETC.cs" />
+    <Compile Include="Win32\IEnumSTATDATA.cs" />
+    <Compile Include="Win32\IEnumSTATSTG.cs" />
+    <Compile Include="Win32\ILockBytes.cs" />
+    <Compile Include="Win32\IOleClientSite.cs" />
+    <Compile Include="Win32\IOleContainer.cs" />
+    <Compile Include="Win32\IRichEditOle.cs" />
+    <Compile Include="Win32\ISequentialStream.cs" />
+    <Compile Include="Win32\IStorage.cs" />
+    <Compile Include="Win32\IStream.cs" />
+    <Compile Include="Win32\NativeMethods.cs" />
+    <Compile Include="Win32\REOBJECT.cs" />
+    <Compile Include="Win32\Result.cs" />
+    <Compile Include="Win32\ShellHelper.cs" />
+    <Compile Include="Win32\STATDATA.cs" />
+    <Compile Include="Win32\STGMEDIUM.cs" />
+    <Compile Include="Win32\Struct\API_MSG.cs" />
+    <Compile Include="Win32\Struct\BLENDFUNCTION.cs" />
+    <Compile Include="Win32\Struct\CWPRETSTRUCT.cs" />
+    <Compile Include="Win32\Struct\CWPSTRUCT.cs" />
+    <Compile Include="Win32\Struct\INITCOMMONCONTROLSEX.cs" />
+    <Compile Include="Win32\Struct\MINMAXINFO.cs" />
+    <Compile Include="Win32\Struct\MOUSEHOOKSTRUCT.cs" />
+    <Compile Include="Win32\Struct\MOUSEHOOKSTRUCTEX.cs" />
+    <Compile Include="Win32\Struct\NCCALCSIZE_PARAMS.cs" />
+    <Compile Include="Win32\Struct\NMCUSTOMDRAW.cs" />
+    <Compile Include="Win32\Struct\NMHDR.cs" />
+    <Compile Include="Win32\Struct\NMTTCUSTOMDRAW.cs" />
+    <Compile Include="Win32\Struct\NMTTDISPINFO.cs" />
+    <Compile Include="Win32\Struct\PAINTSTRUCT.cs" />
+    <Compile Include="Win32\Struct\POINT.cs" />
+    <Compile Include="Win32\Struct\RECT.cs" />
+    <Compile Include="Win32\Struct\SCROLLBARINFO.cs" />
+    <Compile Include="Win32\Struct\SCROLLINFO.cs" />
+    <Compile Include="Win32\Struct\STYLESTRUCT.cs" />
+    <Compile Include="Win32\Struct\TCHITTESTINFO.cs" />
+    <Compile Include="Win32\Struct\TOOLINFO.cs" />
+    <Compile Include="Win32\Struct\TRACKMOUSEEVENT.cs" />
+    <Compile Include="Win32\Struct\TT_HITTESTINFO.cs" />
+    <Compile Include="Win32\Struct\WINDOWINFO.cs" />
+    <Compile Include="Win32\Struct\WINDOWPLACEMENT.cs" />
+    <Compile Include="Win32\Struct\WINDOWPOS.cs" />
+    <Compile Include="Win32\TYMED.cs" />
+    <EmbeddedResource Include="buttonReP.resx">
+      <DependentUpon>buttonReP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buttonRePaint.resx">
+      <DependentUpon>buttonRePaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputControl.resx">
+      <DependentUpon>InputControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SkinTextBox.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkinTextBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlConcellDev.resx">
+      <DependentUpon>UserControlConcellDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPag.resx">
+      <DependentUpon>UserControlPag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlConcell.resx">
+      <DependentUpon>UserControlConcell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlWait.resx">
+      <DependentUpon>UserControlWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\EllipseShape.png" />
+    <Content Include="Resources\login_inputbtn_down.png" />
+    <Content Include="Resources\login_inputbtn_highlight.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

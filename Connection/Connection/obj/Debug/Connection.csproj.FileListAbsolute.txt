@@ -1,0 +1,65 @@
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\bin\Debug\Connection.exe.config
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\bin\Debug\Connection.exe
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\bin\Debug\Connection.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\bin\Debug\Utility.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\obj\Debug\Connection.csprojResolveAssemblyReference.cache
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\obj\Debug\Connection.Properties.Resources.resources
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\obj\Debug\Connection.csproj.GenerateResource.Cache
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\obj\Debug\Connection.exe
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\obj\Debug\Connection.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\obj\Debug\Connection.Form1.resources
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\bin\Debug\ConnectionBll.dll
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\bin\Debug\ConnectionBll.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Connection\bin\Debug\Utility.dll
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\bin\Debug\Connection.dll.config
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\bin\Debug\Connection.dll
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\bin\Debug\Connection.pdb
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\bin\Debug\ConnectionBll.dll
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\bin\Debug\Utility.dll
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\bin\Debug\ConnectionBll.pdb
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\bin\Debug\Utility.pdb
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\obj\Debug\Connection.Form1.resources
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\obj\Debug\Connection.Properties.Resources.resources
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\obj\Debug\Connection.csproj.GenerateResource.Cache
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\obj\Debug\Connection.dll
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\obj\Debug\Connection.pdb
+D:\Project data\HuaDaHaiTianJianMing\barCode\Connection\Connection\obj\Debug\Connection.csprojResolveAssemblyReference.cache
+D:\Project data\MoXia\Carpenter\Connection\Connection\bin\Debug\Connection.dll.config
+D:\Project data\MoXia\Carpenter\Connection\Connection\bin\Debug\Connection.dll
+D:\Project data\MoXia\Carpenter\Connection\Connection\bin\Debug\Connection.pdb
+D:\Project data\MoXia\Carpenter\Connection\Connection\bin\Debug\ConnectionBll.dll
+D:\Project data\MoXia\Carpenter\Connection\Connection\bin\Debug\Utility.dll
+D:\Project data\MoXia\Carpenter\Connection\Connection\bin\Debug\ConnectionBll.pdb
+D:\Project data\MoXia\Carpenter\Connection\Connection\bin\Debug\Utility.pdb
+D:\Project data\MoXia\Carpenter\Connection\Connection\obj\Debug\Connection.csprojResolveAssemblyReference.cache
+D:\Project data\MoXia\Carpenter\Connection\Connection\obj\Debug\Connection.Form1.resources
+D:\Project data\MoXia\Carpenter\Connection\Connection\obj\Debug\Connection.Properties.Resources.resources
+D:\Project data\MoXia\Carpenter\Connection\Connection\obj\Debug\Connection.csproj.GenerateResource.Cache
+D:\Project data\MoXia\Carpenter\Connection\Connection\obj\Debug\Connection.dll
+D:\Project data\MoXia\Carpenter\Connection\Connection\obj\Debug\Connection.pdb
+D:\Project data\MiKe\LineProductMes\Connection\Connection\bin\Debug\Connection.dll.config
+D:\Project data\MiKe\LineProductMes\Connection\Connection\bin\Debug\Connection.dll
+D:\Project data\MiKe\LineProductMes\Connection\Connection\bin\Debug\Connection.pdb
+D:\Project data\MiKe\LineProductMes\Connection\Connection\bin\Debug\ConnectionBll.dll
+D:\Project data\MiKe\LineProductMes\Connection\Connection\bin\Debug\Utility.dll
+D:\Project data\MiKe\LineProductMes\Connection\Connection\bin\Debug\ConnectionBll.pdb
+D:\Project data\MiKe\LineProductMes\Connection\Connection\bin\Debug\Utility.pdb
+D:\Project data\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.csprojResolveAssemblyReference.cache
+D:\Project data\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.Form1.resources
+D:\Project data\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.Properties.Resources.resources
+D:\Project data\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.csproj.GenerateResource.Cache
+D:\Project data\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.dll
+D:\Project data\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.pdb
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\bin\Debug\Connection.dll.config
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\bin\Debug\Connection.dll
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\bin\Debug\Connection.pdb
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\bin\Debug\ConnectionBll.dll
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\bin\Debug\Utility.dll
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\bin\Debug\ConnectionBll.pdb
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\bin\Debug\Utility.pdb
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.Form1.resources
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.Properties.Resources.resources
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.csproj.GenerateResource.Cache
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.dll
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.pdb
+D:\ProjectData\MiKe\LineProductMes\Connection\Connection\obj\Debug\Connection.csprojResolveAssemblyReference.cache

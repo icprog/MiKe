@@ -1,0 +1,238 @@
+C:\Users\Administrator\Desktop\Carpenter\UIControl\bin\Debug\UIControl.dll.config
+C:\Users\Administrator\Desktop\Carpenter\UIControl\bin\Debug\UIControl.dll
+C:\Users\Administrator\Desktop\Carpenter\UIControl\bin\Debug\UIControl.pdb
+C:\Users\Administrator\Desktop\Carpenter\UIControl\obj\Debug\UIControl.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Carpenter\UIControl\obj\Debug\UIControl.SkinTextBox.resources
+C:\Users\Administrator\Desktop\Carpenter\UIControl\obj\Debug\UIControl.UserControlConcell.resources
+C:\Users\Administrator\Desktop\Carpenter\UIControl\obj\Debug\UIControl.UserControlWait.resources
+C:\Users\Administrator\Desktop\Carpenter\UIControl\obj\Debug\UIControl.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Carpenter\UIControl\obj\Debug\UIControl.dll
+C:\Users\Administrator\Desktop\Carpenter\UIControl\obj\Debug\UIControl.pdb
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\UIControl.dll.config
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\UIControl.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\UIControl.pdb
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Data.v16.2.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Utils.v16.2.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Data.v16.2.xml
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Utils.v16.2.xml
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.buttonReP.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.buttonRePaint.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.Form1.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\FishClient.UIControls.InputControl.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.Properties.Resources.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.SkinTextBox.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.UserControlConcellDev.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\SelectAll.UIControl.UserControl1.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.UserControlConcell.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.UserControlWait.resources
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.csproj.GenerateResource.Cache
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.dll.licenses
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.dll
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.pdb
+D:\Project data\MoXia\Carpenter\UIControl\obj\Debug\UIControl.csprojResolveAssemblyReference.cache
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.buttonReP.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.buttonRePaint.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Form1.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\FishClient.UIControls.InputControl.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Properties.Resources.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.SkinTextBox.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.UserControlConcellDev.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\SelectAll.UIControl.UserControl1.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.UserControlConcell.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.UserControlWait.resources
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.csproj.GenerateResource.Cache
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.dll.licenses
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.dll
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.pdb
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\UIControl.dll.config
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\UIControl.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\UIControl.pdb
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Data.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Utils.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Data.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Utils.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\Utility.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraBars.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Office.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\Utility.pdb
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraBars.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Office.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.csprojResolveAssemblyReference.cache
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\UIControl\bin\Debug\zh-Hans\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\UIControl.dll.config
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\UIControl.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\UIControl.pdb
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Data.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Utils.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\Utility.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraBars.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Office.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Data.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Utils.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\Utility.pdb
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraBars.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\DevExpress.Office.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.csprojResolveAssemblyReference.cache
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.buttonReP.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.buttonRePaint.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Form1.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\FishClient.UIControls.InputControl.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Properties.Resources.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.SkinTextBox.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.UserControlConcellDev.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\SelectAll.UIControl.UserControl1.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.UserControlConcell.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.UserControlWait.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.csproj.GenerateResource.Cache
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.dll.licenses
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.pdb
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\zh-Hans\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll

@@ -1,0 +1,1168 @@
+08:48:33.113  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:49:21.512 @EMP002 系统管理员
+08:49:21.514 @EMP033 d2f278e251d1566edd72846d4ad97f
+08:49:25.170 @EMP002 系统管理员
+08:49:25.173 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+08:51:13.691  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:51:18.342 @EMP002 系统管理员
+08:51:18.343 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+08:52:44.652  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:53:13.980 @EMP002 系统管理员
+08:53:13.981 @EMP033 e51e6c4ea698bc872c5f2e504383ac59
+08:53:17.479 @EMP002 系统管理员
+08:53:17.482 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+08:54:59.810  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:55:44.060 @EMP002 系统管理员
+08:55:44.063 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+08:58:35.133  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:58:43.020 @EMP002 系统管理员
+08:58:43.022 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:52:10.619  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:52:16.023 @EMP002 系统管理员
+09:52:16.025 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:54:28.909  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:54:40.037 @EMP002 系统管理员
+09:54:40.038 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:56:53.234  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:56:59.250 @EMP002 系统管理员
+09:56:59.251 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:06:03.148  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:06:09.711 @EMP002 系统管理员
+10:06:09.712 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:33:11.379  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:33:18.193 @EMP002 系统管理员
+10:33:18.196 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:35:02.877  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:35:07.474 @EMP002 系统管理员
+10:35:07.476 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:37:15.151  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:37:28.232 @EMP002 系统管理员
+10:37:28.234 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:41:47.293  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:41:51.761 @EMP002 系统管理员
+10:41:51.762 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:53:32.536  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:53:37.382 @EMP002 系统管理员
+10:53:37.384 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:55:33.638  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:55:37.792 @EMP002 系统管理员
+10:55:37.795 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:59:16.598  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:59:20.786 @EMP002 系统管理员
+10:59:20.790 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:59:50.890  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:59:54.917 @EMP002 系统管理员
+10:59:54.919 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:01:20.100  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:01:24.786 @EMP002 系统管理员
+11:01:24.788 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:02:27.435  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:02:32.444 @EMP002 系统管理员
+11:02:32.446 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:04:18.038  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:04:22.324 @EMP002 系统管理员
+11:04:22.326 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:05:59.514  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:06:04.037 @EMP002 系统管理员
+11:06:04.038 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:08:15.995  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:08:20.138 @EMP002 系统管理员
+11:08:20.141 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:15:10.470  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:15:21.886 @EMP002  系统管理员
+11:15:21.888 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:15:24.978 @EMP002  系统管理员
+11:15:24.980 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:15:32.566 @EMP002 系统管理员
+11:15:32.569 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+12:45:31.892  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+12:46:10.235 @EMP002 系统管理员
+12:46:10.237 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+12:47:49.254  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+12:47:56.801 @EMP002 系统管理员
+12:47:56.805 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:05:23.518  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:05:30.005 @EMP002 系统管理员
+13:05:30.007 @EMP033 e51e6c4ea698bc872c5f2e504383ac59
+13:05:34.029 @EMP002 系统管理员
+13:05:34.032 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:07:04.150  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:07:08.414 @EMP002 系统管理员
+13:07:08.416 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:07:43.388  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:07:50.041 @EMP002 系统管理员
+13:07:50.043 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:08:34.744  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:08:43.372 @EMP002 系统管理员
+13:08:43.374 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:50:14.392  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:50:21.417 @EMP002 系统管理员
+13:50:21.419 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:53:04.851  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:53:11.247 @EMP002 系统管理员
+13:53:11.249 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:54:40.806  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:54:46.887 @EMP002 系统管理员
+13:54:46.890 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:02:13.646  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:02:44.061 @EMP002 系统管理员
+14:02:44.062 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:07:03.518  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:07:09.314 @EMP002 系统管理员
+14:07:09.316 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:09:30.405  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:09:35.177 @EMP002 系统管理员
+14:09:35.179 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:14:32.253  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:14:41.569 @EMP002 系统管理员
+14:14:41.570 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:27:07.606  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:27:54.555 @EMP002 系统管理员
+14:27:54.558 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:33:44.093  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:33:48.949 @EMP002 系统管理员
+14:33:48.951 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:34:25.705  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:34:30.799 @EMP002 系统管理员
+14:34:30.800 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:35:59.571  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:36:05.185 @EMP002 系统管理员
+14:36:05.187 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:37:53.536  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:37:59.881 @EMP002 系统管理员
+14:37:59.882 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:52:37.448  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:52:44.380 @EMP002 系统管理员
+14:52:44.382 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:14:51.537  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:15:06.560 @EMP002 系统管理员
+15:15:06.564 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:15:20.571 列名 'EMP037' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 StudentMgr.SqlHelper.ExecuteDataTable(SqlConnection conn, String cmdText, SqlParameter[] parameters) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 278
+15:15:20.573 SELECT idx,EMP001,EMP002,EMP003,EMP004,EMP005,EMP006,EMP007,CASE WHEN EMP008=0 THEN '男' ELSE '女' END EMP008,EMP009,EMP010,EMP011,EMP012,EMP013,EMP014,EMP015,EMP016,EMP017,EMP018,EMP019,EMP020,EMP021,EMP022,EMP023,EMP024,CASE WHEN EMP025=0 THEN '离职' ELSE '在职' END EMP025,EMP026,CONVERT(FLOAT,EMP027) EMP027,CONVERT(FLOAT,EMP028) EMP028,CONVERT(FLOAT,EMP029) EMP029,CONVERT(FLOAT,EMP030) EMP030,CONVERT(FLOAT,EMP031) EMP031,CONVERT(FLOAT,EMP032) EMP032,EMP034,EMP035,EMP036,EMP010+' '+EMP011+' '+EMP035+''+EMP014 U2,EMP012+' '+EMP013+' '+EMP036 U3,DATEDIFF(YEAR,EMP009,GETDATE()) U0,DATEDIFF(YEAR,EMP023,GETDATE()) U1,EMP037 FROM MIKEMP WHERE EMP001!='DS'  ORDER BY EMP001
+15:16:21.720  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:18:15.346 @EMP002 系统管理员
+15:18:15.348 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:19:20.312  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:19:29.755 @EMP002 系统管理员
+15:19:29.757 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:22:50.046  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:22:55.114 @EMP002 系统管理员
+15:22:55.115 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:30:50.896  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:31:04.817 @EMP002 系统管理员
+15:31:04.819 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:11:51.513  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:11:56.093 @EMP002 系统管理员
+18:11:56.094 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:12:35.237 @FOR001 316
+18:12:35.238 @FOR002 3
+18:12:35.240 @FOR003 FormLineForAssPlan
+18:12:35.241 @FOR004 组装车间生产线计划排产
+18:12:35.242 @FOR005 MIKPRG
+18:12:35.243 @FOR006 1
+18:12:40.604  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:12:45.298 @EMP002 系统管理员
+18:12:45.299 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:13:46.538  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:13:50.598 @EMP002 系统管理员
+18:13:50.602 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:22:34.347  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:22:41.927 @EMP002 系统管理员
+18:22:41.929 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:23:31.143  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:23:36.435 @EMP002 系统管理员
+18:23:36.437 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:25:46.697  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:25:51.477 @EMP002 系统管理员
+18:25:51.479 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:26:27.993 @PRG005 1线
+18:26:27.994 @PRG003 14
+18:26:27.996 @PRG001 TCLNS-08D006
+18:26:27.997 @PRG002 2018/8/2 0:00:00
+18:26:27.998 @PRG004 050701
+18:26:28.005 @PRG005 2线
+18:26:28.006 @PRG003 14
+18:26:28.008 @PRG001 TCLNS-08D006
+18:26:28.009 @PRG002 2018/8/2 0:00:00
+18:26:28.010 @PRG004 050702
+18:26:28.014 @PRG005 3线
+18:26:28.015 @PRG003 14
+18:26:28.017 @PRG001 TCLNS-08D006
+18:26:28.018 @PRG002 2018/8/2 0:00:00
+18:26:28.020 @PRG004 050703
+18:26:28.022 @PRG005 4线
+18:26:28.024 @PRG003 14
+18:26:28.026 @PRG001 TCLNS-08D006
+18:26:28.027 @PRG002 2018/8/2 0:00:00
+18:26:28.029 @PRG004 050704
+18:26:28.032 @PRG005 5线
+18:26:28.033 @PRG003 14
+18:26:28.035 @PRG001 TCLNS-08D006
+18:26:28.037 @PRG002 2018/8/2 0:00:00
+18:26:28.038 @PRG004 050705
+18:26:28.044 @PRG005 6线
+18:26:28.045 @PRG003 16
+18:26:28.047 @PRG001 TCLNS-08D006
+18:26:28.048 @PRG002 2018/8/2 0:00:00
+18:26:28.049 @PRG004 050706
+18:26:28.052 @PRG005 7线
+18:26:28.054 @PRG003 16
+18:26:28.055 @PRG001 TCLNS-08D006
+18:26:28.056 @PRG002 2018/8/2 0:00:00
+18:26:28.057 @PRG004 050707
+18:26:28.060 @PRG001 TCLNS-08D006
+18:26:28.061 @PRG002 2018/8/3 0:00:00
+18:26:28.062 @PRG004 050701
+18:26:28.063 @PRG005 1线
+18:26:28.064 @PRG003 2
+18:26:28.067 @PRG001 TCLNS-08D006
+18:26:28.069 @PRG002 2018/8/3 0:00:00
+18:26:28.070 @PRG004 050702
+18:26:28.071 @PRG005 2线
+18:26:28.072 @PRG003 2
+18:26:28.075 @PRG001 TCLNS-08D006
+18:26:28.076 @PRG002 2018/8/3 0:00:00
+18:26:28.077 @PRG004 050703
+18:26:28.078 @PRG005 3线
+18:26:28.079 @PRG003 2
+18:26:28.082 @PRG001 TCLNS-08D006
+18:26:28.083 @PRG002 2018/8/3 0:00:00
+18:26:28.085 @PRG004 050704
+18:26:28.086 @PRG005 4线
+18:26:28.087 @PRG003 2
+18:26:28.089 @PRG001 TCLNS-08D006
+18:26:28.091 @PRG002 2018/8/3 0:00:00
+18:26:28.092 @PRG004 050705
+18:26:28.093 @PRG005 5线
+18:26:28.094 @PRG003 2
+18:26:28.097 @PRG001 TCLNS-08D006
+18:26:28.099 @PRG002 2018/8/3 0:00:00
+18:26:28.100 @PRG004 050706
+18:26:28.101 @PRG005 6线
+18:26:28.102 @PRG003 8
+18:26:28.104 @PRG001 TCLNS-08D006
+18:26:28.105 @PRG002 2018/8/3 0:00:00
+18:26:28.107 @PRG004 050707
+18:26:28.108 @PRG005 7线
+18:26:28.109 @PRG003 8
+18:26:28.112 @PRG001 TCLNS-08D006
+18:26:28.113 @PRG002 2018/8/4 0:00:00
+18:26:28.114 @PRG004 050701
+18:26:28.116 @PRG005 1线
+18:26:28.117 @PRG003 14
+18:26:28.119 @PRG001 TCLNS-08D006
+18:26:28.120 @PRG002 2018/8/4 0:00:00
+18:26:28.122 @PRG004 050702
+18:26:28.123 @PRG005 2线
+18:26:28.124 @PRG003 14
+18:26:28.126 @PRG001 TCLNS-08D006
+18:26:28.127 @PRG002 2018/8/4 0:00:00
+18:26:28.128 @PRG004 050703
+18:26:28.130 @PRG005 3线
+18:26:28.131 @PRG003 14
+18:26:28.133 @PRG001 TCLNS-08D006
+18:26:28.135 @PRG002 2018/8/4 0:00:00
+18:26:28.136 @PRG004 050704
+18:26:28.137 @PRG005 4线
+18:26:28.138 @PRG003 14
+18:26:28.140 @PRG001 TCLNS-08D006
+18:26:28.142 @PRG002 2018/8/4 0:00:00
+18:26:28.143 @PRG004 050705
+18:26:28.144 @PRG005 5线
+18:26:28.145 @PRG003 14
+18:26:28.147 @PRG001 TCLNS-08D006
+18:26:28.149 @PRG002 2018/8/4 0:00:00
+18:26:28.150 @PRG004 050706
+18:26:28.151 @PRG005 6线
+18:26:28.152 @PRG003 16
+18:26:28.155 @PRG001 TCLNS-08D006
+18:26:28.156 @PRG002 2018/8/4 0:00:00
+18:26:28.157 @PRG004 050707
+18:26:28.158 @PRG005 7线
+18:26:28.159 @PRG003 16
+18:26:28.161 @PRG001 TCLNS-08D006
+18:26:28.163 @PRG002 2018/8/5 0:00:00
+18:26:28.164 @PRG004 050701
+18:26:28.165 @PRG005 1线
+18:26:28.166 @PRG003 14
+18:26:28.168 @PRG001 TCLNS-08D006
+18:26:28.169 @PRG002 2018/8/5 0:00:00
+18:26:28.170 @PRG004 050702
+18:26:28.171 @PRG005 2线
+18:26:28.172 @PRG003 14
+18:26:28.175 @PRG001 TCLNS-08D006
+18:26:28.177 @PRG002 2018/8/5 0:00:00
+18:26:28.178 @PRG004 050703
+18:26:28.179 @PRG005 3线
+18:26:28.180 @PRG003 14
+18:26:28.183 @PRG001 TCLNS-08D006
+18:26:28.184 @PRG002 2018/8/5 0:00:00
+18:26:28.185 @PRG004 050704
+18:26:28.186 @PRG005 4线
+18:26:28.187 @PRG003 14
+18:26:28.190 @PRG001 TCLNS-08D006
+18:26:28.191 @PRG002 2018/8/5 0:00:00
+18:26:28.192 @PRG004 050705
+18:26:28.194 @PRG005 5线
+18:26:28.195 @PRG003 14
+18:26:28.197 @PRG001 TCLNS-08D006
+18:26:28.198 @PRG002 2018/8/5 0:00:00
+18:26:28.200 @PRG004 050706
+18:26:28.201 @PRG005 6线
+18:26:28.202 @PRG003 16
+18:26:28.204 @PRG001 TCLNS-08D006
+18:26:28.205 @PRG002 2018/8/5 0:00:00
+18:26:28.206 @PRG004 050707
+18:26:28.208 @PRG005 7线
+18:26:28.209 @PRG003 16
+18:26:28.211 @PRG001 TCLNS-08D006
+18:26:28.212 @PRG002 2018/8/6 0:00:00
+18:26:28.213 @PRG004 050701
+18:26:28.214 @PRG005 1线
+18:26:28.215 @PRG003 5
+18:26:28.217 @PRG001 TCLNS-08D006
+18:26:28.219 @PRG002 2018/8/6 0:00:00
+18:26:28.220 @PRG004 050702
+18:26:28.221 @PRG005 2线
+18:26:28.222 @PRG003 5
+18:26:28.224 @PRG001 TCLNS-08D006
+18:26:28.225 @PRG002 2018/8/6 0:00:00
+18:26:28.226 @PRG004 050703
+18:26:28.228 @PRG005 3线
+18:26:28.229 @PRG003 5
+18:26:28.231 @PRG001 TCLNS-08D006
+18:26:28.232 @PRG002 2018/8/6 0:00:00
+18:26:28.233 @PRG004 050704
+18:26:28.234 @PRG005 4线
+18:26:28.235 @PRG003 5
+18:26:28.237 @PRG001 TCLNS-08D006
+18:26:28.239 @PRG002 2018/8/6 0:00:00
+18:26:28.240 @PRG004 050705
+18:26:28.241 @PRG005 5线
+18:26:28.242 @PRG003 5
+18:26:28.245 @PRG001 TCLNS-08D006
+18:26:28.246 @PRG002 2018/8/6 0:00:00
+18:26:28.247 @PRG004 050706
+18:26:28.248 @PRG005 6线
+18:26:28.250 @PRG003 10
+18:26:28.252 @PRG001 TCLNS-08D006
+18:26:28.254 @PRG002 2018/8/6 0:00:00
+18:26:28.255 @PRG004 050707
+18:26:28.256 @PRG005 7线
+18:26:28.257 @PRG003 10
+18:28:24.246  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:28:28.105 @EMP002 系统管理员
+18:28:28.107 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:28:39.534 @PRG001 TCLNS-08D006
+18:28:39.535 @PRG002 2018/8/2 0:00:00
+18:28:39.537 @PRG004 050701
+18:28:39.538 @PRG005 1线
+18:28:39.540 @PRG003 14
+18:28:39.542 @PRG001 TCLNS-08D006
+18:28:39.543 @PRG002 2018/8/2 0:00:00
+18:28:39.544 @PRG004 050702
+18:28:39.545 @PRG005 2线
+18:28:39.546 @PRG003 14
+18:28:39.549 @PRG001 TCLNS-08D006
+18:28:39.550 @PRG002 2018/8/2 0:00:00
+18:28:39.551 @PRG004 050703
+18:28:39.552 @PRG005 3线
+18:28:39.553 @PRG003 14
+18:28:39.555 @PRG001 TCLNS-08D006
+18:28:39.556 @PRG002 2018/8/2 0:00:00
+18:28:39.557 @PRG004 050704
+18:28:39.559 @PRG005 4线
+18:28:39.560 @PRG003 14
+18:28:39.562 @PRG001 TCLNS-08D006
+18:28:39.563 @PRG002 2018/8/2 0:00:00
+18:28:39.564 @PRG004 050705
+18:28:39.565 @PRG005 5线
+18:28:39.566 @PRG003 14
+18:28:39.568 @PRG001 TCLNS-08D006
+18:28:39.569 @PRG002 2018/8/2 0:00:00
+18:28:39.570 @PRG004 050706
+18:28:39.572 @PRG005 6线
+18:28:39.573 @PRG003 14
+18:28:39.575 @PRG001 TCLNS-08D006
+18:28:39.576 @PRG002 2018/8/2 0:00:00
+18:28:39.577 @PRG004 050707
+18:28:39.579 @PRG005 7线
+18:28:39.580 @PRG003 16
+18:28:39.582 @PRG001 TCLNS-08D006
+18:28:39.584 @PRG002 2018/8/3 0:00:00
+18:28:39.585 @PRG004 050701
+18:28:39.586 @PRG005 1线
+18:28:39.587 @PRG003 2
+18:28:39.590 @PRG001 TCLNS-08D006
+18:28:39.591 @PRG002 2018/8/3 0:00:00
+18:28:39.593 @PRG004 050702
+18:28:39.594 @PRG005 2线
+18:28:39.595 @PRG003 2
+18:28:39.597 @PRG001 TCLNS-08D006
+18:28:39.598 @PRG002 2018/8/3 0:00:00
+18:28:39.601 @PRG004 050703
+18:28:39.603 @PRG005 3线
+18:28:39.604 @PRG003 2
+18:28:39.606 @PRG001 TCLNS-08D006
+18:28:39.607 @PRG002 2018/8/3 0:00:00
+18:28:39.609 @PRG004 050704
+18:28:39.610 @PRG005 4线
+18:28:39.611 @PRG003 2
+18:28:39.613 @PRG001 TCLNS-08D006
+18:28:39.614 @PRG002 2018/8/3 0:00:00
+18:28:39.615 @PRG004 050705
+18:28:39.616 @PRG005 5线
+18:28:39.618 @PRG003 2
+18:28:39.620 @PRG001 TCLNS-08D006
+18:28:39.621 @PRG002 2018/8/3 0:00:00
+18:28:39.623 @PRG004 050706
+18:28:39.624 @PRG005 6线
+18:28:39.625 @PRG003 2
+18:28:39.627 @PRG001 TCLNS-08D006
+18:28:39.628 @PRG002 2018/8/3 0:00:00
+18:28:39.629 @PRG004 050707
+18:28:39.630 @PRG005 7线
+18:28:39.632 @PRG003 8
+18:28:39.634 @PRG001 TCLNS-08D006
+18:28:39.635 @PRG002 2018/8/4 0:00:00
+18:28:39.636 @PRG004 050701
+18:28:39.637 @PRG005 1线
+18:28:39.639 @PRG003 14
+18:28:39.641 @PRG001 TCLNS-08D006
+18:28:39.643 @PRG002 2018/8/4 0:00:00
+18:28:39.644 @PRG004 050702
+18:28:39.645 @PRG005 2线
+18:28:39.646 @PRG003 14
+18:28:39.649 @PRG001 TCLNS-08D006
+18:28:39.650 @PRG002 2018/8/4 0:00:00
+18:28:39.651 @PRG004 050703
+18:28:39.652 @PRG005 3线
+18:28:39.653 @PRG003 14
+18:28:39.656 @PRG001 TCLNS-08D006
+18:28:39.657 @PRG002 2018/8/4 0:00:00
+18:28:39.658 @PRG004 050704
+18:28:39.659 @PRG005 4线
+18:28:39.660 @PRG003 14
+18:28:39.663 @PRG001 TCLNS-08D006
+18:28:39.664 @PRG002 2018/8/4 0:00:00
+18:28:39.665 @PRG004 050705
+18:28:39.666 @PRG005 5线
+18:28:39.667 @PRG003 14
+18:28:39.670 @PRG001 TCLNS-08D006
+18:28:39.671 @PRG002 2018/8/4 0:00:00
+18:28:39.672 @PRG004 050706
+18:28:39.673 @PRG005 6线
+18:28:39.674 @PRG003 14
+18:28:39.676 @PRG001 TCLNS-08D006
+18:28:39.678 @PRG002 2018/8/4 0:00:00
+18:28:39.679 @PRG004 050707
+18:28:39.680 @PRG005 7线
+18:28:39.681 @PRG003 16
+18:28:39.684 @PRG001 TCLNS-08D006
+18:28:39.685 @PRG002 2018/8/5 0:00:00
+18:28:39.686 @PRG004 050701
+18:28:39.687 @PRG005 1线
+18:28:39.689 @PRG003 14
+18:28:39.691 @PRG001 TCLNS-08D006
+18:28:39.692 @PRG002 2018/8/5 0:00:00
+18:28:39.693 @PRG004 050702
+18:28:39.694 @PRG005 2线
+18:28:39.696 @PRG003 14
+18:28:39.698 @PRG001 TCLNS-08D006
+18:28:39.699 @PRG002 2018/8/5 0:00:00
+18:28:39.700 @PRG004 050703
+18:28:39.702 @PRG005 3线
+18:28:39.703 @PRG003 14
+18:28:39.705 @PRG001 TCLNS-08D006
+18:28:39.706 @PRG002 2018/8/5 0:00:00
+18:28:39.707 @PRG004 050704
+18:28:39.709 @PRG005 4线
+18:28:39.710 @PRG003 14
+18:28:39.712 @PRG001 TCLNS-08D006
+18:28:39.713 @PRG002 2018/8/5 0:00:00
+18:28:39.715 @PRG004 050705
+18:28:39.716 @PRG005 5线
+18:28:39.717 @PRG003 14
+18:28:39.720 @PRG001 TCLNS-08D006
+18:28:39.721 @PRG002 2018/8/5 0:00:00
+18:28:39.722 @PRG004 050706
+18:28:39.723 @PRG005 6线
+18:28:39.724 @PRG003 14
+18:28:39.726 @PRG001 TCLNS-08D006
+18:28:39.728 @PRG002 2018/8/5 0:00:00
+18:28:39.729 @PRG004 050707
+18:28:39.730 @PRG005 7线
+18:28:39.731 @PRG003 16
+18:28:39.734 @PRG001 TCLNS-08D006
+18:28:39.735 @PRG002 2018/8/6 0:00:00
+18:28:39.736 @PRG004 050701
+18:28:39.737 @PRG005 1线
+18:28:39.738 @PRG003 5
+18:28:39.740 @PRG001 TCLNS-08D006
+18:28:39.741 @PRG002 2018/8/6 0:00:00
+18:28:39.743 @PRG004 050702
+18:28:39.744 @PRG005 2线
+18:28:39.745 @PRG003 5
+18:28:39.747 @PRG001 TCLNS-08D006
+18:28:39.749 @PRG002 2018/8/6 0:00:00
+18:28:39.750 @PRG004 050703
+18:28:39.751 @PRG005 3线
+18:28:39.752 @PRG003 5
+18:28:39.754 @PRG001 TCLNS-08D006
+18:28:39.756 @PRG002 2018/8/6 0:00:00
+18:28:39.757 @PRG004 050704
+18:28:39.758 @PRG005 4线
+18:28:39.759 @PRG003 5
+18:28:39.762 @PRG001 TCLNS-08D006
+18:28:39.763 @PRG002 2018/8/6 0:00:00
+18:28:39.765 @PRG004 050705
+18:28:39.766 @PRG005 5线
+18:28:39.767 @PRG003 5
+18:28:39.769 @PRG001 TCLNS-08D006
+18:28:39.770 @PRG002 2018/8/6 0:00:00
+18:28:39.771 @PRG004 050706
+18:28:39.773 @PRG005 6线
+18:28:39.774 @PRG003 5
+18:28:39.776 @PRG001 TCLNS-08D006
+18:28:39.777 @PRG002 2018/8/6 0:00:00
+18:28:39.778 @PRG004 050707
+18:28:39.780 @PRG005 7线
+18:28:39.781 @PRG003 10
+18:30:30.784 @PRD001 20180807001
+18:30:30.786 @PRD002 2018/8/7 0:00:00
+18:30:30.787 @PRD003 False
+18:30:30.791 @PRE001 20180807001
+18:30:30.793 @PRE002 SD201708210001
+18:30:30.794 @PRE003 007
+18:30:30.796 @PRE004 TCLNS-11Y3B20-T
+18:30:30.797 @PRE005 2018/8/7 0:00:00
+18:30:30.798 @PRE006 2017/9/12 0:00:00
+18:30:30.800 @PRE007 1000
+18:30:30.801 @PRE008 100
+18:30:30.803 @PRE009 0
+18:30:30.804 @PRE010 100
+18:30:30.808 @PRF001 TCLNS-11Y3B20-T
+18:30:30.810 @PRF002 2018/8/7 0:00:00
+18:30:30.811 @PRF003 100
+18:30:30.814 @PRE001 20180807001
+18:30:30.815 @PRE002 SD201708210001
+18:30:30.817 @PRE003 007
+18:30:30.818 @PRE004 TCLNS-11Y3B20-T
+18:30:30.820 @PRE005 2018/8/8 0:00:00
+18:30:30.821 @PRE006 2017/9/12 0:00:00
+18:30:30.823 @PRE007 1000
+18:30:30.825 @PRE008 100
+18:30:30.826 @PRE009 0
+18:30:30.828 @PRE010 100
+18:30:30.830 @PRF001 TCLNS-11Y3B20-T
+18:30:30.831 @PRF002 2018/8/8 0:00:00
+18:30:30.833 @PRF003 100
+18:30:30.836 @PRE001 20180807001
+18:30:30.838 @PRE002 SD201708210001
+18:30:30.839 @PRE003 007
+18:30:30.840 @PRE004 TCLNS-11Y3B20-T
+18:30:30.842 @PRE005 2018/8/9 0:00:00
+18:30:30.843 @PRE006 2017/9/12 0:00:00
+18:30:30.844 @PRE007 1000
+18:30:30.845 @PRE008 100
+18:30:30.846 @PRE009 0
+18:30:30.848 @PRE010 100
+18:30:30.851 @PRF001 TCLNS-11Y3B20-T
+18:30:30.852 @PRF002 2018/8/9 0:00:00
+18:30:30.854 @PRF003 100
+18:30:30.856 @PRE001 20180807001
+18:30:30.858 @PRE002 SD201708210001
+18:30:30.859 @PRE003 007
+18:30:30.861 @PRE004 TCLNS-11Y3B20-T
+18:30:30.862 @PRE005 2018/8/10 0:00:00
+18:30:30.863 @PRE006 2017/9/12 0:00:00
+18:30:30.864 @PRE007 1000
+18:30:30.865 @PRE008 100
+18:30:30.867 @PRE009 0
+18:30:30.869 @PRE010 100
+18:30:30.871 @PRF001 TCLNS-11Y3B20-T
+18:30:30.873 @PRF002 2018/8/10 0:00:00
+18:30:30.874 @PRF003 100
+18:30:30.877 @PRE001 20180807001
+18:30:30.878 @PRE002 SD201708210001
+18:30:30.879 @PRE003 007
+18:30:30.880 @PRE004 TCLNS-11Y3B20-T
+18:30:30.882 @PRE005 2018/8/11 0:00:00
+18:30:30.884 @PRE006 2017/9/12 0:00:00
+18:30:30.885 @PRE007 1000
+18:30:30.887 @PRE008 100
+18:30:30.888 @PRE009 0
+18:30:30.891 @PRE010 100
+18:30:30.893 @PRF001 TCLNS-11Y3B20-T
+18:30:30.894 @PRF002 2018/8/11 0:00:00
+18:30:30.896 @PRF003 100
+18:30:30.898 @PRE001 20180807001
+18:30:30.900 @PRE002 SD201708210001
+18:30:30.901 @PRE003 007
+18:30:30.902 @PRE004 TCLNS-11Y3B20-T
+18:30:30.904 @PRE005 2018/8/12 0:00:00
+18:30:30.905 @PRE006 2017/9/12 0:00:00
+18:30:30.907 @PRE007 1000
+18:30:30.908 @PRE008 100
+18:30:30.910 @PRE009 0
+18:30:30.911 @PRE010 100
+18:30:30.914 @PRF001 TCLNS-11Y3B20-T
+18:30:30.915 @PRF002 2018/8/12 0:00:00
+18:30:30.916 @PRF003 100
+18:30:30.919 @PRE001 20180807001
+18:30:30.921 @PRE002 SD201708210001
+18:30:30.923 @PRE003 007
+18:30:30.924 @PRE004 TCLNS-11Y3B20-T
+18:30:30.926 @PRE005 2018/8/13 0:00:00
+18:30:30.927 @PRE006 2017/9/12 0:00:00
+18:30:30.928 @PRE007 1000
+18:30:30.929 @PRE008 100
+18:30:30.931 @PRE009 0
+18:30:30.932 @PRE010 100
+18:30:30.935 @PRF001 TCLNS-11Y3B20-T
+18:30:30.936 @PRF002 2018/8/13 0:00:00
+18:30:30.938 @PRF003 100
+18:30:30.941 @PRE001 20180807001
+18:30:30.942 @PRE002 SD201708210001
+18:30:30.944 @PRE003 007
+18:30:30.945 @PRE004 TCLNS-11Y3B20-T
+18:30:30.947 @PRE005 2018/8/14 0:00:00
+18:30:30.948 @PRE006 2017/9/12 0:00:00
+18:30:30.949 @PRE007 1000
+18:30:30.950 @PRE008 100
+18:30:30.952 @PRE009 0
+18:30:30.953 @PRE010 100
+18:30:30.957 @PRF001 TCLNS-11Y3B20-T
+18:30:30.958 @PRF002 2018/8/14 0:00:00
+18:30:30.960 @PRF003 100
+18:30:30.962 @PRE001 20180807001
+18:30:30.964 @PRE002 SD201708210001
+18:30:30.965 @PRE003 007
+18:30:30.966 @PRE004 TCLNS-11Y3B20-T
+18:30:30.967 @PRE005 2018/8/15 0:00:00
+18:30:30.969 @PRE006 2017/9/12 0:00:00
+18:30:30.971 @PRE007 1000
+18:30:30.972 @PRE008 100
+18:30:30.974 @PRE009 0
+18:30:30.975 @PRE010 100
+18:30:30.978 @PRF001 TCLNS-11Y3B20-T
+18:30:30.979 @PRF002 2018/8/15 0:00:00
+18:30:30.981 @PRF003 100
+18:30:30.983 @PRE001 20180807001
+18:30:30.984 @PRE002 SD201708210001
+18:30:30.986 @PRE003 007
+18:30:30.987 @PRE004 TCLNS-11Y3B20-T
+18:30:30.988 @PRE005 2018/8/16 0:00:00
+18:30:30.990 @PRE006 2017/9/12 0:00:00
+18:30:30.992 @PRE007 1000
+18:30:30.994 @PRE008 100
+18:30:30.995 @PRE009 0
+18:30:30.996 @PRE010 100
+18:30:30.998 @PRF001 TCLNS-11Y3B20-T
+18:30:31.000 @PRF002 2018/8/16 0:00:00
+18:30:31.001 @PRF003 100
+18:30:34.034 @PRG001 TCLNS-11Y3B20-T
+18:30:34.036 @PRG002 2018/8/7 0:00:00
+18:30:34.037 @PRG004 050701
+18:30:34.038 @PRG005 1线
+18:30:34.039 @PRG003 14
+18:30:34.042 @PRG001 TCLNS-11Y3B20-T
+18:30:34.044 @PRG002 2018/8/7 0:00:00
+18:30:34.045 @PRG004 050702
+18:30:34.046 @PRG005 2线
+18:30:34.047 @PRG003 14
+18:30:34.050 @PRG001 TCLNS-11Y3B20-T
+18:30:34.052 @PRG002 2018/8/7 0:00:00
+18:30:34.053 @PRG004 050703
+18:30:34.054 @PRG005 3线
+18:30:34.055 @PRG003 14
+18:30:34.058 @PRG001 TCLNS-11Y3B20-T
+18:30:34.059 @PRG002 2018/8/7 0:00:00
+18:30:34.060 @PRG004 050704
+18:30:34.061 @PRG005 4线
+18:30:34.062 @PRG003 14
+18:30:34.064 @PRG001 TCLNS-11Y3B20-T
+18:30:34.066 @PRG002 2018/8/7 0:00:00
+18:30:34.067 @PRG004 050705
+18:30:34.068 @PRG005 5线
+18:30:34.069 @PRG003 14
+18:30:34.071 @PRG001 TCLNS-11Y3B20-T
+18:30:34.073 @PRG002 2018/8/7 0:00:00
+18:30:34.074 @PRG004 050706
+18:30:34.075 @PRG005 6线
+18:30:34.076 @PRG003 14
+18:30:34.079 @PRG001 TCLNS-11Y3B20-T
+18:30:34.080 @PRG002 2018/8/7 0:00:00
+18:30:34.081 @PRG004 050707
+18:30:34.085 @PRG005 7线
+18:30:34.086 @PRG003 16
+18:30:34.088 @PRG001 TCLNS-11Y3B20-T
+18:30:34.090 @PRG002 2018/8/8 0:00:00
+18:30:34.091 @PRG004 050701
+18:30:34.092 @PRG005 1线
+18:30:34.094 @PRG003 14
+18:30:34.096 @PRG001 TCLNS-11Y3B20-T
+18:30:34.097 @PRG002 2018/8/8 0:00:00
+18:30:34.099 @PRG004 050702
+18:30:34.100 @PRG005 2线
+18:30:34.101 @PRG003 14
+18:30:34.104 @PRG001 TCLNS-11Y3B20-T
+18:30:34.105 @PRG002 2018/8/8 0:00:00
+18:30:34.106 @PRG004 050703
+18:30:34.107 @PRG005 3线
+18:30:34.108 @PRG003 14
+18:30:34.113 @PRG001 TCLNS-11Y3B20-T
+18:30:34.114 @PRG002 2018/8/8 0:00:00
+18:30:34.115 @PRG004 050704
+18:30:34.117 @PRG005 4线
+18:30:34.118 @PRG003 14
+18:30:34.120 @PRG001 TCLNS-11Y3B20-T
+18:30:34.121 @PRG002 2018/8/8 0:00:00
+18:30:34.123 @PRG004 050705
+18:30:34.124 @PRG005 5线
+18:30:34.125 @PRG003 14
+18:30:34.128 @PRG001 TCLNS-11Y3B20-T
+18:30:34.129 @PRG002 2018/8/8 0:00:00
+18:30:34.131 @PRG004 050706
+18:30:34.132 @PRG005 6线
+18:30:34.133 @PRG003 14
+18:30:34.135 @PRG001 TCLNS-11Y3B20-T
+18:30:34.137 @PRG002 2018/8/8 0:00:00
+18:30:34.138 @PRG004 050707
+18:30:34.139 @PRG005 7线
+18:30:34.140 @PRG003 16
+18:30:34.142 @PRG001 TCLNS-11Y3B20-T
+18:30:34.143 @PRG002 2018/8/9 0:00:00
+18:30:34.144 @PRG004 050701
+18:30:34.146 @PRG005 1线
+18:30:34.147 @PRG003 14
+18:30:34.149 @PRG001 TCLNS-11Y3B20-T
+18:30:34.151 @PRG002 2018/8/9 0:00:00
+18:30:34.152 @PRG004 050702
+18:30:34.153 @PRG005 2线
+18:30:34.154 @PRG003 14
+18:30:34.157 @PRG001 TCLNS-11Y3B20-T
+18:30:34.158 @PRG002 2018/8/9 0:00:00
+18:30:34.159 @PRG004 050703
+18:30:34.160 @PRG005 3线
+18:30:34.161 @PRG003 14
+18:30:34.163 @PRG001 TCLNS-11Y3B20-T
+18:30:34.165 @PRG002 2018/8/9 0:00:00
+18:30:34.166 @PRG004 050704
+18:30:34.167 @PRG005 4线
+18:30:34.168 @PRG003 14
+18:30:34.170 @PRG001 TCLNS-11Y3B20-T
+18:30:34.172 @PRG002 2018/8/9 0:00:00
+18:30:34.173 @PRG004 050705
+18:30:34.174 @PRG005 5线
+18:30:34.175 @PRG003 14
+18:30:34.178 @PRG001 TCLNS-11Y3B20-T
+18:30:34.179 @PRG002 2018/8/9 0:00:00
+18:30:34.180 @PRG004 050706
+18:30:34.182 @PRG005 6线
+18:30:34.183 @PRG003 14
+18:30:34.185 @PRG001 TCLNS-11Y3B20-T
+18:30:34.186 @PRG002 2018/8/9 0:00:00
+18:30:34.187 @PRG004 050707
+18:30:34.188 @PRG005 7线
+18:30:34.190 @PRG003 16
+18:30:34.192 @PRG001 TCLNS-11Y3B20-T
+18:30:34.193 @PRG002 2018/8/10 0:00:00
+18:30:34.194 @PRG004 050701
+18:30:34.195 @PRG005 1线
+18:30:34.196 @PRG003 14
+18:30:34.199 @PRG001 TCLNS-11Y3B20-T
+18:30:34.200 @PRG002 2018/8/10 0:00:00
+18:30:34.201 @PRG004 050702
+18:30:34.203 @PRG005 2线
+18:30:34.204 @PRG003 14
+18:30:34.206 @PRG001 TCLNS-11Y3B20-T
+18:30:34.207 @PRG002 2018/8/10 0:00:00
+18:30:34.209 @PRG004 050703
+18:30:34.210 @PRG005 3线
+18:30:34.211 @PRG003 14
+18:30:34.213 @PRG001 TCLNS-11Y3B20-T
+18:30:34.214 @PRG002 2018/8/10 0:00:00
+18:30:34.215 @PRG004 050704
+18:30:34.217 @PRG005 4线
+18:30:34.218 @PRG003 14
+18:30:34.220 @PRG001 TCLNS-11Y3B20-T
+18:30:34.221 @PRG002 2018/8/10 0:00:00
+18:30:34.222 @PRG004 050705
+18:30:34.224 @PRG005 5线
+18:30:34.225 @PRG003 14
+18:30:34.227 @PRG001 TCLNS-11Y3B20-T
+18:30:34.228 @PRG002 2018/8/10 0:00:00
+18:30:34.229 @PRG004 050706
+18:30:34.231 @PRG005 6线
+18:30:34.232 @PRG003 14
+18:30:34.234 @PRG001 TCLNS-11Y3B20-T
+18:30:34.235 @PRG002 2018/8/10 0:00:00
+18:30:34.237 @PRG004 050707
+18:30:34.238 @PRG005 7线
+18:30:34.239 @PRG003 16
+18:30:34.241 @PRG001 TCLNS-11Y3B20-T
+18:30:34.242 @PRG002 2018/8/11 0:00:00
+18:30:34.243 @PRG004 050701
+18:30:34.245 @PRG005 1线
+18:30:34.246 @PRG003 14
+18:30:34.248 @PRG001 TCLNS-11Y3B20-T
+18:30:34.249 @PRG002 2018/8/11 0:00:00
+18:30:34.250 @PRG004 050702
+18:30:34.252 @PRG005 2线
+18:30:34.253 @PRG003 14
+18:30:34.255 @PRG001 TCLNS-11Y3B20-T
+18:30:34.256 @PRG002 2018/8/11 0:00:00
+18:30:34.258 @PRG004 050703
+18:30:34.259 @PRG005 3线
+18:30:34.260 @PRG003 14
+18:30:34.262 @PRG001 TCLNS-11Y3B20-T
+18:30:34.263 @PRG002 2018/8/11 0:00:00
+18:30:34.264 @PRG004 050704
+18:30:34.266 @PRG005 4线
+18:30:34.267 @PRG003 14
+18:30:34.269 @PRG001 TCLNS-11Y3B20-T
+18:30:34.270 @PRG002 2018/8/11 0:00:00
+18:30:34.272 @PRG004 050705
+18:30:34.273 @PRG005 5线
+18:30:34.274 @PRG003 14
+18:30:34.276 @PRG001 TCLNS-11Y3B20-T
+18:30:34.277 @PRG002 2018/8/11 0:00:00
+18:30:34.278 @PRG004 050706
+18:30:34.279 @PRG005 6线
+18:30:34.281 @PRG003 14
+18:30:34.283 @PRG001 TCLNS-11Y3B20-T
+18:30:34.284 @PRG002 2018/8/11 0:00:00
+18:30:34.285 @PRG004 050707
+18:30:34.287 @PRG005 7线
+18:30:34.288 @PRG003 16
+18:30:34.290 @PRG001 TCLNS-11Y3B20-T
+18:30:34.291 @PRG002 2018/8/12 0:00:00
+18:30:34.292 @PRG004 050701
+18:30:34.294 @PRG005 1线
+18:30:34.295 @PRG003 14
+18:30:34.297 @PRG001 TCLNS-11Y3B20-T
+18:30:34.298 @PRG002 2018/8/12 0:00:00
+18:30:34.299 @PRG004 050702
+18:30:34.300 @PRG005 2线
+18:30:34.302 @PRG003 14
+18:30:34.304 @PRG001 TCLNS-11Y3B20-T
+18:30:34.305 @PRG002 2018/8/12 0:00:00
+18:30:34.306 @PRG004 050703
+18:30:34.308 @PRG005 3线
+18:30:34.309 @PRG003 14
+18:30:34.311 @PRG001 TCLNS-11Y3B20-T
+18:30:34.312 @PRG002 2018/8/12 0:00:00
+18:30:34.313 @PRG004 050704
+18:30:34.315 @PRG005 4线
+18:30:34.316 @PRG003 14
+18:30:34.318 @PRG001 TCLNS-11Y3B20-T
+18:30:34.319 @PRG002 2018/8/12 0:00:00
+18:30:34.320 @PRG004 050705
+18:30:34.321 @PRG005 5线
+18:30:34.322 @PRG003 14
+18:30:34.324 @PRG001 TCLNS-11Y3B20-T
+18:30:34.326 @PRG002 2018/8/12 0:00:00
+18:30:34.327 @PRG004 050706
+18:30:34.328 @PRG005 6线
+18:30:34.329 @PRG003 14
+18:30:34.332 @PRG001 TCLNS-11Y3B20-T
+18:30:34.333 @PRG002 2018/8/12 0:00:00
+18:30:34.334 @PRG004 050707
+18:30:34.335 @PRG005 7线
+18:30:34.337 @PRG003 16
+18:30:34.339 @PRG001 TCLNS-11Y3B20-T
+18:30:34.340 @PRG002 2018/8/13 0:00:00
+18:30:34.341 @PRG004 050701
+18:30:34.342 @PRG005 1线
+18:30:34.343 @PRG003 14
+18:30:34.345 @PRG001 TCLNS-11Y3B20-T
+18:30:34.346 @PRG002 2018/8/13 0:00:00
+18:30:34.348 @PRG004 050702
+18:30:34.349 @PRG005 2线
+18:30:34.350 @PRG003 14
+18:30:34.352 @PRG001 TCLNS-11Y3B20-T
+18:30:34.354 @PRG002 2018/8/13 0:00:00
+18:30:34.355 @PRG004 050703
+18:30:34.356 @PRG005 3线
+18:30:34.357 @PRG003 14
+18:30:34.360 @PRG001 TCLNS-11Y3B20-T
+18:30:34.361 @PRG002 2018/8/13 0:00:00
+18:30:34.363 @PRG004 050704
+18:30:34.364 @PRG005 4线
+18:30:34.365 @PRG003 14
+18:30:34.367 @PRG001 TCLNS-11Y3B20-T
+18:30:34.368 @PRG002 2018/8/13 0:00:00
+18:30:34.369 @PRG004 050705
+18:30:34.370 @PRG005 5线
+18:30:34.371 @PRG003 14
+18:30:34.373 @PRG001 TCLNS-11Y3B20-T
+18:30:34.374 @PRG002 2018/8/13 0:00:00
+18:30:34.376 @PRG004 050706
+18:30:34.377 @PRG005 6线
+18:30:34.378 @PRG003 14
+18:30:34.381 @PRG001 TCLNS-11Y3B20-T
+18:30:34.382 @PRG002 2018/8/13 0:00:00
+18:30:34.383 @PRG004 050707
+18:30:34.384 @PRG005 7线
+18:30:34.385 @PRG003 16
+18:30:34.388 @PRG001 TCLNS-11Y3B20-T
+18:30:34.389 @PRG002 2018/8/14 0:00:00
+18:30:34.390 @PRG004 050701
+18:30:34.391 @PRG005 1线
+18:30:34.392 @PRG003 14
+18:30:34.395 @PRG001 TCLNS-11Y3B20-T
+18:30:34.396 @PRG002 2018/8/14 0:00:00
+18:30:34.397 @PRG004 050702
+18:30:34.398 @PRG005 2线
+18:30:34.400 @PRG003 14
+18:30:34.402 @PRG001 TCLNS-11Y3B20-T
+18:30:34.403 @PRG002 2018/8/14 0:00:00
+18:30:34.404 @PRG004 050703
+18:30:34.406 @PRG005 3线
+18:30:34.407 @PRG003 14
+18:30:34.409 @PRG001 TCLNS-11Y3B20-T
+18:30:34.410 @PRG002 2018/8/14 0:00:00
+18:30:34.412 @PRG004 050704
+18:30:34.413 @PRG005 4线
+18:30:34.414 @PRG003 14
+18:30:34.416 @PRG001 TCLNS-11Y3B20-T
+18:30:34.417 @PRG002 2018/8/14 0:00:00
+18:30:34.418 @PRG004 050705
+18:30:34.420 @PRG005 5线
+18:30:34.421 @PRG003 14
+18:30:34.423 @PRG001 TCLNS-11Y3B20-T
+18:30:34.424 @PRG002 2018/8/14 0:00:00
+18:30:34.425 @PRG004 050706
+18:30:34.427 @PRG005 6线
+18:30:34.428 @PRG003 14
+18:30:34.430 @PRG001 TCLNS-11Y3B20-T
+18:30:34.431 @PRG002 2018/8/14 0:00:00
+18:30:34.432 @PRG004 050707
+18:30:34.433 @PRG005 7线
+18:30:34.435 @PRG003 16
+18:30:34.437 @PRG001 TCLNS-11Y3B20-T
+18:30:34.438 @PRG002 2018/8/15 0:00:00
+18:30:34.440 @PRG004 050701
+18:30:34.441 @PRG005 1线
+18:30:34.442 @PRG003 14
+18:30:34.445 @PRG001 TCLNS-11Y3B20-T
+18:30:34.446 @PRG002 2018/8/15 0:00:00
+18:30:34.447 @PRG004 050702
+18:30:34.448 @PRG005 2线
+18:30:34.449 @PRG003 14
+18:30:34.451 @PRG001 TCLNS-11Y3B20-T
+18:30:34.452 @PRG002 2018/8/15 0:00:00
+18:30:34.454 @PRG004 050703
+18:30:34.455 @PRG005 3线
+18:30:34.456 @PRG003 14
+18:30:34.458 @PRG001 TCLNS-11Y3B20-T
+18:30:34.459 @PRG002 2018/8/15 0:00:00
+18:30:34.460 @PRG004 050704
+18:30:34.462 @PRG005 4线
+18:30:34.463 @PRG003 14
+18:30:34.465 @PRG001 TCLNS-11Y3B20-T
+18:30:34.466 @PRG002 2018/8/15 0:00:00
+18:30:34.467 @PRG004 050705
+18:30:34.468 @PRG005 5线
+18:30:34.469 @PRG003 14
+18:30:34.472 @PRG001 TCLNS-11Y3B20-T
+18:30:34.473 @PRG002 2018/8/15 0:00:00
+18:30:34.474 @PRG004 050706
+18:30:34.476 @PRG005 6线
+18:30:34.477 @PRG003 14
+18:30:34.479 @PRG001 TCLNS-11Y3B20-T
+18:30:34.480 @PRG002 2018/8/15 0:00:00
+18:30:34.481 @PRG004 050707
+18:30:34.483 @PRG005 7线
+18:30:34.484 @PRG003 16
+18:30:34.486 @PRG001 TCLNS-11Y3B20-T
+18:30:34.488 @PRG002 2018/8/16 0:00:00
+18:30:34.489 @PRG004 050701
+18:30:34.490 @PRG005 1线
+18:30:34.491 @PRG003 14
+18:30:34.493 @PRG001 TCLNS-11Y3B20-T
+18:30:34.495 @PRG002 2018/8/16 0:00:00
+18:30:34.496 @PRG004 050702
+18:30:34.497 @PRG005 2线
+18:30:34.498 @PRG003 14
+18:30:34.501 @PRG001 TCLNS-11Y3B20-T
+18:30:34.502 @PRG002 2018/8/16 0:00:00
+18:30:34.504 @PRG004 050703
+18:30:34.505 @PRG005 3线
+18:30:34.507 @PRG003 14
+18:30:34.509 @PRG001 TCLNS-11Y3B20-T
+18:30:34.511 @PRG002 2018/8/16 0:00:00
+18:30:34.512 @PRG004 050704
+18:30:34.513 @PRG005 4线
+18:30:34.514 @PRG003 14
+18:30:34.516 @PRG001 TCLNS-11Y3B20-T
+18:30:34.518 @PRG002 2018/8/16 0:00:00
+18:30:34.519 @PRG004 050705
+18:30:34.520 @PRG005 5线
+18:30:34.521 @PRG003 14
+18:30:34.524 @PRG001 TCLNS-11Y3B20-T
+18:30:34.525 @PRG002 2018/8/16 0:00:00
+18:30:34.526 @PRG004 050706
+18:30:34.527 @PRG005 6线
+18:30:34.528 @PRG003 14
+18:30:34.530 @PRG001 TCLNS-11Y3B20-T
+18:30:34.532 @PRG002 2018/8/16 0:00:00
+18:30:34.533 @PRG004 050707
+18:30:34.534 @PRG005 7线
+18:30:34.535 @PRG003 16
+18:31:54.625  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:31:58.952 @EMP002 系统管理员
+18:31:58.954 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:37:21.011  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:38:03.977 @EMP002 系统管理员
+18:38:03.978 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:38:58.480  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:39:02.452 @EMP002 系统管理员
+18:39:02.454 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:39:53.816  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:39:57.754 @EMP002 系统管理员
+18:39:57.756 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:43:35.587  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:43:43.350 @EMP002 系统管理员
+18:43:43.352 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:51:14.138  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:51:19.738 @EMP002 系统管理员
+18:51:19.739 @EMP033 cebfd1559b68d67688884d7a3d3e8c

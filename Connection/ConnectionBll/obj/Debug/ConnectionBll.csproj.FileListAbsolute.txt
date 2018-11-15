@@ -1,0 +1,7 @@
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\ConnectionBll\bin\Debug\ConnectionBll.dll
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\ConnectionBll\bin\Debug\ConnectionBll.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\ConnectionBll\bin\Debug\Utility.dll
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\ConnectionBll\bin\Debug\Utility.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\ConnectionBll\obj\Debug\ConnectionBll.dll
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\ConnectionBll\obj\Debug\ConnectionBll.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\ConnectionBll\obj\Debug\ConnectionBll.csprojResolveAssemblyReference.cache

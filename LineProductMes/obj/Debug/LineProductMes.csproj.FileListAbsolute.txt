@@ -1,0 +1,410 @@
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe.config
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Data.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Data.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormBase.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.Properties.Resources.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.csproj.GenerateResource.Cache
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.exe
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraBars.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\FastReport.Bars.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\FastReport.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\FastReport.Editor.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\FastReport.Install.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\FastReport.VSDesign.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\FastReport.Web.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\EnvDTE.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\stdole.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Microsoft.MSXML.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraBars.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormChild.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormMain.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.TreeMap.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeMap.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Office.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.TreeMap.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeMap.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Office.v16.2.Core.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLogin.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Connection.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesBll.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\UIControl.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Utility.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ConnectionBll.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Connection.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesBll.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\UIControl.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Utility.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ConnectionBll.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormProControl.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesEntityu.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesEntityu.pdb
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Images.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.ProControlChild.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormSetPW.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormAbout.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormDepartQueryOfPerson.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormEmployee.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.PowerEdit.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPower.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormBaseChild.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormCheckWork.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Newtonsoft.Json.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\Newtonsoft.Json.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormMaPlate.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormMachinePlat.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormSupplierForMould.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormSupplierMould.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormMouldInfo.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormMouldInformation.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormArtOpera.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormArt.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormAssNewWork.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormAssNewWorkQuery.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormAssNewWorkEnclosure.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.csprojResolveAssemblyReference.cache
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Charts.v16.2.Core.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.UI.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraNavBar.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.UI.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.UI.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraNavBar.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraRichEdit.v16.2.xml
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\zh-Hans\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\zh-Hans\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\zh-Hans\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\zh-Hans\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\zh-Hans\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\bin\Debug\zh-Hans\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormTPADEAInfo.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.AssNewWorkEnclosureQuery.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormHardWareWork.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormHardWareWorkQuery.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormInjectionMoldingQuery.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormInjectionMolding.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEDNewsPaper.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEDNewsPaperQuery.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormPaintNewspaperQuery.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPaintNewspaper.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormReadOrder.resources
+D:\Project data\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormProductPlan.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe.config
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Connection.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Data.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Diagram.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Images.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.TreeMap.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraBars.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraDiagram.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeMap.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesBll.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesEntityu.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\UIControl.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Utility.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ConnectionBll.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.UI.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraNavBar.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Office.v16.2.Core.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\EnvDTE.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\stdole.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Microsoft.MSXML.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Connection.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Data.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Diagram.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.TreeMap.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraBars.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.UI.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraDiagram.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraTreeMap.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesBll.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMesEntityu.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\UIControl.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\Utility.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ConnectionBll.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Utils.v16.2.UI.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraNavBar.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.XtraRichEdit.v16.2.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\DevExpress.Office.v16.2.Core.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\EnvDTE.xml
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Diagram.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Diagram.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Diagram.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Diagram.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.AssNewWorkEnclosureQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormMouldInfo.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormAssNewList.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormAssNewWorkQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormDepartQueryOfPerson.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormHardWareWorkQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormInjectionMoldingQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEDNewsQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormLogisticsNewQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormLogisticsQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormMaPlate.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormPaintNewspaperQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormProductPlanQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormReadOrder.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormSupplierMould.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormTPADEAInfo.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormWagesQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormWagesThisMonthSalary.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.PaintNewsArt.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.PowerEdit.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.ProControlChild.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormAbout.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormArt.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormAssBoard.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormAssNewWork.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormAssNewWorkEnclosure.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormBase.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormBaseChild.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormBoarSet.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormCheckWork.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormChild.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormEmployee.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormHardBoard.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormHardWareWork.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormInjectionBoard.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormInjectionMolding.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEGNews.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEDNewsPaper.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEDNewsPaperQuery.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEEBoard.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLEGBoard.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLineForAssPlan.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLogin.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormLogisticsNew.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormMachinePlat.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormMain.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormMouldInformation.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPaintBoard.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPaintNewspaper.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPower.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormProControl.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormProductPlan.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormProductPlanPreview.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPurchaseBoard.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPurProductPlan.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormPurProductView.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormSemiPlanView.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormSemiProductPlan.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormSetPW.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormSupplierForMould.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.FormWages.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.Properties.Resources.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.csproj.GenerateResource.Cache
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.exe
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.csprojResolveAssemblyReference.cache
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\de\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll

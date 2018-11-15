@@ -1,0 +1,4758 @@
+08:35:35.647  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:35:45.645 @EMP002 系统管理员
+08:35:45.645 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+08:37:58.259  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:38:12.645 @EMP002 系统管理员
+08:38:12.650 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+08:56:13.439  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:56:19.229 @EMP002 系统管理员
+08:56:19.233 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:14:00.620  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:14:05.344 @EMP002 系统管理员
+09:14:05.346 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:24:36.386  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:24:42.127 @EMP002 系统管理员
+09:24:42.129 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:27:09.161  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:27:13.989 @EMP002 系统管理员
+09:27:13.991 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:27:25.739 @ANW001 20180707001
+09:27:25.743 @ANW020 False
+09:32:32.953  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:32:38.749 @EMP002 系统管理员
+09:32:38.751 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:47:20.641  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:47:26.176 @EMP002 系统管理员
+09:47:26.178 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:48:37.649  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:48:44.477 @EMP002 系统管理员
+09:48:44.480 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:53:29.484  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:53:34.692 @EMP002 系统管理员
+09:53:34.694 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:54:34.252  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:54:38.715 @EMP002 系统管理员
+09:54:38.718 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:00:14.262  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:00:30.834 @EMP002 系统管理员
+10:00:30.837 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:05:51.383  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:05:58.551 @EMP002 系统管理员
+10:05:58.552 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:11:27.758  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:11:32.512 @EMP002 系统管理员
+10:11:32.514 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:12:56.139  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:13:00.405 @EMP002 系统管理员
+10:13:00.408 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:21:14.697  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:21:20.984 @EMP002 系统管理员
+10:21:20.988 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:22:13.340  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:22:19.450 @EMP002 系统管理员
+10:22:19.451 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:23:23.520 @ANW001 20180707001
+10:23:23.523 @ANW020 True
+10:23:26.996 @ANW001 20180707001
+10:23:26.998 @ANW020 False
+10:23:52.861 @ANW002 GD201502090011
+10:23:52.862 @ANW003 JYLF01
+10:23:52.864 @ANW004 JYLF01-四灯暖三合一
+10:23:52.865 @ANW005 
+10:23:52.866 @ANW006 700
+10:23:52.868 @ANW007 台
+10:23:52.869 @ANW008 0.000000
+10:23:52.871 @ANW009 400
+10:23:52.872 @ANW010 0507
+10:23:52.874 @ANW011 总装车间
+10:23:52.876 @ANW012 050701
+10:23:52.877 @ANW013 1线
+10:23:52.879 @ANW014 计件
+10:23:52.880 @ANW015 2018/7/7 8:00:00
+10:23:52.882 @ANW016 2018/7/7 17:00:00
+10:23:52.884 @ANW017 
+10:23:52.885 @ANW018 
+10:23:52.887 @ANW019 
+10:23:52.888 @ANW020 False
+10:23:52.890 @ANW021 False
+10:23:52.891 @ANW001 20180707001
+10:23:52.892 @ANW023 0.5
+10:23:52.893 @ANW024 1
+10:23:52.899 @ANX003 张三
+10:23:52.901 @ANX004 冲压技师
+10:23:52.903 @ANX005 2018/7/7 8:00:00
+10:23:52.904 @ANX006 2018/7/7 17:00:00
+10:23:52.906 @ANX007 2018/7/7 0:00:00
+10:23:52.907 @ANX008 2018/7/7 5:30:00
+10:23:52.909 @ANX009 0
+10:23:52.910 @ANX010 15
+10:23:52.911 @ANX011 在职
+10:23:52.912 @ANX012 
+10:23:52.914 @idx 10
+10:23:52.915 @ANX002 10001
+10:23:52.916 @ANX013 检测
+10:23:52.917 @ANX014 
+10:23:52.923 @ANX003 李四
+10:23:52.926 @ANX004 总装1号
+10:23:52.928 @ANX005 2018/7/7 8:00:00
+10:23:52.929 @ANX006 2018/7/7 17:00:00
+10:23:52.930 @ANX007 
+10:23:52.932 @ANX008 
+10:23:52.933 @ANX009 0
+10:23:52.935 @ANX010 0
+10:23:52.936 @ANX011 在职
+10:23:52.937 @ANX012 
+10:23:52.939 @idx 11
+10:23:52.940 @ANX002 10002
+10:23:52.941 @ANX013 
+10:23:52.942 @ANX014 
+10:23:52.948 @ANX003 田七
+10:23:52.949 @ANX004 1
+10:23:52.951 @ANX005 2018/7/7 8:00:00
+10:23:52.952 @ANX006 2018/7/7 17:00:00
+10:23:52.953 @ANX007 
+10:23:52.955 @ANX008 
+10:23:52.956 @ANX009 0
+10:23:52.957 @ANX010 10
+10:23:52.959 @ANX011 在职
+10:23:52.960 @ANX012 
+10:23:52.961 @idx 12
+10:23:52.962 @ANX002 10003
+10:23:52.963 @ANX013 
+10:23:52.965 @ANX014 
+10:25:12.432  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:25:19.598 @EMP002 系统管理员
+10:25:19.601 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:26:41.212  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:26:48.192 @EMP002 系统管理员
+10:26:48.194 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:30:23.794  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:30:30.339 @EMP002 系统管理员
+10:30:30.341 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:35:11.739  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:35:17.621 @EMP002 系统管理员
+10:35:17.623 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:40:27.534  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:40:33.224 @EMP002 系统管理员
+10:40:33.226 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:43:31.878  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:43:36.636 @EMP002 系统管理员
+10:43:36.638 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:45:15.360  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:45:21.760 @EMP002 系统管理员
+10:45:21.762 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:50:06.446  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:50:15.325 @EMP002 系统管理员
+10:50:15.331 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:21:11.349  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:21:17.739 @EMP002 系统管理员
+11:21:17.740 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:22:35.523  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:22:40.907 @EMP002 系统管理员
+11:22:40.908 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:24:57.395  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:25:03.211 @EMP002 系统管理员
+11:25:03.213 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:26:37.216  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:26:46.608 @EMP002 系统管理员
+11:26:46.611 @EMP033 e51e6c4ea698bc872c5f2e504383ac59
+11:26:49.852 @EMP002 系统管理员
+11:26:49.855 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:27:42.812  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:27:47.449 @EMP002 系统管理员
+11:27:47.451 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:29:34.195  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:29:40.493 @EMP002 系统管理员
+11:29:40.495 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:30:05.491  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:30:37.092 @EMP002 系统管理员
+13:30:37.093 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:31:55.002  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:32:00.149 @EMP002 系统管理员
+13:32:00.151 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:32:43.531  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:32:49.849 @EMP002 系统管理员
+13:32:49.851 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:33:51.778 @ANT001 20180906001
+13:33:51.779 @ANT002 0507
+13:33:51.781 @ANT003 总装车间
+13:33:51.782 @ANT004 050708
+13:33:51.783 @ANT005 附件组
+13:33:51.785 @ANT008 2018/9/6 0:00:00
+13:33:51.786 @ANT009 0.5
+13:33:51.787 @ANT010 0.5
+13:33:51.793 @ANU001 20180906001
+13:33:51.794 @ANU002 20180820002
+13:33:51.796 @ANU003 GD201804240030
+13:33:51.797 @ANU004 202101326
+13:33:51.799 @ANU005 F06-DS面板-冲压
+13:33:51.801 @ANU006 附件
+13:33:51.802 @ANU007 0.5623
+13:33:51.804 @ANU008 050701
+13:33:51.805 @ANU009 1线
+13:33:51.807 @ANU010 400
+13:33:51.811 @ANV001 20180906001
+13:33:51.812 @ANV002 10293
+13:33:51.814 @ANV003 韩秀金
+13:33:51.815 @ANV004 附件加工
+13:33:51.816 @ANV005 2018/9/6 8:00:00
+13:33:51.818 @ANV006 2018/9/6 17:45:00
+13:33:51.819 @ANV007 在职
+13:33:51.821 @ANV008 附件组
+13:33:51.824 @ANV001 20180906001
+13:33:51.826 @ANV002 10294
+13:33:51.827 @ANV003 黄春燕
+13:33:51.829 @ANV004 附件加工
+13:33:51.830 @ANV005 2018/9/6 8:00:00
+13:33:51.831 @ANV006 2018/9/6 17:00:00
+13:33:51.833 @ANV007 在职
+13:33:51.834 @ANV008 附件组
+13:33:51.837 @ANV001 20180906001
+13:33:51.838 @ANV002 10295
+13:33:51.840 @ANV003 薛能珍
+13:33:51.841 @ANV004 附件加工
+13:33:51.842 @ANV005 2018/9/6 8:00:00
+13:33:51.844 @ANV006 2018/9/6 17:00:00
+13:33:51.845 @ANV007 在职
+13:33:51.847 @ANV008 附件组
+13:33:51.849 @ANV001 20180906001
+13:33:51.851 @ANV002 10296
+13:33:51.852 @ANV003 何卫英
+13:33:51.854 @ANV004 附件加工
+13:33:51.855 @ANV005 2018/9/6 8:00:00
+13:33:51.856 @ANV006 2018/9/6 17:00:00
+13:33:51.858 @ANV007 在职
+13:33:51.859 @ANV008 附件组
+13:33:51.861 @ANV001 20180906001
+13:33:51.863 @ANV002 10297
+13:33:51.864 @ANV003 苏春
+13:33:51.865 @ANV004 附件加工
+13:33:51.866 @ANV005 2018/9/6 8:00:00
+13:33:51.868 @ANV006 2018/9/6 17:00:00
+13:33:51.870 @ANV007 在职
+13:33:51.871 @ANV008 附件组
+13:33:51.873 @ANV001 20180906001
+13:33:51.875 @ANV002 10298
+13:33:51.876 @ANV003 张丹丹
+13:33:51.878 @ANV004 附件加工
+13:33:51.879 @ANV005 2018/9/6 8:00:00
+13:33:51.880 @ANV006 2018/9/6 17:00:00
+13:33:51.881 @ANV007 在职
+13:33:51.883 @ANV008 附件组
+13:33:51.886 @ANV001 20180906001
+13:33:51.887 @ANV002 10299
+13:33:51.889 @ANV003 赵杰
+13:33:51.890 @ANV004 附件加工
+13:33:51.892 @ANV005 2018/9/6 8:00:00
+13:33:51.893 @ANV006 2018/9/6 17:00:00
+13:33:51.895 @ANV007 在职
+13:33:51.896 @ANV008 附件组
+13:33:51.899 @ANV001 20180906001
+13:33:51.900 @ANV002 10300
+13:33:51.902 @ANV003 汪国洋
+13:33:51.903 @ANV004 附件加工
+13:33:51.904 @ANV005 2018/9/6 8:00:00
+13:33:51.905 @ANV006 2018/9/6 17:00:00
+13:33:51.907 @ANV007 在职
+13:33:51.908 @ANV008 附件组
+13:34:15.715 @ANT002 0507
+13:34:15.718 @ANT003 总装车间
+13:34:15.720 @ANT004 050708
+13:34:15.721 @ANT005 附件组
+13:34:15.723 @ANT006 False
+13:34:15.724 @ANT007 False
+13:34:15.726 @ANT001 20180906001
+13:34:15.728 @ANT009 0.5
+13:34:15.730 @ANT010 0.5
+13:34:15.736 @ANU003 GD201804240030
+13:34:15.738 @ANU004 202101326
+13:34:15.739 @ANU005 F06-DS面板-冲压
+13:34:15.740 @ANU006 附件
+13:34:15.741 @ANU007 0.5623
+13:34:15.744 @ANU008 050701
+13:34:15.745 @ANU009 1线
+13:34:15.747 @ANU010 400
+13:34:15.749 @idx 8
+13:34:15.750 @ANU002 20180820002
+13:34:15.755 @ANV003 韩秀金
+13:34:15.757 @ANV004 附件加工
+13:34:15.758 @ANV005 2018/9/6 8:00:00
+13:34:15.759 @ANV006 2018/9/6 17:45:00
+13:34:15.760 @idx 61
+13:34:15.761 @ANV002 10293
+13:34:15.763 @ANV007 在职
+13:34:15.764 @ANV008 附件组
+13:34:15.773 @ANV003 黄春燕
+13:34:15.774 @ANV004 附件加工
+13:34:15.776 @ANV005 2018/9/6 8:00:00
+13:34:15.777 @ANV006 2018/9/6 17:00:00
+13:34:15.779 @idx 62
+13:34:15.780 @ANV002 10294
+13:34:15.781 @ANV007 在职
+13:34:15.782 @ANV008 附件组
+13:34:15.784 @ANV003 薛能珍
+13:34:15.786 @ANV004 附件加工
+13:34:15.787 @ANV005 2018/9/6 8:00:00
+13:34:15.788 @ANV006 2018/9/6 17:00:00
+13:34:15.789 @idx 63
+13:34:15.790 @ANV002 10295
+13:34:15.792 @ANV007 在职
+13:34:15.793 @ANV008 附件组
+13:34:15.795 @ANV003 何卫英
+13:34:15.796 @ANV004 附件加工
+13:34:15.799 @ANV005 2018/9/6 8:00:00
+13:34:15.800 @ANV006 2018/9/6 17:00:00
+13:34:15.802 @idx 64
+13:34:15.803 @ANV002 10296
+13:34:15.804 @ANV007 在职
+13:34:15.805 @ANV008 附件组
+13:34:15.809 @ANV003 苏春
+13:34:15.810 @ANV004 附件加工
+13:34:15.812 @ANV005 2018/9/6 8:00:00
+13:34:15.813 @ANV006 2018/9/6 17:00:00
+13:34:15.815 @idx 65
+13:34:15.816 @ANV002 10297
+13:34:15.818 @ANV007 在职
+13:34:15.819 @ANV008 附件组
+13:34:15.821 @ANV003 张丹丹
+13:34:15.823 @ANV004 附件加工
+13:34:15.824 @ANV005 2018/9/6 8:00:00
+13:34:15.826 @ANV006 2018/9/6 17:00:00
+13:34:15.827 @idx 66
+13:34:15.828 @ANV002 10298
+13:34:15.831 @ANV007 在职
+13:34:15.832 @ANV008 附件组
+13:34:15.835 @ANV003 赵杰
+13:34:15.836 @ANV004 附件加工
+13:34:15.838 @ANV005 2018/9/6 8:00:00
+13:34:15.839 @ANV006 2018/9/6 17:00:00
+13:34:15.840 @idx 67
+13:34:15.842 @ANV002 10299
+13:34:15.843 @ANV007 在职
+13:34:15.844 @ANV008 附件组
+13:34:15.847 @ANV003 汪国洋
+13:34:15.848 @ANV004 附件加工
+13:34:15.850 @ANV005 2018/9/6 8:00:00
+13:34:15.851 @ANV006 2018/9/6 17:00:00
+13:34:15.852 @idx 68
+13:34:15.854 @ANV002 10300
+13:34:15.855 @ANV007 在职
+13:34:15.857 @ANV008 附件组
+13:55:19.475  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:03:44.826 @EMP002 系统管理员
+14:03:44.828 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:05:46.653  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:05:52.217 @EMP002 系统管理员
+14:05:52.219 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:10:37.548  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:10:43.059 @EMP002 系统管理员
+14:10:43.060 @EMP033 3acd7edfba7f490f2beddfcb51be5e8
+14:10:45.911 @EMP002 系统管理员
+14:10:45.913 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:12:48.807  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:12:54.089 @EMP002 系统管理员
+14:12:54.092 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:15:30.397  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:15:44.521 @EMP002 系统管理员
+14:15:44.523 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:19:51.859  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:19:57.649 @EMP002 系统管理员
+14:19:57.651 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:21:29.864 @HAW001 20180906001
+14:21:29.866 @HAW002 GD201503240012
+14:21:29.867 @HAW003 140038272
+14:21:29.868 @HAW004 JKGJ08-麻艺空间
+14:21:29.869 @HAW005 334*334*0.45mm
+14:21:29.870 @HAW006 PCS
+14:21:29.871 @HAW007 6000
+14:21:29.873 @HAW008 0
+14:21:29.874 @HAW009 5000
+14:21:29.876 @HAW010 2018/9/6 0:00:00
+14:21:29.877 @HAW011 计件
+14:21:29.878 @HAW012 0501
+14:21:29.880 @HAW013 五金车间
+14:21:29.881 @HAW014 0501
+14:21:29.883 @HAW015 五金车间
+14:21:29.884 @HAW016 
+14:21:29.885 @HAW017 
+14:21:29.887 @HAW018 False
+14:21:29.888 @HAW019 False
+14:21:29.889 @HAW020 0.5
+14:21:29.890 @HAW021 0.5
+14:21:29.895 @HAX001 20180906001
+14:21:29.897 @HAX002 10004
+14:21:29.899 @HAX003 李守军
+14:21:29.900 @HAX004 成品搬运工
+14:21:29.902 @HAX005 01
+14:21:29.903 @HAX006 冲压
+14:21:29.905 @HAX007 0
+14:21:29.906 @HAX008 1000
+14:21:29.907 @HAX009 2018/9/6 8:00:00
+14:21:29.909 @HAX010 2018/9/6 17:45:00
+14:21:29.910 @HAX011 2018/9/6 0:00:00
+14:21:29.911 @HAX012 2018/9/6 4:15:00
+14:21:29.913 @HAX013 5
+14:21:29.914 @HAX014 
+14:21:29.916 @HAX015 在职
+14:21:29.917 @HAX016 001
+14:21:29.918 @HAX017 物流组
+14:22:18.761  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:22:27.280 @EMP002 系统管理员
+14:22:27.283 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:34:25.106  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:34:30.676 @EMP002 系统管理员
+14:34:30.680 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:48:52.295  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:49:05.411 @EMP002 系统管理员
+14:49:05.413 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:57:03.853  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:57:40.625 @EMP002 系统管理员
+14:57:40.627 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:59:49.969 @IJA001 20180906001
+14:59:49.970 @IJA002 计件
+14:59:49.972 @IJA003 0502
+14:59:49.973 @IJA004 注塑车间
+14:59:49.974 @IJA005 0502
+14:59:49.975 @IJA006 注塑车间
+14:59:49.976 @IJA007 2018/9/6 0:00:00
+14:59:49.977 @IJA008 
+14:59:49.979 @IJA009 
+14:59:49.980 @IJA010 False
+14:59:49.982 @IJA011 False
+14:59:49.983 @IJA012 0.5
+14:59:49.984 @IJA013 0.5
+14:59:49.988 @IJB001 20180906001
+14:59:49.991 @IJB002 10007
+14:59:49.992 @IJB003 在职
+14:59:49.993 @IJB004 GD201502090032
+14:59:49.994 @IJB005 201211241
+14:59:49.996 @IJB006 600四灯三合一压线板
+14:59:49.998 @IJB007 白色
+14:59:50.000 @IJB008 PCS
+14:59:50.001 @IJB009 0
+14:59:50.003 @IJB010 600
+14:59:50.004 @IJB011 0
+14:59:50.006 @IJB012 朱志波
+14:59:50.007 @IJB013 成品搬运工
+14:59:50.008 @IJB014 全自动
+14:59:50.009 @IJB015 100
+14:59:50.011 @IJB016 2018/9/6 8:00:00
+14:59:50.012 @IJB017 2018/9/6 17:45:00
+14:59:50.013 @IJB018 2018/9/6 0:00:00
+14:59:50.015 @IJB019 2018/9/6 5:12:00
+14:59:50.016 @IJB020 2
+14:59:50.017 @IJB021 
+14:59:50.018 @IJB022 物流组
+15:01:40.639  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:01:45.725 @EMP002 系统管理员
+15:01:45.727 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:05:40.078  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:05:45.183 @EMP002 系统管理员
+15:05:45.184 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:08:13.354  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:08:18.406 @EMP002 系统管理员
+15:08:18.408 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:34:52.758  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:35:17.385 @EMP002 系统管理员
+15:35:17.388 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:36:27.135  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:36:37.590 @EMP002 系统管理员
+15:36:37.594 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:37:51.645  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:38:18.969 @EMP002 系统管理员
+15:38:18.971 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:39:12.654  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:39:19.221 @EMP002 系统管理员
+15:39:19.224 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:42:47.468  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:44:18.261 @EMP002 系统管理员
+15:44:18.263 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:46:12.049 @LEF001 20180906001
+15:46:12.051 @LEF009 0506
+15:46:12.053 @LEF010 LED车间
+15:46:12.054 @LEF011 0506
+15:46:12.056 @LEF012 LED车间
+15:46:12.058 @LEF013 2018/9/6 0:00:00
+15:46:12.060 @LEF015 
+15:46:12.061 @LEF016 
+15:46:12.063 @LEF017 False
+15:46:12.065 @LEF018 False
+15:46:12.066 @LEF019 0.5
+15:46:12.068 @LEF020 0.5
+15:46:12.072 @LEG001 20180906001
+15:46:12.074 @LEG002 10016
+15:46:12.076 @LEG003 郭婧
+15:46:12.077 @LEG004 装配工
+15:46:12.078 @LEG005 2018/9/6 8:00:00
+15:46:12.080 @LEG006 2018/9/6 17:45:00
+15:46:12.081 @LEG007 15
+15:46:12.082 @LEG008 2018/9/6 0:00:00
+15:46:12.083 @LEG009 2018/9/6 6:04:00
+15:46:12.085 @LEG010 10
+15:46:12.086 @LEG011 
+15:46:12.088 @LEG012 在职
+15:46:12.089 @LEG013 LED车间
+15:46:12.092 @LEG001 20180906001
+15:46:12.094 @LEG002 10017
+15:46:12.095 @LEG003 龙兴连
+15:46:12.097 @LEG004 装配工
+15:46:12.098 @LEG005 2018/9/6 8:00:00
+15:46:12.099 @LEG006 2018/9/6 17:00:00
+15:46:12.100 @LEG007 15
+15:46:12.101 @LEG008 
+15:46:12.103 @LEG009 
+15:46:12.104 @LEG010 0
+15:46:12.105 @LEG011 
+15:46:12.106 @LEG012 在职
+15:46:12.108 @LEG013 LED车间
+15:46:12.112 @LEG001 20180906001
+15:46:12.114 @LEG002 10018
+15:46:12.115 @LEG003 刘付连
+15:46:12.117 @LEG004 装配工
+15:46:12.119 @LEG005 2018/9/6 8:00:00
+15:46:12.120 @LEG006 2018/9/6 17:00:00
+15:46:12.121 @LEG007 0
+15:46:12.123 @LEG008 
+15:46:12.124 @LEG009 
+15:46:12.126 @LEG010 0
+15:46:12.127 @LEG011 
+15:46:12.129 @LEG012 在职
+15:46:12.131 @LEG013 LED车间
+15:46:12.135 @LEG001 20180906001
+15:46:12.137 @LEG002 10019
+15:46:12.139 @LEG003 聂付秋
+15:46:12.143 @LEG004 装配工
+15:46:12.145 @LEG005 2018/9/6 8:00:00
+15:46:12.146 @LEG006 2018/9/6 17:00:00
+15:46:12.148 @LEG007 0
+15:46:12.150 @LEG008 
+15:46:12.151 @LEG009 
+15:46:12.153 @LEG010 0
+15:46:12.154 @LEG011 
+15:46:12.156 @LEG012 在职
+15:46:12.158 @LEG013 LED车间
+15:46:12.161 @LEG001 20180906001
+15:46:12.163 @LEG002 10020
+15:46:12.165 @LEG003 薛能米
+15:46:12.167 @LEG004 装配工
+15:46:12.168 @LEG005 2018/9/6 8:00:00
+15:46:12.170 @LEG006 2018/9/6 17:00:00
+15:46:12.171 @LEG007 0
+15:46:12.173 @LEG008 
+15:46:12.175 @LEG009 
+15:46:12.177 @LEG010 0
+15:46:12.179 @LEG011 
+15:46:12.180 @LEG012 在职
+15:46:12.182 @LEG013 LED车间
+15:46:12.185 @LEG001 20180906001
+15:46:12.187 @LEG002 10021
+15:46:12.189 @LEG003 彭顺艳
+15:46:12.191 @LEG004 装配工
+15:46:12.193 @LEG005 2018/9/6 8:00:00
+15:46:12.194 @LEG006 2018/9/6 17:00:00
+15:46:12.196 @LEG007 0
+15:46:12.197 @LEG008 
+15:46:12.199 @LEG009 
+15:46:12.200 @LEG010 0
+15:46:12.202 @LEG011 
+15:46:12.203 @LEG012 在职
+15:46:12.205 @LEG013 LED车间
+15:46:12.208 @LEG001 20180906001
+15:46:12.209 @LEG002 10022
+15:46:12.211 @LEG003 罗小琴
+15:46:12.213 @LEG004 装配工
+15:46:12.214 @LEG005 2018/9/6 8:00:00
+15:46:12.216 @LEG006 2018/9/6 17:00:00
+15:46:12.217 @LEG007 0
+15:46:12.219 @LEG008 
+15:46:12.221 @LEG009 
+15:46:12.223 @LEG010 0
+15:46:12.225 @LEG011 
+15:46:12.226 @LEG012 在职
+15:46:12.228 @LEG013 LED车间
+15:46:12.231 @LEG001 20180906001
+15:46:12.233 @LEG002 10023
+15:46:12.235 @LEG003 吕红艳
+15:46:12.237 @LEG004 装配工
+15:46:12.239 @LEG005 2018/9/6 8:00:00
+15:46:12.240 @LEG006 2018/9/6 17:00:00
+15:46:12.242 @LEG007 0
+15:46:12.244 @LEG008 
+15:46:12.245 @LEG009 
+15:46:12.247 @LEG010 0
+15:46:12.249 @LEG011 
+15:46:12.250 @LEG012 在职
+15:46:12.253 @LEG013 LED车间
+15:46:12.256 @LEG001 20180906001
+15:46:12.258 @LEG002 10024
+15:46:12.259 @LEG003 李朝粉
+15:46:12.260 @LEG004 装配工
+15:46:12.262 @LEG005 2018/9/6 8:00:00
+15:46:12.263 @LEG006 2018/9/6 17:00:00
+15:46:12.265 @LEG007 0
+15:46:12.266 @LEG008 
+15:46:12.268 @LEG009 
+15:46:12.270 @LEG010 0
+15:46:12.271 @LEG011 
+15:46:12.273 @LEG012 在职
+15:46:12.274 @LEG013 LED车间
+15:46:12.277 @LEG001 20180906001
+15:46:12.279 @LEG002 10025
+15:46:12.280 @LEG003 陈文会
+15:46:12.282 @LEG004 装配工
+15:46:12.284 @LEG005 2018/9/6 8:00:00
+15:46:12.285 @LEG006 2018/9/6 17:00:00
+15:46:12.287 @LEG007 0
+15:46:12.289 @LEG008 
+15:46:12.290 @LEG009 
+15:46:12.292 @LEG010 0
+15:46:12.294 @LEG011 
+15:46:12.295 @LEG012 在职
+15:46:12.296 @LEG013 LED车间
+15:46:12.300 @LEG001 20180906001
+15:46:12.302 @LEG002 10026
+15:46:12.303 @LEG003 平单单
+15:46:12.305 @LEG004 装配工
+15:46:12.306 @LEG005 2018/9/6 8:00:00
+15:46:12.308 @LEG006 2018/9/6 17:00:00
+15:46:12.309 @LEG007 0
+15:46:12.311 @LEG008 
+15:46:12.313 @LEG009 
+15:46:12.315 @LEG010 0
+15:46:12.317 @LEG011 
+15:46:12.318 @LEG012 在职
+15:46:12.320 @LEG013 LED车间
+15:46:12.323 @LEG001 20180906001
+15:46:12.324 @LEG002 10027
+15:46:12.325 @LEG003 梁永琴
+15:46:12.327 @LEG004 装配工
+15:46:12.329 @LEG005 2018/9/6 8:00:00
+15:46:12.330 @LEG006 2018/9/6 17:00:00
+15:46:12.331 @LEG007 0
+15:46:12.333 @LEG008 
+15:46:12.335 @LEG009 
+15:46:12.337 @LEG010 0
+15:46:12.338 @LEG011 
+15:46:12.340 @LEG012 在职
+15:46:12.341 @LEG013 LED车间
+15:46:12.344 @LEG001 20180906001
+15:46:12.346 @LEG002 10028
+15:46:12.348 @LEG003 胡孝明
+15:46:12.349 @LEG004 装配工
+15:46:12.351 @LEG005 2018/9/6 8:00:00
+15:46:12.352 @LEG006 2018/9/6 17:00:00
+15:46:12.354 @LEG007 0
+15:46:12.355 @LEG008 
+15:46:12.357 @LEG009 
+15:46:12.358 @LEG010 0
+15:46:12.360 @LEG011 
+15:46:12.361 @LEG012 在职
+15:46:12.363 @LEG013 LED车间
+15:46:12.366 @LEG001 20180906001
+15:46:12.367 @LEG002 10029
+15:46:12.369 @LEG003 聂昌奎
+15:46:12.370 @LEG004 装配工
+15:46:12.371 @LEG005 2018/9/6 8:00:00
+15:46:12.373 @LEG006 2018/9/6 17:00:00
+15:46:12.374 @LEG007 0
+15:46:12.376 @LEG008 
+15:46:12.377 @LEG009 
+15:46:12.379 @LEG010 0
+15:46:12.381 @LEG011 
+15:46:12.382 @LEG012 在职
+15:46:12.383 @LEG013 LED车间
+15:46:12.386 @LEG001 20180906001
+15:46:12.388 @LEG002 10030
+15:46:12.389 @LEG003 陶兴琴
+15:46:12.391 @LEG004 装配工
+15:46:12.393 @LEG005 2018/9/6 8:00:00
+15:46:12.395 @LEG006 2018/9/6 17:00:00
+15:46:12.396 @LEG007 0
+15:46:12.398 @LEG008 
+15:46:12.399 @LEG009 
+15:46:12.401 @LEG010 0
+15:46:12.402 @LEG011 
+15:46:12.403 @LEG012 在职
+15:46:12.405 @LEG013 LED车间
+15:46:12.408 @LEG001 20180906001
+15:46:12.410 @LEG002 10031
+15:46:12.412 @LEG003 方宇
+15:46:12.414 @LEG004 装配工
+15:46:12.416 @LEG005 2018/9/6 8:00:00
+15:46:12.417 @LEG006 2018/9/6 17:00:00
+15:46:12.419 @LEG007 0
+15:46:12.421 @LEG008 
+15:46:12.423 @LEG009 
+15:46:12.424 @LEG010 0
+15:46:12.426 @LEG011 
+15:46:12.428 @LEG012 在职
+15:46:12.430 @LEG013 LED车间
+15:46:12.432 @LEG001 20180906001
+15:46:12.434 @LEG002 10032
+15:46:12.436 @LEG003 段进连
+15:46:12.437 @LEG004 装配工
+15:46:12.439 @LEG005 2018/9/6 8:00:00
+15:46:12.440 @LEG006 2018/9/6 17:00:00
+15:46:12.441 @LEG007 0
+15:46:12.442 @LEG008 
+15:46:12.444 @LEG009 
+15:46:12.445 @LEG010 0
+15:46:12.446 @LEG011 
+15:46:12.447 @LEG012 在职
+15:46:12.449 @LEG013 LED车间
+15:46:12.451 @LEG001 20180906001
+15:46:12.452 @LEG002 10033
+15:46:12.453 @LEG003 唐云云
+15:46:12.455 @LEG004 装配工
+15:46:12.456 @LEG005 2018/9/6 8:00:00
+15:46:12.458 @LEG006 2018/9/6 17:00:00
+15:46:12.460 @LEG007 0
+15:46:12.462 @LEG008 
+15:46:12.463 @LEG009 
+15:46:12.464 @LEG010 0
+15:46:12.466 @LEG011 
+15:46:12.467 @LEG012 在职
+15:46:12.468 @LEG013 LED车间
+15:46:12.471 @LEG001 20180906001
+15:46:12.472 @LEG002 10034
+15:46:12.473 @LEG003 李大花
+15:46:12.475 @LEG004 装配工
+15:46:12.476 @LEG005 2018/9/6 8:00:00
+15:46:12.477 @LEG006 2018/9/6 17:00:00
+15:46:12.478 @LEG007 0
+15:46:12.479 @LEG008 
+15:46:12.481 @LEG009 
+15:46:12.482 @LEG010 0
+15:46:12.483 @LEG011 
+15:46:12.484 @LEG012 在职
+15:46:12.485 @LEG013 LED车间
+15:46:12.488 @LEG001 20180906001
+15:46:12.489 @LEG002 10035
+15:46:12.490 @LEG003 黄史作
+15:46:12.491 @LEG004 装配工
+15:46:12.492 @LEG005 2018/9/6 8:00:00
+15:46:12.494 @LEG006 2018/9/6 17:00:00
+15:46:12.495 @LEG007 0
+15:46:12.496 @LEG008 
+15:46:12.497 @LEG009 
+15:46:12.499 @LEG010 0
+15:46:12.500 @LEG011 
+15:46:12.501 @LEG012 在职
+15:46:12.503 @LEG013 LED车间
+15:46:12.505 @LEG001 20180906001
+15:46:12.507 @LEG002 10036
+15:46:12.508 @LEG003 罗昌梅
+15:46:12.509 @LEG004 装配工
+15:46:12.510 @LEG005 2018/9/6 8:00:00
+15:46:12.512 @LEG006 2018/9/6 17:00:00
+15:46:12.513 @LEG007 0
+15:46:12.514 @LEG008 
+15:46:12.515 @LEG009 
+15:46:12.517 @LEG010 0
+15:46:12.518 @LEG011 
+15:46:12.520 @LEG012 在职
+15:46:12.521 @LEG013 LED车间
+15:46:12.523 @LEG001 20180906001
+15:46:12.524 @LEG002 10037
+15:46:12.526 @LEG003 赵雨婷
+15:46:12.527 @LEG004 装配工
+15:46:12.529 @LEG005 2018/9/6 8:00:00
+15:46:12.530 @LEG006 2018/9/6 17:00:00
+15:46:12.531 @LEG007 0
+15:46:12.532 @LEG008 
+15:46:12.533 @LEG009 
+15:46:12.535 @LEG010 0
+15:46:12.536 @LEG011 
+15:46:12.537 @LEG012 在职
+15:46:12.538 @LEG013 LED车间
+15:46:12.540 @LEG001 20180906001
+15:46:12.542 @LEG002 10038
+15:46:12.543 @LEG003 余双双
+15:46:12.545 @LEG004 装配工
+15:46:12.546 @LEG005 2018/9/6 8:00:00
+15:46:12.548 @LEG006 2018/9/6 17:00:00
+15:46:12.549 @LEG007 0
+15:46:12.550 @LEG008 
+15:46:12.552 @LEG009 
+15:46:12.553 @LEG010 0
+15:46:12.554 @LEG011 
+15:46:12.555 @LEG012 在职
+15:46:12.556 @LEG013 LED车间
+15:46:12.559 @LEH001 20180906001
+15:46:12.560 @LEH002 GD201502090095
+15:46:12.562 @LEH003 203011467
+15:46:12.563 @LEH004 LED组件-160
+15:46:12.564 @LEH005 
+15:46:12.565 @LEH006 PCS
+15:46:12.566 @LEH007 240
+15:46:12.568 @LEH008 0
+15:46:12.569 @LEH009 100
+15:46:12.570 @LEH010 
+15:46:12.571 @LEH011 
+15:46:12.572 @LEH012 
+15:48:37.343  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:48:48.194 @EMP002 系统管理员
+15:48:48.197 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:50:27.947  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:50:38.231 @EMP002 系统管理员
+15:50:38.233 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:03:53.584  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:07:36.174 @EMP002 系统管理员
+16:07:36.176 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:09:11.251  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:09:18.018 @EMP002 系统管理员
+16:09:18.020 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:16:23.424  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:18:35.657 @EMP002 系统管理员
+16:18:35.661 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:19:31.147 @LEC001 20180906001
+16:19:31.149 @LEC002 GD201502090048
+16:19:31.151 @LEC003 
+16:19:31.153 @LEC004 
+16:19:31.155 @LEC005 
+16:19:31.157 @LEC006 
+16:19:31.158 @LEC007 300
+16:19:31.160 @LEC008 
+16:19:31.162 @LEC009 0504
+16:19:31.164 @LEC010 前加工车间
+16:19:31.166 @LEC011 0504
+16:19:31.168 @LEC012 前加工车间
+16:19:31.170 @LEC013 2018/9/6 0:00:00
+16:19:31.171 @LEC014 100
+16:19:31.173 @LEC015 
+16:19:31.174 @LEC016 
+16:19:31.175 @LEC017 False
+16:19:31.177 @LEC018 False
+16:19:31.178 @LEC019 0.5
+16:19:31.180 @LEC020 0.5
+16:19:31.183 @LED001 20180906001
+16:19:31.185 @LED002 10040
+16:19:31.186 @LED003 杜福英
+16:19:31.188 @LED004 装配工
+16:19:31.190 @LED005 2018/9/6 8:00:00
+16:19:31.191 @LED006 2018/9/6 17:55:00
+16:19:31.192 @LED007 15
+16:19:31.194 @LED008 2018/9/6 0:00:00
+16:19:31.195 @LED009 2018/9/6 5:44:00
+16:19:31.196 @LED010 10
+16:19:31.198 @LED011 
+16:19:31.199 @LED012 在职
+16:19:31.200 @LED013 前加工车间
+16:19:31.204 @LED001 20180906001
+16:19:31.206 @LED002 10041
+16:19:31.207 @LED003 廖仁琼
+16:19:31.209 @LED004 装配工
+16:19:31.210 @LED005 2018/9/6 8:00:00
+16:19:31.212 @LED006 2018/9/6 17:00:00
+16:19:31.213 @LED007 0
+16:19:31.214 @LED008 
+16:19:31.215 @LED009 
+16:19:31.216 @LED010 0
+16:19:31.218 @LED011 
+16:19:31.220 @LED012 在职
+16:19:31.221 @LED013 前加工车间
+16:19:31.224 @LED001 20180906001
+16:19:31.226 @LED002 10042
+16:19:31.227 @LED003 李光艳
+16:19:31.229 @LED004 装配工
+16:19:31.230 @LED005 2018/9/6 8:00:00
+16:19:31.231 @LED006 2018/9/6 17:00:00
+16:19:31.233 @LED007 0
+16:19:31.234 @LED008 
+16:19:31.235 @LED009 
+16:19:31.236 @LED010 0
+16:19:31.238 @LED011 
+16:19:31.240 @LED012 在职
+16:19:31.241 @LED013 前加工车间
+16:19:31.243 @LED001 20180906001
+16:19:31.245 @LED002 10043
+16:19:31.246 @LED003 彭荣泽
+16:19:31.247 @LED004 装配工
+16:19:31.249 @LED005 2018/9/6 8:00:00
+16:19:31.251 @LED006 2018/9/6 17:00:00
+16:19:31.252 @LED007 0
+16:19:31.253 @LED008 
+16:19:31.255 @LED009 
+16:19:31.256 @LED010 0
+16:19:31.258 @LED011 
+16:19:31.259 @LED012 在职
+16:19:31.260 @LED013 前加工车间
+16:19:31.263 @LED001 20180906001
+16:19:31.264 @LED002 10044
+16:19:31.266 @LED003 何培凤
+16:19:31.267 @LED004 装配工
+16:19:31.268 @LED005 2018/9/6 8:00:00
+16:19:31.270 @LED006 2018/9/6 17:00:00
+16:19:31.271 @LED007 0
+16:19:31.272 @LED008 
+16:19:31.274 @LED009 
+16:19:31.275 @LED010 0
+16:19:31.276 @LED011 
+16:19:31.277 @LED012 在职
+16:19:31.278 @LED013 前加工车间
+16:19:31.281 @LED001 20180906001
+16:19:31.283 @LED002 10045
+16:19:31.284 @LED003 李朝伟
+16:19:31.285 @LED004 装配工
+16:19:31.287 @LED005 2018/9/6 8:00:00
+16:19:31.288 @LED006 2018/9/6 17:00:00
+16:19:31.289 @LED007 0
+16:19:31.291 @LED008 
+16:19:31.292 @LED009 
+16:19:31.294 @LED010 0
+16:19:31.295 @LED011 
+16:19:31.297 @LED012 在职
+16:19:31.299 @LED013 前加工车间
+16:19:31.301 @LED001 20180906001
+16:19:31.302 @LED002 10046
+16:19:31.304 @LED003 王培秀
+16:19:31.306 @LED004 装配工
+16:19:31.307 @LED005 2018/9/6 8:00:00
+16:19:31.309 @LED006 2018/9/6 17:00:00
+16:19:31.310 @LED007 0
+16:19:31.312 @LED008 
+16:19:31.313 @LED009 
+16:19:31.315 @LED010 0
+16:19:31.316 @LED011 
+16:19:31.317 @LED012 在职
+16:19:31.319 @LED013 前加工车间
+16:19:31.321 @LED001 20180906001
+16:19:31.323 @LED002 10047
+16:19:31.324 @LED003 谢武林
+16:19:31.325 @LED004 装配工
+16:19:31.327 @LED005 2018/9/6 8:00:00
+16:19:31.329 @LED006 2018/9/6 17:00:00
+16:19:31.330 @LED007 0
+16:19:31.331 @LED008 
+16:19:31.332 @LED009 
+16:19:31.334 @LED010 0
+16:19:31.335 @LED011 
+16:19:31.337 @LED012 在职
+16:19:31.338 @LED013 前加工车间
+16:19:31.340 @LED001 20180906001
+16:19:31.341 @LED002 10048
+16:19:31.343 @LED003 王程平
+16:19:31.344 @LED004 装配工
+16:19:31.346 @LED005 2018/9/6 8:00:00
+16:19:31.347 @LED006 2018/9/6 17:00:00
+16:19:31.348 @LED007 0
+16:19:31.349 @LED008 
+16:19:31.351 @LED009 
+16:19:31.352 @LED010 0
+16:19:31.353 @LED011 
+16:19:31.355 @LED012 在职
+16:19:31.356 @LED013 前加工车间
+16:19:31.359 @LED001 20180906001
+16:19:31.360 @LED002 10049
+16:19:31.362 @LED003 韩英
+16:19:31.363 @LED004 装配工
+16:19:31.364 @LED005 2018/9/6 8:00:00
+16:19:31.366 @LED006 2018/9/6 17:00:00
+16:19:31.367 @LED007 0
+16:19:31.368 @LED008 
+16:19:31.369 @LED009 
+16:19:31.371 @LED010 0
+16:19:31.372 @LED011 
+16:19:31.373 @LED012 在职
+16:19:31.375 @LED013 前加工车间
+16:19:31.378 @LED001 20180906001
+16:19:31.379 @LED002 10050
+16:19:31.381 @LED003 杨海霞
+16:19:31.383 @LED004 装配工
+16:19:31.384 @LED005 2018/9/6 8:00:00
+16:19:31.386 @LED006 2018/9/6 17:00:00
+16:19:31.387 @LED007 0
+16:19:31.388 @LED008 
+16:19:31.390 @LED009 
+16:19:31.392 @LED010 0
+16:19:31.393 @LED011 
+16:19:31.394 @LED012 在职
+16:19:31.396 @LED013 前加工车间
+16:19:31.398 @LED001 20180906001
+16:19:31.400 @LED002 10051
+16:19:31.401 @LED003 熊华美
+16:19:31.402 @LED004 装配工
+16:19:31.403 @LED005 2018/9/6 8:00:00
+16:19:31.405 @LED006 2018/9/6 17:00:00
+16:19:31.407 @LED007 0
+16:19:31.408 @LED008 
+16:19:31.410 @LED009 
+16:19:31.411 @LED010 0
+16:19:31.412 @LED011 
+16:19:31.413 @LED012 在职
+16:19:31.415 @LED013 前加工车间
+16:19:31.417 @LED001 20180906001
+16:19:31.419 @LED002 10052
+16:19:31.420 @LED003 孙琼莲
+16:19:31.421 @LED004 装配工
+16:19:31.422 @LED005 2018/9/6 8:00:00
+16:19:31.424 @LED006 2018/9/6 17:00:00
+16:19:31.425 @LED007 0
+16:19:31.426 @LED008 
+16:19:31.428 @LED009 
+16:19:31.429 @LED010 0
+16:19:31.430 @LED011 
+16:19:31.431 @LED012 在职
+16:19:31.432 @LED013 前加工车间
+16:19:31.434 @LED001 20180906001
+16:19:31.436 @LED002 10053
+16:19:31.438 @LED003 李林菊
+16:19:31.439 @LED004 装配工
+16:19:31.441 @LED005 2018/9/6 8:00:00
+16:19:31.442 @LED006 2018/9/6 17:00:00
+16:19:31.443 @LED007 0
+16:19:31.444 @LED008 
+16:19:31.446 @LED009 
+16:19:31.447 @LED010 0
+16:19:31.449 @LED011 
+16:19:31.450 @LED012 在职
+16:19:31.452 @LED013 前加工车间
+16:19:31.454 @LED001 20180906001
+16:19:31.456 @LED002 10054
+16:19:31.458 @LED003 吴群英
+16:19:31.459 @LED004 装配工
+16:19:31.460 @LED005 2018/9/6 8:00:00
+16:19:31.462 @LED006 2018/9/6 17:00:00
+16:19:31.463 @LED007 0
+16:19:31.464 @LED008 
+16:19:31.466 @LED009 
+16:19:31.467 @LED010 0
+16:19:31.469 @LED011 
+16:19:31.470 @LED012 在职
+16:19:31.472 @LED013 前加工车间
+16:19:31.474 @LED001 20180906001
+16:19:31.475 @LED002 10055
+16:19:31.477 @LED003 杨琴
+16:19:31.478 @LED004 装配工
+16:19:31.479 @LED005 2018/9/6 8:00:00
+16:19:31.481 @LED006 2018/9/6 17:00:00
+16:19:31.482 @LED007 0
+16:19:31.483 @LED008 
+16:19:31.484 @LED009 
+16:19:31.485 @LED010 0
+16:19:31.486 @LED011 
+16:19:31.488 @LED012 在职
+16:19:31.489 @LED013 前加工车间
+16:19:31.492 @LED001 20180906001
+16:19:31.493 @LED002 10056
+16:19:31.494 @LED003 韩艳
+16:19:31.496 @LED004 装配工
+16:19:31.497 @LED005 2018/9/6 8:00:00
+16:19:31.499 @LED006 2018/9/6 17:00:00
+16:19:31.500 @LED007 0
+16:19:31.501 @LED008 
+16:19:31.503 @LED009 
+16:19:31.504 @LED010 0
+16:19:31.505 @LED011 
+16:19:31.506 @LED012 在职
+16:19:31.507 @LED013 前加工车间
+16:19:31.510 @LED001 20180906001
+16:19:31.512 @LED002 10057
+16:19:31.513 @LED003 张瑜
+16:19:31.514 @LED004 装配工
+16:19:31.516 @LED005 2018/9/6 8:00:00
+16:19:31.517 @LED006 2018/9/6 17:00:00
+16:19:31.519 @LED007 0
+16:19:31.520 @LED008 
+16:19:31.522 @LED009 
+16:19:31.523 @LED010 0
+16:19:31.525 @LED011 
+16:19:31.526 @LED012 在职
+16:19:31.528 @LED013 前加工车间
+16:19:31.531 @LED001 20180906001
+16:19:31.533 @LED002 10058
+16:19:31.534 @LED003 李光云
+16:19:31.536 @LED004 装配工
+16:19:31.537 @LED005 2018/9/6 8:00:00
+16:19:31.538 @LED006 2018/9/6 17:00:00
+16:19:31.540 @LED007 0
+16:19:31.541 @LED008 
+16:19:31.542 @LED009 
+16:19:31.543 @LED010 0
+16:19:31.545 @LED011 
+16:19:31.546 @LED012 在职
+16:19:31.548 @LED013 前加工车间
+16:19:31.550 @LED001 20180906001
+16:19:31.551 @LED002 10059
+16:19:31.553 @LED003 唐春凤
+16:19:31.554 @LED004 装配工
+16:19:31.555 @LED005 2018/9/6 8:00:00
+16:19:31.556 @LED006 2018/9/6 17:00:00
+16:19:31.557 @LED007 0
+16:19:31.559 @LED008 
+16:19:31.560 @LED009 
+16:19:31.561 @LED010 0
+16:19:31.563 @LED011 
+16:19:31.564 @LED012 在职
+16:19:31.565 @LED013 前加工车间
+16:19:31.567 @LED001 20180906001
+16:19:31.569 @LED002 10060
+16:19:31.570 @LED003 陈朝香
+16:19:31.572 @LED004 装配工
+16:19:31.573 @LED005 2018/9/6 8:00:00
+16:19:31.574 @LED006 2018/9/6 17:00:00
+16:19:31.575 @LED007 0
+16:19:31.578 @LED008 
+16:19:31.579 @LED009 
+16:19:31.581 @LED010 0
+16:19:31.582 @LED011 
+16:19:31.583 @LED012 在职
+16:19:31.584 @LED013 前加工车间
+16:19:31.587 @LED001 20180906001
+16:19:31.588 @LED002 10061
+16:19:31.590 @LED003 张小婵
+16:19:31.591 @LED004 装配工
+16:19:31.592 @LED005 2018/9/6 8:00:00
+16:19:31.594 @LED006 2018/9/6 17:00:00
+16:19:31.595 @LED007 0
+16:19:31.596 @LED008 
+16:19:31.598 @LED009 
+16:19:31.599 @LED010 0
+16:19:31.600 @LED011 
+16:19:31.602 @LED012 在职
+16:19:31.603 @LED013 前加工车间
+16:19:31.607 @LED001 20180906001
+16:19:31.609 @LED002 10062
+16:19:31.610 @LED003 曾昭婵
+16:19:31.612 @LED004 装配工
+16:19:31.613 @LED005 2018/9/6 8:00:00
+16:19:31.614 @LED006 2018/9/6 17:00:00
+16:19:31.616 @LED007 0
+16:19:31.624 @LED008 
+16:19:31.625 @LED009 
+16:19:31.627 @LED010 0
+16:19:31.628 @LED011 
+16:19:31.630 @LED012 在职
+16:19:31.631 @LED013 前加工车间
+16:19:31.633 @LED001 20180906001
+16:19:31.635 @LED002 10063
+16:19:31.636 @LED003 牟飞
+16:19:31.637 @LED004 装配工
+16:19:31.639 @LED005 2018/9/6 8:00:00
+16:19:31.640 @LED006 2018/9/6 17:00:00
+16:19:31.641 @LED007 0
+16:19:31.642 @LED008 
+16:19:31.643 @LED009 
+16:19:31.645 @LED010 0
+16:19:31.646 @LED011 
+16:19:31.647 @LED012 在职
+16:19:31.649 @LED013 前加工车间
+16:19:31.651 @LED001 20180906001
+16:19:31.652 @LED002 10064
+16:19:31.654 @LED003 牟欢
+16:19:31.655 @LED004 装配工
+16:19:31.656 @LED005 2018/9/6 8:00:00
+16:19:31.658 @LED006 2018/9/6 17:00:00
+16:19:31.659 @LED007 0
+16:19:31.660 @LED008 
+16:19:31.661 @LED009 
+16:19:31.662 @LED010 0
+16:19:31.663 @LED011 
+16:19:31.664 @LED012 在职
+16:19:31.665 @LED013 前加工车间
+16:19:31.668 @LED001 20180906001
+16:19:31.669 @LED002 10065
+16:19:31.670 @LED003 陶炼
+16:19:31.672 @LED004 装配工
+16:19:31.673 @LED005 2018/9/6 8:00:00
+16:19:31.674 @LED006 2018/9/6 17:00:00
+16:19:31.676 @LED007 0
+16:19:31.677 @LED008 
+16:19:31.679 @LED009 
+16:19:31.680 @LED010 0
+16:19:31.681 @LED011 
+16:19:31.682 @LED012 在职
+16:19:31.683 @LED013 前加工车间
+16:19:31.688 @LED001 20180906001
+16:19:31.689 @LED002 10066
+16:19:31.691 @LED003 杜光斌
+16:19:31.692 @LED004 装配工
+16:19:31.693 @LED005 2018/9/6 8:00:00
+16:19:31.697 @LED006 2018/9/6 17:00:00
+16:19:31.699 @LED007 0
+16:19:31.700 @LED008 
+16:19:31.701 @LED009 
+16:19:31.702 @LED010 0
+16:19:31.704 @LED011 
+16:19:31.705 @LED012 在职
+16:19:31.706 @LED013 前加工车间
+16:19:31.709 @LED001 20180906001
+16:19:31.710 @LED002 10067
+16:19:31.711 @LED003 朱大艳
+16:19:31.713 @LED004 装配工
+16:19:31.714 @LED005 2018/9/6 8:00:00
+16:19:31.715 @LED006 2018/9/6 17:00:00
+16:19:31.716 @LED007 0
+16:19:31.718 @LED008 
+16:19:31.719 @LED009 
+16:19:31.720 @LED010 0
+16:19:31.722 @LED011 
+16:19:31.723 @LED012 在职
+16:19:31.724 @LED013 前加工车间
+16:19:31.726 @LED001 20180906001
+16:19:31.728 @LED002 10068
+16:19:31.729 @LED003 王银祥
+16:19:31.730 @LED004 装配工
+16:19:31.732 @LED005 2018/9/6 8:00:00
+16:19:31.733 @LED006 2018/9/6 17:00:00
+16:19:31.734 @LED007 0
+16:19:31.735 @LED008 
+16:19:31.737 @LED009 
+16:19:31.738 @LED010 0
+16:19:31.739 @LED011 
+16:19:31.741 @LED012 在职
+16:19:31.742 @LED013 前加工车间
+16:19:31.744 @LED001 20180906001
+16:19:31.745 @LED002 10069
+16:19:31.747 @LED003 王建琼
+16:19:31.748 @LED004 装配工
+16:19:31.749 @LED005 2018/9/6 8:00:00
+16:19:31.751 @LED006 2018/9/6 17:00:00
+16:19:31.752 @LED007 0
+16:19:31.753 @LED008 
+16:19:31.755 @LED009 
+16:19:31.756 @LED010 0
+16:19:31.757 @LED011 
+16:19:31.758 @LED012 在职
+16:19:31.759 @LED013 前加工车间
+16:19:31.761 @LEE001 20180906001
+16:19:31.763 @LEE002 GD201502090048
+16:19:31.764 @LEE003 203031472
+16:19:31.765 @LEE004 暖风机组件
+16:19:31.767 @LEE005 1600W
+16:19:31.768 @LEE006 PCS
+16:19:31.769 @LEE007 300
+16:19:31.770 @LEE008 0
+16:19:31.772 @LEE009 100
+16:23:12.773  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:23:29.778 @EMP002 系统管理员
+16:23:29.779 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:26:33.676  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:26:39.812 @EMP002 系统管理员
+16:26:39.814 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:31:04.766  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:31:50.972  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:31:59.047 @EMP002 系统管理员
+16:31:59.048 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:37:15.695  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:37:23.559 @EMP002 系统管理员
+16:37:23.561 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:39:28.411  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:39:34.123 @EMP002 系统管理员
+16:39:34.125 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:56:31.077  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:56:56.504 @EMP002 系统管理员
+16:56:56.506 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:58:15.138  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:58:45.714 @EMP002 系统管理员
+16:58:45.716 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:59:39.806  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:59:45.979 @EMP002 系统管理员
+16:59:45.982 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:08:31.912  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:08:54.973 @EMP002 系统管理员
+17:08:54.975 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:11:24.838 @ARS001 140038274
+17:11:24.839 @ARS008 0
+17:11:24.844 @ART003 切割
+17:11:24.846 @ART004 12
+17:11:24.847 @ART005 0
+17:11:24.848 @ART006 
+17:11:24.849 @ART007 
+17:11:24.850 @ART009 
+17:11:24.852 @ART010 否
+17:11:24.854 @idx 1538
+17:11:24.855 @ART002 08
+17:11:24.857 @ART011 001
+17:11:24.859 @ART012 0
+17:11:24.860 @ART013 
+17:13:13.864 @WAG001 20180906001
+17:13:13.866 @WAG002 2018/8/1 0:00:00
+17:13:14.150 @WAH001 20180906001
+17:13:14.151 @WAH002 10002
+17:13:14.153 @WAH003 吴征义
+17:13:14.154 @WAH004 成品搬运工
+17:13:14.156 @WAH006 19
+17:13:14.157 @WAH008 600
+17:13:14.161 @WAH001 20180906001
+17:13:14.163 @WAH002 10003
+17:13:14.164 @WAH003 王世洪
+17:13:14.166 @WAH004 成品搬运工
+17:13:14.167 @WAH006 9
+17:13:14.169 @WAH008 1290
+17:13:14.173 @WAH001 20180906001
+17:13:14.174 @WAH002 10004
+17:13:14.176 @WAH003 李守军
+17:13:14.177 @WAH004 成品搬运工
+17:13:14.180 @WAH006 18
+17:13:14.183 @WAH008 1180
+17:13:14.187 @WAH001 20180906001
+17:13:14.189 @WAH002 10009
+17:13:14.190 @WAH003 张之峰
+17:13:14.191 @WAH004 发货员
+17:13:14.193 @WAH006 9
+17:13:14.194 @WAH008 981
+17:13:14.198 @WAH001 20180906001
+17:13:14.199 @WAH002 10011
+17:13:14.201 @WAH003 潘传慧
+17:13:14.203 @WAH004 发货员
+17:13:14.204 @WAH006 1
+17:13:14.206 @WAH008 0
+17:13:14.209 @WAH001 20180906001
+17:13:14.211 @WAH002 10013
+17:13:14.212 @WAH003 杨友洪
+17:13:14.213 @WAH004 发货员
+17:13:14.215 @WAH006 10
+17:13:14.216 @WAH008 408
+17:13:14.219 @WAH001 20180906001
+17:13:14.220 @WAH002 10016
+17:13:14.221 @WAH003 郭婧
+17:13:14.223 @WAH004 装配工
+17:13:14.224 @WAH006 24
+17:13:14.226 @WAH008 211.3
+17:13:14.229 @WAH001 20180906001
+17:13:14.231 @WAH002 10017
+17:13:14.233 @WAH003 龙兴连
+17:13:14.235 @WAH004 装配工
+17:13:14.237 @WAH006 9
+17:13:14.238 @WAH008 126.8
+17:13:14.242 @WAH001 20180906001
+17:13:14.244 @WAH002 10018
+17:13:14.245 @WAH003 刘付连
+17:13:14.247 @WAH004 装配工
+17:13:14.249 @WAH006 9
+17:13:14.251 @WAH008 126.8
+17:13:14.253 @WAH001 20180906001
+17:13:14.255 @WAH002 10019
+17:13:14.256 @WAH003 聂付秋
+17:13:14.257 @WAH004 装配工
+17:13:14.259 @WAH006 9
+17:13:14.260 @WAH008 126.8
+17:13:14.263 @WAH001 20180906001
+17:13:14.264 @WAH002 10020
+17:13:14.266 @WAH003 薛能米
+17:13:14.267 @WAH004 装配工
+17:13:14.268 @WAH006 9
+17:13:14.269 @WAH008 126.8
+17:13:14.271 @WAH001 20180906001
+17:13:14.273 @WAH002 10021
+17:13:14.274 @WAH003 彭顺艳
+17:13:14.275 @WAH004 装配工
+17:13:14.277 @WAH006 9
+17:13:14.278 @WAH008 126.8
+17:13:14.280 @WAH001 20180906001
+17:13:14.282 @WAH002 10022
+17:13:14.283 @WAH003 罗小琴
+17:13:14.285 @WAH004 装配工
+17:13:14.286 @WAH006 9
+17:13:14.287 @WAH008 126.8
+17:13:14.289 @WAH001 20180906001
+17:13:14.291 @WAH002 10023
+17:13:14.292 @WAH003 吕红艳
+17:13:14.293 @WAH004 装配工
+17:13:14.295 @WAH006 9
+17:13:14.296 @WAH008 126.8
+17:13:14.299 @WAH001 20180906001
+17:13:14.300 @WAH002 10024
+17:13:14.302 @WAH003 李朝粉
+17:13:14.303 @WAH004 装配工
+17:13:14.304 @WAH006 9
+17:13:14.305 @WAH008 126.8
+17:13:14.308 @WAH001 20180906001
+17:13:14.310 @WAH002 10025
+17:13:14.311 @WAH003 陈文会
+17:13:14.313 @WAH004 装配工
+17:13:14.314 @WAH006 9
+17:13:14.315 @WAH008 126.8
+17:13:14.317 @WAH001 20180906001
+17:13:14.319 @WAH002 10026
+17:13:14.320 @WAH003 平单单
+17:13:14.322 @WAH004 装配工
+17:13:14.323 @WAH006 9
+17:13:14.325 @WAH008 126.8
+17:13:14.327 @WAH001 20180906001
+17:13:14.329 @WAH002 10027
+17:13:14.330 @WAH003 梁永琴
+17:13:14.332 @WAH004 装配工
+17:13:14.333 @WAH006 9
+17:13:14.334 @WAH008 126.8
+17:13:14.336 @WAH001 20180906001
+17:13:14.338 @WAH002 10028
+17:13:14.339 @WAH003 胡孝明
+17:13:14.340 @WAH004 装配工
+17:13:14.342 @WAH006 9
+17:13:14.343 @WAH008 126.8
+17:13:14.345 @WAH001 20180906001
+17:13:14.347 @WAH002 10029
+17:13:14.348 @WAH003 聂昌奎
+17:13:14.349 @WAH004 装配工
+17:13:14.351 @WAH006 9
+17:13:14.352 @WAH008 126.8
+17:13:14.354 @WAH001 20180906001
+17:13:14.356 @WAH002 10030
+17:13:14.358 @WAH003 陶兴琴
+17:13:14.359 @WAH004 装配工
+17:13:14.361 @WAH006 9
+17:13:14.362 @WAH008 126.8
+17:13:14.364 @WAH001 20180906001
+17:13:14.366 @WAH002 10031
+17:13:14.367 @WAH003 方宇
+17:13:14.368 @WAH004 装配工
+17:13:14.370 @WAH006 9
+17:13:14.371 @WAH008 126.8
+17:13:14.374 @WAH001 20180906001
+17:13:14.375 @WAH002 10032
+17:13:14.376 @WAH003 段进连
+17:13:14.378 @WAH004 装配工
+17:13:14.379 @WAH006 9
+17:13:14.380 @WAH008 126.8
+17:13:14.382 @WAH001 20180906001
+17:13:14.384 @WAH002 10033
+17:13:14.386 @WAH003 唐云云
+17:13:14.387 @WAH004 装配工
+17:13:14.389 @WAH006 9
+17:13:14.390 @WAH008 126.8
+17:13:14.392 @WAH001 20180906001
+17:13:14.394 @WAH002 10034
+17:13:14.395 @WAH003 李大花
+17:13:14.396 @WAH004 装配工
+17:13:14.398 @WAH006 9
+17:13:14.399 @WAH008 126.8
+17:13:14.402 @WAH001 20180906001
+17:13:14.403 @WAH002 10035
+17:13:14.405 @WAH003 黄史作
+17:13:14.406 @WAH004 装配工
+17:13:14.407 @WAH006 9
+17:13:14.408 @WAH008 126.8
+17:13:14.411 @WAH001 20180906001
+17:13:14.413 @WAH002 10036
+17:13:14.415 @WAH003 罗昌梅
+17:13:14.417 @WAH004 装配工
+17:13:14.418 @WAH006 9
+17:13:14.420 @WAH008 126.8
+17:13:14.422 @WAH001 20180906001
+17:13:14.424 @WAH002 10037
+17:13:14.425 @WAH003 赵雨婷
+17:13:14.426 @WAH004 装配工
+17:13:14.427 @WAH006 9
+17:13:14.429 @WAH008 126.8
+17:13:14.431 @WAH001 20180906001
+17:13:14.432 @WAH002 10038
+17:13:14.434 @WAH003 余双双
+17:13:14.435 @WAH004 装配工
+17:13:14.436 @WAH006 9
+17:13:14.438 @WAH008 126.8
+17:13:14.440 @WAH001 20180906001
+17:13:14.442 @WAH002 10040
+17:13:14.444 @WAH003 杜福英
+17:13:14.445 @WAH004 装配工
+17:13:14.446 @WAH006 18
+17:13:14.447 @WAH008 131.4
+17:13:14.450 @WAH001 20180906001
+17:13:14.451 @WAH002 10041
+17:13:14.453 @WAH003 廖仁琼
+17:13:14.454 @WAH004 装配工
+17:13:14.455 @WAH006 18
+17:13:14.457 @WAH008 131.4
+17:13:14.459 @WAH001 20180906001
+17:13:14.460 @WAH002 10042
+17:13:14.462 @WAH003 李光艳
+17:13:14.463 @WAH004 装配工
+17:13:14.464 @WAH006 18
+17:13:14.466 @WAH008 131.4
+17:13:14.469 @WAH001 20180906001
+17:13:14.471 @WAH002 10043
+17:13:14.472 @WAH003 彭荣泽
+17:13:14.473 @WAH004 装配工
+17:13:14.475 @WAH006 18
+17:13:14.476 @WAH008 131.4
+17:13:14.479 @WAH001 20180906001
+17:13:14.480 @WAH002 10044
+17:13:14.482 @WAH003 何培凤
+17:13:14.483 @WAH004 装配工
+17:13:14.484 @WAH006 18
+17:13:14.485 @WAH008 131.4
+17:13:14.488 @WAH001 20180906001
+17:13:14.489 @WAH002 10045
+17:13:14.491 @WAH003 李朝伟
+17:13:14.492 @WAH004 装配工
+17:13:14.493 @WAH006 18
+17:13:14.495 @WAH008 131.4
+17:13:14.498 @WAH001 20180906001
+17:13:14.500 @WAH002 10046
+17:13:14.502 @WAH003 王培秀
+17:13:14.504 @WAH004 装配工
+17:13:14.505 @WAH006 18
+17:13:14.506 @WAH008 131.4
+17:13:14.509 @WAH001 20180906001
+17:13:14.511 @WAH002 10047
+17:13:14.512 @WAH003 谢武林
+17:13:14.514 @WAH004 装配工
+17:13:14.515 @WAH006 18
+17:13:14.516 @WAH008 131.4
+17:13:14.518 @WAH001 20180906001
+17:13:14.520 @WAH002 10048
+17:13:14.521 @WAH003 王程平
+17:13:14.522 @WAH004 装配工
+17:13:14.524 @WAH006 22
+17:13:14.525 @WAH008 189.8
+17:13:14.527 @WAH001 20180906001
+17:13:14.528 @WAH002 10049
+17:13:14.530 @WAH003 韩英
+17:13:14.531 @WAH004 装配工
+17:13:14.532 @WAH006 18
+17:13:14.533 @WAH008 131.4
+17:13:14.536 @WAH001 20180906001
+17:13:14.537 @WAH002 10050
+17:13:14.538 @WAH003 杨海霞
+17:13:14.540 @WAH004 装配工
+17:13:14.541 @WAH006 18
+17:13:14.542 @WAH008 131.4
+17:13:14.544 @WAH001 20180906001
+17:13:14.546 @WAH002 10051
+17:13:14.547 @WAH003 熊华美
+17:13:14.548 @WAH004 装配工
+17:13:14.550 @WAH006 18
+17:13:14.551 @WAH008 131.4
+17:13:14.554 @WAH001 20180906001
+17:13:14.555 @WAH002 10052
+17:13:14.557 @WAH003 孙琼莲
+17:13:14.558 @WAH004 装配工
+17:13:14.560 @WAH006 18
+17:13:14.562 @WAH008 131.4
+17:13:14.564 @WAH001 20180906001
+17:13:14.566 @WAH002 10053
+17:13:14.567 @WAH003 李林菊
+17:13:14.568 @WAH004 装配工
+17:13:14.570 @WAH006 18
+17:13:14.576 @WAH008 131.4
+17:13:14.579 @WAH001 20180906001
+17:13:14.580 @WAH002 10054
+17:13:14.581 @WAH003 吴群英
+17:13:14.583 @WAH004 装配工
+17:13:14.584 @WAH006 18
+17:13:14.585 @WAH008 131.4
+17:13:14.587 @WAH001 20180906001
+17:13:14.588 @WAH002 10055
+17:13:14.590 @WAH003 杨琴
+17:13:14.591 @WAH004 装配工
+17:13:14.592 @WAH006 18
+17:13:14.593 @WAH008 131.4
+17:13:14.597 @WAH001 20180906001
+17:13:14.599 @WAH002 10056
+17:13:14.600 @WAH003 韩艳
+17:13:14.601 @WAH004 装配工
+17:13:14.602 @WAH006 18
+17:13:14.604 @WAH008 131.4
+17:13:14.606 @WAH001 20180906001
+17:13:14.608 @WAH002 10057
+17:13:14.609 @WAH003 张瑜
+17:13:14.610 @WAH004 装配工
+17:13:14.612 @WAH006 18
+17:13:14.613 @WAH008 131.4
+17:13:14.615 @WAH001 20180906001
+17:13:14.616 @WAH002 10058
+17:13:14.618 @WAH003 李光云
+17:13:14.619 @WAH004 装配工
+17:13:14.620 @WAH006 18
+17:13:14.621 @WAH008 131.4
+17:13:14.623 @WAH001 20180906001
+17:13:14.625 @WAH002 10059
+17:13:14.626 @WAH003 唐春凤
+17:13:14.628 @WAH004 装配工
+17:13:14.629 @WAH006 18
+17:13:14.630 @WAH008 131.4
+17:13:14.632 @WAH001 20180906001
+17:13:14.634 @WAH002 10060
+17:13:14.635 @WAH003 陈朝香
+17:13:14.636 @WAH004 装配工
+17:13:14.638 @WAH006 18
+17:13:14.639 @WAH008 131.4
+17:13:14.642 @WAH001 20180906001
+17:13:14.643 @WAH002 10061
+17:13:14.644 @WAH003 张小婵
+17:13:14.646 @WAH004 装配工
+17:13:14.647 @WAH006 18
+17:13:14.649 @WAH008 131.4
+17:13:14.652 @WAH001 20180906001
+17:13:14.654 @WAH002 10062
+17:13:14.655 @WAH003 曾昭婵
+17:13:14.657 @WAH004 装配工
+17:13:14.658 @WAH006 18
+17:13:14.659 @WAH008 131.4
+17:13:14.662 @WAH001 20180906001
+17:13:14.663 @WAH002 10063
+17:13:14.664 @WAH003 牟飞
+17:13:14.666 @WAH004 装配工
+17:13:14.667 @WAH006 18
+17:13:14.668 @WAH008 131.4
+17:13:14.670 @WAH001 20180906001
+17:13:14.672 @WAH002 10064
+17:13:14.673 @WAH003 牟欢
+17:13:14.674 @WAH004 装配工
+17:13:14.676 @WAH006 18
+17:13:14.677 @WAH008 131.4
+17:13:14.679 @WAH001 20180906001
+17:13:14.681 @WAH002 10065
+17:13:14.682 @WAH003 陶炼
+17:13:14.683 @WAH004 装配工
+17:13:14.684 @WAH006 18
+17:13:14.686 @WAH008 131.4
+17:13:14.690 @WAH001 20180906001
+17:13:14.692 @WAH002 10066
+17:13:14.693 @WAH003 杜光斌
+17:13:14.695 @WAH004 装配工
+17:13:14.696 @WAH006 18
+17:13:14.697 @WAH008 131.4
+17:13:14.700 @WAH001 20180906001
+17:13:14.701 @WAH002 10067
+17:13:14.703 @WAH003 朱大艳
+17:13:14.705 @WAH004 装配工
+17:13:14.707 @WAH006 18
+17:13:14.708 @WAH008 131.4
+17:13:14.712 @WAH001 20180906001
+17:13:14.713 @WAH002 10068
+17:13:14.714 @WAH003 王银祥
+17:13:14.716 @WAH004 装配工
+17:13:14.717 @WAH006 18
+17:13:14.718 @WAH008 131.4
+17:13:14.721 @WAH001 20180906001
+17:13:14.722 @WAH002 10069
+17:13:14.724 @WAH003 王建琼
+17:13:14.725 @WAH004 装配工
+17:13:14.726 @WAH006 18
+17:13:14.728 @WAH008 131.4
+17:13:14.731 @WAH001 20180906001
+17:13:14.732 @WAH002 10093
+17:13:14.733 @WAH003 陈林甫
+17:13:14.735 @WAH004 喷漆工
+17:13:14.736 @WAH006 9
+17:13:14.737 @WAH008 273.7
+17:13:14.740 @WAH001 20180906001
+17:13:14.741 @WAH002 10094
+17:13:14.742 @WAH003 张正友
+17:13:14.744 @WAH004 喷漆工
+17:13:14.745 @WAH006 9
+17:13:14.746 @WAH008 273.7
+17:13:14.748 @WAH001 20180906001
+17:13:14.750 @WAH002 10095
+17:13:14.751 @WAH003 王光
+17:13:14.753 @WAH004 喷漆工
+17:13:14.754 @WAH006 9
+17:13:14.755 @WAH008 273.7
+17:13:14.758 @WAH001 20180906001
+17:13:14.759 @WAH002 10096
+17:13:14.761 @WAH003 钱均鹏
+17:13:14.763 @WAH004 喷漆工
+17:13:14.764 @WAH006 9
+17:13:14.765 @WAH008 273.7
+17:13:14.767 @WAH001 20180906001
+17:13:14.769 @WAH002 10097
+17:13:14.770 @WAH003 陆秋云
+17:13:14.771 @WAH004 装配工
+17:13:14.773 @WAH006 9
+17:13:14.774 @WAH008 149
+17:13:14.778 @WAH001 20180906001
+17:13:14.780 @WAH002 10098
+17:13:14.781 @WAH003 郁叶琴
+17:13:14.783 @WAH004 装配工
+17:13:14.784 @WAH006 9
+17:13:14.785 @WAH008 149
+17:13:14.789 @WAH001 20180906001
+17:13:14.790 @WAH002 10139
+17:13:14.791 @WAH003 张龙
+17:13:14.793 @WAH004 一线组长
+17:13:14.794 @WAH006 9
+17:13:14.795 @WAH008 40.8
+17:13:14.801 @WAH001 20180906001
+17:13:14.802 @WAH002 10140
+17:13:14.804 @WAH003 刘兴贵
+17:13:14.805 @WAH004 装配工
+17:13:14.807 @WAH006 9
+17:13:14.808 @WAH008 30.2
+17:13:14.810 @WAH001 20180906001
+17:13:14.812 @WAH002 10141
+17:13:14.813 @WAH003 王振宇
+17:13:14.814 @WAH004 装配工
+17:13:14.816 @WAH006 9
+17:13:14.817 @WAH008 30.2
+17:13:14.819 @WAH001 20180906001
+17:13:14.821 @WAH002 10142
+17:13:14.822 @WAH003 钟成菊
+17:13:14.823 @WAH004 装配工
+17:13:14.825 @WAH006 9
+17:13:14.826 @WAH008 30.2
+17:13:14.828 @WAH001 20180906001
+17:13:14.830 @WAH002 10143
+17:13:14.831 @WAH003 赵成鹏
+17:13:14.833 @WAH004 装配工
+17:13:14.834 @WAH006 9
+17:13:14.836 @WAH008 30.2
+17:13:14.839 @WAH001 20180906001
+17:13:14.841 @WAH002 10144
+17:13:14.842 @WAH003 何万华
+17:13:14.844 @WAH004 装配工
+17:13:14.845 @WAH006 9
+17:13:14.847 @WAH008 30.2
+17:13:14.850 @WAH001 20180906001
+17:13:14.851 @WAH002 10145
+17:13:14.853 @WAH003 严云芹
+17:13:14.854 @WAH004 装配工
+17:13:14.855 @WAH006 9
+17:13:14.856 @WAH008 30.2
+17:13:14.859 @WAH001 20180906001
+17:13:14.860 @WAH002 10146
+17:13:14.861 @WAH003 马小千
+17:13:14.863 @WAH004 装配工
+17:13:14.864 @WAH006 9
+17:13:14.865 @WAH008 30.2
+17:13:14.867 @WAH001 20180906001
+17:13:14.869 @WAH002 10147
+17:13:14.870 @WAH003 周顺
+17:13:14.871 @WAH004 装配工
+17:13:14.873 @WAH006 9
+17:13:14.874 @WAH008 30.2
+17:13:14.876 @WAH001 20180906001
+17:13:14.878 @WAH002 10148
+17:13:14.879 @WAH003 龙付咪
+17:13:14.880 @WAH004 装配工
+17:13:14.881 @WAH006 9
+17:13:14.883 @WAH008 30.2
+17:13:14.885 @WAH001 20180906001
+17:13:14.886 @WAH002 10149
+17:13:14.887 @WAH003 郭昭芬
+17:13:14.889 @WAH004 装配工
+17:13:14.890 @WAH006 9
+17:13:14.891 @WAH008 30.2
+17:13:14.894 @WAH001 20180906001
+17:13:14.895 @WAH002 10150
+17:13:14.896 @WAH003 刘高发
+17:13:14.897 @WAH004 装配工
+17:13:14.899 @WAH006 9
+17:13:14.901 @WAH008 30.2
+17:13:14.904 @WAH001 20180906001
+17:13:14.905 @WAH002 10151
+17:13:14.907 @WAH003 吴张英
+17:13:14.908 @WAH004 装配工
+17:13:14.909 @WAH006 9
+17:13:14.911 @WAH008 30.2
+17:13:14.913 @WAH001 20180906001
+17:13:14.914 @WAH002 10152
+17:13:14.916 @WAH003 杨犁
+17:13:14.917 @WAH004 装配工
+17:13:14.919 @WAH006 9
+17:13:14.920 @WAH008 30.2
+17:13:14.922 @WAH001 20180906001
+17:13:14.924 @WAH002 10153
+17:13:14.925 @WAH003 熊洪才
+17:13:14.927 @WAH004 装配工
+17:13:14.928 @WAH006 9
+17:13:14.929 @WAH008 30.2
+17:13:14.932 @WAH001 20180906001
+17:13:14.933 @WAH002 10154
+17:13:14.935 @WAH003 代开容
+17:13:14.936 @WAH004 装配工
+17:13:14.937 @WAH006 9
+17:13:14.939 @WAH008 30.2
+17:13:14.941 @WAH001 20180906001
+17:13:14.942 @WAH002 10155
+17:13:14.943 @WAH003 尹宗丹
+17:13:14.945 @WAH004 装配工
+17:13:14.946 @WAH006 9
+17:13:14.947 @WAH008 30.2
+17:13:14.950 @WAH001 20180906001
+17:13:14.951 @WAH002 10156
+17:13:14.953 @WAH003 朱正高
+17:13:14.954 @WAH004 装配工
+17:13:14.955 @WAH006 9
+17:13:14.957 @WAH008 30.2
+17:13:14.959 @WAH001 20180906001
+17:13:14.960 @WAH002 10157
+17:13:14.962 @WAH003 卿廷群
+17:13:14.963 @WAH004 装配工
+17:13:14.964 @WAH006 9
+17:13:14.965 @WAH008 30.2
+17:13:14.968 @WAH001 20180906001
+17:13:14.969 @WAH002 10158
+17:13:14.970 @WAH003 邹修丽
+17:13:14.972 @WAH004 装配工
+17:13:14.973 @WAH006 9
+17:13:14.974 @WAH008 30.2
+17:13:14.976 @WAH001 20180906001
+17:13:14.978 @WAH002 10159
+17:13:14.979 @WAH003 徐永洪
+17:13:14.980 @WAH004 装配工
+17:13:14.982 @WAH006 9
+17:13:14.983 @WAH008 30.2
+17:13:14.986 @WAH001 20180906001
+17:13:14.987 @WAH002 10160
+17:13:14.988 @WAH003 刘仁燕
+17:13:14.989 @WAH004 装配工
+17:13:14.990 @WAH006 9
+17:13:14.992 @WAH008 30.2
+17:13:14.994 @WAH001 20180906001
+17:13:14.995 @WAH002 10161
+17:13:14.996 @WAH003 陈万珍
+17:13:14.998 @WAH004 装配工
+17:13:14.999 @WAH006 9
+17:13:15.001 @WAH008 30.2
+17:13:15.003 @WAH001 20180906001
+17:13:15.004 @WAH002 10162
+17:13:15.005 @WAH003 李义承
+17:13:15.007 @WAH004 装配工
+17:13:15.008 @WAH006 9
+17:13:15.009 @WAH008 30.2
+17:13:15.012 @WAH001 20180906001
+17:13:15.013 @WAH002 10163
+17:13:15.014 @WAH003 张义兵
+17:13:15.016 @WAH004 装配工
+17:13:15.017 @WAH006 9
+17:13:15.019 @WAH008 30.2
+17:13:15.021 @WAH001 20180906001
+17:13:15.023 @WAH002 10164
+17:13:15.024 @WAH003 韩会萍
+17:13:15.025 @WAH004 装配工
+17:13:15.027 @WAH006 9
+17:13:15.028 @WAH008 30.2
+17:13:15.031 @WAH001 20180906001
+17:13:15.032 @WAH002 10165
+17:13:15.034 @WAH003 国明秀
+17:13:15.035 @WAH004 装配工
+17:13:15.036 @WAH006 9
+17:13:15.037 @WAH008 30.2
+17:13:15.041 @WAH001 20180906001
+17:13:15.043 @WAH002 10293
+17:13:15.044 @WAH003 韩秀金
+17:13:15.046 @WAH004 附件加工
+17:13:15.048 @WAH006 72
+17:13:15.050 @WAH008 27.9
+17:13:15.053 @WAH001 20180906001
+17:13:15.055 @WAH002 10294
+17:13:15.056 @WAH003 黄春燕
+17:13:15.057 @WAH004 附件加工
+17:13:15.059 @WAH006 72
+17:13:15.060 @WAH008 27.9
+17:13:15.063 @WAH001 20180906001
+17:13:15.064 @WAH002 10295
+17:13:15.066 @WAH003 薛能珍
+17:13:15.067 @WAH004 附件加工
+17:13:15.069 @WAH006 72
+17:13:15.070 @WAH008 27.9
+17:13:15.072 @WAH001 20180906001
+17:13:15.074 @WAH002 10296
+17:13:15.075 @WAH003 何卫英
+17:13:15.076 @WAH004 附件加工
+17:13:15.078 @WAH006 72
+17:13:15.079 @WAH008 27.9
+17:13:15.081 @WAH001 20180906001
+17:13:15.082 @WAH002 10297
+17:13:15.083 @WAH003 苏春
+17:13:15.085 @WAH004 附件加工
+17:13:15.086 @WAH006 72
+17:13:15.087 @WAH008 27.9
+17:13:15.089 @WAH001 20180906001
+17:13:15.091 @WAH002 10298
+17:13:15.092 @WAH003 张丹丹
+17:13:15.094 @WAH004 附件加工
+17:13:15.095 @WAH006 72
+17:13:15.096 @WAH008 27.9
+17:13:15.099 @WAH001 20180906001
+17:13:15.100 @WAH002 10299
+17:13:15.102 @WAH003 赵杰
+17:13:15.103 @WAH004 附件加工
+17:13:15.105 @WAH006 72
+17:13:15.106 @WAH008 27.9
+17:13:15.108 @WAH001 20180906001
+17:13:15.110 @WAH002 10300
+17:13:15.111 @WAH003 汪国洋
+17:13:15.113 @WAH004 附件加工
+17:13:15.114 @WAH006 72
+17:13:15.115 @WAH008 27.9
+17:13:18.796 @WAH010 0.000000
+17:13:18.798 @WAH011 0.000000
+17:13:18.799 @WAH015 0.000000
+17:13:18.801 @WAH016 0.000000
+17:13:18.803 @WAH017 0.000000
+17:13:18.804 @WAH018 0.000000
+17:13:18.806 @WAH019 0.000000
+17:13:18.808 @idx 694
+17:13:18.821 @WAH010 0.000000
+17:13:18.823 @WAH011 0.000000
+17:13:18.824 @WAH015 0.000000
+17:13:18.825 @WAH016 0.000000
+17:13:18.826 @WAH017 0.000000
+17:13:18.827 @WAH018 0.000000
+17:13:18.828 @WAH019 0.000000
+17:13:18.829 @idx 695
+17:13:18.832 @WAH010 0.000000
+17:13:18.833 @WAH011 0.000000
+17:13:18.835 @WAH015 0.000000
+17:13:18.836 @WAH016 0.000000
+17:13:18.837 @WAH017 0.000000
+17:13:18.839 @WAH018 0.000000
+17:13:18.840 @WAH019 0.000000
+17:13:18.841 @idx 696
+17:13:18.844 @WAH010 0.000000
+17:13:18.845 @WAH011 0.000000
+17:13:18.846 @WAH015 0.000000
+17:13:18.848 @WAH016 0.000000
+17:13:18.849 @WAH017 0.000000
+17:13:18.850 @WAH018 0.000000
+17:13:18.851 @WAH019 0.000000
+17:13:18.852 @idx 697
+17:13:18.855 @WAH010 0.000000
+17:13:18.856 @WAH011 0.000000
+17:13:18.857 @WAH015 0.000000
+17:13:18.859 @WAH016 0.000000
+17:13:18.860 @WAH017 0.000000
+17:13:18.861 @WAH018 0.000000
+17:13:18.862 @WAH019 0.000000
+17:13:18.864 @idx 698
+17:13:18.866 @WAH010 0.000000
+17:13:18.867 @WAH011 0.000000
+17:13:18.869 @WAH015 0.000000
+17:13:18.870 @WAH016 0.000000
+17:13:18.871 @WAH017 0.000000
+17:13:18.873 @WAH018 0.000000
+17:13:18.874 @WAH019 0.000000
+17:13:18.875 @idx 699
+17:13:18.877 @WAH010 0.000000
+17:13:18.879 @WAH011 0.000000
+17:13:18.880 @WAH015 0.000000
+17:13:18.882 @WAH016 0.000000
+17:13:18.883 @WAH017 0.000000
+17:13:18.884 @WAH018 0.000000
+17:13:18.885 @WAH019 0.000000
+17:13:18.887 @idx 700
+17:13:18.889 @WAH010 0.000000
+17:13:18.890 @WAH011 0.000000
+17:13:18.892 @WAH015 0.000000
+17:13:18.893 @WAH016 0.000000
+17:13:18.894 @WAH017 0.000000
+17:13:18.896 @WAH018 0.000000
+17:13:18.897 @WAH019 0.000000
+17:13:18.898 @idx 701
+17:13:18.901 @WAH010 0.000000
+17:13:18.902 @WAH011 0.000000
+17:13:18.904 @WAH015 0.000000
+17:13:18.905 @WAH016 0.000000
+17:13:18.906 @WAH017 0.000000
+17:13:18.907 @WAH018 0.000000
+17:13:18.909 @WAH019 0.000000
+17:13:18.910 @idx 702
+17:13:18.912 @WAH010 0.000000
+17:13:18.914 @WAH011 0.000000
+17:13:18.915 @WAH015 0.000000
+17:13:18.916 @WAH016 0.000000
+17:13:18.918 @WAH017 0.000000
+17:13:18.919 @WAH018 0.000000
+17:13:18.920 @WAH019 0.000000
+17:13:18.921 @idx 703
+17:13:18.923 @WAH010 0.000000
+17:13:18.925 @WAH011 0.000000
+17:13:18.926 @WAH015 0.000000
+17:13:18.928 @WAH016 0.000000
+17:13:18.929 @WAH017 0.000000
+17:13:18.930 @WAH018 0.000000
+17:13:18.932 @WAH019 0.000000
+17:13:18.933 @idx 704
+17:13:18.935 @WAH010 0.000000
+17:13:18.936 @WAH011 0.000000
+17:13:18.938 @WAH015 0.000000
+17:13:18.939 @WAH016 0.000000
+17:13:18.940 @WAH017 0.000000
+17:13:18.942 @WAH018 0.000000
+17:13:18.943 @WAH019 0.000000
+17:13:18.944 @idx 705
+17:13:18.946 @WAH010 0.000000
+17:13:18.948 @WAH011 0.000000
+17:13:18.949 @WAH015 0.000000
+17:13:18.951 @WAH016 0.000000
+17:13:18.952 @WAH017 0.000000
+17:13:18.953 @WAH018 0.000000
+17:13:18.955 @WAH019 0.000000
+17:13:18.956 @idx 706
+17:13:18.958 @WAH010 0.000000
+17:13:18.960 @WAH011 0.000000
+17:13:18.961 @WAH015 0.000000
+17:13:18.963 @WAH016 0.000000
+17:13:18.964 @WAH017 0.000000
+17:13:18.965 @WAH018 0.000000
+17:13:18.966 @WAH019 0.000000
+17:13:18.967 @idx 707
+17:13:18.970 @WAH010 0.000000
+17:13:18.971 @WAH011 0.000000
+17:13:18.972 @WAH015 0.000000
+17:13:18.974 @WAH016 0.000000
+17:13:18.975 @WAH017 0.000000
+17:13:18.976 @WAH018 0.000000
+17:13:18.977 @WAH019 0.000000
+17:13:18.979 @idx 708
+17:13:18.981 @WAH010 0.000000
+17:13:18.983 @WAH011 0.000000
+17:13:18.984 @WAH015 0.000000
+17:13:18.985 @WAH016 0.000000
+17:13:18.987 @WAH017 0.000000
+17:13:18.988 @WAH018 0.000000
+17:13:18.989 @WAH019 0.000000
+17:13:18.990 @idx 709
+17:13:18.993 @WAH010 0.000000
+17:13:18.994 @WAH011 0.000000
+17:13:18.996 @WAH015 0.000000
+17:13:18.997 @WAH016 0.000000
+17:13:18.998 @WAH017 0.000000
+17:13:18.999 @WAH018 0.000000
+17:13:19.001 @WAH019 0.000000
+17:13:19.002 @idx 710
+17:13:19.004 @WAH010 0.000000
+17:13:19.006 @WAH011 0.000000
+17:13:19.007 @WAH015 0.000000
+17:13:19.008 @WAH016 0.000000
+17:13:19.010 @WAH017 0.000000
+17:13:19.011 @WAH018 0.000000
+17:13:19.012 @WAH019 0.000000
+17:13:19.013 @idx 711
+17:13:19.016 @WAH010 0.000000
+17:13:19.017 @WAH011 0.000000
+17:13:19.018 @WAH015 0.000000
+17:13:19.020 @WAH016 0.000000
+17:13:19.021 @WAH017 0.000000
+17:13:19.022 @WAH018 0.000000
+17:13:19.023 @WAH019 0.000000
+17:13:19.025 @idx 712
+17:13:19.027 @WAH010 0.000000
+17:13:19.028 @WAH011 0.000000
+17:13:19.030 @WAH015 0.000000
+17:13:19.031 @WAH016 0.000000
+17:13:19.033 @WAH017 0.000000
+17:13:19.034 @WAH018 0.000000
+17:13:19.035 @WAH019 0.000000
+17:13:19.036 @idx 713
+17:13:19.039 @WAH010 0.000000
+17:13:19.040 @WAH011 0.000000
+17:13:19.041 @WAH015 0.000000
+17:13:19.043 @WAH016 0.000000
+17:13:19.044 @WAH017 0.000000
+17:13:19.046 @WAH018 0.000000
+17:13:19.047 @WAH019 0.000000
+17:13:19.048 @idx 714
+17:13:19.050 @WAH010 0.000000
+17:13:19.052 @WAH011 0.000000
+17:13:19.053 @WAH015 0.000000
+17:13:19.054 @WAH016 0.000000
+17:13:19.056 @WAH017 0.000000
+17:13:19.057 @WAH018 0.000000
+17:13:19.058 @WAH019 0.000000
+17:13:19.060 @idx 715
+17:13:19.062 @WAH010 0.000000
+17:13:19.063 @WAH011 0.000000
+17:13:19.065 @WAH015 0.000000
+17:13:19.066 @WAH016 0.000000
+17:13:19.067 @WAH017 0.000000
+17:13:19.068 @WAH018 0.000000
+17:13:19.070 @WAH019 0.000000
+17:13:19.071 @idx 716
+17:13:19.073 @WAH010 0.000000
+17:13:19.075 @WAH011 0.000000
+17:13:19.076 @WAH015 0.000000
+17:13:19.077 @WAH016 0.000000
+17:13:19.078 @WAH017 0.000000
+17:13:19.080 @WAH018 0.000000
+17:13:19.081 @WAH019 0.000000
+17:13:19.082 @idx 717
+17:13:19.085 @WAH010 0.000000
+17:13:19.086 @WAH011 0.000000
+17:13:19.087 @WAH015 0.000000
+17:13:19.089 @WAH016 0.000000
+17:13:19.090 @WAH017 0.000000
+17:13:19.092 @WAH018 0.000000
+17:13:19.093 @WAH019 0.000000
+17:13:19.094 @idx 718
+17:13:19.101 @WAH010 0.000000
+17:13:19.102 @WAH011 0.000000
+17:13:19.104 @WAH015 0.000000
+17:13:19.105 @WAH016 0.000000
+17:13:19.106 @WAH017 0.000000
+17:13:19.108 @WAH018 0.000000
+17:13:19.109 @WAH019 0.000000
+17:13:19.111 @idx 719
+17:13:19.117 @WAH010 0.000000
+17:13:19.119 @WAH011 0.000000
+17:13:19.121 @WAH015 0.000000
+17:13:19.123 @WAH016 0.000000
+17:13:19.124 @WAH017 0.000000
+17:13:19.126 @WAH018 0.000000
+17:13:19.128 @WAH019 0.000000
+17:13:19.130 @idx 720
+17:13:19.133 @WAH010 0.000000
+17:13:19.134 @WAH011 0.000000
+17:13:19.136 @WAH015 0.000000
+17:13:19.138 @WAH016 0.000000
+17:13:19.140 @WAH017 0.000000
+17:13:19.141 @WAH018 0.000000
+17:13:19.143 @WAH019 0.000000
+17:13:19.145 @idx 721
+17:13:19.147 @WAH010 0.000000
+17:13:19.149 @WAH011 0.000000
+17:13:19.151 @WAH015 0.000000
+17:13:19.152 @WAH016 0.000000
+17:13:19.154 @WAH017 0.000000
+17:13:19.156 @WAH018 0.000000
+17:13:19.157 @WAH019 0.000000
+17:13:19.160 @idx 722
+17:13:19.163 @WAH010 0.000000
+17:13:19.165 @WAH011 0.000000
+17:13:19.167 @WAH015 0.000000
+17:13:19.169 @WAH016 0.000000
+17:13:19.171 @WAH017 0.000000
+17:13:19.173 @WAH018 0.000000
+17:13:19.174 @WAH019 0.000000
+17:13:19.176 @idx 723
+17:13:19.179 @WAH010 0.000000
+17:13:19.181 @WAH011 0.000000
+17:13:19.183 @WAH015 0.000000
+17:13:19.184 @WAH016 0.000000
+17:13:19.186 @WAH017 0.000000
+17:13:19.188 @WAH018 0.000000
+17:13:19.190 @WAH019 0.000000
+17:13:19.191 @idx 724
+17:13:19.195 @WAH010 0.000000
+17:13:19.196 @WAH011 0.000000
+17:13:19.198 @WAH015 0.000000
+17:13:19.200 @WAH016 0.000000
+17:13:19.202 @WAH017 0.000000
+17:13:19.204 @WAH018 0.000000
+17:13:19.205 @WAH019 0.000000
+17:13:19.207 @idx 725
+17:13:19.210 @WAH010 0.000000
+17:13:19.211 @WAH011 0.000000
+17:13:19.213 @WAH015 0.000000
+17:13:19.215 @WAH016 0.000000
+17:13:19.216 @WAH017 0.000000
+17:13:19.218 @WAH018 0.000000
+17:13:19.219 @WAH019 0.000000
+17:13:19.221 @idx 726
+17:13:19.223 @WAH010 0.000000
+17:13:19.225 @WAH011 0.000000
+17:13:19.227 @WAH015 0.000000
+17:13:19.229 @WAH016 0.000000
+17:13:19.231 @WAH017 0.000000
+17:13:19.232 @WAH018 0.000000
+17:13:19.234 @WAH019 0.000000
+17:13:19.236 @idx 727
+17:13:19.239 @WAH010 0.000000
+17:13:19.241 @WAH011 0.000000
+17:13:19.242 @WAH015 0.000000
+17:13:19.244 @WAH016 0.000000
+17:13:19.246 @WAH017 0.000000
+17:13:19.247 @WAH018 0.000000
+17:13:19.249 @WAH019 0.000000
+17:13:19.250 @idx 728
+17:13:19.255 @WAH010 0.000000
+17:13:19.256 @WAH011 0.000000
+17:13:19.258 @WAH015 0.000000
+17:13:19.260 @WAH016 0.000000
+17:13:19.262 @WAH017 0.000000
+17:13:19.264 @WAH018 0.000000
+17:13:19.266 @WAH019 0.000000
+17:13:19.267 @idx 729
+17:13:19.270 @WAH010 0.000000
+17:13:19.272 @WAH011 0.000000
+17:13:19.273 @WAH015 0.000000
+17:13:19.275 @WAH016 0.000000
+17:13:19.277 @WAH017 0.000000
+17:13:19.279 @WAH018 0.000000
+17:13:19.280 @WAH019 0.000000
+17:13:19.282 @idx 730
+17:13:19.285 @WAH010 0.000000
+17:13:19.287 @WAH011 0.000000
+17:13:19.288 @WAH015 0.000000
+17:13:19.290 @WAH016 0.000000
+17:13:19.292 @WAH017 0.000000
+17:13:19.293 @WAH018 0.000000
+17:13:19.295 @WAH019 0.000000
+17:13:19.297 @idx 731
+17:13:19.300 @WAH010 0.000000
+17:13:19.302 @WAH011 0.000000
+17:13:19.303 @WAH015 0.000000
+17:13:19.305 @WAH016 0.000000
+17:13:19.306 @WAH017 0.000000
+17:13:19.307 @WAH018 0.000000
+17:13:19.309 @WAH019 0.000000
+17:13:19.310 @idx 732
+17:13:19.313 @WAH010 0.000000
+17:13:19.315 @WAH011 0.000000
+17:13:19.317 @WAH015 0.000000
+17:13:19.318 @WAH016 0.000000
+17:13:19.320 @WAH017 0.000000
+17:13:19.321 @WAH018 0.000000
+17:13:19.323 @WAH019 0.000000
+17:13:19.324 @idx 733
+17:13:19.327 @WAH010 0.000000
+17:13:19.329 @WAH011 0.000000
+17:13:19.331 @WAH015 0.000000
+17:13:19.333 @WAH016 0.000000
+17:13:19.334 @WAH017 0.000000
+17:13:19.336 @WAH018 0.000000
+17:13:19.338 @WAH019 0.000000
+17:13:19.339 @idx 734
+17:13:19.342 @WAH010 0.000000
+17:13:19.344 @WAH011 0.000000
+17:13:19.345 @WAH015 0.000000
+17:13:19.347 @WAH016 0.000000
+17:13:19.349 @WAH017 0.000000
+17:13:19.351 @WAH018 0.000000
+17:13:19.352 @WAH019 0.000000
+17:13:19.354 @idx 735
+17:13:19.356 @WAH010 0.000000
+17:13:19.358 @WAH011 0.000000
+17:13:19.359 @WAH015 0.000000
+17:13:19.361 @WAH016 0.000000
+17:13:19.362 @WAH017 0.000000
+17:13:19.363 @WAH018 0.000000
+17:13:19.365 @WAH019 0.000000
+17:13:19.366 @idx 736
+17:13:19.369 @WAH010 0.000000
+17:13:19.370 @WAH011 0.000000
+17:13:19.372 @WAH015 0.000000
+17:13:19.374 @WAH016 0.000000
+17:13:19.375 @WAH017 0.000000
+17:13:19.377 @WAH018 0.000000
+17:13:19.378 @WAH019 0.000000
+17:13:19.380 @idx 737
+17:13:19.382 @WAH010 0.000000
+17:13:19.384 @WAH011 0.000000
+17:13:19.386 @WAH015 0.000000
+17:13:19.387 @WAH016 0.000000
+17:13:19.389 @WAH017 0.000000
+17:13:19.391 @WAH018 0.000000
+17:13:19.393 @WAH019 0.000000
+17:13:19.395 @idx 738
+17:13:19.398 @WAH010 0.000000
+17:13:19.400 @WAH011 0.000000
+17:13:19.401 @WAH015 0.000000
+17:13:19.403 @WAH016 0.000000
+17:13:19.404 @WAH017 0.000000
+17:13:19.406 @WAH018 0.000000
+17:13:19.407 @WAH019 0.000000
+17:13:19.409 @idx 739
+17:13:19.412 @WAH010 0.000000
+17:13:19.414 @WAH011 0.000000
+17:13:19.415 @WAH015 0.000000
+17:13:19.416 @WAH016 0.000000
+17:13:19.418 @WAH017 0.000000
+17:13:19.419 @WAH018 0.000000
+17:13:19.421 @WAH019 0.000000
+17:13:19.422 @idx 740
+17:13:19.425 @WAH010 0.000000
+17:13:19.427 @WAH011 0.000000
+17:13:19.428 @WAH015 0.000000
+17:13:19.430 @WAH016 0.000000
+17:13:19.431 @WAH017 0.000000
+17:13:19.432 @WAH018 0.000000
+17:13:19.434 @WAH019 0.000000
+17:13:19.435 @idx 741
+17:13:19.437 @WAH010 0.000000
+17:13:19.438 @WAH011 0.000000
+17:13:19.440 @WAH015 0.000000
+17:13:19.441 @WAH016 0.000000
+17:13:19.443 @WAH017 0.000000
+17:13:19.444 @WAH018 0.000000
+17:13:19.445 @WAH019 0.000000
+17:13:19.447 @idx 742
+17:13:19.449 @WAH010 0.000000
+17:13:19.450 @WAH011 0.000000
+17:13:19.451 @WAH015 0.000000
+17:13:19.453 @WAH016 0.000000
+17:13:19.454 @WAH017 0.000000
+17:13:19.455 @WAH018 0.000000
+17:13:19.456 @WAH019 0.000000
+17:13:19.457 @idx 743
+17:13:19.460 @WAH010 0.000000
+17:13:19.461 @WAH011 0.000000
+17:13:19.462 @WAH015 0.000000
+17:13:19.463 @WAH016 0.000000
+17:13:19.465 @WAH017 0.000000
+17:13:19.466 @WAH018 0.000000
+17:13:19.467 @WAH019 0.000000
+17:13:19.468 @idx 744
+17:13:19.470 @WAH010 0.000000
+17:13:19.472 @WAH011 0.000000
+17:13:19.473 @WAH015 0.000000
+17:13:19.474 @WAH016 0.000000
+17:13:19.475 @WAH017 0.000000
+17:13:19.476 @WAH018 0.000000
+17:13:19.478 @WAH019 0.000000
+17:13:19.479 @idx 745
+17:13:19.481 @WAH010 0.000000
+17:13:19.483 @WAH011 0.000000
+17:13:19.484 @WAH015 0.000000
+17:13:19.485 @WAH016 0.000000
+17:13:19.486 @WAH017 0.000000
+17:13:19.487 @WAH018 0.000000
+17:13:19.489 @WAH019 0.000000
+17:13:19.490 @idx 746
+17:13:19.493 @WAH010 0.000000
+17:13:19.494 @WAH011 0.000000
+17:13:19.495 @WAH015 0.000000
+17:13:19.497 @WAH016 0.000000
+17:13:19.498 @WAH017 0.000000
+17:13:19.499 @WAH018 0.000000
+17:13:19.500 @WAH019 0.000000
+17:13:19.502 @idx 747
+17:13:19.504 @WAH010 0.000000
+17:13:19.506 @WAH011 0.000000
+17:13:19.507 @WAH015 0.000000
+17:13:19.508 @WAH016 0.000000
+17:13:19.509 @WAH017 0.000000
+17:13:19.510 @WAH018 0.000000
+17:13:19.512 @WAH019 0.000000
+17:13:19.513 @idx 748
+17:13:19.515 @WAH010 0.000000
+17:13:19.516 @WAH011 0.000000
+17:13:19.518 @WAH015 0.000000
+17:13:19.519 @WAH016 0.000000
+17:13:19.521 @WAH017 0.000000
+17:13:19.522 @WAH018 0.000000
+17:13:19.524 @WAH019 0.000000
+17:13:19.525 @idx 749
+17:13:19.529 @WAH010 0.000000
+17:13:19.530 @WAH011 0.000000
+17:13:19.532 @WAH015 0.000000
+17:13:19.534 @WAH016 0.000000
+17:13:19.536 @WAH017 0.000000
+17:13:19.537 @WAH018 0.000000
+17:13:19.539 @WAH019 0.000000
+17:13:19.541 @idx 750
+17:13:19.544 @WAH010 0.000000
+17:13:19.545 @WAH011 0.000000
+17:13:19.546 @WAH015 0.000000
+17:13:19.547 @WAH016 0.000000
+17:13:19.549 @WAH017 0.000000
+17:13:19.550 @WAH018 0.000000
+17:13:19.551 @WAH019 0.000000
+17:13:19.552 @idx 751
+17:13:19.554 @WAH010 0.000000
+17:13:19.556 @WAH011 0.000000
+17:13:19.557 @WAH015 0.000000
+17:13:19.558 @WAH016 0.000000
+17:13:19.559 @WAH017 0.000000
+17:13:19.561 @WAH018 0.000000
+17:13:19.562 @WAH019 0.000000
+17:13:19.563 @idx 752
+17:13:19.565 @WAH010 0.000000
+17:13:19.567 @WAH011 0.000000
+17:13:19.568 @WAH015 0.000000
+17:13:19.569 @WAH016 0.000000
+17:13:19.570 @WAH017 0.000000
+17:13:19.571 @WAH018 0.000000
+17:13:19.573 @WAH019 0.000000
+17:13:19.574 @idx 753
+17:13:19.576 @WAH010 0.000000
+17:13:19.577 @WAH011 0.000000
+17:13:19.578 @WAH015 0.000000
+17:13:19.580 @WAH016 0.000000
+17:13:19.581 @WAH017 0.000000
+17:13:19.582 @WAH018 0.000000
+17:13:19.583 @WAH019 0.000000
+17:13:19.584 @idx 754
+17:13:19.587 @WAH010 0.000000
+17:13:19.589 @WAH011 0.000000
+17:13:19.590 @WAH015 0.000000
+17:13:19.591 @WAH016 0.000000
+17:13:19.592 @WAH017 0.000000
+17:13:19.594 @WAH018 0.000000
+17:13:19.595 @WAH019 0.000000
+17:13:19.596 @idx 755
+17:13:19.599 @WAH010 0.000000
+17:13:19.600 @WAH011 0.000000
+17:13:19.602 @WAH015 0.000000
+17:13:19.603 @WAH016 0.000000
+17:13:19.605 @WAH017 0.000000
+17:13:19.606 @WAH018 0.000000
+17:13:19.607 @WAH019 0.000000
+17:13:19.608 @idx 756
+17:13:19.610 @WAH010 0.000000
+17:13:19.612 @WAH011 0.000000
+17:13:19.613 @WAH015 0.000000
+17:13:19.614 @WAH016 0.000000
+17:13:19.616 @WAH017 0.000000
+17:13:19.617 @WAH018 0.000000
+17:13:19.618 @WAH019 0.000000
+17:13:19.620 @idx 757
+17:13:19.622 @WAH010 0.000000
+17:13:19.623 @WAH011 0.000000
+17:13:19.624 @WAH015 0.000000
+17:13:19.625 @WAH016 0.000000
+17:13:19.627 @WAH017 0.000000
+17:13:19.628 @WAH018 0.000000
+17:13:19.630 @WAH019 0.000000
+17:13:19.631 @idx 758
+17:13:19.634 @WAH010 0.000000
+17:13:19.635 @WAH011 0.000000
+17:13:19.637 @WAH015 0.000000
+17:13:19.638 @WAH016 0.000000
+17:13:19.639 @WAH017 0.000000
+17:13:19.640 @WAH018 0.000000
+17:13:19.641 @WAH019 0.000000
+17:13:19.642 @idx 759
+17:13:19.645 @WAH010 0.000000
+17:13:19.647 @WAH011 0.000000
+17:13:19.648 @WAH015 0.000000
+17:13:19.649 @WAH016 0.000000
+17:13:19.650 @WAH017 0.000000
+17:13:19.651 @WAH018 0.000000
+17:13:19.652 @WAH019 0.000000
+17:13:19.653 @idx 760
+17:13:19.656 @WAH010 0.000000
+17:13:19.657 @WAH011 0.000000
+17:13:19.658 @WAH015 0.000000
+17:13:19.660 @WAH016 0.000000
+17:13:19.661 @WAH017 0.000000
+17:13:19.662 @WAH018 0.000000
+17:13:19.664 @WAH019 0.000000
+17:13:19.665 @idx 761
+17:13:19.668 @WAH010 0.000000
+17:13:19.669 @WAH011 0.000000
+17:13:19.671 @WAH015 0.000000
+17:13:19.672 @WAH016 0.000000
+17:13:19.673 @WAH017 0.000000
+17:13:19.675 @WAH018 0.000000
+17:13:19.676 @WAH019 0.000000
+17:13:19.677 @idx 762
+17:13:19.680 @WAH010 0.000000
+17:13:19.682 @WAH011 0.000000
+17:13:19.683 @WAH015 0.000000
+17:13:19.685 @WAH016 0.000000
+17:13:19.686 @WAH017 0.000000
+17:13:19.687 @WAH018 0.000000
+17:13:19.688 @WAH019 0.000000
+17:13:19.689 @idx 763
+17:13:19.692 @WAH010 0.000000
+17:13:19.693 @WAH011 0.000000
+17:13:19.694 @WAH015 0.000000
+17:13:19.695 @WAH016 0.000000
+17:13:19.696 @WAH017 0.000000
+17:13:19.698 @WAH018 0.000000
+17:13:19.699 @WAH019 0.000000
+17:13:19.700 @idx 764
+17:13:19.704 @WAH010 0.000000
+17:13:19.706 @WAH011 0.000000
+17:13:19.707 @WAH015 0.000000
+17:13:19.709 @WAH016 0.000000
+17:13:19.710 @WAH017 0.000000
+17:13:19.712 @WAH018 0.000000
+17:13:19.713 @WAH019 0.000000
+17:13:19.714 @idx 765
+17:13:19.716 @WAH010 0.000000
+17:13:19.718 @WAH011 0.000000
+17:13:19.719 @WAH015 0.000000
+17:13:19.720 @WAH016 0.000000
+17:13:19.722 @WAH017 0.000000
+17:13:19.723 @WAH018 0.000000
+17:13:19.724 @WAH019 0.000000
+17:13:19.726 @idx 766
+17:13:19.728 @WAH010 0.000000
+17:13:19.729 @WAH011 0.000000
+17:13:19.730 @WAH015 0.000000
+17:13:19.732 @WAH016 0.000000
+17:13:19.733 @WAH017 0.000000
+17:13:19.734 @WAH018 0.000000
+17:13:19.735 @WAH019 0.000000
+17:13:19.736 @idx 767
+17:13:19.738 @WAH010 0.000000
+17:13:19.740 @WAH011 0.000000
+17:13:19.741 @WAH015 0.000000
+17:13:19.742 @WAH016 0.000000
+17:13:19.743 @WAH017 0.000000
+17:13:19.744 @WAH018 0.000000
+17:13:19.745 @WAH019 0.000000
+17:13:19.746 @idx 768
+17:13:19.749 @WAH010 0.000000
+17:13:19.750 @WAH011 0.000000
+17:13:19.751 @WAH015 0.000000
+17:13:19.752 @WAH016 0.000000
+17:13:19.754 @WAH017 0.000000
+17:13:19.755 @WAH018 0.000000
+17:13:19.757 @WAH019 0.000000
+17:13:19.758 @idx 769
+17:13:19.760 @WAH010 0.000000
+17:13:19.762 @WAH011 0.000000
+17:13:19.763 @WAH015 0.000000
+17:13:19.764 @WAH016 0.000000
+17:13:19.765 @WAH017 0.000000
+17:13:19.767 @WAH018 0.000000
+17:13:19.768 @WAH019 0.000000
+17:13:19.769 @idx 770
+17:13:19.772 @WAH010 0.000000
+17:13:19.773 @WAH011 0.000000
+17:13:19.775 @WAH015 0.000000
+17:13:19.776 @WAH016 0.000000
+17:13:19.777 @WAH017 0.000000
+17:13:19.778 @WAH018 0.000000
+17:13:19.780 @WAH019 0.000000
+17:13:19.781 @idx 771
+17:13:19.783 @WAH010 0.000000
+17:13:19.785 @WAH011 0.000000
+17:13:19.786 @WAH015 0.000000
+17:13:19.787 @WAH016 0.000000
+17:13:19.789 @WAH017 0.000000
+17:13:19.790 @WAH018 0.000000
+17:13:19.791 @WAH019 0.000000
+17:13:19.793 @idx 772
+17:13:19.795 @WAH010 0.000000
+17:13:19.796 @WAH011 0.000000
+17:13:19.798 @WAH015 0.000000
+17:13:19.800 @WAH016 0.000000
+17:13:19.801 @WAH017 0.000000
+17:13:19.803 @WAH018 0.000000
+17:13:19.804 @WAH019 0.000000
+17:13:19.805 @idx 773
+17:13:19.808 @WAH010 0.000000
+17:13:19.810 @WAH011 0.000000
+17:13:19.811 @WAH015 0.000000
+17:13:19.813 @WAH016 0.000000
+17:13:19.814 @WAH017 0.000000
+17:13:19.815 @WAH018 0.000000
+17:13:19.816 @WAH019 0.000000
+17:13:19.817 @idx 774
+17:13:19.820 @WAH010 0.000000
+17:13:19.822 @WAH011 0.000000
+17:13:19.823 @WAH015 0.000000
+17:13:19.825 @WAH016 0.000000
+17:13:19.826 @WAH017 0.000000
+17:13:19.827 @WAH018 0.000000
+17:13:19.829 @WAH019 0.000000
+17:13:19.830 @idx 775
+17:13:19.833 @WAH010 0.000000
+17:13:19.835 @WAH011 0.000000
+17:13:19.836 @WAH015 0.000000
+17:13:19.838 @WAH016 0.000000
+17:13:19.839 @WAH017 0.000000
+17:13:19.840 @WAH018 0.000000
+17:13:19.842 @WAH019 0.000000
+17:13:19.843 @idx 776
+17:13:19.845 @WAH010 0.000000
+17:13:19.846 @WAH011 0.000000
+17:13:19.848 @WAH015 0.000000
+17:13:19.849 @WAH016 0.000000
+17:13:19.851 @WAH017 0.000000
+17:13:19.852 @WAH018 0.000000
+17:13:19.854 @WAH019 0.000000
+17:13:19.855 @idx 777
+17:13:19.858 @WAH010 0.000000
+17:13:19.860 @WAH011 0.000000
+17:13:19.861 @WAH015 0.000000
+17:13:19.863 @WAH016 0.000000
+17:13:19.864 @WAH017 0.000000
+17:13:19.865 @WAH018 0.000000
+17:13:19.866 @WAH019 0.000000
+17:13:19.867 @idx 778
+17:13:19.869 @WAH010 0.000000
+17:13:19.871 @WAH011 0.000000
+17:13:19.872 @WAH015 0.000000
+17:13:19.873 @WAH016 0.000000
+17:13:19.875 @WAH017 0.000000
+17:13:19.876 @WAH018 0.000000
+17:13:19.877 @WAH019 0.000000
+17:13:19.878 @idx 779
+17:13:19.881 @WAH010 0.000000
+17:13:19.883 @WAH011 0.000000
+17:13:19.884 @WAH015 0.000000
+17:13:19.885 @WAH016 0.000000
+17:13:19.887 @WAH017 0.000000
+17:13:19.888 @WAH018 0.000000
+17:13:19.889 @WAH019 0.000000
+17:13:19.891 @idx 780
+17:13:19.893 @WAH010 0.000000
+17:13:19.895 @WAH011 0.000000
+17:13:19.896 @WAH015 0.000000
+17:13:19.897 @WAH016 0.000000
+17:13:19.899 @WAH017 0.000000
+17:13:19.900 @WAH018 0.000000
+17:13:19.901 @WAH019 0.000000
+17:13:19.902 @idx 781
+17:13:19.904 @WAH010 0.000000
+17:13:19.905 @WAH011 0.000000
+17:13:19.907 @WAH015 0.000000
+17:13:19.908 @WAH016 0.000000
+17:13:19.910 @WAH017 0.000000
+17:13:19.911 @WAH018 0.000000
+17:13:19.913 @WAH019 0.000000
+17:13:19.914 @idx 782
+17:13:19.917 @WAH010 0.000000
+17:13:19.918 @WAH011 0.000000
+17:13:19.920 @WAH015 0.000000
+17:13:19.921 @WAH016 0.000000
+17:13:19.922 @WAH017 0.000000
+17:13:19.924 @WAH018 0.000000
+17:13:19.926 @WAH019 0.000000
+17:13:19.927 @idx 783
+17:13:19.930 @WAH010 0.000000
+17:13:19.931 @WAH011 0.000000
+17:13:19.933 @WAH015 0.000000
+17:13:19.934 @WAH016 0.000000
+17:13:19.935 @WAH017 0.000000
+17:13:19.936 @WAH018 0.000000
+17:13:19.938 @WAH019 0.000000
+17:13:19.940 @idx 784
+17:13:19.943 @WAH010 0.000000
+17:13:19.944 @WAH011 0.000000
+17:13:19.945 @WAH015 0.000000
+17:13:19.946 @WAH016 0.000000
+17:13:19.947 @WAH017 0.000000
+17:13:19.948 @WAH018 0.000000
+17:13:19.950 @WAH019 0.000000
+17:13:19.951 @idx 785
+17:13:19.953 @WAH010 0.000000
+17:13:19.954 @WAH011 0.000000
+17:13:19.956 @WAH015 0.000000
+17:13:19.957 @WAH016 0.000000
+17:13:19.958 @WAH017 0.000000
+17:13:19.959 @WAH018 0.000000
+17:13:19.961 @WAH019 0.000000
+17:13:19.962 @idx 786
+17:13:19.964 @WAH010 0.000000
+17:13:19.965 @WAH011 0.000000
+17:13:19.967 @WAH015 0.000000
+17:13:19.968 @WAH016 0.000000
+17:13:19.969 @WAH017 0.000000
+17:13:19.970 @WAH018 0.000000
+17:13:19.972 @WAH019 0.000000
+17:13:19.973 @idx 787
+17:13:19.975 @WAH010 0.000000
+17:13:19.977 @WAH011 0.000000
+17:13:19.978 @WAH015 0.000000
+17:13:19.979 @WAH016 0.000000
+17:13:19.981 @WAH017 0.000000
+17:13:19.982 @WAH018 0.000000
+17:13:19.983 @WAH019 0.000000
+17:13:19.984 @idx 788
+17:13:19.987 @WAH010 0.000000
+17:13:19.988 @WAH011 0.000000
+17:13:19.989 @WAH015 0.000000
+17:13:19.990 @WAH016 0.000000
+17:13:19.992 @WAH017 0.000000
+17:13:19.993 @WAH018 0.000000
+17:13:19.994 @WAH019 0.000000
+17:13:19.995 @idx 789
+17:13:19.997 @WAH010 0.000000
+17:13:19.998 @WAH011 0.000000
+17:13:20.000 @WAH015 0.000000
+17:13:20.001 @WAH016 0.000000
+17:13:20.002 @WAH017 0.000000
+17:13:20.004 @WAH018 0.000000
+17:13:20.005 @WAH019 0.000000
+17:13:20.006 @idx 790
+17:13:20.009 @WAH010 0.000000
+17:13:20.010 @WAH011 0.000000
+17:13:20.011 @WAH015 0.000000
+17:13:20.012 @WAH016 0.000000
+17:13:20.014 @WAH017 0.000000
+17:13:20.015 @WAH018 0.000000
+17:13:20.016 @WAH019 0.000000
+17:13:20.017 @idx 791
+17:13:20.019 @WAH010 0.000000
+17:13:20.021 @WAH011 0.000000
+17:13:20.022 @WAH015 0.000000
+17:13:20.023 @WAH016 0.000000
+17:13:20.024 @WAH017 0.000000
+17:13:20.026 @WAH018 0.000000
+17:13:20.027 @WAH019 0.000000
+17:13:20.028 @idx 792
+17:13:20.030 @WAH010 0.000000
+17:13:20.032 @WAH011 0.000000
+17:13:20.033 @WAH015 0.000000
+17:13:20.036 @WAH016 0.000000
+17:13:20.037 @WAH017 0.000000
+17:13:20.039 @WAH018 0.000000
+17:13:20.040 @WAH019 0.000000
+17:13:20.041 @idx 793
+17:38:05.675  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:38:12.328 @EMP002 系统管理员
+17:38:12.330 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:39:17.239  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:39:24.224 @EMP002 系统管理员
+17:39:24.225 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:42:05.551  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:42:10.511 @EMP002 系统管理员
+17:42:10.513 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:44:11.587 @ANW001 20180906001
+17:44:11.592 @ANW002 GD201502090019
+17:44:11.593 @ANW003 JYLF16
+17:44:11.595 @ANW004 JYLF16-PTC三合一
+17:44:11.596 @ANW005 
+17:44:11.598 @ANW006 300
+17:44:11.599 @ANW007 台
+17:44:11.601 @ANW008 0
+17:44:11.602 @ANW009 100
+17:44:11.603 @ANW010 0507
+17:44:11.604 @ANW011 总装车间
+17:44:11.606 @ANW012 050701
+17:44:11.607 @ANW013 1线
+17:44:11.608 @ANW014 计件
+17:44:11.610 @ANW015 2018/9/6 8:00:00
+17:44:11.611 @ANW016 2018/9/6 17:00:00
+17:44:11.613 @ANW017 
+17:44:11.615 @ANW018 
+17:44:11.616 @ANW019 
+17:44:11.617 @ANW020 False
+17:44:11.619 @ANW021 False
+17:44:11.621 @ANW022 2018/9/6 0:00:00
+17:44:11.622 @ANW023 0.5
+17:44:11.623 @ANW024 0.5
+17:44:11.628 @ANX001 20180906001
+17:44:11.630 @ANX002 10139
+17:44:11.631 @ANX003 张龙
+17:44:11.633 @ANX004 一线组长
+17:44:11.635 @ANX005 2018/9/6 8:00:00
+17:44:11.636 @ANX006 2018/9/6 17:55:00
+17:44:11.638 @ANX007 2018/9/6 0:00:00
+17:44:11.639 @ANX008 2018/9/6 6:44:00
+17:44:11.640 @ANX009 12
+17:44:11.642 @ANX010 23
+17:44:11.644 @ANX011 在职
+17:44:11.645 @ANX012 
+17:44:11.646 @ANX013 检测
+17:44:11.647 @ANX014 1线
+17:44:11.648 @ANX015 8.9
+17:44:11.649 @ANX016 6.7
+17:44:11.651 @ANX017 4.7
+17:44:11.656 @ANX001 20180906001
+17:44:11.658 @ANX002 10140
+17:44:11.659 @ANX003 刘兴贵
+17:44:11.660 @ANX004 装配工
+17:44:11.662 @ANX005 2018/9/6 8:00:00
+17:44:11.663 @ANX006 2018/9/6 17:00:00
+17:44:11.664 @ANX007 
+17:44:11.665 @ANX008 
+17:44:11.666 @ANX009 0
+17:44:11.668 @ANX010 40
+17:44:11.669 @ANX011 在职
+17:44:11.670 @ANX012 
+17:44:11.671 @ANX013 
+17:44:11.673 @ANX014 1线
+17:44:11.675 @ANX015 8.5
+17:44:11.677 @ANX016 0
+17:44:11.679 @ANX017 2.6
+17:44:11.683 @ANX001 20180906001
+17:44:11.685 @ANX002 10141
+17:44:11.686 @ANX003 王振宇
+17:44:11.688 @ANX004 装配工
+17:44:11.689 @ANX005 2018/9/6 8:00:00
+17:44:11.690 @ANX006 2018/9/6 17:00:00
+17:44:11.692 @ANX007 
+17:44:11.694 @ANX008 
+17:44:11.696 @ANX009 0
+17:44:11.697 @ANX010 0
+17:44:11.699 @ANX011 在职
+17:44:11.700 @ANX012 
+17:44:11.701 @ANX013 
+17:44:11.703 @ANX014 1线
+17:44:11.704 @ANX015 8.5
+17:44:11.706 @ANX016 0
+17:44:11.707 @ANX017 2.6
+17:44:11.711 @ANX001 20180906001
+17:44:11.712 @ANX002 10142
+17:44:11.714 @ANX003 钟成菊
+17:44:11.715 @ANX004 装配工
+17:44:11.717 @ANX005 2018/9/6 8:00:00
+17:44:11.718 @ANX006 2018/9/6 17:00:00
+17:44:11.719 @ANX007 
+17:44:11.720 @ANX008 
+17:44:11.722 @ANX009 0
+17:44:11.723 @ANX010 0
+17:44:11.725 @ANX011 在职
+17:44:11.726 @ANX012 
+17:44:11.727 @ANX013 
+17:44:11.729 @ANX014 1线
+17:44:11.730 @ANX015 8.5
+17:44:11.731 @ANX016 0
+17:44:11.733 @ANX017 2.6
+17:44:11.736 @ANX001 20180906001
+17:44:11.738 @ANX002 10143
+17:44:11.739 @ANX003 赵成鹏
+17:44:11.740 @ANX004 装配工
+17:44:11.742 @ANX005 2018/9/6 8:00:00
+17:44:11.743 @ANX006 2018/9/6 17:00:00
+17:44:11.744 @ANX007 
+17:44:11.745 @ANX008 
+17:44:11.746 @ANX009 0
+17:44:11.747 @ANX010 0
+17:44:11.748 @ANX011 在职
+17:44:11.750 @ANX012 
+17:44:11.751 @ANX013 
+17:44:11.752 @ANX014 1线
+17:44:11.754 @ANX015 8.5
+17:44:11.755 @ANX016 0
+17:44:11.756 @ANX017 2.6
+17:44:11.758 @ANX001 20180906001
+17:44:11.759 @ANX002 10144
+17:44:11.761 @ANX003 何万华
+17:44:11.762 @ANX004 装配工
+17:44:11.763 @ANX005 2018/9/6 8:00:00
+17:44:11.764 @ANX006 2018/9/6 17:00:00
+17:44:11.766 @ANX007 
+17:44:11.767 @ANX008 
+17:44:11.769 @ANX009 0
+17:44:11.770 @ANX010 0
+17:44:11.771 @ANX011 在职
+17:44:11.773 @ANX012 
+17:44:11.774 @ANX013 
+17:44:11.775 @ANX014 1线
+17:44:11.776 @ANX015 8.5
+17:44:11.778 @ANX016 0
+17:44:11.779 @ANX017 2.6
+17:44:11.781 @ANX001 20180906001
+17:44:11.783 @ANX002 10145
+17:44:11.785 @ANX003 严云芹
+17:44:11.786 @ANX004 装配工
+17:44:11.788 @ANX005 2018/9/6 8:00:00
+17:44:11.790 @ANX006 2018/9/6 17:00:00
+17:44:11.791 @ANX007 
+17:44:11.792 @ANX008 
+17:44:11.793 @ANX009 0
+17:44:11.795 @ANX010 0
+17:44:11.796 @ANX011 在职
+17:44:11.797 @ANX012 
+17:44:11.799 @ANX013 
+17:44:11.800 @ANX014 1线
+17:44:11.802 @ANX015 8.5
+17:44:11.803 @ANX016 0
+17:44:11.804 @ANX017 2.6
+17:44:11.807 @ANX001 20180906001
+17:44:11.808 @ANX002 10146
+17:44:11.809 @ANX003 马小千
+17:44:11.810 @ANX004 装配工
+17:44:11.813 @ANX005 2018/9/6 8:00:00
+17:44:11.815 @ANX006 2018/9/6 17:00:00
+17:44:11.816 @ANX007 
+17:44:11.817 @ANX008 
+17:44:11.819 @ANX009 0
+17:44:11.820 @ANX010 0
+17:44:11.821 @ANX011 在职
+17:44:11.822 @ANX012 
+17:44:11.824 @ANX013 
+17:44:11.825 @ANX014 1线
+17:44:11.826 @ANX015 8.5
+17:44:11.827 @ANX016 0
+17:44:11.828 @ANX017 2.6
+17:44:11.831 @ANX001 20180906001
+17:44:11.832 @ANX002 10147
+17:44:11.834 @ANX003 周顺
+17:44:11.835 @ANX004 装配工
+17:44:11.836 @ANX005 2018/9/6 8:00:00
+17:44:11.837 @ANX006 2018/9/6 17:00:00
+17:44:11.839 @ANX007 
+17:44:11.840 @ANX008 
+17:44:11.842 @ANX009 0
+17:44:11.843 @ANX010 0
+17:44:11.844 @ANX011 在职
+17:44:11.846 @ANX012 
+17:44:11.847 @ANX013 
+17:44:11.848 @ANX014 1线
+17:44:11.849 @ANX015 8.5
+17:44:11.851 @ANX016 0
+17:44:11.852 @ANX017 2.6
+17:44:11.855 @ANX001 20180906001
+17:44:11.857 @ANX002 10148
+17:44:11.858 @ANX003 龙付咪
+17:44:11.859 @ANX004 装配工
+17:44:11.861 @ANX005 2018/9/6 8:00:00
+17:44:11.862 @ANX006 2018/9/6 17:00:00
+17:44:11.864 @ANX007 
+17:44:11.865 @ANX008 
+17:44:11.866 @ANX009 0
+17:44:11.868 @ANX010 0
+17:44:11.869 @ANX011 在职
+17:44:11.870 @ANX012 
+17:44:11.872 @ANX013 
+17:44:11.873 @ANX014 1线
+17:44:11.874 @ANX015 8.5
+17:44:11.875 @ANX016 0
+17:44:11.876 @ANX017 2.6
+17:44:11.879 @ANX001 20180906001
+17:44:11.881 @ANX002 10149
+17:44:11.882 @ANX003 郭昭芬
+17:44:11.884 @ANX004 装配工
+17:44:11.885 @ANX005 2018/9/6 8:00:00
+17:44:11.887 @ANX006 2018/9/6 17:00:00
+17:44:11.889 @ANX007 
+17:44:11.891 @ANX008 
+17:44:11.892 @ANX009 0
+17:44:11.894 @ANX010 0
+17:44:11.896 @ANX011 在职
+17:44:11.897 @ANX012 
+17:44:11.899 @ANX013 
+17:44:11.901 @ANX014 1线
+17:44:11.902 @ANX015 8.5
+17:44:11.903 @ANX016 0
+17:44:11.905 @ANX017 2.6
+17:44:11.907 @ANX001 20180906001
+17:44:11.909 @ANX002 10150
+17:44:11.910 @ANX003 刘高发
+17:44:11.912 @ANX004 装配工
+17:44:11.913 @ANX005 2018/9/6 8:00:00
+17:44:11.914 @ANX006 2018/9/6 17:00:00
+17:44:11.916 @ANX007 
+17:44:11.917 @ANX008 
+17:44:11.919 @ANX009 0
+17:44:11.920 @ANX010 0
+17:44:11.922 @ANX011 在职
+17:44:11.924 @ANX012 
+17:44:11.925 @ANX013 
+17:44:11.926 @ANX014 1线
+17:44:11.927 @ANX015 8.5
+17:44:11.929 @ANX016 0
+17:44:11.930 @ANX017 2.6
+17:44:11.932 @ANX001 20180906001
+17:44:11.934 @ANX002 10151
+17:44:11.935 @ANX003 吴张英
+17:44:11.936 @ANX004 装配工
+17:44:11.938 @ANX005 2018/9/6 8:00:00
+17:44:11.939 @ANX006 2018/9/6 17:00:00
+17:44:11.940 @ANX007 
+17:44:11.941 @ANX008 
+17:44:11.943 @ANX009 0
+17:44:11.944 @ANX010 0
+17:44:11.945 @ANX011 在职
+17:44:11.946 @ANX012 
+17:44:11.947 @ANX013 
+17:44:11.949 @ANX014 1线
+17:44:11.950 @ANX015 8.5
+17:44:11.951 @ANX016 0
+17:44:11.952 @ANX017 2.6
+17:44:11.955 @ANX001 20180906001
+17:44:11.956 @ANX002 10152
+17:44:11.957 @ANX003 杨犁
+17:44:11.959 @ANX004 装配工
+17:44:11.961 @ANX005 2018/9/6 8:00:00
+17:44:11.962 @ANX006 2018/9/6 17:00:00
+17:44:11.963 @ANX007 
+17:44:11.965 @ANX008 
+17:44:11.966 @ANX009 0
+17:44:11.967 @ANX010 0
+17:44:11.968 @ANX011 在职
+17:44:11.970 @ANX012 
+17:44:11.971 @ANX013 
+17:44:11.972 @ANX014 1线
+17:44:11.974 @ANX015 8.5
+17:44:11.975 @ANX016 0
+17:44:11.976 @ANX017 2.6
+17:44:11.979 @ANX001 20180906001
+17:44:11.980 @ANX002 10153
+17:44:11.981 @ANX003 熊洪才
+17:44:11.983 @ANX004 装配工
+17:44:11.984 @ANX005 2018/9/6 8:00:00
+17:44:11.986 @ANX006 2018/9/6 17:00:00
+17:44:11.987 @ANX007 
+17:44:11.989 @ANX008 
+17:44:11.991 @ANX009 0
+17:44:11.993 @ANX010 0
+17:44:11.994 @ANX011 在职
+17:44:11.995 @ANX012 
+17:44:11.996 @ANX013 
+17:44:11.998 @ANX014 1线
+17:44:12.000 @ANX015 8.5
+17:44:12.001 @ANX016 0
+17:44:12.003 @ANX017 2.6
+17:44:12.006 @ANX001 20180906001
+17:44:12.007 @ANX002 10154
+17:44:12.009 @ANX003 代开容
+17:44:12.010 @ANX004 装配工
+17:44:12.012 @ANX005 2018/9/6 8:00:00
+17:44:12.013 @ANX006 2018/9/6 17:00:00
+17:44:12.015 @ANX007 
+17:44:12.016 @ANX008 
+17:44:12.017 @ANX009 0
+17:44:12.019 @ANX010 0
+17:44:12.020 @ANX011 在职
+17:44:12.021 @ANX012 
+17:44:12.022 @ANX013 
+17:44:12.023 @ANX014 1线
+17:44:12.024 @ANX015 8.5
+17:44:12.026 @ANX016 0
+17:44:12.027 @ANX017 2.6
+17:44:12.029 @ANX001 20180906001
+17:44:12.031 @ANX002 10155
+17:44:12.032 @ANX003 尹宗丹
+17:44:12.034 @ANX004 装配工
+17:44:12.035 @ANX005 2018/9/6 8:00:00
+17:44:12.036 @ANX006 2018/9/6 17:00:00
+17:44:12.038 @ANX007 
+17:44:12.039 @ANX008 
+17:44:12.040 @ANX009 0
+17:44:12.041 @ANX010 0
+17:44:12.042 @ANX011 在职
+17:44:12.043 @ANX012 
+17:44:12.045 @ANX013 
+17:44:12.046 @ANX014 1线
+17:44:12.047 @ANX015 8.5
+17:44:12.048 @ANX016 0
+17:44:12.049 @ANX017 2.6
+17:44:12.052 @ANX001 20180906001
+17:44:12.054 @ANX002 10156
+17:44:12.055 @ANX003 朱正高
+17:44:12.057 @ANX004 装配工
+17:44:12.058 @ANX005 2018/9/6 8:00:00
+17:44:12.059 @ANX006 2018/9/6 17:00:00
+17:44:12.060 @ANX007 
+17:44:12.061 @ANX008 
+17:44:12.063 @ANX009 0
+17:44:12.064 @ANX010 0
+17:44:12.065 @ANX011 在职
+17:44:12.066 @ANX012 
+17:44:12.067 @ANX013 
+17:44:12.069 @ANX014 1线
+17:44:12.070 @ANX015 8.5
+17:44:12.071 @ANX016 0
+17:44:12.072 @ANX017 2.6
+17:44:12.074 @ANX001 20180906001
+17:44:12.076 @ANX002 10157
+17:44:12.077 @ANX003 卿廷群
+17:44:12.079 @ANX004 装配工
+17:44:12.080 @ANX005 2018/9/6 8:00:00
+17:44:12.082 @ANX006 2018/9/6 17:00:00
+17:44:12.083 @ANX007 
+17:44:12.085 @ANX008 
+17:44:12.086 @ANX009 0
+17:44:12.087 @ANX010 0
+17:44:12.088 @ANX011 在职
+17:44:12.089 @ANX012 
+17:44:12.091 @ANX013 
+17:44:12.092 @ANX014 1线
+17:44:12.094 @ANX015 8.5
+17:44:12.096 @ANX016 0
+17:44:12.097 @ANX017 2.6
+17:44:12.101 @ANX001 20180906001
+17:44:12.102 @ANX002 10158
+17:44:12.104 @ANX003 邹修丽
+17:44:12.105 @ANX004 装配工
+17:44:12.106 @ANX005 2018/9/6 8:00:00
+17:44:12.108 @ANX006 2018/9/6 17:00:00
+17:44:12.109 @ANX007 
+17:44:12.110 @ANX008 
+17:44:12.111 @ANX009 0
+17:44:12.113 @ANX010 0
+17:44:12.114 @ANX011 在职
+17:44:12.115 @ANX012 
+17:44:12.117 @ANX013 
+17:44:12.118 @ANX014 1线
+17:44:12.119 @ANX015 8.5
+17:44:12.120 @ANX016 0
+17:44:12.122 @ANX017 2.6
+17:44:12.124 @ANX001 20180906001
+17:44:12.126 @ANX002 10159
+17:44:12.127 @ANX003 徐永洪
+17:44:12.129 @ANX004 装配工
+17:44:12.130 @ANX005 2018/9/6 8:00:00
+17:44:12.131 @ANX006 2018/9/6 17:00:00
+17:44:12.132 @ANX007 
+17:44:12.134 @ANX008 
+17:44:12.135 @ANX009 0
+17:44:12.136 @ANX010 0
+17:44:12.137 @ANX011 在职
+17:44:12.138 @ANX012 
+17:44:12.139 @ANX013 
+17:44:12.140 @ANX014 1线
+17:44:12.142 @ANX015 8.5
+17:44:12.143 @ANX016 0
+17:44:12.145 @ANX017 2.6
+17:44:12.147 @ANX001 20180906001
+17:44:12.149 @ANX002 10160
+17:44:12.150 @ANX003 刘仁燕
+17:44:12.152 @ANX004 装配工
+17:44:12.153 @ANX005 2018/9/6 8:00:00
+17:44:12.155 @ANX006 2018/9/6 17:00:00
+17:44:12.157 @ANX007 
+17:44:12.158 @ANX008 
+17:44:12.159 @ANX009 0
+17:44:12.161 @ANX010 0
+17:44:12.162 @ANX011 在职
+17:44:12.163 @ANX012 
+17:44:12.164 @ANX013 
+17:44:12.166 @ANX014 1线
+17:44:12.167 @ANX015 8.5
+17:44:12.168 @ANX016 0
+17:44:12.169 @ANX017 2.6
+17:44:12.172 @ANX001 20180906001
+17:44:12.173 @ANX002 10161
+17:44:12.174 @ANX003 陈万珍
+17:44:12.176 @ANX004 装配工
+17:44:12.178 @ANX005 2018/9/6 8:00:00
+17:44:12.179 @ANX006 2018/9/6 17:00:00
+17:44:12.180 @ANX007 
+17:44:12.182 @ANX008 
+17:44:12.183 @ANX009 0
+17:44:12.184 @ANX010 0
+17:44:12.185 @ANX011 在职
+17:44:12.186 @ANX012 
+17:44:12.187 @ANX013 
+17:44:12.188 @ANX014 1线
+17:44:12.190 @ANX015 8.5
+17:44:12.192 @ANX016 0
+17:44:12.193 @ANX017 2.6
+17:44:12.196 @ANX001 20180906001
+17:44:12.197 @ANX002 10162
+17:44:12.198 @ANX003 李义承
+17:44:12.200 @ANX004 装配工
+17:44:12.201 @ANX005 2018/9/6 8:00:00
+17:44:12.202 @ANX006 2018/9/6 17:00:00
+17:44:12.203 @ANX007 
+17:44:12.205 @ANX008 
+17:44:12.206 @ANX009 0
+17:44:12.207 @ANX010 0
+17:44:12.209 @ANX011 在职
+17:44:12.210 @ANX012 
+17:44:12.211 @ANX013 
+17:44:12.213 @ANX014 1线
+17:44:12.214 @ANX015 8.5
+17:44:12.216 @ANX016 0
+17:44:12.217 @ANX017 2.6
+17:44:12.220 @ANX001 20180906001
+17:44:12.221 @ANX002 10163
+17:44:12.223 @ANX003 张义兵
+17:44:12.224 @ANX004 装配工
+17:44:12.225 @ANX005 2018/9/6 8:00:00
+17:44:12.226 @ANX006 2018/9/6 17:00:00
+17:44:12.228 @ANX007 
+17:44:12.229 @ANX008 
+17:44:12.230 @ANX009 0
+17:44:12.231 @ANX010 0
+17:44:12.233 @ANX011 在职
+17:44:12.234 @ANX012 
+17:44:12.235 @ANX013 
+17:44:12.237 @ANX014 1线
+17:44:12.238 @ANX015 8.5
+17:44:12.239 @ANX016 0
+17:44:12.240 @ANX017 2.6
+17:44:12.243 @ANX001 20180906001
+17:44:12.244 @ANX002 10164
+17:44:12.245 @ANX003 韩会萍
+17:44:12.246 @ANX004 装配工
+17:44:12.248 @ANX005 2018/9/6 8:00:00
+17:44:12.249 @ANX006 2018/9/6 17:00:00
+17:44:12.250 @ANX007 
+17:44:12.252 @ANX008 
+17:44:12.253 @ANX009 0
+17:44:12.254 @ANX010 0
+17:44:12.255 @ANX011 在职
+17:44:12.256 @ANX012 
+17:44:12.258 @ANX013 
+17:44:12.259 @ANX014 1线
+17:44:12.260 @ANX015 8.5
+17:44:12.261 @ANX016 0
+17:44:12.262 @ANX017 2.6
+17:44:12.265 @ANX001 20180906001
+17:44:12.266 @ANX002 10165
+17:44:12.267 @ANX003 国明秀
+17:44:12.269 @ANX004 装配工
+17:44:12.270 @ANX005 2018/9/6 8:00:00
+17:44:12.271 @ANX006 2018/9/6 17:00:00
+17:44:12.272 @ANX007 
+17:44:12.274 @ANX008 
+17:44:12.275 @ANX009 0
+17:44:12.276 @ANX010 0
+17:44:12.277 @ANX011 在职
+17:44:12.279 @ANX012 
+17:44:12.280 @ANX013 
+17:44:12.281 @ANX014 1线
+17:44:12.283 @ANX015 8.5
+17:44:12.284 @ANX016 0
+17:44:12.285 @ANX017 2.6
+17:44:48.690 @ANW002 GD201502090019
+17:44:48.691 @ANW003 JYLF16
+17:44:48.693 @ANW004 JYLF16-PTC三合一
+17:44:48.694 @ANW005 
+17:44:48.695 @ANW006 300
+17:44:48.696 @ANW007 台
+17:44:48.698 @ANW008 0.000000
+17:44:48.699 @ANW009 100
+17:44:48.700 @ANW010 0507
+17:44:48.702 @ANW011 总装车间
+17:44:48.703 @ANW012 050701
+17:44:48.705 @ANW013 1线
+17:44:48.706 @ANW014 计件
+17:44:48.707 @ANW015 2018/9/6 8:00:00
+17:44:48.709 @ANW016 2018/9/6 17:00:00
+17:44:48.710 @ANW017 
+17:44:48.711 @ANW018 
+17:44:48.712 @ANW019 
+17:44:48.713 @ANW020 False
+17:44:48.714 @ANW021 False
+17:44:48.716 @ANW001 20180906001
+17:44:48.717 @ANW023 0.5
+17:44:48.718 @ANW024 0.5
+17:44:48.725 @ANX003 张龙
+17:44:48.727 @ANX004 一线组长
+17:44:48.728 @ANX005 2018/9/6 8:00:00
+17:44:48.729 @ANX006 2018/9/6 17:55:00
+17:44:48.730 @ANX007 2018/9/6 0:00:00
+17:44:48.732 @ANX008 2018/9/6 6:44:00
+17:44:48.733 @ANX009 12
+17:44:48.734 @ANX010 23
+17:44:48.735 @ANX011 在职
+17:44:48.736 @ANX012 
+17:44:48.737 @idx 283
+17:44:48.739 @ANX002 10139
+17:44:48.740 @ANX013 检测
+17:44:48.742 @ANX014 1线
+17:44:48.744 @ANX015 8.900000
+17:44:48.745 @ANX016 6.700000
+17:44:48.747 @ANX017 4.700000
+17:44:48.755 @ANX003 刘兴贵
+17:44:48.756 @ANX004 装配工
+17:44:48.758 @ANX005 2018/9/6 8:00:00
+17:44:48.759 @ANX006 2018/9/6 17:00:00
+17:44:48.762 @ANX007 
+17:44:48.764 @ANX008 
+17:44:48.765 @ANX009 0
+17:44:48.766 @ANX010 40
+17:44:48.768 @ANX011 在职
+17:44:48.770 @ANX012 
+17:44:48.772 @idx 284
+17:44:48.773 @ANX002 10140
+17:44:48.774 @ANX013 
+17:44:48.776 @ANX014 1线
+17:44:48.777 @ANX015 8.500000
+17:44:48.778 @ANX016 0.000000
+17:44:48.780 @ANX017 2.600000
+17:44:48.787 @ANX003 王振宇
+17:44:48.789 @ANX004 装配工
+17:44:48.790 @ANX005 2018/9/6 8:00:00
+17:44:48.792 @ANX006 2018/9/6 17:00:00
+17:44:48.793 @ANX007 
+17:44:48.794 @ANX008 
+17:44:48.795 @ANX009 0
+17:44:48.796 @ANX010 10
+17:44:48.797 @ANX011 在职
+17:44:48.801 @ANX012 
+17:44:48.803 @idx 285
+17:44:48.805 @ANX002 10141
+17:44:48.807 @ANX013 
+17:44:48.808 @ANX014 1线
+17:44:48.809 @ANX015 8.500000
+17:44:48.811 @ANX016 0.000000
+17:44:48.812 @ANX017 2.600000
+17:44:48.815 @ANX003 钟成菊
+17:44:48.816 @ANX004 装配工
+17:44:48.817 @ANX005 2018/9/6 8:00:00
+17:44:48.818 @ANX006 2018/9/6 17:00:00
+17:44:48.820 @ANX007 
+17:44:48.821 @ANX008 
+17:44:48.823 @ANX009 0
+17:44:48.825 @ANX010 0
+17:44:48.826 @ANX011 在职
+17:44:48.828 @ANX012 
+17:44:48.829 @idx 286
+17:44:48.831 @ANX002 10142
+17:44:48.833 @ANX013 
+17:44:48.835 @ANX014 1线
+17:44:48.837 @ANX015 8.500000
+17:44:48.839 @ANX016 0.000000
+17:44:48.841 @ANX017 2.600000
+17:44:48.848 @ANX003 赵成鹏
+17:44:48.849 @ANX004 装配工
+17:44:48.850 @ANX005 2018/9/6 8:00:00
+17:44:48.852 @ANX006 2018/9/6 17:00:00
+17:44:48.854 @ANX007 
+17:44:48.855 @ANX008 
+17:44:48.857 @ANX009 0
+17:44:48.858 @ANX010 0
+17:44:48.859 @ANX011 在职
+17:44:48.860 @ANX012 
+17:44:48.861 @idx 287
+17:44:48.863 @ANX002 10143
+17:44:48.865 @ANX013 
+17:44:48.866 @ANX014 1线
+17:44:48.867 @ANX015 8.500000
+17:44:48.869 @ANX016 0.000000
+17:44:48.870 @ANX017 2.600000
+17:44:48.873 @ANX003 何万华
+17:44:48.874 @ANX004 装配工
+17:44:48.875 @ANX005 2018/9/6 8:00:00
+17:44:48.877 @ANX006 2018/9/6 17:00:00
+17:44:48.878 @ANX007 
+17:44:48.879 @ANX008 
+17:44:48.881 @ANX009 0
+17:44:48.882 @ANX010 0
+17:44:48.884 @ANX011 在职
+17:44:48.886 @ANX012 
+17:44:48.888 @idx 288
+17:44:48.889 @ANX002 10144
+17:44:48.890 @ANX013 
+17:44:48.891 @ANX014 1线
+17:44:48.892 @ANX015 8.500000
+17:44:48.893 @ANX016 0.000000
+17:44:48.894 @ANX017 2.600000
+17:44:48.897 @ANX003 严云芹
+17:44:48.898 @ANX004 装配工
+17:44:48.899 @ANX005 2018/9/6 8:00:00
+17:44:48.900 @ANX006 2018/9/6 17:00:00
+17:44:48.902 @ANX007 
+17:44:48.904 @ANX008 
+17:44:48.906 @ANX009 0
+17:44:48.907 @ANX010 0
+17:44:48.909 @ANX011 在职
+17:44:48.910 @ANX012 
+17:44:48.912 @idx 289
+17:44:48.913 @ANX002 10145
+17:44:48.915 @ANX013 
+17:44:48.916 @ANX014 1线
+17:44:48.917 @ANX015 8.500000
+17:44:48.919 @ANX016 0.000000
+17:44:48.921 @ANX017 2.600000
+17:44:48.924 @ANX003 马小千
+17:44:48.926 @ANX004 装配工
+17:44:48.927 @ANX005 2018/9/6 8:00:00
+17:44:48.929 @ANX006 2018/9/6 17:00:00
+17:44:48.930 @ANX007 
+17:44:48.932 @ANX008 
+17:44:48.934 @ANX009 0
+17:44:48.935 @ANX010 0
+17:44:48.936 @ANX011 在职
+17:44:48.938 @ANX012 
+17:44:48.939 @idx 290
+17:44:48.941 @ANX002 10146
+17:44:48.943 @ANX013 
+17:44:48.945 @ANX014 1线
+17:44:48.946 @ANX015 8.500000
+17:44:48.947 @ANX016 0.000000
+17:44:48.948 @ANX017 2.600000
+17:44:48.951 @ANX003 周顺
+17:44:48.953 @ANX004 装配工
+17:44:48.954 @ANX005 2018/9/6 8:00:00
+17:44:48.956 @ANX006 2018/9/6 17:00:00
+17:44:48.957 @ANX007 
+17:44:48.958 @ANX008 
+17:44:48.960 @ANX009 0
+17:44:48.962 @ANX010 0
+17:44:48.963 @ANX011 在职
+17:44:48.965 @ANX012 
+17:44:48.966 @idx 291
+17:44:48.967 @ANX002 10147
+17:44:48.969 @ANX013 
+17:44:48.970 @ANX014 1线
+17:44:48.971 @ANX015 8.500000
+17:44:48.972 @ANX016 0.000000
+17:44:48.973 @ANX017 2.600000
+17:44:48.976 @ANX003 龙付咪
+17:44:48.978 @ANX004 装配工
+17:44:48.979 @ANX005 2018/9/6 8:00:00
+17:44:48.981 @ANX006 2018/9/6 17:00:00
+17:44:48.982 @ANX007 
+17:44:48.984 @ANX008 
+17:44:48.985 @ANX009 0
+17:44:48.987 @ANX010 0
+17:44:48.988 @ANX011 在职
+17:44:48.990 @ANX012 
+17:44:48.991 @idx 292
+17:44:48.993 @ANX002 10148
+17:44:48.994 @ANX013 
+17:44:48.995 @ANX014 1线
+17:44:48.996 @ANX015 8.500000
+17:44:48.998 @ANX016 0.000000
+17:44:48.999 @ANX017 2.600000
+17:44:49.002 @ANX003 郭昭芬
+17:44:49.004 @ANX004 装配工
+17:44:49.005 @ANX005 2018/9/6 8:00:00
+17:44:49.007 @ANX006 2018/9/6 17:00:00
+17:44:49.008 @ANX007 
+17:44:49.009 @ANX008 
+17:44:49.010 @ANX009 0
+17:44:49.011 @ANX010 0
+17:44:49.012 @ANX011 在职
+17:44:49.014 @ANX012 
+17:44:49.015 @idx 293
+17:44:49.016 @ANX002 10149
+17:44:49.017 @ANX013 
+17:44:49.019 @ANX014 1线
+17:44:49.021 @ANX015 8.500000
+17:44:49.023 @ANX016 0.000000
+17:44:49.024 @ANX017 2.600000
+17:44:49.026 @ANX003 刘高发
+17:44:49.028 @ANX004 装配工
+17:44:49.029 @ANX005 2018/9/6 8:00:00
+17:44:49.030 @ANX006 2018/9/6 17:00:00
+17:44:49.031 @ANX007 
+17:44:49.033 @ANX008 
+17:44:49.034 @ANX009 0
+17:44:49.035 @ANX010 0
+17:44:49.037 @ANX011 在职
+17:44:49.038 @ANX012 
+17:44:49.040 @idx 294
+17:44:49.042 @ANX002 10150
+17:44:49.043 @ANX013 
+17:44:49.044 @ANX014 1线
+17:44:49.045 @ANX015 8.500000
+17:44:49.046 @ANX016 0.000000
+17:44:49.047 @ANX017 2.600000
+17:44:49.050 @ANX003 吴张英
+17:44:49.052 @ANX004 装配工
+17:44:49.053 @ANX005 2018/9/6 8:00:00
+17:44:49.054 @ANX006 2018/9/6 17:00:00
+17:44:49.055 @ANX007 
+17:44:49.057 @ANX008 
+17:44:49.058 @ANX009 0
+17:44:49.059 @ANX010 0
+17:44:49.060 @ANX011 在职
+17:44:49.061 @ANX012 
+17:44:49.062 @idx 295
+17:44:49.064 @ANX002 10151
+17:44:49.065 @ANX013 
+17:44:49.066 @ANX014 1线
+17:44:49.067 @ANX015 8.500000
+17:44:49.069 @ANX016 0.000000
+17:44:49.071 @ANX017 2.600000
+17:44:49.074 @ANX003 杨犁
+17:44:49.076 @ANX004 装配工
+17:44:49.077 @ANX005 2018/9/6 8:00:00
+17:44:49.078 @ANX006 2018/9/6 17:00:00
+17:44:49.079 @ANX007 
+17:44:49.081 @ANX008 
+17:44:49.082 @ANX009 0
+17:44:49.084 @ANX010 0
+17:44:49.085 @ANX011 在职
+17:44:49.086 @ANX012 
+17:44:49.087 @idx 296
+17:44:49.088 @ANX002 10152
+17:44:49.089 @ANX013 
+17:44:49.090 @ANX014 1线
+17:44:49.092 @ANX015 8.500000
+17:44:49.093 @ANX016 0.000000
+17:44:49.094 @ANX017 2.600000
+17:44:49.097 @ANX003 熊洪才
+17:44:49.098 @ANX004 装配工
+17:44:49.100 @ANX005 2018/9/6 8:00:00
+17:44:49.101 @ANX006 2018/9/6 17:00:00
+17:44:49.102 @ANX007 
+17:44:49.103 @ANX008 
+17:44:49.104 @ANX009 0
+17:44:49.106 @ANX010 0
+17:44:49.107 @ANX011 在职
+17:44:49.108 @ANX012 
+17:44:49.109 @idx 297
+17:44:49.110 @ANX002 10153
+17:44:49.112 @ANX013 
+17:44:49.113 @ANX014 1线
+17:44:49.115 @ANX015 8.500000
+17:44:49.116 @ANX016 0.000000
+17:44:49.117 @ANX017 2.600000
+17:44:49.120 @ANX003 代开容
+17:44:49.121 @ANX004 装配工
+17:44:49.123 @ANX005 2018/9/6 8:00:00
+17:44:49.124 @ANX006 2018/9/6 17:00:00
+17:44:49.125 @ANX007 
+17:44:49.127 @ANX008 
+17:44:49.128 @ANX009 0
+17:44:49.129 @ANX010 0
+17:44:49.131 @ANX011 在职
+17:44:49.132 @ANX012 
+17:44:49.134 @idx 298
+17:44:49.135 @ANX002 10154
+17:44:49.137 @ANX013 
+17:44:49.139 @ANX014 1线
+17:44:49.140 @ANX015 8.500000
+17:44:49.142 @ANX016 0.000000
+17:44:49.143 @ANX017 2.600000
+17:44:49.145 @ANX003 尹宗丹
+17:44:49.147 @ANX004 装配工
+17:44:49.148 @ANX005 2018/9/6 8:00:00
+17:44:49.150 @ANX006 2018/9/6 17:00:00
+17:44:49.151 @ANX007 
+17:44:49.152 @ANX008 
+17:44:49.153 @ANX009 0
+17:44:49.155 @ANX010 0
+17:44:49.156 @ANX011 在职
+17:44:49.157 @ANX012 
+17:44:49.158 @idx 299
+17:44:49.160 @ANX002 10155
+17:44:49.161 @ANX013 
+17:44:49.162 @ANX014 1线
+17:44:49.163 @ANX015 8.500000
+17:44:49.165 @ANX016 0.000000
+17:44:49.166 @ANX017 2.600000
+17:44:49.169 @ANX003 朱正高
+17:44:49.170 @ANX004 装配工
+17:44:49.171 @ANX005 2018/9/6 8:00:00
+17:44:49.173 @ANX006 2018/9/6 17:00:00
+17:44:49.174 @ANX007 
+17:44:49.176 @ANX008 
+17:44:49.177 @ANX009 0
+17:44:49.178 @ANX010 0
+17:44:49.179 @ANX011 在职
+17:44:49.182 @ANX012 
+17:44:49.183 @idx 300
+17:44:49.184 @ANX002 10156
+17:44:49.185 @ANX013 
+17:44:49.186 @ANX014 1线
+17:44:49.187 @ANX015 8.500000
+17:44:49.189 @ANX016 0.000000
+17:44:49.190 @ANX017 2.600000
+17:44:49.193 @ANX003 卿廷群
+17:44:49.195 @ANX004 装配工
+17:44:49.196 @ANX005 2018/9/6 8:00:00
+17:44:49.197 @ANX006 2018/9/6 17:00:00
+17:44:49.198 @ANX007 
+17:44:49.200 @ANX008 
+17:44:49.201 @ANX009 0
+17:44:49.203 @ANX010 0
+17:44:49.204 @ANX011 在职
+17:44:49.205 @ANX012 
+17:44:49.206 @idx 301
+17:44:49.207 @ANX002 10157
+17:44:49.209 @ANX013 
+17:44:49.210 @ANX014 1线
+17:44:49.211 @ANX015 8.500000
+17:44:49.212 @ANX016 0.000000
+17:44:49.213 @ANX017 2.600000
+17:44:49.216 @ANX003 邹修丽
+17:44:49.218 @ANX004 装配工
+17:44:49.219 @ANX005 2018/9/6 8:00:00
+17:44:49.221 @ANX006 2018/9/6 17:00:00
+17:44:49.222 @ANX007 
+17:44:49.223 @ANX008 
+17:44:49.225 @ANX009 0
+17:44:49.226 @ANX010 0
+17:44:49.227 @ANX011 在职
+17:44:49.228 @ANX012 
+17:44:49.229 @idx 302
+17:44:49.231 @ANX002 10158
+17:44:49.232 @ANX013 
+17:44:49.233 @ANX014 1线
+17:44:49.235 @ANX015 8.500000
+17:44:49.236 @ANX016 0.000000
+17:44:49.237 @ANX017 2.600000
+17:44:49.240 @ANX003 徐永洪
+17:44:49.242 @ANX004 装配工
+17:44:49.243 @ANX005 2018/9/6 8:00:00
+17:44:49.244 @ANX006 2018/9/6 17:00:00
+17:44:49.246 @ANX007 
+17:44:49.247 @ANX008 
+17:44:49.248 @ANX009 0
+17:44:49.249 @ANX010 0
+17:44:49.251 @ANX011 在职
+17:44:49.252 @ANX012 
+17:44:49.253 @idx 303
+17:44:49.254 @ANX002 10159
+17:44:49.256 @ANX013 
+17:44:49.257 @ANX014 1线
+17:44:49.258 @ANX015 8.500000
+17:44:49.259 @ANX016 0.000000
+17:44:49.260 @ANX017 2.600000
+17:44:49.263 @ANX003 刘仁燕
+17:44:49.265 @ANX004 装配工
+17:44:49.266 @ANX005 2018/9/6 8:00:00
+17:44:49.267 @ANX006 2018/9/6 17:00:00
+17:44:49.268 @ANX007 
+17:44:49.270 @ANX008 
+17:44:49.271 @ANX009 0
+17:44:49.272 @ANX010 0
+17:44:49.274 @ANX011 在职
+17:44:49.275 @ANX012 
+17:44:49.276 @idx 304
+17:44:49.278 @ANX002 10160
+17:44:49.279 @ANX013 
+17:44:49.280 @ANX014 1线
+17:44:49.282 @ANX015 8.500000
+17:44:49.283 @ANX016 0.000000
+17:44:49.285 @ANX017 2.600000
+17:44:49.287 @ANX003 陈万珍
+17:44:49.289 @ANX004 装配工
+17:44:49.290 @ANX005 2018/9/6 8:00:00
+17:44:49.291 @ANX006 2018/9/6 17:00:00
+17:44:49.293 @ANX007 
+17:44:49.294 @ANX008 
+17:44:49.295 @ANX009 0
+17:44:49.296 @ANX010 0
+17:44:49.297 @ANX011 在职
+17:44:49.298 @ANX012 
+17:44:49.300 @idx 305
+17:44:49.301 @ANX002 10161
+17:44:49.303 @ANX013 
+17:44:49.304 @ANX014 1线
+17:44:49.306 @ANX015 8.500000
+17:44:49.307 @ANX016 0.000000
+17:44:49.308 @ANX017 2.600000
+17:44:49.311 @ANX003 李义承
+17:44:49.312 @ANX004 装配工
+17:44:49.314 @ANX005 2018/9/6 8:00:00
+17:44:49.315 @ANX006 2018/9/6 17:00:00
+17:44:49.317 @ANX007 
+17:44:49.318 @ANX008 
+17:44:49.320 @ANX009 0
+17:44:49.321 @ANX010 0
+17:44:49.323 @ANX011 在职
+17:44:49.324 @ANX012 
+17:44:49.325 @idx 306
+17:44:49.326 @ANX002 10162
+17:44:49.328 @ANX013 
+17:44:49.329 @ANX014 1线
+17:44:49.330 @ANX015 8.500000
+17:44:49.332 @ANX016 0.000000
+17:44:49.333 @ANX017 2.600000
+17:44:49.336 @ANX003 张义兵
+17:44:49.337 @ANX004 装配工
+17:44:49.339 @ANX005 2018/9/6 8:00:00
+17:44:49.340 @ANX006 2018/9/6 17:00:00
+17:44:49.341 @ANX007 
+17:44:49.342 @ANX008 
+17:44:49.344 @ANX009 0
+17:44:49.345 @ANX010 0
+17:44:49.346 @ANX011 在职
+17:44:49.347 @ANX012 
+17:44:49.348 @idx 307
+17:44:49.350 @ANX002 10163
+17:44:49.351 @ANX013 
+17:44:49.352 @ANX014 1线
+17:44:49.354 @ANX015 8.500000
+17:44:49.355 @ANX016 0.000000
+17:44:49.357 @ANX017 2.600000
+17:44:49.359 @ANX003 韩会萍
+17:44:49.361 @ANX004 装配工
+17:44:49.362 @ANX005 2018/9/6 8:00:00
+17:44:49.363 @ANX006 2018/9/6 17:00:00
+17:44:49.365 @ANX007 
+17:44:49.366 @ANX008 
+17:44:49.367 @ANX009 0
+17:44:49.369 @ANX010 0
+17:44:49.370 @ANX011 在职
+17:44:49.371 @ANX012 
+17:44:49.372 @idx 308
+17:44:49.373 @ANX002 10164
+17:44:49.375 @ANX013 
+17:44:49.376 @ANX014 1线
+17:44:49.377 @ANX015 8.500000
+17:44:49.378 @ANX016 0.000000
+17:44:49.380 @ANX017 2.600000
+17:44:49.382 @ANX003 国明秀
+17:44:49.384 @ANX004 装配工
+17:44:49.385 @ANX005 2018/9/6 8:00:00
+17:44:49.386 @ANX006 2018/9/6 17:00:00
+17:44:49.388 @ANX007 
+17:44:49.389 @ANX008 
+17:44:49.390 @ANX009 0
+17:44:49.392 @ANX010 0
+17:44:49.394 @ANX011 在职
+17:44:49.395 @ANX012 
+17:44:49.397 @idx 309
+17:44:49.398 @ANX002 10165
+17:44:49.399 @ANX013 
+17:44:49.400 @ANX014 1线
+17:44:49.402 @ANX015 8.500000
+17:44:49.403 @ANX016 0.000000
+17:44:49.404 @ANX017 2.600000
+17:47:53.290  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:47:58.242 @EMP002 系统管理员
+17:47:58.244 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:48:35.235 @ANW002 GD201502090019
+17:48:35.237 @ANW003 JYLF16
+17:48:35.238 @ANW004 JYLF16-PTC三合一
+17:48:35.239 @ANW005 
+17:48:35.241 @ANW006 300
+17:48:35.242 @ANW007 台
+17:48:35.243 @ANW008 0.000000
+17:48:35.245 @ANW009 100
+17:48:35.246 @ANW010 0507
+17:48:35.247 @ANW011 总装车间
+17:48:35.249 @ANW012 050701
+17:48:35.251 @ANW013 1线
+17:48:35.252 @ANW014 计件
+17:48:35.254 @ANW015 2018/9/6 8:00:00
+17:48:35.255 @ANW016 2018/9/6 17:00:00
+17:48:35.256 @ANW017 
+17:48:35.258 @ANW018 
+17:48:35.259 @ANW019 
+17:48:35.261 @ANW020 False
+17:48:35.262 @ANW021 False
+17:48:35.264 @ANW001 20180906001
+17:48:35.266 @ANW023 0.5
+17:48:35.268 @ANW024 0.5
+17:48:35.271 @ANX003 张龙
+17:48:35.272 @ANX004 一线组长
+17:48:35.273 @ANX005 2018/9/6 8:00:00
+17:48:35.274 @ANX006 2018/9/6 17:55:00
+17:48:35.276 @ANX007 2018/9/6 0:00:00
+17:48:35.277 @ANX008 2018/9/6 6:44:00
+17:48:35.279 @ANX009 12
+17:48:35.280 @ANX010 23
+17:48:35.282 @ANX011 在职
+17:48:35.283 @ANX012 
+17:48:35.284 @idx 283
+17:48:35.285 @ANX002 10139
+17:48:35.287 @ANX013 检测
+17:48:35.288 @ANX014 1线
+17:48:35.290 @ANX015 8.900000
+17:48:35.291 @ANX016 6.700000
+17:48:35.293 @ANX017 6
+17:48:35.300 @ANX003 刘兴贵
+17:48:35.302 @ANX004 装配工
+17:48:35.303 @ANX005 2018/9/6 8:00:00
+17:48:35.304 @ANX006 2018/9/6 17:00:00
+17:48:35.305 @ANX007 
+17:48:35.306 @ANX008 
+17:48:35.308 @ANX009 0
+17:48:35.310 @ANX010 40
+17:48:35.311 @ANX011 在职
+17:48:35.313 @ANX012 
+17:48:35.314 @idx 284
+17:48:35.316 @ANX002 10140
+17:48:35.318 @ANX013 
+17:48:35.319 @ANX014 1线
+17:48:35.320 @ANX015 8.500000
+17:48:35.322 @ANX016 0.000000
+17:48:35.323 @ANX017 3.2
+17:48:35.331 @ANX003 王振宇
+17:48:35.332 @ANX004 装配工
+17:48:35.333 @ANX005 2018/9/6 8:00:00
+17:48:35.335 @ANX006 2018/9/6 17:00:00
+17:48:35.337 @ANX007 
+17:48:35.338 @ANX008 
+17:48:35.340 @ANX009 0
+17:48:35.341 @ANX010 10
+17:48:35.342 @ANX011 在职
+17:48:35.344 @ANX012 
+17:48:35.346 @idx 285
+17:48:35.347 @ANX002 10141
+17:48:35.349 @ANX013 
+17:48:35.350 @ANX014 1线
+17:48:35.352 @ANX015 8.500000
+17:48:35.353 @ANX016 0.000000
+17:48:35.355 @ANX017 3.2
+17:48:35.358 @ANX003 钟成菊
+17:48:35.360 @ANX004 装配工
+17:48:35.362 @ANX005 2018/9/6 8:00:00
+17:48:35.363 @ANX006 2018/9/6 17:00:00
+17:48:35.365 @ANX007 
+17:48:35.366 @ANX008 
+17:48:35.368 @ANX009 0
+17:48:35.369 @ANX010 10
+17:48:35.370 @ANX011 在职
+17:48:35.371 @ANX012 
+17:48:35.373 @idx 286
+17:48:35.374 @ANX002 10142
+17:48:35.376 @ANX013 检测
+17:48:35.377 @ANX014 1线
+17:48:35.379 @ANX015 8.500000
+17:48:35.381 @ANX016 0.000000
+17:48:35.383 @ANX017 3.2
+17:48:35.386 @ANX003 赵成鹏
+17:48:35.388 @ANX004 装配工
+17:48:35.389 @ANX005 2018/9/6 8:00:00
+17:48:35.390 @ANX006 2018/9/6 17:00:00
+17:48:35.392 @ANX007 
+17:48:35.393 @ANX008 
+17:48:35.394 @ANX009 0
+17:48:35.395 @ANX010 0
+17:48:35.396 @ANX011 在职
+17:48:35.397 @ANX012 
+17:48:35.399 @idx 287
+17:48:35.401 @ANX002 10143
+17:48:35.403 @ANX013 
+17:48:35.405 @ANX014 1线
+17:48:35.406 @ANX015 8.500000
+17:48:35.407 @ANX016 0.000000
+17:48:35.409 @ANX017 3.2
+17:48:35.417 @ANX003 何万华
+17:48:35.419 @ANX004 装配工
+17:48:35.420 @ANX005 2018/9/6 8:00:00
+17:48:35.422 @ANX006 2018/9/6 17:00:00
+17:48:35.424 @ANX007 
+17:48:35.425 @ANX008 
+17:48:35.426 @ANX009 0
+17:48:35.428 @ANX010 0
+17:48:35.429 @ANX011 在职
+17:48:35.430 @ANX012 
+17:48:35.432 @idx 288
+17:48:35.433 @ANX002 10144
+17:48:35.434 @ANX013 
+17:48:35.435 @ANX014 1线
+17:48:35.437 @ANX015 8.500000
+17:48:35.439 @ANX016 0.000000
+17:48:35.440 @ANX017 3.2
+17:48:35.444 @ANX003 严云芹
+17:48:35.445 @ANX004 装配工
+17:48:35.447 @ANX005 2018/9/6 8:00:00
+17:48:35.448 @ANX006 2018/9/6 17:00:00
+17:48:35.449 @ANX007 
+17:48:35.451 @ANX008 
+17:48:35.452 @ANX009 0
+17:48:35.454 @ANX010 0
+17:48:35.456 @ANX011 在职
+17:48:35.457 @ANX012 
+17:48:35.459 @idx 289
+17:48:35.460 @ANX002 10145
+17:48:35.462 @ANX013 
+17:48:35.463 @ANX014 1线
+17:48:35.465 @ANX015 8.500000
+17:48:35.466 @ANX016 0.000000
+17:48:35.467 @ANX017 3.2
+17:48:35.470 @ANX003 马小千
+17:48:35.472 @ANX004 装配工
+17:48:35.474 @ANX005 2018/9/6 8:00:00
+17:48:35.475 @ANX006 2018/9/6 17:00:00
+17:48:35.477 @ANX007 
+17:48:35.478 @ANX008 
+17:48:35.479 @ANX009 0
+17:48:35.481 @ANX010 0
+17:48:35.482 @ANX011 在职
+17:48:35.483 @ANX012 
+17:48:35.485 @idx 290
+17:48:35.486 @ANX002 10146
+17:48:35.487 @ANX013 
+17:48:35.489 @ANX014 1线
+17:48:35.490 @ANX015 8.500000
+17:48:35.491 @ANX016 0.000000
+17:48:35.493 @ANX017 3.2
+17:48:35.497 @ANX003 周顺
+17:48:35.498 @ANX004 装配工
+17:48:35.500 @ANX005 2018/9/6 8:00:00
+17:48:35.502 @ANX006 2018/9/6 17:00:00
+17:48:35.503 @ANX007 
+17:48:35.504 @ANX008 
+17:48:35.506 @ANX009 0
+17:48:35.507 @ANX010 0
+17:48:35.508 @ANX011 在职
+17:48:35.510 @ANX012 
+17:48:35.511 @idx 291
+17:48:35.512 @ANX002 10147
+17:48:35.513 @ANX013 
+17:48:35.515 @ANX014 1线
+17:48:35.517 @ANX015 8.500000
+17:48:35.518 @ANX016 0.000000
+17:48:35.519 @ANX017 3.2
+17:48:35.522 @ANX003 龙付咪
+17:48:35.524 @ANX004 装配工
+17:48:35.525 @ANX005 2018/9/6 8:00:00
+17:48:35.526 @ANX006 2018/9/6 17:00:00
+17:48:35.528 @ANX007 
+17:48:35.529 @ANX008 
+17:48:35.530 @ANX009 0
+17:48:35.532 @ANX010 0
+17:48:35.533 @ANX011 在职
+17:48:35.535 @ANX012 
+17:48:35.536 @idx 292
+17:48:35.537 @ANX002 10148
+17:48:35.538 @ANX013 
+17:48:35.540 @ANX014 1线
+17:48:35.541 @ANX015 8.500000
+17:48:35.542 @ANX016 0.000000
+17:48:35.544 @ANX017 3.2
+17:48:35.550 @ANX003 郭昭芬
+17:48:35.552 @ANX004 装配工
+17:48:35.553 @ANX005 2018/9/6 8:00:00
+17:48:35.555 @ANX006 2018/9/6 17:00:00
+17:48:35.556 @ANX007 
+17:48:35.557 @ANX008 
+17:48:35.559 @ANX009 0
+17:48:35.561 @ANX010 0
+17:48:35.563 @ANX011 在职
+17:48:35.564 @ANX012 
+17:48:35.566 @idx 293
+17:48:35.567 @ANX002 10149
+17:48:35.569 @ANX013 
+17:48:35.570 @ANX014 1线
+17:48:35.571 @ANX015 8.500000
+17:48:35.573 @ANX016 0.000000
+17:48:35.574 @ANX017 3.2
+17:48:35.577 @ANX003 刘高发
+17:48:35.578 @ANX004 装配工
+17:48:35.580 @ANX005 2018/9/6 8:00:00
+17:48:35.581 @ANX006 2018/9/6 17:00:00
+17:48:35.583 @ANX007 
+17:48:35.584 @ANX008 
+17:48:35.586 @ANX009 0
+17:48:35.587 @ANX010 0
+17:48:35.588 @ANX011 在职
+17:48:35.589 @ANX012 
+17:48:35.591 @idx 294
+17:48:35.592 @ANX002 10150
+17:48:35.594 @ANX013 
+17:48:35.595 @ANX014 1线
+17:48:35.596 @ANX015 8.500000
+17:48:35.598 @ANX016 0.000000
+17:48:35.599 @ANX017 3.2
+17:48:35.602 @ANX003 吴张英
+17:48:35.603 @ANX004 装配工
+17:48:35.605 @ANX005 2018/9/6 8:00:00
+17:48:35.606 @ANX006 2018/9/6 17:00:00
+17:48:35.607 @ANX007 
+17:48:35.608 @ANX008 
+17:48:35.610 @ANX009 0
+17:48:35.611 @ANX010 0
+17:48:35.612 @ANX011 在职
+17:48:35.613 @ANX012 
+17:48:35.615 @idx 295
+17:48:35.616 @ANX002 10151
+17:48:35.617 @ANX013 
+17:48:35.619 @ANX014 1线
+17:48:35.620 @ANX015 8.500000
+17:48:35.621 @ANX016 0.000000
+17:48:35.623 @ANX017 3.2
+17:48:35.626 @ANX003 杨犁
+17:48:35.627 @ANX004 装配工
+17:48:35.629 @ANX005 2018/9/6 8:00:00
+17:48:35.630 @ANX006 2018/9/6 17:00:00
+17:48:35.631 @ANX007 
+17:48:35.633 @ANX008 
+17:48:35.634 @ANX009 0
+17:48:35.635 @ANX010 0
+17:48:35.636 @ANX011 在职
+17:48:35.637 @ANX012 
+17:48:35.639 @idx 296
+17:48:35.640 @ANX002 10152
+17:48:35.641 @ANX013 
+17:48:35.642 @ANX014 1线
+17:48:35.643 @ANX015 8.500000
+17:48:35.644 @ANX016 0.000000
+17:48:35.647 @ANX017 3.2
+17:48:35.649 @ANX003 熊洪才
+17:48:35.651 @ANX004 装配工
+17:48:35.652 @ANX005 2018/9/6 8:00:00
+17:48:35.654 @ANX006 2018/9/6 17:00:00
+17:48:35.655 @ANX007 
+17:48:35.657 @ANX008 
+17:48:35.658 @ANX009 0
+17:48:35.659 @ANX010 0
+17:48:35.660 @ANX011 在职
+17:48:35.662 @ANX012 
+17:48:35.663 @idx 297
+17:48:35.664 @ANX002 10153
+17:48:35.665 @ANX013 
+17:48:35.666 @ANX014 1线
+17:48:35.667 @ANX015 8.500000
+17:48:35.669 @ANX016 0.000000
+17:48:35.670 @ANX017 3.2
+17:48:35.673 @ANX003 代开容
+17:48:35.674 @ANX004 装配工
+17:48:35.676 @ANX005 2018/9/6 8:00:00
+17:48:35.677 @ANX006 2018/9/6 17:00:00
+17:48:35.678 @ANX007 
+17:48:35.680 @ANX008 
+17:48:35.681 @ANX009 0
+17:48:35.682 @ANX010 0
+17:48:35.683 @ANX011 在职
+17:48:35.685 @ANX012 
+17:48:35.686 @idx 298
+17:48:35.687 @ANX002 10154
+17:48:35.689 @ANX013 
+17:48:35.690 @ANX014 1线
+17:48:35.691 @ANX015 8.500000
+17:48:35.692 @ANX016 0.000000
+17:48:35.694 @ANX017 3.2
+17:48:35.696 @ANX003 尹宗丹
+17:48:35.698 @ANX004 装配工
+17:48:35.699 @ANX005 2018/9/6 8:00:00
+17:48:35.700 @ANX006 2018/9/6 17:00:00
+17:48:35.701 @ANX007 
+17:48:35.703 @ANX008 
+17:48:35.705 @ANX009 0
+17:48:35.706 @ANX010 0
+17:48:35.707 @ANX011 在职
+17:48:35.709 @ANX012 
+17:48:35.710 @idx 299
+17:48:35.711 @ANX002 10155
+17:48:35.712 @ANX013 
+17:48:35.714 @ANX014 1线
+17:48:35.715 @ANX015 8.500000
+17:48:35.716 @ANX016 0.000000
+17:48:35.717 @ANX017 3.2
+17:48:35.720 @ANX003 朱正高
+17:48:35.721 @ANX004 装配工
+17:48:35.723 @ANX005 2018/9/6 8:00:00
+17:48:35.724 @ANX006 2018/9/6 17:00:00
+17:48:35.725 @ANX007 
+17:48:35.727 @ANX008 
+17:48:35.728 @ANX009 0
+17:48:35.729 @ANX010 0
+17:48:35.731 @ANX011 在职
+17:48:35.732 @ANX012 
+17:48:35.733 @idx 300
+17:48:35.735 @ANX002 10156
+17:48:35.736 @ANX013 
+17:48:35.737 @ANX014 1线
+17:48:35.739 @ANX015 8.500000
+17:48:35.740 @ANX016 0.000000
+17:48:35.741 @ANX017 3.2
+17:48:35.744 @ANX003 卿廷群
+17:48:35.745 @ANX004 装配工
+17:48:35.747 @ANX005 2018/9/6 8:00:00
+17:48:35.748 @ANX006 2018/9/6 17:00:00
+17:48:35.750 @ANX007 
+17:48:35.752 @ANX008 
+17:48:35.753 @ANX009 0
+17:48:35.755 @ANX010 0
+17:48:35.756 @ANX011 在职
+17:48:35.757 @ANX012 
+17:48:35.759 @idx 301
+17:48:35.760 @ANX002 10157
+17:48:35.762 @ANX013 
+17:48:35.763 @ANX014 1线
+17:48:35.764 @ANX015 8.500000
+17:48:35.766 @ANX016 0.000000
+17:48:35.767 @ANX017 3.2
+17:48:35.770 @ANX003 邹修丽
+17:48:35.772 @ANX004 装配工
+17:48:35.773 @ANX005 2018/9/6 8:00:00
+17:48:35.774 @ANX006 2018/9/6 17:00:00
+17:48:35.776 @ANX007 
+17:48:35.777 @ANX008 
+17:48:35.778 @ANX009 0
+17:48:35.779 @ANX010 0
+17:48:35.780 @ANX011 在职
+17:48:35.782 @ANX012 
+17:48:35.783 @idx 302
+17:48:35.785 @ANX002 10158
+17:48:35.786 @ANX013 
+17:48:35.788 @ANX014 1线
+17:48:35.789 @ANX015 8.500000
+17:48:35.790 @ANX016 0.000000
+17:48:35.792 @ANX017 3.2
+17:48:35.794 @ANX003 徐永洪
+17:48:35.796 @ANX004 装配工
+17:48:35.797 @ANX005 2018/9/6 8:00:00
+17:48:35.798 @ANX006 2018/9/6 17:00:00
+17:48:35.800 @ANX007 
+17:48:35.801 @ANX008 
+17:48:35.802 @ANX009 0
+17:48:35.804 @ANX010 0
+17:48:35.805 @ANX011 在职
+17:48:35.806 @ANX012 
+17:48:35.807 @idx 303
+17:48:35.808 @ANX002 10159
+17:48:35.810 @ANX013 
+17:48:35.811 @ANX014 1线
+17:48:35.812 @ANX015 8.500000
+17:48:35.814 @ANX016 0.000000
+17:48:35.815 @ANX017 3.2
+17:48:35.817 @ANX003 刘仁燕
+17:48:35.819 @ANX004 装配工
+17:48:35.820 @ANX005 2018/9/6 8:00:00
+17:48:35.822 @ANX006 2018/9/6 17:00:00
+17:48:35.823 @ANX007 
+17:48:35.824 @ANX008 
+17:48:35.826 @ANX009 0
+17:48:35.828 @ANX010 0
+17:48:35.829 @ANX011 在职
+17:48:35.831 @ANX012 
+17:48:35.833 @idx 304
+17:48:35.834 @ANX002 10160
+17:48:35.836 @ANX013 
+17:48:35.837 @ANX014 1线
+17:48:35.838 @ANX015 8.500000
+17:48:35.839 @ANX016 0.000000
+17:48:35.841 @ANX017 3.2
+17:48:35.843 @ANX003 陈万珍
+17:48:35.845 @ANX004 装配工
+17:48:35.846 @ANX005 2018/9/6 8:00:00
+17:48:35.847 @ANX006 2018/9/6 17:00:00
+17:48:35.848 @ANX007 
+17:48:35.849 @ANX008 
+17:48:35.851 @ANX009 0
+17:48:35.852 @ANX010 0
+17:48:35.853 @ANX011 在职
+17:48:35.854 @ANX012 
+17:48:35.855 @idx 305
+17:48:35.856 @ANX002 10161
+17:48:35.857 @ANX013 
+17:48:35.858 @ANX014 1线
+17:48:35.859 @ANX015 8.500000
+17:48:35.860 @ANX016 0.000000
+17:48:35.862 @ANX017 3.2
+17:48:35.864 @ANX003 李义承
+17:48:35.865 @ANX004 装配工
+17:48:35.867 @ANX005 2018/9/6 8:00:00
+17:48:35.868 @ANX006 2018/9/6 17:00:00
+17:48:35.869 @ANX007 
+17:48:35.870 @ANX008 
+17:48:35.871 @ANX009 0
+17:48:35.872 @ANX010 0
+17:48:35.874 @ANX011 在职
+17:48:35.875 @ANX012 
+17:48:35.876 @idx 306
+17:48:35.877 @ANX002 10162
+17:48:35.878 @ANX013 
+17:48:35.879 @ANX014 1线
+17:48:35.881 @ANX015 8.500000
+17:48:35.882 @ANX016 0.000000
+17:48:35.884 @ANX017 3.2
+17:48:35.887 @ANX003 张义兵
+17:48:35.888 @ANX004 装配工
+17:48:35.889 @ANX005 2018/9/6 8:00:00
+17:48:35.891 @ANX006 2018/9/6 17:00:00
+17:48:35.892 @ANX007 
+17:48:35.893 @ANX008 
+17:48:35.895 @ANX009 0
+17:48:35.896 @ANX010 0
+17:48:35.897 @ANX011 在职
+17:48:35.898 @ANX012 
+17:48:35.900 @idx 307
+17:48:35.901 @ANX002 10163
+17:48:35.902 @ANX013 
+17:48:35.903 @ANX014 1线
+17:48:35.904 @ANX015 8.500000
+17:48:35.906 @ANX016 0.000000
+17:48:35.907 @ANX017 3.2
+17:48:35.909 @ANX003 韩会萍
+17:48:35.911 @ANX004 装配工
+17:48:35.912 @ANX005 2018/9/6 8:00:00
+17:48:35.914 @ANX006 2018/9/6 17:00:00
+17:48:35.915 @ANX007 
+17:48:35.917 @ANX008 
+17:48:35.918 @ANX009 0
+17:48:35.919 @ANX010 0
+17:48:35.921 @ANX011 在职
+17:48:35.922 @ANX012 
+17:48:35.924 @idx 308
+17:48:35.925 @ANX002 10164
+17:48:35.926 @ANX013 
+17:48:35.927 @ANX014 1线
+17:48:35.928 @ANX015 8.500000
+17:48:35.930 @ANX016 0.000000
+17:48:35.931 @ANX017 3.2
+17:48:35.933 @ANX003 国明秀
+17:48:35.935 @ANX004 装配工
+17:48:35.936 @ANX005 2018/9/6 8:00:00
+17:48:35.937 @ANX006 2018/9/6 17:00:00
+17:48:35.939 @ANX007 
+17:48:35.940 @ANX008 
+17:48:35.941 @ANX009 0
+17:48:35.942 @ANX010 0
+17:48:35.944 @ANX011 在职
+17:48:35.945 @ANX012 
+17:48:35.946 @idx 309
+17:48:35.947 @ANX002 10165
+17:48:35.948 @ANX013 
+17:48:35.949 @ANX014 1线
+17:48:35.950 @ANX015 8.500000
+17:48:35.952 @ANX016 0.000000
+17:48:35.953 @ANX017 3.2
+17:50:22.628 @ANW002 GD201502090019
+17:50:22.631 @ANW003 JYLF16
+17:50:22.633 @ANW004 JYLF16-PTC三合一
+17:50:22.636 @ANW005 
+17:50:22.638 @ANW006 300
+17:50:22.640 @ANW007 台
+17:50:22.642 @ANW008 0.000000
+17:50:22.645 @ANW009 100
+17:50:22.648 @ANW010 0507
+17:50:22.649 @ANW011 总装车间
+17:50:22.651 @ANW012 050701
+17:50:22.653 @ANW013 1线
+17:50:22.655 @ANW014 计件
+17:50:22.657 @ANW015 2018/9/6 8:00:00
+17:50:22.658 @ANW016 2018/9/6 17:00:00
+17:50:22.660 @ANW017 
+17:50:22.662 @ANW018 
+17:50:22.664 @ANW019 
+17:50:22.665 @ANW020 False
+17:50:22.666 @ANW021 False
+17:50:22.667 @ANW001 20180906001
+17:50:22.668 @ANW023 0.5
+17:50:22.669 @ANW024 0.5
+17:50:22.672 @ANX003 张龙
+17:50:22.674 @ANX004 一线组长
+17:50:22.675 @ANX005 2018/9/6 8:00:00
+17:50:22.676 @ANX006 2018/9/6 17:55:00
+17:50:22.678 @ANX007 2018/9/6 0:00:00
+17:50:22.679 @ANX008 2018/9/6 6:44:00
+17:50:22.680 @ANX009 12
+17:50:22.681 @ANX010 23
+17:50:22.682 @ANX011 在职
+17:50:22.683 @ANX012 
+17:50:22.684 @idx 283
+17:50:22.685 @ANX002 10139
+17:50:22.686 @ANX013 检测
+17:50:22.687 @ANX014 1线
+17:50:22.688 @ANX015 8.900000
+17:50:22.689 @ANX016 6.700000
+17:50:22.691 @ANX017 6.6
+17:50:22.698 @ANX003 刘兴贵
+17:50:22.700 @ANX004 装配工
+17:50:22.701 @ANX005 2018/9/6 8:00:00
+17:50:22.702 @ANX006 2018/9/6 17:00:00
+17:50:22.704 @ANX007 
+17:50:22.705 @ANX008 
+17:50:22.706 @ANX009 0
+17:50:22.707 @ANX010 40
+17:50:22.708 @ANX011 在职
+17:50:22.710 @ANX012 
+17:50:22.711 @idx 284
+17:50:22.712 @ANX002 10140
+17:50:22.713 @ANX013 
+17:50:22.714 @ANX014 1线
+17:50:22.716 @ANX015 8.500000
+17:50:22.717 @ANX016 0.000000
+17:50:22.718 @ANX017 3.6
+17:50:22.720 @ANX003 王振宇
+17:50:22.722 @ANX004 装配工
+17:50:22.723 @ANX005 2018/9/6 8:00:00
+17:50:22.724 @ANX006 2018/9/6 17:00:00
+17:50:22.726 @ANX007 
+17:50:22.727 @ANX008 
+17:50:22.728 @ANX009 0
+17:50:22.729 @ANX010 10
+17:50:22.730 @ANX011 在职
+17:50:22.731 @ANX012 
+17:50:22.733 @idx 285
+17:50:22.734 @ANX002 10141
+17:50:22.735 @ANX013 
+17:50:22.736 @ANX014 1线
+17:50:22.737 @ANX015 8.500000
+17:50:22.738 @ANX016 0.000000
+17:50:22.739 @ANX017 3.6
+17:50:22.742 @ANX003 钟成菊
+17:50:22.744 @ANX004 装配工
+17:50:22.745 @ANX005 2018/9/6 8:00:00
+17:50:22.746 @ANX006 2018/9/6 17:00:00
+17:50:22.748 @ANX007 
+17:50:22.749 @ANX008 
+17:50:22.750 @ANX009 0
+17:50:22.752 @ANX010 10
+17:50:22.754 @ANX011 在职
+17:50:22.755 @ANX012 
+17:50:22.756 @idx 286
+17:50:22.758 @ANX002 10142
+17:50:22.759 @ANX013 检测
+17:50:22.760 @ANX014 1线
+17:50:22.761 @ANX015 8.500000
+17:50:22.763 @ANX016 0.000000
+17:50:22.764 @ANX017 3.6
+17:50:22.767 @ANX003 赵成鹏
+17:50:22.768 @ANX004 装配工
+17:50:22.769 @ANX005 2018/9/6 8:00:00
+17:50:22.771 @ANX006 2018/9/6 17:00:00
+17:50:22.773 @ANX007 
+17:50:22.774 @ANX008 
+17:50:22.775 @ANX009 0
+17:50:22.777 @ANX010 10
+17:50:22.778 @ANX011 在职
+17:50:22.780 @ANX012 
+17:50:22.782 @idx 287
+17:50:22.783 @ANX002 10143
+17:50:22.785 @ANX013 
+17:50:22.786 @ANX014 1线
+17:50:22.788 @ANX015 8.500000
+17:50:22.789 @ANX016 0.000000
+17:50:22.790 @ANX017 3.6
+17:50:22.799 @ANX003 何万华
+17:50:22.801 @ANX004 装配工
+17:50:22.802 @ANX005 2018/9/6 8:00:00
+17:50:22.804 @ANX006 2018/9/6 17:00:00
+17:50:22.805 @ANX007 
+17:50:22.806 @ANX008 
+17:50:22.807 @ANX009 0
+17:50:22.809 @ANX010 0
+17:50:22.810 @ANX011 在职
+17:50:22.811 @ANX012 
+17:50:22.813 @idx 288
+17:50:22.814 @ANX002 10144
+17:50:22.815 @ANX013 
+17:50:22.816 @ANX014 1线
+17:50:22.817 @ANX015 8.500000
+17:50:22.819 @ANX016 0.000000
+17:50:22.820 @ANX017 3.6
+17:50:22.826 @ANX003 严云芹
+17:50:22.828 @ANX004 装配工
+17:50:22.830 @ANX005 2018/9/6 8:00:00
+17:50:22.831 @ANX006 2018/9/6 17:00:00
+17:50:22.833 @ANX007 
+17:50:22.834 @ANX008 
+17:50:22.835 @ANX009 0
+17:50:22.837 @ANX010 0
+17:50:22.838 @ANX011 在职
+17:50:22.839 @ANX012 
+17:50:22.840 @idx 289
+17:50:22.841 @ANX002 10145
+17:50:22.843 @ANX013 
+17:50:22.844 @ANX014 1线
+17:50:22.845 @ANX015 8.500000
+17:50:22.846 @ANX016 0.000000
+17:50:22.847 @ANX017 3.6
+17:50:22.851 @ANX003 马小千
+17:50:22.853 @ANX004 装配工
+17:50:22.855 @ANX005 2018/9/6 8:00:00
+17:50:22.856 @ANX006 2018/9/6 17:00:00
+17:50:22.858 @ANX007 
+17:50:22.860 @ANX008 
+17:50:22.862 @ANX009 0
+17:50:22.863 @ANX010 0
+17:50:22.864 @ANX011 在职
+17:50:22.866 @ANX012 
+17:50:22.867 @idx 290
+17:50:22.868 @ANX002 10146
+17:50:22.869 @ANX013 
+17:50:22.871 @ANX014 1线
+17:50:22.872 @ANX015 8.500000
+17:50:22.873 @ANX016 0.000000
+17:50:22.875 @ANX017 3.6
+17:50:22.878 @ANX003 周顺
+17:50:22.879 @ANX004 装配工
+17:50:22.881 @ANX005 2018/9/6 8:00:00
+17:50:22.882 @ANX006 2018/9/6 17:00:00
+17:50:22.885 @ANX007 
+17:50:22.886 @ANX008 
+17:50:22.888 @ANX009 0
+17:50:22.889 @ANX010 0
+17:50:22.891 @ANX011 在职
+17:50:22.892 @ANX012 
+17:50:22.894 @idx 291
+17:50:22.895 @ANX002 10147
+17:50:22.896 @ANX013 
+17:50:22.897 @ANX014 1线
+17:50:22.899 @ANX015 8.500000
+17:50:22.900 @ANX016 0.000000
+17:50:22.901 @ANX017 3.6
+17:50:22.904 @ANX003 龙付咪
+17:50:22.905 @ANX004 装配工
+17:50:22.907 @ANX005 2018/9/6 8:00:00
+17:50:22.908 @ANX006 2018/9/6 17:00:00
+17:50:22.910 @ANX007 
+17:50:22.911 @ANX008 
+17:50:22.912 @ANX009 0
+17:50:22.914 @ANX010 0
+17:50:22.915 @ANX011 在职
+17:50:22.916 @ANX012 
+17:50:22.917 @idx 292
+17:50:22.918 @ANX002 10148
+17:50:22.920 @ANX013 
+17:50:22.921 @ANX014 1线
+17:50:22.922 @ANX015 8.500000
+17:50:22.923 @ANX016 0.000000
+17:50:22.924 @ANX017 3.6
+17:50:22.927 @ANX003 郭昭芬
+17:50:22.929 @ANX004 装配工
+17:50:22.930 @ANX005 2018/9/6 8:00:00
+17:50:22.931 @ANX006 2018/9/6 17:00:00
+17:50:22.933 @ANX007 
+17:50:22.934 @ANX008 
+17:50:22.935 @ANX009 0
+17:50:22.936 @ANX010 0
+17:50:22.937 @ANX011 在职
+17:50:22.939 @ANX012 
+17:50:22.940 @idx 293
+17:50:22.941 @ANX002 10149
+17:50:22.943 @ANX013 
+17:50:22.944 @ANX014 1线
+17:50:22.945 @ANX015 8.500000
+17:50:22.946 @ANX016 0.000000
+17:50:22.948 @ANX017 3.6
+17:50:22.950 @ANX003 刘高发
+17:50:22.952 @ANX004 装配工
+17:50:22.953 @ANX005 2018/9/6 8:00:00
+17:50:22.955 @ANX006 2018/9/6 17:00:00
+17:50:22.956 @ANX007 
+17:50:22.958 @ANX008 
+17:50:22.959 @ANX009 0
+17:50:22.960 @ANX010 0
+17:50:22.961 @ANX011 在职
+17:50:22.963 @ANX012 
+17:50:22.964 @idx 294
+17:50:22.965 @ANX002 10150
+17:50:22.966 @ANX013 
+17:50:22.968 @ANX014 1线
+17:50:22.969 @ANX015 8.500000
+17:50:22.970 @ANX016 0.000000
+17:50:22.972 @ANX017 3.6
+17:50:22.975 @ANX003 吴张英
+17:50:22.976 @ANX004 装配工
+17:50:22.978 @ANX005 2018/9/6 8:00:00
+17:50:22.979 @ANX006 2018/9/6 17:00:00
+17:50:22.981 @ANX007 
+17:50:22.982 @ANX008 
+17:50:22.983 @ANX009 0
+17:50:22.985 @ANX010 0
+17:50:22.986 @ANX011 在职
+17:50:22.988 @ANX012 
+17:50:22.989 @idx 295
+17:50:22.990 @ANX002 10151
+17:50:22.991 @ANX013 
+17:50:22.993 @ANX014 1线
+17:50:22.994 @ANX015 8.500000
+17:50:22.995 @ANX016 0.000000
+17:50:22.996 @ANX017 3.6
+17:50:22.999 @ANX003 杨犁
+17:50:23.000 @ANX004 装配工
+17:50:23.001 @ANX005 2018/9/6 8:00:00
+17:50:23.003 @ANX006 2018/9/6 17:00:00
+17:50:23.004 @ANX007 
+17:50:23.005 @ANX008 
+17:50:23.006 @ANX009 0
+17:50:23.008 @ANX010 0
+17:50:23.009 @ANX011 在职
+17:50:23.010 @ANX012 
+17:50:23.011 @idx 296
+17:50:23.012 @ANX002 10152
+17:50:23.014 @ANX013 
+17:50:23.015 @ANX014 1线
+17:50:23.016 @ANX015 8.500000
+17:50:23.017 @ANX016 0.000000
+17:50:23.018 @ANX017 3.6
+17:50:23.021 @ANX003 熊洪才
+17:50:23.022 @ANX004 装配工
+17:50:23.023 @ANX005 2018/9/6 8:00:00
+17:50:23.025 @ANX006 2018/9/6 17:00:00
+17:50:23.026 @ANX007 
+17:50:23.027 @ANX008 
+17:50:23.029 @ANX009 0
+17:50:23.030 @ANX010 0
+17:50:23.031 @ANX011 在职
+17:50:23.032 @ANX012 
+17:50:23.034 @idx 297
+17:50:23.035 @ANX002 10153
+17:50:23.036 @ANX013 
+17:50:23.037 @ANX014 1线
+17:50:23.039 @ANX015 8.500000
+17:50:23.040 @ANX016 0.000000
+17:50:23.041 @ANX017 3.6
+17:50:23.043 @ANX003 代开容
+17:50:23.045 @ANX004 装配工
+17:50:23.046 @ANX005 2018/9/6 8:00:00
+17:50:23.048 @ANX006 2018/9/6 17:00:00
+17:50:23.049 @ANX007 
+17:50:23.050 @ANX008 
+17:50:23.052 @ANX009 0
+17:50:23.053 @ANX010 0
+17:50:23.054 @ANX011 在职
+17:50:23.055 @ANX012 
+17:50:23.057 @idx 298
+17:50:23.058 @ANX002 10154
+17:50:23.059 @ANX013 
+17:50:23.060 @ANX014 1线
+17:50:23.061 @ANX015 8.500000
+17:50:23.062 @ANX016 0.000000
+17:50:23.063 @ANX017 3.6
+17:50:23.066 @ANX003 尹宗丹
+17:50:23.068 @ANX004 装配工
+17:50:23.069 @ANX005 2018/9/6 8:00:00
+17:50:23.070 @ANX006 2018/9/6 17:00:00
+17:50:23.072 @ANX007 
+17:50:23.073 @ANX008 
+17:50:23.074 @ANX009 0
+17:50:23.075 @ANX010 0
+17:50:23.077 @ANX011 在职
+17:50:23.078 @ANX012 
+17:50:23.079 @idx 299
+17:50:23.080 @ANX002 10155
+17:50:23.082 @ANX013 
+17:50:23.083 @ANX014 1线
+17:50:23.084 @ANX015 8.500000
+17:50:23.086 @ANX016 0.000000
+17:50:23.087 @ANX017 3.6
+17:50:23.090 @ANX003 朱正高
+17:50:23.091 @ANX004 装配工
+17:50:23.093 @ANX005 2018/9/6 8:00:00
+17:50:23.094 @ANX006 2018/9/6 17:00:00
+17:50:23.096 @ANX007 
+17:50:23.097 @ANX008 
+17:50:23.098 @ANX009 0
+17:50:23.100 @ANX010 0
+17:50:23.102 @ANX011 在职
+17:50:23.103 @ANX012 
+17:50:23.104 @idx 300
+17:50:23.105 @ANX002 10156
+17:50:23.106 @ANX013 
+17:50:23.108 @ANX014 1线
+17:50:23.109 @ANX015 8.500000
+17:50:23.110 @ANX016 0.000000
+17:50:23.111 @ANX017 3.6
+17:50:23.114 @ANX003 卿廷群
+17:50:23.115 @ANX004 装配工
+17:50:23.116 @ANX005 2018/9/6 8:00:00
+17:50:23.118 @ANX006 2018/9/6 17:00:00
+17:50:23.119 @ANX007 
+17:50:23.120 @ANX008 
+17:50:23.122 @ANX009 0
+17:50:23.123 @ANX010 0
+17:50:23.124 @ANX011 在职
+17:50:23.125 @ANX012 
+17:50:23.127 @idx 301
+17:50:23.128 @ANX002 10157
+17:50:23.129 @ANX013 
+17:50:23.130 @ANX014 1线
+17:50:23.131 @ANX015 8.500000
+17:50:23.132 @ANX016 0.000000
+17:50:23.133 @ANX017 3.6
+17:50:23.136 @ANX003 邹修丽
+17:50:23.137 @ANX004 装配工
+17:50:23.138 @ANX005 2018/9/6 8:00:00
+17:50:23.140 @ANX006 2018/9/6 17:00:00
+17:50:23.141 @ANX007 
+17:50:23.142 @ANX008 
+17:50:23.143 @ANX009 0
+17:50:23.144 @ANX010 0
+17:50:23.146 @ANX011 在职
+17:50:23.147 @ANX012 
+17:50:23.148 @idx 302
+17:50:23.149 @ANX002 10158
+17:50:23.151 @ANX013 
+17:50:23.152 @ANX014 1线
+17:50:23.153 @ANX015 8.500000
+17:50:23.154 @ANX016 0.000000
+17:50:23.155 @ANX017 3.6
+17:50:23.157 @ANX003 徐永洪
+17:50:23.159 @ANX004 装配工
+17:50:23.160 @ANX005 2018/9/6 8:00:00
+17:50:23.162 @ANX006 2018/9/6 17:00:00
+17:50:23.163 @ANX007 
+17:50:23.164 @ANX008 
+17:50:23.165 @ANX009 0
+17:50:23.167 @ANX010 0
+17:50:23.168 @ANX011 在职
+17:50:23.169 @ANX012 
+17:50:23.170 @idx 303
+17:50:23.171 @ANX002 10159
+17:50:23.173 @ANX013 
+17:50:23.174 @ANX014 1线
+17:50:23.175 @ANX015 8.500000
+17:50:23.176 @ANX016 0.000000
+17:50:23.178 @ANX017 3.6
+17:50:23.180 @ANX003 刘仁燕
+17:50:23.182 @ANX004 装配工
+17:50:23.183 @ANX005 2018/9/6 8:00:00
+17:50:23.184 @ANX006 2018/9/6 17:00:00
+17:50:23.186 @ANX007 
+17:50:23.187 @ANX008 
+17:50:23.188 @ANX009 0
+17:50:23.189 @ANX010 0
+17:50:23.191 @ANX011 在职
+17:50:23.193 @ANX012 
+17:50:23.194 @idx 304
+17:50:23.195 @ANX002 10160
+17:50:23.196 @ANX013 
+17:50:23.197 @ANX014 1线
+17:50:23.199 @ANX015 8.500000
+17:50:23.200 @ANX016 0.000000
+17:50:23.201 @ANX017 3.6
+17:50:23.204 @ANX003 陈万珍
+17:50:23.205 @ANX004 装配工
+17:50:23.207 @ANX005 2018/9/6 8:00:00
+17:50:23.208 @ANX006 2018/9/6 17:00:00
+17:50:23.209 @ANX007 
+17:50:23.211 @ANX008 
+17:50:23.212 @ANX009 0
+17:50:23.214 @ANX010 0
+17:50:23.215 @ANX011 在职
+17:50:23.216 @ANX012 
+17:50:23.217 @idx 305
+17:50:23.218 @ANX002 10161
+17:50:23.220 @ANX013 
+17:50:23.221 @ANX014 1线
+17:50:23.222 @ANX015 8.500000
+17:50:23.224 @ANX016 0.000000
+17:50:23.225 @ANX017 3.6
+17:50:23.227 @ANX003 李义承
+17:50:23.229 @ANX004 装配工
+17:50:23.230 @ANX005 2018/9/6 8:00:00
+17:50:23.232 @ANX006 2018/9/6 17:00:00
+17:50:23.233 @ANX007 
+17:50:23.234 @ANX008 
+17:50:23.235 @ANX009 0
+17:50:23.236 @ANX010 0
+17:50:23.238 @ANX011 在职
+17:50:23.239 @ANX012 
+17:50:23.240 @idx 306
+17:50:23.242 @ANX002 10162
+17:50:23.243 @ANX013 
+17:50:23.244 @ANX014 1线
+17:50:23.245 @ANX015 8.500000
+17:50:23.246 @ANX016 0.000000
+17:50:23.248 @ANX017 3.6
+17:50:23.251 @ANX003 张义兵
+17:50:23.253 @ANX004 装配工
+17:50:23.254 @ANX005 2018/9/6 8:00:00
+17:50:23.255 @ANX006 2018/9/6 17:00:00
+17:50:23.257 @ANX007 
+17:50:23.258 @ANX008 
+17:50:23.259 @ANX009 0
+17:50:23.260 @ANX010 0
+17:50:23.262 @ANX011 在职
+17:50:23.263 @ANX012 
+17:50:23.264 @idx 307
+17:50:23.265 @ANX002 10163
+17:50:23.266 @ANX013 
+17:50:23.268 @ANX014 1线
+17:50:23.269 @ANX015 8.500000
+17:50:23.270 @ANX016 0.000000
+17:50:23.271 @ANX017 3.6
+17:50:23.274 @ANX003 韩会萍
+17:50:23.275 @ANX004 装配工
+17:50:23.277 @ANX005 2018/9/6 8:00:00
+17:50:23.278 @ANX006 2018/9/6 17:00:00
+17:50:23.279 @ANX007 
+17:50:23.280 @ANX008 
+17:50:23.282 @ANX009 0
+17:50:23.283 @ANX010 0
+17:50:23.285 @ANX011 在职
+17:50:23.286 @ANX012 
+17:50:23.287 @idx 308
+17:50:23.288 @ANX002 10164
+17:50:23.290 @ANX013 
+17:50:23.291 @ANX014 1线
+17:50:23.292 @ANX015 8.500000
+17:50:23.293 @ANX016 0.000000
+17:50:23.294 @ANX017 3.6
+17:50:23.298 @ANX003 国明秀
+17:50:23.299 @ANX004 装配工
+17:50:23.301 @ANX005 2018/9/6 8:00:00
+17:50:23.302 @ANX006 2018/9/6 17:00:00
+17:50:23.303 @ANX007 
+17:50:23.305 @ANX008 
+17:50:23.306 @ANX009 0
+17:50:23.308 @ANX010 0
+17:50:23.309 @ANX011 在职
+17:50:23.310 @ANX012 
+17:50:23.312 @idx 309
+17:50:23.313 @ANX002 10165
+17:50:23.314 @ANX013 
+17:50:23.316 @ANX014 1线
+17:50:23.317 @ANX015 8.500000
+17:50:23.318 @ANX016 0.000000
+17:50:23.319 @ANX017 3.6
+17:59:27.590  异常信息：远程服务器返回错误: (404) 未找到。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:00:51.169 @EMP002 系统管理员
+18:00:51.172 @EMP033 cebfd1559b68d67688884d7a3d3e8c

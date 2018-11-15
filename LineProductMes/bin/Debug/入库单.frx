@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/16/2018 14:01:50" ReportInfo.Modified="07/17/2018 08:41:34" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuDp0rrsGaaTxKZA4VXKlQkt9Ijv4WOnAuaGLq31BmuDrQ==">
+      <TableDataSource Name="Table" Alias="TableOne" DataType="System.Int32" Enabled="true" SelectCommand="SELECT ANW001,ANW011,ANW013,ANW022,GETDATE() dat FROM MIKANW">
+        <Column Name="ANW001" DataType="System.String"/>
+        <Column Name="ANW011" DataType="System.String"/>
+        <Column Name="ANW013" DataType="System.String"/>
+        <Column Name="ANW022" DataType="System.String"/>
+        <Column Name="dat" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="TableTwo" DataType="System.Int32" Enabled="true" SelectCommand="SELECT ANW002,ANW003,ANW004,ANW005,ANW007,ANW006,ANW009,DEA008 FROM MIKANX A INNER JOIN MIKANW B ON A.ANX001=B.ANW001 LEFT JOIN TPADEA C ON A.ANX003=C.DEA001">
+        <Column Name="ANW002" DataType="System.String"/>
+        <Column Name="ANW003" DataType="System.String"/>
+        <Column Name="ANW004" DataType="System.String"/>
+        <Column Name="ANW005" DataType="System.String"/>
+        <Column Name="ANW007" DataType="System.String"/>
+        <Column Name="ANW006" DataType="System.Int32"/>
+        <Column Name="ANW009" DataType="System.Int32"/>
+        <Column Name="DEA008" DataType="System.String"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="28.35">
+      <TextObject Name="Text1" Width="718.2" Height="28.35" Text="入库单" HorzAlign="Center" VertAlign="Center" Font="宋体, 18pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="32.35" Width="718.2" Height="52.92">
+      <TextObject Name="Text2" Left="217.35" Width="47.25" Height="24.57" Text="班组:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text3" Left="264.6" Width="85.05" Height="24.57" Text="[TableOne.ANW013]" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text4" Left="349.65" Width="85.05" Height="24.57" Text="打印日期:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text5" Left="434.7" Width="94.5" Height="24.57" Text="[TableOne.dat]" Format="Date" Format.Format="d" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text6" Top="28.35" Width="85.05" Height="24.57" Text="报工单号:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text7" Left="85.05" Top="28.35" Width="94.5" Height="24.57" Text="[TableOne.ANW001]" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text8" Left="179.55" Top="28.35" Width="85.05" Height="24.57" Text="制单日期:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text9" Left="264.6" Top="28.35" Width="85.05" Height="24.57" Text="[TableOne.ANW022]" Format="Date" Format.Format="d" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text10" Width="85.05" Height="24.57" Text="生产车间:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text11" Left="85.05" Width="94.5" Height="24.57" Text="[TableOne.ANW011]" VertAlign="Center" Font="宋体, 11pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="121.62" Width="718.2" Height="28.35" DataSource="Table1">
+      <TextObject Name="Text20" Width="122.85" Height="28.35" Border.Lines="All" Text="[TableTwo.ANW002]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text21" Left="122.85" Width="94.5" Height="28.35" Border.Lines="All" Text="[TableTwo.ANW003]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text22" Left="217.35" Width="160.65" Height="28.35" Border.Lines="All" Text="[TableTwo.ANW004]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text23" Left="378" Width="56.7" Height="28.35" Border.Lines="All" Text="[TableTwo.ANW005]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text24" Left="434.7" Width="47.25" Height="28.35" Border.Lines="All" Text="[TableTwo.ANW007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text25" Left="481.95" Width="75.6" Height="28.35" Border.Lines="All" Text="[TableTwo.ANW006]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text26" Left="557.55" Width="75.6" Height="28.35" Border.Lines="All" Text="[TableTwo.ANW009]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text27" Left="633.15" Width="85.05" Height="28.35" Border.Lines="All" Text="[TableTwo.DEA008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <DataHeaderBand Name="DataHeader1" Top="89.27" Width="718.2" Height="28.35">
+        <TextObject Name="Text12" Width="122.85" Height="28.35" Border.Lines="All" Text="来源工单" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+        <TextObject Name="Text13" Left="122.85" Width="94.5" Height="28.35" Border.Lines="All" Text="品号" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+        <TextObject Name="Text14" Left="217.35" Width="160.65" Height="28.35" Border.Lines="All" Text="品名" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+        <TextObject Name="Text15" Left="378" Width="56.7" Height="28.35" Border.Lines="All" Text="规格" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+        <TextObject Name="Text16" Left="434.7" Width="47.25" Height="28.35" Border.Lines="All" Text="单位" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+        <TextObject Name="Text17" Left="481.95" Width="75.6" Height="28.35" Border.Lines="All" Text="工单数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+        <TextObject Name="Text18" Left="557.55" Width="75.6" Height="28.35" Border.Lines="All" Text="入库数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+        <TextObject Name="Text19" Left="633.15" Width="85.05" Height="28.35" Border.Lines="All" Text="仓库名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      </DataHeaderBand>
+    </DataBand>
+  </ReportPage>
+</Report>

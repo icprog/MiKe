@@ -1,0 +1,71 @@
+08:49:33.106  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+08:49:41.998 @EMP002 系统管理员
+08:49:42.000 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:22:45.854  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:22:52.453 @EMP002 系统管理员
+13:22:52.453 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:58:04.517  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:58:08.743 @EMP002 系统管理员
+15:58:08.745 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:38:12.671  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:38:19.504 @EMP002 系统管理员
+18:38:19.506 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:44:00.773  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:44:07.642 @EMP002 系统管理员
+18:44:07.644 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:54:51.361  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:55:00.728 @EMP002 系统管理员
+18:55:00.730 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:56:53.446  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:56:57.918 @EMP002 系统管理员
+18:56:57.919 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:58:44.883  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:58:50.145 @EMP002 系统管理员
+18:58:50.146 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:00:57.812  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:01:02.471 @EMP002 系统管理员
+19:01:02.473 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:01:54.013  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:01:58.364 @EMP002 系统管理员
+19:01:58.366 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:25:41.218  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:25:45.454 @EMP002 系统管理员
+19:25:45.456 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:26:23.935 @FOR001 314
+19:26:23.937 @FOR002 3
+19:26:23.939 @FOR003 FormSemiPlanView
+19:26:23.941 @FOR004 半成品计划一览表
+19:26:23.942 @FOR005 
+19:26:23.943 @FOR006 1         
+19:26:31.690  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:26:35.698 @EMP002 系统管理员
+19:26:35.701 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:27:21.536  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:27:28.392 @EMP002 系统管理员
+19:27:28.394 @EMP033 cebfd1559b68d67688884d7a3d3e8c

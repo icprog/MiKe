@@ -1,0 +1,29 @@
+09:41:35.250  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:41:42.521 @EMP002 系统管理员
+09:41:42.524 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:45:51.629  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:46:01.360 @EMP002 系统管理员
+09:46:01.363 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+09:54:48.481  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:54:58.976 @EMP002 系统管理员
+09:54:58.979 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:11:01.899 @EMP002 系统管理员
+10:11:01.902 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:12:12.801 @EMP002 系统管理员
+10:12:12.803 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:14:31.949 @EMP002 系统管理员
+10:14:31.954 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:15:12.048 @EMP002 系统管理员
+10:15:12.053 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:32:32.099 @EMP002 系统管理员
+10:32:32.102 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:04:57.477 @EMP002 系统管理员
+11:04:57.479 @EMP033 6f1ec1fd1b3a20c8aea0e973ec7863
+11:04:59.727 @EMP002 系统管理员
+11:04:59.729 @EMP033 cebfd1559b68d67688884d7a3d3e8c

@@ -1,0 +1,10 @@
+D:\Project data\AutomaticallyGenerateCode\GenerateCode\Utility\bin\Debug\Utility.dll
+D:\Project data\AutomaticallyGenerateCode\GenerateCode\Utility\bin\Debug\Utility.pdb
+D:\Project data\AutomaticallyGenerateCode\GenerateCode\Utility\obj\Debug\Utility.dll
+D:\Project data\AutomaticallyGenerateCode\GenerateCode\Utility\obj\Debug\Utility.pdb
+D:\Project data\AutomaticallyGenerateCode\GenerateCode\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Utility\bin\Debug\Utility.dll
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Utility\bin\Debug\Utility.pdb
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Utility\obj\Debug\Utility.dll
+D:\Project data\AutomaticallyGenerateCode\Connection\Connection\Utility\obj\Debug\Utility.pdb

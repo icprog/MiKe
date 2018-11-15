@@ -1,0 +1,1379 @@
+11:18:54.189 系统找不到指定的文件。
+
+Stack Trace:
+   在 System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start()
+   在 System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start(String fileName)
+   在 LineProductMes.Program.startFromMain() 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\Program.cs:行号 63
+   在 LineProductMes.Program.Main() 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\Program.cs:行号 29
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+11:21:03.253  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:04.263  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:05.273  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:06.283  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:07.293  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:08.303  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:09.313  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:10.323  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:11.333  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:21:12.343  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:32.879  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:33.889  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:34.899  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:35.899  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:36.909  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:37.909  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:38.909  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:39.919  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:40.919  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:41.569 无法访问已释放的对象。
+对象名:“FormMain”。
+
+Stack Trace:
+   在 System.Windows.Forms.Control.CreateHandle()
+   在 System.Windows.Forms.Form.CreateHandle()
+   在 DevExpress.XtraEditors.XtraForm.CreateHandle()
+   在 DevExpress.XtraBars.Ribbon.RibbonForm.CreateHandle()
+   在 System.Windows.Forms.Control.get_Handle()
+   在 System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   在 DevExpress.XtraEditors.XtraForm.SetVisibleCore(Boolean value)
+   在 DevExpress.XtraBars.Ribbon.RibbonForm.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Control.set_Visible(Boolean value)
+   在 System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   在 System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   在 System.Windows.Forms.Application.Run(Form mainForm)
+   在 LineProductMes.Program.startFromMain() 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\Program.cs:行号 65
+   在 LineProductMes.Program.Main() 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\Program.cs:行号 29
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+11:22:41.929  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:42.929  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:22:43.639  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:44.649  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:45.659  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:46.669  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:47.679  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:48.679  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:49.689  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:50.699  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:51.709  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:52.719  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:53.729  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:22:54.409  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:55.419  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:56.429  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:57.449  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:22:58.449  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:50.903  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:51.913  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:52.923  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:53.923  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:54.933  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:55.933  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:56.945  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:57.951  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:58.951  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:24:59.951  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:00.961  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:25:01.611  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:02.621  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:03.631  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:04.641  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:05.651  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:06.661  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:07.671  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:08.681  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:25:09.691  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:48.644  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:49.654  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:50.664  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:51.674  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:52.684  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:53.694  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:54.704  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:55.714  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:56.724  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:57.734  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:29:58.744  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:29:59.434  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:00.444  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:01.444  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:02.444  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:03.448  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:04.458  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:05.469  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:06.477  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:07.482  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:08.497  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:09.508  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:30:10.178  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:11.188  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:12.198  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:13.198  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:14.208  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:15.218  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:16.228  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:17.238  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:18.248  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:19.258  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:20.268  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:30:20.948  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:21.958  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:30:22.958  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:11.565  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:12.575  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:13.575  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:14.585  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:15.585  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:16.585  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:17.595  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:18.605  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:19.615  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:19.815 @EMP002 系统管理员
+11:33:19.825 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:33:20.625  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:33:21.625  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:33:22.385  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:25.395  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:26.405  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:27.405  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:28.415  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:29.425  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:30.425  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:31.435  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:32.445  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:33.455  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:34.465  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:35.475  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:35:36.195  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:37.205  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:38.215  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:35:39.225  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:03.532  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:04.542  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:05.542  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:06.552  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:07.562  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:08.562  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:09.572  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:10.582  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:11.592  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:12.602  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:13.612  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:40:14.312  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:15.322  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:16.332  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:17.342  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:18.352  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:19.362  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:20.372  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:21.382  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:22.392  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:40:23.402  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:08.792  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:09.792  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:10.792  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:11.802  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:12.802  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:13.802  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:14.812  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:40.916  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:41.926  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:42.926  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:43.936  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:44.946  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:45.946  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:46.956  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:47.966  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:48.966  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:49.976  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:50.986  异常信息：文件“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”正由另一进程使用，因此该进程无法访问该文件。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 AutoUpdate.UpdateControl.FileCopy(String sPath, String dPath)
+   在 AutoUpdate.UpdateControl.CopyFile(String sourcePath, String desPath)
+   在 AutoUpdate.UpdateControl.DownloadFiles()
+11:42:51.666  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:52.666  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+11:42:53.666  异常信息：对路径“D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\LineProductMes.exe”的访问被拒绝。
+  堆栈信息:   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoUpdate.UpdateControl.DeleteFile(String path)
+13:16:36.646  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:16:43.693 @EMP002 系统管理员
+13:16:43.697 @EMP033 c5c35f12bb6d256a85160e8ead634
+13:16:46.321 @EMP002 系统管理员
+13:16:46.324 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:37:50.222  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:37:56.306 @EMP002 系统管理员
+14:37:56.308 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:03:58.893 @PRF001 105190005
+15:03:58.894 @PRF002 2018/7/25 0:00:00
+15:03:58.895 @PRF003 200
+15:03:58.899 @PRF001 105190005
+15:03:58.900 @PRF002 2018/7/26 0:00:00
+15:03:58.901 @PRF003 200
+15:03:58.904 @PRF001 105190005
+15:03:58.905 @PRF002 2018/7/27 0:00:00
+15:03:58.906 @PRF003 200
+15:03:58.908 @PRF001 105190005
+15:03:58.910 @PRF002 2018/7/28 0:00:00
+15:03:58.911 @PRF003 200
+15:03:58.913 @PRF001 105190005
+15:03:58.914 @PRF002 2018/7/29 0:00:00
+15:03:58.915 @PRF003 200
+15:03:58.917 @PRF001 105190005
+15:03:58.919 @PRF002 2018/7/30 0:00:00
+15:03:58.920 @PRF003 200
+15:03:58.923 @PRF001 140019503
+15:03:58.924 @PRF002 2018/7/24 0:00:00
+15:03:58.926 @PRF003 50
+15:03:58.927 @PRF001 140019503
+15:03:58.929 @PRF002 2018/7/25 0:00:00
+15:03:58.930 @PRF003 50
+15:03:58.932 @PRF001 140019503
+15:03:58.933 @PRF002 2018/7/26 0:00:00
+15:03:58.934 @PRF003 50
+15:03:58.936 @PRF001 140019503
+15:03:58.938 @PRF002 2018/7/27 0:00:00
+15:03:58.939 @PRF003 50
+15:03:58.941 @PRF001 140019503
+15:03:58.942 @PRF002 2018/7/28 0:00:00
+15:03:58.943 @PRF003 50
+15:03:58.945 @PRF001 140019503
+15:03:58.947 @PRF002 2018/7/30 0:00:00
+15:03:58.948 @PRF003 98
+15:03:58.950 @PRF001 140019503
+15:03:58.951 @PRF002 2018/7/31 0:00:00
+15:03:58.952 @PRF003 48
+15:03:58.955 @PRF001 140019503
+15:03:58.956 @PRF002 2018/8/1 0:00:00
+15:03:58.957 @PRF003 52
+15:03:58.960 @PRF001 140019503
+15:03:58.961 @PRF002 2018/8/2 0:00:00
+15:03:58.962 @PRF003 50
+15:03:58.964 @PRF001 140019503
+15:03:58.965 @PRF002 2018/8/3 0:00:00
+15:03:58.966 @PRF003 50
+15:03:58.968 @PRF001 140019503
+15:03:58.970 @PRF002 2018/8/4 0:00:00
+15:03:58.971 @PRF003 50
+15:03:58.973 @PRF001 140019503
+15:03:58.975 @PRF002 2018/8/5 0:00:00
+15:03:58.976 @PRF003 50
+15:03:58.977 @PRF001 140019503
+15:03:58.979 @PRF002 2018/8/6 0:00:00
+15:03:58.980 @PRF003 50
+15:03:58.982 @PRF001 140019503
+15:03:58.983 @PRF002 2018/8/7 0:00:00
+15:03:58.984 @PRF003 50
+15:03:58.986 @PRF001 140019503
+15:03:58.987 @PRF002 2018/8/8 0:00:00
+15:03:58.988 @PRF003 50
+15:03:58.991 @PRF001 140019503
+15:03:58.992 @PRF002 2018/8/9 0:00:00
+15:03:58.993 @PRF003 50
+15:03:58.995 @PRF001 140019503
+15:03:58.996 @PRF002 2018/8/10 0:00:00
+15:03:58.997 @PRF003 50
+15:03:58.999 @PRF001 140019503
+15:03:59.000 @PRF002 2018/8/11 0:00:00
+15:03:59.001 @PRF003 50
+15:03:59.004 @PRF001 140019503
+15:03:59.005 @PRF002 2018/8/12 0:00:00
+15:03:59.006 @PRF003 50
+15:03:59.008 @PRF001 140019503
+15:03:59.009 @PRF002 2018/8/13 0:00:00
+15:03:59.010 @PRF003 50
+15:03:59.012 @PRF001 140019503
+15:03:59.013 @PRF002 2018/8/14 0:00:00
+15:03:59.014 @PRF003 50
+15:03:59.016 @PRF001 140019503
+15:03:59.018 @PRF002 2018/8/15 0:00:00
+15:03:59.019 @PRF003 50
+15:03:59.021 @PRF001 140019503
+15:03:59.022 @PRF002 2018/8/16 0:00:00
+15:03:59.023 @PRF003 50
+15:03:59.025 @PRF001 140019503
+15:03:59.027 @PRF002 2018/8/17 0:00:00
+15:03:59.028 @PRF003 50
+15:03:59.030 @PRF001 140019503
+15:03:59.031 @PRF002 2018/8/18 0:00:00
+15:03:59.032 @PRF003 50
+15:03:59.035 @PRF001 140019503
+15:03:59.036 @PRF002 2018/8/19 0:00:00
+15:03:59.037 @PRF003 50
+15:03:59.039 @PRF001 140019503
+15:03:59.040 @PRF002 2018/8/20 0:00:00
+15:03:59.041 @PRF003 50
+15:03:59.043 @PRF001 140019503
+15:03:59.045 @PRF002 2018/8/21 0:00:00
+15:03:59.046 @PRF003 50
+15:03:59.048 @PRF001 140019503
+15:03:59.049 @PRF002 2018/8/22 0:00:00
+15:03:59.050 @PRF003 50
+15:03:59.052 @PRF001 140019503
+15:03:59.053 @PRF002 2018/8/23 0:00:00
+15:03:59.055 @PRF003 50
+15:03:59.056 @PRF001 140019503
+15:03:59.058 @PRF002 2018/8/24 0:00:00
+15:03:59.059 @PRF003 50
+15:03:59.061 @PRF001 140019503
+15:03:59.062 @PRF002 2018/8/25 0:00:00
+15:03:59.063 @PRF003 50
+15:03:59.065 @PRF001 140019503
+15:03:59.067 @PRF002 2018/8/26 0:00:00
+15:03:59.068 @PRF003 50
+15:03:59.070 @PRF001 140019503
+15:03:59.071 @PRF002 2018/8/27 0:00:00
+15:03:59.072 @PRF003 50
+15:03:59.074 @PRF001 140019503
+15:03:59.076 @PRF002 2018/8/28 0:00:00
+15:03:59.077 @PRF003 50
+15:03:59.079 @PRF001 140019503
+15:03:59.080 @PRF002 2018/8/29 0:00:00
+15:03:59.081 @PRF003 50
+15:03:59.083 @PRF001 140019503
+15:03:59.084 @PRF002 2018/8/30 0:00:00
+15:03:59.085 @PRF003 50
+15:03:59.087 @PRF001 140019503
+15:03:59.089 @PRF002 2018/8/31 0:00:00
+15:03:59.090 @PRF003 50
+15:03:59.092 @PRF001 140019503
+15:03:59.093 @PRF002 2018/9/1 0:00:00
+15:03:59.094 @PRF003 50
+15:03:59.096 @PRF001 140019503
+15:03:59.097 @PRF002 2018/9/2 0:00:00
+15:03:59.098 @PRF003 50
+15:03:59.101 @PRF001 140019503
+15:03:59.102 @PRF002 2018/9/3 0:00:00
+15:03:59.103 @PRF003 50
+15:03:59.106 @PRF001 140019503
+15:03:59.108 @PRF002 2018/9/4 0:00:00
+15:03:59.109 @PRF003 50
+15:03:59.111 @PRF001 140019503
+15:03:59.113 @PRF002 2018/9/5 0:00:00
+15:03:59.114 @PRF003 50
+15:03:59.116 @PRF001 140019503
+15:03:59.117 @PRF002 2018/9/6 0:00:00
+15:03:59.118 @PRF003 50
+15:03:59.121 @PRF001 140019503
+15:03:59.122 @PRF002 2018/9/7 0:00:00
+15:03:59.123 @PRF003 50
+15:03:59.125 @PRF001 140019503
+15:03:59.126 @PRF002 2018/9/8 0:00:00
+15:03:59.128 @PRF003 50
+15:03:59.130 @PRF001 140019503
+15:03:59.131 @PRF002 2018/9/9 0:00:00
+15:03:59.132 @PRF003 50
+15:03:59.134 @PRF001 140019503
+15:03:59.135 @PRF002 2018/9/10 0:00:00
+15:03:59.136 @PRF003 50
+15:03:59.139 @PRF001 140019503
+15:03:59.140 @PRF002 2018/9/11 0:00:00
+15:03:59.141 @PRF003 50
+15:03:59.143 @PRF001 140019503
+15:03:59.144 @PRF002 2018/9/12 0:00:00
+15:03:59.146 @PRF003 50
+15:03:59.148 @PRF001 140019503
+15:03:59.149 @PRF002 2018/9/13 0:00:00
+15:03:59.150 @PRF003 50
+15:03:59.152 @PRF001 140019503
+15:03:59.153 @PRF002 2018/9/14 0:00:00
+15:03:59.154 @PRF003 50
+15:03:59.156 @PRF001 140019503
+15:03:59.158 @PRF002 2018/9/15 0:00:00
+15:03:59.159 @PRF003 50
+15:03:59.161 @PRF001 140019503
+15:03:59.162 @PRF002 2018/9/16 0:00:00
+15:03:59.163 @PRF003 50
+15:03:59.165 @PRF001 140019503
+15:03:59.166 @PRF002 2018/9/17 0:00:00
+15:03:59.168 @PRF003 50
+15:03:59.169 @PRF001 140019503
+15:03:59.171 @PRF002 2018/9/18 0:00:00
+15:03:59.172 @PRF003 50
+15:03:59.174 @PRF001 140019503
+15:03:59.175 @PRF002 2018/9/19 0:00:00
+15:03:59.177 @PRF003 50
+15:03:59.179 @PRF001 140019503
+15:03:59.180 @PRF002 2018/9/20 0:00:00
+15:03:59.181 @PRF003 50
+15:03:59.183 @PRF001 140019503
+15:03:59.184 @PRF002 2018/9/21 0:00:00
+15:03:59.185 @PRF003 50
+15:03:59.187 @PRF001 140019503
+15:03:59.189 @PRF002 2018/9/22 0:00:00
+15:03:59.190 @PRF003 50
+15:03:59.192 @PRF001 140019503
+15:03:59.193 @PRF002 2018/9/23 0:00:00
+15:03:59.194 @PRF003 50
+15:03:59.196 @PRF001 140019503
+15:03:59.197 @PRF002 2018/9/24 0:00:00
+15:03:59.198 @PRF003 50
+15:03:59.200 @PRF001 140019503
+15:03:59.202 @PRF002 2018/9/25 0:00:00
+15:03:59.203 @PRF003 50
+15:03:59.205 @PRF001 140019503
+15:03:59.206 @PRF002 2018/9/26 0:00:00
+15:03:59.208 @PRF003 50
+15:03:59.210 @PRF001 140019503
+15:03:59.211 @PRF002 2018/9/27 0:00:00
+15:03:59.212 @PRF003 50
+15:03:59.214 @PRF001 140019503
+15:03:59.215 @PRF002 2018/9/28 0:00:00
+15:03:59.216 @PRF003 50
+15:03:59.218 @PRF001 140019503
+15:03:59.219 @PRF002 2018/9/29 0:00:00
+15:03:59.220 @PRF003 50
+15:03:59.222 @PRF001 140019503
+15:03:59.224 @PRF002 2018/9/30 0:00:00
+15:03:59.225 @PRF003 50
+15:03:59.226 @PRF001 140019503
+15:03:59.228 @PRF002 2018/10/1 0:00:00
+15:03:59.229 @PRF003 50
+15:03:59.231 @PRF001 140019503
+15:03:59.232 @PRF002 2018/10/2 0:00:00
+15:03:59.234 @PRF003 50
+15:03:59.235 @PRF001 140019503
+15:03:59.237 @PRF002 2018/10/3 0:00:00
+15:03:59.238 @PRF003 50
+15:03:59.240 @PRF001 140019503
+15:03:59.241 @PRF002 2018/10/4 0:00:00
+15:03:59.242 @PRF003 50
+15:03:59.244 @PRF001 140019503
+15:03:59.245 @PRF002 2018/10/5 0:00:00
+15:03:59.246 @PRF003 50
+15:03:59.248 @PRF001 140019503
+15:03:59.249 @PRF002 2018/10/6 0:00:00
+15:03:59.251 @PRF003 50
+15:03:59.252 @PRF001 140019503
+15:03:59.254 @PRF002 2018/10/7 0:00:00
+15:03:59.255 @PRF003 50
+15:03:59.257 @PRF001 140019503
+15:03:59.258 @PRF002 2018/10/8 0:00:00
+15:03:59.260 @PRF003 50
+15:03:59.262 @PRF001 140019503
+15:03:59.263 @PRF002 2018/10/9 0:00:00
+15:03:59.264 @PRF003 50
+15:03:59.266 @PRF001 140019503
+15:03:59.267 @PRF002 2018/10/10 0:00:00
+15:03:59.268 @PRF003 50
+15:03:59.270 @PRF001 140019503
+15:03:59.272 @PRF002 2018/10/11 0:00:00
+15:03:59.273 @PRF003 50
+15:03:59.275 @PRF001 140019503
+15:03:59.276 @PRF002 2018/10/12 0:00:00
+15:03:59.277 @PRF003 50
+15:03:59.279 @PRF001 140019503
+15:03:59.280 @PRF002 2018/10/13 0:00:00
+15:03:59.281 @PRF003 50
+15:03:59.289 @PRF001 140019503
+15:03:59.291 @PRF002 2018/10/14 0:00:00
+15:03:59.292 @PRF003 50
+15:03:59.294 @PRF001 140019503
+15:03:59.295 @PRF002 2018/10/15 0:00:00
+15:03:59.296 @PRF003 50
+15:03:59.298 @PRF001 140019503
+15:03:59.300 @PRF002 2018/10/16 0:00:00
+15:03:59.301 @PRF003 50
+15:03:59.303 @PRF001 140019503
+15:03:59.304 @PRF002 2018/10/17 0:00:00
+15:03:59.305 @PRF003 50
+15:03:59.307 @PRF001 140019503
+15:03:59.308 @PRF002 2018/10/18 0:00:00
+15:03:59.310 @PRF003 50
+15:03:59.312 @PRF001 140019503
+15:03:59.313 @PRF002 2018/10/19 0:00:00
+15:03:59.314 @PRF003 50
+15:03:59.316 @PRF001 140019503
+15:03:59.317 @PRF002 2018/10/20 0:00:00
+15:03:59.318 @PRF003 50
+15:03:59.320 @PRF001 140019503
+15:03:59.321 @PRF002 2018/10/21 0:00:00
+15:03:59.323 @PRF003 50
+15:03:59.325 @PRF001 140019503
+15:03:59.326 @PRF002 2018/10/22 0:00:00
+15:03:59.327 @PRF003 50
+15:03:59.329 @PRF001 140019503
+15:03:59.330 @PRF002 2018/10/23 0:00:00
+15:03:59.331 @PRF003 50
+15:03:59.333 @PRF001 140019503
+15:03:59.335 @PRF002 2018/10/24 0:00:00
+15:03:59.336 @PRF003 50
+15:03:59.338 @PRF001 140019503
+15:03:59.339 @PRF002 2018/10/25 0:00:00
+15:03:59.340 @PRF003 50
+15:03:59.342 @PRF001 140019503
+15:03:59.343 @PRF002 2018/10/26 0:00:00
+15:03:59.344 @PRF003 50
+15:03:59.346 @PRF001 140019503
+15:03:59.347 @PRF002 2018/10/27 0:00:00
+15:03:59.348 @PRF003 50
+15:03:59.351 @PRF001 140019503
+15:03:59.352 @PRF002 2018/10/28 0:00:00
+15:03:59.353 @PRF003 50
+15:03:59.355 @PRF001 140019503
+15:03:59.356 @PRF002 2018/10/29 0:00:00
+15:03:59.358 @PRF003 50
+15:03:59.359 @PRF001 140019503
+15:03:59.361 @PRF002 2018/10/30 0:00:00
+15:03:59.362 @PRF003 50
+15:03:59.364 @PRF001 140019503
+15:03:59.365 @PRF002 2018/10/31 0:00:00
+15:03:59.366 @PRF003 50
+15:03:59.368 @PRF001 140019503
+15:03:59.370 @PRF002 2018/11/1 0:00:00
+15:03:59.371 @PRF003 50
+15:03:59.373 @PRF001 140019503
+15:03:59.374 @PRF002 2018/11/2 0:00:00
+15:03:59.375 @PRF003 50
+15:03:59.377 @PRF001 140019503
+15:03:59.378 @PRF002 2018/11/3 0:00:00
+15:03:59.380 @PRF003 50
+15:03:59.382 @PRF001 140019503
+15:03:59.383 @PRF002 2018/11/4 0:00:00
+15:03:59.384 @PRF003 50
+15:03:59.386 @PRF001 140019503
+15:03:59.388 @PRF002 2018/11/5 0:00:00
+15:03:59.389 @PRF003 50
+15:03:59.391 @PRF001 140019503
+15:03:59.392 @PRF002 2018/11/6 0:00:00
+15:03:59.393 @PRF003 50
+15:03:59.395 @PRF001 140019503
+15:03:59.396 @PRF002 2018/11/7 0:00:00
+15:03:59.398 @PRF003 50
+15:03:59.400 @PRF001 140019503
+15:03:59.401 @PRF002 2018/11/8 0:00:00
+15:03:59.402 @PRF003 50
+15:03:59.404 @PRF001 140019503
+15:03:59.405 @PRF002 2018/11/9 0:00:00
+15:03:59.406 @PRF003 50
+15:03:59.408 @PRF001 140019503
+15:03:59.409 @PRF002 2018/11/10 0:00:00
+15:03:59.411 @PRF003 50
+15:03:59.413 @PRF001 140019503
+15:03:59.414 @PRF002 2018/11/11 0:00:00
+15:03:59.415 @PRF003 50
+15:03:59.417 @PRF001 140019503
+15:03:59.418 @PRF002 2018/11/12 0:00:00
+15:03:59.419 @PRF003 50
+15:03:59.421 @PRF001 140019503
+15:03:59.422 @PRF002 2018/11/13 0:00:00
+15:03:59.423 @PRF003 50
+15:03:59.426 @PRF001 140019503
+15:03:59.428 @PRF002 2018/11/14 0:00:00
+15:03:59.429 @PRF003 50
+15:03:59.431 @PRF001 140019503
+15:03:59.432 @PRF002 2018/11/15 0:00:00
+15:03:59.433 @PRF003 50
+15:03:59.435 @PRF001 140019503
+15:03:59.436 @PRF002 2018/11/16 0:00:00
+15:03:59.437 @PRF003 50
+15:03:59.440 @PRF001 140019503
+15:03:59.441 @PRF002 2018/11/17 0:00:00
+15:03:59.442 @PRF003 50
+15:03:59.444 @PRF001 140019503
+15:03:59.445 @PRF002 2018/11/18 0:00:00
+15:03:59.446 @PRF003 50
+15:03:59.448 @PRF001 140019503
+15:03:59.450 @PRF002 2018/11/19 0:00:00
+15:03:59.451 @PRF003 50
+15:03:59.452 @PRF001 140019503
+15:03:59.454 @PRF002 2018/11/20 0:00:00
+15:03:59.455 @PRF003 50
+15:03:59.457 @PRF001 394121001011
+15:03:59.458 @PRF002 2018/7/21 0:00:00
+15:03:59.459 @PRF003 2345
+15:03:59.461 @PRF001 394121001011
+15:03:59.463 @PRF002 2018/7/22 0:00:00
+15:03:59.464 @PRF003 2345
+15:03:59.466 @PRF001 394121001011
+15:03:59.467 @PRF002 2018/7/23 0:00:00
+15:03:59.468 @PRF003 2144
+15:03:59.471 @PRF001 394121001048
+15:03:59.472 @PRF002 2018/7/21 0:00:00
+15:03:59.473 @PRF003 56
+15:03:59.475 @PRF001 394121001048
+15:03:59.476 @PRF002 2018/7/22 0:00:00
+15:03:59.478 @PRF003 56
+15:03:59.479 @PRF001 394121001048
+15:03:59.481 @PRF002 2018/7/23 0:00:00
+15:03:59.482 @PRF003 1
+15:03:59.484 @PRF001 394121001074
+15:03:59.485 @PRF002 2018/7/25 0:00:00
+15:03:59.486 @PRF003 300
+15:03:59.488 @PRF001 394121001074
+15:03:59.490 @PRF002 2018/7/26 0:00:00
+15:03:59.491 @PRF003 300
+15:03:59.493 @PRF001 394121001074
+15:03:59.494 @PRF002 2018/7/27 0:00:00
+15:03:59.495 @PRF003 300
+15:03:59.497 @PRF001 394121001074
+15:03:59.498 @PRF002 2018/7/28 0:00:00
+15:03:59.499 @PRF003 300
+15:03:59.501 @PRF001 394121001074
+15:03:59.502 @PRF002 2018/7/29 0:00:00
+15:03:59.504 @PRF003 300
+15:03:59.506 @PRF001 394121001074
+15:03:59.507 @PRF002 2018/7/30 0:00:00
+15:03:59.508 @PRF003 300
+15:03:59.510 @PRF001 394121001074
+15:03:59.511 @PRF002 2018/7/31 0:00:00
+15:03:59.512 @PRF003 300
+15:03:59.514 @PRF001 394121001074
+15:03:59.515 @PRF002 2018/8/1 0:00:00
+15:03:59.517 @PRF003 300
+15:03:59.519 @PRF001 394121001074
+15:03:59.520 @PRF002 2018/8/2 0:00:00
+15:03:59.521 @PRF003 300
+15:03:59.523 @PRF001 394121001074
+15:03:59.524 @PRF002 2018/8/3 0:00:00
+15:03:59.525 @PRF003 300
+15:03:59.527 @PRF001 394121001402
+15:03:59.528 @PRF002 2018/7/26 0:00:00
+15:03:59.530 @PRF003 100
+15:03:59.531 @PRF001 394121001402
+15:03:59.533 @PRF002 2018/7/27 0:00:00
+15:03:59.534 @PRF003 100
+15:03:59.536 @PRF001 394121001402
+15:03:59.538 @PRF002 2018/7/28 0:00:00
+15:03:59.539 @PRF003 100
+15:03:59.540 @PRF001 394121001402
+15:03:59.542 @PRF002 2018/7/29 0:00:00
+15:03:59.543 @PRF003 22
+15:03:59.545 @PRF001 394121003003
+15:03:59.546 @PRF002 2018/7/24 0:00:00
+15:03:59.547 @PRF003 23
+15:03:59.549 @PRF001 394121003003
+15:03:59.551 @PRF002 2018/7/25 0:00:00
+15:03:59.552 @PRF003 23
+15:03:59.553 @PRF001 394121003003
+15:03:59.555 @PRF002 2018/7/26 0:00:00
+15:03:59.556 @PRF003 9
+15:03:59.558 @PRF001 394121007005
+15:03:59.559 @PRF002 2018/7/25 0:00:00
+15:03:59.560 @PRF003 345
+15:03:59.562 @PRF001 394121007005
+15:03:59.563 @PRF002 2018/7/26 0:00:00
+15:03:59.565 @PRF003 345
+15:03:59.567 @PRF001 394121007005
+15:03:59.568 @PRF002 2018/7/27 0:00:00
+15:03:59.569 @PRF003 345
+15:03:59.572 @PRF001 394121007005
+15:03:59.573 @PRF002 2018/7/28 0:00:00
+15:03:59.574 @PRF003 345
+15:03:59.576 @PRF001 394121007005
+15:03:59.577 @PRF002 2018/7/29 0:00:00
+15:03:59.578 @PRF003 100
+15:03:59.580 @PRF001 394121007005
+15:03:59.582 @PRF002 2018/7/30 0:00:00
+15:03:59.583 @PRF003 79
+15:03:59.585 @PRF001 MX48A(GT)
+15:03:59.586 @PRF002 2018/7/21 0:00:00
+15:03:59.587 @PRF003 1
+15:03:59.589 @PRF001 MX55A
+15:03:59.590 @PRF002 2018/7/21 0:00:00
+15:03:59.591 @PRF003 23
+15:03:59.593 @PRF001 MX55A
+15:03:59.595 @PRF002 2018/7/22 0:00:00
+15:03:59.596 @PRF003 23
+15:03:59.598 @PRF001 MX55A
+15:03:59.599 @PRF002 2018/7/23 0:00:00
+15:03:59.600 @PRF003 23
+15:03:59.602 @PRF001 MX55A
+15:03:59.603 @PRF002 2018/7/24 0:00:00
+15:03:59.604 @PRF003 23
+15:03:59.606 @PRF001 MX55A
+15:03:59.608 @PRF002 2018/7/25 0:00:00
+15:03:59.609 @PRF003 23
+15:03:59.611 @PRF001 MX55A
+15:03:59.612 @PRF002 2018/7/26 0:00:00
+15:03:59.613 @PRF003 23
+15:03:59.615 @PRF001 MX55A
+15:03:59.616 @PRF002 2018/7/27 0:00:00
+15:03:59.617 @PRF003 23
+15:03:59.620 @PRF001 MX55A
+15:03:59.621 @PRF002 2018/7/28 0:00:00
+15:03:59.622 @PRF003 3
+15:03:59.624 @PRF001 MY22G
+15:03:59.625 @PRF002 2018/7/21 0:00:00
+15:03:59.626 @PRF003 244
+15:03:59.629 @PRF001 MY22G
+15:03:59.630 @PRF002 2018/7/22 0:00:00
+15:03:59.631 @PRF003 244
+15:03:59.633 @PRF001 MY22G
+15:03:59.634 @PRF002 2018/7/23 0:00:00
+15:03:59.635 @PRF003 244
+15:03:59.637 @PRF001 MY22G
+15:03:59.639 @PRF002 2018/7/24 0:00:00
+15:03:59.640 @PRF003 185
+15:03:59.642 @PRF001 NS11G18
+15:03:59.643 @PRF002 2018/7/25 0:00:00
+15:03:59.644 @PRF003 1
+15:03:59.646 @PRF001 TCLNS-11B018
+15:03:59.647 @PRF002 2018/7/21 0:00:00
+15:03:59.648 @PRF003 200
+15:03:59.650 @PRF001 TCLNS-11B018
+15:03:59.652 @PRF002 2018/7/22 0:00:00
+15:03:59.653 @PRF003 200
+15:03:59.655 @PRF001 TCLNS-11B018
+15:03:59.656 @PRF002 2018/7/23 0:00:00
+15:03:59.657 @PRF003 200
+15:03:59.659 @PRF001 TCLNS-11B018
+15:03:59.661 @PRF002 2018/7/24 0:00:00
+15:03:59.662 @PRF003 87
+15:03:59.664 @PRF001 TCLNS-11B121A
+15:03:59.665 @PRF002 2018/7/26 0:00:00
+15:03:59.666 @PRF003 123
+15:03:59.668 @PRF001 TCLNS-11B121A
+15:03:59.669 @PRF002 2018/7/27 0:00:00
+15:03:59.670 @PRF003 123
+15:03:59.672 @PRF001 TCLNS-11B121A
+15:03:59.673 @PRF002 2018/7/28 0:00:00
+15:03:59.674 @PRF003 54
+15:36:24.161  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:36:28.523 @EMP002 系统管理员
+15:36:28.524 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:50:13.425  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:50:18.564 @EMP002 系统管理员
+15:50:18.565 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:03:43.109  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:15:53.366  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:16:10.682 @EMP002 系统管理员
+16:16:10.683 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:11:54.726  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:12:00.389 @EMP002 系统管理员
+17:12:00.391 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:33:26.606  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:33:33.793 @EMP002 系统管理员
+17:33:33.796 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:47:22.740  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:47:27.626 @EMP002 系统管理员
+17:47:27.628 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:03:47.488  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:03:53.821 @EMP002 系统管理员
+18:03:53.822 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:12:38.595  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:13:21.953 @EMP002 系统管理员
+18:13:21.955 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:57:36.416  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:57:41.365 @EMP002 系统管理员
+18:57:41.367 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:28:15.864  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:28:20.279 @EMP002 系统管理员
+19:28:20.281 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:29:09.869  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:29:14.100 @EMP002 系统管理员
+19:29:14.102 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:30:19.317  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:30:23.421 @EMP002 系统管理员
+19:30:23.423 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:34:48.282  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:34:52.897 @EMP002 系统管理员
+19:34:52.898 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:35:22.533 @FOR001 313
+19:35:22.534 @FOR002 3
+19:35:22.535 @FOR003 FormPurProductPlan
+19:35:22.536 @FOR004 采购计划
+19:35:22.537 @FOR005 
+19:35:22.539 @FOR006 1
+19:35:27.324  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:35:31.819 @EMP002 系统管理员
+19:35:31.820 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:35:36.931 ')' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 StudentMgr.SqlHelper.ExecuteDataTable(SqlConnection conn, String cmdText, SqlParameter[] parameters) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 278
+19:35:36.933 SELECT DISTINCT QAB001,QAB003,DEA002,DEA057,QAB005 FROM SGMQAB C INNER JOIN TPADEA D ON C.QAB003=D.DEA001 WHERE DEA009 IN ('P') AND QAB001 IN () 
+19:36:47.902  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:37:00.030 @EMP002 系统管理员
+19:37:00.032 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:38:01.392  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:38:05.823 @EMP002 系统管理员
+19:38:05.825 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:41:12.347  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:41:16.604 @EMP002 系统管理员
+19:41:16.605 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:48:02.009  异常信息：远程服务器返回错误: (500) 内部服务器错误。
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 243
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:48:06.531 @EMP002 系统管理员
+19:48:06.532 @EMP033 cebfd1559b68d67688884d7a3d3e8c

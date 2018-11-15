@@ -1,0 +1,992 @@
+09:57:13.703  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+09:57:22.516 @EMP002 系统管理员
+09:57:22.518 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:03:17.509  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:04:05.244 @EMP002 系统管理员
+10:04:05.246 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:05:50.865  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:07:10.072 @EMP002 系统管理员
+10:07:10.076 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:09:57.849  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:10:53.836 @EMP002 系统管理员
+10:10:53.838 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:12:11.136  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:12:16.388 @EMP002 系统管理员
+10:12:16.390 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:17:11.099  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:17:47.991 @EMP002 系统管理员
+10:17:47.994 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:18:35.479 @ANW001 20180920001
+10:18:35.480 @ANW002 
+10:18:35.482 @ANW003 
+10:18:35.484 @ANW004 
+10:18:35.486 @ANW005 
+10:18:35.487 @ANW006 0
+10:18:35.489 @ANW007 
+10:18:35.490 @ANW008 0
+10:18:35.492 @ANW009 0
+10:18:35.494 @ANW010 0507
+10:18:35.495 @ANW011 总装车间
+10:18:35.497 @ANW012 050701
+10:18:35.498 @ANW013 1线
+10:18:35.500 @ANW014 计时
+10:18:35.501 @ANW015 2018/9/20 8:00:00
+10:18:35.503 @ANW016 2018/9/20 17:00:00
+10:18:35.504 @ANW017 
+10:18:35.505 @ANW018 
+10:18:35.507 @ANW019 
+10:18:35.508 @ANW020 False
+10:18:35.509 @ANW021 False
+10:18:35.511 @ANW022 2018/9/20 0:00:00
+10:18:35.512 @ANW023 0.5
+10:18:35.513 @ANW024 0
+10:18:35.517 @ANX001 20180920001
+10:18:35.519 @ANX002 10139
+10:18:35.520 @ANX003 张龙
+10:18:35.522 @ANX004 一线组长
+10:18:35.523 @ANX005 
+10:18:35.524 @ANX006 
+10:18:35.525 @ANX007 2018/9/20 8:00:00
+10:18:35.527 @ANX008 2018/9/20 17:00:00
+10:18:35.528 @ANX009 12
+10:18:35.530 @ANX010 0
+10:18:35.531 @ANX011 在职
+10:18:35.532 @ANX012 
+10:18:35.533 @ANX013 
+10:18:35.535 @ANX014 1线
+10:18:35.536 @ANX015 0
+10:18:35.537 @ANX016 8.5
+10:18:35.539 @ANX017 102
+10:18:35.544 @ANX001 20180920001
+10:18:35.545 @ANX002 10140
+10:18:35.546 @ANX003 刘兴贵
+10:18:35.548 @ANX004 装配工
+10:18:35.549 @ANX005 
+10:18:35.550 @ANX006 
+10:18:35.552 @ANX007 2018/9/20 8:00:00
+10:18:35.553 @ANX008 2018/9/20 17:00:00
+10:18:35.554 @ANX009 10
+10:18:35.556 @ANX010 0
+10:18:35.557 @ANX011 在职
+10:18:35.558 @ANX012 
+10:18:35.560 @ANX013 
+10:18:35.561 @ANX014 1线
+10:18:35.562 @ANX015 0
+10:18:35.564 @ANX016 8.5
+10:18:35.565 @ANX017 85
+10:18:35.569 @ANX001 20180920001
+10:18:35.571 @ANX002 10141
+10:18:35.572 @ANX003 王振宇
+10:18:35.573 @ANX004 装配工
+10:18:35.575 @ANX005 
+10:18:35.577 @ANX006 
+10:18:35.578 @ANX007 2018/9/20 8:00:00
+10:18:35.580 @ANX008 2018/9/20 17:00:00
+10:18:35.581 @ANX009 9
+10:18:35.582 @ANX010 0
+10:18:35.584 @ANX011 在职
+10:18:35.585 @ANX012 
+10:18:35.586 @ANX013 
+10:18:35.588 @ANX014 1线
+10:18:35.589 @ANX015 0
+10:18:35.590 @ANX016 8.5
+10:18:35.592 @ANX017 76.5
+10:18:35.596 @ANX001 20180920001
+10:18:35.597 @ANX002 10142
+10:18:35.599 @ANX003 钟成菊
+10:18:35.600 @ANX004 装配工
+10:18:35.602 @ANX005 
+10:18:35.604 @ANX006 
+10:18:35.605 @ANX007 2018/9/20 8:00:00
+10:18:35.606 @ANX008 2018/9/20 17:00:00
+10:18:35.607 @ANX009 8
+10:18:35.609 @ANX010 0
+10:18:35.610 @ANX011 在职
+10:18:35.612 @ANX012 
+10:18:35.613 @ANX013 
+10:18:35.614 @ANX014 1线
+10:18:35.616 @ANX015 0
+10:18:35.618 @ANX016 8.5
+10:18:35.620 @ANX017 68
+10:18:35.624 @ANX001 20180920001
+10:18:35.626 @ANX002 10143
+10:18:35.627 @ANX003 赵成鹏
+10:18:35.629 @ANX004 装配工
+10:18:35.630 @ANX005 
+10:18:35.632 @ANX006 
+10:18:35.633 @ANX007 2018/9/20 8:00:00
+10:18:35.635 @ANX008 2018/9/20 17:00:00
+10:18:35.636 @ANX009 7
+10:18:35.638 @ANX010 0
+10:18:35.639 @ANX011 在职
+10:18:35.641 @ANX012 
+10:18:35.642 @ANX013 
+10:18:35.644 @ANX014 1线
+10:18:35.645 @ANX015 0
+10:18:35.647 @ANX016 8.5
+10:18:35.648 @ANX017 59.5
+10:18:35.651 @ANX001 20180920001
+10:18:35.652 @ANX002 10144
+10:18:35.654 @ANX003 何万华
+10:18:35.655 @ANX004 装配工
+10:18:35.656 @ANX005 
+10:18:35.657 @ANX006 
+10:18:35.659 @ANX007 2018/9/20 8:00:00
+10:18:35.660 @ANX008 2018/9/20 17:00:00
+10:18:35.661 @ANX009 6
+10:18:35.662 @ANX010 0
+10:18:35.664 @ANX011 在职
+10:18:35.665 @ANX012 
+10:18:35.667 @ANX013 
+10:18:35.668 @ANX014 1线
+10:18:35.670 @ANX015 0
+10:18:35.671 @ANX016 8.5
+10:18:35.673 @ANX017 51
+10:18:35.675 @ANX001 20180920001
+10:18:35.677 @ANX002 10145
+10:18:35.678 @ANX003 严云芹
+10:18:35.680 @ANX004 装配工
+10:18:35.681 @ANX005 
+10:18:35.682 @ANX006 
+10:18:35.684 @ANX007 2018/9/20 8:00:00
+10:18:35.685 @ANX008 2018/9/20 17:00:00
+10:18:35.686 @ANX009 5
+10:18:35.687 @ANX010 0
+10:18:35.689 @ANX011 在职
+10:18:35.690 @ANX012 
+10:18:35.692 @ANX013 
+10:18:35.694 @ANX014 1线
+10:18:35.695 @ANX015 0
+10:18:35.697 @ANX016 8.5
+10:18:35.698 @ANX017 42.5
+10:18:35.701 @ANX001 20180920001
+10:18:35.703 @ANX002 10146
+10:18:35.705 @ANX003 马小千
+10:18:35.707 @ANX004 装配工
+10:18:35.708 @ANX005 
+10:18:35.710 @ANX006 
+10:18:35.712 @ANX007 2018/9/20 8:00:00
+10:18:35.713 @ANX008 2018/9/20 17:00:00
+10:18:35.714 @ANX009 5
+10:18:35.716 @ANX010 0
+10:18:35.717 @ANX011 在职
+10:18:35.718 @ANX012 
+10:18:35.719 @ANX013 
+10:18:35.721 @ANX014 1线
+10:18:35.722 @ANX015 0
+10:18:35.723 @ANX016 8.5
+10:18:35.724 @ANX017 42.5
+10:18:35.727 @ANX001 20180920001
+10:18:35.728 @ANX002 10147
+10:18:35.730 @ANX003 周顺
+10:18:35.732 @ANX004 装配工
+10:18:35.733 @ANX005 
+10:18:35.734 @ANX006 
+10:18:35.736 @ANX007 2018/9/20 8:00:00
+10:18:35.737 @ANX008 2018/9/20 17:00:00
+10:18:35.738 @ANX009 5
+10:18:35.740 @ANX010 0
+10:18:35.741 @ANX011 在职
+10:18:35.743 @ANX012 
+10:18:35.744 @ANX013 
+10:18:35.745 @ANX014 1线
+10:18:35.747 @ANX015 0
+10:18:35.748 @ANX016 8.5
+10:18:35.749 @ANX017 42.5
+10:18:35.752 @ANX001 20180920001
+10:18:35.753 @ANX002 10148
+10:18:35.755 @ANX003 龙付咪
+10:18:35.756 @ANX004 装配工
+10:18:35.757 @ANX005 
+10:18:35.759 @ANX006 
+10:18:35.760 @ANX007 2018/9/20 8:00:00
+10:18:35.762 @ANX008 2018/9/20 17:00:00
+10:18:35.763 @ANX009 5
+10:18:35.764 @ANX010 0
+10:18:35.765 @ANX011 在职
+10:18:35.767 @ANX012 
+10:18:35.768 @ANX013 
+10:18:35.769 @ANX014 1线
+10:18:35.770 @ANX015 0
+10:18:35.772 @ANX016 8.5
+10:18:35.773 @ANX017 42.5
+10:18:35.776 @ANX001 20180920001
+10:18:35.777 @ANX002 10149
+10:18:35.779 @ANX003 郭昭芬
+10:18:35.780 @ANX004 装配工
+10:18:35.781 @ANX005 
+10:18:35.783 @ANX006 
+10:18:35.784 @ANX007 2018/9/20 8:00:00
+10:18:35.785 @ANX008 2018/9/20 17:00:00
+10:18:35.786 @ANX009 5
+10:18:35.788 @ANX010 0
+10:18:35.789 @ANX011 在职
+10:18:35.791 @ANX012 
+10:18:35.792 @ANX013 
+10:18:35.794 @ANX014 1线
+10:18:35.795 @ANX015 0
+10:18:35.796 @ANX016 8.5
+10:18:35.797 @ANX017 42.5
+10:18:35.800 @ANX001 20180920001
+10:18:35.801 @ANX002 10150
+10:18:35.803 @ANX003 刘高发
+10:18:35.804 @ANX004 装配工
+10:18:35.805 @ANX005 
+10:18:35.807 @ANX006 
+10:18:35.808 @ANX007 2018/9/20 8:00:00
+10:18:35.810 @ANX008 2018/9/20 17:00:00
+10:18:35.811 @ANX009 5
+10:18:35.812 @ANX010 0
+10:18:35.813 @ANX011 在职
+10:18:35.815 @ANX012 
+10:18:35.816 @ANX013 
+10:18:35.817 @ANX014 1线
+10:18:35.818 @ANX015 0
+10:18:35.820 @ANX016 8.5
+10:18:35.821 @ANX017 42.5
+10:18:35.824 @ANX001 20180920001
+10:18:35.826 @ANX002 10151
+10:18:35.827 @ANX003 吴张英
+10:18:35.828 @ANX004 装配工
+10:18:35.830 @ANX005 
+10:18:35.831 @ANX006 
+10:18:35.833 @ANX007 2018/9/20 8:00:00
+10:18:35.834 @ANX008 2018/9/20 17:00:00
+10:18:35.836 @ANX009 5
+10:18:35.837 @ANX010 0
+10:18:35.838 @ANX011 在职
+10:18:35.840 @ANX012 
+10:18:35.841 @ANX013 
+10:18:35.842 @ANX014 1线
+10:18:35.843 @ANX015 0
+10:18:35.845 @ANX016 8.5
+10:18:35.846 @ANX017 42.5
+10:18:35.848 @ANX001 20180920001
+10:18:35.850 @ANX002 10152
+10:18:35.851 @ANX003 杨犁
+10:18:35.852 @ANX004 装配工
+10:18:35.854 @ANX005 
+10:18:35.855 @ANX006 
+10:18:35.857 @ANX007 2018/9/20 8:00:00
+10:18:35.858 @ANX008 2018/9/20 17:00:00
+10:18:35.859 @ANX009 5
+10:18:35.861 @ANX010 0
+10:18:35.862 @ANX011 在职
+10:18:35.863 @ANX012 
+10:18:35.864 @ANX013 
+10:18:35.866 @ANX014 1线
+10:18:35.867 @ANX015 0
+10:18:35.872 @ANX016 8.5
+10:18:35.873 @ANX017 42.5
+10:18:35.876 @ANX001 20180920001
+10:18:35.877 @ANX002 10153
+10:18:35.879 @ANX003 熊洪才
+10:18:35.880 @ANX004 装配工
+10:18:35.881 @ANX005 
+10:18:35.883 @ANX006 
+10:18:35.885 @ANX007 2018/9/20 8:00:00
+10:18:35.887 @ANX008 2018/9/20 17:00:00
+10:18:35.888 @ANX009 5
+10:18:35.890 @ANX010 0
+10:18:35.891 @ANX011 在职
+10:18:35.893 @ANX012 
+10:18:35.894 @ANX013 
+10:18:35.896 @ANX014 1线
+10:18:35.897 @ANX015 0
+10:18:35.899 @ANX016 8.5
+10:18:35.900 @ANX017 42.5
+10:18:35.902 @ANX001 20180920001
+10:18:35.904 @ANX002 10154
+10:18:35.905 @ANX003 代开容
+10:18:35.906 @ANX004 装配工
+10:18:35.908 @ANX005 
+10:18:35.909 @ANX006 
+10:18:35.910 @ANX007 2018/9/20 8:00:00
+10:18:35.911 @ANX008 2018/9/20 17:00:00
+10:18:35.913 @ANX009 5
+10:18:35.914 @ANX010 0
+10:18:35.915 @ANX011 在职
+10:18:35.916 @ANX012 
+10:18:35.918 @ANX013 
+10:18:35.919 @ANX014 1线
+10:18:35.920 @ANX015 0
+10:18:35.922 @ANX016 8.5
+10:18:35.923 @ANX017 42.5
+10:18:35.925 @ANX001 20180920001
+10:18:35.926 @ANX002 10155
+10:18:35.928 @ANX003 尹宗丹
+10:18:35.929 @ANX004 装配工
+10:18:35.931 @ANX005 
+10:18:35.932 @ANX006 
+10:18:35.934 @ANX007 2018/9/20 8:00:00
+10:18:35.935 @ANX008 2018/9/20 17:00:00
+10:18:35.936 @ANX009 5
+10:18:35.937 @ANX010 0
+10:18:35.939 @ANX011 在职
+10:18:35.940 @ANX012 
+10:18:35.941 @ANX013 
+10:18:35.942 @ANX014 1线
+10:18:35.943 @ANX015 0
+10:18:35.945 @ANX016 8.5
+10:18:35.946 @ANX017 42.5
+10:18:35.949 @ANX001 20180920001
+10:18:35.950 @ANX002 10156
+10:18:35.951 @ANX003 朱正高
+10:18:35.953 @ANX004 装配工
+10:18:35.954 @ANX005 
+10:18:35.955 @ANX006 
+10:18:35.957 @ANX007 2018/9/20 8:00:00
+10:18:35.958 @ANX008 2018/9/20 17:00:00
+10:18:35.960 @ANX009 5
+10:18:35.961 @ANX010 0
+10:18:35.962 @ANX011 在职
+10:18:35.964 @ANX012 
+10:18:35.965 @ANX013 
+10:18:35.966 @ANX014 1线
+10:18:35.967 @ANX015 0
+10:18:35.968 @ANX016 8.5
+10:18:35.970 @ANX017 42.5
+10:18:35.972 @ANX001 20180920001
+10:18:35.973 @ANX002 10157
+10:18:35.975 @ANX003 卿廷群
+10:18:35.976 @ANX004 装配工
+10:18:35.978 @ANX005 
+10:18:35.980 @ANX006 
+10:18:35.981 @ANX007 2018/9/20 8:00:00
+10:18:35.983 @ANX008 2018/9/20 17:00:00
+10:18:35.984 @ANX009 5
+10:18:35.985 @ANX010 0
+10:18:35.986 @ANX011 在职
+10:18:35.987 @ANX012 
+10:18:35.989 @ANX013 
+10:18:35.990 @ANX014 1线
+10:18:35.991 @ANX015 0
+10:18:35.993 @ANX016 8.5
+10:18:35.994 @ANX017 42.5
+10:18:35.996 @ANX001 20180920001
+10:18:35.998 @ANX002 10158
+10:18:35.999 @ANX003 邹修丽
+10:18:36.001 @ANX004 装配工
+10:18:36.002 @ANX005 
+10:18:36.003 @ANX006 
+10:18:36.004 @ANX007 2018/9/20 8:00:00
+10:18:36.006 @ANX008 2018/9/20 17:00:00
+10:18:36.007 @ANX009 5
+10:18:36.009 @ANX010 0
+10:18:36.010 @ANX011 在职
+10:18:36.011 @ANX012 
+10:18:36.012 @ANX013 
+10:18:36.014 @ANX014 1线
+10:18:36.015 @ANX015 0
+10:18:36.016 @ANX016 8.5
+10:18:36.017 @ANX017 42.5
+10:18:36.020 @ANX001 20180920001
+10:18:36.021 @ANX002 10159
+10:18:36.022 @ANX003 徐永洪
+10:18:36.024 @ANX004 装配工
+10:18:36.025 @ANX005 
+10:18:36.026 @ANX006 
+10:18:36.027 @ANX007 2018/9/20 8:00:00
+10:18:36.029 @ANX008 2018/9/20 17:00:00
+10:18:36.031 @ANX009 5
+10:18:36.032 @ANX010 0
+10:18:36.033 @ANX011 在职
+10:18:36.035 @ANX012 
+10:18:36.036 @ANX013 
+10:18:36.037 @ANX014 1线
+10:18:36.039 @ANX015 0
+10:18:36.040 @ANX016 8.5
+10:18:36.041 @ANX017 42.5
+10:18:36.044 @ANX001 20180920001
+10:18:36.045 @ANX002 10160
+10:18:36.046 @ANX003 刘仁燕
+10:18:36.048 @ANX004 装配工
+10:18:36.049 @ANX005 
+10:18:36.050 @ANX006 
+10:18:36.051 @ANX007 2018/9/20 8:00:00
+10:18:36.052 @ANX008 2018/9/20 17:00:00
+10:18:36.054 @ANX009 5
+10:18:36.055 @ANX010 0
+10:18:36.056 @ANX011 在职
+10:18:36.058 @ANX012 
+10:18:36.059 @ANX013 
+10:18:36.060 @ANX014 1线
+10:18:36.062 @ANX015 0
+10:18:36.063 @ANX016 8.5
+10:18:36.064 @ANX017 42.5
+10:18:36.067 @ANX001 20180920001
+10:18:36.068 @ANX002 10161
+10:18:36.070 @ANX003 陈万珍
+10:18:36.072 @ANX004 装配工
+10:18:36.073 @ANX005 
+10:18:36.074 @ANX006 
+10:18:36.076 @ANX007 2018/9/20 8:00:00
+10:18:36.077 @ANX008 2018/9/20 17:00:00
+10:18:36.078 @ANX009 5
+10:18:36.079 @ANX010 0
+10:18:36.080 @ANX011 在职
+10:18:36.082 @ANX012 
+10:18:36.083 @ANX013 
+10:18:36.084 @ANX014 1线
+10:18:36.085 @ANX015 0
+10:18:36.087 @ANX016 8.5
+10:18:36.088 @ANX017 42.5
+10:18:36.090 @ANX001 20180920001
+10:18:36.092 @ANX002 10162
+10:18:36.093 @ANX003 李义承
+10:18:36.095 @ANX004 装配工
+10:18:36.096 @ANX005 
+10:18:36.098 @ANX006 
+10:18:36.099 @ANX007 2018/9/20 8:00:00
+10:18:36.100 @ANX008 2018/9/20 17:00:00
+10:18:36.101 @ANX009 5
+10:18:36.103 @ANX010 0
+10:18:36.104 @ANX011 在职
+10:18:36.105 @ANX012 
+10:18:36.106 @ANX013 
+10:18:36.108 @ANX014 1线
+10:18:36.109 @ANX015 0
+10:18:36.110 @ANX016 8.5
+10:18:36.112 @ANX017 42.5
+10:18:36.114 @ANX001 20180920001
+10:18:36.116 @ANX002 10163
+10:18:36.117 @ANX003 张义兵
+10:18:36.118 @ANX004 装配工
+10:18:36.120 @ANX005 
+10:18:36.121 @ANX006 
+10:18:36.122 @ANX007 2018/9/20 8:00:00
+10:18:36.123 @ANX008 2018/9/20 17:00:00
+10:18:36.125 @ANX009 5
+10:18:36.126 @ANX010 0
+10:18:36.127 @ANX011 在职
+10:18:36.128 @ANX012 
+10:18:36.130 @ANX013 
+10:18:36.131 @ANX014 1线
+10:18:36.132 @ANX015 0
+10:18:36.133 @ANX016 8.5
+10:18:36.135 @ANX017 42.5
+10:18:36.137 @ANX001 20180920001
+10:18:36.138 @ANX002 10164
+10:18:36.140 @ANX003 韩会萍
+10:18:36.141 @ANX004 装配工
+10:18:36.142 @ANX005 
+10:18:36.143 @ANX006 
+10:18:36.144 @ANX007 2018/9/20 8:00:00
+10:18:36.146 @ANX008 2018/9/20 17:00:00
+10:18:36.147 @ANX009 5
+10:18:36.148 @ANX010 0
+10:18:36.150 @ANX011 在职
+10:18:36.151 @ANX012 
+10:18:36.152 @ANX013 
+10:18:36.153 @ANX014 1线
+10:18:36.155 @ANX015 0
+10:18:36.156 @ANX016 8.5
+10:18:36.157 @ANX017 42.5
+10:18:36.159 @ANX001 20180920001
+10:18:36.161 @ANX002 10165
+10:18:36.162 @ANX003 国明秀
+10:18:36.164 @ANX004 装配工
+10:18:36.165 @ANX005 
+10:18:36.166 @ANX006 
+10:18:36.168 @ANX007 2018/9/20 8:00:00
+10:18:36.169 @ANX008 2018/9/20 17:00:00
+10:18:36.170 @ANX009 5
+10:18:36.171 @ANX010 0
+10:18:36.172 @ANX011 在职
+10:18:36.174 @ANX012 
+10:18:36.175 @ANX013 
+10:18:36.176 @ANX014 1线
+10:18:36.177 @ANX015 0
+10:18:36.178 @ANX016 8.5
+10:18:36.180 @ANX017 42.5
+10:18:39.123 @ANW001 20180920001
+10:18:39.124 @ANW020 True
+10:25:34.600  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:25:39.703 @EMP002 系统管理员
+10:25:39.705 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:39:24.023  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:40:05.091 @EMP002 系统管理员
+10:40:05.093 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:41:29.852  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:41:39.911 @EMP002 系统管理员
+10:41:39.913 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+10:42:12.273 @ANW001 20180919001
+10:42:12.275 @ANW020 False
+10:53:00.048  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+10:53:06.028 @EMP002 系统管理员
+10:53:06.031 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:16:54.178  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+11:16:59.579 @EMP002 系统管理员
+11:16:59.582 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+11:18:50.212  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+12:20:27.020 @EMP002 系统管理员
+12:20:27.022 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+13:27:32.194  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+13:28:33.280 @EMP002 系统管理员
+13:28:33.282 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:00:33.126  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:02:18.408 @EMP002 系统管理员
+14:02:18.411 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:10:32.386  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:10:37.418 @EMP002 系统管理员
+14:10:37.422 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:11:36.135  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:11:44.094 @EMP002 系统管理员
+14:11:44.097 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:17:29.013  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:17:40.078 @EMP002 系统管理员
+14:17:40.081 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:19:03.812  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:19:08.722 @EMP002 系统管理员
+14:19:08.725 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:39:03.052  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:40:42.217 @EMP002 系统管理员
+14:40:42.219 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:43:14.914  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:43:48.180 @EMP002 系统管理员
+14:43:48.183 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+14:47:25.603  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+14:50:00.219 @EMP002 系统管理员
+14:50:00.221 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:05:54.252  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:07:41.285 @EMP002 系统管理员
+15:07:41.287 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:28:15.819  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:30:12.200 @EMP002 系统管理员
+15:30:12.202 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:31:56.140  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:32:18.784 @EMP002 系统管理员
+15:32:18.786 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:34:11.135  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:34:17.388 @EMP002 系统管理员
+15:34:17.389 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:36:04.994  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:37:12.947 @EMP002 系统管理员
+15:37:12.950 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:38:58.475  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:39:05.311 @EMP002 系统管理员
+15:39:05.313 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:42:43.965  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:43:54.748 @EMP002 系统管理员
+15:43:54.751 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:48:26.392  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:49:55.685 @EMP002 系统管理员
+15:49:55.687 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:51:51.224  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:51:57.572 @EMP002 系统管理员
+15:51:57.574 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:55:10.174  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+15:57:03.963 @EMP002 系统管理员
+15:57:03.965 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+15:59:33.249  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:01:03.057 @EMP002 系统管理员
+16:01:03.059 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:04:39.320  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:06:01.089 @EMP002 系统管理员
+16:06:01.091 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:07:32.841  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:24:41.744 @EMP002 系统管理员
+16:24:41.746 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:26:17.752  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:26:24.106 @EMP002 系统管理员
+16:26:24.108 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:39:14.734  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:39:21.362 @EMP002 系统管理员
+16:39:21.363 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:45:07.826  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:45:48.320 @EMP002 系统管理员
+16:45:48.322 @EMP033 e51e6c4ea698bc872c5f2e504383ac59
+16:45:50.636 @EMP002 系统管理员
+16:45:50.638 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:48:05.711  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:48:24.484 @EMP002 系统管理员
+16:48:24.486 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+16:50:29.782  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+16:50:44.134 @EMP002 系统管理员
+16:50:44.136 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:00:20.591  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:00:53.935 @EMP002 系统管理员
+17:00:53.939 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:02:35.533  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:02:49.874 @EMP002 系统管理员
+17:02:49.876 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:05:35.385  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:05:39.938 @EMP002 系统管理员
+17:05:39.941 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:14:39.930  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:14:44.841 @EMP002 系统管理员
+17:14:44.845 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:16:18.079  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:16:24.716 @EMP002 系统管理员
+17:16:24.719 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:18:45.484  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:18:50.278 @EMP002 系统管理员
+17:18:50.284 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:47:28.131  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:47:35.164 @EMP002 系统管理员
+17:47:35.167 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:48:51.892 @HAW001 20180920001
+17:48:51.893 @HAW002 GD201505060003
+17:48:51.895 @HAW003 202111329
+17:48:51.902 @HAW004 美的300LED面板外框
+17:48:51.904 @HAW005 激光打码
+17:48:51.905 @HAW006 PCS
+17:48:51.907 @HAW007 204
+17:48:51.909 @HAW008 0.087
+17:48:51.911 @HAW009 102
+17:48:51.912 @HAW010 2018/9/20 0:00:00
+17:48:51.914 @HAW011 计件
+17:48:51.915 @HAW012 0501
+17:48:51.916 @HAW013 五金车间
+17:48:51.918 @HAW014 0501
+17:48:51.920 @HAW015 五金车间
+17:48:51.921 @HAW016 
+17:48:51.923 @HAW017 
+17:48:51.924 @HAW018 False
+17:48:51.926 @HAW019 False
+17:48:51.927 @HAW020 0
+17:48:51.928 @HAW021 0
+17:48:51.933 @HAX001 20180920001
+17:48:51.935 @HAX002 10002
+17:48:51.936 @HAX003 吴征义
+17:48:51.937 @HAX004 成品搬运工
+17:48:51.939 @HAX005 1011
+17:48:51.940 @HAX006 冲角
+17:48:51.941 @HAX007 0.014
+17:48:51.942 @HAX008 0
+17:48:51.944 @HAX009 
+17:48:51.945 @HAX010 
+17:48:51.946 @HAX011 
+17:48:51.947 @HAX012 
+17:48:51.949 @HAX013 0
+17:48:51.950 @HAX014 
+17:48:51.951 @HAX015 在职
+17:48:51.953 @HAX016 001
+17:48:51.954 @HAX017 物流组
+17:48:51.955 @HAX018 0
+17:48:51.956 @HAX019 0
+17:48:51.958 @HAX020 0.0
+17:48:51.962 @HAX001 20180920001
+17:48:51.964 @HAX002 10003
+17:48:51.965 @HAX003 王世洪
+17:48:51.967 @HAX004 成品搬运工
+17:48:51.968 @HAX005 1008
+17:48:51.969 @HAX006 成型
+17:48:51.971 @HAX007 0.015
+17:48:51.972 @HAX008 102
+17:48:51.973 @HAX009 2018/9/20 8:00:00
+17:48:51.975 @HAX010 2018/9/20 17:00:00
+17:48:51.976 @HAX011 
+17:48:51.977 @HAX012 
+17:48:51.978 @HAX013 0
+17:48:51.979 @HAX014 
+17:48:51.981 @HAX015 在职
+17:48:51.982 @HAX016 002
+17:48:51.984 @HAX017 物流组
+17:48:51.985 @HAX018 9
+17:48:51.986 @HAX019 0
+17:48:51.987 @HAX020 1.5
+17:48:51.991 @HAX001 20180920001
+17:48:51.992 @HAX002 10011
+17:48:51.993 @HAX003 潘传慧
+17:48:51.995 @HAX004 发货员
+17:48:51.996 @HAX005 1005
+17:48:51.997 @HAX006 冲孔
+17:48:51.999 @HAX007 0.03
+17:48:52.001 @HAX008 102
+17:48:52.003 @HAX009 2018/9/20 8:00:00
+17:48:52.005 @HAX010 2018/9/20 17:00:00
+17:48:52.006 @HAX011 
+17:48:52.008 @HAX012 
+17:48:52.009 @HAX013 0
+17:48:52.010 @HAX014 
+17:48:52.011 @HAX015 在职
+17:48:52.012 @HAX016 003
+17:48:52.013 @HAX017 物流组
+17:48:52.015 @HAX018 9
+17:48:52.016 @HAX019 0
+17:48:52.017 @HAX020 3.1
+17:48:52.021 @HAX001 20180920001
+17:48:52.023 @HAX002 10020
+17:48:52.024 @HAX003 薛能米
+17:48:52.025 @HAX004 装配工
+17:48:52.026 @HAX005 1004
+17:48:52.028 @HAX006 翻边
+17:48:52.029 @HAX007 0.028
+17:48:52.031 @HAX008 102
+17:48:52.032 @HAX009 2018/9/20 8:00:00
+17:48:52.033 @HAX010 2018/9/20 17:00:00
+17:48:52.035 @HAX011 
+17:48:52.036 @HAX012 
+17:48:52.037 @HAX013 0
+17:48:52.038 @HAX014 
+17:48:52.039 @HAX015 在职
+17:48:52.041 @HAX016 004
+17:48:52.042 @HAX017 LED车间
+17:48:52.043 @HAX018 9
+17:48:52.044 @HAX019 0
+17:48:52.046 @HAX020 2.9
+17:51:51.818  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:52:53.913 @EMP002 系统管理员
+17:52:53.915 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+17:57:31.519  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+17:58:41.553 @EMP002 系统管理员
+17:58:41.556 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:07:36.145  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:07:40.756 @EMP002 系统管理员
+18:07:40.759 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:10:44.665  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:11:36.452 @EMP002 系统管理员
+18:11:36.454 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:14:58.632  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:15:04.157 @EMP002 系统管理员
+18:15:04.158 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:17:13.110  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:17:17.630 @EMP002 系统管理员
+18:17:17.633 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:20:10.019  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:20:28.639 @EMP002 系统管理员
+18:20:28.642 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:24:03.068  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:24:07.428 @EMP002 系统管理员
+18:24:07.429 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:30:06.663  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:30:11.853 @EMP002 系统管理员
+18:30:11.854 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:36:47.488  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:39:08.659 @EMP002 系统管理员
+18:39:08.661 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:40:59.576 @HAW002 GD201505060003
+18:40:59.577 @HAW003 202111329
+18:40:59.578 @HAW004 美的300LED面板外框
+18:40:59.580 @HAW005 激光打码
+18:40:59.581 @HAW006 PCS
+18:40:59.582 @HAW007 204
+18:40:59.583 @HAW008 0.087000
+18:40:59.585 @HAW009 102
+18:40:59.586 @HAW010 2018/9/20 0:00:00
+18:40:59.588 @HAW011 计件
+18:40:59.589 @HAW012 0501
+18:40:59.590 @HAW013 五金车间
+18:40:59.592 @HAW014 0501
+18:40:59.593 @HAW015 五金车间
+18:40:59.595 @HAW016 
+18:40:59.597 @HAW017 
+18:40:59.598 @HAW018 False
+18:40:59.599 @HAW019 False
+18:40:59.601 @HAW001 20180920001
+18:40:59.602 @HAW020 0
+18:40:59.604 @HAW021 0
+18:40:59.613 @HAX003 吴征义
+18:40:59.615 @HAX004 成品搬运工
+18:40:59.617 @HAX005 1011
+18:40:59.618 @HAX006 冲角
+18:40:59.619 @HAX007 0.014000
+18:40:59.621 @HAX008 0
+18:40:59.622 @HAX009 
+18:40:59.624 @HAX010 
+18:40:59.626 @HAX011 
+18:40:59.628 @HAX012 
+18:40:59.630 @HAX013 0.000000
+18:40:59.631 @HAX014 
+18:40:59.632 @HAX015 在职
+18:40:59.634 @HAX016 001
+18:40:59.635 @HAX017 物流组
+18:40:59.636 @idx 30
+18:40:59.638 @HAX018 0
+18:40:59.639 @HAX019 0
+18:40:59.640 @HAX020 0.0
+18:40:59.648 @HAX003 王世洪
+18:40:59.649 @HAX004 成品搬运工
+18:40:59.650 @HAX005 1008
+18:40:59.652 @HAX006 成型
+18:40:59.653 @HAX007 0.015000
+18:40:59.654 @HAX008 102
+18:40:59.656 @HAX009 2018/9/20 8:00:00
+18:40:59.657 @HAX010 2018/9/20 17:00:00
+18:40:59.659 @HAX011 
+18:40:59.660 @HAX012 
+18:40:59.661 @HAX013 0.000000
+18:40:59.663 @HAX014 
+18:40:59.664 @HAX015 在职
+18:40:59.665 @HAX016 002
+18:40:59.666 @HAX017 物流组
+18:40:59.668 @idx 31
+18:40:59.669 @HAX018 9
+18:40:59.670 @HAX019 0
+18:40:59.671 @HAX020 1.5
+18:40:59.678 @HAX003 潘传慧
+18:40:59.679 @HAX004 发货员
+18:40:59.681 @HAX005 1005
+18:40:59.682 @HAX006 冲孔
+18:40:59.683 @HAX007 0.030000
+18:40:59.685 @HAX008 102
+18:40:59.686 @HAX009 2018/9/20 8:00:00
+18:40:59.687 @HAX010 2018/9/20 17:00:00
+18:40:59.689 @HAX011 
+18:40:59.690 @HAX012 
+18:40:59.692 @HAX013 0.000000
+18:40:59.693 @HAX014 
+18:40:59.695 @HAX015 在职
+18:40:59.696 @HAX016 003
+18:40:59.697 @HAX017 物流组
+18:40:59.699 @idx 32
+18:40:59.700 @HAX018 9
+18:40:59.701 @HAX019 0
+18:40:59.702 @HAX020 3.1
+18:40:59.704 @HAX003 薛能米
+18:40:59.706 @HAX004 装配工
+18:40:59.708 @HAX005 1004
+18:40:59.709 @HAX006 翻边
+18:40:59.710 @HAX007 0.028000
+18:40:59.712 @HAX008 102
+18:40:59.713 @HAX009 2018/9/20 8:00:00
+18:40:59.714 @HAX010 2018/9/20 17:00:00
+18:40:59.716 @HAX011 
+18:40:59.717 @HAX012 
+18:40:59.718 @HAX013 0.000000
+18:40:59.719 @HAX014 
+18:40:59.720 @HAX015 在职
+18:40:59.722 @HAX016 004
+18:40:59.724 @HAX017 LED车间
+18:40:59.725 @idx 33
+18:40:59.727 @HAX018 9
+18:40:59.728 @HAX019 0
+18:40:59.729 @HAX020 2.9
+18:41:38.304  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:42:04.731 @EMP002 系统管理员
+18:42:04.735 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:45:10.277  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:45:36.692 @EMP002 系统管理员
+18:45:36.694 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:51:59.354  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:52:03.828 @EMP002 系统管理员
+18:52:03.830 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+18:53:20.933  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+18:53:44.355 @EMP002 系统管理员
+18:53:44.357 @EMP033 cebfd1559b68d67688884d7a3d3e8c
+19:00:48.769  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.170:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 239
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMes\ClassForMain\AppUpdate.cs:行号 310
+19:00:53.128 @EMP002 系统管理员
+19:00:53.131 @EMP033 cebfd1559b68d67688884d7a3d3e8c
