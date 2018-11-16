@@ -154,11 +154,20 @@ namespace LineProductMesBll . Bll
         /// <param name="oddNum"></param>
         /// <param name="state"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool state )
+        public bool Exanmie ( string oddNum ,bool state ,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity _header )
         {
-            return dal . Exanmie ( oddNum ,state );
+            return dal . Exanmie ( oddNum ,state ,numbers ,_header );
         }
 
+        /// <summary>
+        /// 领料单是否已经审核
+        /// </summary>
+        /// <param name="oddNumForSGM"></param>
+        /// <returns></returns>
+       public bool boolExamineSGM ( string oddNumForSGM )
+        {
+            return dal . boolExamineSGM ( oddNumForSGM );
+        }
 
         /// <summary>
         /// 注销

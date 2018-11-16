@@ -536,6 +536,17 @@ namespace LineProductMes
         {
             CopyUtils . copyResult ( bandedGridView1 ,focuseName );
         }
+        private void bandedGridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
+        {
+            if ( e . Column . FieldName == "U1" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
+        }
         #endregion
 
         #region Method
@@ -793,7 +804,6 @@ namespace LineProductMes
                 row [ "LGP013" ] = totalTime == 0 ? 0 . ToString ( ) : ( numFor / totalTime * userTime ) . ToString ( "0.#" );
             }
         }
-
         void addUser ( )
         {
             if ( tableOne == null || tableOne . Rows . Count < 1 )

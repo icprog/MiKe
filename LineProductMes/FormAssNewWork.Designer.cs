@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            this.components = new System.ComponentModel.Container();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtANW011 = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -101,7 +100,7 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -602,6 +601,7 @@
             this.txtANW009.Size = new System.Drawing.Size(128, 18);
             this.txtANW009.StyleController = this.layoutControl1;
             this.txtANW009.TabIndex = 18;
+            this.txtANW009.TextChanged += new System.EventHandler(this.txtANW009_TextChanged);
             // 
             // txtANW017
             // 
@@ -1167,13 +1167,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copy});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // copy
             // 
             this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(152, 22);
+            this.copy.Size = new System.Drawing.Size(100, 22);
             this.copy.Text = "复制";
             // 
             // bandedGridView1
@@ -1217,6 +1217,7 @@
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
             this.bandedGridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.bandedGridView1_RowCellClick);
             this.bandedGridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.bandedGridView1_CustomDrawRowIndicator);
+            this.bandedGridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.bandedGridView1_RowCellStyle);
             this.bandedGridView1.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.bandedGridView1_InitNewRow);
             this.bandedGridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.bandedGridView1_CellValueChanged);
             // 

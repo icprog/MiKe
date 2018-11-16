@@ -7,3 +7,4 @@ D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\bin\Debug\LineProductMe
 D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\bin\Debug\LineProductMesEntityu.pdb
 D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntityu.dll
 D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntityu.pdb
+D:\ProjectData\MiKe\LineProductMes\LineProductMesEntityu\obj\Debug\LineProductMesEntity.csprojResolveAssemblyReference.cache

@@ -423,6 +423,12 @@ namespace LineProductMes
                 return;
             calcuPriceSum ( );
         }
+        private void txtANW009_TextChanged ( object sender ,EventArgs e )
+        {
+            if ( txtANW009 . Text == string . Empty )
+                return;
+            calcuPriceSum ( );
+        }
         private void bandedGridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
             string anx009Result = string . Empty;
@@ -758,6 +764,17 @@ namespace LineProductMes
         private void contextMenuStrip1_ItemClicked ( object sender ,ToolStripItemClickedEventArgs e )
         {
             CopyUtils . copyResult ( bandedGridView1 ,focusName );
+        }
+        private void bandedGridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
+        {
+            if ( e . Column . FieldName == "U4" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
         }
         #endregion
 

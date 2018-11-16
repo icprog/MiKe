@@ -599,6 +599,17 @@ namespace LineProductMes
         {
             CopyUtils . copyResult ( GridView1 ,focuseName );
         }
+        private void GridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
+        {
+            if ( e . Column . FieldName == "U2" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
+        }
         #endregion
 
         #region Method
@@ -679,6 +690,7 @@ namespace LineProductMes
                 cancelltionTool ( "反注销" );
             
         }
+
         bool getValue ( )
         {
             result = true;

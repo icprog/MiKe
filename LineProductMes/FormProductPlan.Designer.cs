@@ -47,6 +47,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ItemOne = new System.Windows.Forms.ToolStripMenuItem();
+            this.ItemTwo = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PRE002 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PRE003 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,7 +64,6 @@
             this.PRE012 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.ItemTwo = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -273,6 +273,12 @@
             this.ItemOne.Size = new System.Drawing.Size(112, 22);
             this.ItemOne.Text = "复制行";
             // 
+            // ItemTwo
+            // 
+            this.ItemTwo.Name = "ItemTwo";
+            this.ItemTwo.Size = new System.Drawing.Size(112, 22);
+            this.ItemTwo.Text = "复制";
+            // 
             // gridView1
             // 
             this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -443,12 +449,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // ItemTwo
-            // 
-            this.ItemTwo.Name = "ItemTwo";
-            this.ItemTwo.Size = new System.Drawing.Size(112, 22);
-            this.ItemTwo.Text = "复制";
             // 
             // FormProductPlan
             // 

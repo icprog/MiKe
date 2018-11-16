@@ -143,7 +143,7 @@
             this.ribbonPage1});
             this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1384, 151);
+            this.ribbon.Size = new System.Drawing.Size(1376, 151);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -254,7 +254,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 603);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1384, 23);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1376, 23);
             // 
             // dockManager1
             // 
@@ -294,7 +294,7 @@
             this.dockPanel1.OriginalSize = new System.Drawing.Size(262, 200);
             this.dockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.SavedIndex = 0;
-            this.dockPanel1.Size = new System.Drawing.Size(262, 381);
+            this.dockPanel1.Size = new System.Drawing.Size(262, 452);
             this.dockPanel1.Text = "系统目录";
             this.dockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
@@ -303,7 +303,7 @@
             this.dockPanel1_Container.Controls.Add(this.treeList1);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 39);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(253, 338);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(253, 409);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // treeList1
@@ -326,7 +326,7 @@
             this.treeList1.ParentFieldName = "FOR002";
             this.treeList1.RowHeight = 25;
             this.treeList1.SelectImageList = this.imageCollection1;
-            this.treeList1.Size = new System.Drawing.Size(253, 338);
+            this.treeList1.Size = new System.Drawing.Size(253, 409);
             this.treeList1.TabIndex = 0;
             this.treeList1.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList1_FocusedNodeChanged);
             this.treeList1.CustomDrawNodeCell += new DevExpress.XtraTreeList.CustomDrawNodeCellEventHandler(this.treeList1_CustomDrawNodeCell);
@@ -378,7 +378,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(36, 151);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1348, 452);
+            this.groupControl1.Size = new System.Drawing.Size(1340, 452);
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "ERP-MES流程";
             // 
@@ -936,7 +936,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 626);
+            this.ClientSize = new System.Drawing.Size(1376, 626);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.ribbonStatusBar);

@@ -82,9 +82,11 @@
     <Compile Include="PUAEntity.cs" />
     <Compile Include="PurchaseBoardEntity.cs" />
     <Compile Include="SemiProductPlanEntity.cs" />
+    <Compile Include="SGMRBBEntity.cs" />
     <Compile Include="SGMSAAEntity.cs" />
     <Compile Include="SGMSABEntity.cs" />
     <Compile Include="SGMSACEntity.cs" />
+    <Compile Include="SRMRBAEntity.cs" />
     <Compile Include="SupplierForMouldEntity.cs" />
     <Compile Include="WagesBodyEntity.cs" />
     <Compile Include="WagesHeaderEntity.cs" />

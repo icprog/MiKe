@@ -613,6 +613,17 @@ namespace LineProductMes
         {
             focuseName = e . Column . FieldName;
         }
+        private void gridView2_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
+        {
+            if ( e . Column . FieldName == "ANV010" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
+        }
         #endregion
 
         #region Method

@@ -784,6 +784,14 @@ namespace LineProductMes
             {
                 e . Appearance . BackColor = System . Drawing . Color . LightSteelBlue;
             }
+            if ( e . Column . FieldName == "U3" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
         }
         private void gridView2_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
         {
@@ -1164,9 +1172,6 @@ namespace LineProductMes
 
             return result;
         }
-
-
-
         void printOrExport ( )
         {
             tablePrintOne = _bll . getTablePrintOne ( txtIJA001 . Text );

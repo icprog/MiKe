@@ -18,7 +18,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableEMP ( )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT EMP001,EMP002,EMP007,EMP005,DAA002 FROM MIKEMP A INNER JOIN TPADAA B ON A.EMP005=B.DAA001 WHERE EMP037=1 AND EMP004='生产部'" );
+            strSql . Append ( "SELECT EMP001,EMP002,EMP007,EMP005,DAA002 FROM MIKEMP A INNER JOIN TPADAA B ON A.EMP005=B.DAA001 WHERE EMP037=1 AND EMP004='生产部' AND EMP007='成品搬运工'" );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

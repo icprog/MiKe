@@ -68,6 +68,8 @@
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.LEH002 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EditOrder = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
@@ -90,6 +92,8 @@
             this.LEH009 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.U5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.GridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.LEG012 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -130,10 +134,6 @@
             this.LEG011 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copy = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -170,10 +170,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbState)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditUser)).BeginInit();
@@ -189,8 +191,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt3.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -644,6 +644,20 @@
             this.gridView2});
             this.gridControl2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl2_KeyPress);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copy});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
+            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
+            // 
+            // copy
+            // 
+            this.copy.Name = "copy";
+            this.copy.Size = new System.Drawing.Size(100, 22);
+            this.copy.Text = "复制";
+            // 
             // gridView2
             // 
             this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -911,6 +925,20 @@
             this.GridView1});
             this.gridControl1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl1_KeyPress);
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyOne});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(101, 26);
+            this.contextMenuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip2_ItemClicked);
+            // 
+            // copyOne
+            // 
+            this.copyOne.Name = "copyOne";
+            this.copyOne.Size = new System.Drawing.Size(100, 22);
+            this.copyOne.Text = "复制";
+            // 
             // GridView1
             // 
             this.GridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -950,6 +978,7 @@
             this.GridView1.OptionsView.ShowGroupPanel = false;
             this.GridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView1_RowCellClick);
             this.GridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GridView1_CustomDrawRowIndicator);
+            this.GridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.GridView1_RowCellStyle);
             this.GridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.GridView1_CellValueChanged);
             // 
             // gridBand1
@@ -1426,34 +1455,6 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copy});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
-            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyOne});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(153, 48);
-            this.contextMenuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip2_ItemClicked);
-            // 
-            // copy
-            // 
-            this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(100, 22);
-            this.copy.Text = "复制";
-            // 
-            // copyOne
-            // 
-            this.copyOne.Name = "copyOne";
-            this.copyOne.Size = new System.Drawing.Size(152, 22);
-            this.copyOne.Text = "复制";
-            // 
             // FormLEGNews
             // 
             this.Appearance.Options.UseFont = true;
@@ -1500,10 +1501,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbState)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditUser)).EndInit();
@@ -1519,8 +1522,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

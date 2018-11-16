@@ -45,7 +45,6 @@ namespace LineProductMes
 
             InitData ( );
             getData ( );
-
         }
 
         #region Main
@@ -150,17 +149,22 @@ namespace LineProductMes
         }
         protected override int Examine ( )
         {
-            if ( string . IsNullOrEmpty ( txtHAW001 . Text ) )
-            {
-                XtraMessageBox . Show ( "单号不可为空" );
+            if ( getValue ( ) == false )
                 return 0;
-            }
+
             state = toolExamin . Caption;
             if ( state . Equals ( "审核" ) )
                 _header . HAW018 = true;
             else
                 _header . HAW018 = false;
-            result = _bll . Exanmie ( txtHAW001 . Text ,_header . HAW018 );
+
+            if ( _header . HAW018 == false && !string . IsNullOrEmpty ( _header . HAW022 ) )
+            {
+                if ( _bll . boolExamineSGM ( _header . HAW022 ) )
+                    MessageBox . Show ( "领料单:" + _header . HAW022 + "已经审核,如果此单据数据变更,请手动更改领料单" );
+            }
+
+            result = _bll . Exanmie ( txtHAW001 . Text ,_header . HAW018 ,Convert . ToInt32 ( _body . HAX008 ) ,_header );
             if ( result )
             {
                 XtraMessageBox . Show ( state + "成功" );
@@ -327,11 +331,11 @@ namespace LineProductMes
                 row = null;
             if ( row == null )
                 return;
-            if ( row [ "RAA008" ] . ToString ( ) == string . Empty )
-            {
-               txtHAW002.Text= txtHAW003 . Text = txtHAW004 . Text = txtHAW005 . Text = txtHAW006 . Text = txtHAW007 . Text = txtHAW008 . Text = txtu0 . Text = string . Empty;
-                return;
-            }
+            //if ( row [ "RAA008" ] . ToString ( ) == string . Empty )
+            //{
+            //   txtHAW002.Text= txtHAW003 . Text = txtHAW004 . Text = txtHAW005 . Text = txtHAW006 . Text = txtHAW007 . Text = txtHAW008 . Text = txtu0 . Text = string . Empty;
+            //    return;
+            //}
             _header . HAW003 = row [ "RAA015" ] . ToString ( );
             _header . HAW004 = row [ "DEA002" ] . ToString ( );
             _header . HAW005 = row [ "DEA057" ] . ToString ( );
@@ -694,6 +698,14 @@ namespace LineProductMes
             {
                 e . Appearance . BackColor = System . Drawing . Color . LightSteelBlue;
             }
+            if ( e . Column . FieldName == "U3" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
         }
         private void txtHAW001_TextChanged ( object sender ,EventArgs e )
         {
@@ -930,6 +942,8 @@ namespace LineProductMes
                         result = false;
                         break;
                     }
+                    if ( x . hax016 == "001" )
+                        _body . HAX008 = x . sum;
                     //else
                     //{
                     //    if ( _bll . ExistsNums ( _header ,x . hax016 ,x . sum ) == false )

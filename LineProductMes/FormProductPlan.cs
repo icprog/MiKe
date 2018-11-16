@@ -18,14 +18,14 @@ namespace LineProductMes
         LineProductMesEntityu.ProductPlanBodyEntity _body=null;
         LineProductMesBll.Bll.ProductPlanBll _bll=null;
         DataTable tableView;
-        DataRow row,rows;
+        DataRow row,rows,rowes;
         int selectIdx=0;
         DateTime dtTime;
         List<string> idxList=new List<string>();
-
+        
         string state=string.Empty,focuseName=string.Empty;
         bool result=false,check=false;
-
+        
         public FormProductPlan ( DataRow row )
         {
             InitializeComponent ( );
@@ -34,15 +34,15 @@ namespace LineProductMes
             _body = new LineProductMesEntityu . ProductPlanBodyEntity ( );
             _bll = new LineProductMesBll . Bll . ProductPlanBll ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolExport ,toolPrint ,toolExamin ,toolDelete } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolCancellation, toolExport ,toolPrint ,toolExamin ,toolDelete } );
 
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
             GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            toolExamin . Caption = "弃用";
-            toolCancellation . Caption = "复制";
+            //toolExamin . Caption = "弃用";
+            //toolCancellation . Caption = "复制";
             controlUnEnable ( );
             controlClear ( );
 
@@ -396,47 +396,47 @@ namespace LineProductMes
         }
         private void gridView1_RowClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowClickEventArgs e )
         {
-            rows = gridView1 . GetFocusedDataRow ( );
+            rowes = gridView1 . GetFocusedDataRow ( );
         }
         //复制一行
         private void contextMenuStrip1_ItemClicked ( object sender ,ToolStripItemClickedEventArgs e )
         {
             if ( e . ClickedItem . Name == "ItemOne" )
             {
-                if ( rows == null )
+                if ( rowes == null )
                 {
                     XtraMessageBox . Show ( "请选择需要复制的行" );
                     return;
                 }
 
-                _body . PRE001 = rows [ "PRE001" ] . ToString ( );
-                _body . PRE002 = rows [ "PRE002" ] . ToString ( );
-                _body . PRE003 = rows [ "PRE003" ] . ToString ( );
-                _body . PRE004 = rows [ "PRE004" ] . ToString ( );
-                if ( rows [ "PRE005" ] == null )
+                _body . PRE001 = rowes [ "PRE001" ] . ToString ( );
+                _body . PRE002 = rowes [ "PRE002" ] . ToString ( );
+                _body . PRE003 = rowes [ "PRE003" ] . ToString ( );
+                _body . PRE004 = rowes [ "PRE004" ] . ToString ( );
+                if ( rowes [ "PRE005" ] == null )
                     _body . PRE005 = null;
                 else
-                    _body . PRE005 = Convert . ToDateTime ( rows [ "PRE005" ] . ToString ( ) );
-                if ( rows [ "PRE006" ] == null )
+                    _body . PRE005 = Convert . ToDateTime ( rowes [ "PRE005" ] . ToString ( ) );
+                if ( rowes [ "PRE006" ] == null )
                     _body . PRE006 = null;
                 else
-                    _body . PRE006 = Convert . ToDateTime ( rows [ "PRE006" ] . ToString ( ) );
-                if ( rows [ "PRE007" ] == null )
+                    _body . PRE006 = Convert . ToDateTime ( rowes [ "PRE006" ] . ToString ( ) );
+                if ( rowes [ "PRE007" ] == null )
                     _body . PRE007 = null;
                 else
-                    _body . PRE007 = Convert . ToInt32 ( rows [ "PRE007" ] . ToString ( ) );
-                if ( rows [ "PRE008" ] == null )
+                    _body . PRE007 = Convert . ToInt32 ( rowes [ "PRE007" ] . ToString ( ) );
+                if ( rowes [ "PRE008" ] == null )
                     _body . PRE008 = null;
                 else
-                    _body . PRE008 = Convert . ToInt32 ( rows [ "PRE008" ] . ToString ( ) );
-                if ( rows [ "PRE009" ] == null )
+                    _body . PRE008 = Convert . ToInt32 ( rowes [ "PRE008" ] . ToString ( ) );
+                if ( rowes [ "PRE009" ] == null )
                     _body . PRE009 = null;
                 else
-                    _body . PRE009 = Convert . ToInt32 ( rows [ "PRE009" ] . ToString ( ) );
-                if ( rows [ "PRE010" ] == null )
+                    _body . PRE009 = Convert . ToInt32 ( rowes [ "PRE009" ] . ToString ( ) );
+                if ( rowes [ "PRE010" ] == null )
                     _body . PRE010 = null;
                 else
-                    _body . PRE010 = Convert . ToInt32 ( rows [ "PRE010" ] . ToString ( ) );
+                    _body . PRE010 = Convert . ToInt32 ( rowes [ "PRE010" ] . ToString ( ) );
 
                 object obj = tableView . Compute ( "MAX(PRE005)" ,"PRE002='" + _body . PRE002 + "' AND PRE003='" + _body . PRE003 + "' AND PRE004='" + _body . PRE004 + "'" );
                 if ( obj != null )
@@ -472,7 +472,7 @@ namespace LineProductMes
             {
                 if ( row [ "idx" ] == null || row [ "idx" ] . ToString ( )==string.Empty )
                     return;
-                if ( gridView1 . FocusedColumn . FieldName == "PRE008" || gridView1 . FocusedColumn . FieldName == "PRE005" )
+                if ( ( gridView1 . FocusedColumn . FieldName == "PRE008" || gridView1 . FocusedColumn . FieldName == "PRE005" ) && ( Convert . ToDateTime ( Convert . ToDateTime ( row [ "PRE005" ] ) . ToString ( "yyyy-MM-dd" ) ) - Convert . ToDateTime ( dtTime . ToString ( "yyyy-MM-dd" ) ) ) . Days <= 0 )
                 {
                     e . Cancel = true;
                 }

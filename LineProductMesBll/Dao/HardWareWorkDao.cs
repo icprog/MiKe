@@ -6,6 +6,7 @@ using System . Text;
 using System . Threading . Tasks;
 using StudentMgr;
 using System . Data . SqlClient;
+using System . Collections;
 
 namespace LineProductMesBll . Dao
 {
@@ -45,8 +46,8 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             //strSql . Append ( "SELECT RAA001,RAA015,DEA002,DEA003,DEA057,CONVERT(FLOAT,RAA018) RAA018,ISNULL(ART004,0) DEA050,RAA008 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 LEFT JOIN (SELECT ART001,CONVERT(FLOAT,SUM(ART004)) ART004 FROM MIKART GROUP BY ART001) C ON A.RAA015=C.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0501' AND RAA020='N' AND RAA024='T'" );
-            strSql . Append ( "SELECT RAA001,RAB003 RAA015,DEA002,DEA003,DEA057,CONVERT(FLOAT,RAB007) RAA018,ISNULL(ART004,0) DEA050,RAA008 FROM SGMRAA A INNER JOIN SGMRAB D ON A.RAA001=D.RAB001 INNER JOIN TPADEA B ON D.RAB003=B.DEA001 LEFT JOIN (SELECT ART001,CONVERT(FLOAT,SUM(ART004)) ART004 FROM MIKART GROUP BY ART001) C ON A.RAA015=C.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0501' AND RAA020='N' AND RAA024='T'" );
-
+            strSql . Append ( "SELECT RAA001,RAA015,DEA002,DEA003,DEA057,CONVERT(FLOAT,RAA018) RAA018,ISNULL(ART004,0) DEA050,RAA008 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 LEFT JOIN (SELECT ART001,CONVERT(FLOAT,SUM(ART004)) ART004 FROM MIKART GROUP BY ART001) C ON A.RAA015=C.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0501' AND RAA020='N' AND RAA024='T'" );
+            
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
@@ -544,8 +545,10 @@ namespace LineProductMesBll . Dao
         /// <param name="oddNum"></param>
         /// <param name="state"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool state )
+        public bool Exanmie ( string oddNum ,bool state,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity _header )
         {
+            Hashtable SQLString = new Hashtable ( );
+            
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "UPDATE MIKHAW SET HAW018=@HAW018 WHERE HAW001=@HAW001" );
             SqlParameter [ ] parameter = {
@@ -554,8 +557,186 @@ namespace LineProductMesBll . Dao
             };
             parameter [ 0 ] . Value = oddNum;
             parameter [ 1 ] . Value = state;
+            SQLString . Add ( strSql ,parameter );
 
-            return SqlHelper . ExecuteNonQueryResult ( strSql . ToString ( ) ,parameter );
+            if ( state )
+            {
+                if ( string . IsNullOrEmpty ( _header . HAW022 ) )
+                    addSGM ( SQLString ,numbers ,_header );
+            }
+            else
+            {
+                if ( !string . IsNullOrEmpty ( _header . HAW022 ) )
+                {
+                    strSql = new StringBuilder ( );
+                    strSql . AppendFormat ( "DELETE FROM SGMRBA WHERE RBA002='{0}'" ,_header . HAW022 );
+                    SqlHelper . ExecuteNonQuery ( strSql . ToString ( ) );
+                    addSGM ( SQLString ,numbers ,_header );
+                }
+            }
+
+            return SqlHelper . ExecuteSqlTran ( SQLString );
+        }
+
+        /// <summary>
+        /// 领料单是否已经审核
+        /// </summary>
+        /// <param name="oddNumForSGM"></param>
+        /// <returns></returns>
+        public bool boolExamineSGM ( string oddNumForSGM )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT COUNT(1) FROM SGMRBA WHERE RBA002='{0}' AND RBA012='T'" ,oddNumForSGM );
+
+            return SqlHelper . Exists ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 生成领料单
+        /// </summary>
+        /// <param name="SQLString"></param>
+        /// <param name="numbers"></param>
+        /// <param name="model"></param>
+        void addSGM ( Hashtable SQLString ,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT RAB003 RBB004,RAB004 RBB005,RAB005 RBB006,CONVERT(FLOAT,RAB007/RAA018) RAB007,RAB001 RBB010,RAB002 RBB011 FROM SGMRAA A INNER JOIN SGMRAB B ON A.RAA001=B.RAB001 INNER JOIN TPADEA C ON B.RAB003=C.DEA001 WHERE DEA984=1 AND RAA001='{0}' " ,model . HAW002 );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return;
+
+            DateTime dt = ObtainInfo . getTime ( );
+
+            LineProductMesEntityu . SRMRBAEntity rba = new LineProductMesEntityu . SRMRBAEntity ( );
+            rba . RBA001 = "82";
+            rba . RBA002 = getOddForRBA ( dt );
+            rba . RBA003 = string . Empty;
+            rba . RBA004 = dt . ToString ( "yyyyMMdd" );
+            rba . RBA005 = "DS";
+            rba . RBA006 = model . HAW002;
+            rba . RBA012 = "F";
+            rba . RBA022 = "F";
+
+            addRBA ( SQLString ,rba );
+
+            LineProductMesEntityu . SGMRBBEntity rbb = new LineProductMesEntityu . SGMRBBEntity ( );
+            int i = 0;
+            foreach ( DataRow row in table . Rows )
+            {
+                i++;
+                rbb . RBB001 = "82";
+                rbb . RBB002 = rba . RBA002;
+                rbb . RBB003 = i . ToString ( ) . PadLeft ( 3 ,'0' );
+                rbb . RBB004 = row [ "RBB004" ] . ToString ( );
+                rbb . RBB005 = row [ "RBB005" ] . ToString ( );
+                rbb . RBB006 = row [ "RBB006" ] . ToString ( );
+                rbb . RBB007 = "001";
+                rbb . RBB008 = "XC01";
+                rbb . RBB009 = model . HAW009 * ( string . IsNullOrEmpty ( row [ "RAB007" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "RAB007" ] ) );
+                rbb . RBB010 = row [ "RBB010" ] . ToString ( );
+                rbb . RBB011 = row [ "RBB011" ] . ToString ( );
+                rbb . RBB013 = "F";
+                addRBB ( SQLString ,rbb );
+            }
+
+            strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "UPDATE MIKHAW SET HAW022='{0}' WHERE HAW001='{1}'" ,rbb . RBB002 ,model . HAW001 );
+            SQLString . Add ( strSql ,null );
+        }
+
+        /// <summary>
+        /// 获取领料单单号
+        /// </summary>
+        /// <returns></returns>
+        string getOddForRBA ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "SELECT MAX(RBA002) RBA002 FROM SGMRBA WHERE RBA002 LIKE 'LL'+CONVERT(NVARCHAR,GETDATE(),112)+'%'" );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+
+            if ( table == null && table . Rows . Count < 1 )
+                return "LL" + dt . ToString ( "yyyyMMdd" ) + "0001";
+            else
+            {
+                string code = table . Rows [ 0 ] [ "RBA002" ] . ToString ( );
+                return "LL" + ( Convert . ToInt64 ( code . Substring ( 1 ,12 ) ) + 1 ) . ToString ( );
+            }
+        }
+
+        /// <summary>
+        /// 领料单单头新增
+        /// </summary>
+        /// <param name="SQLString"></param>
+        /// <param name="model"></param>
+        void addRBA ( Hashtable SQLString ,LineProductMesEntityu . SRMRBAEntity model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "INSERT INTO SGMRBA (" );
+            strSql . Append ( "RBA001,RBA002,RBA003,RBA004,RBA005,RBA006,RBA012,RBA022)" );
+            strSql . Append ( "VALUES (" );
+            strSql . Append ( "@RBA001,@RBA002,@RBA003,@RBA004,@RBA005,@RBA006,@RBA012,@RBA022)" );
+            SqlParameter [ ] parameters = {
+                    new SqlParameter("@RBA001", SqlDbType.VarChar,2),
+                    new SqlParameter("@RBA002", SqlDbType.VarChar,14),
+                    new SqlParameter("@RBA003", SqlDbType.VarChar,4),
+                    new SqlParameter("@RBA004", SqlDbType.VarChar,8),
+                    new SqlParameter("@RBA005", SqlDbType.VarChar,8),
+                    new SqlParameter("@RBA006", SqlDbType.VarChar,14),
+                    new SqlParameter("@RBA012", SqlDbType.VarChar,1),
+                    new SqlParameter("@RBA022", SqlDbType.VarChar,1)
+            };
+            parameters [ 0 ] . Value = model . RBA001;
+            parameters [ 1 ] . Value = model . RBA002;
+            parameters [ 2 ] . Value = model . RBA003;
+            parameters [ 3 ] . Value = model . RBA004;
+            parameters [ 4 ] . Value = model . RBA005;
+            parameters [ 5 ] . Value = model . RBA006;
+            parameters [ 6 ] . Value = model . RBA012;
+            parameters [ 7 ] . Value = model . RBA022;
+            SQLString . Add ( strSql ,parameters );
+        }
+
+        /// <summary>
+        /// 领料单单身新增
+        /// </summary>
+        /// <param name="SQLString"></param>
+        /// <param name="model"></param>
+        void addRBB ( Hashtable SQLString ,LineProductMesEntityu . SGMRBBEntity model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "insert into SGMRBB(" );
+            strSql . Append ( "RBB001,RBB002,RBB003,RBB004,RBB005,RBB006,RBB007,RBB008,RBB009,RBB010,RBB011,RBB013)" );
+            strSql . Append ( " values (" );
+            strSql . Append ( "@RBB001,@RBB002,@RBB003,@RBB004,@RBB005,@RBB006,@RBB007,@RBB008,@RBB009,@RBB010,@RBB011,@RBB013)" );
+            SqlParameter [ ] parameters = {
+                    new SqlParameter("@RBB001", SqlDbType.VarChar,2),
+                    new SqlParameter("@RBB002", SqlDbType.VarChar,14),
+                    new SqlParameter("@RBB003", SqlDbType.VarChar,3),
+                    new SqlParameter("@RBB004", SqlDbType.VarChar,20),
+                    new SqlParameter("@RBB005", SqlDbType.VarChar,60),
+                    new SqlParameter("@RBB006", SqlDbType.VarChar,4),
+                    new SqlParameter("@RBB007", SqlDbType.VarChar,6),
+                    new SqlParameter("@RBB008", SqlDbType.VarChar,6),
+                    new SqlParameter("@RBB009", SqlDbType.Decimal,9),
+                    new SqlParameter("@RBB010", SqlDbType.VarChar,14),
+                    new SqlParameter("@RBB011", SqlDbType.VarChar,3),
+                    new SqlParameter("@RBB013", SqlDbType.VarChar,1)
+            };
+            parameters [ 0 ] . Value = model . RBB001;
+            parameters [ 1 ] . Value = model . RBB002;
+            parameters [ 2 ] . Value = model . RBB003;
+            parameters [ 3 ] . Value = model . RBB004;
+            parameters [ 4 ] . Value = model . RBB005;
+            parameters [ 5 ] . Value = model . RBB006;
+            parameters [ 6 ] . Value = model . RBB007;
+            parameters [ 7 ] . Value = model . RBB008;
+            parameters [ 8 ] . Value = model . RBB009;
+            parameters [ 9 ] . Value = model . RBB010;
+            parameters [ 10 ] . Value = model . RBB011;
+            parameters [ 12 ] . Value = model . RBB013;
+            SQLString . Add ( strSql ,parameters );
         }
 
         /// <summary>
@@ -599,7 +780,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . HardWareWorkHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "select idx,HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021 FROM MIKHAW " );
+            strSql . Append ( "select idx,HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021,HAW022 FROM MIKHAW " );
             strSql . Append ( " where HAW001=@HAW001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@HAW001", SqlDbType.NVarChar,20)
@@ -719,6 +900,10 @@ namespace LineProductMesBll . Dao
                 if ( row [ "HAW021" ] != null && row [ "HAW021" ] . ToString ( ) != "" )
                 {
                     model . HAW021 = decimal . Parse ( row [ "HAW021" ] . ToString ( ) );
+                }
+                if ( row [ "HAW022" ] != null )
+                {
+                    model . HAW022 = row [ "HAW022" ] . ToString ( );
                 }
             }
             return model;

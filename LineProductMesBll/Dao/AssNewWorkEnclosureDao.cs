@@ -16,8 +16,8 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePInfo ( )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT RAA001,RAA015,DEA002,CONVERT(FLOAT,RAA018) RAA018,RAA008,ART003,ART004  FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 INNER JOIN MIKART C ON A.RAA015=C.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0507' AND RAA020='N' AND ART003='附件'  AND RAA024='T'" );
-
+            strSql . Append ( "SELECT RAA001,RAA015,DEA002,CONVERT(FLOAT,RAA018) RAA018,RAA008,ART003,ART004 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 INNER JOIN MIKART C ON A.RAA015=C.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0507' AND RAA020='N' AND ART003='附件'  AND RAA024='T'" );
+            
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 

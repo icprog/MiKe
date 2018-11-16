@@ -48,6 +48,7 @@
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.LOG002 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -70,6 +71,7 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.LGP005 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -104,8 +106,6 @@
             this.LGP013 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.copy = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -390,6 +390,12 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
+            // copy
+            // 
+            this.copy.Name = "copy";
+            this.copy.Size = new System.Drawing.Size(100, 22);
+            this.copy.Text = "复制";
+            // 
             // gridView1
             // 
             this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(225)))));
@@ -641,8 +647,14 @@
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyOne});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(101, 26);
             this.contextMenuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip2_ItemClicked);
+            // 
+            // copyOne
+            // 
+            this.copyOne.Name = "copyOne";
+            this.copyOne.Size = new System.Drawing.Size(100, 22);
+            this.copyOne.Text = "复制";
             // 
             // bandedGridView1
             // 
@@ -680,6 +692,7 @@
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
             this.bandedGridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.bandedGridView1_RowCellClick);
             this.bandedGridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.bandedGridView1_CustomDrawRowIndicator);
+            this.bandedGridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.bandedGridView1_RowCellStyle);
             this.bandedGridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.bandedGridView1_CellValueChanged);
             // 
             // gridBand1
@@ -1081,18 +1094,6 @@
             this.wait.Size = new System.Drawing.Size(246, 66);
             this.wait.TabIndex = 37;
             this.wait.Text = "progressPanel1";
-            // 
-            // copy
-            // 
-            this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(100, 22);
-            this.copy.Text = "复制";
-            // 
-            // copyOne
-            // 
-            this.copyOne.Name = "copyOne";
-            this.copyOne.Size = new System.Drawing.Size(152, 22);
-            this.copyOne.Text = "复制";
             // 
             // FormLogisticsNew
             // 

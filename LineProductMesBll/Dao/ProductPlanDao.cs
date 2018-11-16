@@ -662,7 +662,7 @@ namespace LineProductMesBll . Dao
             AddSAA ( SQLString ,saa );
 
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT PRE004,DEA002,DEA057,DEA003,PRE005,PRE008 FROM MIKPRE A INNER JOIN TPADEA B ON A.PRE004=B.DEA001 WHERE PRE001='{0}' AND PRE008-ISNULL(PRE009,0)>0" ,oddNum );
+            strSql . AppendFormat ( "SELECT PRE004,DEA002,DEA057,DEA003,SUM(PRE008) PRE008 FROM MIKPRE A INNER JOIN TPADEA B ON A.PRE004=B.DEA001 WHERE PRE001='{0}' AND PRE008-ISNULL(PRE009,0)>0 GROUP BY PRE004,DEA002,DEA057,DEA003" ,oddNum );
             DataTable tableView = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             
             int i = 0;
@@ -678,7 +678,7 @@ namespace LineProductMesBll . Dao
                 sab . SAB005 = row [ "DEA057" ] . ToString ( );
                 sab . SAB006 = row [ "DEA003" ] . ToString ( );
                 sab . SAB007 = Convert . ToDecimal ( row [ "PRE008" ] . ToString ( ) );
-                sab . SAB009 = Convert . ToDateTime ( row [ "PRE005" ] . ToString ( ) ) . ToString ( "yyyyMMdd" );
+                sab . SAB009 = UserInfoMation . sysTime . ToString ( "yyyyMMdd" );
                 sab . SAB010 = sab . SAB009;
                 sab . SAB011 = "F";
                 sab . SAB019 = "F";

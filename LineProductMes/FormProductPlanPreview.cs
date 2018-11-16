@@ -315,9 +315,6 @@ namespace LineProductMes
                     column . ToolTip = "订单量-排产量";
             }
         }
-
-
-
         void controlUnEnable ( )
         {
             gridView1 . OptionsBehavior . Editable = false;
@@ -339,7 +336,7 @@ namespace LineProductMes
                 total = 0;
                 foreach ( DataColumn column in tableView . Columns )
                 {
-                    if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty && column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量")
+                    if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty && column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" )
                         total += Convert . ToInt32 ( row [ column ] );
                 }
                 totalValue = Convert . ToInt32 ( row [ "排产量" ] );

@@ -664,20 +664,28 @@ namespace LineProductMes
         {
             focuseName = e . Column . FieldName;
         }
-
         private void bandedGridView1_RowCellClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellClickEventArgs e )
         {
             focuseName = e . Column . FieldName;
         }
-
         private void contextMenuStrip1_ItemClicked ( object sender ,ToolStripItemClickedEventArgs e )
         {
             CopyUtils . copyResult ( gridView1 ,focuseName );
         }
-
         private void contextMenuStrip2_ItemClicked ( object sender ,ToolStripItemClickedEventArgs e )
         {
             CopyUtils . copyResult ( bandedGridView1 ,focuseName );
+        }
+        private void bandedGridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
+        {
+            if ( e . Column . FieldName == "U3" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
         }
         #endregion
 
