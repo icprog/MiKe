@@ -662,9 +662,12 @@ namespace LineProductMesBll . Dao
             AddSAA ( SQLString ,saa );
 
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT PRE004,DEA002,DEA057,DEA003,SUM(PRE008) PRE008 FROM MIKPRE A INNER JOIN TPADEA B ON A.PRE004=B.DEA001 WHERE PRE001='{0}' AND PRE008-ISNULL(PRE009,0)>0 GROUP BY PRE004,DEA002,DEA057,DEA003" ,oddNum );
+            strSql . AppendFormat ( "SELECT PRE004,PRE002,PRE003,DEA002,DEA057,DEA003,SUM(PRE008) PRE008 FROM MIKPRE A INNER JOIN TPADEA B ON A.PRE004=B.DEA001 WHERE PRE001='{0}' AND PRE008-ISNULL(PRE009,0)>0 GROUP BY PRE004,DEA002,DEA057,DEA003,PRE002,PRE003" ,oddNum );
             DataTable tableView = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
-            
+
+            if ( tableView == null || tableView . Rows . Count < 1 )
+                return true;
+
             int i = 0;
             List<LineProductMesEntityu . SGMSABEntity> modelList = new List<LineProductMesEntityu . SGMSABEntity> ( );
             foreach ( DataRow row in tableView . Rows )
@@ -682,7 +685,9 @@ namespace LineProductMesBll . Dao
                 sab . SAB010 = sab . SAB009;
                 sab . SAB011 = "F";
                 sab . SAB019 = "F";
-                sab . SAB020 = string . Empty;
+                sab . SAB020 = "32";
+                sab . SAB021 = row [ "PRE002" ] . ToString ( );
+                sab . SAB022 = row [ "PRE003" ] . ToString ( );
                 sab . SAB901 = UserInfoMation . userNum;
                 sab . SAB902 = UserInfoMation . sysTime . ToString ( "yyyyMMdd" );
                 modelList . Add ( sab );
@@ -796,9 +801,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into SGMSAB(" );
-            strSql . Append ( "SAB001,SAB002,SAB003,SAB004,SAB005,SAB006,SAB007,SAB009,SAB010,SAB011,SAB019,SAB020,SAB901,SAB902)" );
+            strSql . Append ( "SAB001,SAB002,SAB003,SAB004,SAB005,SAB006,SAB007,SAB009,SAB010,SAB011,SAB019,SAB020,SAB901,SAB902,SAB021,SAB022)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@SAB001,@SAB002,@SAB003,@SAB004,@SAB005,@SAB006,@SAB007,@SAB009,@SAB010,@SAB011,@SAB019,@SAB020,@SAB901,@SAB902)" );
+            strSql . Append ( "@SAB001,@SAB002,@SAB003,@SAB004,@SAB005,@SAB006,@SAB007,@SAB009,@SAB010,@SAB011,@SAB019,@SAB020,@SAB901,@SAB902,@SAB021,@SAB022)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@SAB001", SqlDbType.VarChar,14),
                     new SqlParameter("@SAB002", SqlDbType.VarChar,3),
@@ -813,7 +818,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@SAB019", SqlDbType.VarChar,1),
                     new SqlParameter("@SAB020", SqlDbType.VarChar,2),
                     new SqlParameter("@SAB901", SqlDbType.VarChar,8),
-                    new SqlParameter("@SAB902", SqlDbType.VarChar,24)
+                    new SqlParameter("@SAB902", SqlDbType.VarChar,24),
+                    new SqlParameter("@SAB021", SqlDbType.VarChar,14),
+                    new SqlParameter("@SAB022", SqlDbType.VarChar,3)
             };
             parameters [ 0 ] . Value = model . SAB001;
             parameters [ 1 ] . Value = model . SAB002;
@@ -829,6 +836,8 @@ namespace LineProductMesBll . Dao
             parameters [ 11 ] . Value = model . SAB020;
             parameters [ 12 ] . Value = model . SAB901;
             parameters [ 13 ] . Value = model . SAB902;
+            parameters [ 14 ] . Value = model . SAB021;
+            parameters [ 15 ] . Value = model . SAB022;
             SQLString . Add ( strSql ,parameters );
         }
         void ADDSAC ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . SGMSACEntity model )

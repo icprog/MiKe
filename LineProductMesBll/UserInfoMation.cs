@@ -48,6 +48,11 @@ namespace LineProductMesBll
         /// </summary>
         public static string oddNum=string.Empty;
 
+        /// <summary>
+        /// 五金报工生成的领料单单号
+        /// </summary>
+        public static string oddForSGMRBA=string.Empty;
+
         private static List<LineProductMesEntityu.PowerEntity> powList;
 
         /// <summary>

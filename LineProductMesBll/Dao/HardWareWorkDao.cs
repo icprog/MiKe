@@ -547,8 +547,8 @@ namespace LineProductMesBll . Dao
         /// <returns></returns>
         public bool Exanmie ( string oddNum ,bool state,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity _header )
         {
-            Hashtable SQLString = new Hashtable ( );
-            
+            Dictionary<Object ,Object> SQLString = new Dictionary<Object ,Object> ( );
+
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "UPDATE MIKHAW SET HAW018=@HAW018 WHERE HAW001=@HAW001" );
             SqlParameter [ ] parameter = {
@@ -570,12 +570,17 @@ namespace LineProductMesBll . Dao
                 {
                     strSql = new StringBuilder ( );
                     strSql . AppendFormat ( "DELETE FROM SGMRBA WHERE RBA002='{0}'" ,_header . HAW022 );
-                    SqlHelper . ExecuteNonQuery ( strSql . ToString ( ) );
-                    addSGM ( SQLString ,numbers ,_header );
+                    SQLString . Add ( strSql ,null );
+                    strSql = new StringBuilder ( );
+                    strSql . AppendFormat ( "UPDATE MIKHAW SET HAW022=NULL WHERE HAW001='{0}'" ,_header . HAW001 );
+                    SQLString . Add ( strSql ,null );
+                    UserInfoMation . oddForSGMRBA = null;
+                    //SqlHelper . ExecuteNonQuery ( strSql . ToString ( ) );
+                    //addSGM ( SQLString ,numbers ,_header );
                 }
             }
 
-            return SqlHelper . ExecuteSqlTran ( SQLString );
+            return SqlHelper . ExecuteSqlTranDic ( SQLString );
         }
 
         /// <summary>
@@ -597,7 +602,7 @@ namespace LineProductMesBll . Dao
         /// <param name="SQLString"></param>
         /// <param name="numbers"></param>
         /// <param name="model"></param>
-        void addSGM ( Hashtable SQLString ,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity model )
+        void addSGM ( Dictionary<Object ,Object> SQLString ,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT RAB003 RBB004,RAB004 RBB005,RAB005 RBB006,CONVERT(FLOAT,RAB007/RAA018) RAB007,RAB001 RBB010,RAB002 RBB011 FROM SGMRAA A INNER JOIN SGMRAB B ON A.RAA001=B.RAB001 INNER JOIN TPADEA C ON B.RAB003=C.DEA001 WHERE DEA984=1 AND RAA001='{0}' " ,model . HAW002 );
@@ -620,6 +625,8 @@ namespace LineProductMesBll . Dao
 
             addRBA ( SQLString ,rba );
 
+            UserInfoMation . oddForSGMRBA = rba . RBA002;
+
             LineProductMesEntityu . SGMRBBEntity rbb = new LineProductMesEntityu . SGMRBBEntity ( );
             int i = 0;
             foreach ( DataRow row in table . Rows )
@@ -633,7 +640,7 @@ namespace LineProductMesBll . Dao
                 rbb . RBB006 = row [ "RBB006" ] . ToString ( );
                 rbb . RBB007 = "001";
                 rbb . RBB008 = "XC01";
-                rbb . RBB009 = model . HAW009 * ( string . IsNullOrEmpty ( row [ "RAB007" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "RAB007" ] ) );
+                rbb . RBB009 = numbers * ( string . IsNullOrEmpty ( row [ "RAB007" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "RAB007" ] ) );
                 rbb . RBB010 = row [ "RBB010" ] . ToString ( );
                 rbb . RBB011 = row [ "RBB011" ] . ToString ( );
                 rbb . RBB013 = "F";
@@ -661,7 +668,10 @@ namespace LineProductMesBll . Dao
             else
             {
                 string code = table . Rows [ 0 ] [ "RBA002" ] . ToString ( );
-                return "LL" + ( Convert . ToInt64 ( code . Substring ( 1 ,12 ) ) + 1 ) . ToString ( );
+                if ( string . IsNullOrEmpty ( code ) )
+                    return "LL" + dt . ToString ( "yyyyMMdd" ) + "0001";
+                else
+                    return "LL" + ( Convert . ToInt64 ( code . Substring ( 2 ,12 ) ) + 1 ) . ToString ( );
             }
         }
 
@@ -670,7 +680,7 @@ namespace LineProductMesBll . Dao
         /// </summary>
         /// <param name="SQLString"></param>
         /// <param name="model"></param>
-        void addRBA ( Hashtable SQLString ,LineProductMesEntityu . SRMRBAEntity model )
+        void addRBA ( Dictionary<Object ,Object> SQLString ,LineProductMesEntityu . SRMRBAEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "INSERT INTO SGMRBA (" );
@@ -703,7 +713,7 @@ namespace LineProductMesBll . Dao
         /// </summary>
         /// <param name="SQLString"></param>
         /// <param name="model"></param>
-        void addRBB ( Hashtable SQLString ,LineProductMesEntityu . SGMRBBEntity model )
+        void addRBB ( Dictionary<Object ,Object> SQLString ,LineProductMesEntityu . SGMRBBEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into SGMRBB(" );
@@ -735,7 +745,7 @@ namespace LineProductMesBll . Dao
             parameters [ 8 ] . Value = model . RBB009;
             parameters [ 9 ] . Value = model . RBB010;
             parameters [ 10 ] . Value = model . RBB011;
-            parameters [ 12 ] . Value = model . RBB013;
+            parameters [ 11 ] . Value = model . RBB013;
             SQLString . Add ( strSql ,parameters );
         }
 

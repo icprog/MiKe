@@ -22,6 +22,7 @@ namespace LineProductMes
         DataRow row;
         string strWhere="1=1",state=string.Empty,sign=string.Empty,focuseName=string.Empty;
         bool result=false;
+        int numForSGM=0;
         List<string> idxList=new List<string>();
 
         public FormHardWareWork ( )
@@ -161,13 +162,19 @@ namespace LineProductMes
             if ( _header . HAW018 == false && !string . IsNullOrEmpty ( _header . HAW022 ) )
             {
                 if ( _bll . boolExamineSGM ( _header . HAW022 ) )
-                    MessageBox . Show ( "领料单:" + _header . HAW022 + "已经审核,如果此单据数据变更,请手动更改领料单" );
+                {
+                    MessageBox . Show ( "领料单:" + _header . HAW022 + "已经审核,如果此单据数据变更,请变更领料单审核状态为没有审核" );
+                    return 0;
+                }
             }
 
-            result = _bll . Exanmie ( txtHAW001 . Text ,_header . HAW018 ,Convert . ToInt32 ( _body . HAX008 ) ,_header );
+            result = _bll . Exanmie ( txtHAW001 . Text ,_header . HAW018 ,numForSGM ,_header );
             if ( result )
             {
                 XtraMessageBox . Show ( state + "成功" );
+                _header . HAW022 = LineProductMesBll . UserInfoMation . oddForSGMRBA;
+                if ( _header . HAW018 == false )
+                    _header . HAW022 = LineProductMesBll . UserInfoMation . oddForSGMRBA = null;
                 examineTool ( state );
                 if ( state . Equals ( "审核" ) )
                 {
@@ -943,7 +950,7 @@ namespace LineProductMes
                         break;
                     }
                     if ( x . hax016 == "001" )
-                        _body . HAX008 = x . sum;
+                        numForSGM = x . sum;
                     //else
                     //{
                     //    if ( _bll . ExistsNums ( _header ,x . hax016 ,x . sum ) == false )

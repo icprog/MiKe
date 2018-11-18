@@ -388,9 +388,16 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "请选择计划" );
                 return;
             }
+
             result = _bll . AddPlan ( txtPRD001 . Text );
             if ( result )
+            {
                 XtraMessageBox . Show ( "成功写入计划" );
+
+                tableView = _bll . getTableView ( txtPRD001 . Text );
+                gridControl1 . DataSource = tableView;
+
+            }
             else
                 XtraMessageBox . Show ( "写入计划失败" );
         }
