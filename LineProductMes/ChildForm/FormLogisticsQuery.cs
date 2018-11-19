@@ -76,6 +76,8 @@ namespace LineProductMes . ChildForm
                 strWhere = strWhere + " AND LOG004='" + txtLOG004 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtLOG005 . Text ) )
                 strWhere = strWhere + " AND LOG005='" + txtLOG005 . Text + "'";
+            if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
+                strWhere = strWhere + " AND LGN002='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
 
             tableView = _bll . getTableView ( strWhere );
             gridControl1 . DataSource = tableView;
@@ -83,7 +85,7 @@ namespace LineProductMes . ChildForm
 
         private void btnClear_Click ( object sender ,EventArgs e )
         {
-            txtLGP001 . EditValue = txtLOG002 . EditValue = txtLOG004 . EditValue = txtLOG005 . EditValue = null;
+            txtLGP001 . EditValue = txtLOG002 . EditValue = txtLOG004 . EditValue = txtLOG005 . EditValue =dateEdit1.Text= null;
         }
 
         string code=string.Empty;

@@ -67,6 +67,8 @@
             this.LEE007 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LEE009 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LEC013 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -92,6 +94,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -118,6 +123,7 @@
             this.layoutControl1.Controls.Add(this.btnQuery);
             this.layoutControl1.Controls.Add(this.btnClear);
             this.layoutControl1.Controls.Add(this.btnCancel);
+            this.layoutControl1.Controls.Add(this.dateEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -326,7 +332,8 @@
             this.layoutControlItem6,
             this.emptySpaceItem1,
             this.emptySpaceItem2,
-            this.emptySpaceItem3});
+            this.emptySpaceItem3,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(974, 73);
@@ -337,7 +344,7 @@
             this.layoutControlItem1.Control = this.txtLEC002;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(241, 53);
+            this.layoutControlItem1.Size = new System.Drawing.Size(241, 24);
             this.layoutControlItem1.Text = "来源单号";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(48, 14);
             // 
@@ -534,6 +541,28 @@
             this.LEC013.VisibleIndex = 6;
             this.LEC013.Width = 78;
             // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(63, 36);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(186, 20);
+            this.dateEdit1.StyleController = this.layoutControl1;
+            this.dateEdit1.TabIndex = 11;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.dateEdit1;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(241, 29);
+            this.layoutControlItem8.Text = "报工日期";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(48, 14);
+            // 
             // FormLEDNewsPaperQuery
             // 
             this.Appearance.Options.UseFont = true;
@@ -568,6 +597,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -613,5 +645,7 @@
         private DevExpress . XtraGrid . Columns . GridColumn LEE007;
         private DevExpress . XtraGrid . Columns . GridColumn LEE009;
         private DevExpress . XtraGrid . Columns . GridColumn LEC013;
+        private DevExpress . XtraEditors . DateEdit dateEdit1;
+        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem8;
     }
 }

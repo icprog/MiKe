@@ -97,6 +97,8 @@ namespace LineProductMes . ChildForm
                 strWhere += " AND ANW004='" + txtANW004 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtANW013 . Text ) )
                 strWhere += " AND ANW013='" + txtANW013 . Text + "'";
+            if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
+                strWhere += " AND ANW022='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
 
             tableView = _bll . getTableViewQuery ( strWhere );
             gridControl1 . DataSource = tableView;
@@ -119,6 +121,7 @@ namespace LineProductMes . ChildForm
         private void btnClear_Click ( object sender ,EventArgs e )
         {
             txtANW001 . EditValue = txtANW002 . EditValue = txtANW003 . EditValue = txtANW004 . EditValue = txtANW013 . EditValue = null;
+            dateEdit1 . Text = null;
         }
 
         public string getOdd

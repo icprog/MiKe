@@ -77,6 +77,7 @@ namespace LineProductMes . ChildForm
         private void btnClear_Click ( object sender ,EventArgs e )
         {
             txtANT001 . EditValue =  txtANU003 . EditValue = txtANU004 . EditValue = txtANU005 . EditValue = null;
+            dateEdit1 . Text = null;
         }
         private void btnQuery_Click ( object sender ,EventArgs e )
         {
@@ -89,6 +90,8 @@ namespace LineProductMes . ChildForm
                 strWhere += " AND ANU004='" + txtANU004 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtANU005 . Text ) )
                 strWhere += " AND ANU005='" + txtANU005 . Text + "'";
+            if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
+                strWhere += " AND ANT008='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
 
             DataTable tableView = _bll . getTableColumn ( strWhere );
             gridControl1 . DataSource = tableView;

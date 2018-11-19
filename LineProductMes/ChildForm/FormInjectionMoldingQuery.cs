@@ -71,7 +71,7 @@ namespace LineProductMes . ChildForm
 
         private void btnClear_Click ( object sender ,EventArgs e )
         {
-            txtIJA001 . EditValue = txtIJB004 . EditValue = txtIJB005 . EditValue = txtIJB006 . EditValue = null;
+            txtIJA001 . EditValue = txtIJB004 . EditValue = txtIJB005 . EditValue = txtIJB006 . EditValue =dateEdit1.Text= null;
         }
 
         private void btnQuery_Click ( object sender ,EventArgs e )
@@ -97,6 +97,12 @@ namespace LineProductMes . ChildForm
             {
                 strWhere += " AND IJB006='" + txtIJB006 . Text + "'";
                 strWhere1 += " AND IJC004='" + txtIJB006 . Text + "'";
+            }
+            if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
+            {
+                strWhere += " AND IJA007='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
+                strWhere1 += " AND IJA007='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
+                strWhere2 += " AND IJA007='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
             }
 
             DataTable tableView = _bll . getTableHeader ( strWhere ,strWhere1 ,strWhere2 );

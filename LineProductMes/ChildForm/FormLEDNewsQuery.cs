@@ -60,7 +60,7 @@ namespace LineProductMes
 
         private void btnClear_Click ( object sender ,EventArgs e )
         {
-            txtLEF001 . EditValue = txtLEF002 . EditValue = txtLEF003 . EditValue = txtLEF004 . EditValue = null;
+            txtLEF001 . EditValue = txtLEF002 . EditValue = txtLEF003 . EditValue = txtLEF004 . EditValue =dateEdit1.Text= null;
         }
 
         private void btnQuery_Click ( object sender ,EventArgs e )
@@ -74,7 +74,9 @@ namespace LineProductMes
                 strWhere += " AND LEH003='" + txtLEF003 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtLEF004 . Text ) )
                 strWhere += " AND LEH004='" + txtLEF004 . Text + "'";
-
+            if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
+                strWhere += " AND LEF013='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
+            
             tableView = _bll . getTableQuery ( strWhere );
             gridControl1 . DataSource = tableView;
         }

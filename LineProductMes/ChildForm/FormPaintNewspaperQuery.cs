@@ -78,6 +78,8 @@ namespace LineProductMes . ChildForm
                 strWhere += " AND PAO003='" + txtPAO003 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtPAO004 . Text ) )
                 strWhere += " AND PAO004='" + txtPAO004 . Text + "'";
+            if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
+                strWhere += " AND PAN006='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
 
             tableView = _bll . tableViewQuery ( strWhere );
             gridControl1 . DataSource = tableView;
@@ -85,7 +87,7 @@ namespace LineProductMes . ChildForm
 
         private void btnClear_Click ( object sender ,EventArgs e )
         {
-            txtPAN001 . EditValue = txtPAO002 . EditValue = txtPAO003 . EditValue = txtPAO004 . EditValue = null;
+            txtPAN001 . EditValue = txtPAO002 . EditValue = txtPAO003 . EditValue = txtPAO004 . EditValue =dateEdit1.Text= null;
         }
 
         private void gridView1_DoubleClick ( object sender ,EventArgs e )
