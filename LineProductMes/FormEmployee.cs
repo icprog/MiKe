@@ -428,6 +428,26 @@ namespace LineProductMes
                 errorProvider1 . SetError ( txtEMP009 ,"不可为空" );
                 return false;
             }
+            if ( string . IsNullOrEmpty ( txtEMP016 . Text ) )
+            {
+                errorProvider1 . SetError ( txtEMP016 ,"不可为空" );
+                return false;
+            }
+            if ( !string . IsNullOrEmpty ( txtEMP016 . Text ) && RegexHelper . checkID ( txtEMP016 . Text ) == false )
+            {
+                errorProvider1 . SetError ( txtEMP016 ,"身份证格式错误" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtEMP025 . Text ) )
+            {
+                errorProvider1 . SetError ( txtEMP025 ,"不可为空" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtEMP023 . Text ) )
+            {
+                errorProvider1 . SetError ( txtEMP023 ,"不可为空" );
+                return false;
+            }
             //if ( string . IsNullOrEmpty ( txtEMP010 . Text ) )
             //{
             //    errorProvider1 . SetError ( txtEMP010 ,"不可为空" );
@@ -438,87 +458,74 @@ namespace LineProductMes
             //    errorProvider1 . SetError ( txtEMP011 ,"不可为空" );
             //    return false;
             //}
-            if ( string . IsNullOrEmpty ( txtEMP012 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP012 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP013 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP013 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP015 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP015 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP016 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP016 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP017 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP017 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP018 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP018 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP019 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP019 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP020 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP020 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP021 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP021 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP022 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP022 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP023 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP023 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP024 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP024 ,"不可为空" );
-                return false;
-            }
-            if ( string . IsNullOrEmpty ( txtEMP025 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP025 ,"不可为空" );
-                return false;
-            }
+            //if ( string . IsNullOrEmpty ( txtEMP012 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP012 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP013 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP013 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP015 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP015 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP017 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP017 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP018 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP018 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP019 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP019 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP020 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP020 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP021 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP021 ,"不可为空" );
+            //    return false;
+            //}
+            //if ( string . IsNullOrEmpty ( txtEMP022 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP022 ,"不可为空" );
+            //    return false;
+            //}
+
+            //if ( string . IsNullOrEmpty ( txtEMP024 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP024 ,"不可为空" );
+            //    return false;
+            //}
+
             //if ( string . IsNullOrEmpty ( txtEMP035 . Text ) )
             //{
             //    errorProvider1 . SetError ( txtEMP035 ,"不可为空" );
             //    return false;
             //}
-            if ( string . IsNullOrEmpty ( txtEMP036 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP036 ,"不可为空" );
-                return false;
-            }
+            //if ( string . IsNullOrEmpty ( txtEMP036 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP036 ,"不可为空" );
+            //    return false;
+            //}
 
-            if ( string . IsNullOrEmpty ( txtEMP025 . Text ) )
-            {
-                errorProvider1 . SetError ( txtEMP025 ,"在职状态不可为空" );
-                return false;
-            }
+            //if ( string . IsNullOrEmpty ( txtEMP025 . Text ) )
+            //{
+            //    errorProvider1 . SetError ( txtEMP025 ,"在职状态不可为空" );
+            //    return false;
+            //}
             decimal outRsult = 0M;
             if ( !string . IsNullOrEmpty ( txtEMP027 . Text ) && decimal . TryParse ( txtEMP027 . Text ,out outRsult ) == false )
             {
@@ -883,7 +890,6 @@ namespace LineProductMes
             focuseName = e . Column . FieldName;
         }
         #endregion
-
 
     }
 }

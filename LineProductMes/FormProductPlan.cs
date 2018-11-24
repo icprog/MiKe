@@ -104,6 +104,7 @@ namespace LineProductMes
             controlEnable ( );
             editTool ( );
             state = "edit";
+            check = false;
 
             return base . Edit ( );
         }
@@ -131,7 +132,7 @@ namespace LineProductMes
         {
             if ( getValue ( ) == false )
             {
-                 ClassForMain.FormClosingState.formClost = false;
+                ClassForMain . FormClosingState . formClost = false;
                 return 0;
             }
 
@@ -328,57 +329,75 @@ namespace LineProductMes
         }
         private void gridView1_CellValueChanging ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
-            if ( e . Column . FieldName == "PRE008" )
-            {
-                check = true;
-                selectIdx = e . RowHandle;
-            }
+            //if ( e . Column . FieldName == "PRE008" )
+            //{
+            //    check = true;
+            //    selectIdx = e . RowHandle;
+            //}
         }
+        int focuePrevious = 0;
         private void gridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
-            if ( e . Column . FieldName != "PRE008" )
-                return;
-            if ( row == null )
-                return;
-            if ( _body . PRE010 == 0 )
-                return;
-            DataRow ro = gridView1 . GetDataRow ( selectIdx );
-            if ( ro == null )
-                return;
-            _body . PRE009 = Convert . ToInt32 ( e . Value );
+            //if ( e . Column . FieldName != "PRE008" )
+            //    return;
+            //if ( row == null )
+            //    return;
+            //if ( _body . PRE010 == 0 )
+            //    return;
+            //DataRow ro = gridView1 . GetDataRow ( selectIdx );
+            //if ( ro == null )
+            //    return;
+            //_body . PRE009 = Convert . ToInt32 ( e . Value );
 
-            if ( _body . PRE010 <= _body . PRE009 )
-                return;
+            //if ( _body . PRE010 <= _body . PRE009 )
+            //    return;
 
-            gridView1 . CloseEditor ( );
-            gridView1 . UpdateCurrentRow ( );
+            //gridView1 . CloseEditor ( );
+            //gridView1 . UpdateCurrentRow ( );
 
-            object obj = tableView . Compute ( "MIN(PRE005)" ,"PRE002='" + ro [ "PRE002" ] + "' AND PRE003='" + ro [ "PRE003" ] + "' AND PRE004='" + ro [ "PRE004" ] + "' AND PRE005>'" + ro [ "PRE005" ] + "'" );
-            if ( obj != null && obj . ToString ( ) != string . Empty )
-            {
-                _body . PRE005 = Convert . ToDateTime ( obj );
-                DataRow rows = tableView . Select ( "PRE002='" + ro [ "PRE002" ] + "' AND PRE003='" + ro [ "PRE003" ] + "' AND PRE004='" + ro [ "PRE004" ] + "' AND PRE005='" + _body . PRE005 + "'" ) [ 0 ];
-                obj = rows [ "PRE008" ];
-                if ( obj == null && obj . ToString ( ) == string . Empty )
-                    _body . PRE007 = 0;
-                else
-                    _body . PRE007 = Convert . ToInt32 ( obj );
-                _body . PRE007 = _body . PRE010 - _body . PRE009 + _body . PRE007;
-                rows [ "PRE008" ] = _body . PRE007;
-            }
-            check = false;
+            //object obj = tableView . Compute ( "MIN(PRE005)" ,"PRE002='" + ro [ "PRE002" ] + "' AND PRE003='" + ro [ "PRE003" ] + "' AND PRE004='" + ro [ "PRE004" ] + "' AND PRE005>'" + ro [ "PRE005" ] + "'" );
+            //if ( obj != null && obj . ToString ( ) != string . Empty )
+            //{
+            //    _body . PRE005 = Convert . ToDateTime ( obj );
+            //    DataRow rows = tableView . Select ( "PRE002='" + ro [ "PRE002" ] + "' AND PRE003='" + ro [ "PRE003" ] + "' AND PRE004='" + ro [ "PRE004" ] + "' AND PRE005='" + _body . PRE005 + "'" ) [ 0 ];
+            //    obj = rows [ "PRE008" ];
+            //    if ( obj == null && obj . ToString ( ) == string . Empty )
+            //        _body . PRE007 = 0;
+            //    else
+            //        _body . PRE007 = Convert . ToInt32 ( obj );
+            //    _body . PRE007 = _body . PRE010 - _body . PRE009 + _body . PRE007;
+            //    rows [ "PRE008" ] = _body . PRE007;
+            //}
+            //check = false;
+            focuePrevious = e . RowHandle;
         }
+      
         private void gridView1_MouseEnter ( object sender ,EventArgs e )
         {
-            if ( check == false )
+            //if ( check == false )
+            //{
+
+            int focueHandel = gridView1 . FocusedRowHandle;
+
+            if ( focueHandel != focuePrevious )
             {
                 row = gridView1 . GetFocusedDataRow ( );
                 if ( row == null )
                     return;
                 if ( row [ "PRE008" ] == null || row [ "PRE008" ] . ToString ( ) == string . Empty )
                     return;
-                _body . PRE010 = Convert . ToInt32 ( row [ "PRE008" ] );
+                int pre = string . IsNullOrEmpty ( row [ "PRE" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE" ] );
+                _body . PRE008 = string . IsNullOrEmpty ( row [ "PRE008" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE008" ] );
+
+                gridView1 . CloseEditor ( );
+                gridView1 . UpdateCurrentRow ( );
+
+                object query = tableView . Compute ( "sum(PRE008)" ,"PRE002='" + row [ "PRE002" ] + "' AND PRE004='" + row [ "PRE004" ] + "'" );
+                _body . PRE010 = string . IsNullOrEmpty ( query . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( query );
+                row [ "PRE008" ] = pre - _body . PRE010 + _body . PRE008;
+                //focuePrevious = focueHandel;
             }
+            //}
         }
         //生成ERP计划
         private void btnGener_Click ( object sender ,EventArgs e )
@@ -389,6 +408,30 @@ namespace LineProductMes
                 return;
             }
 
+            gridView1 . CloseEditor ( );
+            gridView1 . UpdateCurrentRow ( );
+
+            if ( tableView == null || tableView . Rows . Count < 1 )
+            {
+                XtraMessageBox . Show ( "请选择计划" );
+                return;
+            }
+
+            if ( !string . IsNullOrEmpty ( tableView . Rows [ 0 ] [ "PRE012" ] . ToString ( ) ) )
+            {
+                int sResult = _bll . CheckResult ( tableView );
+                if ( sResult == 0 )
+                    XtraMessageBox . Show ( "标准系统的计划被更改或删除" ,"提示" );
+                else if ( sResult == 1 )
+                    XtraMessageBox . Show ( "标准系统的数量和回写数量不一致" );
+                else if ( sResult == 2 )
+                    XtraMessageBox . Show ( "标准系统的数量和回写数量不一致" );
+                else if ( sResult == 3 )
+                    XtraMessageBox . Show ( "标准系统的计划已经存在" );
+
+                return;
+            }
+
             result = _bll . AddPlan ( txtPRD001 . Text );
             if ( result )
             {
@@ -396,7 +439,6 @@ namespace LineProductMes
 
                 tableView = _bll . getTableView ( txtPRD001 . Text );
                 gridControl1 . DataSource = tableView;
-
             }
             else
                 XtraMessageBox . Show ( "写入计划失败" );
@@ -460,6 +502,7 @@ namespace LineProductMes
                     row [ "PRE008" ] = _body . PRE008;
                     row [ "PRE009" ] = _body . PRE009;
                     row [ "PRE010" ] = _body . PRE010;
+                    row [ "PRE" ] = rowes [ "PRE" ];
                     tableView . Rows . Add ( row );
                 }
             }
@@ -589,13 +632,23 @@ namespace LineProductMes
             {
                 if ( row [ "PRE005" ] == null || row [ "PRE005" ] . ToString ( ) == string . Empty )
                 {
-                    XtraMessageBox . Show ( "请选择" );
+                    row . SetColumnError ( "PRE005" ,"请选择" );
+                    //XtraMessageBox . Show ( "请选择" );
                     result = false;
                     break;
                 }
                 if ( row [ "PRE008" ] == null || row [ "PRE008" ] . ToString ( ) == string . Empty )
                 {
-                    XtraMessageBox . Show ( "请录入" );
+                    row . SetColumnError ( "PRE008" ,"请录入" );
+                    //XtraMessageBox . Show ( "请录入" );
+                    result = false;
+                    break;
+                }
+                _body . PRE011 = string . IsNullOrEmpty ( row [ "PRE011" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE011" ] );
+                _body . PRE008 = string . IsNullOrEmpty ( row [ "PRE008" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE008" ] );
+                if ( _body . PRE008 + _body . PRE011 < 0 )
+                {
+                    row . SetColumnError ( "PRE011" ,"数量多于排产数量" );
                     result = false;
                     break;
                 }
@@ -610,9 +663,12 @@ namespace LineProductMes
                             p1 = p . Field<string> ( "PRE002" ) ,
                             p2 = p . Field<string> ( "PRE003" ) ,
                             p3 = p . Field<string> ( "PRE004" ) ,
-                            P4 = p . Field<int> ( "PRE007" )
+                            P4 = p . Field<int> ( "PRE007" ),
+                            P5 = p . Field<int> ( "PRE" )
                         } into m
                         let sum = m . Sum ( t => t . Field<int> ( "PRE008" ) )
+                        let sum1 = m . Sum ( t => t . Field<int?> ( "PRE011" ) == null ? 0 : t . Field<int> ( "PRE011" ) )
+                        let sum2 = m . Sum ( t => t . Field<int?> ( "PRE010" ) == null ? 0 : t . Field<int> ( "PRE010" ) )
                         orderby sum descending
                         select new
                         {
@@ -620,7 +676,10 @@ namespace LineProductMes
                             pre003 = m . Key . p2 ,
                             pre004 = m . Key . p3 ,
                             pre007 = m . Key . P4 ,
-                            sum = sum
+                            pre = m . Key . P5 ,
+                            sum = sum ,
+                            sum1 = sum1 ,
+                            sum2 = sum2
                         };
             if ( query != null )
             {
@@ -628,7 +687,13 @@ namespace LineProductMes
                 {
                     if ( x . pre007 < x . sum )
                     {
-                        XtraMessageBox . Show ( "订单:" + x . pre002 + "\n\r序号:" + x . pre003 + "\n\r品号:" + x . pre004 + "\n\r排产数量总和多于订单量,请核实" ,"提示" );
+                        XtraMessageBox . Show ( "订单:" + x . pre002 + "\n\r序号:" + x . pre003 + "\n\r品号:" + x . pre004 + "\n\r排产数量总和多于总排产量,请核实" ,"提示" );
+                        result = false;
+                        break;
+                    }
+                    if ( x . pre < x . sum1 )
+                    {
+                        XtraMessageBox . Show ( "订单:" + x . pre002 + "\n\r序号:" + x . pre003 + "\n\r品号:" + x . pre004 + "\n\r调整量多于已排数量,请核实" ,"提示" );
                         result = false;
                         break;
                     }
@@ -650,7 +715,8 @@ namespace LineProductMes
                         if ( tableAll . Select ( "PRE002='" + x . pre002 + "' AND PRE003='" + x . pre003 + "' AND PRE004='" + x . pre004 + "'" ) . Length > 0 )
                         {
                             _body . PRE008 = x . sum + Convert . ToInt32 ( tableAll . Select ( "PRE002='" + x . pre002 + "' AND PRE003='" + x . pre003 + "' AND PRE004='" + x . pre004 + "'" ) [ 0 ] [ "PRE008" ] );
-                            if ( _body . PRE008 > x . pre007 )
+                            //_body . PRE011 = x . sum1 + Convert . ToInt32 ( tableAll . Select ( "PRE002='" + x . pre002 + "' AND PRE003='" + x . pre003 + "' AND PRE004='" + x . pre004 + "'" ) [ 0 ] [ "PRE011" ] );
+                            if ( _body . PRE008 > ( x . pre007 + x . sum1 ) )
                             {
                                 XtraMessageBox . Show ( "订单:" + x . pre002 + "\n\r序号:" + x . pre003 + "\n\r品号:" + x . pre004 + "\n\r排产数量总和多于订单量,请核实" ,"提示" );
                                 result = false;

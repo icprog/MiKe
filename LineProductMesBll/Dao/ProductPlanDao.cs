@@ -54,7 +54,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableView ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,PRE001,PRE002,PRE003,PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010,PRE011,PRE012 FROM MIKPRE WHERE PRE001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT idx,PRE001,A.PRE002,PRE003,A.PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010,PRE011,PRE012,B.PRE FROM MIKPRE A INNER JOIN (SELECT PRE002,PRE004,SUM(PRE008) PRE FROM MIKPRE WHERE PRE001='{0}' GROUP BY PRE002,PRE004) B ON A.PRE002=B.PRE002 AND A.PRE004=B.PRE004 WHERE PRE001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -67,7 +67,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableViewFor ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT A.idx,PRE001,PRE002,PRE003,PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010,PRE011 FROM MIKPRE A INNER JOIN MIKPRD B ON A.PRE001=B.PRD001 WHERE PRD003=0 AND PRE004='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT A.idx,PRE001,PRE002,PRE003,PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010,PRE011,PRE012 FROM MIKPRE A INNER JOIN MIKPRD B ON A.PRE001=B.PRD001 WHERE PRD003=0 AND PRE004='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -155,6 +155,7 @@ namespace LineProductMesBll . Dao
                     strSql = new StringBuilder ( );
                     strSql . AppendFormat ( "UPDATE DCSIBB SET IBB985-={0} WHERE IBB001='{1}' AND IBB002='{2}'" ,x . sum ,x . pre002 ,x . pre003 );
                     SQLString . Add ( strSql ,null );
+                    break;
                 }
             }
 
@@ -222,7 +223,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableAllOrder ( DataTable table ,string oddNum)
         {
             DataTable tableResult = table . DefaultView . ToTable ( true ,new string [ ] { "PRE002" ,"PRE003" ,"PRE004" } );
-
+            
             string strWhere = "1=1";
             foreach ( DataRow row in tableResult . Rows )
             {
@@ -231,7 +232,7 @@ namespace LineProductMesBll . Dao
                 else
                     strWhere += " OR (PRE002='" + row [ "PRE002" ] + "' AND PRE003='" + row [ "PRE003" ] + "' AND PRE004='" + row [ "PRE004" ] + "')";
             }
-
+            
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT PRE002,PRE003,PRE004,SUM(PRE008) PRE008 FROM MIKPRD A INNER JOIN MIKPRE B ON A.PRD001=B.PRE001 WHERE PRD003=0 AND {0}) AND PRE001!='{1}' GROUP BY PRE002,PRE003,PRE004" ,strWhere ,oddNum );
 
@@ -343,9 +344,9 @@ namespace LineProductMesBll . Dao
                 modelBody . PRE006 = Convert . ToDateTime ( row [ "PRE006" ] . ToString ( ) );
                 modelBody . PRE007 = Convert . ToInt32 ( row [ "PRE007" ] . ToString ( ) );
                 modelBody . PRE008 = string . IsNullOrEmpty ( row [ "PRE008" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE008" ] . ToString ( ) );
-                modelBody . PRE009 = string . IsNullOrEmpty ( row [ "PRE009" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE009" ] . ToString ( ) );
+                //modelBody . PRE009 = string . IsNullOrEmpty ( row [ "PRE009" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE009" ] . ToString ( ) );
                 modelBody . PRE010 = Convert . ToInt32 ( row [ "PRE010" ] . ToString ( ) );
-                modelBody . PRE012 = modelBody . PRE009 == 0 ? string . Empty : row [ "PRE012" ] . ToString ( );
+                //modelBody . PRE012 = modelBody . PRE009 == 0 ? string . Empty : row [ "PRE012" ] . ToString ( );
                 if ( string . IsNullOrEmpty ( row [ "PRE011" ] . ToString ( ) ) )
                     modelBody . PRE011 = 0;
                 else
@@ -410,9 +411,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKPRE(" );
-            strSql . Append ( "PRE001,PRE002,PRE003,PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010)" );
+            strSql . Append ( "PRE001,PRE002,PRE003,PRE004,PRE005,PRE006,PRE007,PRE008,PRE010)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@PRE001,@PRE002,@PRE003,@PRE004,@PRE005,@PRE006,@PRE007,@PRE008,@PRE009,@PRE010)" );
+            strSql . Append ( "@PRE001,@PRE002,@PRE003,@PRE004,@PRE005,@PRE006,@PRE007,@PRE008,@PRE010)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PRE001", SqlDbType.NVarChar,20),
                     new SqlParameter("@PRE002", SqlDbType.NVarChar,20),
@@ -422,7 +423,7 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@PRE006", SqlDbType.Date,3),
                     new SqlParameter("@PRE007", SqlDbType.Int,4),
                     new SqlParameter("@PRE008", SqlDbType.Int,4),
-                    new SqlParameter("@PRE009", SqlDbType.Int,4),
+                    //new SqlParameter("@PRE009", SqlDbType.Int,4),
                     new SqlParameter("@PRE010", SqlDbType.Int,4)
             };
             parameters [ 0 ] . Value = model . PRE001;
@@ -433,8 +434,8 @@ namespace LineProductMesBll . Dao
             parameters [ 5 ] . Value = model . PRE006;
             parameters [ 6 ] . Value = model . PRE007;
             parameters [ 7 ] . Value = model . PRE008;
-            parameters [ 8 ] . Value = model . PRE009;
-            parameters [ 9 ] . Value = model . PRE010;
+            //parameters [ 8 ] . Value = model . PRE009;
+            parameters [ 8 ] . Value = model . PRE010;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -449,9 +450,9 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "PRE006=@PRE006," );
             strSql . Append ( "PRE007=@PRE007," );
             strSql . Append ( "PRE008=@PRE008," );
-            strSql . Append ( "PRE009=@PRE009," );
-            strSql . Append ( "PRE010=@PRE010," );
-            strSql . Append ( "PRE012=@PRE012 " );
+            //strSql . Append ( "PRE009=@PRE009," );
+            strSql . Append ( "PRE010=@PRE010 " );
+            //strSql . Append ( "PRE012=@PRE012 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PRE002", SqlDbType.NVarChar,20),
@@ -461,10 +462,10 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@PRE006", SqlDbType.Date,3),
                     new SqlParameter("@PRE007", SqlDbType.Int,4),
                     new SqlParameter("@PRE008", SqlDbType.Int,4),
-                    new SqlParameter("@PRE009", SqlDbType.Int,4),
+                    //new SqlParameter("@PRE009", SqlDbType.Int,4),
                     new SqlParameter("@PRE010", SqlDbType.Int,4),
-                    new SqlParameter("@PRE012", SqlDbType.NVarChar,20),
-                    new SqlParameter("@idx", SqlDbType.Int,4),
+                    //new SqlParameter("@PRE012", SqlDbType.NVarChar,20),
+                    new SqlParameter("@idx", SqlDbType.Int,4)
             };
             parameters [ 0 ] . Value = model . PRE002;
             parameters [ 1 ] . Value = model . PRE003;
@@ -473,10 +474,10 @@ namespace LineProductMesBll . Dao
             parameters [ 4 ] . Value = model . PRE006;
             parameters [ 5 ] . Value = model . PRE007;
             parameters [ 6 ] . Value = model . PRE008;
-            parameters [ 7 ] . Value = model . PRE009;
-            parameters [ 8 ] . Value = model . PRE010;
-            parameters [ 9 ] . Value = model . PRE012;
-            parameters [ 10 ] . Value = model . idx;
+            //parameters [ 7 ] . Value = model . PRE009;
+            parameters [ 7 ] . Value = model . PRE010;
+            //parameters [ 9 ] . Value = model . PRE012;
+            parameters [ 8 ] . Value = model . idx;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -638,6 +639,60 @@ namespace LineProductMesBll . Dao
                 }
             }
             return model;
+        }
+
+        /// <summary>
+        /// 标准系统的ERP计划和回写的是否一致
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
+        public int CheckResult ( DataTable table )
+        {
+            var query = from p in table . AsEnumerable ( )
+                        group p by new
+                        {
+                            p1 = p . Field<string> ( "PRE002" ) ,
+                            p2 = p . Field<string> ( "PRE012" )
+                        } into m
+                        let
+                 sum = m . Sum ( t => t . Field<int?> ( "PRE009" ) == null ? 0 : t . Field<int> ( "PRE009" ) )
+                        select new
+                        {
+                            pre002 = m . Key . p1 ,
+                            pre012 = m . Key . p2 ,
+                            sum = sum
+                        };
+            string pinNum = string . Empty, piNums = string . Empty;
+            int piNum = 0;
+            
+            foreach ( var x in query )
+            {
+                pinNum = x . pre002;
+                piNum = x . sum;
+                piNums = x . pre012;
+                break;
+            }
+
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT SAB007-{2} SAB FROM SGMSAB WHERE SAB021='{0}' AND SAB001='{1}'" ,pinNum ,piNums ,piNum );
+            
+            DataTable tableResult = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( tableResult == null || tableResult . Rows . Count < 1 )
+                //标准系统的计划被更改或删除
+                return 0;
+            else
+            {
+                string sResult = tableResult . Rows [ 0 ] [ "SAB" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( sResult ) )
+                    //标准系统的数量和回写数量不一致
+                    return 1;
+                else if ( Convert . ToDecimal ( sResult ) != 0 )
+                    //标准系统的数量和回写数量不一致
+                    return 2;
+                else
+                    //标准系统的计划已经存在
+                    return 3;
+            }
         }
 
         /// <summary>

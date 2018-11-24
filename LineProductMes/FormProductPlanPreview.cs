@@ -80,6 +80,8 @@ namespace LineProductMes
 
             controlUnEnable ( );
 
+            check = false;
+
             return base . Query ( );
         }
         protected override int Export ( )
@@ -92,6 +94,8 @@ namespace LineProductMes
         {
             controlEnable ( );
             editTool ( );
+
+            check = false;
 
             tableView = null;
             tableView = tableViewCopy . Copy ( );
@@ -198,9 +202,12 @@ namespace LineProductMes
             gridView1 . CloseEditor ( );
             gridView1 . UpdateCurrentRow ( );
 
-            int nextColumn = selectColumn + 1;
+            int nextColumn = selectColumn ;
             if ( nextColumn > gridView1 . Columns . Count - 1 )
+            {
+                //check = false;
                 return;
+            }
             string coluName = gridView1 . Columns [ nextColumn ] . FieldName;
             string nextValue = row [ coluName ] . ToString ( );
             r [ coluName ] = model . PRF003 - changedResult + ( string . IsNullOrEmpty ( nextValue ) == true ? 0 : Convert . ToInt32 ( nextValue ) );
@@ -221,6 +228,7 @@ namespace LineProductMes
                     return;
                 
                 columnName = gridView1 . FocusedColumn . FieldName;
+                model . PRF003 = 0;
                 if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName!= "DX$CheckboxSelectorColumn" )
                     model . PRF003 = string . IsNullOrEmpty ( row [ columnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ columnName ] . ToString ( ) );
             }

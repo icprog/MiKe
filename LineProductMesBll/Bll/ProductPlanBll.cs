@@ -190,6 +190,16 @@ namespace LineProductMesBll . Bll
         }
 
         /// <summary>
+        /// 标准系统的ERP计划和回写的是否一致
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
+        public int CheckResult ( DataTable table )
+        {
+            return dal . CheckResult ( table );
+        }
+
+        /// <summary>
         /// 生成ERP计划
         /// </summary>
         /// <param name="oddNum"></param>

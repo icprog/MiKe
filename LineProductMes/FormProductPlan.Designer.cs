@@ -64,6 +64,7 @@
             this.PRE012 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.PRE = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -299,7 +300,8 @@
             this.PRE009,
             this.PRE001,
             this.PRE011,
-            this.PRE012});
+            this.PRE012,
+            this.PRE});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 35;
             this.gridView1.Name = "gridView1";
@@ -321,7 +323,7 @@
             this.PRE002.OptionsColumn.AllowEdit = false;
             this.PRE002.Visible = true;
             this.PRE002.VisibleIndex = 0;
-            this.PRE002.Width = 110;
+            this.PRE002.Width = 102;
             // 
             // PRE003
             // 
@@ -331,7 +333,7 @@
             this.PRE003.OptionsColumn.AllowEdit = false;
             this.PRE003.Visible = true;
             this.PRE003.VisibleIndex = 1;
-            this.PRE003.Width = 110;
+            this.PRE003.Width = 102;
             // 
             // PRE004
             // 
@@ -341,7 +343,7 @@
             this.PRE004.OptionsColumn.AllowEdit = false;
             this.PRE004.Visible = true;
             this.PRE004.VisibleIndex = 2;
-            this.PRE004.Width = 110;
+            this.PRE004.Width = 102;
             // 
             // PRE005
             // 
@@ -350,7 +352,7 @@
             this.PRE005.Name = "PRE005";
             this.PRE005.Visible = true;
             this.PRE005.VisibleIndex = 3;
-            this.PRE005.Width = 110;
+            this.PRE005.Width = 102;
             // 
             // PRE006
             // 
@@ -360,7 +362,7 @@
             this.PRE006.OptionsColumn.AllowEdit = false;
             this.PRE006.Visible = true;
             this.PRE006.VisibleIndex = 4;
-            this.PRE006.Width = 110;
+            this.PRE006.Width = 102;
             // 
             // PRE007
             // 
@@ -370,7 +372,7 @@
             this.PRE007.OptionsColumn.AllowEdit = false;
             this.PRE007.Visible = true;
             this.PRE007.VisibleIndex = 5;
-            this.PRE007.Width = 84;
+            this.PRE007.Width = 70;
             // 
             // PRE008
             // 
@@ -378,8 +380,8 @@
             this.PRE008.FieldName = "PRE008";
             this.PRE008.Name = "PRE008";
             this.PRE008.Visible = true;
-            this.PRE008.VisibleIndex = 7;
-            this.PRE008.Width = 151;
+            this.PRE008.VisibleIndex = 8;
+            this.PRE008.Width = 116;
             // 
             // idx
             // 
@@ -394,17 +396,18 @@
             this.PRE010.Name = "PRE010";
             this.PRE010.OptionsColumn.AllowEdit = false;
             this.PRE010.Visible = true;
-            this.PRE010.VisibleIndex = 6;
-            this.PRE010.Width = 61;
+            this.PRE010.VisibleIndex = 7;
+            this.PRE010.Width = 56;
             // 
             // PRE009
             // 
             this.PRE009.Caption = "ERP计划量";
             this.PRE009.FieldName = "PRE009";
             this.PRE009.Name = "PRE009";
+            this.PRE009.OptionsColumn.AllowEdit = false;
             this.PRE009.Visible = true;
-            this.PRE009.VisibleIndex = 9;
-            this.PRE009.Width = 66;
+            this.PRE009.VisibleIndex = 10;
+            this.PRE009.Width = 70;
             // 
             // PRE001
             // 
@@ -418,8 +421,8 @@
             this.PRE011.FieldName = "PRE011";
             this.PRE011.Name = "PRE011";
             this.PRE011.Visible = true;
-            this.PRE011.VisibleIndex = 8;
-            this.PRE011.Width = 52;
+            this.PRE011.VisibleIndex = 9;
+            this.PRE011.Width = 54;
             // 
             // PRE012
             // 
@@ -428,8 +431,8 @@
             this.PRE012.Name = "PRE012";
             this.PRE012.OptionsColumn.AllowEdit = false;
             this.PRE012.Visible = true;
-            this.PRE012.VisibleIndex = 10;
-            this.PRE012.Width = 95;
+            this.PRE012.VisibleIndex = 11;
+            this.PRE012.Width = 119;
             // 
             // wait
             // 
@@ -449,6 +452,16 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
+            // PRE
+            // 
+            this.PRE.Caption = "已排量";
+            this.PRE.FieldName = "PRE";
+            this.PRE.Name = "PRE";
+            this.PRE.OptionsColumn.AllowEdit = false;
+            this.PRE.Visible = true;
+            this.PRE.VisibleIndex = 6;
+            this.PRE.Width = 64;
             // 
             // FormProductPlan
             // 
@@ -523,5 +536,6 @@
         private DevExpress . XtraGrid . Columns . GridColumn PRE011;
         private DevExpress . XtraGrid . Columns . GridColumn PRE012;
         private System . Windows . Forms . ToolStripMenuItem ItemTwo;
+        private DevExpress . XtraGrid . Columns . GridColumn PRE;
     }
 }
