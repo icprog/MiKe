@@ -85,6 +85,8 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.HAX015 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -137,8 +139,6 @@
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copy = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -184,6 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workstate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Edit1)).BeginInit();
@@ -202,7 +203,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -859,6 +859,20 @@
             this.bandedGridView1});
             this.gridControl1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl1_KeyPress);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copy});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
+            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
+            // 
+            // copy
+            // 
+            this.copy.Name = "copy";
+            this.copy.Size = new System.Drawing.Size(100, 22);
+            this.copy.Text = "复制";
+            // 
             // bandedGridView1
             // 
             this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
@@ -1280,13 +1294,13 @@
             // U1
             // 
             this.U1.Caption = "工资";
-            this.U1.DisplayFormat.FormatString = "0.#";
+            this.U1.DisplayFormat.FormatString = "0.##";
             this.U1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.U1.FieldName = "U1";
             this.U1.Name = "U1";
             this.U1.OptionsColumn.AllowEdit = false;
             this.U1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U1", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U1", "{0:0.##}")});
             this.U1.ToolTip = "[工艺单价] * [生产数量]";
             this.U1.UnboundExpression = "[HAX007] * [HAX008]";
             this.U1.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
@@ -1388,13 +1402,13 @@
             // U3
             // 
             this.U3.Caption = "工资";
-            this.U3.DisplayFormat.FormatString = "0.#";
+            this.U3.DisplayFormat.FormatString = "0.##";
             this.U3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.U3.FieldName = "U3";
             this.U3.Name = "U3";
             this.U3.OptionsColumn.AllowEdit = false;
             this.U3.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U3", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U3", "{0:0.##}")});
             this.U3.ToolTip = "[小时单价] * [工时]";
             this.U3.UnboundExpression = "[HAX013] * [HAX019]";
             this.U3.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
@@ -1419,13 +1433,13 @@
             // HAX020
             // 
             this.HAX020.Caption = "总工资";
-            this.HAX020.DisplayFormat.FormatString = "0.#";
+            this.HAX020.DisplayFormat.FormatString = "0.##";
             this.HAX020.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.HAX020.FieldName = "HAX020";
             this.HAX020.Name = "HAX020";
             this.HAX020.OptionsColumn.AllowEdit = false;
             this.HAX020.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "HAX020", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "HAX020", "{0:0.##}")});
             this.HAX020.ToolTip = "计件工资+计时工资";
             this.HAX020.Visible = true;
             this.HAX020.Width = 55;
@@ -1474,20 +1488,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copy});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
-            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
-            // 
-            // copy
-            // 
-            this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(100, 22);
-            this.copy.Text = "复制";
             // 
             // FormHardWareWork
             // 
@@ -1544,6 +1544,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workstate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Edit1)).EndInit();
@@ -1562,7 +1563,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -386,16 +386,28 @@ namespace LineProductMes
                     return;
                 if ( row [ "PRE008" ] == null || row [ "PRE008" ] . ToString ( ) == string . Empty )
                     return;
+                if ( row [ "PRE005" ] == null || row [ "PRE005" ] . ToString ( ) == string . Empty )
+                    return;
+                if ( row [ "PRE005" ] != null && row [ "PRE005" ] . ToString ( ) != string . Empty )
+                {
+                    _body . PRE005 = Convert . ToDateTime ( row [ "PRE005" ] );
+                    if ( ( _body . PRE005 - dtTime ) . Value . Days < 0 )
+                        return;
+                }
+
+
                 int pre = string . IsNullOrEmpty ( row [ "PRE" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE" ] );
                 _body . PRE008 = string . IsNullOrEmpty ( row [ "PRE008" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE008" ] );
+
 
                 gridView1 . CloseEditor ( );
                 gridView1 . UpdateCurrentRow ( );
 
+
                 object query = tableView . Compute ( "sum(PRE008)" ,"PRE002='" + row [ "PRE002" ] + "' AND PRE004='" + row [ "PRE004" ] + "'" );
                 _body . PRE010 = string . IsNullOrEmpty ( query . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( query );
                 row [ "PRE008" ] = pre - _body . PRE010 + _body . PRE008;
-                //focuePrevious = focueHandel;
+                focuePrevious = focueHandel;
             }
             //}
         }

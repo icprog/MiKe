@@ -533,6 +533,8 @@ namespace LineProductMes
                     row [ "IJB018" ] = DBNull . Value;
                     row [ "IJB019" ] = DBNull . Value;
                     row [ "IJB020" ] = DBNull . Value;
+                    row [ "IJB023" ] = DBNull . Value;
+                    row [ "IJB024" ] = DBNull . Value;
                 }
             }
             else if ( e . Column . FieldName == "IJB002" || e . Column . FieldName == "IJB004" )

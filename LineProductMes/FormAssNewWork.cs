@@ -437,17 +437,22 @@ namespace LineProductMes
             row = bandedGridView1 . GetFocusedDataRow ( );
             if ( row == null )
                 return;
-            if ( row [ "ANX011" ] != null && row [ "ANX011" ] . ToString ( ) != string . Empty && ( row [ "ANX011" ] . ToString ( ) . Equals ( "离职" ) || row [ "ANX011" ] . ToString ( ) . Equals ( "未上班" ) ) )
+            if ( e . Column . FieldName == "ANX011" )
             {
-                row [ "ANX005" ] = DBNull . Value;
-                row [ "ANX006" ] = DBNull . Value;
-                row [ "ANX007" ] = DBNull . Value;
-                row [ "ANX008" ] = DBNull . Value;
-                row [ "ANX017" ] = DBNull . Value;
-                row [ "ANX015" ] = DBNull . Value;
-                row [ "ANX016" ] = DBNull . Value;
-                row [ "ANX009" ] = DBNull . Value;
-                row [ "ANX010" ] = DBNull . Value;
+                if ( row [ "ANX011" ] != null && row [ "ANX011" ] . ToString ( ) != string . Empty && ( row [ "ANX011" ] . ToString ( ) . Equals ( "离职" ) || row [ "ANX011" ] . ToString ( ) . Equals ( "未上班" ) ) )
+                {
+                    row [ "ANX005" ] = DBNull . Value;
+                    row [ "ANX006" ] = DBNull . Value;
+                    row [ "ANX007" ] = DBNull . Value;
+                    row [ "ANX008" ] = DBNull . Value;
+                    row [ "ANX017" ] = DBNull . Value;
+                    row [ "ANX015" ] = DBNull . Value;
+                    row [ "ANX016" ] = DBNull . Value;
+                    row [ "ANX009" ] = DBNull . Value;
+                    row [ "ANX010" ] = DBNull . Value;
+                }
+                else if ( row [ "ANX011" ] . ToString ( ) . Equals ( "在职" ) )
+                    editTime ( );
 
                 //calcuBTSay ( );
                 calcuSalaryForTime ( );
@@ -456,8 +461,9 @@ namespace LineProductMes
                 //calcuTSumByP ( );
                 //calcuTSumByT ( );
                 setCalcuSalary ( );
+                calcuTsumTime ( );
             }
-            if ( e . Column . FieldName == "ANX005" )
+            else if ( e . Column . FieldName == "ANX005" )
             {
                 if ( workShopTime . startTime ( row ,e . Value ,"ANX006" ,"ANX007" ,"ANX008" ) == false )
                 {
@@ -601,33 +607,37 @@ namespace LineProductMes
             }
             else if ( e . Column . FieldName == "ANX002" || e . Column . FieldName == "ANX003" || e . Column . FieldName == "ANX004" || e . Column . FieldName == "ANX009" || e . Column . FieldName == "ANX013" )
             {
-                if ( txtANW014 . Text . Equals ( "计件" ) )
-                {
-                    if ( row [ "ANX005" ] == null || row [ "ANX005" ] . ToString ( ) == string . Empty )
-                    {
-                        row [ "ANX005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    }
-                    if ( row [ "ANX006" ] == null || row [ "ANX006" ] . ToString ( ) == string . Empty )
-                    {
-                        row [ "ANX006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-                    }
-                }
-                else if ( txtANW014 . Text . Equals ( "计时" ) )
-                {
-                    if ( row [ "ANX007" ] == null || row [ "ANX007" ] . ToString ( ) == string . Empty )
-                    {
-                        row [ "ANX007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    }
-                    if ( row [ "ANX008" ] == null || row [ "ANX008" ] . ToString ( ) == string . Empty )
-                    {
-                        row [ "ANX008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-                    }
-                }
+                editTime ( );
                 if ( row [ "ANX011" ] == null || row [ "ANX011" ] . ToString ( ) == string . Empty )
                 {
                     row [ "ANX011" ] = "在职";
                 }
                 calcuTsumTime ( );
+            }
+        }
+        void editTime ( )
+        {
+            if ( txtANW014 . Text . Equals ( "计件" ) )
+            {
+                if ( row [ "ANX005" ] == null || row [ "ANX005" ] . ToString ( ) == string . Empty )
+                {
+                    row [ "ANX005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                }
+                if ( row [ "ANX006" ] == null || row [ "ANX006" ] . ToString ( ) == string . Empty )
+                {
+                    row [ "ANX006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                }
+            }
+            else if ( txtANW014 . Text . Equals ( "计时" ) )
+            {
+                if ( row [ "ANX007" ] == null || row [ "ANX007" ] . ToString ( ) == string . Empty )
+                {
+                    row [ "ANX007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                }
+                if ( row [ "ANX008" ] == null || row [ "ANX008" ] . ToString ( ) == string . Empty )
+                {
+                    row [ "ANX008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                }
             }
         }
         private void txtu1_TextChanged ( object sender ,EventArgs e )
@@ -735,7 +745,7 @@ namespace LineProductMes
             {
                 if ( txtANW002 . Text == string . Empty || tableView == null || tableView . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )
@@ -1136,7 +1146,7 @@ namespace LineProductMes
                         if ( string . IsNullOrEmpty ( row [ "ANX011" ] . ToString ( ) ) || row [ "ANX011" ] . ToString ( ) . Equals ( "离职" ) || row [ "ANX011" ] . ToString ( ) . Equals ( "未上班" ) )
                         {
                             row [ "ANX015" ] = 0;
-                            row [ "ANX015" ] = 0;
+                            row [ "ANX016" ] = 0;
                             row [ "ANX017" ] = 0;
                             continue;
                         }
@@ -1145,7 +1155,7 @@ namespace LineProductMes
                         dtStart = string . IsNullOrEmpty ( row [ "ANX015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX015" ] . ToString ( ) );
                         dtEnd = string . IsNullOrEmpty ( row [ "ANX016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX016" ] . ToString ( ) );
                         calcuT += dtEnd + dtStart;
-                        row [ "ANX017" ] = ( calcuT * resultSalary ) . ToString ( "0.#" );
+                        row [ "ANX017" ] = ( calcuT * resultSalary ) . ToString ( "0.##" );
                     }
                 }
             }
@@ -1159,7 +1169,7 @@ namespace LineProductMes
                     if ( string . IsNullOrEmpty ( row [ "ANX011" ] . ToString ( ) ) || row [ "ANX011" ] . ToString ( ) . Equals ( "离职" ) || row [ "ANX011" ] . ToString ( ) . Equals ( "未上班" ) )
                     {
                         row [ "ANX015" ] = 0;
-                        row [ "ANX015" ] = 0;
+                        row [ "ANX016" ] = 0;
                         row [ "ANX017" ] = 0;
                         continue;
                     }
@@ -1169,7 +1179,7 @@ namespace LineProductMes
                     dtEnd = string . IsNullOrEmpty ( row [ "ANX016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX016" ] . ToString ( ) );
                     calcuT += dtEnd + dtStart;
                     resultSalary = string . IsNullOrEmpty ( row [ "ANX009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX009" ] . ToString ( ) );
-                    row [ "ANX017" ] = ( calcuT * resultSalary ) . ToString ( "0.#" );
+                    row [ "ANX017" ] = ( calcuT * resultSalary ) . ToString ( "0.##" );
                 }
             }
             //if ( !string . IsNullOrEmpty ( txtANW014 . Text ) && txtANW014 . Text . Equals ( "计时" ) )

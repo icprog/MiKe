@@ -95,7 +95,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableView ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,LED001,LED002,LED003,LED004,LED005,LED006,LED007,LED008,LED009,LED010,LED011,LED012,LED016,LED013,LED014,LED015,0.0 U3 FROM MIKLED WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT idx,LED001,LED002,LED003,LED004,LED005,LED006,LED007,LED008,LED009,LED010,LED011,LED012,LED016,LED013,LED014,LED015 FROM MIKLED WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

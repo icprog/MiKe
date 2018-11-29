@@ -354,6 +354,32 @@ namespace LineProductMes
                     row [ "LGP012" ] = DBNull . Value;
                     row [ "LGP013" ] = DBNull . Value;
                 }
+                else if ( _bodyTwo . LGP005 . Equals ( "在职" ) )
+                {
+                    if ( txtLGN007 . Text . Equals ( "计件" ) )
+                    {
+                        if ( row [ "LGP009" ] == null || row [ "LGP009" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "LGP009" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        }
+                        if ( row [ "LGP010" ] == null || row [ "LGP010" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "LGP010" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                    }
+                    else if ( txtLGN007 . Text . Equals ( "计时" ) )
+                    {
+                        if ( row [ "LGP007" ] == null || row [ "LGP007" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "LGP007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        }
+                        if ( row [ "LGP008" ] == null || row [ "LGP008" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "LGP008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                    }
+                    calcuTsumTime ( );
+                }
             }
             else if ( e . Column . FieldName == "LGP007" )
             {
@@ -491,7 +517,7 @@ namespace LineProductMes
             {
                 if ( txtLGN001 . Text == string . Empty || tableViewOne == null || tableViewOne . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )

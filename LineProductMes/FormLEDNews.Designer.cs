@@ -1384,13 +1384,13 @@
             // U2
             // 
             this.U2.Caption = "计时工资";
-            this.U2.DisplayFormat.FormatString = "0.#";
+            this.U2.DisplayFormat.FormatString = "0.##";
             this.U2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.U2.FieldName = "U2";
             this.U2.Name = "U2";
             this.U2.OptionsColumn.AllowEdit = false;
             this.U2.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U2", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U2", "{0:0.##}")});
             this.U2.ToolTip = "[工时] * [小时工资]";
             this.U2.UnboundExpression = "[LEG015] * [LEG010]";
             this.U2.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
@@ -1426,13 +1426,13 @@
             // LEG016
             // 
             this.LEG016.Caption = "工资";
-            this.LEG016.DisplayFormat.FormatString = "0.#";
+            this.LEG016.DisplayFormat.FormatString = "0.##";
             this.LEG016.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.LEG016.FieldName = "LEG016";
             this.LEG016.Name = "LEG016";
             this.LEG016.OptionsColumn.AllowEdit = false;
             this.LEG016.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LEG016", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LEG016", "{0:0.##}")});
             this.LEG016.Visible = true;
             this.LEG016.Width = 60;
             // 

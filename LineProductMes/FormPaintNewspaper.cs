@@ -31,6 +31,9 @@ namespace LineProductMes
         List<string> idxListOne=new List<string>();
         List<string> idxListTwo=new List<string>();
 
+        DateTime dt;
+
+
         public FormPaintNewspaper ( )
         {
             InitializeComponent ( );
@@ -54,6 +57,8 @@ namespace LineProductMes
             m_SyncContext = SynchronizationContext . Current;
             thread = new Thread ( new ThreadStart ( ThreadPost ) );
             thread . Start ( );
+
+            dt = LineProductMesBll . UserInfoMation . sysTime;
         }
 
         #region Main
@@ -453,7 +458,6 @@ namespace LineProductMes
                 return;
             if ( e . Column . FieldName == "PPA002" || e . Column . FieldName == "PPA003" || e . Column . FieldName == "PPA004" || e . Column . FieldName == "PPA011" )
             {
-                DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
                 if ( rows [ "PPA007" ] == null || rows [ "PPA007" ] . ToString ( ) == string . Empty )
                 {
                     rows [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
@@ -466,6 +470,31 @@ namespace LineProductMes
                 {
                     rows [ "PPA010" ] = "在职";
                 }
+            }
+            if ( e . Column . FieldName == "PPA010" )
+            {
+                _bodyTwo . PPA010 = rows [ "PPA010" ] . ToString ( );
+                if ( _bodyTwo . PPA010 == string . Empty || _bodyTwo . PPA010 . Equals ( "离职" ) || _bodyTwo . PPA010 . Equals ( "未上班" ) )
+                {
+                    rows [ "PPA005" ] = DBNull . Value;
+                    rows [ "PPA006" ] = DBNull . Value;
+                    rows [ "PPA007" ] = DBNull . Value;
+                    rows [ "PPA008" ] = DBNull . Value;
+                    rows [ "PPA012" ] = DBNull . Value;
+                    rows [ "PPA013" ] = DBNull . Value;
+                }
+                else if ( _bodyTwo . PPA010 . Equals ( "在职" ) )
+                {
+                    if ( rows [ "PPA007" ] == null || rows [ "PPA007" ] . ToString ( ) == string . Empty )
+                    {
+                        rows [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    }
+                    if ( rows [ "PPA008" ] == null || rows [ "PPA008" ] . ToString ( ) == string . Empty )
+                    {
+                        rows [ "PPA008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    }
+                }
+                calcuTimeSum ( );
             }
             if ( e . Column . FieldName == "PPA009" )
             {
@@ -633,7 +662,7 @@ namespace LineProductMes
             {
                 if ( txtPAN003 . Text == string . Empty || tableViewOne == null || tableViewOne . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )

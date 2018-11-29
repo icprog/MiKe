@@ -24,6 +24,7 @@ namespace LineProductMes
         bool result=false;
         int numForSGM=0;
         List<string> idxList=new List<string>();
+        DateTime dt;
 
         public FormHardWareWork ( )
         {
@@ -46,6 +47,8 @@ namespace LineProductMes
 
             InitData ( );
             getData ( );
+
+            dt = LineProductMesBll . UserInfoMation . sysTime;
         }
 
         #region Main
@@ -445,6 +448,34 @@ namespace LineProductMes
                     row [ "HAX012" ] = DBNull . Value;
                     row [ "HAX013" ] = DBNull . Value;
                     row [ "HAX014" ] = DBNull . Value;
+                    row [ "HAX018" ] = DBNull . Value;
+                    row [ "HAX019" ] = DBNull . Value;
+                }
+                else if ( _body . HAX015 . Equals ( "在职" ) )
+                {
+                    if ( txtHAW011 . Text . Equals ( "计件" ) )
+                    {
+                        if ( row [ "HAX009" ] == null || row [ "HAX009" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "HAX009" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        }
+                        if ( row [ "HAX010" ] == null || row [ "HAX010" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "HAX010" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                    }
+                    else if ( txtHAW011 . Text . Equals ( "计时" ) )
+                    {
+                        if ( row [ "HAX011" ] == null || row [ "HAX011" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "HAX011" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        }
+                        if ( row [ "HAX012" ] == null || row [ "HAX012" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "HAX012" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                    }
+                    calcuTsumTime ( );
                 }
             }
             else if ( e . Column . FieldName == "HAX002" )
@@ -463,7 +494,7 @@ namespace LineProductMes
             }
             else if ( e . Column . FieldName == "HAX008" )
             {
-                DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
+                
                 if ( txtHAW011 . Text . Equals ( "计件" ) )
                 {
                     if ( row [ "HAX009" ] == null || row [ "HAX009" ] . ToString ( ) == string . Empty )
@@ -493,7 +524,7 @@ namespace LineProductMes
                 if ( tableArt != null && tableArt . Rows . Count > 0 )
                 {
                     DataRow [ ] rs = tableArt . Select ( "ART011='" + row [ "HAX016" ] + "'" );
-                    if ( rs . Length > 0 && "是".Equals(rs [0][ "ART010" ].ToString()) )
+                    if ( rs . Length > 0 && "是" . Equals ( rs [ 0 ] [ "ART010" ] . ToString ( ) ) )
                     {
                         bandedGridView1 . CloseEditor ( );
                         bandedGridView1 . UpdateCurrentRow ( );
@@ -677,7 +708,7 @@ namespace LineProductMes
             {
                 if ( txtHAW002 . Text == string . Empty || tableView == null || tableView . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )
@@ -997,7 +1028,7 @@ namespace LineProductMes
                 {
                     _body . HAX005 = qu . ToArray ( ) [ i ] . hax016;
                     _body . idx = qu . ToArray ( ) [ i ] . sum;
-                    if ( i >= 1 && i < qu . ToArray ( ) . Length - 1 )
+                    if ( /*i >= 1 &&*/ i < qu . ToArray ( ) . Length - 1 )
                     {
                         _body . HAX006 = qu . ToArray ( ) [ i + 1 ] . hax016;
                         _body . HAX008 = qu . ToArray ( ) [ i + 1 ] . sum;
@@ -1033,6 +1064,23 @@ namespace LineProductMes
                             }
                         }
                     }
+                }
+            }
+
+            if ( result == false )
+                return false;
+
+            if ( tableArt == null || tableArt . Rows . Count < 1 )
+                return result;
+            DataRow row = tableArt . Select ( "ART010='是'" ) [ 0 ];
+            if ( row != null )
+            {
+                string art011 = row [ "ART011" ] . ToString ( );
+                DataRow [ ] rows = tableView . Select ( "HAX016='" + art011 + "'" );
+                if ( rows != null && rows . Length > 0 )
+                {
+                    txtHAW009 . Text = tableView . Compute ( "SUM(HAX008)" ,"HAX016='" + art011 + "'" ) . ToString ( );
+                    _header . HAW009 = string . IsNullOrEmpty ( txtHAW009 . Text ) == true ? 0 : Convert . ToInt32 ( txtHAW009 . Text );
                 }
             }
 

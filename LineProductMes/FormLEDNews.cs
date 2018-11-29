@@ -30,6 +30,8 @@ namespace LineProductMes
         List<string> idxList=new List<string>();
         List<string> idxListOne=new List<string>();
 
+        DateTime dt;
+
         public FormLEGNews ( )
         {
             InitializeComponent ( );
@@ -55,6 +57,8 @@ namespace LineProductMes
             m_SyncContext = SynchronizationContext . Current;
             thread = new Thread ( new ThreadStart (  ThreadPost ) );
             thread . Start ( );
+
+            dt = LineProductMesBll . UserInfoMation . sysTime;
         }
 
         #region Main
@@ -377,7 +381,21 @@ namespace LineProductMes
                     row [ "LEG008" ] = DBNull . Value;
                     row [ "LEG009" ] = DBNull . Value;
                     row [ "LEG010" ] = DBNull . Value;
+                    row [ "LEG014" ] = DBNull . Value;
+                    row [ "LEG015" ] = DBNull . Value;
                 }
+                else if ( e . Value . Equals ( "在职" ) )
+                {
+                    if ( row [ "LEG005" ] == null || row [ "LEG005" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "LEG005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    }
+                    if ( row [ "LEG006" ] == null || row [ "LEG006" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "LEG006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    }
+                }
+                calcuTimeSum ( );
             }
             else if ( GridView1 . FocusedColumn . FieldName == "LEG005" )
             {
@@ -423,7 +441,7 @@ namespace LineProductMes
             }
             else if ( GridView1 . FocusedColumn . FieldName == "LEG002" || GridView1 . FocusedColumn . FieldName == "LEG003" || GridView1 . FocusedColumn . FieldName == "LEG004" || GridView1 . FocusedColumn . FieldName == "LEG013" )
             {
-                DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
+                
                 if ( row [ "LEG005" ] == null || row [ "LEG005" ] . ToString ( ) == string . Empty )
                 {
                     row [ "LEG005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
@@ -558,7 +576,7 @@ namespace LineProductMes
             {
                 if ( txtLEF010 . Text == string . Empty || tableView == null || tableView . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )
@@ -1009,7 +1027,7 @@ namespace LineProductMes
                 else
                     _body . LEG007 = 0;
                 salarySumUser = Convert . ToDecimal ( _body . LEG007 );
-                row [ "LEG016" ] = timeSum == 0 ? 0 . ToString ( ) : ( salarySum / timeSum * timeSumUser + salarySumUser ) . ToString ( "0.#" );
+                row [ "LEG016" ] = timeSum == 0 ? 0 . ToString ( ) : ( salarySum / timeSum * timeSumUser + salarySumUser ) . ToString ( "0.##" );
             }
         }
         void printOrExport ( )

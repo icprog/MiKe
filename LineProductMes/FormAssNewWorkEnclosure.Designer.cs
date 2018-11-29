@@ -1277,13 +1277,13 @@
             // ANV010
             // 
             this.ANV010.Caption = "工资";
-            this.ANV010.DisplayFormat.FormatString = "0.#";
+            this.ANV010.DisplayFormat.FormatString = "0.##";
             this.ANV010.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.ANV010.FieldName = "ANV010";
             this.ANV010.Name = "ANV010";
             this.ANV010.OptionsColumn.AllowEdit = false;
             this.ANV010.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ANV010", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ANV010", "{0:0.##}")});
             this.ANV010.ToolTip = "[每小时单价] * [工时]";
             this.ANV010.Visible = true;
             this.ANV010.VisibleIndex = 9;

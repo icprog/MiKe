@@ -189,49 +189,75 @@ namespace LineProductMes
         }
         private void gridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
-            if ( row == null )
-                return;
-            if ( model . PRF003 == 0 )
-                return;
-            DataRow r = gridView1 . GetDataRow ( selectIdx );
-            if ( row == null )
-                return;
-            int changedResult = string . IsNullOrEmpty ( e . Value . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( e . Value );
-            if ( model . PRF003 < changedResult )
-                return;
-            gridView1 . CloseEditor ( );
-            gridView1 . UpdateCurrentRow ( );
+            //if ( row == null )
+            //    return;
+            //if ( model . PRF003 == 0 )
+            //    return;
+            //DataRow r = gridView1 . GetDataRow ( selectIdx );
+            //if ( row == null )
+            //    return;
+            //int changedResult = string . IsNullOrEmpty ( e . Value . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( e . Value );
+            //if ( model . PRF003 < changedResult )
+            //    return;
+            //gridView1 . CloseEditor ( );
+            //gridView1 . UpdateCurrentRow ( );
 
-            int nextColumn = selectColumn ;
-            if ( nextColumn > gridView1 . Columns . Count - 1 )
-            {
-                //check = false;
-                return;
-            }
-            string coluName = gridView1 . Columns [ nextColumn ] . FieldName;
-            string nextValue = row [ coluName ] . ToString ( );
-            r [ coluName ] = model . PRF003 - changedResult + ( string . IsNullOrEmpty ( nextValue ) == true ? 0 : Convert . ToInt32 ( nextValue ) );
-            check = false;
+            //int nextColumn = selectColumn ;
+            //if ( nextColumn > gridView1 . Columns . Count - 1 )
+            //{
+            //    //check = false;
+            //    return;
+            //}
+            //string coluName = gridView1 . Columns [ nextColumn ] . FieldName;
+            //string nextValue = row [ coluName ] . ToString ( );
+            //r [ coluName ] = model . PRF003 - changedResult + ( string . IsNullOrEmpty ( nextValue ) == true ? 0 : Convert . ToInt32 ( nextValue ) );
+            //check = false;
         }
         private void gridView1_CellValueChanging ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
-            check = true;
-            selectIdx = e . RowHandle;
-            selectColumn = e . Column . VisibleIndex;
+            //check = true;
+            //selectIdx = e . RowHandle;
+            //selectColumn = e . Column . VisibleIndex;
         }
+        int selectPrevious=0;
         private void gridView1_MouseEnter ( object sender ,EventArgs e )
         {
-            if ( check == false )
+            //if ( check == false )
+            //{
+
+            int selectNow = gridView1 . FocusedColumn . VisibleIndex;
+
+            if ( selectPrevious != selectNow )
             {
                 row = gridView1 . GetFocusedDataRow ( );
                 if ( row == null )
                     return;
-                
+
+                int selectColumnValue = 0, allOfValue = 0;
+
                 columnName = gridView1 . FocusedColumn . FieldName;
                 model . PRF003 = 0;
-                if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName!= "DX$CheckboxSelectorColumn" )
-                    model . PRF003 = string . IsNullOrEmpty ( row [ columnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ columnName ] . ToString ( ) );
+                if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName != "DX$CheckboxSelectorColumn" )
+                    selectColumnValue = string . IsNullOrEmpty ( row [ columnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ columnName ] . ToString ( ) );
+
+                allOfValue = string . IsNullOrEmpty ( row [ "排产量" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "排产量" ] . ToString ( ) );
+
+                gridView1 . CloseEditor ( );
+                gridView1 . UpdateCurrentRow ( );
+
+                foreach ( DataColumn column in tableView . Columns )
+                {
+                    if ( column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "排产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "DX$CheckboxSelectorColumn" )
+                    {
+                        model . PRF003 = model . PRF003 + ( string . IsNullOrEmpty ( row [ column . ColumnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ column . ColumnName ] . ToString ( ) ) );
+                    }
+                }
+
+                gridView1 . SetRowCellValue ( gridView1 . FocusedRowHandle ,columnName ,allOfValue - model . PRF003 + selectColumnValue );
+
+                selectPrevious = selectNow;
             }
+            //}
         }
         private void gridView1_DoubleClick ( object sender ,EventArgs e )
         {

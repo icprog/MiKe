@@ -297,22 +297,24 @@ namespace LineProductMes
             var query = from p in tableView . AsEnumerable ( )
                         group p by new
                         {
-                            p1 = p . Field<string> ( "WAH023" ) ,
-                            p2 = p . Field<decimal?> ( "WAH024" )==null?0 : p . Field<decimal> ( "WAH024" )
+                            p1 = p . Field<string> ( "WAH023" ) //,
+                            //p2 = p . Field<decimal> ( "WAH024" )
                         } into m
-                        let sum = m . Sum ( t => t . Field<decimal?> ( "WAH015" )==null?0: t . Field<decimal> ( "WAH015" ) )
+                        let sum = m . Sum ( t => t . Field<decimal> ( "WAH015" ) )
                         select new
                         {
                             wah023 = m . Key . p1 ,
-                            wah024 = m . Key . p2 ,
+                            //wah024 = m . Key . p2 ,
                             sum = sum
                         };
 
             if ( query != null )
             {
+                decimal wah024 = 0M;
                 foreach ( var x in query )
                 {
-                    if ( x . wah024 < x . sum )
+                    wah024 = string . IsNullOrEmpty ( tableView . Select ( "WAH023='" + x . wah023 + "'" ) [ 0 ] [ "WAH024" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( tableView . Select ( "WAH023='" + x . wah023 + "'" ) [ 0 ] [ "WAH024" ] );
+                    if ( wah024 < x . sum )
                     {
                         XtraMessageBox . Show ( x . wah023 + "提留工资分配总计大于提留工资,请核实" );
                         result = false;

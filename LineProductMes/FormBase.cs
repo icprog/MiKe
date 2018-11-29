@@ -15,13 +15,13 @@ namespace LineProductMes
         {
             InitializeComponent ( );
 
-            //strFeel = config . AppSettings . Settings [ "Feed" ] . Value;
+            strFeel = config . AppSettings . Settings [ "Feed" ] . Value;
             if ( string . IsNullOrEmpty ( strFeel ) )
                 strFeel = "Office 2013 Light Gray";
             defaultLookAndFeel . LookAndFeel . SkinName = strFeel;
 
-            //Skin GridSkin = GridSkins . GetSkin ( defaultLookAndFeel . LookAndFeel );
-            //LineProductMesBll . UserInfoMation . FeedColor = GridSkin [ GridSkins . SkinGridEvenRow ] . Color . BackColor;
+            Skin GridSkin = GridSkins . GetSkin ( defaultLookAndFeel . LookAndFeel );
+            LineProductMesBll . UserInfoMation . FeedColor = GridSkin [ GridSkins . SkinGridEvenRow ] . Color . BackColor;
         }
     }
 }

@@ -1387,7 +1387,7 @@
             // PPA009
             // 
             this.PPA009.Caption = "小时工资";
-            this.PPA009.DisplayFormat.FormatString = "0.#";
+            this.PPA009.DisplayFormat.FormatString = "0.##";
             this.PPA009.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PPA009.FieldName = "PPA009";
             this.PPA009.Name = "PPA009";
@@ -1397,13 +1397,13 @@
             // U3
             // 
             this.U3.Caption = "计时工资";
-            this.U3.DisplayFormat.FormatString = "0.#";
+            this.U3.DisplayFormat.FormatString = "0.##";
             this.U3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.U3.FieldName = "U3";
             this.U3.Name = "U3";
             this.U3.OptionsColumn.AllowEdit = false;
             this.U3.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U3", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U3", "{0:0.##}")});
             this.U3.ToolTip = "[小时工资] * [工时]";
             this.U3.UnboundExpression = "[PPA009] * [PPA013]";
             this.U3.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
@@ -1438,13 +1438,13 @@
             // PPA014
             // 
             this.PPA014.Caption = "工资";
-            this.PPA014.DisplayFormat.FormatString = "0.#";
+            this.PPA014.DisplayFormat.FormatString = "0.##";
             this.PPA014.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PPA014.FieldName = "PPA014";
             this.PPA014.Name = "PPA014";
             this.PPA014.OptionsColumn.AllowEdit = false;
             this.PPA014.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PPA014", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PPA014", "{0:0.##}")});
             this.PPA014.ToolTip = "[总工资]/[总工时]*[个人总工时]";
             this.PPA014.Visible = true;
             this.PPA014.Width = 98;

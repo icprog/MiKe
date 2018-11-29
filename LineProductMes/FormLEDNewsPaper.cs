@@ -30,6 +30,8 @@ namespace LineProductMes
         List<string> idxList=new List<string>();
         List<string> idxListOne=new List<string>();
 
+        DateTime dt;
+
         public FormLEDNewsPaper ( )
         {
             InitializeComponent ( );
@@ -55,6 +57,8 @@ namespace LineProductMes
             m_SyncContext = SynchronizationContext . Current;
             thread = new Thread ( new ThreadStart ( ThreadPost ) );
             thread . Start ( );
+
+            dt = LineProductMesBll . UserInfoMation . sysTime;
         }
 
         #region Main
@@ -367,7 +371,22 @@ namespace LineProductMes
                     row [ "LED008" ] = DBNull . Value;
                     row [ "LED009" ] = DBNull . Value;
                     row [ "LED010" ] = DBNull . Value;
+                    row [ "LED014" ] = DBNull . Value;
+                    row [ "LED015" ] = DBNull . Value;
+                   
                 }
+                else if ( e . Value . Equals ( "在职" ) )
+                {
+                    if ( row [ "LED005" ] == null || row [ "LED005" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "LED005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    }
+                    if ( row [ "LED006" ] == null || row [ "LED006" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "LED006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    }
+                }
+                calcuTimeSum ( );
             }
             else if ( GridView1 . FocusedColumn . FieldName == "LED005" )
             {
@@ -413,7 +432,7 @@ namespace LineProductMes
             }
             else if ( GridView1 . FocusedColumn . FieldName == "LED002" || GridView1 . FocusedColumn . FieldName == "LED003" || GridView1 . FocusedColumn . FieldName == "LED004" || GridView1 . FocusedColumn . FieldName == "LED013" )
             {
-                DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
+              
                 if ( row [ "LED005" ] == null || row [ "LED005" ] . ToString ( ) == string . Empty )
                 {
                     row [ "LED005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
@@ -532,7 +551,7 @@ namespace LineProductMes
             {
                 if ( txtLEC010 . Text == string . Empty || tableView == null || tableView . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )
@@ -899,7 +918,7 @@ namespace LineProductMes
                 }
                 else
                     row [ "LED015" ] = 0;
-                row [ "U3" ] = Math . Round ( u1 ,1 ,MidpointRounding . AwayFromZero );
+                //row [ "U3" ] = Math . Round ( u1 ,1 ,MidpointRounding . AwayFromZero );
             }
             txtu1 . Text = ( LED014 . SummaryItem . SummaryValue == null ? 0 : Math . Round ( Convert . ToDecimal ( LED014 . SummaryItem . SummaryValue ) ,1 ,MidpointRounding . AwayFromZero ) + ( LED015 . SummaryItem . SummaryValue == null ? 0 : Math . Round ( Convert . ToDecimal ( LED015 . SummaryItem . SummaryValue ) ,1 ,MidpointRounding . AwayFromZero ) ) ) . ToString ( "0.#" );
         }
@@ -968,13 +987,13 @@ namespace LineProductMes
                     continue;
                 }
 
-                timeSumUser = string . IsNullOrEmpty ( row [ "U3" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "U3" ] );
+                timeSumUser = string . IsNullOrEmpty ( row [ "LED015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LED015" ] . ToString ( ) ) + ( string . IsNullOrEmpty ( row [ "LED014" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LED014" ] . ToString ( ) ) );
                 if ( row [ "LED007" ] != null && row [ "LED007" ] . ToString ( ) != string . Empty )
                     _body . LED007 = Convert . ToDecimal ( row [ "LED007" ] . ToString ( ) );
                 else
                     _body . LED007 = 0;
                 salarySumUser = Convert . ToDecimal ( _body . LED007 );
-                row [ "LED016" ] = timeSum == 0 ? 0 . ToString ( ) : ( salarySum / timeSum * timeSumUser + salarySumUser ) . ToString ( "0.#" );
+                row [ "LED016" ] = timeSum == 0 ? 0 . ToString ( ) : ( salarySum / timeSum * timeSumUser + salarySumUser ) . ToString ( "0.##" );
             }
         }
         void printOrExport ( )

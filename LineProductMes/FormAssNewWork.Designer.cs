@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtANW011 = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -100,7 +101,7 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -1597,13 +1598,13 @@
             // ANX017
             // 
             this.ANX017.Caption = "工资";
-            this.ANX017.DisplayFormat.FormatString = "0.#";
+            this.ANX017.DisplayFormat.FormatString = "0.##";
             this.ANX017.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.ANX017.FieldName = "ANX017";
             this.ANX017.Name = "ANX017";
             this.ANX017.OptionsColumn.AllowEdit = false;
             this.ANX017.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ANX017", "{0:0.#}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ANX017", "{0:0.##}")});
             this.ANX017.Visible = true;
             this.ANX017.Width = 56;
             // 

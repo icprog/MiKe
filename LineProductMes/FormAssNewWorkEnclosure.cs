@@ -436,7 +436,7 @@ namespace LineProductMes
                 addRow ( e . Column . FieldName ,e . RowHandle ,e . Value );
                 calcuSumTime ( );
             }
-            else if ( e . Column . FieldName == "ANV002" || e . Column . FieldName == "ANV003" || e . Column . FieldName == "ANV004" ||  e . Column . FieldName == "ANV008" )
+            else if ( e . Column . FieldName == "ANV002" || e . Column . FieldName == "ANV003" || e . Column . FieldName == "ANV004" || e . Column . FieldName == "ANV008" )
             {
                 if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
                 {
@@ -451,6 +451,27 @@ namespace LineProductMes
                     row [ "ANV007" ] = "在职";
                 }
                 calcuSumTime ( );
+            }
+            else if ( e . Column . FieldName == "ANV007" )
+            {
+                if ( row [ "ANV007" ] != null && row [ "ANV007" ] . ToString ( ) != string . Empty && ( row [ "ANV007" ] . ToString ( ) . Equals ( "离职" ) || row [ "ANV007" ] . ToString ( ) . Equals ( "未上班" ) ) )
+                {
+                    row [ "ANV005" ] = DBNull . Value;
+                    row [ "ANV006" ] = DBNull . Value;
+                    row [ "ANV009" ] = DBNull . Value;
+                }
+                else if( row [ "ANV007" ] . ToString ( ) . Equals ( "在职" ) )
+                {
+                    if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    }
+                    if ( row [ "ANV006" ] == null || row [ "ANV006" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    }
+                    calcuSumTime ( );
+                }
             }
         }
         private void Edit1_EditValueChanged ( object sender ,EventArgs e )
@@ -552,7 +573,7 @@ namespace LineProductMes
             {
                 if ( txtANT003 . Text == string . Empty || tableViewOne == null || tableViewOne . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )
@@ -902,7 +923,7 @@ namespace LineProductMes
                 else
                     row [ "ANV009" ] = 0;
 
-                row [ "ANV010" ] = Math . Round ( string . IsNullOrEmpty ( row [ "ANV009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANV009" ] ) * ( string . IsNullOrEmpty ( row [ "U1" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "U1" ] ) ) ,1 ,MidpointRounding . AwayFromZero );
+                row [ "ANV010" ] = Math . Round ( string . IsNullOrEmpty ( row [ "ANV009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANV009" ] ) * ( string . IsNullOrEmpty ( row [ "U1" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "U1" ] ) ) ,2 ,MidpointRounding . AwayFromZero );
             }
             addTotalTime ( );
         }
