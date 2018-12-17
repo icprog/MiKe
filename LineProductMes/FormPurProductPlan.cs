@@ -18,7 +18,7 @@ namespace LineProductMes
             _bll = new LineProductMesBll . Bll . SemiProductPlanBll ( );
             model = new LineProductMesEntityu . SemiProductPlanEntity ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolCanecl ,toolSave  ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit ,toolAdd } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolCanecl ,toolSave  ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit ,toolAdd } );
             GrivColumnStyle . setColumnStyle ( treeList1 );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
@@ -36,11 +36,11 @@ namespace LineProductMes
 
             return base . Query ( );
         }
-        protected override int Export ( )
+        protected override int ExportBase ( )
         {
             ViewExport . ExportToExcel ( this . Text ,this . treeList1 );
 
-            return base . Export ( );
+            return base . ExportBase ( );
         }
 
         private void treeList1_CustomDrawNodeIndicator ( object sender ,DevExpress . XtraTreeList . CustomDrawNodeIndicatorEventArgs e )

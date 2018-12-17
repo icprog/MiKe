@@ -28,24 +28,20 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            this.components = new System.ComponentModel.Container();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.txtPRD001 = new DevExpress.XtraEditors.TextEdit();
             this.txtPRD002 = new DevExpress.XtraEditors.TextEdit();
             this.ReaderOrder = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.btnGener = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.ItemOne = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemTwo = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -62,24 +58,22 @@
             this.PRE001 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PRE011 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PRE012 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PRE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.PRE = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPRD001.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPRD002.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -89,49 +83,64 @@
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 26);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 24);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1237, 412);
-            this.splitContainerControl1.SplitterPosition = 75;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1237, 414);
+            this.splitContainerControl1.SplitterPosition = 84;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.pictureEdit1);
             this.layoutControl1.Controls.Add(this.txtPRD001);
             this.layoutControl1.Controls.Add(this.txtPRD002);
             this.layoutControl1.Controls.Add(this.ReaderOrder);
-            this.layoutControl1.Controls.Add(this.pictureEdit1);
-            this.layoutControl1.Controls.Add(this.btnGener);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1237, 75);
+            this.layoutControl1.Size = new System.Drawing.Size(1237, 84);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureEdit1.Location = new System.Drawing.Point(1157, 12);
+            this.pictureEdit1.MenuManager = this.barManager1;
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
+            this.pictureEdit1.Size = new System.Drawing.Size(68, 60);
+            this.pictureEdit1.StyleController = this.layoutControl1;
+            this.pictureEdit1.TabIndex = 7;
+            // 
             // txtPRD001
             // 
-            this.txtPRD001.Location = new System.Drawing.Point(63, 12);
+            this.txtPRD001.Location = new System.Drawing.Point(71, 12);
             this.txtPRD001.MenuManager = this.barManager1;
             this.txtPRD001.Name = "txtPRD001";
+            this.txtPRD001.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPRD001.Properties.Appearance.Options.UseFont = true;
             this.txtPRD001.Properties.ReadOnly = true;
-            this.txtPRD001.Size = new System.Drawing.Size(161, 20);
+            this.txtPRD001.Size = new System.Drawing.Size(153, 26);
             this.txtPRD001.StyleController = this.layoutControl1;
             this.txtPRD001.TabIndex = 4;
             // 
             // txtPRD002
             // 
-            this.txtPRD002.Location = new System.Drawing.Point(63, 36);
+            this.txtPRD002.Location = new System.Drawing.Point(71, 42);
             this.txtPRD002.MenuManager = this.barManager1;
             this.txtPRD002.Name = "txtPRD002";
+            this.txtPRD002.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPRD002.Properties.Appearance.Options.UseFont = true;
             this.txtPRD002.Properties.ReadOnly = true;
-            this.txtPRD002.Size = new System.Drawing.Size(161, 20);
+            this.txtPRD002.Size = new System.Drawing.Size(153, 26);
             this.txtPRD002.StyleController = this.layoutControl1;
             this.txtPRD002.TabIndex = 5;
             // 
@@ -139,33 +148,11 @@
             // 
             this.ReaderOrder.Location = new System.Drawing.Point(228, 12);
             this.ReaderOrder.Name = "ReaderOrder";
-            this.ReaderOrder.Size = new System.Drawing.Size(83, 22);
+            this.ReaderOrder.Size = new System.Drawing.Size(115, 22);
             this.ReaderOrder.StyleController = this.layoutControl1;
             this.ReaderOrder.TabIndex = 6;
             this.ReaderOrder.Text = "读取订单";
             this.ReaderOrder.Click += new System.EventHandler(this.ReaderOrder_Click);
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1.Location = new System.Drawing.Point(1055, 12);
-            this.pictureEdit1.MenuManager = this.barManager1;
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit1.Size = new System.Drawing.Size(170, 51);
-            this.pictureEdit1.StyleController = this.layoutControl1;
-            this.pictureEdit1.TabIndex = 7;
-            // 
-            // btnGener
-            // 
-            this.btnGener.Location = new System.Drawing.Point(228, 38);
-            this.btnGener.Name = "btnGener";
-            this.btnGener.Size = new System.Drawing.Size(83, 22);
-            this.btnGener.StyleController = this.layoutControl1;
-            this.btnGener.TabIndex = 8;
-            this.btnGener.Text = "生成ERP计划";
-            this.btnGener.Click += new System.EventHandler(this.btnGener_Click);
             // 
             // layoutControlGroup1
             // 
@@ -174,76 +161,61 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.emptySpaceItem1,
-            this.emptySpaceItem2,
             this.layoutControlItem3,
-            this.layoutControlItem2,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1237, 75);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1237, 84);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.Control = this.txtPRD001;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(216, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(216, 30);
             this.layoutControlItem1.Text = "单号";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(48, 14);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(56, 20);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(574, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(335, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(469, 55);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(810, 64);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(303, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(271, 55);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.ReaderOrder;
             this.layoutControlItem3.Location = new System.Drawing.Point(216, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(87, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(119, 64);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.txtPRD002;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(216, 31);
-            this.layoutControlItem2.Text = "制单日期";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(48, 14);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.pictureEdit1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(1043, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(1145, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(174, 55);
+            this.layoutControlItem4.Size = new System.Drawing.Size(72, 64);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // layoutControlItem5
+            // layoutControlItem2
             // 
-            this.layoutControlItem5.Control = this.btnGener;
-            this.layoutControlItem5.Location = new System.Drawing.Point(216, 26);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(87, 29);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.txtPRD002;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 30);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(216, 34);
+            this.layoutControlItem2.Text = "制单日期";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(56, 20);
             // 
             // gridControl1
             // 
@@ -273,6 +245,7 @@
             this.ItemOne.Name = "ItemOne";
             this.ItemOne.Size = new System.Drawing.Size(112, 22);
             this.ItemOne.Text = "复制行";
+            this.ItemOne.Visible = false;
             // 
             // ItemTwo
             // 
@@ -434,6 +407,16 @@
             this.PRE012.VisibleIndex = 11;
             this.PRE012.Width = 119;
             // 
+            // PRE
+            // 
+            this.PRE.Caption = "已排量";
+            this.PRE.FieldName = "PRE";
+            this.PRE.Name = "PRE";
+            this.PRE.OptionsColumn.AllowEdit = false;
+            this.PRE.Visible = true;
+            this.PRE.VisibleIndex = 6;
+            this.PRE.Width = 64;
+            // 
             // wait
             // 
             this.wait.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -453,16 +436,6 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // PRE
-            // 
-            this.PRE.Caption = "已排量";
-            this.PRE.FieldName = "PRE";
-            this.PRE.Name = "PRE";
-            this.PRE.OptionsColumn.AllowEdit = false;
-            this.PRE.Visible = true;
-            this.PRE.VisibleIndex = 6;
-            this.PRE.Width = 64;
-            // 
             // FormProductPlan
             // 
             this.Appearance.Options.UseFont = true;
@@ -480,17 +453,15 @@
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPRD001.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPRD002.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -520,15 +491,10 @@
         private DevExpress . XtraGrid . Columns . GridColumn PRE006;
         private DevExpress . XtraGrid . Columns . GridColumn PRE007;
         private DevExpress . XtraGrid . Columns . GridColumn PRE008;
-        private DevExpress . XtraLayout . EmptySpaceItem emptySpaceItem2;
         private DevExpress . XtraGrid . Columns . GridColumn idx;
         private DevExpress . XtraGrid . Columns . GridColumn PRE010;
         private DevExpress . XtraWaitForm . ProgressPanel wait;
         private System . ComponentModel . BackgroundWorker backgroundWorker1;
-        private DevExpress . XtraEditors . PictureEdit pictureEdit1;
-        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem4;
-        private DevExpress . XtraEditors . SimpleButton btnGener;
-        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem5;
         private DevExpress . XtraGrid . Columns . GridColumn PRE009;
         private System . Windows . Forms . ContextMenuStrip contextMenuStrip1;
         private System . Windows . Forms . ToolStripMenuItem ItemOne;
@@ -537,5 +503,7 @@
         private DevExpress . XtraGrid . Columns . GridColumn PRE012;
         private System . Windows . Forms . ToolStripMenuItem ItemTwo;
         private DevExpress . XtraGrid . Columns . GridColumn PRE;
+        private DevExpress . XtraEditors . PictureEdit pictureEdit1;
+        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem4;
     }
 }

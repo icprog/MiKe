@@ -98,6 +98,60 @@
     <Compile Include="InputControl.Designer.cs">
       <DependentUpon>InputControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\ALLControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\ALLControl.Designer.cs">
+      <DependentUpon>ALLControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\BaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\BaseControl.Designer.cs">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\BoardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\BoardControl.Designer.cs">
+      <DependentUpon>BoardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\PlanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\PlanControl.Designer.cs">
+      <DependentUpon>PlanControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\RoundButton .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\RoundButton .Designer.cs">
+      <DependentUpon>RoundButton .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ERPControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\ERPControl.Designer.cs">
+      <DependentUpon>ERPControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\WorkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\WorkControl.Designer.cs">
+      <DependentUpon>WorkControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PushPanel\BorderPanel.cs">
@@ -309,6 +363,30 @@
     <EmbeddedResource Include="InputControl.resx">
       <DependentUpon>InputControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main\ALLControl.resx">
+      <DependentUpon>ALLControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\BaseControl.resx">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\BoardControl.resx">
+      <DependentUpon>BoardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ERPControl.resx">
+      <DependentUpon>ERPControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\PlanControl.resx">
+      <DependentUpon>PlanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\WorkControl.resx">
+      <DependentUpon>WorkControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -351,6 +429,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\go-back.png" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\b1.jpg" />
+    <Content Include="Resources\white.png" />
+    <None Include="Resources\white1.png" />
+    <None Include="Resources\58a261dab4641.jpg" />
     <Content Include="Resources\EllipseShape.png" />
     <Content Include="Resources\login_inputbtn_down.png" />
     <Content Include="Resources\login_inputbtn_highlight.png" />

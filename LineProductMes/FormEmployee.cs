@@ -264,35 +264,11 @@ namespace LineProductMes
 
             return 0;
         }
-        protected override int Print ( )
+        protected override int ExportBase ( )
         {
-            //if ( intList . Count < 1 )
-            //{
-            //    if ( XtraMessageBox . Show ( "全部打印?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . Cancel )
-            //        return 0;
-            //    printOrExport ( );
-            //}
-            //else
-            //    printOrExport ( );
-            //Print ( new DataTable [ ] { print } ,"人员信息.frx" );
-
-            return base . Print ( );
-        }
-        protected override int Export ( )
-        {
-            //if ( intList . Count < 1 )
-            //{
-            //    if ( XtraMessageBox . Show ( "全部导出?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . Cancel )
-            //        return 0;
-            //    printOrExport ( );
-            //}
-            //else
-            //    printOrExport ( );
-            //Export ( new DataTable [ ] { print } ,"人员信息.frx" );
-
             ClassForMain . ViewExport . ExportToExcel ( this . Text ,gridControl1 );
 
-            return base . Export ( );
+            return base . ExportBase ( );
         }
         #endregion
 
@@ -369,6 +345,8 @@ namespace LineProductMes
             txtEMP035 . Text = row [ "EMP035" ] . ToString ( );
             txtEMP036 . Text = row [ "EMP036" ] . ToString ( );
             txtEMP037 . Checked = string . IsNullOrEmpty ( row [ "EMP037" ] . ToString ( ) ) == true ? true : Convert . ToBoolean ( row [ "EMP037" ] );
+            string sx = row [ "EMP038" ] . ToString ( );
+            txtEMP038 . Text = row [ "EMP038" ] . ToString ( );
 
             tabPageOne . Refresh ( );
         }
@@ -379,15 +357,15 @@ namespace LineProductMes
         }
         void UnEnable ( )
         {
-            txtEMP002 . Enabled = txtEMP004 . Enabled = txtEMP006 . Enabled = txtEMP007 . Enabled = txtEMP008 . Enabled = txtEMP009 . Enabled = txtEMP010 . Enabled = txtEMP011 . Enabled = txtEMP012 . Enabled = txtEMP013 . Enabled = txtEMP014 . Enabled = txtEMP015 . Enabled = txtEMP016 . Enabled = txtEMP017 . Enabled = txtEMP018 . Enabled = txtEMP019 . Enabled = txtEMP020 . Enabled = txtEMP021 . Enabled = txtEMP022 . Enabled = txtEMP023 . Enabled = txtEMP024 . Enabled = txtEMP025 . Enabled = txtEMP026 . Enabled = txtEMP027 . Enabled = txtEMP028 . Enabled = txtEMP029 . Enabled = txtEMP030 . Enabled = txtEMP031 . Enabled = txtEMP032 . Enabled = txtEMP035 . Enabled = txtEMP036 . Enabled = txtEMP037 . Enabled = false;
+            txtEMP002 . Enabled = txtEMP004 . Enabled = txtEMP006 . Enabled = txtEMP007 . Enabled = txtEMP008 . Enabled = txtEMP009 . Enabled = txtEMP010 . Enabled = txtEMP011 . Enabled = txtEMP012 . Enabled = txtEMP013 . Enabled = txtEMP014 . Enabled = txtEMP015 . Enabled = txtEMP016 . Enabled = txtEMP017 . Enabled = txtEMP018 . Enabled = txtEMP019 . Enabled = txtEMP020 . Enabled = txtEMP021 . Enabled = txtEMP022 . Enabled = txtEMP023 . Enabled = txtEMP024 . Enabled = txtEMP025 . Enabled = txtEMP026 . Enabled = txtEMP027 . Enabled = txtEMP028 . Enabled = txtEMP029 . Enabled = txtEMP030 . Enabled = txtEMP031 . Enabled = txtEMP032 . Enabled = txtEMP035 . Enabled = txtEMP036 . Enabled = txtEMP037 . Enabled = txtEMP038 . Enabled = false;
         }
         void Enable ( )
         {
-            txtEMP002 . Enabled = txtEMP004 . Enabled = txtEMP006 . Enabled = txtEMP007 . Enabled = txtEMP008 . Enabled = txtEMP009 . Enabled = txtEMP010 . Enabled = txtEMP011 . Enabled = txtEMP012 . Enabled = txtEMP013 . Enabled = txtEMP014 . Enabled = txtEMP015 . Enabled = txtEMP016 . Enabled = txtEMP017 . Enabled = txtEMP018 . Enabled = txtEMP019 . Enabled = txtEMP020 . Enabled = txtEMP021 . Enabled = txtEMP022 . Enabled = txtEMP023 . Enabled = txtEMP024 . Enabled = txtEMP025 . Enabled = txtEMP026 . Enabled = txtEMP027 . Enabled = txtEMP028 . Enabled = txtEMP029 . Enabled = txtEMP030 . Enabled = txtEMP031 . Enabled = txtEMP032 . Enabled = txtEMP035 . Enabled = txtEMP036 . Enabled = txtEMP037 . Enabled = true;
+            txtEMP002 . Enabled = txtEMP004 . Enabled = txtEMP006 . Enabled = txtEMP007 . Enabled = txtEMP008 . Enabled = txtEMP009 . Enabled = txtEMP010 . Enabled = txtEMP011 . Enabled = txtEMP012 . Enabled = txtEMP013 . Enabled = txtEMP014 . Enabled = txtEMP015 . Enabled = txtEMP016 . Enabled = txtEMP017 . Enabled = txtEMP018 . Enabled = txtEMP019 . Enabled = txtEMP020 . Enabled = txtEMP021 . Enabled = txtEMP022 . Enabled = txtEMP023 . Enabled = txtEMP024 . Enabled = txtEMP025 . Enabled = txtEMP026 . Enabled = txtEMP027 . Enabled = txtEMP028 . Enabled = txtEMP029 . Enabled = txtEMP030 . Enabled = txtEMP031 . Enabled = txtEMP032 . Enabled = txtEMP035 . Enabled = txtEMP036 . Enabled = txtEMP037 . Enabled = txtEMP038 . Enabled = true;
         }
         void clear ( )
         {
-            txtEMP002 . Text = txtEMP004 . Text = txtEMP006 . Text = txtEMP007 . Text = txtEMP008 . Text = txtEMP009 . Text = txtEMP010 . Text = txtEMP011 . Text = txtEMP012 . Text = txtEMP013 . Text = txtEMP014 . Text = txtEMP015 . Text = txtEMP016 . Text = txtEMP017 . Text = txtEMP018 . Text = txtEMP019 . Text = txtEMP020 . Text = txtEMP021 . Text = txtEMP022 . Text = txtEMP023 . Text = txtEMP024 . Text = txtEMP025 . Text = txtEMP026 . Text = txtEMP027 . Text = txtEMP028 . Text = txtEMP029 . Text = txtEMP030 . Text = txtEMP031 . Text = txtEMP032 . Text = txtEMP035 . Text = txtEMP036 . Text = string . Empty;
+            txtEMP002 . Text = txtEMP004 . Text = txtEMP006 . Text = txtEMP007 . Text = txtEMP008 . Text = txtEMP009 . Text = txtEMP010 . Text = txtEMP011 . Text = txtEMP012 . Text = txtEMP013 . Text = txtEMP014 . Text = txtEMP015 . Text = txtEMP016 . Text = txtEMP017 . Text = txtEMP018 . Text = txtEMP019 . Text = txtEMP020 . Text = txtEMP021 . Text = txtEMP022 . Text = txtEMP023 . Text = txtEMP024 . Text = txtEMP025 . Text = txtEMP026 . Text = txtEMP027 . Text = txtEMP028 . Text = txtEMP029 . Text = txtEMP030 . Text = txtEMP031 . Text = txtEMP032 . Text = txtEMP035 . Text = txtEMP036 . Text = txtEMP038 . Text = string . Empty;
             layoutControlItem37 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
         }
         bool getValue ( )
@@ -604,6 +582,9 @@ namespace LineProductMes
             _model . EMP035 = txtEMP035 . Text;
             _model . EMP036 = txtEMP036 . Text;
             _model . EMP037 = txtEMP037 . Checked;
+            _model . EMP038 = txtEMP038 . Text;
+
+            errorProvider1 . Clear ( );
 
             return true;
         }
@@ -642,6 +623,10 @@ namespace LineProductMes
             txtEMP004 . Properties . DataSource = _bll . getDepart ( );
             txtEMP004 . Properties . DisplayMember = "DAA002";
             txtEMP004 . Properties . ValueMember = "DAA001";
+
+            txtEMP038 . Properties . DataSource = _bll . getDepartPower ( );
+            txtEMP038 . Properties . DisplayMember = "DAA002";
+            txtEMP038 . Properties . ValueMember = "DAA002";
         }
         #endregion
         

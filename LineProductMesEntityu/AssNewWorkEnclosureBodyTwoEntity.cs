@@ -19,7 +19,12 @@ namespace LineProductMesEntityu
         private string _anv008;
         private decimal? _anv009;
         private decimal? _anv010;
-        
+        private string _anv011;
+        private DateTime? _anv013;
+        private DateTime? _anv014;
+        private decimal? _anv015;
+        private decimal? _anv016;
+
         /// <summary>
         /// 
         /// </summary>
@@ -174,6 +179,80 @@ namespace LineProductMesEntityu
             set
             {
                 _anv010 = value;
+            }
+        }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string ANV011
+        {
+            set
+            {
+                _anv011 = value;
+            }
+            get
+            {
+                return _anv011;
+            }
+        }
+        /// <summary>
+        /// 计件开始时间
+        /// </summary>
+        public DateTime? ANV013
+        {
+            get
+            {
+                return _anv013;
+            }
+
+            set
+            {
+                _anv013 = value;
+            }
+        }
+        /// <summary>
+        /// 计件结束时间
+        /// </summary>
+        public DateTime? ANV014
+        {
+            get
+            {
+                return _anv014;
+            }
+
+            set
+            {
+                _anv014 = value;
+            }
+        }
+        /// <summary>
+        /// 计件工时
+        /// </summary>
+        public decimal? ANV015
+        {
+            get
+            {
+                return _anv015;
+            }
+
+            set
+            {
+                _anv015 = value;
+            }
+        }
+        /// <summary>
+        /// 小时工资
+        /// </summary>
+        public decimal? ANV016
+        {
+            get
+            {
+                return _anv016;
+            }
+
+            set
+            {
+                _anv016 = value;
             }
         }
     }

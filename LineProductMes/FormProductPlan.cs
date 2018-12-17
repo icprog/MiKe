@@ -26,7 +26,7 @@ namespace LineProductMes
         string state=string.Empty,focuseName=string.Empty;
         bool result=false,check=false;
         
-        public FormProductPlan ( DataRow row )
+        public FormProductPlan ( /*DataRow rowedit*/ )
         {
             InitializeComponent ( );
 
@@ -34,7 +34,7 @@ namespace LineProductMes
             _body = new LineProductMesEntityu . ProductPlanBodyEntity ( );
             _bll = new LineProductMesBll . Bll . ProductPlanBll ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolCancellation, toolExport ,toolPrint ,toolExamin ,toolDelete } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolExport ,toolPrint } );
 
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
             GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
@@ -48,23 +48,30 @@ namespace LineProductMes
 
             dtTime = LineProductMesBll . UserInfoMation . sysTime;
 
-            if ( row != null )
-            {
-                this . rows = row;
-            }
+            toolCancellation . Caption = "生成ERP计划";
+            layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+            layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+
+            //if ( rowedit != null )
+            //{
+            //    this . rows = rowedit;
+            //}
         }
 
         private void FormProductPlan_Load ( object sender ,EventArgs e )
         {
-            if ( rows != null )
-            {
-                controlEnable ( );
-                editTool ( );
-                state = "edit";
-                _body . PRE004 = rows [ "主件品号" ] . ToString ( );
-                tableView = _bll . getTableViewFor ( _body . PRE004 );
-                gridControl1 . DataSource = tableView;
-            }
+            //if ( rows != null )
+            //{
+            //    controlEnable ( );
+            //    editTool ( );
+            //    state = "edit";
+            //    _body . PRE004 = rows [ "主件品号" ] . ToString ( );
+            //    tableView = _bll . getTableViewFor ( _body . PRE004 );
+            //    gridControl1 . DataSource = tableView;
+            //    gridView1 . OptionsBehavior . Editable = false;
+            //    layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+            //    //ReaderOrder . Visible =
+            //}
         }
 
         #region Main
@@ -82,6 +89,34 @@ namespace LineProductMes
                 gridControl1 . DataSource = tableView;
 
                 QueryTool ( );
+                toolDelete . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+
+                if ( _header . PRD003 == true )
+                {
+                    toolExamin . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
+                    toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+                    toolEdit . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
+                    toolDelete . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
+
+                    layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+
+                    layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
+                    Graph . grPic ( pictureEdit1 ,"审核" );
+                }
+                else
+                {
+                    toolExamin . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+                    toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
+                    toolEdit . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+                    toolDelete . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+
+                    layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
+
+                    layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+                    Graph . grPic ( pictureEdit1 ,"反审核" );
+                }
+
+                gridView1 . OptionsBehavior . Editable = false;
             }
 
             return base . Query ( );
@@ -96,6 +131,7 @@ namespace LineProductMes
             tableView = _bll . getTableView ( "1=2" );
             gridControl1 . DataSource = tableView;
             addTool ( );
+            layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
 
             return base . Add ( );
         }
@@ -115,6 +151,18 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "单号不可为空" );
                 return 0;
             }
+            result = false;
+            foreach ( DataRow row in tableView . Rows )
+            {
+                string pre012 = row [ "PRE012" ] . ToString ( );
+                if ( !string . IsNullOrEmpty ( row [ "PRE012" ] . ToString ( ) ) )
+                    result = true;
+            }
+            if ( result )
+            {
+                XtraMessageBox . Show ( "已经生成ERP计划,不允许删除" );
+                return 0;
+            }
             result = _bll . Delete ( txtPRD001 . Text ,tableView );
             if ( result )
             {
@@ -125,7 +173,7 @@ namespace LineProductMes
             }
             else
                 XtraMessageBox . Show ( "删除失败" );
-
+            
             return base . Delete ( );
         }
         protected override int Save ( )
@@ -143,10 +191,13 @@ namespace LineProductMes
         }
         protected override int Cancel ( )
         {
-            _bll . Cancel ( tableView );
-            this . DialogResult = DialogResult . Cancel;
+            cancelTool ( state );
 
-            //controlUnEnable ( );
+            //_bll . Cancel ( tableView );
+            //this . DialogResult = DialogResult . Cancel;
+
+            controlUnEnable ( );
+            toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
             //cancelTool ( state );
             //if ( state . Equals ( "add" ) )
             //    controlClear ( );
@@ -162,31 +213,35 @@ namespace LineProductMes
             }
             state = "";
             state = toolExamin . Caption;
-            if ( toolExamin . Caption . Equals ( "弃用" ) )
-                _header . PRD003 = false;
-            else
+            if ( state . Equals ( "审核" ) )
                 _header . PRD003 = true;
-            result = _bll . Examine ( _header . PRD001 ,_header . PRD003 == true ? 1 : 0 );
+            else
+                _header . PRD003 = false;
+
+            result = _bll . Examine ( _header ,tableView );
             if ( result )
             {
                 XtraMessageBox . Show ( "已" + state );
-                if ( state . Equals ( "弃用" ) )
+                if ( state . Equals ( "审核" ) )
                 {
+                    examineTool ( state );
+
                     layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicSMIN ( pictureEdit1 ,state );
-                    toolExamin . Caption = "启用";
-                    toolVisibleFalse ( );
+                    Graph . grPic ( pictureEdit1 ,state );
+                    toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+                    toolExamin . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
+                    layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
                 }
-                else
-                {
-                    layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
-                    Graph . grPicSMIN ( pictureEdit1 ,"反" );
-                    toolExamin . Caption = "弃用";
-                    toolVisibleTrue ( );
-                }
+                //else
+                //{
+                //    toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
+                //    layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+                //    Graph . grPic ( pictureEdit1 ,"反" );
+                //}
+
             }
             else
-                XtraMessageBox . Show ( "已" + state );
+                XtraMessageBox . Show ( state + "失败" );
 
             return base . Examine ( );
         }
@@ -195,24 +250,26 @@ namespace LineProductMes
             if ( copy ( ) == false )
                 return 0;
 
-            result = _bll . Copy ( tableView ,_header . PRD001 );
-            if ( result )
-            {
-                XtraMessageBox . Show ( "成功复制" );
+            //result = _bll . Copy ( tableView ,_header . PRD001 );
+            //if ( result )
+            //{
+            //    XtraMessageBox . Show ( "成功复制" );
 
-                _header . PRD001 = LineProductMesBll . UserInfoMation . oddNum;
-                _header = _bll . getModel ( _header . PRD001 );
+            //    _header . PRD001 = LineProductMesBll . UserInfoMation . oddNum;
+            //    _header = _bll . getModel ( _header . PRD001 );
 
-                setValue ( );
-                tableView = _bll . getTableView ( _header . PRD001 );
-                gridControl1 . DataSource = tableView;
-                QueryTool ( );
-                addTool ( );
-                state = "eidt";
-                controlEnable ( );
-            }
-            else
-                XtraMessageBox . Show ( "复制失败" );
+            //    setValue ( );
+            //    tableView = _bll . getTableView ( _header . PRD001 );
+            //    gridControl1 . DataSource = tableView;
+            //    QueryTool ( );
+            //    addTool ( );
+            //    state = "eidt";
+            //    controlEnable ( );
+            //}
+            //else
+            //    XtraMessageBox . Show ( "复制失败" );
+
+            btnGener_Click ( null ,null );
 
             return base . Cancellation ( );
         }
@@ -309,7 +366,11 @@ namespace LineProductMes
                 {
                     XtraMessageBox . Show ( "成功保存" );
                      ClassForMain.FormClosingState.formClost = true;
-                    this . DialogResult = DialogResult . OK;
+                    saveTool ( );
+                    toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
+                    layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+                    controlUnEnable ( );
+                    //this . DialogResult = DialogResult . OK;
                     //saveTool ( );
                     //toolExamin . Caption = "弃用";
                     //toolCancellation . Caption = "复制";
@@ -371,44 +432,36 @@ namespace LineProductMes
             //check = false;
             focuePrevious = e . RowHandle;
         }
-      
         private void gridView1_MouseEnter ( object sender ,EventArgs e )
         {
-            //if ( check == false )
+            //int focueHandel = gridView1 . FocusedRowHandle;
+
+            //if ( focueHandel != focuePrevious )
             //{
+            //    row = gridView1 . GetFocusedDataRow ( );
+            //    if ( row == null )
+            //        return;
+            //    if ( row [ "PRE008" ] == null || row [ "PRE008" ] . ToString ( ) == string . Empty )
+            //        return;
+            //    if ( row [ "PRE005" ] == null || row [ "PRE005" ] . ToString ( ) == string . Empty )
+            //        return;
+            //    if ( row [ "PRE005" ] != null && row [ "PRE005" ] . ToString ( ) != string . Empty )
+            //    {
+            //        _body . PRE005 = Convert . ToDateTime ( row [ "PRE005" ] );
+            //        if ( ( _body . PRE005 - dtTime ) . Value . Days < 0 )
+            //            return;
+            //    }
 
-            int focueHandel = gridView1 . FocusedRowHandle;
+            //    int pre = string . IsNullOrEmpty ( row [ "PRE" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE" ] );
+            //    _body . PRE008 = string . IsNullOrEmpty ( row [ "PRE008" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE008" ] );
 
-            if ( focueHandel != focuePrevious )
-            {
-                row = gridView1 . GetFocusedDataRow ( );
-                if ( row == null )
-                    return;
-                if ( row [ "PRE008" ] == null || row [ "PRE008" ] . ToString ( ) == string . Empty )
-                    return;
-                if ( row [ "PRE005" ] == null || row [ "PRE005" ] . ToString ( ) == string . Empty )
-                    return;
-                if ( row [ "PRE005" ] != null && row [ "PRE005" ] . ToString ( ) != string . Empty )
-                {
-                    _body . PRE005 = Convert . ToDateTime ( row [ "PRE005" ] );
-                    if ( ( _body . PRE005 - dtTime ) . Value . Days < 0 )
-                        return;
-                }
+            //    gridView1 . CloseEditor ( );
+            //    gridView1 . UpdateCurrentRow ( );
 
-
-                int pre = string . IsNullOrEmpty ( row [ "PRE" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE" ] );
-                _body . PRE008 = string . IsNullOrEmpty ( row [ "PRE008" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PRE008" ] );
-
-
-                gridView1 . CloseEditor ( );
-                gridView1 . UpdateCurrentRow ( );
-
-
-                object query = tableView . Compute ( "sum(PRE008)" ,"PRE002='" + row [ "PRE002" ] + "' AND PRE004='" + row [ "PRE004" ] + "'" );
-                _body . PRE010 = string . IsNullOrEmpty ( query . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( query );
-                row [ "PRE008" ] = pre - _body . PRE010 + _body . PRE008;
-                focuePrevious = focueHandel;
-            }
+            //    object query = tableView . Compute ( "sum(PRE008)" ,"PRE002='" + row [ "PRE002" ] + "' AND PRE004='" + row [ "PRE004" ] + "'" );
+            //    _body . PRE010 = string . IsNullOrEmpty ( query . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( query );
+            //    row [ "PRE008" ] = pre - _body . PRE010 + _body . PRE008;
+            //    focuePrevious = focueHandel;
             //}
         }
         //生成ERP计划
@@ -462,63 +515,67 @@ namespace LineProductMes
         //复制一行
         private void contextMenuStrip1_ItemClicked ( object sender ,ToolStripItemClickedEventArgs e )
         {
-            if ( e . ClickedItem . Name == "ItemOne" )
-            {
-                if ( rowes == null )
-                {
-                    XtraMessageBox . Show ( "请选择需要复制的行" );
-                    return;
-                }
+            //if ( e . ClickedItem . Name == "ItemOne" )
+            //{
+            //    if ( rowes == null )
+            //    {
+            //        XtraMessageBox . Show ( "请选择需要复制的行" );
+            //        return;
+            //    }
 
-                _body . PRE001 = rowes [ "PRE001" ] . ToString ( );
-                _body . PRE002 = rowes [ "PRE002" ] . ToString ( );
-                _body . PRE003 = rowes [ "PRE003" ] . ToString ( );
-                _body . PRE004 = rowes [ "PRE004" ] . ToString ( );
-                if ( rowes [ "PRE005" ] == null )
-                    _body . PRE005 = null;
-                else
-                    _body . PRE005 = Convert . ToDateTime ( rowes [ "PRE005" ] . ToString ( ) );
-                if ( rowes [ "PRE006" ] == null )
-                    _body . PRE006 = null;
-                else
-                    _body . PRE006 = Convert . ToDateTime ( rowes [ "PRE006" ] . ToString ( ) );
-                if ( rowes [ "PRE007" ] == null )
-                    _body . PRE007 = null;
-                else
-                    _body . PRE007 = Convert . ToInt32 ( rowes [ "PRE007" ] . ToString ( ) );
-                if ( rowes [ "PRE008" ] == null )
-                    _body . PRE008 = null;
-                else
-                    _body . PRE008 = Convert . ToInt32 ( rowes [ "PRE008" ] . ToString ( ) );
-                if ( rowes [ "PRE009" ] == null )
-                    _body . PRE009 = null;
-                else
-                    _body . PRE009 = Convert . ToInt32 ( rowes [ "PRE009" ] . ToString ( ) );
-                if ( rowes [ "PRE010" ] == null )
-                    _body . PRE010 = null;
-                else
-                    _body . PRE010 = Convert . ToInt32 ( rowes [ "PRE010" ] . ToString ( ) );
+            //    _body . PRE001 = rowes [ "PRE001" ] . ToString ( );
+            //    _body . PRE002 = rowes [ "PRE002" ] . ToString ( );
+            //    _body . PRE003 = rowes [ "PRE003" ] . ToString ( );
+            //    _body . PRE004 = rowes [ "PRE004" ] . ToString ( );
+            //    if ( rowes [ "PRE005" ] == null )
+            //        _body . PRE005 = null;
+            //    else
+            //        _body . PRE005 = Convert . ToDateTime ( rowes [ "PRE005" ] . ToString ( ) );
+            //    if ( rowes [ "PRE006" ] == null )
+            //        _body . PRE006 = null;
+            //    else
+            //        _body . PRE006 = Convert . ToDateTime ( rowes [ "PRE006" ] . ToString ( ) );
+            //    if ( rowes [ "PRE007" ] == null )
+            //        _body . PRE007 = null;
+            //    else
+            //        _body . PRE007 = Convert . ToInt32 ( rowes [ "PRE007" ] . ToString ( ) );
+            //    if ( rowes [ "PRE008" ] == null )
+            //        _body . PRE008 = null;
+            //    else
+            //        _body . PRE008 = Convert . ToInt32 ( rowes [ "PRE008" ] . ToString ( ) );
+            //    if ( rowes [ "PRE009" ] == null || rowes [ "PRE009" ].ToString() == string.Empty )
+            //        _body . PRE009 = null;
+            //    else
+            //        _body . PRE009 = Convert . ToInt32 ( rowes [ "PRE009" ] . ToString ( ) );
+            //    if ( rowes [ "PRE010" ] == null )
+            //        _body . PRE010 = null;
+            //    else
+            //        _body . PRE010 = Convert . ToInt32 ( rowes [ "PRE010" ] . ToString ( ) );
 
-                object obj = tableView . Compute ( "MAX(PRE005)" ,"PRE002='" + _body . PRE002 + "' AND PRE003='" + _body . PRE003 + "' AND PRE004='" + _body . PRE004 + "'" );
-                if ( obj != null )
-                {
-                    _body . PRE005 = Convert . ToDateTime ( obj ) . AddDays ( 1 );
-                    DataRow row = tableView . NewRow ( );
-                    row [ "PRE001" ] = _body . PRE001;
-                    row [ "PRE002" ] = _body . PRE002;
-                    row [ "PRE003" ] = _body . PRE003;
-                    row [ "PRE004" ] = _body . PRE004;
-                    row [ "PRE005" ] = _body . PRE005;
-                    row [ "PRE006" ] = _body . PRE006;
-                    row [ "PRE007" ] = _body . PRE007;
-                    row [ "PRE008" ] = _body . PRE008;
-                    row [ "PRE009" ] = _body . PRE009;
-                    row [ "PRE010" ] = _body . PRE010;
-                    row [ "PRE" ] = rowes [ "PRE" ];
-                    tableView . Rows . Add ( row );
-                }
-            }
-            else if ( e . ClickedItem . Name == "ItemTwo" )
+            //    object obj = tableView . Compute ( "MAX(PRE005)" ,"PRE002='" + _body . PRE002 + "' AND PRE003='" + _body . PRE003 + "' AND PRE004='" + _body . PRE004 + "'" );
+            //    if ( obj != null )
+            //    {
+            //        _body . PRE005 = Convert . ToDateTime ( obj ) . AddDays ( 1 );
+            //        DataRow row = tableView . NewRow ( );
+            //        row [ "PRE001" ] = _body . PRE001;
+            //        row [ "PRE002" ] = _body . PRE002;
+            //        row [ "PRE003" ] = _body . PRE003;
+            //        row [ "PRE004" ] = _body . PRE004;
+            //        row [ "PRE005" ] = _body . PRE005;
+            //        row [ "PRE006" ] = _body . PRE006;
+            //        row [ "PRE007" ] = _body . PRE007;
+            //        row [ "PRE008" ] = _body . PRE008;
+            //        if ( _body . PRE009 == null )
+            //            row [ "PRE009" ] = DBNull . Value;
+            //        else
+            //            row [ "PRE009" ] = _body . PRE009;
+            //       row [ "PRE010" ] = _body . PRE010;
+            //        row [ "PRE" ] = rowes [ "PRE" ];
+            //        tableView . Rows . Add ( row );
+            //    }
+            //}
+            //            else 
+            if ( e . ClickedItem . Name == "ItemTwo" )
             {
                 CopyUtils . copyResult ( gridView1 ,focuseName );
             }
@@ -561,7 +618,7 @@ namespace LineProductMes
         //    base . OnClosing ( e );
         //}
         #endregion
-
+        
         #region Method
         void controlUnEnable ( )
         {
@@ -577,7 +634,7 @@ namespace LineProductMes
         {
             txtPRD001 . Text = txtPRD002 . Text = string . Empty;
             gridControl1 . DataSource = null;
-            layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+            //layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             wait . Hide ( );
         }
         void orderArray ( DataTable table )
@@ -676,7 +733,7 @@ namespace LineProductMes
                             p2 = p . Field<string> ( "PRE003" ) ,
                             p3 = p . Field<string> ( "PRE004" ) ,
                             P4 = p . Field<int> ( "PRE007" ),
-                            P5 = p . Field<int> ( "PRE" )
+                            P5 = p . Field<int?> ( "PRE" )==null?0: p . Field<int> ( "PRE" )
                         } into m
                         let sum = m . Sum ( t => t . Field<int> ( "PRE008" ) )
                         let sum1 = m . Sum ( t => t . Field<int?> ( "PRE011" ) == null ? 0 : t . Field<int> ( "PRE011" ) )
@@ -884,20 +941,20 @@ namespace LineProductMes
         {
             txtPRD001 . Text = _header . PRD001;
             txtPRD002 . Text = Convert . ToDateTime ( _header . PRD002 ) . ToString ( "yyyy-MM-dd" );
-            layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
-            Graph . grPicSMIN ( pictureEdit1 ,"反" );
-            if ( _header . PRD003 )
-            {
-                layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicSMIN ( pictureEdit1 ,"弃用" );
-                toolExamin . Caption = "启用";
-                toolVisibleFalse ( );
-            }
-            else
-            {
-                toolExamin . Caption = "弃用";
-                toolVisibleTrue ( );
-            }
+            //layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+            //Graph . grPicSMIN ( pictureEdit1 ,"反" );
+            //if ( _header . PRD003 )
+            //{
+            //    //layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
+            //    //Graph . grPicSMIN ( pictureEdit1 ,"弃用" );
+            //    //toolExamin . Caption = "启用";
+            //    toolVisibleFalse ( );
+            //}
+            //else
+            //{
+            //    //toolExamin . Caption = "弃用";
+            //    toolVisibleTrue ( );
+            //}
         }
         void toolVisibleTrue ( )
         {

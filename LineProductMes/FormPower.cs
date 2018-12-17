@@ -29,7 +29,7 @@ namespace LineProductMes
             _bll = new LineProductMesBll . Bll . PowerBll ( );
             _model = new LineProductMesEntityu . PowerEntity ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolExport ,toolPrint ,toolCancellation ,toolExamin } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolExport ,toolPrint ,toolCancellation ,toolExamin } );
             
             lookUpEdit1 . Properties . DataSource = _bll . GetPerson ( );
             lookUpEdit1 . Properties . DisplayMember = "EMP002";

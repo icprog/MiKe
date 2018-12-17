@@ -301,6 +301,7 @@ namespace LineProductMesBll . Dao
         {
             Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
             model . IJA001 = getOddNum ( );
+            model . IJA014 = UserInfoMation . userName;
             AddHeader ( SQLString ,model );
             UserInfoMation . oddNum = model . IJA001;
 
@@ -539,9 +540,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKIJA(" );
-            strSql . Append ( "IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013)" );
+            strSql . Append ( "IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA014)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@IJA001,@IJA002,@IJA003,@IJA004,@IJA005,@IJA006,@IJA007,@IJA008,@IJA009,@IJA010,@IJA011,@IJA012,@IJA013)" );
+            strSql . Append ( "@IJA001,@IJA002,@IJA003,@IJA004,@IJA005,@IJA006,@IJA007,@IJA008,@IJA009,@IJA010,@IJA011,@IJA012,@IJA013,@IJA014)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJA001", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJA002", SqlDbType.NVarChar,5),
@@ -555,7 +556,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJA010", SqlDbType.Bit,1),
                     new SqlParameter("@IJA011", SqlDbType.Bit,1),
                     new SqlParameter("@IJA012", SqlDbType.Decimal),
-                    new SqlParameter("@IJA013", SqlDbType.Decimal)
+                    new SqlParameter("@IJA013", SqlDbType.Decimal),
+                    new SqlParameter("@IJA014", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . IJA001;
             parameters [ 1 ] . Value = model . IJA002;
@@ -570,6 +572,7 @@ namespace LineProductMesBll . Dao
             parameters [ 10 ] . Value = model . IJA011;
             parameters [ 11 ] . Value = model . IJA012;
             parameters [ 12 ] . Value = model . IJA013;
+            parameters [ 13 ] . Value = model . IJA014;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyOneEntity model )
@@ -948,7 +951,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintOne ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJA001 ANW001,IJA004 ANW011,IJA006 ANW013,IJA007 ANW022,GETDATE() dat FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT IJA001 ANW001,IJA004 ANW011,IJA006 ANW013,IJA007 ANW022,GETDATE() dat,IJA014 ANW025 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

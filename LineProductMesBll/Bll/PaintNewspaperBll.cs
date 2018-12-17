@@ -191,6 +191,11 @@ namespace LineProductMesBll . Bll
             return dal . getTableArt ( piNum );
         }
 
+        public DataTable getTableArtForAll ( string piNum )
+        {
+            return dal . getTableArtForAll ( piNum );
+        }
+
         /// <summary>
         /// 获取工艺信息数据
         /// </summary>

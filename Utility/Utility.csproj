@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesEncryptUtil.cs" />
+    <Compile Include="DrawsHelper.cs" />
     <Compile Include="GridViewMoHuSelect.cs" />
     <Compile Include="IniUtil.cs" />
     <Compile Include="LogHelper.cs" />

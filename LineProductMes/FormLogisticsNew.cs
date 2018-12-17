@@ -37,7 +37,7 @@ namespace LineProductMes
             _bodyOne = new LineProductMesEntityu . LogisticsNewBodyOneEntity ( );
             _bodyTwo = new LineProductMesEntityu . LogisticsNewBodyTwoEntity ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolExport ,toolPrint } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolExport ,toolPrint } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View1 ,View2 } );
@@ -73,7 +73,8 @@ namespace LineProductMes
                 if ( _model . LGN003 )
                 {
                     layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicW ( pictureEdit1 ,"审 核" );
+                    //Graph . grPicW ( pictureEdit1 ,"审 核" );
+                    Graph . grPic ( pictureEdit1 ,"审核" );
                     examineTool ( "审核" );
                 }
                 else
@@ -81,7 +82,8 @@ namespace LineProductMes
                 if ( _model . LGN004 )
                 {
                     layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicW ( pictureEdit1 ,"注 销" );
+                    //Graph . grPicW ( pictureEdit1 ,"注 销" );
+                    Graph . grPic ( pictureEdit1 ,"注销" );
                     cancelltionTool ( "注销" );
                 }
                 else
@@ -198,7 +200,8 @@ namespace LineProductMes
                 if ( state . Equals ( "审核" ) )
                 {
                     layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicW ( pictureEdit1 ,"审 核" );
+                    //Graph . grPicW ( pictureEdit1 ,"审核" );
+                    Graph . grPic ( pictureEdit1 ,"审核" );
                 }
                 else
                 {
@@ -231,7 +234,8 @@ namespace LineProductMes
                 if ( state . Equals ( "注销" ) )
                 {
                     layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicW ( pictureEdit1 ,"注 销" );
+                    //Graph . grPicW ( pictureEdit1 ,"注 销" );
+                    Graph . grPic ( pictureEdit1 ,"注销" );
                 }
                 else
                 {
@@ -305,13 +309,22 @@ namespace LineProductMes
             {
                 setSalary ( );
             }
+            else if ( e . Column . FieldName == "LOG007" )
+            {
+                DataRow row = gridView1 . GetFocusedDataRow ( );
+                if ( e . Value != null && e . Value . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . Value ) < 2 || Convert . ToDecimal ( e . Value ) > 5 )
+                        row [ "LOG007" ] = DBNull . Value;
+                }
+            }
         }
         private void bandedGridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
             DataRow row = bandedGridView1 . GetFocusedDataRow ( );
             if ( row == null )
                 return;
-            if ( e . Column . FieldName == "LGP002" || e . Column . FieldName == "LGP003" || e . Column . FieldName == "LGP004" || e . Column . FieldName == "LGP006" || e . Column . FieldName == "LGP014" )
+            if ( e . Column . FieldName == "LGP002" || e . Column . FieldName == "LGP003" || e . Column . FieldName == "LGP004" || e . Column . FieldName == "LGP006" /*|| e . Column . FieldName == "LGP014"*/ )
             {
                 if ( txtLGN007 . Text . Equals ( "计件" ) )
                 {
@@ -415,6 +428,33 @@ namespace LineProductMes
             }
             else if ( e . Column . FieldName == "LGP014" )
             {
+                //lgp011
+                int selectIndex = bandedGridView1 . FocusedRowHandle;
+                string lgp014Result = bandedGridView1 . GetDataRow ( selectIndex ) [ "LGP014" ] . ToString ( );
+
+                if ( string . IsNullOrEmpty ( lgp014Result ) )
+                    _bodyTwo . LGP014 = 0;
+                else
+                    _bodyTwo . LGP014 = Convert . ToDecimal ( lgp014Result );
+
+                for ( int i = selectIndex ; i < tableViewTwo . Rows . Count ; i++ )
+                {
+                    row = tableViewTwo . Rows [ i ];
+                    if ( row [ "LGP011" ] != null && row [ "LGP011" ] . ToString ( ) != string . Empty )
+                    {
+                        row . BeginEdit ( );
+                        row [ "LGP014" ] = _bodyTwo . LGP014;
+                        row . EndEdit ( );
+                    }
+                    if ( i == selectIndex && ( row [ "LGP011" ] == null || row [ "LGP011" ] . ToString ( ) == string . Empty ) )
+                    {
+                        row . BeginEdit ( );
+                        row [ "LGP014" ] = DBNull . Value;
+                        row . EndEdit ( );
+                    }
+                }
+                gridControl2 . Refresh ( );
+
                 setSalary ( );
             }
         }
@@ -459,7 +499,7 @@ namespace LineProductMes
                     rows [ "LOG004" ] = row [ "KEB003" ];
                     rows [ "LOG005" ] = row [ "KEB004" ];
                     rows [ "LOG006" ] = row [ "KEB007" ];
-                    rows [ "LOG007" ] = row [ "KEB010" ];
+                    //rows [ "LOG007" ] = row [ "KEB010" ];
                     rows [ "LOG009" ] = row [ "ARS011" ];
                     tableViewOne . Rows . Add ( rows );
                 }
@@ -470,7 +510,7 @@ namespace LineProductMes
                     rows [ "LOG004" ] = row [ "KEB003" ];
                     rows [ "LOG005" ] = row [ "KEB004" ];
                     rows [ "LOG006" ] = row [ "KEB007" ];
-                    rows [ "LOG007" ] = row [ "KEB010" ];
+                    //rows [ "LOG007" ] = row [ "KEB010" ];
                     rows [ "LOG009" ] = row [ "ARS011" ];
                 }
                 gridControl2 . RefreshDataSource ( );
@@ -776,10 +816,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "LGP012" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -796,10 +836,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "LGP011" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -815,13 +855,18 @@ namespace LineProductMes
             gridView1 . UpdateCurrentRow ( );
 
             decimal numFor = 0M, totalTime = 0, userTime = 0;
-            if ( tableViewOne != null && tableViewOne . Rows . Count > 0 )
+
+            if ( "计件" . Equals ( txtLGN007 . Text ) )
             {
-                foreach ( DataRow row in tableViewOne . Rows )
+                if ( tableViewOne != null && tableViewOne . Rows . Count > 0 )
                 {
-                    numFor += ( string . IsNullOrEmpty ( row [ "LOG007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LOG007" ] . ToString ( ) ) ) * ( string . IsNullOrEmpty ( row [ "LOG008" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LOG008" ] . ToString ( ) ) ) * ( string . IsNullOrEmpty ( row [ "LOG009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LOG009" ] . ToString ( ) ) );
+                    foreach ( DataRow row in tableViewOne . Rows )
+                    {
+                        numFor += ( string . IsNullOrEmpty ( row [ "LOG007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LOG007" ] . ToString ( ) ) ) * ( string . IsNullOrEmpty ( row [ "LOG008" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LOG008" ] . ToString ( ) ) ) * ( string . IsNullOrEmpty ( row [ "LOG009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LOG009" ] . ToString ( ) ) );
+                    }
                 }
             }
+
             numFor += ( U1 . SummaryItem . SummaryValue == null ? 0 : Convert . ToDecimal ( U1 . SummaryItem . SummaryValue ) );
             totalTime = ( U0 . SummaryItem . SummaryValue == null ? 0 : Convert . ToDecimal ( U0 . SummaryItem . SummaryValue ) );
             foreach ( DataRow row in tableViewTwo . Rows )

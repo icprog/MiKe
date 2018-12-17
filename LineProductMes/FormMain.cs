@@ -17,12 +17,20 @@ using LineProductMes.ClassForMain;
 
 namespace LineProductMes
 {
-    public partial class FormMain : RibbonForm
+    public partial class FormMain :RibbonForm
     {
         protected static DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel=new DevExpress.LookAndFeel.DefaultLookAndFeel();
         LineProductMesBll.Bll.MainBll _bll=null;
         //List<string> mdiChildForm=null;
         string proId=string.Empty,idPro = string . Empty;
+
+        UIControl . Main . ALLControl control;
+        UIControl . Main . ERPControl erpCon;
+        UIControl . Main . BaseControl baseCon;
+        UIControl . Main . PlanControl planCon;
+        UIControl . Main . WorkControl workCon;
+        UIControl . Main . BoardControl boardCon;
+        UIControl . Main . ReportControl reportCon;
 
         public FormMain ( )
         {
@@ -50,7 +58,8 @@ namespace LineProductMes
                 from . Show ( );
 
                 this . WindowState = FormWindowState . Minimized;
-            } else if ( UserInfoMation . userName . Equals ( "五金看板" ) )
+            }
+            else if ( UserInfoMation . userName . Equals ( "五金看板" ) )
             {
                 FormHardBoard from = new FormHardBoard ( );
                 from . WindowState = FormWindowState . Maximized;
@@ -104,8 +113,10 @@ namespace LineProductMes
 
                 this . WindowState = FormWindowState . Minimized;
             }
+
+            addControl ( );
         }
-        
+
         #region Method
         protected void Login ( )
         {
@@ -118,7 +129,7 @@ namespace LineProductMes
                 this . Show ( );
                 this . BringToFront ( );
                 this . barUserInfo . Caption = barUserInfo . Caption + UserInfoMation . userName;
-                this . barLoginTime . Caption = barLoginTime . Caption + UserInfoMation . sysTime . ToString ( "yyyy/MM/dd hh:mm" );
+                this . barLoginTime . Caption = barLoginTime . Caption + UserInfoMation . sysTime . ToString ( "yyyy/MM/dd hh:mm" ) + "  " + UserInfoMation . DataBase;
 
                 ShowMenuByUser ( );
             }
@@ -139,7 +150,7 @@ namespace LineProductMes
                 this . Invoke ( new AsynUpdateUIBase ( delegate ( )
                 {
                     treeList1 . DataSource = getModel;
-                    findAllBtn ( );
+                    //findAllBtn ( );
                 } ) );
             }
         }
@@ -152,26 +163,166 @@ namespace LineProductMes
         {
             LineProductMesBll . UserInfoMation . PowList = _bll . getPowerList ( );
         }
-        void findAllBtn ( )
+        #endregion
+
+        #region Control
+        void addControl ( )
         {
-            foreach ( Control ct in groupControl1 . Controls )
+            control = new UIControl . Main . ALLControl ( );
+            this . Controls . Add ( control );
+            control . Dock = DockStyle . Fill;
+            control . button1 . Click += Button1_Click;
+            control . button2 . Click += Button2_Click;
+            control . button3 . Click += Button3_Click;
+            control . button4 . Click += Button4_Click;
+            control . button5 . Click += Button5_Click;
+            control . button6 . Click += Button6_Click;
+        }
+        private void Button1_Click ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( control );
+            addERPControl ( );
+        }
+        private void Button2_Click ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( control );
+            addBaseControl ( );
+        }
+        private void Button3_Click ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( control );
+            addPlanControl ( );
+        }
+        private void Button4_Click ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( control );
+            addWorkControl ( );
+        }
+        private void Button5_Click ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( control );
+            addBoardCon ( );
+        }
+        private void Button6_Click ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( control );
+            addReportCon ( );
+        }
+        void addERPControl ( )
+        {
+            erpCon = new UIControl . Main . ERPControl ( );
+            this . Controls . Add ( erpCon );
+            erpCon . Dock = DockStyle . Fill;
+            erpCon . roundButton1 . Click += RoundButton1_Click;
+            findAllBtn ( erpCon );
+        }
+        private void RoundButton1_Click ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( erpCon );
+            addControl ( );
+        }
+        void addBaseControl ( )
+        {
+            baseCon = new UIControl . Main . BaseControl ( );
+            this . Controls . Add ( baseCon );
+            baseCon . Dock = DockStyle . Fill;
+            baseCon . roundButton1 . Click += RoundButton1_Click1;
+            baseCon . button1 . Click += btnUser_Click;
+            baseCon . button3 . Click += btnArt_Click;
+            baseCon . button5 . Click += btnMac_Click;
+            baseCon . button4 . Click += btnMould_Click;
+            baseCon . button6 . Click += btnSuMod_Click;
+            findAllBtn ( baseCon );
+        }
+        private void RoundButton1_Click1 ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( baseCon );
+            addControl ( );
+        }
+        void addPlanControl ( )
+        {
+            planCon = new UIControl . Main . PlanControl ( );
+            this . Controls . Add ( planCon );
+            planCon . Dock = DockStyle . Fill;
+            planCon . roundButton1 . Click += RoundButton1_Click2;
+            planCon . button1 . Click += btnPlan_Click;
+            planCon . button2 . Click += btnSiPlan_Click;
+            planCon . button3 . Click += btnPur_Click;
+            findAllBtn ( planCon );
+        }
+        private void RoundButton1_Click2 ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( planCon );
+            addControl ( );
+        }
+        void addWorkControl ( )
+        {
+            workCon = new UIControl . Main . WorkControl ( );
+            this . Controls . Add ( workCon );
+            workCon . Dock = DockStyle . Fill;
+            workCon . roundButton1 . Click += RoundButton1_Click3;
+            workCon . button1 . Click += btnHar_Click;
+            workCon . button2 . Click += btnInj_Click;
+            workCon . button3 . Click += btnPai_Click;
+            workCon . button4 . Click += btnAss_Click;
+            workCon . button5 . Click += btnNew_Click;
+            workCon . button6 . Click += btnLog_Click;
+            workCon . button7 . Click += btnLEG_Click;
+            workCon . button8 . Click += btnLED_Click;
+            findAllBtn ( workCon );
+        }
+        private void RoundButton1_Click3 ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( workCon );
+            addControl ( );
+        }
+        void addBoardCon ( )
+        {
+            boardCon = new UIControl . Main . BoardControl ( );
+            this . Controls . Add ( boardCon );
+            boardCon . Dock = DockStyle . Fill;
+            boardCon . roundButton1 . Click += RoundButton1_Click4;
+            boardCon . button1 . Click += btnHardBoard_Click;
+            boardCon . button2 . Click += btnInjectionBoard_Click;
+            boardCon . button3 . Click += btnPaintBoard_Click;
+            boardCon . button4 . Click += btnLEGBoard_Click;
+            boardCon . button5 . Click += btnAssBoard_Click;
+            boardCon . button6 . Click += btnPurchaseBoard_Click;
+            findAllBtn ( boardCon );
+        }
+        private void RoundButton1_Click4 ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( boardCon );
+            addControl ( );
+        }
+        void addReportCon ( )
+        {
+            reportCon = new UIControl . Main . ReportControl ( );
+            this . Controls . Add ( reportCon );
+            reportCon . Dock = DockStyle . Fill;
+            reportCon . roundButton1 . Click += RoundButton1_Click5;
+            reportCon . button2 . Click += btnWages_Click;
+            findAllBtn ( reportCon );
+        }
+        private void RoundButton1_Click5 ( object sender ,EventArgs e )
+        {
+            this . Controls . Remove ( reportCon );
+            addControl ( );
+        }
+        void findAllBtn ( Control control )
+        {
+            foreach ( Control btn in control . Controls )
             {
-                if ( ct . GetType ( ) == typeof ( GroupControl ) )
+                if ( btn . GetType ( ) == typeof ( Button ) )
                 {
-                    foreach ( Control btn in ct . Controls )
+                    if ( btn . Tag != null )
                     {
-                        if ( btn . GetType ( ) == typeof ( SimpleButton ) )
+                        LineProductMesEntityu . MainEntity model = getModel . Find ( ( x ) =>
                         {
-                            if ( btn . Tag != null )
-                            {
-                                LineProductMesEntityu . MainEntity model = getModel . Find ( ( x ) =>
-                                {
-                                    return x . FOR003 == btn . Tag . ToString ( );
-                                } );
-                                if ( model == null )
-                                    btn . Enabled = false;
-                            }
-                        }
+                            return x . FOR003 == btn . Tag . ToString ( );
+                        } );
+                        if ( model == null )
+                            btn . Enabled = false;
                     }
                 }
             }
@@ -227,7 +378,7 @@ namespace LineProductMes
             node = treeList1 . FocusedNode;
             if ( treeList1 . Nodes . Count != 0 && node . Id >= 0 )
             {
-                idPro= proId = node . GetValue ( "FOR003" ) . ToString ( );
+                idPro = proId = node . GetValue ( "FOR003" ) . ToString ( );
 
                 openTheForm ( proId ,idPro );
             }
@@ -287,12 +438,12 @@ namespace LineProductMes
         private void xtraTabbedMdiManager1_PageRemoved ( object sender ,DevExpress . XtraTabbedMdi . MdiTabPageEventArgs e )
         {
             string formName = e . Page . MdiChild . Name;
-            if ( FormClosingState. mdiChildForm . Contains ( formName ) )
-                FormClosingState.mdiChildForm . Remove ( formName );
+            if ( FormClosingState . mdiChildForm . Contains ( formName ) )
+                FormClosingState . mdiChildForm . Remove ( formName );
         }
         protected override void OnClosing ( CancelEventArgs e )
         {
-            if ( FormClosingState. mdiChildForm . Count > 0 )
+            if ( FormClosingState . mdiChildForm . Count > 0 )
             {
                 if ( ClassForMain . FormClosingState . formClost == true )
                 {
@@ -381,16 +532,16 @@ namespace LineProductMes
             idPro = proId = "FormProductPlanPreview";
             openTheForm ( proId ,idPro );
         }
-        //半成品计划
+        //半成品计划一览表
         private void btnSiPlan_Click ( object sender ,EventArgs e )
         {
-            idPro = proId = "FormSemiProductPlan";
+            idPro = proId = "FormSemiPlanView";
             openTheForm ( proId ,idPro );
         }
-        //采购计划
+        //采购计划一览表
         private void btnPur_Click ( object sender ,EventArgs e )
         {
-            idPro = proId = "FormPurProductPlan";
+            idPro = proId = "FormPurProductView";
             openTheForm ( proId ,idPro );
         }
         //组装车间产线计划
@@ -500,6 +651,5 @@ namespace LineProductMes
         /* xtraTabbedMdiManager1 窗体
          * http://makaidong.com/ws1996/15953_552258.html
          */
-
     }
 }

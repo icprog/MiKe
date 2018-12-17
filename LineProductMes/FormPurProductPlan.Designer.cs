@@ -64,12 +64,12 @@
             this.SEP012});
             this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeList1.Location = new System.Drawing.Point(0, 26);
+            this.treeList1.Location = new System.Drawing.Point(0, 24);
             this.treeList1.Name = "treeList1";
             this.treeList1.OptionsBehavior.Editable = false;
             this.treeList1.OptionsBehavior.PopulateServiceColumns = true;
             this.treeList1.OptionsView.ShowAutoFilterRow = true;
-            this.treeList1.Size = new System.Drawing.Size(1237, 412);
+            this.treeList1.Size = new System.Drawing.Size(1237, 414);
             this.treeList1.TabIndex = 5;
             this.treeList1.CustomDrawNodeIndicator += new DevExpress.XtraTreeList.CustomDrawNodeIndicatorEventHandler(this.treeList1_CustomDrawNodeIndicator);
             // 

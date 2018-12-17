@@ -23,7 +23,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolCanecl ,toolExport ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit ,toolAdd ,toolQuery } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolCanecl ,toolExport ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit ,toolAdd ,toolQuery } );
             InitData ( );
         }
         private void FormBoarSet_Load ( object sender ,System . EventArgs e )

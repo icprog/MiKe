@@ -30,7 +30,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolCanecl ,toolSave  ,toolPrint ,toolExamin } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolCanecl ,toolSave  ,toolPrint ,toolExamin } );
 
             Query ( );
         }
@@ -135,10 +135,11 @@ namespace LineProductMes
 
             return base . Cancellation ( );
         }
-        protected override int Export ( )
+        protected override int ExportBase ( )
         {
             ViewExport . ExportToExcel ( this . Text ,this . gridControl1 );
-            return base . Export ( );
+
+            return base . ExportBase ( );
         }
         #endregion
 

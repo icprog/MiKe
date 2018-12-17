@@ -128,9 +128,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKEMP(" );
-            strSql . Append ( "EMP001,EMP002,EMP003,EMP004,EMP005,EMP006,EMP007,EMP008,EMP009,EMP010,EMP011,EMP012,EMP013,EMP014,EMP015,EMP016,EMP017,EMP018,EMP019,EMP020,EMP021,EMP022,EMP023,EMP024,EMP025,EMP026,EMP027,EMP028,EMP029,EMP030,EMP031,EMP032,EMP033,EMP034,EMP035,EMP036,EMP037)" );
+            strSql . Append ( "EMP001,EMP002,EMP003,EMP004,EMP005,EMP006,EMP007,EMP008,EMP009,EMP010,EMP011,EMP012,EMP013,EMP014,EMP015,EMP016,EMP017,EMP018,EMP019,EMP020,EMP021,EMP022,EMP023,EMP024,EMP025,EMP026,EMP027,EMP028,EMP029,EMP030,EMP031,EMP032,EMP033,EMP034,EMP035,EMP036,EMP037,EMP038)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@EMP001,@EMP002,@EMP003,@EMP004,@EMP005,@EMP006,@EMP007,@EMP008,@EMP009,@EMP010,@EMP011,@EMP012,@EMP013,@EMP014,@EMP015,@EMP016,@EMP017,@EMP018,@EMP019,@EMP020,@EMP021,@EMP022,@EMP023,@EMP024,@EMP025,@EMP026,@EMP027,@EMP028,@EMP029,@EMP030,@EMP031,@EMP032,@EMP033,@EMP034,@EMP035,@EMP036,@EMP037)" );
+            strSql . Append ( "@EMP001,@EMP002,@EMP003,@EMP004,@EMP005,@EMP006,@EMP007,@EMP008,@EMP009,@EMP010,@EMP011,@EMP012,@EMP013,@EMP014,@EMP015,@EMP016,@EMP017,@EMP018,@EMP019,@EMP020,@EMP021,@EMP022,@EMP023,@EMP024,@EMP025,@EMP026,@EMP027,@EMP028,@EMP029,@EMP030,@EMP031,@EMP032,@EMP033,@EMP034,@EMP035,@EMP036,@EMP037,@EMP038)" );
             strSql . Append ( ";select @@IDENTITY" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@EMP001", SqlDbType.NVarChar,20),
@@ -169,7 +169,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@EMP034", SqlDbType.Bit,1),
                     new SqlParameter("@EMP035", SqlDbType.NVarChar,20),
                     new SqlParameter("@EMP036", SqlDbType.NVarChar,20),
-                    new SqlParameter("@EMP037", SqlDbType.Bit,1)
+                    new SqlParameter("@EMP037", SqlDbType.Bit,1),
+                    new SqlParameter("@EMP038", SqlDbType.NVarChar,100)
             };
             parameters [ 0 ] . Value = model . EMP001;
             parameters [ 1 ] . Value = model . EMP002;
@@ -208,6 +209,7 @@ namespace LineProductMesBll . Dao
             parameters [ 34 ] . Value = model . EMP035;
             parameters [ 35 ] . Value = model . EMP036;
             parameters [ 36 ] . Value = model . EMP037;
+            parameters [ 37 ] . Value = model . EMP038;
 
             return SqlHelper . ExecuteSqlReturnId ( strSql . ToString ( ) ,parameters );
         }
@@ -255,7 +257,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "EMP034=@EMP034," );
             strSql . Append ( "EMP035=@EMP035," );
             strSql . Append ( "EMP036=@EMP036," );
-            strSql . Append ( "EMP037=@EMP037" );
+            strSql . Append ( "EMP037=@EMP037," );
+            strSql . Append ( "EMP038=@EMP038" );
             strSql . Append ( " where EMP001=@EMP001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@EMP002", SqlDbType.NVarChar,20),
@@ -293,7 +296,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@EMP001", SqlDbType.NVarChar,20),
                     new SqlParameter("@EMP035", SqlDbType.NVarChar,20),
                     new SqlParameter("@EMP036", SqlDbType.NVarChar,20),
-                    new SqlParameter("@EMP037", SqlDbType.Bit,1)
+                    new SqlParameter("@EMP037", SqlDbType.Bit,1),
+                    new SqlParameter("@EMP038", SqlDbType.NVarChar,100)
             };
             parameters [ 0 ] . Value = model . EMP002;
             parameters [ 1 ] . Value = model . EMP003;
@@ -331,6 +335,7 @@ namespace LineProductMesBll . Dao
             parameters [ 33 ] . Value = model . EMP035;
             parameters [ 34 ] . Value = model . EMP036;
             parameters [ 35 ] . Value = model . EMP037;
+            parameters [ 36 ] . Value = model . EMP038;
 
             int row = SqlHelper . ExecuteNonQuery ( strSql . ToString ( ) ,parameters );
             if ( row > 0 )
@@ -393,7 +398,7 @@ namespace LineProductMesBll . Dao
         public DataTable GetDataTableAll ( )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT idx,EMP001,EMP002,EMP003,EMP004,EMP005,EMP006,EMP007,CASE WHEN EMP008=0 THEN '男' ELSE '女' END EMP008,EMP009,EMP010,EMP011,EMP012,EMP013,EMP014,EMP015,EMP016,EMP017,EMP018,EMP019,EMP020,EMP021,EMP022,EMP023,EMP024,CASE WHEN EMP025=0 THEN '离职' ELSE '在职' END EMP025,EMP026,CONVERT(FLOAT,EMP027) EMP027,CONVERT(FLOAT,EMP028) EMP028,CONVERT(FLOAT,EMP029) EMP029,CONVERT(FLOAT,EMP030) EMP030,CONVERT(FLOAT,EMP031) EMP031,CONVERT(FLOAT,EMP032) EMP032,EMP034,EMP035,EMP036,EMP010+' '+EMP011+' '+EMP035+''+EMP014 U2,EMP012+' '+EMP013+' '+EMP036 U3,DATEDIFF(YEAR,EMP009,GETDATE()) U0,DATEDIFF(YEAR,EMP023,GETDATE()) U1,EMP037 FROM MIKEMP WHERE EMP001!='DS'  ORDER BY EMP001" );
+            strSql . Append ( "SELECT idx,EMP001,EMP002,EMP003,EMP004,EMP005,EMP006,EMP007,CASE WHEN EMP008=0 THEN '男' ELSE '女' END EMP008,EMP009,EMP010,EMP011,EMP012,EMP013,EMP014,EMP015,EMP016,EMP017,EMP018,EMP019,EMP020,EMP021,EMP022,EMP023,EMP024,CASE WHEN EMP025=0 THEN '离职' ELSE '在职' END EMP025,EMP026,CONVERT(FLOAT,EMP027) EMP027,CONVERT(FLOAT,EMP028) EMP028,CONVERT(FLOAT,EMP029) EMP029,CONVERT(FLOAT,EMP030) EMP030,CONVERT(FLOAT,EMP031) EMP031,CONVERT(FLOAT,EMP032) EMP032,EMP034,EMP035,EMP036,EMP010+' '+EMP011+' '+EMP035+''+EMP014 U2,EMP012+' '+EMP013+' '+EMP036 U3,DATEDIFF(YEAR,EMP009,GETDATE()) U0,DATEDIFF(YEAR,EMP023,GETDATE()) U1,EMP037,EMP038 FROM MIKEMP WHERE EMP001!='DS'  ORDER BY EMP001" );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -406,7 +411,7 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "SELECT DAA001,DAA002 FROM TPADAA WHERE LEN(DAA001)=2 ORDER BY DAA001" );
-
+            
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
@@ -419,6 +424,17 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT DAA001,DAA002 FROM TPADAA WHERE DAA001 LIKE '{0}%' ORDER BY DAA001" ,num );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+        /// <summary>
+        /// 获取所有班组
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getDepartPower ( )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "SELECT DAA002 FROM TPADAA WHERE DAA001 like '050%' ORDER BY DAA001" );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

@@ -1,4 +1,6 @@
-﻿using LineProductMes . ClassForMain;
+﻿using DevExpress . XtraBars;
+using DevExpress . XtraEditors;
+using LineProductMes . ClassForMain;
 using LineProductMesBll;
 using System;
 using System . Collections . Generic;
@@ -14,7 +16,7 @@ namespace LineProductMes
 
             this . FormClosing += FormChild_FormClosing1;
             
-            Power ( );
+            //Power ( );
         }
 
         private void FormChild_FormClosing1 ( object sender ,FormClosingEventArgs e )
@@ -26,6 +28,10 @@ namespace LineProductMes
 
         private void FormChild_Load ( object sender ,EventArgs e )
         {
+            //Form form = ( Form ) ( sender );
+            //LineProductMesBll . UserInfoMation . programName = form . Name;
+            //LineProductMesBll . UserInfoMation . programText = form . Text;
+
             toolState ( );
         }
 
@@ -216,7 +222,7 @@ namespace LineProductMes
 
         protected virtual int Delete ( )
         {
-
+            
             return 0;
         }
         protected void deleteTool ( )
@@ -235,7 +241,8 @@ namespace LineProductMes
         private void toolDelete_ItemClick ( object sender ,DevExpress . XtraBars . ItemClickEventArgs e )
         {
             UserInfoMation . TypeOfOper = "删除";
-            Delete ( );
+            if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                Delete ( );
         }
 
         protected virtual int Examine ( )
@@ -400,6 +407,38 @@ namespace LineProductMes
             Print ( );
         }
 
+        protected virtual int PrintReport ( )
+        {
+            return 0;
+        }
+        private void toolPrintReport_ItemClick ( object sender ,ItemClickEventArgs e )
+        {
+            UserInfoMation . TypeOfOper = "报工单打印";
+            PrintReport ( );
+        }
+
+        protected virtual int PrintWork ( )
+        {
+            return 0;
+        }
+        private void toolPrintWork_ItemClick ( object sender ,ItemClickEventArgs e )
+        {
+            UserInfoMation . TypeOfOper = "入库单打印";
+            PrintWork ( );
+        }
+
+        protected virtual int PrintBase ( )
+        {
+            UserInfoMation . TypeOfOper = "打印";
+            return 0;
+        }
+        private void toolPrintBase_ItemClick ( object sender ,ItemClickEventArgs e )
+        {
+            PrintBase ( );
+        }
+
+
+
         protected virtual int Export ( )
         {
 
@@ -411,5 +450,34 @@ namespace LineProductMes
             Export ( );
         }
 
+        protected virtual int ExportBase ( )
+        {
+            return 0;
+        }
+        private void toolExportBase_ItemClick ( object sender ,ItemClickEventArgs e )
+        {
+            UserInfoMation . TypeOfOper = "导出";
+            ExportBase ( );
+        }
+
+        protected virtual int ExportReport ( )
+        {
+            return 0;
+        }
+        private void toopExprotReport_ItemClick ( object sender ,ItemClickEventArgs e )
+        {
+            UserInfoMation . TypeOfOper = "导出报工单";
+            ExportReport ( );
+        }
+
+        protected virtual int ExportWork ( )
+        {
+            return 0;
+        }
+        private void toolExportWork_ItemClick ( object sender ,ItemClickEventArgs e )
+        {
+            UserInfoMation . TypeOfOper = "导出入库单";
+            ExportWork ( );
+        }
     }
 }

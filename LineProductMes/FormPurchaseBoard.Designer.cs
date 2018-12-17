@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
-            this.Export = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.PUB001 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -72,30 +71,29 @@
             this.CQ = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.HDB = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dtStart = new DevExpress.XtraEditors.DateEdit();
-            this.dtEnd = new DevExpress.XtraEditors.DateEdit();
             this.btnExport = new DevExpress.XtraEditors.SimpleButton();
-            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.dtEnd = new DevExpress.XtraEditors.DateEdit();
+            this.dtStart = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            this.hideContainerLeft.SuspendLayout();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtEnd.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtEnd.Properties)).BeginInit();
-            this.hideContainerLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -103,43 +101,27 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(36, 0);
+            this.splitContainerControl1.Location = new System.Drawing.Point(20, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1201, 472);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1217, 472);
             this.splitContainerControl1.SplitterPosition = 160;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
             // gridControl1
             // 
-            this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.bandedGridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1201, 300);
+            this.gridControl1.Size = new System.Drawing.Size(1217, 307);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Export});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
-            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
-            // 
-            // Export
-            // 
-            this.Export.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Export.Name = "Export";
-            this.Export.Size = new System.Drawing.Size(100, 22);
-            this.Export.Text = "导出";
             // 
             // bandedGridView1
             // 
@@ -498,7 +480,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.bandedGridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1201, 160);
+            this.gridControl2.Size = new System.Drawing.Size(1217, 160);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView2});
@@ -619,6 +601,15 @@
             "DevExpress.XtraBars.Navigation.TileNavPane",
             "DevExpress.XtraBars.TabFormControl"});
             // 
+            // hideContainerLeft
+            // 
+            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.hideContainerLeft.Controls.Add(this.dockPanel1);
+            this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.hideContainerLeft.Location = new System.Drawing.Point(0, 0);
+            this.hideContainerLeft.Name = "hideContainerLeft";
+            this.hideContainerLeft.Size = new System.Drawing.Size(20, 472);
+            // 
             // dockPanel1
             // 
             this.dockPanel1.Controls.Add(this.dockPanel1_Container);
@@ -640,47 +631,19 @@
             this.dockPanel1_Container.Controls.Add(this.dtStart);
             this.dockPanel1_Container.Controls.Add(this.labelControl2);
             this.dockPanel1_Container.Controls.Add(this.labelControl1);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 39);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(249, 429);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(249, 445);
             this.dockPanel1_Container.TabIndex = 0;
             // 
-            // labelControl1
+            // btnExport
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(8, 33);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(54, 12);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "开始日期:";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(8, 81);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(54, 12);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "结束日期:";
-            // 
-            // dtStart
-            // 
-            this.dtStart.EditValue = null;
-            this.dtStart.Location = new System.Drawing.Point(68, 30);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtStart.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dtStart.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtStart.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dtStart.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtStart.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dtStart.Size = new System.Drawing.Size(118, 20);
-            this.dtStart.TabIndex = 3;
+            this.btnExport.Location = new System.Drawing.Point(93, 122);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 5;
+            this.btnExport.Text = "导出";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // dtEnd
             // 
@@ -699,23 +662,42 @@
             this.dtEnd.Size = new System.Drawing.Size(118, 20);
             this.dtEnd.TabIndex = 4;
             // 
-            // btnExport
+            // dtStart
             // 
-            this.btnExport.Location = new System.Drawing.Point(93, 122);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(75, 23);
-            this.btnExport.TabIndex = 5;
-            this.btnExport.Text = "导出";
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.dtStart.EditValue = null;
+            this.dtStart.Location = new System.Drawing.Point(68, 30);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtStart.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtStart.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtStart.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtStart.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtStart.Properties.Mask.EditMask = "yyyy-MM-dd";
+            this.dtStart.Size = new System.Drawing.Size(118, 20);
+            this.dtStart.TabIndex = 3;
             // 
-            // hideContainerLeft
+            // labelControl2
             // 
-            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.hideContainerLeft.Controls.Add(this.dockPanel1);
-            this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.hideContainerLeft.Location = new System.Drawing.Point(0, 0);
-            this.hideContainerLeft.Name = "hideContainerLeft";
-            this.hideContainerLeft.Size = new System.Drawing.Size(36, 472);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(8, 81);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(54, 12);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "结束日期:";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(8, 33);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(54, 12);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "开始日期:";
             // 
             // FormPurchaseBoard
             // 
@@ -731,19 +713,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            this.hideContainerLeft.ResumeLayout(false);
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel1_Container.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtEnd.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtEnd.Properties)).EndInit();
-            this.hideContainerLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -791,8 +772,7 @@
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn CQ;
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn HDB;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
-        private System . Windows . Forms . ContextMenuStrip contextMenuStrip1;
-        private System . Windows . Forms . ToolStripMenuItem Export;
+        //private System . Windows . Forms . ToolStripMenuItem Export;
         private System . Windows . Forms . SaveFileDialog saveFileDialog1;
         private DevExpress . XtraBars . Docking . DockManager dockManager1;
         private DevExpress . XtraBars . Docking . DockPanel dockPanel1;

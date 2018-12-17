@@ -26,7 +26,7 @@ namespace LineProductMes
             _bll = new LineProductMesBll . Bll . WagesBll ( );
             model = new LineProductMesEntityu . WagesHeaderEntity ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolPrint, toolCancellation  } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolPrint, toolCancellation  } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
@@ -270,7 +270,36 @@ namespace LineProductMes
         }
         private void contextMenuStrip1_ItemClicked ( object sender ,ToolStripItemClickedEventArgs e )
         {
-            CopyUtils . copyResult ( gridView1 ,focuseName );
+            //tiliu
+            if ( e . ClickedItem . Name == "copy" )
+                CopyUtils . copyResult ( gridView1 ,focuseName );
+            else if ( e . ClickedItem . Name == "tiliu" )
+            {
+                DataRow row = gridView1 . GetFocusedDataRow ( );
+                if ( row == null )
+                    return;
+                decimal ztl = string . IsNullOrEmpty ( row [ "WAH024" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "WAH024" ] );
+                if ( ztl == 0 )
+                    return;
+                DataRow [ ] rows = tableView . Select ( "WAH023='" + row [ "WAH023" ] + "' AND WAH015<=0" );
+                if ( rows == null || rows . Length < 1 )
+                    return;
+                DataRow [ ] rowes = tableView . Select ( "WAH023='" + row [ "WAH023" ] + "' AND WAH015>0" );
+                decimal otherNum = 0M;
+                if ( rowes != null && rowes . Length > 0 )
+                {
+                    foreach ( DataRow ro in rowes )
+                    {
+                        otherNum += Convert . ToDecimal ( ro [ "WAH015" ] );
+                    }
+                }
+                int num = rows . Length;
+                decimal everyNum = ( ztl - otherNum ) / ( num * Convert . ToDecimal ( 1.0 ) );
+                foreach ( DataRow r in rows )
+                {
+                    r [ "WAH015" ] = everyNum;
+                }
+            }
         }
         #endregion
 
@@ -294,32 +323,47 @@ namespace LineProductMes
             result = true;
             if ( tableView == null || tableView . Rows . Count < 1 )
                 return false;
-            var query = from p in tableView . AsEnumerable ( )
-                        group p by new
-                        {
-                            p1 = p . Field<string> ( "WAH023" ) //,
-                            //p2 = p . Field<decimal> ( "WAH024" )
-                        } into m
-                        let sum = m . Sum ( t => t . Field<decimal> ( "WAH015" ) )
-                        select new
-                        {
-                            wah023 = m . Key . p1 ,
-                            //wah024 = m . Key . p2 ,
-                            sum = sum
-                        };
+            //var query = from p in tableView . AsEnumerable ( )
+            //            group p by new
+            //            {
+            //                p1 = p . Field<string> ( "WAH023" ) //,
+            //                //p2 = p . Field<decimal> ( "WAH024" )
+            //            } into m
+            //            let sum = m . Sum ( t => t . Field<decimal?> ( "WAH015" ) == null ? 0 : t . Field<decimal> ( "WAH015" ) )
+            //            select new
+            //            {
+            //                wah023 = m . Key . p1 ,
+            //                //wah024 = m . Key . p2 ,
+            //                sum = sum
+            //            };
 
-            if ( query != null )
+            //if ( query != null )
+            //{
+            //    decimal wah024 = 0M;
+            //    foreach ( var x in query )
+            //    {
+            //        wah024 = string . IsNullOrEmpty ( tableView . Select ( "WAH023='" + x . wah023 + "'" ) [ 0 ] [ "WAH024" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( tableView . Select ( "WAH023='" + x . wah023 + "'" ) [ 0 ] [ "WAH024" ] );
+            //        if ( wah024 < x . sum )
+            //        {
+            //            XtraMessageBox . Show ( x . wah023 + "提留工资分配总计大于提留工资,请核实" );
+            //            result = false;
+            //            break;
+            //        }
+            //    }
+            //}
+
+            string bz = string . Empty;
+            decimal gr = 0M, bzSa = 0M;
+            foreach ( DataRow row in tableView . Rows )
             {
-                decimal wah024 = 0M;
-                foreach ( var x in query )
+                bz = row [ "WAH023" ] . ToString ( );
+                gr = string . IsNullOrEmpty ( row [ "WAH024" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "WAH024" ] );
+                bzSa = Convert . ToDecimal ( tableView . Compute ( "sum(WAH015)" ,"WAH023='" + bz + "'" ) );
+                if ( gr < bzSa )
                 {
-                    wah024 = string . IsNullOrEmpty ( tableView . Select ( "WAH023='" + x . wah023 + "'" ) [ 0 ] [ "WAH024" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( tableView . Select ( "WAH023='" + x . wah023 + "'" ) [ 0 ] [ "WAH024" ] );
-                    if ( wah024 < x . sum )
-                    {
-                        XtraMessageBox . Show ( x . wah023 + "提留工资分配总计大于提留工资,请核实" );
-                        result = false;
-                        break;
-                    }
+                    XtraMessageBox . Show ( bz + "提留工资分配总计大于提留工资,请核实" );
+                    result = false;
+                    break;
                 }
             }
 

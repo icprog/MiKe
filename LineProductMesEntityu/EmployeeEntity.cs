@@ -42,6 +42,7 @@ namespace LineProductMesEntityu
         private string _emp035;
         private string _emp036;
         private bool _emp037;
+        private string _emp038;
 
         /// <summary>
         /// 
@@ -575,5 +576,20 @@ namespace LineProductMesEntityu
                 return _emp037;
             }
         }
+        /// <summary>
+        /// 工资权限
+        /// </summary>
+        public string EMP038
+        {
+            set
+            {
+                _emp038 = value;
+            }
+            get
+            {
+                return _emp038;
+            }
+        }
+
     }
 }

@@ -11,12 +11,12 @@ namespace LineProductMes . ClassForMain
                 foreach ( DevExpress . XtraGrid . Columns . GridColumn co in gv . Columns )
                 {
                     co . OptionsFilter . FilterPopupMode = DevExpress . XtraGrid . Columns . FilterPopupMode . CheckedList;
-                    co . AppearanceCell . Font = new System . Drawing . Font ( "宋体" ,10F  );
+                    co . AppearanceCell . Font = new System . Drawing . Font ( "微软雅黑" ,10F  );
                     co . AppearanceCell . Options . UseFont = true;
                     co . AppearanceCell . Options . UseTextOptions = true;
                     co . AppearanceCell . TextOptions . HAlignment = DevExpress . Utils . HorzAlignment . Center;
                     co . AppearanceCell . TextOptions . WordWrap = DevExpress . Utils . WordWrap . Wrap;
-                    co . AppearanceHeader . Font = new System . Drawing . Font ( "宋体" ,10F );
+                    co . AppearanceHeader . Font = new System . Drawing . Font ( "微软雅黑" ,10F );
                     co . AppearanceHeader . Options . UseFont = true;
                     co . AppearanceHeader . Options . UseTextOptions = true;
                     co . AppearanceHeader . TextOptions . HAlignment = DevExpress . Utils . HorzAlignment . Center;

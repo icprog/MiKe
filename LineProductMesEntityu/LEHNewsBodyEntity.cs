@@ -163,7 +163,7 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 备注
         /// </summary>
         public string LEH010
         {

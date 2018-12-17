@@ -16,6 +16,7 @@ namespace LineProductMesEntityu
         private decimal? _lgn005;
         private decimal? _lgn006;
         private string _lgn007;
+        private string _lgn008;
         
         /// <summary>
         /// 
@@ -131,6 +132,20 @@ namespace LineProductMesEntityu
                 _lgn007 = value;
             }
         }
+        /// <summary>
+        /// 制单
+        /// </summary>
+        public string LGN008
+        {
+            get
+            {
+                return _lgn008;
+            }
 
+            set
+            {
+                _lgn008 = value;
+            }
+        }
     }
 }

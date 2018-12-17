@@ -22,7 +22,7 @@ namespace LineProductMes
             InitializeComponent ( );
 
             _bll = new LineProductMesBll . Bll . LEDNewsBll ( );
-
+            
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View1 ,View2 ,View3 ,View4 } );
             GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View1 ,View2 ,View3 ,View4  } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );

@@ -84,7 +84,7 @@ namespace LineProductMesBll . Dao
         public DataTable tableViewOne ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,PAO002,PAO003,PAO004,PAO005,PAO006,PAO007,PAO008,PAO009,PAO010,PAO011,PAO012,PAO013,0 U5 FROM MIKPAO WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT idx,PAO002,PAO003,PAO004,PAO005,PAO006,PAO007,PAO008,PAO009,PAO010,PAO011,PAO012,PAO013,0 U5,PAO014 FROM MIKPAO WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -97,7 +97,7 @@ namespace LineProductMesBll . Dao
         public DataTable tableViewTwo ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,PPA002,PPA003,PPA004,PPA005,PPA006,PPA007,PPA008,PPA009,PPA010,PPA011,PPA012,PPA013,PPA014 FROM MIKPAP WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT idx,PPA002,PPA003,PPA004,PPA005,PPA006,PPA007,PPA008,PPA009,PPA010,PPA011,PPA012,PPA013,PPA014,PPA015 FROM MIKPAP WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -182,6 +182,7 @@ namespace LineProductMesBll . Dao
             Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
             model . PAN001 = getOddNum ( );
             UserInfoMation . oddNum = model . PAN001;
+            model . PAN014 = UserInfoMation . userName;
             AddHeader ( SQLString ,model );
 
             LineProductMesEntityu . PaintNewspaperBodyOneEntity modelOne = new LineProductMesEntityu . PaintNewspaperBodyOneEntity ( );
@@ -199,7 +200,8 @@ namespace LineProductMesBll . Dao
                 modelOne . PAO010 = row [ "PAO010" ] . ToString ( );
                 modelOne . PAO011 = string . IsNullOrEmpty ( row [ "PAO011" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PAO011" ] . ToString ( ) );
                 modelOne . PAO012 = string . IsNullOrEmpty ( row [ "PAO012" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PAO012" ] . ToString ( ) );
-                modelOne . PAO013= row [ "PAO013" ] . ToString ( );
+                modelOne . PAO013 = row [ "PAO013" ] . ToString ( );
+                modelOne . PAO014 = row [ "PAO014" ] . ToString ( );
                 AddBodyOne ( SQLString ,modelOne );
             }
 
@@ -232,6 +234,7 @@ namespace LineProductMesBll . Dao
                 modelTwo . PPA012 = string . IsNullOrEmpty ( row [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA012" ] . ToString ( ) );
                 modelTwo . PPA013 = string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] . ToString ( ) );
                 modelTwo . PPA014 = string . IsNullOrEmpty ( row [ "PPA014" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA014" ] . ToString ( ) );
+                modelTwo . PPA015 = row [ "PPA015" ] . ToString ( );
                 AddBodyTwo ( SQLString ,modelTwo );
             }
 
@@ -271,6 +274,7 @@ namespace LineProductMesBll . Dao
                 modelOne . PAO011 = string . IsNullOrEmpty ( row [ "PAO011" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PAO011" ] . ToString ( ) );
                 modelOne . PAO012 = string . IsNullOrEmpty ( row [ "PAO012" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "PAO012" ] . ToString ( ) );
                 modelOne . PAO013 = row [ "PAO013" ] . ToString ( );
+                modelOne . PAO014 = row [ "PAO014" ] . ToString ( );
                 if ( modelOne . idx < 1 )
                     AddBodyOne ( SQLString ,modelOne );
                 else
@@ -312,6 +316,7 @@ namespace LineProductMesBll . Dao
                 modelTwo . PPA012 = string . IsNullOrEmpty ( row [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA012" ] . ToString ( ) );
                 modelTwo . PPA013 = string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] . ToString ( ) );
                 modelTwo . PPA014 = string . IsNullOrEmpty ( row [ "PPA014" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA014" ] . ToString ( ) );
+                modelTwo . PPA015 = row [ "PPA015" ] . ToString ( );
                 if ( modelTwo . idx < 1 )
                     AddBodyTwo ( SQLString ,modelTwo );
                 else
@@ -330,9 +335,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKPAN(" );
-            strSql . Append ( "PAN001,PAN002,PAN003,PAN004,PAN005,PAN006,PAN007,PAN008,PAN009,PAN010,PAN011,PAN012)" );
+            strSql . Append ( "PAN001,PAN002,PAN003,PAN004,PAN005,PAN006,PAN007,PAN008,PAN009,PAN010,PAN011,PAN012,PAN013,PAN014)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@PAN001,@PAN002,@PAN003,@PAN004,@PAN005,@PAN006,@PAN007,@PAN008,@PAN009,@PAN010,@PAN011,@PAN012)" );
+            strSql . Append ( "@PAN001,@PAN002,@PAN003,@PAN004,@PAN005,@PAN006,@PAN007,@PAN008,@PAN009,@PAN010,@PAN011,@PAN012,@PAN013,@PAN014)" );
             SqlParameter [ ] parameters = {
                         new SqlParameter("@PAN001", SqlDbType.NVarChar,20),
                         new SqlParameter("@PAN002", SqlDbType.NVarChar,20),
@@ -345,7 +350,9 @@ namespace LineProductMesBll . Dao
                         new SqlParameter("@PAN009", SqlDbType.Bit,1),
                         new SqlParameter("@PAN010", SqlDbType.Bit,1),
                         new SqlParameter("@PAN011", SqlDbType.Decimal),
-                        new SqlParameter("@PAN012", SqlDbType.Decimal)
+                        new SqlParameter("@PAN012", SqlDbType.Decimal),
+                        new SqlParameter("@PAN013", SqlDbType.NVarChar,20),
+                        new SqlParameter("@PAN014", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . PAN001;
             parameters [ 1 ] . Value = model . PAN002;
@@ -359,15 +366,17 @@ namespace LineProductMesBll . Dao
             parameters [ 9 ] . Value = model . PAN010;
             parameters [ 10 ] . Value = model . PAN011;
             parameters [ 11 ] . Value = model . PAN012;
+            parameters [ 12 ] . Value = model . PAN013;
+            parameters [ 13 ] . Value = model . PAN014;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . PaintNewspaperBodyOneEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKPAO(" );
-            strSql . Append ( "PAO001,PAO002,PAO003,PAO004,PAO005,PAO006,PAO007,PAO008,PAO009,PAO010,PAO011,PAO012,PAO013)" );
+            strSql . Append ( "PAO001,PAO002,PAO003,PAO004,PAO005,PAO006,PAO007,PAO008,PAO009,PAO010,PAO011,PAO012,PAO013,PAO014)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@PAO001,@PAO002,@PAO003,@PAO004,@PAO005,@PAO006,@PAO007,@PAO008,@PAO009,@PAO010,@PAO011,@PAO012,@PAO013)" );
+            strSql . Append ( "@PAO001,@PAO002,@PAO003,@PAO004,@PAO005,@PAO006,@PAO007,@PAO008,@PAO009,@PAO010,@PAO011,@PAO012,@PAO013,@PAO014)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PAO001", SqlDbType.NVarChar,20),
                     new SqlParameter("@PAO002", SqlDbType.NVarChar,20),
@@ -381,7 +390,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@PAO010", SqlDbType.NVarChar,20),
                     new SqlParameter("@PAO011", SqlDbType.Decimal,9),
                     new SqlParameter("@PAO012", SqlDbType.Int,4),
-                    new SqlParameter("@PAO013", SqlDbType.NVarChar,10)
+                    new SqlParameter("@PAO013", SqlDbType.NVarChar,10),
+                    new SqlParameter("@PAO014", SqlDbType.NVarChar,100)
             };
             parameters [ 0 ] . Value = model . PAO001;
             parameters [ 1 ] . Value = model . PAO002;
@@ -396,15 +406,16 @@ namespace LineProductMesBll . Dao
             parameters [ 10 ] . Value = model . PAO011;
             parameters [ 11 ] . Value = model . PAO012;
             parameters [ 12 ] . Value = model . PAO013;
+            parameters [ 13 ] . Value = model . PAO014;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyTwo ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . PaintNewspaperBodyTwoEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKPAP(" );
-            strSql . Append ( "PAP001,PPA002,PPA003,PPA004,PPA005,PPA006,PPA007,PPA008,PPA009,PPA010,PPA011,PPA012,PPA013,PPA014)" );
+            strSql . Append ( "PAP001,PPA002,PPA003,PPA004,PPA005,PPA006,PPA007,PPA008,PPA009,PPA010,PPA011,PPA012,PPA013,PPA014,PPA015)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@PAP001,@PPA002,@PPA003,@PPA004,@PPA005,@PPA006,@PPA007,@PPA008,@PPA009,@PPA010,@PPA011,@PPA012,@PPA013,@PPA014)" );
+            strSql . Append ( "@PAP001,@PPA002,@PPA003,@PPA004,@PPA005,@PPA006,@PPA007,@PPA008,@PPA009,@PPA010,@PPA011,@PPA012,@PPA013,@PPA014,@PPA015)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PAP001", SqlDbType.NVarChar,20),
                     new SqlParameter("@PPA002", SqlDbType.NVarChar,20),
@@ -419,7 +430,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@PPA011", SqlDbType.NVarChar,20),
                     new SqlParameter("@PPA012", SqlDbType.Decimal),
                     new SqlParameter("@PPA013", SqlDbType.Decimal),
-                    new SqlParameter("@PPA014", SqlDbType.Decimal)
+                    new SqlParameter("@PPA014", SqlDbType.Decimal),
+                    new SqlParameter("@PPA015", SqlDbType.NVarChar,100)
             };
             parameters [ 0 ] . Value = model . PAP001;
             parameters [ 1 ] . Value = model . PPA002;
@@ -435,6 +447,7 @@ namespace LineProductMesBll . Dao
             parameters [ 11 ] . Value = model . PPA012;
             parameters [ 12 ] . Value = model . PPA013;
             parameters [ 13 ] . Value = model . PPA014;
+            parameters [ 14 ] . Value = model . PPA015;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -452,7 +465,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "PAN009=@PAN009," );
             strSql . Append ( "PAN010=@PAN010," );
             strSql . Append ( "PAN011=@PAN011," );
-            strSql . Append ( "PAN012=@PAN012 " );
+            strSql . Append ( "PAN012=@PAN012," );
+            strSql . Append ( "PAN013=@PAN013 " );
             strSql . Append ( " where PAN001=@PAN001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PAN002", SqlDbType.NVarChar,20),
@@ -466,7 +480,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@PAN010", SqlDbType.Bit,1),
                     new SqlParameter("@PAN001", SqlDbType.NVarChar,20),
                     new SqlParameter("@PAN011", SqlDbType.Decimal),
-                    new SqlParameter("@PAN012", SqlDbType.Decimal)
+                    new SqlParameter("@PAN012", SqlDbType.Decimal),
+                    new SqlParameter("@PAN013", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . PAN002;
             parameters [ 1 ] . Value = model . PAN003;
@@ -480,6 +495,7 @@ namespace LineProductMesBll . Dao
             parameters [ 9 ] . Value = model . PAN001;
             parameters [ 10 ] . Value = model . PAN011;
             parameters [ 11 ] . Value = model . PAN012;
+            parameters [ 12 ] . Value = model . PAN013;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . PaintNewspaperBodyOneEntity model )
@@ -497,7 +513,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "PAO010=@PAO010," );
             strSql . Append ( "PAO011=@PAO011," );
             strSql . Append ( "PAO012=@PAO012," );
-            strSql . Append ( "PAO013=@PAO013 " );
+            strSql . Append ( "PAO013=@PAO013," );
+            strSql . Append ( "PAO014=@PAO014 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PAO003", SqlDbType.NVarChar,20),
@@ -512,7 +529,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@PAO012", SqlDbType.Int,4),
                     new SqlParameter("@idx", SqlDbType.Int,4),
                     new SqlParameter("@PAO002", SqlDbType.NVarChar,20),
-                    new SqlParameter("@PAO013", SqlDbType.NVarChar,10)
+                    new SqlParameter("@PAO013", SqlDbType.NVarChar,10),
+                    new SqlParameter("@PAO014", SqlDbType.NVarChar,100)
             };
             parameters [ 0 ] . Value = model . PAO003;
             parameters [ 1 ] . Value = model . PAO004;
@@ -527,6 +545,7 @@ namespace LineProductMesBll . Dao
             parameters [ 10 ] . Value = model . idx;
             parameters [ 11 ] . Value = model . PAO002;
             parameters [ 12 ] . Value = model . PAO013;
+            parameters [ 13 ] . Value = model . PAO014;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBodyTwo ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . PaintNewspaperBodyTwoEntity model )
@@ -545,7 +564,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "PPA011=@PPA011," );
             strSql . Append ( "PPA012=@PPA012," );
             strSql . Append ( "PPA013=@PPA013," );
-            strSql . Append ( "PPA014=@PPA014" );
+            strSql . Append ( "PPA014=@PPA014," );
+            strSql . Append ( "PPA015=@PPA015" );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PPA003", SqlDbType.NVarChar,20),
@@ -561,7 +581,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@PPA011", SqlDbType.NVarChar,20),
                     new SqlParameter("@PPA012", SqlDbType.Decimal),
                     new SqlParameter("@PPA013", SqlDbType.Decimal),
-                    new SqlParameter("@PPA014", SqlDbType.Decimal)
+                    new SqlParameter("@PPA014", SqlDbType.Decimal),
+                    new SqlParameter("@PPA015", SqlDbType.NVarChar,100)
             };
             parameters [ 0 ] . Value = model . PPA003;
             parameters [ 1 ] . Value = model . PPA004;
@@ -577,6 +598,7 @@ namespace LineProductMesBll . Dao
             parameters [ 11 ] . Value = model . PPA012;
             parameters [ 12 ] . Value = model . PPA013;
             parameters [ 13 ] . Value = model . PPA014;
+            parameters [ 14 ] . Value = model . PPA015;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -603,7 +625,7 @@ namespace LineProductMesBll . Dao
         public DataTable tableViewQuery ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT PAN001,PAN010,PAN006,PAN009,PAN010,PAO002,PAO003,PAO004,PAO005,PAO012 FROM MIKPAN A INNER JOIN MIKPAO B ON A.PAN001=B.PAO001 WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT PAN001,PAN010,PAN006,PAN009,PAN010,PAO002,PAO003,PAO004,PAO005,PAO012 FROM MIKPAN A LEFT JOIN MIKPAO B ON A.PAN001=B.PAO001 WHERE {0}" ,strWhere );
             
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -616,7 +638,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . PaintNewspaperHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "select idx,PAN001,PAN002,PAN003,PAN004,PAN005,PAN006,PAN007,PAN008,PAN009,PAN010,PAN011,PAN012 from MIKPAN " );
+            strSql . Append ( "select idx,PAN001,PAN002,PAN003,PAN004,PAN005,PAN006,PAN007,PAN008,PAN009,PAN010,PAN011,PAN012,PAN013 from MIKPAN " );
             strSql . Append ( " where PAN001=@PAN001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@PAN001", SqlDbType.NVarChar,20)
@@ -701,6 +723,10 @@ namespace LineProductMesBll . Dao
                 {
                     model . PAN012 = decimal . Parse ( row [ "PAN012" ] . ToString ( ) );
                 }
+                if ( row [ "PAN013" ] != null && row [ "PAN013" ] . ToString ( ) != "" )
+                {
+                    model . PAN013 = row [ "PAN013" ] . ToString ( );
+                }
             }
             return model;
         }
@@ -713,7 +739,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintOne ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT PAN001 ANW001,PAN003 ANW011,PAN005 ANW013,PAN006 ANW022,GETDATE() dat FROM MIKPAN WHERE PAN001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT PAN001 ANW001,PAN003 ANW011,PAN005 ANW013,PAN006 ANW022,GETDATE() dat,PAN014 ANW025 FROM MIKPAN WHERE PAN001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -744,6 +770,14 @@ namespace LineProductMesBll . Dao
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
+        public DataTable getTableArtForAll ( string piNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT ART003+':'+CONVERT(NVARCHAR,CONVERT(FLOAT,ART004)) ART FROM MIKART WHERE ART001='{0}' ORDER BY ART011" ,piNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
         /// <summary>
         /// 获取工艺信息数据
         /// </summary>
@@ -752,8 +786,8 @@ namespace LineProductMesBll . Dao
         public DataTable getTableA ( string piNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT ART001,ART011,ART002,ART013 FROM MIKART WHERE ART001 IN ({0})" ,piNum );
-
+            strSql . AppendFormat ( "SELECT ART001,CASE ART002 WHEN '3001' THEN '喷漆工' WHEN '3002' THEN '装配工' ELSE '' END ART013,ART004 FROM MIKART WHERE ART001 IN ({0})" ,piNum );
+            
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
@@ -765,7 +799,9 @@ namespace LineProductMesBll . Dao
         public DataTable getTableOtherSur ( LineProductMesEntityu.PaintNewspaperBodyOneEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT PAO002,PAO003,PAO013,PAO005-SUM(PAO012) PAO FROM MIKPAO WHERE PAO001!='{0}' AND PAO002='{1}' AND PAO003='{2}' GROUP BY PAO002,PAO003,PAO013,PAO005" ,model . PAO001 ,model . PAO002 ,model . PAO003 );
+            //strSql . AppendFormat ( "SELECT PAO002,PAO003,PAO013,PAO005-SUM(PAO012) PAO FROM MIKPAO WHERE PAO001!='{0}' AND PAO002='{1}' AND PAO003='{2}' GROUP BY PAO002,PAO003,PAO013,PAO005" ,model . PAO001 ,model . PAO002 ,model . PAO003 );
+
+            strSql . AppendFormat ( "SELECT PAO002,PAO003,PAO005-SUM(PAO012) PAO FROM MIKPAO WHERE PAO001!='{0}' AND PAO002='{1}' AND PAO003='{2}' GROUP BY PAO002,PAO003,PAO005" ,model . PAO001 ,model . PAO002 ,model . PAO003 );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

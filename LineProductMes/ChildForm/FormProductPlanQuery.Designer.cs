@@ -53,6 +53,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PRD001 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PRE004 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PRD003 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -315,7 +316,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(910, 356);
+            this.gridControl1.Size = new System.Drawing.Size(910, 363);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -329,7 +330,8 @@
             this.gridView1.Appearance.FocusedRow.Options.UseBorderColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.PRD001,
-            this.PRE004});
+            this.PRE004,
+            this.PRD003});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -351,6 +353,14 @@
             this.PRE004.Name = "PRE004";
             this.PRE004.Visible = true;
             this.PRE004.VisibleIndex = 1;
+            // 
+            // PRD003
+            // 
+            this.PRD003.Caption = "审核";
+            this.PRD003.FieldName = "PRD003";
+            this.PRD003.Name = "PRD003";
+            this.PRD003.Visible = true;
+            this.PRD003.VisibleIndex = 2;
             // 
             // FormProductPlanQuery
             // 
@@ -412,5 +422,6 @@
         private DevExpress . XtraGrid . Views . Grid . GridView View2;
         private DevExpress . XtraLayout . LayoutControlItem layoutControlItem5;
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn2;
+        private DevExpress . XtraGrid . Columns . GridColumn PRD003;
     }
 }

@@ -38,12 +38,12 @@ namespace LineProductMes
             idxOne = new List<string> ( );
             idxTwo = new List<string> ( );
 
-            GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,gridView2 ,View1 ,View2 ,View3 ,View4 ,View5 ,View6 } );
-            GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,gridView2 ,View1 ,View2 ,View3 ,View4 ,View5 ,View6 } );
+            GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,bandedGridView1 ,View1 ,View2 ,View3 ,View4 ,View5 ,View6 } );
+            GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,bandedGridView1 ,View1 ,View2 ,View3 ,View4 ,View5 ,View6 } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            Edit5 . VistaEditTime = Edit6 . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
+            Edit5 . VistaEditTime = Edit6 . VistaEditTime =Edit9.VistaEditTime=Edit10.VistaEditTime= DevExpress . Utils . DefaultBoolean . True;
 
             layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
 
@@ -74,10 +74,10 @@ namespace LineProductMes
                 tableViewTwo = _bll . getTableViewTwo ( " ANV001='" + _header . ANT001 + "'" );
                 gridControl2 . DataSource = tableViewTwo;
 
-                //calcuSumTime ( );
-                addTotalTime ( );
-                calcuSumPrice ( );
-                calcuSumNum ( );
+                calcuSumTime ( );
+                //addTotalTime ( );
+                //calcuSumPrice ( );
+                //calcuSumNum ( );
                 //calcuPrice ( );
 
                 editOtherSur ( string . Empty ,string . Empty );
@@ -102,6 +102,8 @@ namespace LineProductMes
 
             txtANT003 . EditValue = "0507";
             txtANT008 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
+            txtANT011 . Text = "计时";
+           
 
             layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
 
@@ -164,6 +166,7 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "单号不可为空" );
                 return 0;
             }
+
             _header . ANT001 = txtANT001 . Text;
             state = toolExamin . Caption;
             if ( state . Equals ( "审核" ) )
@@ -178,12 +181,12 @@ namespace LineProductMes
                 if ( state . Equals ( "审核" ) )
                 {
                     layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicS ( pictureEdit1 ,"审 核" );
+                    Graph . grPic ( pictureEdit1 ,"审 核" );
                 }
                 else
                 {
                     layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
-                    Graph . grPicS ( pictureEdit1 ,"反" );
+                    Graph . grPic ( pictureEdit1 ,"反" );
                 }
             }
             else
@@ -212,12 +215,12 @@ namespace LineProductMes
                 if ( state . Equals ( "注销" ) )
                 {
                     layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicS ( pictureEdit1 ,"注 销" );
+                    Graph . grPic ( pictureEdit1 ,"注 销" );
                 }
                 else
                 {
                     layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
-                    Graph . grPicS ( pictureEdit1 ,"反" );
+                    Graph . grPic ( pictureEdit1 ,"反" );
                 }
             }
             else
@@ -225,19 +228,19 @@ namespace LineProductMes
 
             return base . Cancellation ( );
         }
-        protected override int Print ( )
+        protected override int PrintWork ( )
         {
             printOrExport ( );
             Print ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Print ( );
+            return base . PrintWork ( );
         }
-        protected override int Export ( )
+        protected override int ExportWork ( )
         {
             printOrExport ( );
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Export ( );
+            return base . ExportWork ( );
         }
         #endregion
 
@@ -249,7 +252,7 @@ namespace LineProductMes
                 e . Info . DisplayText = ( e . RowHandle + 1 ) . ToString ( );
             }
         }
-        private void gridView2_CustomDrawRowIndicator ( object sender ,DevExpress . XtraGrid . Views . Grid . RowIndicatorCustomDrawEventArgs e )
+        private void bandedGridView1_CustomDrawRowIndicator ( object sender ,DevExpress . XtraGrid . Views . Grid . RowIndicatorCustomDrawEventArgs e )
         {
             if ( e . Info . IsRowIndicator && e . RowHandle >= 0 )
             {
@@ -285,10 +288,11 @@ namespace LineProductMes
                     tableViewTwo = _bll . getTableViewTwo ( " ANV001='" + _header . ANT001 + "'" );
                     gridControl2 . DataSource = tableViewTwo;
 
-                    addTotalTime ( );
-                    calcuSumPrice ( );
-                    calcuPrice ( );
-                    calcuSumNum ( );
+                    //addTotalTime ( );
+                    //calcuSumPrice ( );
+                    //calcuPrice ( );
+                    //calcuSumNum ( );
+                    calcuSumTime ( );
 
                     editOtherSur ( string . Empty ,string . Empty );
 
@@ -319,7 +323,7 @@ namespace LineProductMes
         {
             if ( toolSave . Visibility == DevExpress . XtraBars . BarItemVisibility . Always && e . KeyChar == ( char ) Keys . Enter )
             {
-                row = gridView2 . GetFocusedDataRow ( );
+                row = bandedGridView1 . GetFocusedDataRow ( );
                 if ( row == null )
                     return;
                 _bodyTwo . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] . ToString ( ) );
@@ -338,7 +342,7 @@ namespace LineProductMes
             txtANT005 . Properties . DisplayMember = "DAA002";
             txtANT005 . Properties . ValueMember = "DAA001";
 
-            txtANT005 . EditValue = "050708";
+            txtANT005 . EditValue = "050709";
         }
         private void gridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
@@ -347,12 +351,14 @@ namespace LineProductMes
                 return;
             if ( e . Column . FieldName == "ANU010" )
             {
-                calcuSumNum ( );
-                calcuSumPrice ( );
+                calcuSumTime ( );
+                //calcuSumNum ( );
+                //calcuSumPrice ( );
             }
             else if ( e . Column . FieldName == "ANU007" )
             {
-                calcuSumPrice ( );
+                //calcuSumPrice ( );
+                calcuSumTime ( );
             }
             //else if ( e . Column . FieldName == "ANU008" || e . Column . FieldName == "ANU009" )
             //{
@@ -376,8 +382,8 @@ namespace LineProductMes
         }
         private void Edit3_EditValueChanged ( object sender ,EventArgs e )
         {
-            DevExpress . XtraEditors . BaseEdit edit = gridView2 . ActiveEditor;
-            switch ( gridView2 . FocusedColumn . FieldName )
+            DevExpress . XtraEditors . BaseEdit edit = bandedGridView1 . ActiveEditor;
+            switch ( bandedGridView1 . FocusedColumn . FieldName )
             {
                 case "ANV002":
                 if ( edit . EditValue == null )
@@ -388,10 +394,10 @@ namespace LineProductMes
                 _bodyTwo . ANV003 = row [ "EMP002" ] . ToString ( );
                 _bodyTwo . ANV004 = row [ "EMP007" ] . ToString ( );
                 _bodyTwo . ANV008 = row [ "DAA002" ] . ToString ( );
-                gridView2 . SetFocusedRowCellValue ( gridView2 . Columns [ "ANV003" ] ,_bodyTwo . ANV003 );
-                gridView2 . SetFocusedRowCellValue ( gridView2 . Columns [ "ANV004" ] ,_bodyTwo . ANV004 );
-                gridView2 . SetFocusedRowCellValue ( gridView2 . Columns [ "ANV007" ] ,"在职" );
-                gridView2 . SetFocusedRowCellValue ( gridView2 . Columns [ "ANV008" ] ,_bodyTwo . ANV008 );
+                bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANV003" ] ,_bodyTwo . ANV003 );
+                bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANV004" ] ,_bodyTwo . ANV004 );
+                bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANV007" ] ,"在职" );
+                bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANV008" ] ,_bodyTwo . ANV008 );
                 break;
             }
         }
@@ -417,34 +423,63 @@ namespace LineProductMes
                 break;
             }
         }
-        private void gridView2_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
+        private void bandedGridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
-            selectIdx = gridView2 . FocusedRowHandle;
-            row = gridView2 . GetFocusedDataRow ( );
+            selectIdx = bandedGridView1 . FocusedRowHandle;
+            row = bandedGridView1 . GetFocusedDataRow ( );
             if ( row == null )
                 return;
             if ( e . Column . FieldName == "ANV005" || e . Column . FieldName == "ANV006" )
             {
-                if ( e . Column . FieldName == "ANV005" && workShopTime . startTimeFJ ( row ,e . Value ) == false )
+                if ( e . Column . FieldName == "ANV005" && workShopTime . startCenTime ( row ,e . Value ,"ANV014" ,"ANV006" ,"ANV013" ) == false )
                 {
                     row [ "ANV005" ] = DBNull . Value;
                 }
-                if ( e . Column . FieldName == "ANV006" && workShopTime . endTimeFJ ( row ,e . Value ) == false )
+                if ( e . Column . FieldName == "ANV006" && workShopTime . endCenTime ( row ,e . Value ,"ANV005" ,"ANV013" ,"ANV014" ) == false )
                 {
                     row [ "ANV006" ] = DBNull . Value;
                 }
                 addRow ( e . Column . FieldName ,e . RowHandle ,e . Value );
-                calcuSumTime ( );
+            }
+            else if ( e . Column . FieldName == "ANV013" || e . Column . FieldName == "ANV014" )
+            {
+                if ( e . Column . FieldName == "ANV013" && workShopTime . startTime ( row ,e . Value ,"ANV014" ,"ANV005" ,"ANV006" ) == false )
+                {
+                    row [ "ANV013" ] = DBNull . Value;
+                }
+                if ( e . Column . FieldName == "ANV014" && workShopTime . endTime ( row ,e . Value ,"ANV013" ,"ANV005" ,"ANV006" ) == false )
+                {
+                    row [ "ANV014" ] = DBNull . Value;
+                }
+                addRow ( e . Column . FieldName ,e . RowHandle ,e . Value );
             }
             else if ( e . Column . FieldName == "ANV002" || e . Column . FieldName == "ANV003" || e . Column . FieldName == "ANV004" || e . Column . FieldName == "ANV008" )
             {
-                if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
+                if ( txtANT001 . Text . Equals ( "计时" ) )
                 {
-                    row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    }
+                    if ( row [ "ANV006" ] == null || row [ "ANV006" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    }
+                    row [ "ANV013" ] = DBNull . Value;
+                    row [ "ANV014" ] = DBNull . Value;
                 }
-                if ( row [ "ANV006" ] == null || row [ "ANV006" ] . ToString ( ) == string . Empty )
+                else if ( txtANT001 . Text . Equals ( "计件" ) )
                 {
-                    row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    if ( row [ "ANV013" ] == null || row [ "ANV013" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "ANV013" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    }
+                    if ( row [ "ANV014" ] == null || row [ "ANV014" ] . ToString ( ) == string . Empty )
+                    {
+                        row [ "ANV014" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    }
+                    row [ "ANV005" ] = DBNull . Value;
+                    row [ "ANV006" ] = DBNull . Value;
                 }
                 if ( row [ "ANV007" ] == null || row [ "ANV007" ] . ToString ( ) == string . Empty )
                 {
@@ -459,19 +494,80 @@ namespace LineProductMes
                     row [ "ANV005" ] = DBNull . Value;
                     row [ "ANV006" ] = DBNull . Value;
                     row [ "ANV009" ] = DBNull . Value;
+                    row [ "ANV013" ] = DBNull . Value;
+                    row [ "ANV014" ] = DBNull . Value;
+                    row [ "ANV015" ] = DBNull . Value;
+                    row [ "ANV010" ] = DBNull . Value;
                 }
-                else if( row [ "ANV007" ] . ToString ( ) . Equals ( "在职" ) )
+                else if ( row [ "ANV007" ] . ToString ( ) . Equals ( "在职" ) )
                 {
-                    if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
+                    if ( txtANT001 . Text . Equals ( "计时" ) )
                     {
-                        row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        }
+                        if ( row [ "ANV006" ] == null || row [ "ANV006" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                        row [ "ANV013" ] = DBNull . Value;
+                        row [ "ANV014" ] = DBNull . Value;
                     }
-                    if ( row [ "ANV006" ] == null || row [ "ANV006" ] . ToString ( ) == string . Empty )
+                    else if ( txtANT001 . Text . Equals ( "计件" ) )
                     {
-                        row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        if ( row [ "ANV013" ] == null || row [ "ANV013" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "ANV013" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        }
+                        if ( row [ "ANV014" ] == null || row [ "ANV014" ] . ToString ( ) == string . Empty )
+                        {
+                            row [ "ANV014" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                        row [ "ANV005" ] = DBNull . Value;
+                        row [ "ANV006" ] = DBNull . Value;
                     }
                     calcuSumTime ( );
                 }
+            }
+            else if ( e . Column . FieldName == "ANV016" )
+            {
+                int selectIndex = bandedGridView1 . FocusedRowHandle;
+                if ( selectIndex < 0 )
+                    return;
+
+                decimal outRsult = 0;
+                string anv016Result = bandedGridView1 . GetDataRow ( selectIndex ) [ "ANV016" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( anv016Result ) )
+                    _bodyTwo . ANV016 = 0;
+                else
+                {
+                    if ( !string . IsNullOrEmpty ( anv016Result ) && decimal . TryParse ( anv016Result ,out outRsult ) == false )
+                        return;
+                    else
+                        _bodyTwo . ANV016 = outRsult;
+                }
+                for ( int i = selectIndex ; i < tableViewTwo . Rows . Count ; i++ )
+                {
+                    row = tableViewTwo . Rows [ i ];
+                    if ( row [ "ANV009" ] != null && row [ "ANV009" ] . ToString ( ) != string . Empty )
+                    {
+                        if ( row [ "ANV016" ] == null || row [ "ANV016" ] . ToString ( ) == string . Empty )
+                        {
+                            row . BeginEdit ( );
+                            row [ "ANV016" ] = _bodyTwo . ANV016;
+                            row . EndEdit ( );
+                        }
+                    }
+                    if ( i == selectIndex && ( row [ "ANV009" ] == null || row [ "ANV009" ] . ToString ( ) == string . Empty ) )
+                    {
+                        row . BeginEdit ( );
+                        row [ "ANV016" ] = DBNull . Value;
+                        row . EndEdit ( );
+                    }
+                }
+                gridControl2 . Refresh ( );
+                calcuSumTime ( );
             }
         }
         private void Edit1_EditValueChanged ( object sender ,EventArgs e )
@@ -516,8 +612,8 @@ namespace LineProductMes
             if ( txtANT005 . EditValue == null || txtANT005 . EditValue . ToString ( ) == string . Empty )
                 return;
 
-            gridView2 . CloseEditor ( );
-            gridView2 . UpdateCurrentRow ( );
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
 
             if ( tableViewTwo != null )
                 tableViewTwo . Rows . Clear ( );
@@ -538,8 +634,16 @@ namespace LineProductMes
                         row [ "ANV003" ] = ro [ "EMP002" ];
                         row [ "ANV004" ] = ro [ "EMP007" ];
                         row [ "ANV008" ] = ro [ "DAA002" ];
-                        row [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                        row [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                        if ( "计时" . Equals ( txtANT011 . Text ) )
+                        {
+                            row [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                        else if ( "计件" . Equals ( txtANT011 . Text ) )
+                        {
+                            row [ "ANV013" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "ANV014" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                        }
                         row [ "ANV007" ] = "在职";
                         tableViewTwo . Rows . Add ( row );
                         gridControl2 . Refresh ( );
@@ -557,8 +661,16 @@ namespace LineProductMes
                         row [ "ANV003" ] = ro [ "EMP002" ] . ToString ( );
                         row [ "ANV004" ] = ro [ "EMP007" ] . ToString ( );
                         row [ "ANV008" ] = ro [ "DAA002" ];
-                        row [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                        row [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                        if ( "计时" . Equals ( txtANT011 . Text ) )
+                        {
+                            row [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                        }
+                        else if ( "计件" . Equals ( txtANT011 . Text ) )
+                        {
+                            row [ "ANV013" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "ANV014" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                        }
                         row [ "ANV007" ] = "在职";
                         tableViewTwo . Rows . Add ( row );
                         gridControl2 . Refresh ( );
@@ -624,17 +736,13 @@ namespace LineProductMes
         }
         private void contextMenuStrip2_ItemClicked ( object sender ,ToolStripItemClickedEventArgs e )
         {
-            CopyUtils . copyResult ( gridView2 ,focuseName );
+            CopyUtils . copyResult ( bandedGridView1 ,focuseName );
         }
         private void gridView1_RowCellClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellClickEventArgs e )
         {
             focuseName = e . Column . FieldName;
         }
-        private void gridView2_RowCellClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellClickEventArgs e )
-        {
-            focuseName = e . Column . FieldName;
-        }
-        private void gridView2_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
+        private void bandedGridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
         {
             if ( e . Column . FieldName == "ANV010" )
             {
@@ -645,22 +753,58 @@ namespace LineProductMes
                 }
             }
         }
+        private void bandedGridView1_RowCellClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellClickEventArgs e )
+        {
+            focuseName = e . Column . FieldName;
+        }
+        private void txtANT011_SelectedValueChanged ( object sender ,EventArgs e )
+        {
+            if ( string . IsNullOrEmpty ( txtANT011 . Text ) )
+                return;
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
+                return;
+
+            foreach ( DataRow row in tableViewTwo . Rows )
+            {
+                if ( "计时" . Equals ( txtANT011 . Text ) )
+                {
+                    row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "ANV013" ] = DBNull . Value;
+                    row [ "ANV014" ] = DBNull . Value;
+                    row [ "ANV015" ] = DBNull . Value;
+                }
+                else if ( "计件" . Equals ( txtANT011 . Text ) )
+                {
+                    row [ "ANV013" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    row [ "ANV014" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "ANV005" ] = DBNull . Value;
+                    row [ "ANV006" ] = DBNull . Value;
+                    row [ "ANV009" ] = DBNull . Value;
+                }
+            }
+            calcuSumTime ( );
+        }
         #endregion
 
         #region Method
         void controlUnEnable ( )
         {
-            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = true;
-            gridView1 . OptionsBehavior . Editable = gridView2 . OptionsBehavior . Editable = false;
+            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = txtANT011.ReadOnly = txtANT012 . ReadOnly = true;
+            gridView1 . OptionsBehavior . Editable = bandedGridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = false;
-            gridView1 . OptionsBehavior . Editable = gridView2 . OptionsBehavior . Editable = true;
+            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = txtANT011 . ReadOnly = txtANT012 . ReadOnly = false;
+            gridView1 . OptionsBehavior . Editable = bandedGridView1 . OptionsBehavior . Editable = true;
         }
         void controlClear ( )
         {
-            txtANT001 . Text = txtANT003 . Text = txtANT005 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtANT009 . Text = txtANT010 . Text = string . Empty;
+            txtANT001 . Text = txtANT003 . Text = txtANT005 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtANT009 . Text = txtANT010 . Text = txtANT011.Text=txtANT012.Text= string . Empty;
             gridControl1 . DataSource = null;
             gridControl2 . DataSource = null;
         }
@@ -710,8 +854,8 @@ namespace LineProductMes
             if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
                 return false;
 
-            gridView2 . CloseEditor ( );
-            gridView2 . UpdateCurrentRow ( );
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
             if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
                 return false;
 
@@ -723,6 +867,8 @@ namespace LineProductMes
             _header . ANT008 = Convert . ToDateTime ( txtANT008 . Text );
             _header . ANT009 = string . IsNullOrEmpty ( txtANT009 . Text ) == true ? 0 : Convert . ToDecimal ( txtANT009 . Text );
             _header . ANT010 = string . IsNullOrEmpty ( txtANT010 . Text ) == true ? 0 : Convert . ToDecimal ( txtANT010 . Text );
+            _header . ANT011 = txtANT011 . Text;
+            _header . ANT012 = txtANT012 . Text;
             gridView1 . ClearColumnErrors ( );
             for ( int i = 0 ; i < gridView1 . RowCount ; i++ )
             {
@@ -757,10 +903,10 @@ namespace LineProductMes
             if ( result == false )
                 return result;
 
-            gridView2 . ClearColumnErrors ( );
-            for ( int i = 0 ; i < gridView2 . RowCount ; i++ )
+            bandedGridView1 . ClearColumnErrors ( );
+            for ( int i = 0 ; i < bandedGridView1 . RowCount ; i++ )
             {
-                row = gridView2 . GetDataRow ( i );
+                row = bandedGridView1 . GetDataRow ( i );
                 if ( row != null )
                 {
                     row . ClearErrors ( );
@@ -839,12 +985,14 @@ namespace LineProductMes
             txtANT009 . Text = Convert . ToDecimal ( _header . ANT009 ) . ToString ( "0.#" );
             txtANT010 . Text = Convert . ToDecimal ( _header . ANT010 ) . ToString ( "0.#" );
             txtANT008 . Text = Convert . ToDateTime ( _header . ANT008 ) . ToString ( "yyyy-MM-dd" );
-            Graph . grPicS ( pictureEdit1 ,"反" );
+            txtANT011 . Text = _header . ANT011;
+            txtANT012 . Text = _header . ANT012;
+            Graph . grPic ( pictureEdit1 ,"反" );
             layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             if ( _header . ANT006 )
             {
                 layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicS ( pictureEdit1 ,"审 核" );
+                Graph . grPic ( pictureEdit1 ,"审 核" );
                 examineTool ( "审核" );
             }
             else
@@ -852,7 +1000,7 @@ namespace LineProductMes
             if ( _header . ANT007 )
             {
                 layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicS ( pictureEdit1 ,"注 销" );
+                Graph . grPic ( pictureEdit1 ,"注 销" );
                 cancelltionTool ( "注销" );
             }
             else
@@ -867,30 +1015,47 @@ namespace LineProductMes
             int sunNum = Convert . ToInt32 ( tableViewOne . Compute ( "SUM(ANU010)" ,null ) );
             txtu1 . Text = sunNum . ToString ( );
         }
+        //总产值
         void calcuSumPrice ( )
         {
-            int numCount = 0;
-            decimal priceCount = 0M, priceSum = 0M;
+            //int numCount = 0;
+            decimal /*priceCount = 0M,*/ priceSum = 0M;
 
             gridView1 . CloseEditor ( );
             gridView1 . UpdateCurrentRow ( );
-            foreach ( DataRow row in tableViewOne . Rows )
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            if ( "计件" . Equals ( txtANT011 . Text ) )
             {
-                numCount = string . IsNullOrEmpty ( row [ "ANU010" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "ANU010" ] . ToString ( ) );
-                priceCount = string . IsNullOrEmpty ( row [ "ANU007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANU007" ] . ToString ( ) );
-                priceSum += numCount * priceCount;
+                if ( U3 . SummaryItem . SummaryValue == null )
+                    priceSum = 0;
+                else
+                    priceSum = string . IsNullOrEmpty ( U3 . SummaryItem . SummaryValue . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( U3 . SummaryItem . SummaryValue );
             }
+
+            if ( U0 . SummaryItem . SummaryValue != null )
+                priceSum += string . IsNullOrEmpty ( U0 . SummaryItem . SummaryValue . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( U0 . SummaryItem . SummaryValue );
+
             txtu2 . Text = priceSum . ToString ( "0.#" );
         }
+        //总工时
+        void addTotalTime ( decimal tTime )
+        {
+            //txtu0 . Text = Math . Round ( ANV009 . SummaryItem . SummaryValue == null ? 0 : Convert . ToDecimal ( ANV009 . SummaryItem . SummaryValue ) + ( ANV011 . SummaryItem . SummaryValue == null ? 0 : Convert . ToDecimal ( ANV011 . SummaryItem . SummaryValue ) ) ,1 ,MidpointRounding . AwayFromZero ) . ToString ( "0.#" );
+            txtu0 . Text = tTime . ToString ( "0.#" );
+        }
+        //计算工资
         void calcuSumTime ( )
         {
-            gridView2 . CloseEditor ( );
-            gridView2 . UpdateCurrentRow ( );
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
 
             if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
                 return;
             DateTime dtOne, dtTwo;
-            decimal sunNum = 0;
+            decimal sunNum = 0, tTime = 0;
 
             decimal ant009 = txtANT009 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtANT009 . Text ) * 60;
             decimal ant010 = txtANT010 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtANT010 . Text ) * 60;
@@ -901,10 +1066,11 @@ namespace LineProductMes
                 if ( string . IsNullOrEmpty ( row [ "ANV007" ] . ToString ( ) ) || row [ "ANV007" ] . ToString ( ) . Equals ( "离职" ) || row [ "ANV007" ] . ToString ( ) . Equals ( "未上班" ) )
                 {
                     row [ "ANV009" ] = 0;
+                    row [ "ANV015" ] = 0;
                     row [ "ANV010" ] = 0;
                     continue;
                 }
-
+                sunNum = 0;
                 if ( !string . IsNullOrEmpty ( row [ "ANV005" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "ANV006" ] . ToString ( ) ) )
                 {
                     dtOne = Convert . ToDateTime ( row [ "ANV005" ] . ToString ( ) );
@@ -913,23 +1079,65 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if (dtTwo.CompareTo(Convert.ToDateTime("17:30"))>0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     row [ "ANV009" ] = Math . Round ( sunNum ,1 ,MidpointRounding . AwayFromZero );
+                 
                 }
                 else
                     row [ "ANV009" ] = 0;
 
-                row [ "ANV010" ] = Math . Round ( string . IsNullOrEmpty ( row [ "ANV009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANV009" ] ) * ( string . IsNullOrEmpty ( row [ "U1" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "U1" ] ) ) ,2 ,MidpointRounding . AwayFromZero );
+                tTime += sunNum;
+                sunNum = 0;
+                if ( !string . IsNullOrEmpty ( row [ "ANV013" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "ANV014" ] . ToString ( ) ) )
+                {
+                    dtOne = Convert . ToDateTime ( row [ "ANV013" ] . ToString ( ) );
+                    dtTwo = Convert . ToDateTime ( row [ "ANV014" ] . ToString ( ) );
+                    sunNum = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    {
+                        sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    }
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    row [ "ANV015" ] = Math . Round ( sunNum ,1 ,MidpointRounding . AwayFromZero );
+                }
+                else
+                    row [ "ANV015" ] = 0;
+                tTime += sunNum;
             }
-            addTotalTime ( );
-        }
-        void addTotalTime ( )
-        {
-            txtu0 . Text = Math . Round ( ANV009 . SummaryItem . SummaryValue == null ? 0 : Convert . ToDecimal ( ANV009 . SummaryItem . SummaryValue ) ,1 ,MidpointRounding . AwayFromZero ) . ToString ( "0.#" );
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            calcuSumNum ( );
+            calcuSumPrice ( );
+            addTotalTime ( tTime );
+
+            decimal totalTime = string . IsNullOrEmpty ( txtu0 . Text ) == true ? 0 : Convert . ToDecimal ( txtu0 . Text );
+            decimal totalPrice = string . IsNullOrEmpty ( txtu2 . Text ) == true ? 0 : Convert . ToDecimal ( txtu2 . Text );
+
+            foreach ( DataRow row in tableViewTwo . Rows )
+            {
+                //ANV007
+                if ( string . IsNullOrEmpty ( row [ "ANV007" ] . ToString ( ) ) || row [ "ANV007" ] . ToString ( ) . Equals ( "离职" ) || row [ "ANV007" ] . ToString ( ) . Equals ( "未上班" ) )
+                {
+                    row [ "ANV009" ] = 0;
+                    row [ "ANV015" ] = 0;
+                    row [ "ANV010" ] = 0;
+                    continue;
+                }
+
+                sunNum = string . IsNullOrEmpty ( row [ "ANV009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANV009" ] );
+                sunNum += string . IsNullOrEmpty ( row [ "ANV015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANV015" ] );
+
+                row [ "ANV010" ] = totalTime == 0 ? 0 . ToString ( ) : ( totalPrice / totalTime * sunNum ) . ToString ( "0.##" );
+            }
         }
         void calcuPrice ( )
         {
@@ -938,9 +1146,9 @@ namespace LineProductMes
             if ( string . IsNullOrEmpty ( txtu2 . Text ) )
                 return;
             decimal price = Convert . ToDecimal ( txtu0 . Text ) == 0 ? 0 : Convert . ToDecimal ( txtu2 . Text ) / Convert . ToDecimal ( txtu0 . Text );
-            for ( int i = 0 ; i < gridView2.RowCount ; i++ )
+            for ( int i = 0 ; i < bandedGridView1.RowCount ; i++ )
             {
-                row = gridView2 . GetDataRow ( i );
+                row = bandedGridView1 . GetDataRow ( i );
                 if ( row != null )
                 {
                     row [ "U1" ] = price . ToString ( "0.##" );
@@ -1007,37 +1215,65 @@ namespace LineProductMes
                 for ( int i = selectIdx ; i < tableViewTwo . Rows . Count ; i++ )
                 {
                     row = tableViewTwo . Rows [ i ];
-                    if ( i + 1 == tableViewTwo . Rows . Count )
-                        return;
-                    if ( column . Equals ( "ANV005" ) )
+                    if ( i + 1 < tableViewTwo . Rows . Count )
                     {
-                        if ( workShopTime . startTimeFJ ( row ,row [ "ANV005" ] ) )
+                        if ( column . Equals ( "ANV005" ) )
                         {
-                            ro = tableViewTwo . Rows [ i + 1 ];
-                            if ( ro [ "ANV005" ] == null || ro [ "ANV005" ] . ToString ( ) == string . Empty )
+                            if ( workShopTime . startCenTime ( row ,row [ "ANV005" ] ,"ANV014" ,"ANV006" ,"ANV013" ) )
                             {
-                                ro . BeginEdit ( );
-                                ro [ "ANV005" ] = /*row [ "ANV005" ];*/value;
-                                ro . EndEdit ( );
+                                ro = tableViewTwo . Rows [ i + 1 ];
+                                if ( ro [ "ANV005" ] == null || ro [ "ANV005" ] . ToString ( ) == string . Empty )
+                                {
+                                    ro . BeginEdit ( );
+                                    ro [ "ANV005" ] = /*row [ "ANV005" ];*/value;
+                                    ro . EndEdit ( );
+                                }
                             }
                         }
-                    }
-                    if ( column . Equals ( "ANV006" ) )
-                    {
-                        if ( workShopTime . endTimeFJ ( row ,row [ "ANV006" ] ) )
+                        if ( column . Equals ( "ANV006" ) )
                         {
-                            ro = tableViewTwo . Rows [ i + 1 ];
-                            if ( ro [ "ANV006" ] == null || ro [ "ANV006" ] . ToString ( ) == string . Empty )
+                            if ( workShopTime . endCenTime ( row ,row [ "ANV006" ] ,"ANV005" ,"ANV013" ,"ANV014" ) )
                             {
-                                ro . BeginEdit ( );
-                                ro [ "ANV006" ] =/* row [ "ANV006" ];*/value;
-                                ro . EndEdit ( );
+                                ro = tableViewTwo . Rows [ i + 1 ];
+                                if ( ro [ "ANV006" ] == null || ro [ "ANV006" ] . ToString ( ) == string . Empty )
+                                {
+                                    ro . BeginEdit ( );
+                                    ro [ "ANV006" ] =/* row [ "ANV006" ];*/value;
+                                    ro . EndEdit ( );
+                                }
+                            }
+                        }
+                        if ( column . Equals ( "ANV013" ) )
+                        {
+                            if ( workShopTime . startTime ( row ,row [ "ANV013" ] ,"ANV014" ,"ANV005" ,"ANV006" ) )
+                            {
+                                ro = tableViewTwo . Rows [ i + 1 ];
+                                if ( ro [ "ANV013" ] == null || ro [ "ANV013" ] . ToString ( ) == string . Empty )
+                                {
+                                    ro . BeginEdit ( );
+                                    ro [ "ANV013" ] =/* row [ "ANV006" ];*/value;
+                                    ro . EndEdit ( );
+                                }
+                            }
+                        }
+                        if ( column . Equals ( "ANV014" ) )
+                        {
+                            if ( workShopTime . endTime ( row ,row [ "ANV014" ] ,"ANV013" ,"ANV005" ,"ANV006" ) )
+                            {
+                                ro = tableViewTwo . Rows [ i + 1 ];
+                                if ( ro [ "ANV014" ] == null || ro [ "ANV014" ] . ToString ( ) == string . Empty )
+                                {
+                                    ro . BeginEdit ( );
+                                    ro [ "ANV014" ] =/* row [ "ANV006" ];*/value;
+                                    ro . EndEdit ( );
+                                }
                             }
                         }
                     }
                 }
             }
             gridControl1 . RefreshDataSource ( );
+            calcuSumTime ( );
         }
         void editOtherSur ( string orderNum ,string proNum )
         {

@@ -53,6 +53,15 @@ namespace LineProductMesBll . Bll
             return dal . getProPlanInfo ( );
         }
 
+        /// <summary>
+        /// 批量增加排产天数
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
+        public bool SaveDay ( DataTable table )
+        {
+            return dal . SaveDay ( table );
+        }
 
     }
 }

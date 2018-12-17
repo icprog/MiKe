@@ -21,6 +21,8 @@ namespace LineProductMesEntityu
         private bool _pan010;
         private decimal? _pan011;
         private decimal? _pan012;
+        private string _pan013;
+        private string _pan014;
         
         /// <summary>
         /// 
@@ -202,6 +204,35 @@ namespace LineProductMesEntityu
             get
             {
                 return _pan012;
+            }
+        }
+        /// <summary>
+        /// 工资类型
+        /// </summary>
+        public string PAN013
+        {
+            set
+            {
+                _pan013 = value;
+            }
+            get
+            {
+                return _pan013;
+            }
+        }
+        /// <summary>
+        /// 制单
+        /// </summary>
+        public string PAN014
+        {
+            get
+            {
+                return _pan014;
+            }
+
+            set
+            {
+                _pan014 = value;
             }
         }
     }

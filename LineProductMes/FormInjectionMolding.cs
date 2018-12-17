@@ -182,7 +182,8 @@ namespace LineProductMes
                 if ( state . Equals ( "审核" ) )
                 {
                     layoutControlItem8 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicS ( pictureEdit1 ,"审 核" );
+                    //Graph . grPicS ( pictureEdit1 ,"审核" );
+                    Graph . grPicZ ( pictureEdit1 ,"审核" );
                 }
                 else
                 {
@@ -215,7 +216,8 @@ namespace LineProductMes
                 if ( state . Equals ( "注销" ) )
                 {
                     layoutControlItem8 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicS ( pictureEdit1 ,"注 销" );
+                    //Graph . grPicS ( pictureEdit1 ,"注 销" );
+                    Graph . grPicZ ( pictureEdit1 ,"注销" );
                 }
                 else
                 {
@@ -228,7 +230,7 @@ namespace LineProductMes
 
             return base . Cancellation ( );
         }
-        protected override int Print ( )
+        protected override int PrintWork ( )
         {
             if ( "计件" . Equals ( txtIJA002 . Text ) && ( tableViewOne == null || tableViewOne . Rows . Count < 1 ) )
             {
@@ -244,9 +246,9 @@ namespace LineProductMes
             printOrExport ( );
             Print ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Print ( );
+            return base . PrintWork ( );
         }
-        protected override int Export ( )
+        protected override int ExportWork ( )
         {
             if ( "计件" . Equals ( txtIJA002 . Text ) && ( tableViewOne == null || tableViewOne . Rows . Count < 1 ) )
             {
@@ -261,7 +263,7 @@ namespace LineProductMes
             printOrExport ( );
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Export ( );
+            return base . ExportWork ( );
         }
         #endregion
 
@@ -517,9 +519,14 @@ namespace LineProductMes
         }
         private void bandedGridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
+            decimal outRsult = 0;
             row = bandedGridView1 . GetFocusedDataRow ( );
             if ( row == null )
                 return;
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
             //工作状态
             if ( e . Column . FieldName == "IJB003" )
             {
@@ -552,9 +559,19 @@ namespace LineProductMes
                 {
                     row [ "IJB003" ] = "在职";
                 }
+
+                bandedGridView1 . CloseEditor ( );
+                bandedGridView1 . UpdateCurrentRow ( );
+
+                if ( workShopTime . startTimeZS ( row [ "IJB002" ] ,tableViewOne ) == false )
+                {
+                    row [ "IJB016" ] = DBNull . Value;
+                    row [ "IJB017" ] = DBNull . Value;
+                }
+
                 calcuSumTime ( );
             }
-            else if ( e . Column . FieldName == "IJB015" || e . Column . FieldName == "IJB020" )
+            else if ( e . Column . FieldName == "IJB015" /*|| e . Column . FieldName == "IJB020"*/ )
             {
                 calcuSumTime ( );
             }
@@ -565,6 +582,11 @@ namespace LineProductMes
                     row [ "IJB016" ] = DBNull . Value;
                 }
 
+               
+
+                if ( workShopTime . startTimeZS ( row [ "IJB002" ] ,tableViewOne ) == false )
+                    row [ "IJB016" ] = DBNull . Value;
+
                 addRow ( "IJB016" ,e . RowHandle );
             }
             else if ( e . Column . FieldName == "IJB017" )
@@ -574,6 +596,9 @@ namespace LineProductMes
                     row [ "IJB017" ] = DBNull . Value;
                 }
 
+                if ( workShopTime . startTimeZS ( row [ "IJB002" ] ,tableViewOne ) == false )
+                    row [ "IJB017" ] = DBNull . Value;
+
                 addRow ( "IJB017" ,e . RowHandle );
             }
             else if ( e . Column . FieldName == "IJB018" )
@@ -582,6 +607,10 @@ namespace LineProductMes
                 {
                     row [ "IJB018" ] = DBNull . Value;
                 }
+
+                if ( workShopTime . startTimeZS ( row [ "IJB002" ] ,tableViewOne ) == false )
+                    row [ "IJB018" ] = DBNull . Value;
+
                 addRow ( "IJB018" ,e . RowHandle );
             }
             else if ( e . Column . FieldName == "IJB019" )
@@ -590,7 +619,44 @@ namespace LineProductMes
                 {
                     row [ "IJB019" ] = DBNull . Value;
                 }
+
+                if ( workShopTime . startTimeZS ( row [ "IJB002" ] ,tableViewOne ) == false )
+                    row [ "IJB019" ] = DBNull . Value;
+
                 addRow ( "IJB019" ,e . RowHandle );
+            }
+            else if ( e . Column . FieldName == "IJB020" )
+            {
+                int selectIndex = bandedGridView1 . FocusedRowHandle;
+                string ijb020Result = bandedGridView1 . GetDataRow ( selectIndex ) [ "IJB020" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( ijb020Result ) )
+                    _bodyOne . IJB020 = 0;
+                else
+                {
+                    if ( !string . IsNullOrEmpty ( ijb020Result ) && decimal . TryParse ( ijb020Result ,out outRsult ) == false )
+                        return;
+                    else
+                        _bodyOne . IJB020 = outRsult;
+                }
+
+                for ( int i = selectIndex ; i < tableViewOne . Rows . Count ; i++ )
+                {
+                    row = tableViewOne . Rows [ i ];
+                    if ( row [ "IJB023" ] != null && row [ "IJB023" ] . ToString ( ) != string . Empty )
+                    {
+                        row . BeginEdit ( );
+                        row [ "IJB020" ] = _bodyOne . IJB020;
+                        row . EndEdit ( );
+                    }
+                    if ( i == selectIndex && ( row [ "IJB023" ] == null || row [ "IJB023" ] . ToString ( ) == string . Empty ) )
+                    {
+                        row . BeginEdit ( );
+                        row [ "IJB020" ] = DBNull . Value;
+                        row . EndEdit ( );
+                    }
+                }
+                gridControl1 . Refresh ( );
+                calcuSumTime ( );
             }
             //else if ( e . Column . FieldName == "IJB012" /*|| e . Column . FieldName == "IJB013"*/ )
             //{
@@ -599,6 +665,7 @@ namespace LineProductMes
         }
         private void gridView4_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
+            decimal outRsult = 0;
             row = gridView4 . GetFocusedDataRow ( );
             if ( e . Column . FieldName == "IJD010" )
             {
@@ -659,6 +726,36 @@ namespace LineProductMes
             }
             else if ( e . Column . FieldName == "IJD008" )
             {
+                int selectIndex = gridView4 . FocusedRowHandle;
+                string ijd008Result = gridView4 . GetDataRow ( selectIndex ) [ "IJD008" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( ijd008Result ) )
+                    _bodyTre . IJD008 = 0;
+                else
+                {
+                    if ( !string . IsNullOrEmpty ( ijd008Result ) && decimal . TryParse ( ijd008Result ,out outRsult ) == false )
+                        return;
+                    else
+                        _bodyTre . IJD008 = outRsult;
+                }
+
+                for ( int i = selectIndex ; i < tableViewTre . Rows . Count ; i++ )
+                {
+                    row = tableViewTre . Rows [ i ];
+                    if ( row [ "IJD012" ] != null && row [ "IJD012" ] . ToString ( ) != string . Empty )
+                    {
+                        row . BeginEdit ( );
+                        row [ "IJD008" ] = _bodyTre . IJD008;
+                        row . EndEdit ( );
+                    }
+                    if ( i == selectIndex && ( row [ "IJD012" ] == null || row [ "IJD012" ] . ToString ( ) == string . Empty ) )
+                    {
+                        row . BeginEdit ( );
+                        row [ "IJD008" ] = DBNull . Value;
+                        row . EndEdit ( );
+                    }
+                }
+                gridControl3 . Refresh ( );
+
                 calcuSumTime ( );
             }
         }
@@ -859,7 +956,8 @@ namespace LineProductMes
             if ( _header . IJA010 )
             {
                 layoutControlItem8 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicS ( pictureEdit1 ,"审 核" );
+                //Graph . grPicS ( pictureEdit1 ,"审 核" );
+                Graph . grPicZ ( pictureEdit1 ,"审核" );
                 examineTool ( "审核" );
             }
             else
@@ -867,7 +965,8 @@ namespace LineProductMes
             if ( _header . IJA011 )
             {
                 layoutControlItem8 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicS ( pictureEdit1 ,"注 销" );
+                //Graph . grPicS ( pictureEdit1 ,"注 销" );
+                Graph . grPicZ ( pictureEdit1 ,"注销" );
                 cancelltionTool ( "注销" );
             }
             else
@@ -1224,10 +1323,10 @@ namespace LineProductMes
                         if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                         {
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                            if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                                 u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                         }
-                        else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                         row [ "IJB024" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1245,10 +1344,10 @@ namespace LineProductMes
                         if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                         {
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                            if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                                 u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                         }
-                        else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30 */)
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                         row [ "IJB023" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1288,10 +1387,10 @@ namespace LineProductMes
                         if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                         {
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                            if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                                 u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                         }
-                        else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                         row [ "IJD012" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1307,6 +1406,8 @@ namespace LineProductMes
         {
             if ( selectIdx < 0 )
                 return;
+
+            
             //tableViewOne
             if ( selectIdx < tableViewOne . Rows . Count - 1 )
             {

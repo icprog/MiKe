@@ -92,5 +92,18 @@ namespace LineProductMesBll
             }
         }
 
+        /// <summary>
+        /// 获取库名称
+        /// </summary>
+        /// <returns></returns>
+        public static string getDataBase ( )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT BAA002 FROM TPABAA" );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            return table . Rows [ 0 ] [ "BAA002" ] . ToString ( );
+        }
+
     }
 }

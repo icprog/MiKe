@@ -196,7 +196,6 @@ D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Sparkline.v
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
-D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.csprojResolveAssemblyReference.cache
 D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.buttonReP.resources
 D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.buttonRePaint.resources
 D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Form1.resources
@@ -215,7 +214,6 @@ D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraGrid.v1
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
-D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\zh-Hans\DevExpress.XtraLayout.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
@@ -236,3 +234,13 @@ D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\de\DevExpress.Office.v16.
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.UserControl1.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.ALLControl.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.ERPControl.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.BaseControl.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.PlanControl.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\bin\Debug\zh-Hans\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.csprojResolveAssemblyReference.cache
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.WorkControl.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.BoardControl.resources
+D:\ProjectData\MiKe\LineProductMes\UIControl\obj\Debug\UIControl.Main.ReportControl.resources

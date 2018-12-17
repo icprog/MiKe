@@ -17,6 +17,8 @@ namespace LineProductMesEntityu
         private string _sep010;
         private string _sep011;
         private string _sep012;
+        private string _sep013;
+        private string _sep014;
 
         /// <summary>
         /// 品号
@@ -147,6 +149,22 @@ namespace LineProductMesEntityu
         }
 
         /// <summary>
+        /// ppid
+        /// </summary>
+        public string SEP013
+        {
+            get
+            {
+                return _sep013;
+            }
+
+            set
+            {
+                _sep013 = value;
+            }
+        }
+
+        /// <summary>
         /// 组成量
         /// </summary>
         public decimal? SEP009
@@ -207,6 +225,22 @@ namespace LineProductMesEntityu
             set
             {
                 _sep012 = value;
+            }
+        }
+
+        /// <summary>
+        /// 是否外购  外购 p
+        /// </summary>
+        public string SEP014
+        {
+            get
+            {
+                return _sep014;
+            }
+
+            set
+            {
+                _sep014 = value;
             }
         }
 

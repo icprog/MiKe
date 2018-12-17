@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChild));
             this.barMenu = new DevExpress.XtraBars.Bar();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barTool = new DevExpress.XtraBars.Bar();
             this.toolQuery = new DevExpress.XtraBars.BarButtonItem();
             this.toolAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -38,15 +39,34 @@
             this.toolDelete = new DevExpress.XtraBars.BarButtonItem();
             this.toolExamin = new DevExpress.XtraBars.BarButtonItem();
             this.toolCancellation = new DevExpress.XtraBars.BarButtonItem();
-            this.toolPrint = new DevExpress.XtraBars.BarButtonItem();
-            this.toolExport = new DevExpress.XtraBars.BarButtonItem();
+            this.toolPrint = new DevExpress.XtraBars.BarSubItem();
+            this.toolPrintBase = new DevExpress.XtraBars.BarButtonItem();
+            this.toolPrintReport = new DevExpress.XtraBars.BarButtonItem();
+            this.toolPrintWork = new DevExpress.XtraBars.BarButtonItem();
+            this.toolExport = new DevExpress.XtraBars.BarSubItem();
+            this.toolExportBase = new DevExpress.XtraBars.BarButtonItem();
+            this.toopExprotReport = new DevExpress.XtraBars.BarButtonItem();
+            this.toolExportWork = new DevExpress.XtraBars.BarButtonItem();
             this.toolSave = new DevExpress.XtraBars.BarButtonItem();
             this.toolCanecl = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barLinkContainerItem1 = new DevExpress.XtraBars.BarLinkContainerItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
+            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemPopupContainerEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // barMenu
@@ -89,12 +109,29 @@
             this.toolDelete,
             this.toolExamin,
             this.toolCancellation,
-            this.toolPrint,
             this.toolExport,
             this.toolSave,
-            this.toolCanecl});
+            this.toolCanecl,
+            this.barLinkContainerItem1,
+            this.barSubItem1,
+            this.barEditItem1,
+            this.barEditItem2,
+            this.barSubItem2,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.toolPrint,
+            this.toolPrintReport,
+            this.toolPrintWork,
+            this.toolPrintBase,
+            this.toolExportBase,
+            this.toopExprotReport,
+            this.toolExportWork});
             this.barManager1.MainMenu = this.barTool;
-            this.barManager1.MaxItemId = 13;
+            this.barManager1.MaxItemId = 29;
+            this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemComboBox1,
+            this.repositoryItemPopupContainerEdit1,
+            this.repositoryItemPopupContainerEdit2});
             // 
             // barTool
             // 
@@ -191,8 +228,62 @@
             this.toolPrint.Id = 6;
             this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
             this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.toolPrintBase),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.toolPrintReport, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.toolPrintWork)});
             this.toolPrint.Name = "toolPrint";
-            this.toolPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toolPrint_ItemClick);
+            // 
+            // toolPrintBase
+            // 
+            this.toolPrintBase.Caption = "打印";
+            this.toolPrintBase.Id = 25;
+            this.toolPrintBase.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrintBase.ImageOptions.Image")));
+            this.toolPrintBase.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrintBase.ImageOptions.LargeImage")));
+            this.toolPrintBase.ItemAppearance.Disabled.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolPrintBase.ItemAppearance.Disabled.Options.UseFont = true;
+            this.toolPrintBase.ItemAppearance.Hovered.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.toolPrintBase.ItemAppearance.Hovered.Options.UseFont = true;
+            this.toolPrintBase.ItemAppearance.Normal.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.toolPrintBase.ItemAppearance.Normal.Options.UseFont = true;
+            this.toolPrintBase.ItemAppearance.Pressed.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.toolPrintBase.ItemAppearance.Pressed.Options.UseFont = true;
+            this.toolPrintBase.Name = "toolPrintBase";
+            this.toolPrintBase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toolPrintBase_ItemClick);
+            // 
+            // toolPrintReport
+            // 
+            this.toolPrintReport.Caption = "报工单";
+            this.toolPrintReport.Id = 23;
+            this.toolPrintReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrintReport.ImageOptions.Image")));
+            this.toolPrintReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrintReport.ImageOptions.LargeImage")));
+            this . toolPrintReport . ItemAppearance . Disabled . Font = new System . Drawing . Font ( "宋体" ,10.5F ,System . Drawing . FontStyle . Regular ,System . Drawing . GraphicsUnit . Point ,( ( byte ) ( 0 ) ) );
+            this . toolPrintReport . ItemAppearance . Disabled . Options . UseFont = true;
+            this . toolPrintReport . ItemAppearance . Hovered . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolPrintReport . ItemAppearance . Hovered . Options . UseFont = true;
+            this . toolPrintReport . ItemAppearance . Normal . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolPrintReport . ItemAppearance . Normal . Options . UseFont = true;
+            this . toolPrintReport . ItemAppearance . Pressed . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolPrintReport . ItemAppearance . Pressed . Options . UseFont = true;
+            this .toolPrintReport.Name = "toolPrintReport";
+            this.toolPrintReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toolPrintReport_ItemClick);
+            // 
+            // toolPrintWork
+            // 
+            this.toolPrintWork.Caption = "入库单";
+            this.toolPrintWork.Id = 24;
+            this.toolPrintWork.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrintWork.ImageOptions.Image")));
+            this.toolPrintWork.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrintWork.ImageOptions.LargeImage")));
+            this . toolPrintWork . ItemAppearance . Disabled . Font = new System . Drawing . Font ( "宋体" ,10.5F ,System . Drawing . FontStyle . Regular ,System . Drawing . GraphicsUnit . Point ,( ( byte ) ( 0 ) ) );
+            this . toolPrintWork . ItemAppearance . Disabled . Options . UseFont = true;
+            this . toolPrintWork . ItemAppearance . Hovered . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolPrintWork . ItemAppearance . Hovered . Options . UseFont = true;
+            this . toolPrintWork . ItemAppearance . Normal . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolPrintWork . ItemAppearance . Normal . Options . UseFont = true;
+            this . toolPrintWork . ItemAppearance . Pressed . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolPrintWork . ItemAppearance . Pressed . Options . UseFont = true;
+            this .toolPrintWork.Name = "toolPrintWork";
+            this.toolPrintWork.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toolPrintWork_ItemClick);
             // 
             // toolExport
             // 
@@ -200,8 +291,63 @@
             this.toolExport.Id = 7;
             this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
             this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.toolExportBase, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.toopExprotReport),
+            new DevExpress.XtraBars.LinkPersistInfo(this.toolExportWork)});
             this.toolExport.Name = "toolExport";
             this.toolExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toolExport_ItemClick);
+            // 
+            // toolExportBase
+            // 
+            this.toolExportBase.Caption = "导出";
+            this.toolExportBase.Id = 26;
+            this.toolExportBase.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExportBase.ImageOptions.Image")));
+            this.toolExportBase.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExportBase.ImageOptions.LargeImage")));
+            this . toolExportBase . ItemAppearance . Disabled . Font = new System . Drawing . Font ( "宋体" ,10.5F ,System . Drawing . FontStyle . Regular ,System . Drawing . GraphicsUnit . Point ,( ( byte ) ( 0 ) ) );
+            this . toolExportBase . ItemAppearance . Disabled . Options . UseFont = true;
+            this . toolExportBase . ItemAppearance . Hovered . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolExportBase . ItemAppearance . Hovered . Options . UseFont = true;
+            this . toolExportBase . ItemAppearance . Normal . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolExportBase . ItemAppearance . Normal . Options . UseFont = true;
+            this . toolExportBase . ItemAppearance . Pressed . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolExportBase . ItemAppearance . Pressed . Options . UseFont = true;
+            this .toolExportBase.Name = "toolExportBase";
+            this.toolExportBase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toolExportBase_ItemClick);
+            // 
+            // toopExprotReport
+            // 
+            this.toopExprotReport.Caption = "报工单";
+            this.toopExprotReport.Id = 27;
+            this.toopExprotReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toopExprotReport.ImageOptions.Image")));
+            this.toopExprotReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toopExprotReport.ImageOptions.LargeImage")));
+            this . toopExprotReport . ItemAppearance . Disabled . Font = new System . Drawing . Font ( "宋体" ,10.5F ,System . Drawing . FontStyle . Regular ,System . Drawing . GraphicsUnit . Point ,( ( byte ) ( 0 ) ) );
+            this . toopExprotReport . ItemAppearance . Disabled . Options . UseFont = true;
+            this . toopExprotReport . ItemAppearance . Hovered . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toopExprotReport . ItemAppearance . Hovered . Options . UseFont = true;
+            this . toopExprotReport . ItemAppearance . Normal . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toopExprotReport . ItemAppearance . Normal . Options . UseFont = true;
+            this . toopExprotReport . ItemAppearance . Pressed . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toopExprotReport . ItemAppearance . Pressed . Options . UseFont = true;
+            this .toopExprotReport.Name = "toopExprotReport";
+            this.toopExprotReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toopExprotReport_ItemClick);
+            // 
+            // toolExportWork
+            // 
+            this.toolExportWork.Caption = "入库单";
+            this.toolExportWork.Id = 28;
+            this.toolExportWork.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExportWork.ImageOptions.Image")));
+            this.toolExportWork.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExportWork.ImageOptions.LargeImage")));
+            this . toolExportWork . ItemAppearance . Disabled . Font = new System . Drawing . Font ( "宋体" ,10.5F ,System . Drawing . FontStyle . Regular ,System . Drawing . GraphicsUnit . Point ,( ( byte ) ( 0 ) ) );
+            this . toolExportWork . ItemAppearance . Disabled . Options . UseFont = true;
+            this . toolExportWork . ItemAppearance . Hovered . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolExportWork . ItemAppearance . Hovered . Options . UseFont = true;
+            this . toolExportWork . ItemAppearance . Normal . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolExportWork . ItemAppearance . Normal . Options . UseFont = true;
+            this . toolExportWork . ItemAppearance . Pressed . Font = new System . Drawing . Font ( "宋体" ,10.5F );
+            this . toolExportWork . ItemAppearance . Pressed . Options . UseFont = true;
+            this .toolExportWork.Name = "toolExportWork";
+            this.toolExportWork.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.toolExportWork_ItemClick);
             // 
             // toolSave
             // 
@@ -255,6 +401,75 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 414);
             // 
+            // barLinkContainerItem1
+            // 
+            this.barLinkContainerItem1.Caption = "打印";
+            this.barLinkContainerItem1.Id = 15;
+            this.barLinkContainerItem1.MultiColumn = DevExpress.Utils.DefaultBoolean.True;
+            this.barLinkContainerItem1.Name = "barLinkContainerItem1";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "打印";
+            this.barSubItem1.Id = 16;
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "打印";
+            this.barEditItem1.Edit = this.repositoryItemPopupContainerEdit1;
+            this.barEditItem1.Id = 17;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemPopupContainerEdit1
+            // 
+            this.repositoryItemPopupContainerEdit1.AutoHeight = false;
+            this.repositoryItemPopupContainerEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemPopupContainerEdit1.Name = "repositoryItemPopupContainerEdit1";
+            // 
+            // barEditItem2
+            // 
+            this.barEditItem2.Caption = "barEditItem2";
+            this.barEditItem2.Edit = this.repositoryItemPopupContainerEdit2;
+            this.barEditItem2.Id = 18;
+            this.barEditItem2.Name = "barEditItem2";
+            // 
+            // repositoryItemPopupContainerEdit2
+            // 
+            this.repositoryItemPopupContainerEdit2.AutoHeight = false;
+            this.repositoryItemPopupContainerEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemPopupContainerEdit2.Name = "repositoryItemPopupContainerEdit2";
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "打印";
+            this.barSubItem2.Id = 19;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "报工单";
+            this.barButtonItem1.Id = 20;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "入库单";
+            this.barButtonItem2.Id = 21;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
             // FormChild
             // 
             this.Appearance.Options.UseFont = true;
@@ -270,6 +485,9 @@
             this.Text = "FormChild";
             this.Load += new System.EventHandler(this.FormChild_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,10 +506,26 @@
         public DevExpress . XtraBars . BarButtonItem toolDelete;
         public DevExpress . XtraBars . BarButtonItem toolExamin;
         public DevExpress . XtraBars . BarButtonItem toolCancellation;
-        public DevExpress . XtraBars . BarButtonItem toolPrint;
-        public DevExpress . XtraBars . BarButtonItem toolExport;
+        public DevExpress . XtraBars . BarSubItem toolExport;
         public DevExpress . XtraBars . BarButtonItem toolSave;
         public DevExpress . XtraBars . BarButtonItem toolCanecl;
         public DevExpress . XtraBars . BarManager barManager1;
+        private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress . XtraBars . BarLinkContainerItem barLinkContainerItem1;
+        private DevExpress . XtraBars . BarSubItem barSubItem1;
+        private DevExpress . XtraBars . BarEditItem barEditItem1;
+        private DevExpress . XtraEditors . Repository . RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit1;
+        private DevExpress . XtraBars . BarEditItem barEditItem2;
+        private DevExpress . XtraEditors . Repository . RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit2;
+        private DevExpress . XtraBars . BarSubItem barSubItem2;
+        private DevExpress . XtraBars . BarButtonItem barButtonItem1;
+        private DevExpress . XtraBars . BarButtonItem barButtonItem2;
+        private DevExpress . XtraBars . BarButtonItem toolPrintReport;
+        private DevExpress . XtraBars . BarButtonItem toolPrintWork;
+        public DevExpress . XtraBars . BarSubItem toolPrint;
+        private DevExpress . XtraBars . BarButtonItem toolPrintBase;
+        private DevExpress . XtraBars . BarButtonItem toolExportBase;
+        private DevExpress . XtraBars . BarButtonItem toopExprotReport;
+        private DevExpress . XtraBars . BarButtonItem toolExportWork;
     }
 }

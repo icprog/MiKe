@@ -22,6 +22,8 @@ namespace LineProductMesEntityu
         private bool _ija011;
         private decimal? _ija012;
         private decimal? _ija013;
+        private string _ija014;
+
 
         /// <summary>
         /// 
@@ -219,6 +221,21 @@ namespace LineProductMesEntityu
             set
             {
                 _ija013 = value;
+            }
+        }
+        /// <summary>
+        /// 制单
+        /// </summary>
+        public string IJA014
+        {
+            get
+            {
+                return _ija014;
+            }
+
+            set
+            {
+                _ija014 = value;
             }
         }
     }

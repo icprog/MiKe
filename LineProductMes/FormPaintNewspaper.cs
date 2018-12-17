@@ -33,7 +33,6 @@ namespace LineProductMes
 
         DateTime dt;
 
-
         public FormPaintNewspaper ( )
         {
             InitializeComponent ( );
@@ -82,11 +81,11 @@ namespace LineProductMes
                 tableViewTwo = _bll . tableViewTwo ( strWhere );
                 gridControl2 . DataSource = tableViewTwo;
 
-                calcuSalaryNumSum ( );
+                //calcuSalaryNumSum ( );
                 calcuSalarySum ( );
-                calcuSalaryTimeSum ( );
+                //calcuSalaryTimeSum ( );
                 calcuTimeSum ( );
-                calcuSalaryEveryone ( );
+                //calcuSalaaryEveryWork ( );
 
                 editOtherSur ( string . Empty ,string . Empty );
 
@@ -107,6 +106,7 @@ namespace LineProductMes
             tableViewTwo = _bll . tableViewTwo ( "1=2" );
             gridControl2 . DataSource = tableViewTwo;
             txtPAN003 . EditValue = "0503";
+            txtPAN013 . Text = "计件";
             txtPAN006 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
             addTool ( );
 
@@ -182,7 +182,8 @@ namespace LineProductMes
                 if ( state . Equals ( "审核" ) )
                 {
                     layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicS ( pictureEdit1 ,"审 核" );
+                    //Graph . grPicS ( pictureEdit1 ,"审 核" );
+                    Graph . grPic ( pictureEdit1 ,"审核" );
                 }
                 else
                 {
@@ -215,7 +216,8 @@ namespace LineProductMes
                 if ( state . Equals ( "注销" ) )
                 {
                     layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicS ( pictureEdit1 ,"注 销" );
+                    //Graph . grPicS ( pictureEdit1 ,"注 销" );
+                    Graph . grPic ( pictureEdit1 ,"注销" );
                 }
                 else
                 {
@@ -228,19 +230,19 @@ namespace LineProductMes
 
             return base . Cancellation ( );
         }
-        protected override int Print ( )
+        protected override int PrintWork ( )
         {
             getPrintOrExport ( );
             Print ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Print ( );
+            return base . PrintWork ( );
         }
-        protected override int Export ( )
+        protected override int ExportWork ( )
         {
             getPrintOrExport ( );
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Export ( );
+            return base . ExportWork ( );
         }
         #endregion
 
@@ -289,11 +291,11 @@ namespace LineProductMes
                     tableViewTwo = _bll . tableViewTwo ( strWhere );
                     gridControl2 . DataSource = tableViewTwo;
 
-                    calcuSalaryNumSum ( );
+                    //calcuSalaryNumSum ( );
                     calcuSalarySum ( );
-                    calcuSalaryTimeSum ( );
+                    //calcuSalaryTimeSum ( );
                     calcuTimeSum ( );
-                    calcuSalaryEveryone ( );
+                    //calcuSalaaryEveryWork ( );
 
                     editOtherSur ( string . Empty ,string . Empty );
                 }
@@ -324,6 +326,8 @@ namespace LineProductMes
                 _bodyOne . PAO006 = string . IsNullOrEmpty ( row [ "DEA050" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "DEA050" ] . ToString ( ) );
                 _bodyOne . PAO007 = row [ "DEA003" ] . ToString ( );
                 _bodyOne . PAO008 = row [ "DEA057" ] . ToString ( );
+                if ( tableViewOne . Select ( "PAO002='" + _bodyOne . PAO002 + "' AND PAO003='" + _bodyOne . PAO003 + "'" ) . Length > 0 )
+                    return;
                 gridView1 . SetFocusedRowCellValue ( gridView1 . Columns [ "PAO003" ] ,_bodyOne . PAO003 );
                 gridView1 . SetFocusedRowCellValue ( gridView1 . Columns [ "PAO004" ] ,_bodyOne . PAO004 );
                 gridView1 . SetFocusedRowCellValue ( gridView1 . Columns [ "PAO005" ] ,_bodyOne . PAO005 );
@@ -336,55 +340,67 @@ namespace LineProductMes
                 //Edit2 . ValueMember = "ART002";
                 gridView1 . SetFocusedRowCellValue ( gridView1 . Columns [ "PAO002" ] ,_bodyOne . PAO002 );
 
-                DataTable tableArt = _bll . getTableArt ( _bodyOne . PAO003 );
+
+                DataTable tableArt = _bll . getTableArtForAll ( _bodyOne . PAO003 );
                 if ( tableArt == null || tableArt . Rows . Count < 1 )
                     return;
+
                 gridView1 . CloseEditor ( );
                 gridView1 . UpdateCurrentRow ( );
 
-                DataRow rw;
+                //DataRow rw;
 
                 if ( tableViewOne . Select ( "PAO002='" + _bodyOne . PAO002 + "' AND PAO003='" + _bodyOne . PAO003 + "'" ) . Length > 0 )
                 {
-                    DataRow [ ] rows = tableViewOne . Select ( "PAO002='" + _bodyOne . PAO002 + "' AND PAO003='" + _bodyOne . PAO003 + "'" );
-                    int i = 0;
-                    foreach ( DataRow row in rows )
+                    if ( tableArt != null && tableArt . Rows . Count > 0 )
                     {
-                        if ( row [ "PAO009" ] == null || row [ "PAO009" ] . ToString ( ) == string . Empty )
+                        _bodyOne . PAO009 = string . Empty;
+                        foreach ( DataRow row in tableArt . Rows )
                         {
-                            if ( tableArt != null && tableArt . Rows . Count > 0 )
-                            {
-                                rw = tableArt . Rows [ i ];
-                                row [ "PAO009" ] = rw [ "ART002" ];
-                                row [ "PAO010" ] = rw [ "ART003" ];
-                                row [ "PAO011" ] = rw [ "ART004" ];
-                                row [ "PAO013" ] = rw [ "ART011" ];
-                            }
-                        }
-                        i++;
-                    }
-                    if ( i <= tableArt . Rows . Count - 1 )
-                    {
-                        DataRow row = tableViewOne . Select ( "PAO002='" + _bodyOne . PAO002 + "' AND PAO003='" + _bodyOne . PAO003 + "'" ) [ 0 ];
-                        DataRow r;
-                        for ( int j = i ; j < tableArt . Rows . Count ; j++ )
-                        {
-                            rw = tableArt . Rows [ j ];
-                            r = tableViewOne . NewRow ( );
-                            r [ "PAO002" ] = row [ "PAO002" ];
-                            r [ "PAO003" ] = row [ "PAO003" ];
-                            r [ "PAO004" ] = row [ "PAO004" ];
-                            r [ "PAO005" ] = row [ "PAO005" ];
-                            r [ "PAO006" ] = row [ "PAO006" ];
-                            r [ "PAO007" ] = row [ "PAO007" ];
-                            r [ "PAO008" ] = row [ "PAO008" ];
-                            r [ "PAO009" ] = rw [ "ART002" ];
-                            r [ "PAO010" ] = rw [ "ART003" ];
-                            r [ "PAO011" ] = rw [ "ART004" ];
-                            r [ "PAO013" ] = rw [ "ART011" ];
-                            tableViewOne . Rows . Add ( r );
+                            if ( _bodyOne . PAO009 == string . Empty )
+                                _bodyOne . PAO009 = row [ "ART" ] . ToString ( );
+                            else
+                                _bodyOne . PAO009 = _bodyOne . PAO009 + " | " + row [ "ART" ] . ToString ( );
                         }
                     }
+
+                    DataRow rows = tableViewOne . Select ( "PAO002='" + _bodyOne . PAO002 + "' AND PAO003='" + _bodyOne . PAO003 + "'" )[0];
+                    rows [ "PAO010" ] = _bodyOne . PAO009;
+                    //int i = 0;
+                    //foreach ( DataRow row in rows )
+                    //{
+                    //    if ( row [ "PAO010" ] == null || row [ "PAO010" ] . ToString ( ) == string . Empty )
+                    //    {
+                    //        if ( tableArt != null && tableArt . Rows . Count > 0 && i < tableArt . Rows . Count )
+                    //        {
+                    //            rw = tableArt . Rows [ i ];
+                    //            row [ "PAO010" ] = rw [ "ART" ];
+                    //        }
+                    //    }
+                    //    i++;
+                    //}
+                    //if ( i <= tableArt . Rows . Count - 1 )
+                    //{
+                    //    DataRow row = tableViewOne . Select ( "PAO002='" + _bodyOne . PAO002 + "' AND PAO003='" + _bodyOne . PAO003 + "'" ) [ 0 ];
+                    //    DataRow r;
+                    //    for ( int j = i ; j < tableArt . Rows . Count ; j++ )
+                    //    {
+                    //        rw = tableArt . Rows [ j ];
+                    //        r = tableViewOne . NewRow ( );
+                    //        r [ "PAO002" ] = row [ "PAO002" ];
+                    //        r [ "PAO003" ] = row [ "PAO003" ];
+                    //        r [ "PAO004" ] = row [ "PAO004" ];
+                    //        r [ "PAO005" ] = row [ "PAO005" ];
+                    //        r [ "PAO006" ] = row [ "PAO006" ];
+                    //        r [ "PAO007" ] = row [ "PAO007" ];
+                    //        r [ "PAO008" ] = row [ "PAO008" ];
+                    //        r [ "PAO009" ] = rw [ "ART002" ];
+                    //        r [ "PAO010" ] = rw [ "ART003" ];
+                    //        r [ "PAO011" ] = rw [ "ART004" ];
+                    //        r [ "PAO013" ] = rw [ "ART011" ];
+                    //        tableViewOne . Rows . Add ( r );
+                    //    }
+                    //}
                 }
 
                 editOtherSur ( _bodyOne . PAO002 ,_bodyOne . PAO003 );
@@ -426,6 +442,8 @@ namespace LineProductMes
                 _bodyTwo . PPA003 = row [ "EMP002" ] . ToString ( );
                 _bodyTwo . PPA004 = row [ "EMP007" ] . ToString ( );
                 _bodyTwo . PPA011 = row [ "DAA002" ] . ToString ( );
+                if ( tableViewTwo . Select ( "PPA002='" + edit . EditValue + "'" ) . Length > 0 )
+                    return;
                 bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "PPA003" ] ,_bodyTwo . PPA003 );
                 bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "PPA004" ] ,_bodyTwo . PPA004 );
                 bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "PPA010" ] ,"在职" );
@@ -440,7 +458,8 @@ namespace LineProductMes
                 return;
             if ( e . Column . FieldName == "PAO011" || e . Column . FieldName == "PAO012" )
             {
-                calcuSalaryNumSum ( );
+                calcuTimeSum ( );
+                //calcuSalaaryEveryWork ( );
             }
         }
         private void txtu0_TextChanged ( object sender ,EventArgs e )
@@ -498,7 +517,36 @@ namespace LineProductMes
             }
             if ( e . Column . FieldName == "PPA009" )
             {
-                calcuSalaryTimeSum ( );
+                int selectIndex = bandedGridView1 . FocusedRowHandle;
+                string ppa009Result = bandedGridView1 . GetDataRow ( selectIndex ) [ "PPA009" ] . ToString ( );
+
+                if ( string . IsNullOrEmpty ( ppa009Result ) )
+                    _bodyTwo . PPA009 = 0;
+                else
+                    _bodyTwo . PPA009 = Convert . ToDecimal ( ppa009Result );
+
+                for ( int i = selectIndex ; i < tableViewTwo . Rows . Count ; i++ )
+                {
+                    row = tableViewTwo . Rows [ i ];
+                    if ( row [ "PPA013" ] != null && row [ "PPA013" ] . ToString ( ) != string . Empty )
+                    {
+                        if ( row [ "PPA009" ] == null || row [ "PPA009" ] . ToString ( ) == string . Empty )
+                        {
+                            row . BeginEdit ( );
+                            row [ "PPA009" ] = _bodyTwo . PPA009;
+                            row . EndEdit ( );
+                        }
+                    }
+                    if ( i == selectIndex && ( row [ "PPA013" ] == null || row [ "PPA013" ] . ToString ( ) == string . Empty ) )
+                    {
+                        row . BeginEdit ( );
+                        row [ "PPA009" ] = DBNull . Value;
+                        row . EndEdit ( );
+                    }
+                }
+                gridControl2 . Refresh ( );
+
+                calcuTimeSum ( );
             }
             else if ( e . Column . FieldName == "PPA005" )
             {
@@ -519,6 +567,7 @@ namespace LineProductMes
                         }
                     }
                 }
+                //calcuTimeSum ( );
                 addRow ( "PPA005" ,e . RowHandle ,e . Value );
             }
             else if ( e . Column . FieldName == "PPA006" )
@@ -540,6 +589,7 @@ namespace LineProductMes
                         }
                     }
                 }
+                //calcuTimeSum ( );
                 addRow ( "PPA006" ,e . RowHandle ,e . Value );
             }
             else if ( e . Column . FieldName == "PPA007" )
@@ -561,7 +611,7 @@ namespace LineProductMes
                         }
                     }
                 }
-                calcuSalaryTimeSum ( );
+                //calcuTimeSum ( );
                 addRow ( "PPA007" ,e . RowHandle ,e . Value );
             }
             else if ( e . Column . FieldName == "PPA008" )
@@ -576,17 +626,17 @@ namespace LineProductMes
                         }
                     }
                 }
-                calcuSalaryTimeSum ( );
+                //calcuTimeSum ( );
                 addRow ( "PPA008" ,e . RowHandle ,e . Value );
             }
         }
         private void txtu2_TextChanged ( object sender ,EventArgs e )
         {
-            calcuSalaryEveryone ( );
+            calcuSalaaryEveryWork ( );
         }
         private void txtu3_TextChanged ( object sender ,EventArgs e )
         {
-            calcuSalaryEveryone ( );
+            calcuSalaaryEveryWork ( );
         }
         private void txtPAN005_EditValueChanged ( object sender ,EventArgs e )
         {
@@ -675,12 +725,12 @@ namespace LineProductMes
         private void textEdit2_TextChanged ( object sender ,EventArgs e )
         {
             calcuTimeSum ( );
-            calcuSalaryTimeSum ( );
+            //calcuSalaryTimeSum ( );
         }
         private void textEdit1_TextChanged ( object sender ,EventArgs e )
         {
             calcuTimeSum ( );
-            calcuSalaryTimeSum ( );
+            //calcuSalaryTimeSum ( );
         }
         private void gridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
         {
@@ -716,22 +766,61 @@ namespace LineProductMes
                 }
             }
         }
+        private void txtPAN013_SelectedValueChanged ( object sender ,EventArgs e )
+        {
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
+                return;
+
+            foreach ( DataRow row in tableViewTwo . Rows )
+            {
+                if ( txtPAN013 . Text == string . Empty )
+                {
+                    row [ "PPA005" ] = DBNull . Value;
+                    row [ "PPA006" ] = DBNull . Value;
+                    row [ "PPA007" ] = DBNull . Value;
+                    row [ "PPA008" ] = DBNull . Value;
+                    row [ "PPA012" ] = DBNull . Value;
+                    row [ "PPA013" ] = DBNull . Value;
+                }
+                else if ( txtPAN013 . Text . Equals ( "计件" ) )
+                {
+                    row [ "PPA005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    row [ "PPA006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "PPA007" ] = DBNull . Value;
+                    row [ "PPA008" ] = DBNull . Value;
+                    row [ "PPA013" ] = DBNull . Value;
+                }
+                else if ( txtPAN013 . Text . Equals ( "计时" ) )
+                {
+                    row [ "PPA005" ] = DBNull . Value;
+                    row [ "PPA006" ] = DBNull . Value;
+                    row [ "PPA012" ] = DBNull . Value;
+                    row [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    row [ "PPA008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    //row [ "PPA013" ] = DBNull . Value;
+                }
+                calcuTimeSum ( );
+            }
+        }
         #endregion
 
         #region Method
         void controlUnEnable ( )
         {
-             txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly =txtPAN011.ReadOnly=txtPAN012.ReadOnly= true;
+             txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly =txtPAN011.ReadOnly=txtPAN012.ReadOnly=txtPAN013.ReadOnly= true;
             bandedGridView1 . OptionsBehavior . Editable = gridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly = txtPAN011 . ReadOnly = txtPAN012 . ReadOnly = false;
+            txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly = txtPAN011 . ReadOnly = txtPAN012 . ReadOnly = txtPAN013 . ReadOnly = false;
             bandedGridView1 . OptionsBehavior . Editable = gridView1 . OptionsBehavior . Editable = true;
         }
         void controlClear ( )
         {
-            txtPAN001 . Text = txtPAN003 . Text = txtPAN005 . Text = txtPAN006 . Text = txtPAN007 . Text = txtPAN011 . Text = txtPAN012 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text = string . Empty;
+            txtPAN001 . Text = txtPAN003 . Text = txtPAN005 . Text = txtPAN006 . Text = txtPAN007 . Text = txtPAN011 . Text = txtPAN012 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text =txtPAN013.Text= string . Empty;
             gridControl1 . DataSource = gridControl2 . DataSource = null;
             layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             wait . Hide ( );
@@ -773,12 +862,14 @@ namespace LineProductMes
             //txtPAN008 . Text = _header . PAN008;
             txtPAN011 . Text = Convert . ToDecimal ( _header . PAN011 ) . ToString ( "0.#" );
             txtPAN012 . Text = Convert . ToDecimal ( _header . PAN012 ) . ToString ( "0.#" );
+            txtPAN013 . Text = _header . PAN013;
             layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             Graph . grPic ( pictureEdit1 ,"反" );
             if ( _header . PAN009 )
             {
                 layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicS ( pictureEdit1 ,"审 核" );
+                //Graph . grPicS ( pictureEdit1 ,"审 核" );
+                Graph . grPic ( pictureEdit1 ,"审核" );
                 examineTool ( "审核" );
             }
             else
@@ -786,7 +877,8 @@ namespace LineProductMes
             if ( _header . PAN010 )
             {
                 layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicS ( pictureEdit1 ,"注 销" );
+                //Graph . grPicS ( pictureEdit1 ,"注 销" );
+                Graph . grPic ( pictureEdit1 ,"注销" );
                 cancelltionTool ( "注销" );
             }
             else
@@ -811,37 +903,52 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "班组不可为空" );
                 return false;
             }
+            if ( string . IsNullOrEmpty ( txtPAN013 . Text ) )
+            {
+                XtraMessageBox . Show ( "工资类型不可为空" );
+                return false;
+            }
 
             gridView1 . CloseEditor ( );
             gridView1 . UpdateCurrentRow ( );
-            if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
-                return false;
+            if ( txtPAN013 . Text . Equals ( "计件" ) )
+            {
+                if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
+                {
+                    XtraMessageBox . Show ( "请选择来源工单等信息" );
+                    return false;
+                }
+            }
 
             gridView1 . ClearColumnErrors ( );
-            
+
             for ( int i = 0 ; i < gridView1 . RowCount ; i++ )
             {
                 row = gridView1 . GetDataRow ( i );
                 if ( row == null )
                     continue;
-                if ( row [ "PAO002" ] == null || row [ "PAO002" ] . ToString ( ) == string . Empty )
+                if ( txtPAN013 . Text . Equals ( "计件" ) )
                 {
-                    row . SetColumnError ( "PAO002" ,"不可为空" );
-                    result = false;
-                    break;
+                    if ( row [ "PAO002" ] == null || row [ "PAO002" ] . ToString ( ) == string . Empty )
+                    {
+                        row . SetColumnError ( "PAO002" ,"不可为空" );
+                        result = false;
+                        break;
+                    }
+                    //if ( row [ "PAO013" ] == null || row [ "PAO013" ] . ToString ( ) == string . Empty )
+                    //{
+                    //    row . SetColumnError ( "PAO013" ,"不可为空" );
+                    //    result = false;
+                    //    break;
+                    //}
+                    if ( row [ "PAO012" ] == null || row [ "PAO012" ] . ToString ( ) == string . Empty )
+                    {
+                        row . SetColumnError ( "PAO012" ,"不可为空" );
+                        result = false;
+                        break;
+                    }
                 }
-                if ( row [ "PAO013" ] == null || row [ "PAO013" ] . ToString ( ) == string . Empty )
-                {
-                    row . SetColumnError ( "PAO013" ,"不可为空" );
-                    result = false;
-                    break;
-                }
-                if ( row [ "PAO012" ] == null || row [ "PAO012" ] . ToString ( ) == string . Empty )
-                {
-                    row . SetColumnError ( "PAO012" ,"不可为空" );
-                    result = false;
-                    break;
-                }
+
                 _bodyOne . PAO005 = string . IsNullOrEmpty ( row [ "U5" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "U5" ] . ToString ( ) );
                 _bodyOne . PAO012 = Convert . ToInt32 ( row [ "PAO012" ] . ToString ( ) );
                 if ( _bodyOne . PAO012 > _bodyOne . PAO005 )
@@ -855,34 +962,34 @@ namespace LineProductMes
             if ( result == false )
                 return false;
 
-            var query = from p in tableViewOne . AsEnumerable ( )
-                        group p by new
-                        {
-                            p1 = p . Field<string> ( "PAO002" ),
-                            p2 = p . Field<string> ( "PAO013" )
-                        } into m
-                        select new
-                        {
-                            pao002 = m . Key . p1 ,
-                            pao013 = m . Key . p2 ,
-                            count = m . Count ( )
-                        };
+            //var query = from p in tableViewOne . AsEnumerable ( )
+            //            group p by new
+            //            {
+            //                p1 = p . Field<string> ( "PAO002" ),
+            //                p2 = p . Field<string> ( "PAO013" )
+            //            } into m
+            //            select new
+            //            {
+            //                pao002 = m . Key . p1 ,
+            //                pao013 = m . Key . p2 ,
+            //                count = m . Count ( )
+            //            };
 
-            if ( query != null )
-            {
-                foreach ( var x in query )
-                {
-                    if ( x . count > 1 )
-                    {
-                        XtraMessageBox . Show ( "来源工单:" + x . pao002 + "\n\r序号:" + x . pao013 + "\n\r重复,请核实" );
-                        result = false;
-                        break;
-                    }
-                }
-            }
+            //if ( query != null )
+            //{
+            //    foreach ( var x in query )
+            //    {
+            //        if ( x . count > 1 )
+            //        {
+            //            XtraMessageBox . Show ( "来源工单:" + x . pao002 + "\n\r序号:" + x . pao013 + "\n\r重复,请核实" );
+            //            result = false;
+            //            break;
+            //        }
+            //    }
+            //}
 
-            if ( result == false )
-                return false;
+            //if ( result == false )
+            //    return false;
 
             bandedGridView1 . CloseEditor ( );
             bandedGridView1 . UpdateCurrentRow ( );
@@ -942,6 +1049,7 @@ namespace LineProductMes
             _header . PAN009 = _header . PAN010 = false;
             _header . PAN011 = string . IsNullOrEmpty ( txtPAN011 . Text ) == true ? 0 : Convert . ToDecimal ( txtPAN011 . Text );
             _header . PAN012 = string . IsNullOrEmpty ( txtPAN012 . Text ) == true ? 0 : Convert . ToDecimal ( txtPAN012 . Text );
+            _header . PAN013 = txtPAN013 . Text;
 
             return result;
         }
@@ -950,7 +1058,10 @@ namespace LineProductMes
             gridView1 . CloseEditor ( );
             gridView1 . UpdateCurrentRow ( );
 
-            txtu0 . Text = U0 . SummaryItem . SummaryValue == null ? 0 . ToString ( ) : Convert . ToDecimal ( U0 . SummaryItem . SummaryValue ) . ToString ( "0.#" );
+            if ( "计件" . Equals ( txtPAN013 . Text ) )
+                txtu0 . Text = U0 . SummaryItem . SummaryValue == null ? 0 . ToString ( ) : Convert . ToDecimal ( U0 . SummaryItem . SummaryValue ) . ToString ( "0.#" );
+            else
+                txtu0 . Text = 0 . ToString ( );
         }
         void calcuSalarySum ( )
         {
@@ -962,7 +1073,7 @@ namespace LineProductMes
             bandedGridView1 . UpdateCurrentRow ( );
 
             txtu1 . Text = U3 . SummaryItem . SummaryValue == null ? 0 . ToString ( ) :Convert.ToDecimal( U3 . SummaryItem . SummaryValue) . ToString ( "0.#" );
-            calcuSalaryEveryone ( );
+            calcuSalaaryEveryWork ( );
         }
         void calcuTimeSum ( )
         {
@@ -998,10 +1109,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "PPA012" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1018,10 +1129,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "PPA013" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1031,10 +1142,105 @@ namespace LineProductMes
             }
 
             txtu3 . Text = U4 . SummaryItem . SummaryValue == null ? 0 . ToString ( ) : Convert . ToDecimal ( U4 . SummaryItem . SummaryValue ) . ToString ( "0.#" );
-            calcuSalaryEveryone ( );
+            calcuSalaaryEveryWork ( );
+            calcuSalaryTimeSum ( );
+            calcuSalaryNumSum ( );
+        }
+        void calcuSalaaryEveryWork ( )
+        {
+            txtu4 . Text = ( ( string . IsNullOrEmpty ( txtu2 . Text ) == true ? 0 : Convert . ToDecimal ( txtu2 . Text ) ) * Convert . ToDecimal ( 0.05 ) ) . ToString ( "0.######" );
+
+            decimal timeSum = 0, timeAll = 0, salarySum = 0M;
+
+            gridView1 . CloseEditor ( );
+            gridView1 . UpdateCurrentRow ( );
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            string piNum = string . Empty;
+
+            Dictionary<string ,decimal> gs = new Dictionary<string ,decimal> ( );
+
+            if ( "计件" . Equals ( txtPAN013 . Text ) )
+            {
+                if ( tableViewOne != null && tableViewOne . Rows . Count > 0 )
+                {
+                    foreach ( DataRow row in tableViewOne . Rows )
+                    {
+                        if ( piNum == string . Empty )
+                            piNum = "'" + row [ "PAO003" ] + "'";
+                        else
+                            piNum = piNum + "," + "'" + row [ "PAO003" ] + "'";
+                    }
+                    DataTable tableA = _bll . getTableA ( piNum );
+                    if ( tableA != null || tableA . Rows . Count > 0 )
+                    {
+                        foreach ( DataRow row in tableA . Rows )
+                        {
+                            _bodyOne . PAO009 = row [ "ART001" ] . ToString ( );
+                            _bodyOne . PAO013 = row [ "ART013" ] . ToString ( );
+                            _bodyOne . PAO011 = string . IsNullOrEmpty ( row [ "ART004" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ART004" ] );
+                            DataRow rowSe = tableViewOne . Select ( "PAO003='" + _bodyOne . PAO009 + "'" ) [ 0 ];
+                            _bodyOne . PAO012 = Convert . ToInt32 ( rowSe [ "PAO012" ] );
+                            if ( gs . ContainsKey ( _bodyOne . PAO013 ) )
+                                gs [ _bodyOne . PAO013 ] = Convert . ToDecimal ( _bodyOne . PAO011 * _bodyOne . PAO012 ) * Convert . ToDecimal ( 0.95 ) + gs [ _bodyOne . PAO013 ];
+                            else
+                                gs . Add ( _bodyOne . PAO013 ,Convert . ToDecimal ( _bodyOne . PAO011 * _bodyOne . PAO012 * Convert . ToDecimal ( 0.95 ) ) );
+                        }
+                    }
+                }
+            }
+
+            if ( tableViewTwo != null && tableViewTwo . Rows . Count > 0 )
+            {
+                Dictionary<string ,decimal> ut = new Dictionary<string ,decimal> ( );
+                foreach ( DataRow row in tableViewTwo . Rows )
+                {
+                    _bodyTwo . PPA010 = row [ "PPA010" ] . ToString ( );
+                    if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010.Trim() . Equals ( "在职" ) )
+                    {
+                        _bodyTwo . PPA004 = row [ "PPA004" ] . ToString ( );
+                        _bodyTwo . PPA014 = string . IsNullOrEmpty ( row [ "PPA009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA009" ] ) * ( string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] ) ) * Convert . ToDecimal ( 0.95 );
+                        if ( gs . ContainsKey ( _bodyTwo . PPA004 ) )
+                            gs [ _bodyTwo . PPA004 ] = Convert . ToDecimal ( _bodyTwo . PPA014 ) + gs [ _bodyTwo . PPA004 ];
+                        else
+                            gs . Add ( _bodyTwo . PPA004 ,Convert . ToDecimal ( _bodyTwo . PPA014 ) );
+
+                        _bodyTwo . PPA014 = ( string . IsNullOrEmpty ( row [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA012" ] ) + ( string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] ) ) );
+                        if ( ut . ContainsKey ( _bodyTwo . PPA004 ) )
+                            ut [ _bodyTwo . PPA004 ] = Convert . ToDecimal ( _bodyTwo . PPA014 ) + ut [ _bodyTwo . PPA004 ];
+                        else
+                            ut . Add ( _bodyTwo . PPA004 ,Convert . ToDecimal ( _bodyTwo . PPA014 ) );
+                    }
+                }
+
+                if ( gs . Count < 1 )
+                    return;
+
+                foreach ( DataRow row in tableViewTwo . Rows )
+                {
+                    _bodyTwo . PPA010 = row [ "PPA010" ] . ToString ( );
+                    _bodyTwo . PPA002 = row [ "PPA002" ] . ToString ( );
+                    _bodyTwo . PPA004 = row [ "PPA004" ] . ToString ( );
+                    timeSum = ( string . IsNullOrEmpty ( row [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA012" ] ) + ( string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] ) ) );
+                    if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010.Trim() . Equals ( "在职" ) )
+                    {
+                        salarySum = gs [ _bodyTwo . PPA004 ];
+                        timeAll = 0;
+                        if ( ut . Count > 0 )
+                            timeAll = ut [ _bodyTwo . PPA004 ];
+                        row [ "PPA014" ] = timeAll == 0 ? 0 . ToString ( ) : ( salarySum / timeAll * timeSum ) . ToString ( "0.##" );
+                    }
+                }
+
+            }
+
         }
         void calcuSalaryEveryone ( )
         {
+            txtu4 . Text = ( ( string . IsNullOrEmpty ( txtu2 . Text ) == true ? 0 : Convert . ToDecimal ( txtu2 . Text ) ) * Convert . ToDecimal ( 0.05 ) ) . ToString ( "0.######" );
+
             decimal timeSum = 0;
             decimal timeAll = 0; /*string . IsNullOrEmpty ( txtu3 . Text ) == true ? 0 : Convert . ToDecimal ( txtu3 . Text );*/
             decimal salarySum = 0M; /*string . IsNullOrEmpty ( txtu2 . Text ) == true ? 0 : Convert . ToDecimal ( txtu2 . Text );*/
@@ -1051,72 +1257,97 @@ namespace LineProductMes
             if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
                 return;
 
-            var query = from p in tableViewOne . AsEnumerable ( )
-                        group p by new
-                        {
-                            p1 = p . Field<string> ( "PAO003" )
-                        } into m
-                        select new
-                        {
-                            pao003 = m . Key . p1
-                        };
-            if ( query == null )
-                return;
-            string piNum = string . Empty;
-            foreach ( var x in query )
+            if ( "计件" . Equals ( txtPAN013 . Text ) )
             {
-                if ( string . IsNullOrEmpty ( piNum ) )
-                    piNum = "'" + x.pao003 + "'";
-                else
-                    piNum = piNum + "," + "'" + x . pao003 + "'";
-            }
-
-            DataTable tableA = _bll . getTableA ( piNum );
-            if ( tableA == null || tableA . Rows . Count < 1 )
-                return;
-
-
-            var que = from p in tableViewTwo . AsEnumerable ( )
-                      group p by new
-                      {
-                          p1 = p . Field<string> ( "PPA004" )
-                      } into m
-                      select new
-                      {
-                          ppa004 = m . Key . p1
-                      };
-
-            if ( que == null )
-                return;
-            
-            foreach ( var re in que )
-            {
-                salarySum = 0;
-                DataRow [ ] rows = tableA . Select ( "ART013='" + re . ppa004 + "'" );
-                if ( rows == null )
-                    continue;
-                foreach ( DataRow row in rows )
+                var query = from p in tableViewOne . AsEnumerable ( )
+                            group p by new
+                            {
+                                p1 = p . Field<string> ( "PAO003" )
+                            } into m
+                            select new
+                            {
+                                pao003 = m . Key . p1
+                            };
+                if ( query == null )
+                    return;
+                string piNum = string . Empty;
+                foreach ( var x in query )
                 {
-                    _bodyOne . PAO003 = row [ "ART001" ] . ToString ( );
-                    _bodyOne . PAO009 = row [ "ART011" ] . ToString ( );
-                    DataRow [ ] ros = tableViewOne . Select ( "PAO003='" + _bodyOne . PAO003 + "' AND PAO013='" + _bodyOne . PAO009 + "'" );
-                    if ( ros == null )
+                    if ( string . IsNullOrEmpty ( piNum ) )
+                        piNum = "'" + x . pao003 + "'";
+                    else
+                        piNum = piNum + "," + "'" + x . pao003 + "'";
+                }
+
+                DataTable tableA = _bll . getTableA ( piNum );
+                if ( tableA == null || tableA . Rows . Count < 1 )
+                    return;
+
+                var que = from p in tableViewTwo . AsEnumerable ( )
+                          group p by new
+                          {
+                              p1 = p . Field<string> ( "PPA004" )
+                          } into m
+                          select new
+                          {
+                              ppa004 = m . Key . p1
+                          };
+
+                if ( que == null )
+                    return;
+
+                foreach ( var re in que )
+                {
+                    salarySum = 0;
+                    DataRow [ ] rows = tableA . Select ( "ART013='" + re . ppa004 + "'" );
+                    if ( rows == null )
                         continue;
-                    foreach ( DataRow ro in ros )
+                    foreach ( DataRow row in rows )
                     {
-                        salarySum += string . IsNullOrEmpty ( ro [ "PAO011" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( ro [ "PAO011" ] ) * ( string . IsNullOrEmpty ( ro [ "PAO012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( ro [ "PAO012" ] ) );
+                        _bodyOne . PAO003 = row [ "ART001" ] . ToString ( );
+                        _bodyOne . PAO009 = row [ "ART011" ] . ToString ( );
+                        DataRow [ ] ros = tableViewOne . Select ( "PAO003='" + _bodyOne . PAO003 + "' AND PAO013='" + _bodyOne . PAO009 + "'" );
+                        if ( ros == null )
+                            continue;
+                        foreach ( DataRow ro in ros )
+                        {
+                            salarySum += string . IsNullOrEmpty ( ro [ "PAO011" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( ro [ "PAO011" ] ) * ( string . IsNullOrEmpty ( ro [ "PAO012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( ro [ "PAO012" ] ) );
+                        }
+                    }
+                    DataRow [ ] rowes = tableViewTwo . Select ( "PPA004='" + re . ppa004 + "'" );
+                    if ( rows == null )
+                        continue;
+                    timeAll = 0;
+                    foreach ( DataRow r in rowes )
+                    {
+                        timeAll += ( string . IsNullOrEmpty ( r [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA012" ] ) + ( string . IsNullOrEmpty ( r [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA013" ] ) ) );
+                        salarySum += ( string . IsNullOrEmpty ( r [ "PPA009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA009" ] ) * ( string . IsNullOrEmpty ( r [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA013" ] ) ) );
+                    }
+                    foreach ( DataRow r in rowes )
+                    {
+                        if ( string . IsNullOrEmpty ( r [ "PPA010" ] . ToString ( ) ) || r [ "PPA010" ] . ToString ( ) . Equals ( "离职" ) || r [ "PPA010" ] . ToString ( ) . Equals ( "未上班" ) )
+                        {
+                            r [ "PPA012" ] = 0;
+                            r [ "PPA013" ] = 0;
+                            r [ "PPA014" ] = 0;
+                            continue;
+                        }
+
+                        timeSum = ( string . IsNullOrEmpty ( r [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA012" ] ) + ( string . IsNullOrEmpty ( r [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA013" ] ) ) );
+
+                        r [ "PPA014" ] = timeAll == 0 ? 0 . ToString ( ) : ( salarySum / timeAll * timeSum ) . ToString ( );
                     }
                 }
-                DataRow [ ] rowes = tableViewTwo . Select ( "PPA004='" + re . ppa004 + "'" );
-                if ( rows == null )
-                    continue;
-                timeAll = 0;
-                foreach ( DataRow r in rowes )
+            }
+            else if ( "计时" . Equals ( txtPAN013 . Text ) )
+            {
+                timeAll = salarySum = 0;
+                foreach ( DataRow r in tableViewTwo.Rows )
                 {
                     timeAll += ( string . IsNullOrEmpty ( r [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA012" ] ) + ( string . IsNullOrEmpty ( r [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA013" ] ) ) );
                     salarySum += ( string . IsNullOrEmpty ( r [ "PPA009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA009" ] ) * ( string . IsNullOrEmpty ( r [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( r [ "PPA013" ] ) ) );
                 }
-                foreach ( DataRow r in rowes )
+                foreach ( DataRow r in tableViewTwo . Rows )
                 {
                     if ( string . IsNullOrEmpty ( r [ "PPA010" ] . ToString ( ) ) || r [ "PPA010" ] . ToString ( ) . Equals ( "离职" ) || r [ "PPA010" ] . ToString ( ) . Equals ( "未上班" ) )
                     {
@@ -1242,7 +1473,7 @@ namespace LineProductMes
                             {
                                 foreach ( DataRow row in rows )
                                 {
-                                    row [ "U5" ] = tableOtherSur . Select ( "PAO013='" + row [ "PAO013" ] + "'" ) [ 0 ] [ "PAO" ];
+                                    row [ "U5" ] = tableOtherSur . Rows[ 0 ] [ "PAO" ];
                                 }
                             }
                             else
@@ -1266,7 +1497,7 @@ namespace LineProductMes
                     {
                         foreach ( DataRow row in rows )
                         {
-                            row [ "U5" ] = tableOtherSur . Select ( "PAO013='" + row [ "PAO013" ] + "'" ) [ 0 ] [ "PAO" ];
+                            row [ "U5" ] = tableOtherSur . Rows [ 0 ] [ "PAO" ];
                         }
                     }
                     else

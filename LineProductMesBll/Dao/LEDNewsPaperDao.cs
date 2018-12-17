@@ -179,6 +179,7 @@ namespace LineProductMesBll . Dao
             Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
             model . LEC001 = getOddNum ( );
             UserInfoMation . oddNum = model . LEC001;
+            model . LEC022 = UserInfoMation . userName;
             AddHeader ( SQLString ,model );
 
             LineProductMesEntityu . LEDNewsPaperBodyEntity modelBody = new LineProductMesEntityu . LEDNewsPaperBodyEntity ( );
@@ -319,9 +320,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKLEC(" );
-            strSql . Append ( "LEC001,LEC002,LEC003,LEC004,LEC005,LEC006,LEC007,LEC008,LEC009,LEC010,LEC011,LEC012,LEC013,LEC014,LEC015,LEC016,LEC017,LEC018,LEC019,LEC020)" );
+            strSql . Append ( "LEC001,LEC002,LEC003,LEC004,LEC005,LEC006,LEC007,LEC008,LEC009,LEC010,LEC011,LEC012,LEC013,LEC014,LEC015,LEC016,LEC017,LEC018,LEC019,LEC020,LEC021,LEC022)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@LEC001,@LEC002,@LEC003,@LEC004,@LEC005,@LEC006,@LEC007,@LEC008,@LEC009,@LEC010,@LEC011,@LEC012,@LEC013,@LEC014,@LEC015,@LEC016,@LEC017,@LEC018,@LEC019,@LEC020)" );
+            strSql . Append ( "@LEC001,@LEC002,@LEC003,@LEC004,@LEC005,@LEC006,@LEC007,@LEC008,@LEC009,@LEC010,@LEC011,@LEC012,@LEC013,@LEC014,@LEC015,@LEC016,@LEC017,@LEC018,@LEC019,@LEC020,@LEC021,@LEC022)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LEC001", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEC002", SqlDbType.NVarChar,20),
@@ -342,7 +343,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@LEC017", SqlDbType.Bit,1),
                     new SqlParameter("@LEC018", SqlDbType.Bit,1),
                     new SqlParameter("@LEC019", SqlDbType.Decimal),
-                    new SqlParameter("@LEC020", SqlDbType.Decimal)
+                    new SqlParameter("@LEC020", SqlDbType.Decimal),
+                    new SqlParameter("@LEC021", SqlDbType.NVarChar,20),
+                    new SqlParameter("@LEC022", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . LEC001;
             parameters [ 1 ] . Value = model . LEC002;
@@ -364,6 +367,8 @@ namespace LineProductMesBll . Dao
             parameters [ 17 ] . Value = model . LEC018;
             parameters [ 18 ] . Value = model . LEC019;
             parameters [ 19 ] . Value = model . LEC020;
+            parameters [ 20 ] . Value = model . LEC021;
+            parameters [ 21 ] . Value = model . LEC022;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBody ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LEDNewsPaperBodyEntity model )
@@ -461,7 +466,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "LEC017=@LEC017," );
             strSql . Append ( "LEC018=@LEC018," );
             strSql . Append ( "LEC019=@LEC019," );
-            strSql . Append ( "LEC020=@LEC020 " );
+            strSql . Append ( "LEC020=@LEC020," );
+            strSql . Append ( "LEC021=@LEC021 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LEC002", SqlDbType.NVarChar,20),
@@ -483,7 +489,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@LEC018", SqlDbType.Bit,1),
                     new SqlParameter("@LEC019", SqlDbType.Decimal),
                     new SqlParameter("@LEC020", SqlDbType.Decimal),
-                    new SqlParameter("@idx", SqlDbType.Int,4)
+                    new SqlParameter("@idx", SqlDbType.Int,4),
+                    new SqlParameter("@LEC021", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . LEC002;
             parameters [ 1 ] . Value = model . LEC003;
@@ -504,7 +511,8 @@ namespace LineProductMesBll . Dao
             parameters [ 16 ] . Value = model . LEC018;
             parameters [ 17 ] . Value = model . LEC019;
             parameters [ 18 ] . Value = model . LEC020;
-            parameters [ 19 ] . Value = model . idx;
+            parameters [ 19 ] . Value = model . LEC021;
+            parameters [ 20 ] . Value = model . idx;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBody ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LEDNewsPaperBodyEntity model )
@@ -635,7 +643,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . LEDNewsPaperHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,LEC001,LEC002,LEC003,LEC004,LEC005,LEC006,LEC007,LEC008,LEC009,LEC010,LEC011,LEC012,LEC013,LEC014,LEC015,LEC016,LEC017,LEC018,LEC019,LEC020 FROM MIKLEC WHERE LEC001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT idx,LEC001,LEC002,LEC003,LEC004,LEC005,LEC006,LEC007,LEC008,LEC009,LEC010,LEC011,LEC012,LEC013,LEC014,LEC015,LEC016,LEC017,LEC018,LEC019,LEC020,LEC021 FROM MIKLEC WHERE LEC001='{0}'" ,oddNum );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table != null && table . Rows . Count > 0 )
@@ -747,6 +755,10 @@ namespace LineProductMesBll . Dao
                 {
                     model . LEC020 = decimal . Parse ( row [ "LEC020" ] . ToString ( ) );
                 }
+                if ( row [ "LEC021" ] != null && row [ "LEC021" ] . ToString ( ) != "" )
+                {
+                    model . LEC021 = row [ "LEC021" ] . ToString ( );
+                }
             }
             return model;
         }
@@ -782,7 +794,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintOne ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT LEC001 ANW001,LEC010 ANW011,LEC012 ANW013,LEC013 ANW022,GETDATE() dat FROM MIKLEC WHERE LEC001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT LEC001 ANW001,LEC010 ANW011,LEC012 ANW013,LEC013 ANW022,GETDATE() dat,LEC022 ANW025 FROM MIKLEC WHERE LEC001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

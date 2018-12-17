@@ -19,6 +19,9 @@ namespace LineProductMesEntityu
         private DateTime? _ant008;
         private decimal? _ant009;
         private decimal? _ant010;
+        private string _ant011;
+        private string _ant012;
+        private string _ant013;
 
         /// <summary>
         /// 
@@ -176,6 +179,47 @@ namespace LineProductMesEntityu
                 _ant010 = value;
             }
         }
-
+        /// <summary>
+        /// 工资类型
+        /// </summary>
+        public string ANT011
+        {
+            set
+            {
+                _ant011 = value;
+            }
+            get
+            {
+                return _ant011;
+            }
+        }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string ANT012
+        {
+            set
+            {
+                _ant012 = value;
+            }
+            get
+            {
+                return _ant012;
+            }
+        }
+        /// <summary>
+        /// 制单
+        /// </summary>
+        public string ANT013
+        {
+            set
+            {
+                _ant013 = value;
+            }
+            get
+            {
+                return _ant013;
+            }
+        }
     }
 }

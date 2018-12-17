@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWages));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
@@ -45,6 +45,8 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.WAH003 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.WAH023 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,8 +78,7 @@
             this.WAH022 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copy = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiliu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -95,21 +96,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 26);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 24);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1233, 426);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1233, 428);
             this.splitContainerControl1.SplitterPosition = 74;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -288,10 +301,25 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1233, 340);
+            this.gridControl1.Size = new System.Drawing.Size(1233, 349);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copy,
+            this.tiliu});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
+            // 
+            // copy
+            // 
+            this.copy.Name = "copy";
+            this.copy.Size = new System.Drawing.Size(152, 22);
+            this.copy.Text = "复制";
             // 
             // gridView1
             // 
@@ -494,8 +522,6 @@
             this.WAH012.OptionsColumn.AllowEdit = false;
             this.WAH012.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH012", "{0:0.#}")});
-            this.WAH012.Visible = true;
-            this.WAH012.VisibleIndex = 13;
             this.WAH012.Width = 82;
             // 
             // WAH013
@@ -509,7 +535,7 @@
             this.WAH013.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH013", "{0:0.#}")});
             this.WAH013.Visible = true;
-            this.WAH013.VisibleIndex = 14;
+            this.WAH013.VisibleIndex = 13;
             // 
             // WAH014
             // 
@@ -522,7 +548,7 @@
             this.WAH014.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH014", "{0:0.#}")});
             this.WAH014.Visible = true;
-            this.WAH014.VisibleIndex = 15;
+            this.WAH014.VisibleIndex = 14;
             // 
             // WAH015
             // 
@@ -534,7 +560,7 @@
             this.WAH015.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH015", "{0:0.#}")});
             this.WAH015.Visible = true;
-            this.WAH015.VisibleIndex = 16;
+            this.WAH015.VisibleIndex = 15;
             // 
             // WAH024
             // 
@@ -545,7 +571,7 @@
             this.WAH024.Name = "WAH024";
             this.WAH024.OptionsColumn.AllowEdit = false;
             this.WAH024.Visible = true;
-            this.WAH024.VisibleIndex = 17;
+            this.WAH024.VisibleIndex = 16;
             // 
             // WAH016
             // 
@@ -557,7 +583,7 @@
             this.WAH016.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH016", "{0:0.#}")});
             this.WAH016.Visible = true;
-            this.WAH016.VisibleIndex = 18;
+            this.WAH016.VisibleIndex = 17;
             // 
             // WAH017
             // 
@@ -569,7 +595,7 @@
             this.WAH017.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH017", "{0:0.#}")});
             this.WAH017.Visible = true;
-            this.WAH017.VisibleIndex = 19;
+            this.WAH017.VisibleIndex = 18;
             // 
             // WAH018
             // 
@@ -581,7 +607,7 @@
             this.WAH018.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH018", "{0:0.#}")});
             this.WAH018.Visible = true;
-            this.WAH018.VisibleIndex = 20;
+            this.WAH018.VisibleIndex = 19;
             // 
             // WAH019
             // 
@@ -593,7 +619,7 @@
             this.WAH019.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH019", "{0:0.#}")});
             this.WAH019.Visible = true;
-            this.WAH019.VisibleIndex = 21;
+            this.WAH019.VisibleIndex = 20;
             // 
             // WAH020
             // 
@@ -606,7 +632,7 @@
             this.WAH020.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH020", "{0:0.#}")});
             this.WAH020.Visible = true;
-            this.WAH020.VisibleIndex = 22;
+            this.WAH020.VisibleIndex = 21;
             // 
             // WAH021
             // 
@@ -619,7 +645,7 @@
             this.WAH021.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH021", "{0:0.#}")});
             this.WAH021.Visible = true;
-            this.WAH021.VisibleIndex = 23;
+            this.WAH021.VisibleIndex = 22;
             // 
             // U2
             // 
@@ -635,7 +661,7 @@
             this.U2.UnboundExpression = "[WAH021] + [WAH020]";
             this.U2.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U2.Visible = true;
-            this.U2.VisibleIndex = 24;
+            this.U2.VisibleIndex = 23;
             // 
             // U3
             // 
@@ -651,7 +677,7 @@
             this.U3.UnboundExpression = "[U4] + [WAH020]";
             this.U3.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U3.Visible = true;
-            this.U3.VisibleIndex = 25;
+            this.U3.VisibleIndex = 24;
             this.U3.Width = 82;
             // 
             // U4
@@ -671,7 +697,7 @@
     "014]";
             this.U4.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U4.Visible = true;
-            this.U4.VisibleIndex = 26;
+            this.U4.VisibleIndex = 25;
             // 
             // U5
             // 
@@ -679,7 +705,7 @@
             this.U5.FieldName = "U5";
             this.U5.Name = "U5";
             this.U5.Visible = true;
-            this.U5.VisibleIndex = 27;
+            this.U5.VisibleIndex = 26;
             // 
             // WAH022
             // 
@@ -711,19 +737,11 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // contextMenuStrip1
+            // tiliu
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copy});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
-            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
-            // 
-            // copy
-            // 
-            this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(100, 22);
-            this.copy.Text = "复制";
+            this.tiliu.Name = "tiliu";
+            this.tiliu.Size = new System.Drawing.Size(152, 22);
+            this.tiliu.Text = "平均分配提留";
             // 
             // FormWages
             // 
@@ -754,8 +772,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -812,5 +830,6 @@
         private DevExpress . XtraGrid . Columns . GridColumn WAH022;
         private System . Windows . Forms . ContextMenuStrip contextMenuStrip1;
         private System . Windows . Forms . ToolStripMenuItem copy;
+        private System . Windows . Forms . ToolStripMenuItem tiliu;
     }
 }

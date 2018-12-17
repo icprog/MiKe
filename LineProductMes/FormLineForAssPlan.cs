@@ -19,8 +19,7 @@ namespace LineProductMes
 
         DateTime dtStart,dtEnd;
         string productName=string.Empty,focusedName=string.Empty;
-
-
+        
         public FormLineForAssPlan ( string productName )
         {
             InitializeComponent ( );
@@ -33,7 +32,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolExport ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit ,toolAdd  } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolExport ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit ,toolAdd  } );
 
             this . productName = productName;
         }
@@ -47,7 +46,7 @@ namespace LineProductMes
             InitData ( );
             toolSave . Visibility = toolCanecl . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
         }
-
+        
         protected override int Query ( )
         {
             if ( !string . IsNullOrEmpty ( dtSt . Text ) )
@@ -116,6 +115,7 @@ namespace LineProductMes
             }
             gridControl1 . DataSource = tableView;
             gridView1 . PopulateColumns ( );
+            
             column ( );
         }
         void column ( )
@@ -134,6 +134,7 @@ namespace LineProductMes
                 column . BestFit ( );
                 column . Summary . Clear ( );
                 column . OptionsColumn . AllowEdit = false;
+                column . OptionsFilter . FilterPopupMode = DevExpress . XtraGrid . Columns . FilterPopupMode . CheckedList;
 
                 if ( column . FieldName != "产线编号" && column . FieldName != "产线" && column . FieldName != "主件品号" && column . FieldName != "主件品名" && column . FieldName != "排产量" && column . FieldName != "总排量" )
                 {
@@ -215,7 +216,6 @@ namespace LineProductMes
 
             return result;
         }
-
 
         private void gridView1_RowCellClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellClickEventArgs e )
         {

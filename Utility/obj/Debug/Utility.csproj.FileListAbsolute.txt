@@ -174,7 +174,6 @@ D:\ProjectData\MiKe\LineProductMes\Utility\bin\Debug\de\DevExpress.Office.v16.2.
 D:\ProjectData\MiKe\LineProductMes\Utility\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\Utility\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\Utility\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
-D:\ProjectData\MiKe\LineProductMes\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
 D:\ProjectData\MiKe\LineProductMes\Utility\obj\Debug\Utility.dll
 D:\ProjectData\MiKe\LineProductMes\Utility\obj\Debug\Utility.pdb
 D:\ProjectData\MiKe\LineProductMes\Utility\bin\Debug\zh-Hans\DevExpress.Utils.v16.2.resources.dll

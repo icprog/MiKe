@@ -13,7 +13,7 @@ namespace LineProductMes . ChildForm
         LineProductMesBll.Bll.ProductPlanBll _bll=null;
         DataTable tableView;
         string oddNum=string.Empty;
-
+        
         public FormProductPlanQuery ( )
         {
             InitializeComponent ( );

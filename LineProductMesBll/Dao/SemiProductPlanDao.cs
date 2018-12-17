@@ -4,6 +4,7 @@ using StudentMgr;
 using System . Collections . Generic;
 using System;
 using System . Data . SqlClient;
+using System . Windows . Forms;
 
 namespace LineProductMesBll . Dao
 {
@@ -177,7 +178,7 @@ GO
         /// </summary>
         /// <returns></returns>
         public List<LineProductMesEntityu . SemiProductPlanEntity> getListModelPur ( )
-        { 
+        {
             string piNum = string . Empty;
             List<LineProductMesEntityu . SemiProductPlanEntity> modelList = new List<LineProductMesEntityu . SemiProductPlanEntity> ( );
             StringBuilder strSql = new StringBuilder ( );
@@ -203,9 +204,11 @@ GO
                     model . SEP007 = i . ToString ( );
                     model . SEP008 = 0 . ToString ( );
                     model . SEP009 = 1;
-                    model . SEP010 = row [ "DDA003" ] . ToString ( );
-                    model . SEP011 = row [ "DEA003" ] . ToString ( );
-                    model . SEP012 = row [ "DGA003" ] . ToString ( );
+                    model . SEP013 = 0 . ToString ( );
+                    model . SEP010 = row [ "DGA003" ] . ToString ( );
+                    model . SEP011 = row [ "DDA003" ] . ToString ( );
+                    model . SEP012 = row [ "DEA003" ] . ToString ( );
+                    model . SEP014 = "P";
                     modelList . Add ( model );
                     if ( piNum == string . Empty )
                         piNum = "'" + model . SEP001 + "'";
@@ -216,46 +219,122 @@ GO
 
             if ( piNum != string . Empty )
             {
+                //piNum = "'DGY-F805'";
                 bool state = true;
                 while ( state )
                 {
+                  
                     //展开第一阶
                     strSql = new StringBuilder ( );
-                    strSql . AppendFormat ( "SELECT DISTINCT QAB001,QAB003,DEA002,DEA057,QAB005,DDA003,DEA003,DGA003 FROM SGMQAB C INNER JOIN TPADEA D ON C.QAB003=D.DEA001 INNER JOIN TPADDA E ON D.DEA008=E.DDA001 INNER JOIN TPADGA F ON D.DEA010=F.DGA001 WHERE DEA009 IN ('P') AND QAB001 IN ({0}) " ,piNum );
+                    strSql . AppendFormat ( "SELECT DISTINCT QAB001,QAB003,DEA002,DEA057,QAB005,DDA003,DEA003,DGA003,DEA009 FROM SGMQAB C LEFT JOIN TPADEA D ON C.QAB003=D.DEA001 LEFT JOIN TPADDA E ON D.DEA008=E.DDA001 LEFT JOIN TPADGA F ON D.DEA010=F.DGA001 WHERE QAB001 IN ({0}) " ,piNum );
+                    //DEA009 IN ('P') AND
 
                     DataTable tableOne = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
                     if ( tableOne != null && tableOne . Rows . Count > 0 )
                     {
                         piNum = string . Empty;
                         int i = 0;
+                        string cg = string . Empty;
+
                         foreach ( DataRow row in tableOne . Rows )
                         {
+                            cg = row [ "DEA009" ] . ToString ( );
+
                             LineProductMesEntityu . SemiProductPlanEntity model = new LineProductMesEntityu . SemiProductPlanEntity ( );
                             i++;
                             model . SEP001 = row [ "QAB003" ] . ToString ( );
+                            if ( piNum == string . Empty )
+                                piNum = "'" + model . SEP001 + "'";
+                            else
+                                piNum = piNum + "," + "'" + model . SEP001 + "'";
+                            //if ( !cg . Equals ( "P" ) )
+                            //    continue;
                             LineProductMesEntityu . SemiProductPlanEntity body = modelList . Find ( ( t ) =>
+                        {
+                            return t . SEP001 . Equals ( row [ "QAB001" ] . ToString ( ) );
+                        } );
+                            //if ( body == null )
+                            //    continue;
+
+                            bool state1 = true;
+                            if ( body . SEP014 . Equals ( "P" ) )
                             {
-                                return t . SEP001 . Equals ( row [ "QAB001" ] . ToString ( ) );
-                            } );
+                                state1 = false;
+
+                                if ( body != null )
+                                    model . SEP013 = model . SEP008 = body . SEP007;
+                                else
+                                    model . SEP013 = model . SEP008 = 0 . ToString ( );
+                            }
+
+                            while ( state1 )
+                            {
+                                body = modelList . Find ( ( t ) =>
+                                {
+                                    return t . SEP007 == body . SEP008;
+                                } );
+
+                                if ( body . SEP014 . Equals ( "P" ) )
+                                {
+                                    state1 = false;
+
+                                    if ( body != null )
+                                        model . SEP013 = model . SEP008 = body . SEP007;
+                                    else
+                                        model . SEP013 = model . SEP008 = 0 . ToString ( );
+                                }
+                            }
+
+                            model . SEP014 = row [ "DEA009" ] . ToString ( );
                             model . SEP002 = row [ "DEA002" ] . ToString ( );
                             model . SEP003 = row [ "DEA057" ] . ToString ( );
                             model . SEP004 = Convert . ToDateTime ( body . SEP004 ) . AddDays ( -1 );
                             model . SEP005 = body . SEP005;
                             model . SEP006 = body . SEP006 * body . SEP009;
-                            if ( body != null )
-                                model . SEP008 = body . SEP007;
-                            else
-                                model . SEP008 = 0 . ToString ( );
                             model . SEP007 = model . SEP008 + "_" + i . ToString ( );
                             model . SEP009 = Convert . ToDecimal ( row [ "QAB005" ] );
-                            model . SEP010 = row [ "DDA003" ] . ToString ( );
-                            model . SEP011 = row [ "DEA003" ] . ToString ( );
-                            model . SEP012 = row [ "DGA003" ] . ToString ( );
+                            model . SEP010 = row [ "DGA003" ] . ToString ( );
+                            model . SEP011 = row [ "DDA003" ] . ToString ( );
+                            model . SEP012 = row [ "DEA003" ] . ToString ( );
+
+                            state1 = true;
+                            while ( state1 )
+                            {
+                                LineProductMesEntityu . SemiProductPlanEntity bodyOne = modelList . Find ( ( t ) =>
+                                {
+                                    return t . SEP001 == model . SEP001 && t . SEP004 == model . SEP004;
+                                } );
+
+                                if ( bodyOne != null )
+                                {
+                                    model . SEP006 = model . SEP006 + bodyOne . SEP006;
+                                    model . SEP009 = model . SEP009 + bodyOne . SEP009;
+                                    modelList . Remove ( bodyOne );
+                                }
+                                else
+                                    state1 = false;
+                            }
+
+
+                            state1 = true;
+                            while ( state1 )
+                            {
+                                LineProductMesEntityu . SemiProductPlanEntity bodyOne = modelList . Find ( ( t ) =>
+                                {
+                                    return t . SEP007 == model . SEP007;
+                                } );
+
+                                if ( bodyOne != null )
+                                {
+                                    model . SEP006 = model . SEP006 + bodyOne . SEP006;
+                                    model . SEP009 = model . SEP009 + bodyOne . SEP009;
+                                    modelList . Remove ( bodyOne );
+                                }
+                                else
+                                    state1 = false;
+                            }
+
                             modelList . Add ( model );
-                            if ( piNum == string . Empty )
-                                piNum = "'" + model . SEP001 + "'";
-                            else
-                                piNum = piNum + "," + "'" + model . SEP001 + "'";
                         }
                     }
                     else
@@ -263,38 +342,11 @@ GO
                 }
             }
 
-            //订单采购内容，不要
-            //strSql = new StringBuilder ( );
-            //strSql . Append ( "SELECT IBB003,IBB004,DEA057,DATEADD(DAY,-2,CONVERT(DATE,IBB013,112)) PRE005,CONVERT(FLOAT,IBB006) PRE007,CONVERT(FLOAT,IBB006) QAB005,DDA003,DEA003,DGA003 FROM DCSIBB A INNER JOIN TPADEA B ON A.IBB003=B.DEA001 INNER JOIN TPADDA E ON B.DEA008=E.DDA001 INNER JOIN TPADGA F ON B.DEA010=F.DGA001 WHERE IBB015 IN('Y','F') AND DEA009='P' AND YEAR(IBB013)>=2018 AND MONTH(IBB013)>=6" );
-            //table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
-            //if ( table != null && table . Rows . Count > 0 )
-            //{
-            //    int i = 0;
-            //    foreach ( DataRow row in table . Rows )
-            //    {
-            //        LineProductMesEntityu . SemiProductPlanEntity model = new LineProductMesEntityu . SemiProductPlanEntity ( );
-            //        i++;
-            //        model . SEP001 = row [ "IBB003" ] . ToString ( );
-            //        model . SEP002 = row [ "IBB004" ] . ToString ( );
-            //        model . SEP003 = row [ "DEA057" ] . ToString ( );
-            //        model . SEP004 = Convert . ToDateTime ( row [ "PRE005" ] . ToString ( ) );
-            //        model . SEP005 = Convert . ToInt32 ( row [ "PRE007" ] . ToString ( ) );
-            //        model . SEP006 = Convert . ToDecimal ( row [ "QAB005" ] . ToString ( ) );
-            //        model . SEP007 = i . ToString ( ) + "+";
-            //        model . SEP008 = model . SEP007;
-            //        model . SEP009 = 1;
-            //        model . SEP010 = row [ "DGA003" ] . ToString ( );
-            //        model . SEP011 = row [ "DDA003" ] . ToString ( );
-            //        model . SEP012 = row [ "DEA003" ] . ToString ( );
-            //        modelList . Add ( model );
-            //        if ( piNum == string . Empty )
-            //            piNum = "'" + model . SEP001 + "'";
-            //        else
-            //            piNum = piNum + "," + "'" + model . SEP001 + "'";
-            //    }
-            //}
 
-            return modelList;
+            return modelList . FindAll ( ( x ) =>
+                {
+                    return x . SEP014 == "P";
+                } );
         }
 
         /// <summary>

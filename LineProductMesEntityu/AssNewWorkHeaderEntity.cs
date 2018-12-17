@@ -33,6 +33,7 @@ namespace LineProductMesEntityu
         private DateTime? _anw022;
         private decimal? _anw023;
         private decimal? _anw024;
+        private string _anw025;
 
         /// <summary>
         /// 
@@ -384,6 +385,21 @@ namespace LineProductMesEntityu
             set
             {
                 _anw024 = value;
+            }
+        }
+        /// <summary>
+        /// 制单人
+        /// </summary>
+        public string ANW025
+        {
+            get
+            {
+                return _anw025;
+            }
+
+            set
+            {
+                _anw025 = value;
             }
         }
     }

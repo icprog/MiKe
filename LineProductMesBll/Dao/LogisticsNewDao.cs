@@ -124,6 +124,7 @@ namespace LineProductMesBll . Dao
             Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
             StringBuilder strSql = new StringBuilder ( );
             model . LGN001 = getCode ( );
+            model . LGN008 = UserInfoMation . userName;
             AddHeader ( SQLString ,model );
             UserInfoMation . oddNum = model . LGN001;
 
@@ -286,21 +287,23 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKLGN(" );
-            strSql . Append ( "LGN001,LGN002,LGN005,LGN006,LGN007)" );
+            strSql . Append ( "LGN001,LGN002,LGN005,LGN006,LGN007,LGN008)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@LGN001,@LGN002,@LGN005,@LGN006,@LGN007)" );
+            strSql . Append ( "@LGN001,@LGN002,@LGN005,@LGN006,@LGN007,@LGN008)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LGN001", SqlDbType.NVarChar,20),
                     new SqlParameter("@LGN002", SqlDbType.Date,3),
                     new SqlParameter("@LGN005", SqlDbType.Decimal,9),
                     new SqlParameter("@LGN006", SqlDbType.Decimal,9),
-                    new SqlParameter("@LGN007", SqlDbType.NVarChar,20)
+                    new SqlParameter("@LGN007", SqlDbType.NVarChar,20),
+                    new SqlParameter("@LGN008", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . LGN001;
             parameters [ 1 ] . Value = model . LGN002;
             parameters [ 2 ] . Value = model . LGN005;
             parameters [ 3 ] . Value = model . LGN006;
             parameters [ 4 ] . Value = model . LGN007;
+            parameters [ 5 ] . Value = model . LGN008;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LogisticsNewBodyOneEntity model )
@@ -521,7 +524,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . LogisticsNewHeaderEntity getModel ( string code )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT LGN001,LGN002,LGN003,LGN004,LGN005,LGN006 FROM MIKLGN WHERE LGN001='{0}'" ,code );
+            strSql . AppendFormat ( "SELECT LGN001,LGN002,LGN003,LGN004,LGN005,LGN006,LGN007 FROM MIKLGN WHERE LGN001='{0}'" ,code );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table == null || table . Rows . Count < 1 )
@@ -546,6 +549,8 @@ namespace LineProductMesBll . Dao
                     model . LGN005 = Convert . ToDecimal ( row [ "LGN005" ] . ToString ( ) );
                 if ( row [ "LGN006" ] != null && row [ "LGN006" ] . ToString ( ) != string . Empty )
                     model . LGN006 = Convert . ToDecimal ( row [ "LGN006" ] . ToString ( ) );
+                if ( row [ "LGN007" ] != null && row [ "LGN007" ] . ToString ( ) != string . Empty )
+                    model . LGN007 = row [ "LGN007" ] . ToString ( );
             }
             return model;
         }

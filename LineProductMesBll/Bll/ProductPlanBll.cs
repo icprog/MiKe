@@ -164,9 +164,9 @@ namespace LineProductMesBll . Bll
         /// </summary>
         /// <param name="oddNum"></param>
         /// <returns></returns>
-        public bool Examine ( string oddNum ,int resuState )
+        public bool Examine ( LineProductMesEntityu . ProductPlanHeaderEntity _header ,DataTable tableView )
         {
-            return dal . Examine ( oddNum ,resuState );
+            return dal . Examine ( _header ,tableView );
         }
 
         /// <summary>

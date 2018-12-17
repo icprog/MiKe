@@ -29,7 +29,10 @@
         private void InitializeComponent ( )
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployee));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idx = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EMP001 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -122,6 +125,7 @@
             this.txtEMP020 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.txtEMP037 = new DevExpress.XtraEditors.CheckEdit();
+            this.txtEMP038 = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -168,11 +172,12 @@
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabPageTwo = new DevExpress.XtraTab.XtraTabPage();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copy = new System.Windows.Forms.ToolStripMenuItem();
+            this.EMP038 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -219,6 +224,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEMP020.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEMP037.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEMP038.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -265,9 +271,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
             this.tabPageTwo.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // gridControl1
             // 
@@ -278,10 +296,24 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1226, 419);
+            this.gridControl1.Size = new System.Drawing.Size(1222, 418);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copy});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
+            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
+            // 
+            // copy
+            // 
+            this.copy.Name = "copy";
+            this.copy.Size = new System.Drawing.Size(100, 22);
+            this.copy.Text = "复制";
             // 
             // gridView1
             // 
@@ -333,7 +365,8 @@
             this.EMP031,
             this.EMP032,
             this.EMP034,
-            this.EMP037});
+            this.EMP037,
+            this.EMP038});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 45;
             this.gridView1.Name = "gridView1";
@@ -873,10 +906,10 @@
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 26);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 24);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tabPageOne;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1228, 445);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1228, 447);
             this.xtraTabControl1.TabIndex = 34;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabPageOne,
@@ -888,7 +921,7 @@
             this.tabPageOne.Appearance.Header.Options.UseFont = true;
             this.tabPageOne.Controls.Add(this.layoutControl1);
             this.tabPageOne.Name = "tabPageOne";
-            this.tabPageOne.Size = new System.Drawing.Size(1226, 419);
+            this.tabPageOne.Size = new System.Drawing.Size(1222, 418);
             this.tabPageOne.Text = "基本信息";
             // 
             // layoutControl1
@@ -931,11 +964,12 @@
             this.layoutControl1.Controls.Add(this.txtEMP020);
             this.layoutControl1.Controls.Add(this.pictureEdit1);
             this.layoutControl1.Controls.Add(this.txtEMP037);
+            this.layoutControl1.Controls.Add(this.txtEMP038);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1226, 419);
+            this.layoutControl1.Size = new System.Drawing.Size(1222, 418);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -947,29 +981,29 @@
             this.txtEMP001.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMP001.Properties.Appearance.Options.UseFont = true;
             this.txtEMP001.Properties.ReadOnly = true;
-            this.txtEMP001.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP001.Size = new System.Drawing.Size(309, 20);
             this.txtEMP001.StyleController = this.layoutControl1;
             this.txtEMP001.TabIndex = 4;
             // 
             // txtEMP017
             // 
-            this.txtEMP017.Location = new System.Drawing.Point(486, 12);
+            this.txtEMP017.Location = new System.Drawing.Point(485, 12);
             this.txtEMP017.MenuManager = this.barManager1;
             this.txtEMP017.Name = "txtEMP017";
             this.txtEMP017.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP017.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP017.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP017.Size = new System.Drawing.Size(317, 20);
             this.txtEMP017.StyleController = this.layoutControl1;
             this.txtEMP017.TabIndex = 5;
             // 
             // txtEMP027
             // 
-            this.txtEMP027.Location = new System.Drawing.Point(889, 12);
+            this.txtEMP027.Location = new System.Drawing.Point(886, 12);
             this.txtEMP027.MenuManager = this.barManager1;
             this.txtEMP027.Name = "txtEMP027";
             this.txtEMP027.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP027.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP027.Size = new System.Drawing.Size(228, 20);
+            this.txtEMP027.Size = new System.Drawing.Size(227, 20);
             this.txtEMP027.StyleController = this.layoutControl1;
             this.txtEMP027.TabIndex = 6;
             // 
@@ -980,7 +1014,7 @@
             this.txtEMP002.Name = "txtEMP002";
             this.txtEMP002.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMP002.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP002.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP002.Size = new System.Drawing.Size(309, 20);
             this.txtEMP002.StyleController = this.layoutControl1;
             this.txtEMP002.TabIndex = 7;
             // 
@@ -991,7 +1025,7 @@
             this.txtEMP007.Name = "txtEMP007";
             this.txtEMP007.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMP007.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP007.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP007.Size = new System.Drawing.Size(309, 20);
             this.txtEMP007.StyleController = this.layoutControl1;
             this.txtEMP007.TabIndex = 10;
             // 
@@ -1002,7 +1036,7 @@
             this.txtEMP014.Name = "txtEMP014";
             this.txtEMP014.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMP014.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP014.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP014.Size = new System.Drawing.Size(309, 20);
             this.txtEMP014.StyleController = this.layoutControl1;
             this.txtEMP014.TabIndex = 15;
             // 
@@ -1013,86 +1047,86 @@
             this.txtEMP016.Name = "txtEMP016";
             this.txtEMP016.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMP016.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP016.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP016.Size = new System.Drawing.Size(309, 20);
             this.txtEMP016.StyleController = this.layoutControl1;
             this.txtEMP016.TabIndex = 17;
             // 
             // txtEMP018
             // 
-            this.txtEMP018.Location = new System.Drawing.Point(486, 36);
+            this.txtEMP018.Location = new System.Drawing.Point(485, 36);
             this.txtEMP018.MenuManager = this.barManager1;
             this.txtEMP018.Name = "txtEMP018";
             this.txtEMP018.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP018.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP018.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP018.Size = new System.Drawing.Size(317, 20);
             this.txtEMP018.StyleController = this.layoutControl1;
             this.txtEMP018.TabIndex = 18;
             // 
             // txtEMP019
             // 
-            this.txtEMP019.Location = new System.Drawing.Point(486, 60);
+            this.txtEMP019.Location = new System.Drawing.Point(485, 60);
             this.txtEMP019.MenuManager = this.barManager1;
             this.txtEMP019.Name = "txtEMP019";
             this.txtEMP019.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP019.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP019.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP019.Size = new System.Drawing.Size(317, 20);
             this.txtEMP019.StyleController = this.layoutControl1;
             this.txtEMP019.TabIndex = 19;
             // 
             // txtEMP028
             // 
-            this.txtEMP028.Location = new System.Drawing.Point(889, 36);
+            this.txtEMP028.Location = new System.Drawing.Point(886, 36);
             this.txtEMP028.MenuManager = this.barManager1;
             this.txtEMP028.Name = "txtEMP028";
             this.txtEMP028.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP028.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP028.Size = new System.Drawing.Size(228, 20);
+            this.txtEMP028.Size = new System.Drawing.Size(227, 20);
             this.txtEMP028.StyleController = this.layoutControl1;
             this.txtEMP028.TabIndex = 26;
             // 
             // txtEMP029
             // 
-            this.txtEMP029.Location = new System.Drawing.Point(889, 60);
+            this.txtEMP029.Location = new System.Drawing.Point(886, 60);
             this.txtEMP029.MenuManager = this.barManager1;
             this.txtEMP029.Name = "txtEMP029";
             this.txtEMP029.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP029.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP029.Size = new System.Drawing.Size(228, 20);
+            this.txtEMP029.Size = new System.Drawing.Size(227, 20);
             this.txtEMP029.StyleController = this.layoutControl1;
             this.txtEMP029.TabIndex = 27;
             // 
             // txtEMP030
             // 
-            this.txtEMP030.Location = new System.Drawing.Point(889, 84);
+            this.txtEMP030.Location = new System.Drawing.Point(886, 84);
             this.txtEMP030.MenuManager = this.barManager1;
             this.txtEMP030.Name = "txtEMP030";
             this.txtEMP030.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP030.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP030.Size = new System.Drawing.Size(228, 20);
+            this.txtEMP030.Size = new System.Drawing.Size(227, 20);
             this.txtEMP030.StyleController = this.layoutControl1;
             this.txtEMP030.TabIndex = 28;
             // 
             // txtEMP031
             // 
             this.txtEMP031.EditValue = "3.5";
-            this.txtEMP031.Location = new System.Drawing.Point(889, 108);
+            this.txtEMP031.Location = new System.Drawing.Point(886, 108);
             this.txtEMP031.MenuManager = this.barManager1;
             this.txtEMP031.Name = "txtEMP031";
             this.txtEMP031.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP031.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP031.Size = new System.Drawing.Size(228, 20);
+            this.txtEMP031.Size = new System.Drawing.Size(227, 20);
             this.txtEMP031.StyleController = this.layoutControl1;
             this.txtEMP031.TabIndex = 29;
             // 
             // txtEMP032
             // 
             this.txtEMP032.EditValue = "0.15";
-            this.txtEMP032.Location = new System.Drawing.Point(889, 132);
+            this.txtEMP032.Location = new System.Drawing.Point(886, 132);
             this.txtEMP032.MenuManager = this.barManager1;
             this.txtEMP032.Name = "txtEMP032";
             this.txtEMP032.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP032.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP032.Size = new System.Drawing.Size(228, 20);
+            this.txtEMP032.Size = new System.Drawing.Size(227, 20);
             this.txtEMP032.StyleController = this.layoutControl1;
             this.txtEMP032.TabIndex = 30;
             // 
@@ -1100,9 +1134,9 @@
             // 
             this.btnFirst.Appearance.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.Appearance.Options.UseFont = true;
-            this.btnFirst.Location = new System.Drawing.Point(819, 156);
+            this.btnFirst.Location = new System.Drawing.Point(816, 156);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(22, 22);
+            this.btnFirst.Size = new System.Drawing.Size(23, 22);
             this.btnFirst.StyleController = this.layoutControl1;
             this.btnFirst.TabIndex = 33;
             this.btnFirst.Text = "<<";
@@ -1112,7 +1146,7 @@
             // 
             this.btnPrevious.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.btnPrevious.Appearance.Options.UseFont = true;
-            this.btnPrevious.Location = new System.Drawing.Point(855, 156);
+            this.btnPrevious.Location = new System.Drawing.Point(853, 156);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(20, 22);
             this.btnPrevious.StyleController = this.layoutControl1;
@@ -1124,7 +1158,7 @@
             // 
             this.btnNext.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.btnNext.Appearance.Options.UseFont = true;
-            this.btnNext.Location = new System.Drawing.Point(891, 156);
+            this.btnNext.Location = new System.Drawing.Point(889, 156);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(20, 22);
             this.btnNext.StyleController = this.layoutControl1;
@@ -1136,9 +1170,9 @@
             // 
             this.btnLast.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.btnLast.Appearance.Options.UseFont = true;
-            this.btnLast.Location = new System.Drawing.Point(925, 156);
+            this.btnLast.Location = new System.Drawing.Point(923, 156);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(21, 22);
+            this.btnLast.Size = new System.Drawing.Size(23, 22);
             this.btnLast.StyleController = this.layoutControl1;
             this.btnLast.TabIndex = 36;
             this.btnLast.Text = ">>";
@@ -1158,7 +1192,7 @@
             this.txtEMP004.Properties.NullText = "";
             this.txtEMP004.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.txtEMP004.Properties.View = this.viewOne;
-            this.txtEMP004.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP004.Size = new System.Drawing.Size(309, 20);
             this.txtEMP004.StyleController = this.layoutControl1;
             this.txtEMP004.TabIndex = 8;
             this.txtEMP004.EditValueChanged += new System.EventHandler(this.txtEMP004_EditValueChanged);
@@ -1212,7 +1246,7 @@
             this.txtEMP006.Properties.NullText = "";
             this.txtEMP006.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.txtEMP006.Properties.View = this.gridView2;
-            this.txtEMP006.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP006.Size = new System.Drawing.Size(309, 20);
             this.txtEMP006.StyleController = this.layoutControl1;
             this.txtEMP006.TabIndex = 9;
             // 
@@ -1264,14 +1298,14 @@
             "男",
             "女"});
             this.txtEMP008.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP008.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP008.Size = new System.Drawing.Size(309, 20);
             this.txtEMP008.StyleController = this.layoutControl1;
             this.txtEMP008.TabIndex = 11;
             // 
             // txtEMP023
             // 
             this.txtEMP023.EditValue = null;
-            this.txtEMP023.Location = new System.Drawing.Point(486, 156);
+            this.txtEMP023.Location = new System.Drawing.Point(485, 156);
             this.txtEMP023.MenuManager = this.barManager1;
             this.txtEMP023.Name = "txtEMP023";
             this.txtEMP023.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
@@ -1286,7 +1320,7 @@
             this.txtEMP023.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtEMP023.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.txtEMP023.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtEMP023.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP023.Size = new System.Drawing.Size(317, 20);
             this.txtEMP023.StyleController = this.layoutControl1;
             this.txtEMP023.TabIndex = 23;
             // 
@@ -1308,13 +1342,13 @@
             this.txtEMP009.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtEMP009.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.txtEMP009.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtEMP009.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP009.Size = new System.Drawing.Size(309, 20);
             this.txtEMP009.StyleController = this.layoutControl1;
             this.txtEMP009.TabIndex = 12;
             // 
             // txtEMP021
             // 
-            this.txtEMP021.Location = new System.Drawing.Point(486, 108);
+            this.txtEMP021.Location = new System.Drawing.Point(485, 108);
             this.txtEMP021.MenuManager = this.barManager1;
             this.txtEMP021.Name = "txtEMP021";
             this.txtEMP021.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
@@ -1326,13 +1360,13 @@
             "已婚",
             "离异"});
             this.txtEMP021.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP021.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP021.Size = new System.Drawing.Size(317, 20);
             this.txtEMP021.StyleController = this.layoutControl1;
             this.txtEMP021.TabIndex = 21;
             // 
             // txtEMP025
             // 
-            this.txtEMP025.Location = new System.Drawing.Point(486, 204);
+            this.txtEMP025.Location = new System.Drawing.Point(485, 204);
             this.txtEMP025.MenuManager = this.barManager1;
             this.txtEMP025.Name = "txtEMP025";
             this.txtEMP025.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
@@ -1343,24 +1377,24 @@
             "在职",
             "离职"});
             this.txtEMP025.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP025.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP025.Size = new System.Drawing.Size(317, 20);
             this.txtEMP025.StyleController = this.layoutControl1;
             this.txtEMP025.TabIndex = 25;
             // 
             // txtEMP026
             // 
-            this.txtEMP026.Location = new System.Drawing.Point(486, 228);
+            this.txtEMP026.Location = new System.Drawing.Point(485, 228);
             this.txtEMP026.MenuManager = this.barManager1;
             this.txtEMP026.Name = "txtEMP026";
             this.txtEMP026.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
             this.txtEMP026.Properties.Appearance.Options.UseFont = true;
-            this.txtEMP026.Size = new System.Drawing.Size(319, 91);
+            this.txtEMP026.Size = new System.Drawing.Size(317, 91);
             this.txtEMP026.StyleController = this.layoutControl1;
             this.txtEMP026.TabIndex = 37;
             // 
             // txtEMP024
             // 
-            this.txtEMP024.Location = new System.Drawing.Point(486, 180);
+            this.txtEMP024.Location = new System.Drawing.Point(485, 180);
             this.txtEMP024.MenuManager = this.barManager1;
             this.txtEMP024.Name = "txtEMP024";
             this.txtEMP024.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
@@ -1375,7 +1409,7 @@
             "群众"});
             this.txtEMP024.Properties.PopupSizeable = true;
             this.txtEMP024.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP024.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP024.Size = new System.Drawing.Size(317, 20);
             this.txtEMP024.StyleController = this.layoutControl1;
             this.txtEMP024.TabIndex = 24;
             // 
@@ -1389,7 +1423,7 @@
             this.txtEMP035.Properties.ImmediatePopup = true;
             this.txtEMP035.Properties.PopupSizeable = true;
             this.txtEMP035.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP035.Size = new System.Drawing.Size(101, 20);
+            this.txtEMP035.Size = new System.Drawing.Size(100, 20);
             this.txtEMP035.StyleController = this.layoutControl1;
             this.txtEMP035.TabIndex = 38;
             // 
@@ -1451,7 +1485,7 @@
             this.txtEMP036.Properties.ImmediatePopup = true;
             this.txtEMP036.Properties.PopupSizeable = true;
             this.txtEMP036.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP036.Size = new System.Drawing.Size(101, 20);
+            this.txtEMP036.Size = new System.Drawing.Size(100, 20);
             this.txtEMP036.StyleController = this.layoutControl1;
             this.txtEMP036.TabIndex = 39;
             // 
@@ -1540,13 +1574,13 @@
             "基诺族"});
             this.txtEMP015.Properties.PopupSizeable = true;
             this.txtEMP015.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP015.Size = new System.Drawing.Size(310, 20);
+            this.txtEMP015.Size = new System.Drawing.Size(309, 20);
             this.txtEMP015.StyleController = this.layoutControl1;
             this.txtEMP015.TabIndex = 16;
             // 
             // txtEMP022
             // 
-            this.txtEMP022.Location = new System.Drawing.Point(486, 132);
+            this.txtEMP022.Location = new System.Drawing.Point(485, 132);
             this.txtEMP022.MenuManager = this.barManager1;
             this.txtEMP022.Name = "txtEMP022";
             this.txtEMP022.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
@@ -1566,13 +1600,13 @@
             "小学"});
             this.txtEMP022.Properties.PopupSizeable = true;
             this.txtEMP022.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP022.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP022.Size = new System.Drawing.Size(317, 20);
             this.txtEMP022.StyleController = this.layoutControl1;
             this.txtEMP022.TabIndex = 22;
             // 
             // txtEMP020
             // 
-            this.txtEMP020.Location = new System.Drawing.Point(486, 84);
+            this.txtEMP020.Location = new System.Drawing.Point(485, 84);
             this.txtEMP020.MenuManager = this.barManager1;
             this.txtEMP020.Name = "txtEMP020";
             this.txtEMP020.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
@@ -1583,14 +1617,14 @@
             "农业",
             "非农业"});
             this.txtEMP020.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtEMP020.Size = new System.Drawing.Size(319, 20);
+            this.txtEMP020.Size = new System.Drawing.Size(317, 20);
             this.txtEMP020.StyleController = this.layoutControl1;
             this.txtEMP020.TabIndex = 20;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1.Location = new System.Drawing.Point(1121, 12);
+            this.pictureEdit1.Location = new System.Drawing.Point(1117, 12);
             this.pictureEdit1.MenuManager = this.barManager1;
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -1609,9 +1643,22 @@
             this.txtEMP037.Properties.Appearance.Options.UseFont = true;
             this.txtEMP037.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
             this.txtEMP037.Properties.Caption = "是否记工";
-            this.txtEMP037.Size = new System.Drawing.Size(390, 19);
+            this.txtEMP037.Size = new System.Drawing.Size(389, 19);
             this.txtEMP037.StyleController = this.layoutControl1;
             this.txtEMP037.TabIndex = 41;
+            // 
+            // txtEMP038
+            // 
+            this.txtEMP038.Location = new System.Drawing.Point(92, 323);
+            this.txtEMP038.MenuManager = this.barManager1;
+            this.txtEMP038.Name = "txtEMP038";
+            this.txtEMP038.Properties.Appearance.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.txtEMP038.Properties.Appearance.Options.UseFont = true;
+            this.txtEMP038.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtEMP038.Size = new System.Drawing.Size(710, 20);
+            this.txtEMP038.StyleController = this.layoutControl1;
+            this.txtEMP038.TabIndex = 43;
             // 
             // layoutControlGroup1
             // 
@@ -1662,10 +1709,11 @@
             this.emptySpaceItem1,
             this.layoutControlItem37,
             this.layoutControlItem12,
-            this.layoutControlItem38});
+            this.layoutControlItem38,
+            this.layoutControlItem40});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1226, 419);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1222, 418);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1675,7 +1723,7 @@
             this.layoutControlItem1.Control = this.txtEMP001;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem1.Text = "编号:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1684,9 +1732,9 @@
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtEMP017;
-            this.layoutControlItem2.Location = new System.Drawing.Point(394, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(393, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem2.Text = "联系电话:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1695,9 +1743,9 @@
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.txtEMP027;
-            this.layoutControlItem3.Location = new System.Drawing.Point(797, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(794, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(312, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem3.Text = "基本工资:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1708,7 +1756,7 @@
             this.layoutControlItem4.Control = this.txtEMP002;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem4.Text = "姓名:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1719,7 +1767,7 @@
             this.layoutControlItem5.Control = this.txtEMP004;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem5.Text = "部门名称:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1730,7 +1778,7 @@
             this.layoutControlItem6.Control = this.txtEMP006;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem6.Text = "班组:";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1741,7 +1789,7 @@
             this.layoutControlItem7.Control = this.txtEMP007;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem7.Text = "岗位:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1752,7 +1800,7 @@
             this.layoutControlItem8.Control = this.txtEMP008;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem8.Text = "性别:";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1763,7 +1811,7 @@
             this.layoutControlItem9.Control = this.txtEMP009;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem9.Text = "出生年月:";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1798,7 +1846,7 @@
             this.layoutControlItem13.Control = this.txtEMP015;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 240);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem13.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem13.Text = "民族:";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1809,7 +1857,7 @@
             this.layoutControlItem14.Control = this.txtEMP016;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 264);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem14.Text = "身份证号:";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1818,9 +1866,9 @@
             this.layoutControlItem15.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem15.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem15.Control = this.txtEMP018;
-            this.layoutControlItem15.Location = new System.Drawing.Point(394, 24);
+            this.layoutControlItem15.Location = new System.Drawing.Point(393, 24);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem15.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem15.Text = "紧急联络人:";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1829,9 +1877,9 @@
             this.layoutControlItem16.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem16.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem16.Control = this.txtEMP019;
-            this.layoutControlItem16.Location = new System.Drawing.Point(394, 48);
+            this.layoutControlItem16.Location = new System.Drawing.Point(393, 48);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem16.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem16.Text = "联系电话:";
             this.layoutControlItem16.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1840,9 +1888,9 @@
             this.layoutControlItem17.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem17.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem17.Control = this.txtEMP020;
-            this.layoutControlItem17.Location = new System.Drawing.Point(394, 72);
+            this.layoutControlItem17.Location = new System.Drawing.Point(393, 72);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem17.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem17.Text = "户口性质:";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1851,9 +1899,9 @@
             this.layoutControlItem18.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem18.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem18.Control = this.txtEMP021;
-            this.layoutControlItem18.Location = new System.Drawing.Point(394, 96);
+            this.layoutControlItem18.Location = new System.Drawing.Point(393, 96);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem18.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem18.Text = "婚姻状况:";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1862,9 +1910,9 @@
             this.layoutControlItem19.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem19.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem19.Control = this.txtEMP022;
-            this.layoutControlItem19.Location = new System.Drawing.Point(394, 120);
+            this.layoutControlItem19.Location = new System.Drawing.Point(393, 120);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem19.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem19.Text = "文化程度:";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1873,9 +1921,9 @@
             this.layoutControlItem20.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem20.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem20.Control = this.txtEMP023;
-            this.layoutControlItem20.Location = new System.Drawing.Point(394, 144);
+            this.layoutControlItem20.Location = new System.Drawing.Point(393, 144);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem20.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem20.Text = "入职时间:";
             this.layoutControlItem20.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1884,9 +1932,9 @@
             this.layoutControlItem21.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem21.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem21.Control = this.txtEMP024;
-            this.layoutControlItem21.Location = new System.Drawing.Point(394, 168);
+            this.layoutControlItem21.Location = new System.Drawing.Point(393, 168);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem21.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem21.Text = "政治面貌:";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1895,9 +1943,9 @@
             this.layoutControlItem22.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem22.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem22.Control = this.txtEMP025;
-            this.layoutControlItem22.Location = new System.Drawing.Point(394, 192);
+            this.layoutControlItem22.Location = new System.Drawing.Point(393, 192);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem22.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem22.Text = "在职状态:";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1906,9 +1954,9 @@
             this.layoutControlItem23.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem23.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem23.Control = this.txtEMP028;
-            this.layoutControlItem23.Location = new System.Drawing.Point(797, 24);
+            this.layoutControlItem23.Location = new System.Drawing.Point(794, 24);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(312, 24);
+            this.layoutControlItem23.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem23.Text = "岗位奖:";
             this.layoutControlItem23.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1917,9 +1965,9 @@
             this.layoutControlItem24.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem24.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem24.Control = this.txtEMP029;
-            this.layoutControlItem24.Location = new System.Drawing.Point(797, 48);
+            this.layoutControlItem24.Location = new System.Drawing.Point(794, 48);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(312, 24);
+            this.layoutControlItem24.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem24.Text = "技能奖:";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1928,9 +1976,9 @@
             this.layoutControlItem25.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem25.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem25.Control = this.txtEMP030;
-            this.layoutControlItem25.Location = new System.Drawing.Point(797, 72);
+            this.layoutControlItem25.Location = new System.Drawing.Point(794, 72);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(312, 24);
+            this.layoutControlItem25.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem25.Text = "养老扣款:";
             this.layoutControlItem25.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1939,9 +1987,9 @@
             this.layoutControlItem26.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem26.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem26.Control = this.txtEMP031;
-            this.layoutControlItem26.Location = new System.Drawing.Point(797, 96);
+            this.layoutControlItem26.Location = new System.Drawing.Point(794, 96);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(312, 24);
+            this.layoutControlItem26.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem26.Text = "餐补系数:";
             this.layoutControlItem26.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -1950,33 +1998,33 @@
             this.layoutControlItem27.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
             this.layoutControlItem27.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem27.Control = this.txtEMP032;
-            this.layoutControlItem27.Location = new System.Drawing.Point(797, 120);
+            this.layoutControlItem27.Location = new System.Drawing.Point(794, 120);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(312, 24);
+            this.layoutControlItem27.Size = new System.Drawing.Size(311, 24);
             this.layoutControlItem27.Text = "绩效系数:";
             this.layoutControlItem27.TextSize = new System.Drawing.Size(77, 14);
             // 
             // emptySpaceItem30
             // 
             this.emptySpaceItem30.AllowHotTrack = false;
-            this.emptySpaceItem30.Location = new System.Drawing.Point(797, 170);
+            this.emptySpaceItem30.Location = new System.Drawing.Point(794, 170);
             this.emptySpaceItem30.Name = "emptySpaceItem30";
-            this.emptySpaceItem30.Size = new System.Drawing.Size(409, 229);
+            this.emptySpaceItem30.Size = new System.Drawing.Size(408, 228);
             this.emptySpaceItem30.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.btnFirst;
-            this.layoutControlItem30.Location = new System.Drawing.Point(807, 144);
+            this.layoutControlItem30.Location = new System.Drawing.Point(804, 144);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(26, 26);
+            this.layoutControlItem30.Size = new System.Drawing.Size(27, 26);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.btnPrevious;
-            this.layoutControlItem31.Location = new System.Drawing.Point(843, 144);
+            this.layoutControlItem31.Location = new System.Drawing.Point(841, 144);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Size = new System.Drawing.Size(24, 26);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
@@ -1985,7 +2033,7 @@
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.btnNext;
-            this.layoutControlItem32.Location = new System.Drawing.Point(879, 144);
+            this.layoutControlItem32.Location = new System.Drawing.Point(877, 144);
             this.layoutControlItem32.Name = "layoutControlItem32";
             this.layoutControlItem32.Size = new System.Drawing.Size(24, 26);
             this.layoutControlItem32.Text = ">";
@@ -1995,9 +2043,9 @@
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.btnLast;
-            this.layoutControlItem33.Location = new System.Drawing.Point(913, 144);
+            this.layoutControlItem33.Location = new System.Drawing.Point(911, 144);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(25, 26);
+            this.layoutControlItem33.Size = new System.Drawing.Size(27, 26);
             this.layoutControlItem33.Text = ">>";
             this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem33.TextVisible = false;
@@ -2005,7 +2053,7 @@
             // emptySpaceItem31
             // 
             this.emptySpaceItem31.AllowHotTrack = false;
-            this.emptySpaceItem31.Location = new System.Drawing.Point(833, 144);
+            this.emptySpaceItem31.Location = new System.Drawing.Point(831, 144);
             this.emptySpaceItem31.Name = "emptySpaceItem31";
             this.emptySpaceItem31.Size = new System.Drawing.Size(10, 26);
             this.emptySpaceItem31.TextSize = new System.Drawing.Size(0, 0);
@@ -2013,7 +2061,7 @@
             // emptySpaceItem32
             // 
             this.emptySpaceItem32.AllowHotTrack = false;
-            this.emptySpaceItem32.Location = new System.Drawing.Point(867, 144);
+            this.emptySpaceItem32.Location = new System.Drawing.Point(865, 144);
             this.emptySpaceItem32.Name = "emptySpaceItem32";
             this.emptySpaceItem32.Size = new System.Drawing.Size(12, 26);
             this.emptySpaceItem32.TextSize = new System.Drawing.Size(0, 0);
@@ -2021,7 +2069,7 @@
             // emptySpaceItem33
             // 
             this.emptySpaceItem33.AllowHotTrack = false;
-            this.emptySpaceItem33.Location = new System.Drawing.Point(903, 144);
+            this.emptySpaceItem33.Location = new System.Drawing.Point(901, 144);
             this.emptySpaceItem33.Name = "emptySpaceItem33";
             this.emptySpaceItem33.Size = new System.Drawing.Size(10, 26);
             this.emptySpaceItem33.TextSize = new System.Drawing.Size(0, 0);
@@ -2031,13 +2079,13 @@
             this.emptySpaceItem34.AllowHotTrack = false;
             this.emptySpaceItem34.Location = new System.Drawing.Point(938, 144);
             this.emptySpaceItem34.Name = "emptySpaceItem34";
-            this.emptySpaceItem34.Size = new System.Drawing.Size(171, 26);
+            this.emptySpaceItem34.Size = new System.Drawing.Size(167, 26);
             this.emptySpaceItem34.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem35
             // 
             this.emptySpaceItem35.AllowHotTrack = false;
-            this.emptySpaceItem35.Location = new System.Drawing.Point(797, 144);
+            this.emptySpaceItem35.Location = new System.Drawing.Point(794, 144);
             this.emptySpaceItem35.Name = "emptySpaceItem35";
             this.emptySpaceItem35.Size = new System.Drawing.Size(10, 26);
             this.emptySpaceItem35.TextSize = new System.Drawing.Size(0, 0);
@@ -2047,9 +2095,9 @@
             this.layoutControlItem34.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem34.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem34.Control = this.txtEMP026;
-            this.layoutControlItem34.Location = new System.Drawing.Point(394, 216);
+            this.layoutControlItem34.Location = new System.Drawing.Point(393, 216);
             this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(403, 95);
+            this.layoutControlItem34.Size = new System.Drawing.Size(401, 95);
             this.layoutControlItem34.Text = "备注:";
             this.layoutControlItem34.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -2073,7 +2121,7 @@
             this.layoutControlItem35.Location = new System.Drawing.Point(289, 168);
             this.layoutControlItem35.MinSize = new System.Drawing.Size(54, 24);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(105, 24);
+            this.layoutControlItem35.Size = new System.Drawing.Size(104, 24);
             this.layoutControlItem35.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem35.Text = " ";
             this.layoutControlItem35.TextLocation = DevExpress.Utils.Locations.Top;
@@ -2085,7 +2133,7 @@
             this.layoutControlItem36.Control = this.txtEMP036;
             this.layoutControlItem36.Location = new System.Drawing.Point(289, 216);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(105, 24);
+            this.layoutControlItem36.Size = new System.Drawing.Size(104, 24);
             this.layoutControlItem36.Text = " ";
             this.layoutControlItem36.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem36.TextSize = new System.Drawing.Size(0, 0);
@@ -2107,15 +2155,15 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 311);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 335);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(797, 88);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(794, 63);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem37
             // 
             this.layoutControlItem37.Control = this.pictureEdit1;
-            this.layoutControlItem37.Location = new System.Drawing.Point(1109, 0);
+            this.layoutControlItem37.Location = new System.Drawing.Point(1105, 0);
             this.layoutControlItem37.Name = "layoutControlItem37";
             this.layoutControlItem37.Size = new System.Drawing.Size(97, 170);
             this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
@@ -2128,7 +2176,7 @@
             this.layoutControlItem12.Control = this.txtEMP014;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem12.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem12.Text = " ";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(77, 14);
             // 
@@ -2137,9 +2185,21 @@
             this.layoutControlItem38.Control = this.txtEMP037;
             this.layoutControlItem38.Location = new System.Drawing.Point(0, 288);
             this.layoutControlItem38.Name = "layoutControlItem38";
-            this.layoutControlItem38.Size = new System.Drawing.Size(394, 23);
+            this.layoutControlItem38.Size = new System.Drawing.Size(393, 23);
             this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem38.TextVisible = false;
+            // 
+            // layoutControlItem40
+            // 
+            this.layoutControlItem40.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.layoutControlItem40.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem40.Control = this.txtEMP038;
+            this.layoutControlItem40.CustomizationFormText = "工资权限:";
+            this.layoutControlItem40.Location = new System.Drawing.Point(0, 311);
+            this.layoutControlItem40.Name = "layoutControlItem40";
+            this.layoutControlItem40.Size = new System.Drawing.Size(794, 24);
+            this.layoutControlItem40.Text = "工资权限:";
+            this.layoutControlItem40.TextSize = new System.Drawing.Size(77, 14);
             // 
             // tabPageTwo
             // 
@@ -2147,7 +2207,7 @@
             this.tabPageTwo.Appearance.Header.Options.UseFont = true;
             this.tabPageTwo.Controls.Add(this.gridControl1);
             this.tabPageTwo.Name = "tabPageTwo";
-            this.tabPageTwo.Size = new System.Drawing.Size(1226, 419);
+            this.tabPageTwo.Size = new System.Drawing.Size(1222, 418);
             this.tabPageTwo.Text = "详细信息";
             // 
             // wait
@@ -2164,19 +2224,17 @@
             this.wait.TabIndex = 35;
             this.wait.Text = "progressPanel1";
             // 
-            // contextMenuStrip1
+            // EMP038
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copy});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
-            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
-            // 
-            // copy
-            // 
-            this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(152, 22);
-            this.copy.Text = "复制";
+            this.EMP038.AppearanceCell.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.EMP038.AppearanceCell.Options.UseFont = true;
+            this.EMP038.AppearanceHeader.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.EMP038.AppearanceHeader.Options.UseFont = true;
+            this.EMP038.Caption = "工资权限";
+            this.EMP038.FieldName = "EMP038";
+            this.EMP038.Name = "EMP038";
+            this.EMP038.Visible = true;
+            this.EMP038.VisibleIndex = 34;
             // 
             // FormEmployee
             // 
@@ -2193,6 +2251,7 @@
             this.Controls.SetChildIndex(this.xtraTabControl1, 0);
             this.Controls.SetChildIndex(this.wait, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -2239,6 +2298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEMP020.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEMP037.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEMP038.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -2285,8 +2345,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
             this.tabPageTwo.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2441,5 +2501,8 @@
         private DevExpress . XtraGrid . Columns . GridColumn EMP037;
         private System . Windows . Forms . ContextMenuStrip contextMenuStrip1;
         private System . Windows . Forms . ToolStripMenuItem copy;
+        private DevExpress . XtraEditors . CheckedComboBoxEdit txtEMP038;
+        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem40;
+        private DevExpress . XtraGrid . Columns . GridColumn EMP038;
     }
 }

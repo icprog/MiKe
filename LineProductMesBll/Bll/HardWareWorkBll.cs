@@ -222,5 +222,16 @@ namespace LineProductMesBll . Bll
             return dal . getTableOtherSur ( orderNum ,proNum ,oddNum );
         }
 
+        /// <summary>
+        /// 获取同来源单号，不同单号的工序序号和数量
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <param name="codeNum"></param>
+        /// <returns></returns>
+        public DataTable getTableALLArt ( string oddNum ,string codeNum )
+        {
+            return dal . getTableALLArt ( oddNum ,codeNum );
+        }
+
     }
 }

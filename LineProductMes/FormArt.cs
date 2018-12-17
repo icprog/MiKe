@@ -185,7 +185,7 @@ namespace LineProductMes
 
             return base . Cancel ( );
         }
-        protected override int Export ( )
+        protected override int ExportBase ( )
         {
             int [ ] selectRows = gridView2 . GetSelectedRows ( );
             if ( selectRows . Length < 1 )
@@ -208,7 +208,7 @@ namespace LineProductMes
             tableExport . TableName = "TableOne";
             Export ( new DataTable [ ] { tableExport } ,"工艺信息.frx" );
 
-            return base . Export ( );
+            return base . ExportBase ( );
         }
         #endregion
 

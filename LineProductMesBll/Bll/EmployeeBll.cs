@@ -130,6 +130,14 @@ namespace LineProductMesBll . Bll
             return dal . getDepart ( num );
         }
 
+        /// <summary>
+        /// 获取所有班组
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getDepartPower ( )
+        {
+            return dal . getDepartPower ( );
+        }
 
     }
 }

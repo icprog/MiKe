@@ -187,7 +187,7 @@ namespace LineProductMes
                 if ( state . Equals ( "审核" ) )
                 {
                     layoutControlItem24 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicZ ( pictureEdit1 ,"审 核" );
+                    Graph . grPicZ ( pictureEdit1 ,"审核" );
                 }
                 else
                 {
@@ -220,7 +220,7 @@ namespace LineProductMes
                 if ( state . Equals ( "注销" ) )
                 {
                     layoutControlItem24 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicZ ( pictureEdit1 ,"注 销" );
+                    Graph . grPicZ ( pictureEdit1 ,"注销" );
                 }
                 else
                 {
@@ -233,17 +233,14 @@ namespace LineProductMes
 
             return base . Cancellation ( );
         }
-        protected override int Print ( )
+        protected override int PrintWork ( )
         {
-            if ( string . IsNullOrEmpty ( txtANW002 . Text ) )
-                return 0;
-
             printOrExport ( );
             Print ( new DataTable [ ] { talePrintOne ,talePrintTwo } ,"入库单.frx" );
 
-            return base . Print ( );
+            return base . PrintWork ( );
         }
-        protected override int Export ( )
+        protected override int ExportWork ( )
         {
             if ( string . IsNullOrEmpty ( txtANW002 . Text ) )
                 return 0;
@@ -251,7 +248,7 @@ namespace LineProductMes
             printOrExport ( );
             Export ( new DataTable [ ] { talePrintOne ,talePrintTwo } ,"入库单.frx" );
 
-            return base . Export ( );
+            return base . ExportWork ( );
         }
         #endregion
 
@@ -303,6 +300,8 @@ namespace LineProductMes
                         rows [ "ANX004" ] = row [ "ANX004" ] . ToString ( );
                         rows [ "ANX014" ] = row [ "DAA002" ] . ToString ( );
                         rows [ "ANX011" ] = "在职";
+                        if ( "检测" . Equals ( row [ "ANX004" ] . ToString ( ) ) )
+                            rows [ "ANX013" ] = "检测";
                         if ( txtANW014 . Text . Equals ( "计件" ) )
                         {
                             rows [ "ANX005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
@@ -330,6 +329,8 @@ namespace LineProductMes
                         rows [ "ANX004" ] = row [ "ANX004" ] . ToString ( );
                         rows [ "ANX014" ] = row [ "DAA002" ] . ToString ( );
                         rows [ "ANX011" ] = "在职";
+                        if ( "检测" . Equals ( row [ "ANX004" ] . ToString ( ) ) )
+                            rows [ "ANX013" ] = "检测";
                         if ( txtANW014 . Text . Equals ( "计件" ) )
                         {
                             rows [ "ANX005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
@@ -382,6 +383,8 @@ namespace LineProductMes
                 bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANX003" ] ,_body . ANX003 );
                 bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANX004" ] ,_body . ANX004 );
                 bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANX014" ] ,_body . ANX014 );
+                if ( "检测" . Equals ( _body . ANX004 ) )
+                    bandedGridView1 . SetFocusedRowCellValue ( bandedGridView1 . Columns [ "ANX013" ] ,"检测" );
                 break;
             }
         }
@@ -604,6 +607,7 @@ namespace LineProductMes
             else if ( e . Column . FieldName == "ANX010" )
             {
                 calcuSalaryForSub ( );
+                setCalcuSalary ( );
             }
             else if ( e . Column . FieldName == "ANX002" || e . Column . FieldName == "ANX003" || e . Column . FieldName == "ANX004" || e . Column . FieldName == "ANX009" || e . Column . FieldName == "ANX013" )
             {
@@ -827,7 +831,7 @@ namespace LineProductMes
         }
         void controlClear ( )
         {
-            txtANW001 . Text = txtANW002 . Text = txtANW003 . Text = txtANW004 . Text = txtANW005 . Text = txtANW006 . Text = txtANW007 . Text = txtANW008 . Text = txtANW009 . Text = txtANW011 . Text = txtANW013 . Text = txtANW014 . Text = txtANW015 . Text = txtANW016 . Text = txtANW017 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text = txtANW019 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text = txtu5 . Text = txtANW022 . Text = txtANW023 . Text = txtANW024 . Text = string . Empty;
+            txtANW001 . Text = txtANW002 . Text = txtANW003 . Text = txtANW004 . Text = txtANW005 . Text = txtANW006 . Text = txtANW007 . Text = txtANW008 . Text = txtANW009 . Text = txtANW011 . Text = txtANW013 . Text = txtANW014 . Text = txtANW015 . Text = txtANW016 . Text = txtANW017 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text =/* txtANW019 . Text =*/ txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text = txtu5 . Text = txtANW022 . Text = txtANW023 . Text = txtANW024 . Text = string . Empty;
             gridControl1 . DataSource = null;
             layoutControlItem24 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
         }
@@ -1010,7 +1014,7 @@ namespace LineProductMes
         }
         void calcuSalarySum ( )
         {
-            txtu4 . Text = ( ( string . IsNullOrEmpty ( txtu0 . Text ) == true ? 0 : Convert . ToDecimal ( txtu0 . Text ) ) + ( string . IsNullOrEmpty ( txtu2 . Text ) == true ? 0 : Convert . ToDecimal ( txtu2 . Text ) ) ) . ToString ( "0.######" );
+            txtu4 . Text = ( string . IsNullOrEmpty ( txtu0 . Text ) == true ? 0 : Convert . ToDecimal ( txtu0 . Text ) )  . ToString ( "0.######" );
             if ( string . IsNullOrEmpty ( txtANW014 . Text ) )
                 return;
             if ( txtANW014 . Text . Equals ( "计时" ) )
@@ -1127,7 +1131,7 @@ namespace LineProductMes
         {
             if ( tableView == null || tableView . Rows . Count < 1 )
                 return;
-            decimal calcuT = 0, dtStart = 0, dtEnd = 0, resultSalary = 0;
+            decimal calcuT = 0, dtStart = 0, dtEnd = 0, resultSalary = 0, subWage = 0;
             if ( "计件" . Equals ( txtANW014 . Text ) )
             {
                 if ( string . IsNullOrEmpty ( txtu5 . Text ) )
@@ -1155,7 +1159,8 @@ namespace LineProductMes
                         dtStart = string . IsNullOrEmpty ( row [ "ANX015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX015" ] . ToString ( ) );
                         dtEnd = string . IsNullOrEmpty ( row [ "ANX016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX016" ] . ToString ( ) );
                         calcuT += dtEnd + dtStart;
-                        row [ "ANX017" ] = ( calcuT * resultSalary ) . ToString ( "0.##" );
+                        subWage = string . IsNullOrEmpty ( row [ "ANX010" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX010" ] . ToString ( ) );
+                        row [ "ANX017" ] = ( calcuT * resultSalary + subWage ) . ToString ( "0.##" );
                     }
                 }
             }
@@ -1179,7 +1184,8 @@ namespace LineProductMes
                     dtEnd = string . IsNullOrEmpty ( row [ "ANX016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX016" ] . ToString ( ) );
                     calcuT += dtEnd + dtStart;
                     resultSalary = string . IsNullOrEmpty ( row [ "ANX009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX009" ] . ToString ( ) );
-                    row [ "ANX017" ] = ( calcuT * resultSalary ) . ToString ( "0.##" );
+                    subWage = string . IsNullOrEmpty ( row [ "ANX010" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX010" ] . ToString ( ) );
+                    row [ "ANX017" ] = ( calcuT * resultSalary + subWage ) . ToString ( "0.##" );
                 }
             }
             //if ( !string . IsNullOrEmpty ( txtANW014 . Text ) && txtANW014 . Text . Equals ( "计时" ) )
@@ -1222,7 +1228,7 @@ namespace LineProductMes
             txtANW009 . Text = _header . ANW009 . ToString ( );
             txtANW017 . Text = _header . ANW017;
             //txtANW018 . Text = _header . ANW018;
-            txtANW019 . Text = _header . ANW019;
+            //txtANW019 . Text = _header . ANW019;
             txtANW022 . Text = Convert . ToDateTime ( _header . ANW022 ) . ToString ( "yyyy-MM-dd" );
             txtANW023 . Text = _header . ANW023 . ToString ( );
             txtANW024 . Text = _header . ANW024 . ToString ( );
@@ -1232,7 +1238,7 @@ namespace LineProductMes
             if ( _header . ANW020 )
             {
                 layoutControlItem24 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicZ ( pictureEdit1 ,"审 核" );
+                Graph . grPicZ ( pictureEdit1 ,"审核" );
                 examineTool ( "审核" );
             }
             else
@@ -1242,7 +1248,7 @@ namespace LineProductMes
             if ( _header . ANW021 )
             {
                 layoutControlItem24 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicZ ( pictureEdit1 ,"注 销" );
+                Graph . grPicZ ( pictureEdit1 ,"注销" );
                 cancelltionTool ( "注销" );
             }
             else
@@ -1368,7 +1374,7 @@ namespace LineProductMes
             _header . ANW017 = txtANW017 . Text;
             //_header . ANW018 = txtANW018 . Text;
             _header . ANW018 = string . Empty;
-            _header . ANW019 = txtANW019 . Text;
+            _header . ANW019 = /*txtANW019 . Text;*/string . Empty;
             _header . ANW022 = Convert . ToDateTime ( txtANW022 . Text );
             _header . ANW023 = string . IsNullOrEmpty ( txtANW023 . Text ) == true ? 0 : Convert . ToDecimal ( txtANW023 . Text );
             _header . ANW024 = string . IsNullOrEmpty ( txtANW024 . Text ) == true ? 0 : Convert . ToDecimal ( txtANW024 . Text );
@@ -1491,10 +1497,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( anw023 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if (dtTwo.CompareTo(Convert.ToDateTime( "17:30"))>0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( anw023 ) - Convert . ToDecimal ( anw024 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( anw024 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "ANX015" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1511,10 +1517,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( anw023 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30 */)
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( anw023 ) - Convert . ToDecimal ( anw024 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( anw024 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "ANX016" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );

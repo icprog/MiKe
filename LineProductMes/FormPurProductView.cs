@@ -22,7 +22,7 @@ namespace LineProductMes
 
             _bll = new LineProductMesBll . Bll . SemiProductPlanBll ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolCanecl ,toolSave  ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolCanecl ,toolSave  ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View1 } );
@@ -68,11 +68,12 @@ namespace LineProductMes
 
             return base . Query ( );
         }
-        protected override int Export ( )
+
+        protected override int ExportBase ( )
         {
             ViewExport . ExportToExcel ( this . Text ,this . gridControl1 );
 
-            return base . Export ( );
+            return base . ExportBase ( );
         }
 
         protected override int Add ( )

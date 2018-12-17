@@ -222,7 +222,7 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 备注
         /// </summary>
         public string PAO014
         {
@@ -236,7 +236,7 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 备注
         /// </summary>
         public string PAO015
         {

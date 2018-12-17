@@ -265,6 +265,7 @@ namespace LineProductMesBll . Dao
             //Hashtable SQLString = new Hashtable ( );
             StringBuilder strSql = new StringBuilder ( );
             _header . ANW001 = getOddNum ( );
+            _header . ANW025 = UserInfoMation . userName;
             AddHeader ( SQLString ,strSql ,_header );
             UserInfoMation . oddNum = _header . ANW001;
 
@@ -376,9 +377,9 @@ namespace LineProductMesBll . Dao
         {
             strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKANW(" );
-            strSql . Append ( "ANW001,ANW002,ANW003,ANW004,ANW005,ANW006,ANW007,ANW008,ANW009,ANW010,ANW011,ANW012,ANW013,ANW014,ANW015,ANW016,ANW017,ANW018,ANW019,ANW020,ANW021,ANW022,ANW023,ANW024)" );
+            strSql . Append ( "ANW001,ANW002,ANW003,ANW004,ANW005,ANW006,ANW007,ANW008,ANW009,ANW010,ANW011,ANW012,ANW013,ANW014,ANW015,ANW016,ANW017,ANW018,ANW019,ANW020,ANW021,ANW022,ANW023,ANW024,ANW025)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@ANW001,@ANW002,@ANW003,@ANW004,@ANW005,@ANW006,@ANW007,@ANW008,@ANW009,@ANW010,@ANW011,@ANW012,@ANW013,@ANW014,@ANW015,@ANW016,@ANW017,@ANW018,@ANW019,@ANW020,@ANW021,@ANW022,@ANW023,@ANW024)" );
+            strSql . Append ( "@ANW001,@ANW002,@ANW003,@ANW004,@ANW005,@ANW006,@ANW007,@ANW008,@ANW009,@ANW010,@ANW011,@ANW012,@ANW013,@ANW014,@ANW015,@ANW016,@ANW017,@ANW018,@ANW019,@ANW020,@ANW021,@ANW022,@ANW023,@ANW024,@ANW025)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@ANW001", SqlDbType.NVarChar,20),
                     new SqlParameter("@ANW002", SqlDbType.NVarChar,20),
@@ -403,7 +404,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@ANW021", SqlDbType.Bit,1),
                     new SqlParameter("@ANW022", SqlDbType.DateTime),
                     new SqlParameter("@ANW023", SqlDbType.Decimal,9),
-                    new SqlParameter("@ANW024", SqlDbType.Decimal,9)
+                    new SqlParameter("@ANW024", SqlDbType.Decimal,9),
+                    new SqlParameter("@ANW025", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . ANW001;
             parameters [ 1 ] . Value = model . ANW002;
@@ -429,6 +431,7 @@ namespace LineProductMesBll . Dao
             parameters [ 21 ] . Value = model . ANW022;
             parameters [ 22 ] . Value = model . ANW023;
             parameters [ 23 ] . Value = model . ANW024;
+            parameters [ 24 ] . Value = model . ANW025;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBody ( Dictionary<object ,object> SQLString ,StringBuilder strSql ,LineProductMesEntityu . AssNewWorkBodyEntity model )
@@ -717,7 +720,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintOne ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT ANW001,ANW011,ANW013,ANW022,GETDATE() dat FROM MIKANW WHERE ANW001='{0}' " ,oddNum );
+            strSql . AppendFormat ( "SELECT ANW001,ANW011,ANW013,ANW022,GETDATE() dat,ANW025 FROM MIKANW WHERE ANW001='{0}' " ,oddNum );
             
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

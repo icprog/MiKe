@@ -182,7 +182,7 @@ namespace LineProductMes
                 if ( state . Equals ( "审核" ) )
                 {
                     layoutControlItem19 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicZ ( pictureEdit1 ,"审 核" );
+                    Graph . grPicZ ( pictureEdit1 ,"审核" );
                 }
                 else
                 {
@@ -215,7 +215,7 @@ namespace LineProductMes
                 if ( state . Equals ( "注销" ) )
                 {
                     layoutControlItem19 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                    Graph . grPicZ ( pictureEdit1 ,"注 销" );
+                    Graph . grPicZ ( pictureEdit1 ,"注销" );
                 }
                 else
                 {
@@ -228,7 +228,7 @@ namespace LineProductMes
 
             return base . Cancellation ( );
         }
-        protected override int Print ( )
+        protected override int PrintWork ( )
         {
             if ( string . IsNullOrEmpty ( txtHAW009 . Text ) || Convert . ToInt32 ( txtHAW009 . Text ) <= 0 )
                 return 0;
@@ -237,9 +237,9 @@ namespace LineProductMes
                 return 0;
             Print ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Print ( );
+            return base . PrintWork ( );
         }
-        protected override int Export ( )
+        protected override int ExportWork ( )
         {
             if ( string . IsNullOrEmpty ( txtHAW009 . Text ) || Convert . ToInt32 ( txtHAW009 . Text ) <= 0 )
                 return 0;
@@ -248,7 +248,7 @@ namespace LineProductMes
                 return 0;
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
-            return base . Export ( );
+            return base . ExportWork ( );
         }
         #endregion
 
@@ -331,8 +331,9 @@ namespace LineProductMes
         {
             if ( txtHAW011 . Text == string . Empty )
                 return;
-            //startT ( );
-            //endT ( );
+
+            startT ( );
+            endT ( );
         }
         private void txtHAW002_EditValueChanged ( object sender ,EventArgs e )
         {
@@ -433,6 +434,8 @@ namespace LineProductMes
         }
         private void bandedGridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
+            decimal outRsult = 0M;
+
             row = bandedGridView1 . GetFocusedDataRow ( );
             if ( row == null )
                 return;
@@ -567,33 +570,68 @@ namespace LineProductMes
             }
             else if ( e . Column . FieldName == "HAX013" )
             {
-                DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
-                if ( txtHAW011 . Text . Equals ( "计件" ) )
+                //DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
+                //if ( txtHAW011 . Text . Equals ( "计件" ) )
+                //{
+                //    if ( row [ "HAX009" ] == null || row [ "HAX009" ] . ToString ( ) == string . Empty )
+                //    {
+                //        row [ "HAX009" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                //    }
+                //    if ( row [ "HAX010" ] == null || row [ "HAX010" ] . ToString ( ) == string . Empty )
+                //    {
+                //        row [ "HAX010" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                //    }
+                //}
+                //else if ( txtHAW011 . Text . Equals ( "计时" ) )
+                //{
+                //    if ( row [ "HAX011" ] == null || row [ "HAX011" ] . ToString ( ) == string . Empty )
+                //    {
+                //        row [ "HAX011" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                //    }
+                //    if ( row [ "HAX012" ] == null || row [ "HAX012" ] . ToString ( ) == string . Empty )
+                //    {
+                //        row [ "HAX012" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                //    }
+                //}
+                //if ( row [ "HAX015" ] == null || row [ "HAX015" ] . ToString ( ) == string . Empty )
+                //{
+                //    row [ "HAX015" ] = "在职";
+                //}
+                int selectIndex = bandedGridView1 . FocusedRowHandle;
+                if ( selectIndex < 0 )
+                    return;
+
+                string hax013Result = bandedGridView1 . GetDataRow ( selectIndex ) [ "HAX013" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( hax013Result ) )
+                    _body . HAX013 = 0;
+                else
                 {
-                    if ( row [ "HAX009" ] == null || row [ "HAX009" ] . ToString ( ) == string . Empty )
+                    if ( !string . IsNullOrEmpty ( hax013Result ) && decimal . TryParse ( hax013Result ,out outRsult ) == false )
+                        return;
+                    else
+                        _body . HAX013 = outRsult;
+                }
+                for ( int i = selectIndex ; i < tableView . Rows . Count ; i++ )
+                {
+                    row = tableView . Rows [ i ];
+                    if ( row [ "HAX019" ] != null && row [ "HAX019" ] . ToString ( ) != string . Empty )
                     {
-                        row [ "HAX009" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        if ( row [ "HAX013" ] == null || row [ "HAX013" ] . ToString ( ) == string . Empty )
+                        {
+                            row . BeginEdit ( );
+                            row [ "HAX013" ] = _body . HAX013;
+                            row . EndEdit ( );
+                        }
                     }
-                    if ( row [ "HAX010" ] == null || row [ "HAX010" ] . ToString ( ) == string . Empty )
+                    if ( i == selectIndex && ( row [ "HAX019" ] == null || row [ "HAX019" ] . ToString ( ) == string . Empty ) )
                     {
-                        row [ "HAX010" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        row . BeginEdit ( );
+                        row [ "HAX013" ] = DBNull . Value;
+                        row . EndEdit ( );
                     }
                 }
-                else if ( txtHAW011 . Text . Equals ( "计时" ) )
-                {
-                    if ( row [ "HAX011" ] == null || row [ "HAX011" ] . ToString ( ) == string . Empty )
-                    {
-                        row [ "HAX011" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    }
-                    if ( row [ "HAX012" ] == null || row [ "HAX012" ] . ToString ( ) == string . Empty )
-                    {
-                        row [ "HAX012" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-                    }
-                }
-                if ( row [ "HAX015" ] == null || row [ "HAX015" ] . ToString ( ) == string . Empty )
-                {
-                    row [ "HAX015" ] = "在职";
-                }
+                gridControl1 . Refresh ( );
+
                 calcuTsumTime ( );
             }
             else if ( e . Column . FieldName == "HAX005" || e . Column . FieldName == "HAX006" || e . Column . FieldName == "HAX007" )
@@ -691,6 +729,7 @@ namespace LineProductMes
                     gridControl1 . DataSource = tableView;
                     setValue ( );
                     saveTool ( );
+                    calcuTsumTime ( );
 
                     tableOtherSur = _bll . getTableOtherSur ( txtHAW002 . Text ,txtHAW003 . Text ,txtHAW001 . Text );
                     editOtherSur ( );
@@ -922,41 +961,6 @@ namespace LineProductMes
             if ( result == false )
                 return false;
 
-            //var quer = from k in tableView . AsEnumerable ( )
-            //           group k by new
-            //           {
-            //               p1 = k . Field<string> ( "HAX002" ) ,
-            //               p2 = k . Field<string> ( "HAX016" )
-            //           } into m
-            //           let sum = m . Sum ( t => t . Field<int?> ( "HAX008" ) == null ? 0 : Convert . ToInt32 ( t . Field<int?> ( "HAX008" ) ) )
-            //           select new
-            //           {
-            //               hax002 = m . Key . p1 ,
-            //               hax016 = m . Key . p2 ,
-            //               sum = sum
-            //           };
-            //if ( quer != null )
-            //{
-            //    foreach ( var x in quer )
-            //    {
-            //        if ( x . sum > _header . HAW007 )
-            //        {
-            //            XtraMessageBox . Show ( "工号:" + x . hax002 + "\n\r序号:" + x . hax016 + "\n\r的生产数量多于工单数量" ,"提示" );
-            //            result = false;
-            //            break;
-            //        }
-            //    }
-            //}
-
-            //if ( result == false )
-            //    return false;
-
-            //if ( _bll . ExistsNum ( _header ) == false )
-            //{
-            //    XtraMessageBox . Show ( "完工数量之和多余工单数量,请核实" );
-            //    return false;
-            //}
-
             var que = from k in tableView . AsEnumerable ( )
                       group k by new
                       {
@@ -982,15 +986,6 @@ namespace LineProductMes
                     }
                     if ( x . hax016 == "001" )
                         numForSGM = x . sum;
-                    //else
-                    //{
-                    //    if ( _bll . ExistsNums ( _header ,x . hax016 ,x . sum ) == false )
-                    //    {
-                    //        XtraMessageBox . Show ( "序号:" + x . hax016 + "完工数量之和多余工单数量,请核实" );
-                    //        result = false;
-                    //        break;
-                    //    }
-                    //}
                 }
             }
 
@@ -1070,6 +1065,98 @@ namespace LineProductMes
             if ( result == false )
                 return false;
 
+            _header . HAW001 = txtHAW001 . Text;
+            _header . HAW002 = txtHAW002 . Text;
+            if ( qu != null )
+            {
+                int numOfArt = 0;
+                Dictionary<string ,int> dicArt = new Dictionary<string ,int> ( );
+
+                DataTable tableAllArt = _bll . getTableALLArt ( _header . HAW001 ,_header . HAW002 );
+                if ( tableAllArt != null && tableAllArt . Rows . Count > 0 )
+                {
+                    
+                    foreach ( DataRow rows in tableAllArt . Rows )
+                    {
+                        if ( dicArt . Count < 1 )
+                            dicArt . Add ( rows [ "HAX016" ] . ToString ( ) ,Convert . ToInt32 ( rows [ "HAX008" ] ) );
+                        else if ( dicArt . ContainsKey ( rows [ "HAX016" ] . ToString ( ) ) )
+                        {
+                            numOfArt = dicArt [ rows [ "HAX016" ] . ToString ( ) ];
+                            dicArt [ rows [ "HAX016" ] . ToString ( ) ] = Convert . ToInt32 ( rows [ "HAX008" ] ) + numOfArt;
+                        }
+                        else
+                            dicArt . Add ( rows [ "HAX016" ] . ToString ( ) ,Convert . ToInt32 ( rows [ "HAX008" ] ) );
+                    }
+                }
+                foreach ( var x in qu )
+                {
+                    if ( dicArt . Count < 1 )
+                        dicArt . Add ( x . hax016 ,x . sum );
+                    else if ( dicArt . ContainsKey ( x . hax016 ) )
+                    {
+                        numOfArt = dicArt [ x . hax016 ];
+                        dicArt [ x . hax016 ] = x . sum + numOfArt;
+                    }
+                    else
+                        dicArt . Add ( x . hax016 ,x . sum );
+                }
+
+                if ( dicArt . Count > 0 )
+                {
+                    Dictionary<string ,int> dic1Asc = dicArt . OrderBy ( o => o . Key ) . ToDictionary ( o => o . Key ,p => p . Value );
+
+                    List<string> keyArt = new List<string> ( );
+                    foreach ( DataRow rows in tableArt . Rows )
+                    {
+                        if ( !dic1Asc . ContainsKey ( rows [ "ART011" ] . ToString ( ) ) )
+                            keyArt . Add ( rows [ "ART011" ] . ToString ( ) );
+                    }
+                   
+                    numOfArt = 0;
+                    dicArt . Clear ( );
+                 
+                    foreach ( KeyValuePair<string ,int> kv in dic1Asc )
+                    {
+                        if ( keyArt . Count > 0 )
+                        {
+                            if ( !keyArt . Contains ( kv . Key ) )
+                            {
+                                foreach ( string s in keyArt )
+                                {
+                                    if ( Convert . ToInt32 ( kv . Key ) > Convert . ToInt32 ( s ) )
+                                    {
+                                        XtraMessageBox . Show ( "工序序号:" + s + "未报工,后续其它工序不允许报工" );
+                                        result = false;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+
+                        if ( result == false )
+                            break;
+
+                        if ( dicArt . Count > 0 )
+                        {
+                            if ( kv . Value > dicArt [ dicArt . Keys . First ( ) ] )
+                            {
+                                XtraMessageBox . Show ( "工序序号:" + kv . Key + "的完工数量多余工序序号:" + dicArt . Keys . First ( ) + "的完工数量,请核实" );
+                                result = false;
+                                break;
+                            }
+                        }
+                        dicArt . Clear ( );
+                        dicArt . Add ( kv . Key ,kv . Value );
+                        numOfArt++;
+                    }
+                }
+            }
+
+
+            if ( result == false )
+                return false;
+
             if ( tableArt == null || tableArt . Rows . Count < 1 )
                 return result;
             DataRow row = tableArt . Select ( "ART010='是'" ) [ 0 ];
@@ -1081,6 +1168,11 @@ namespace LineProductMes
                 {
                     txtHAW009 . Text = tableView . Compute ( "SUM(HAX008)" ,"HAX016='" + art011 + "'" ) . ToString ( );
                     _header . HAW009 = string . IsNullOrEmpty ( txtHAW009 . Text ) == true ? 0 : Convert . ToInt32 ( txtHAW009 . Text );
+                }
+                else
+                {
+                    txtHAW009 . Text = 0 . ToString ( );
+                    _header . HAW009 = 0;
                 }
             }
 
@@ -1110,7 +1202,7 @@ namespace LineProductMes
             if ( _header . HAW018 )
             {
                 layoutControlItem19 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicZ ( pictureEdit1 ,"审 核" );
+                Graph . grPicZ ( pictureEdit1 ,"审核" );
                 examineTool ( "审核" );
             }
             else
@@ -1120,7 +1212,7 @@ namespace LineProductMes
             if ( _header . HAW019 )
             {
                 layoutControlItem19 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
-                Graph . grPicZ ( pictureEdit1 ,"注 销" );
+                Graph . grPicZ ( pictureEdit1 ,"注销" );
                 cancelltionTool ( "注销" );
             }
             else
@@ -1260,6 +1352,7 @@ namespace LineProductMes
                         if ( workShopTime . startCenTime ( row ,row["HAX011"] ,"HAX010" ,"HAX012" ,"HAX009" ) == false )
                         {
                             row [ "HAX011" ] = DBNull . Value;
+                            row [ "HAX013" ] = DBNull . Value;
                             result = false;
                         }
                         if ( result )
@@ -1267,6 +1360,7 @@ namespace LineProductMes
                             if ( workShopTime . startCenTime ( row ,row [ "HAX011" ] ,"HAX010" ,"HAX012" ,"HAX009" ) == false )
                             {
                                 row [ "HAX011" ] = DBNull . Value;
+                                row [ "HAX013" ] = DBNull . Value;
                                 result = false;
                             }
                             else
@@ -1328,6 +1422,7 @@ namespace LineProductMes
                         if ( workShopTime . endCenTime ( row ,row["HAX012"] ,"HAX011" ,"HAX009" ,"HAX010" ) == false )
                         {
                             row [ "HAX012" ] = DBNull . Value;
+                            row [ "HAX013" ] = DBNull . Value;
                             result = false;
                         }
                         if ( result )
@@ -1335,6 +1430,7 @@ namespace LineProductMes
                             if ( workShopTime . endCenTime ( row ,row [ "HAX012" ] ,"HAX011" ,"HAX009" ,"HAX010" ) == false )
                             {
                                 row [ "HAX012" ] = DBNull . Value;
+                                row [ "HAX013" ] = DBNull . Value;
                                 result = false;
                             }
                             if ( result )
@@ -1368,6 +1464,7 @@ namespace LineProductMes
                     row [ "HAX018" ] = 0;
                     row [ "HAX019" ] = 0;
                     row [ "HAX020" ] = 0;
+                    row [ "U1" ] = 0;
                     continue;
                 }
 
@@ -1381,10 +1478,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "HAX018" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1402,10 +1499,10 @@ namespace LineProductMes
                     if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
                     {
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                             u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
                     }
-                    else if ( dtTwo . Hour >= 17 && dtTwo . Minute >= 30 )
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
                         u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
 
                     row [ "HAX019" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
@@ -1426,8 +1523,18 @@ namespace LineProductMes
                     row [ "HAX018" ] = 0;
                     row [ "HAX019" ] = 0;
                     row [ "HAX020" ] = 0;
+                    row [ "U1" ] = 0;
                     continue;
                 }
+
+                if ( txtHAW011 . Text . Equals ( "计件" ) )
+                {
+                    row [ "U1" ] = ( string . IsNullOrEmpty ( row [ "HAX007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "HAX007" ] ) * ( string . IsNullOrEmpty ( row [ "HAX008" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "HAX008" ] ) ) ) . ToString ( "0.##" );
+                }else if ( txtHAW011 . Text . Equals ( "计时" ) )
+                {
+                    row [ "U1" ] = 0 . ToString ( "0.##" );
+                }
+
                 row [ "HAX020" ] = Math . Round ( ( string . IsNullOrEmpty ( row [ "HAX007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "HAX007" ] ) * ( string . IsNullOrEmpty ( row [ "HAX008" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "HAX008" ] ) ) ) ,1 ,MidpointRounding . AwayFromZero ) + Math . Round ( ( string . IsNullOrEmpty ( row [ "HAX013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "HAX013" ] ) * ( string . IsNullOrEmpty ( row [ "HAX019" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "HAX019" ] ) ) ) ,1 ,MidpointRounding . AwayFromZero );
             }
         }

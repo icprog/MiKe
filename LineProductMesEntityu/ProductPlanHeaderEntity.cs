@@ -58,7 +58,7 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 是否启用
+        /// 是否审核
         /// </summary>
         public bool PRD003
         {

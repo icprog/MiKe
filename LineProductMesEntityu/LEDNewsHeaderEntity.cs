@@ -25,6 +25,8 @@ namespace LineProductMesEntityu
         private bool _lef018;
         private decimal? _lef019;
         private decimal? _lef020;
+        private string _lef021;
+        private string _lef022;
 
         /// <summary>
         /// 
@@ -318,6 +320,35 @@ namespace LineProductMesEntityu
             get
             {
                 return _lef020;
+            }
+        }
+        /// <summary>
+        /// 工资类型
+        /// </summary>
+        public string LEF021
+        {
+            set
+            {
+                _lef021 = value;
+            }
+            get
+            {
+                return _lef021;
+            }
+        }
+        /// <summary>
+        /// 制单
+        /// </summary>
+        public string LEF022
+        {
+            get
+            {
+                return _lef022;
+            }
+
+            set
+            {
+                _lef022 = value;
             }
         }
     }

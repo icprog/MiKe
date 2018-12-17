@@ -31,6 +31,7 @@ namespace LineProductMesEntityu
         private decimal? _haw020;
         private decimal? _haw021;
         private string _haw022;
+        private string _haw023;
 
         /// <summary>
         /// 
@@ -356,6 +357,20 @@ namespace LineProductMesEntityu
                 return _haw022;
             }
         }
+        /// <summary>
+        /// 制单
+        /// </summary>
+        public string HAW023
+        {
+            get
+            {
+                return _haw023;
+            }
 
+            set
+            {
+                _haw023 = value;
+            }
+        }
     }
 }

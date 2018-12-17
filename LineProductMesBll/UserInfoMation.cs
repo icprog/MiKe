@@ -42,7 +42,7 @@ namespace LineProductMesBll
         /// 获取系统时间
         /// </summary>
         public static DateTime sysTime=ObtainInfo.getTime();
-
+        
         /// <summary>
         /// 新增单据单号
         /// </summary>
@@ -70,6 +70,11 @@ namespace LineProductMesBll
                 powList = value;
             }
         }
+
+        /// <summary>
+        /// 获取库名称
+        /// </summary>
+        public static string DataBase=ObtainInfo.getDataBase();
 
     }
 }

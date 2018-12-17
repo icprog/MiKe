@@ -7,6 +7,7 @@ using DevExpress . XtraEditors;
 using System;
 using System . ComponentModel;
 using System . Windows . Forms;
+using LineProductMes . ChildForm;
 
 namespace LineProductMes
 {
@@ -16,7 +17,7 @@ namespace LineProductMes
         LineProductMesEntityu.ProductPlanPreviewEntity model;
         LineProductMesBll.Bll.ProductPlanPreviewBll _bll;
 
-        DataTable tableView,tableViewCopy;
+        DataTable tableView,tableViewCopy,table;
         DataRow row;
         DateTime dt;
 
@@ -37,7 +38,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarButtonItem [ ] { toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolAdd } );
+            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolPrint ,toolExamin ,toolDelete } );
 
             dt = LineProductMesBll . UserInfoMation . sysTime;
             dtStart . Text =dt . ToString ( "yyyy-MM-dd" );
@@ -46,6 +47,18 @@ namespace LineProductMes
             txtPRE . Properties . DataSource = _bll . getProPlanInfo ( );
             txtPRE . Properties . DisplayMember = "DEA002";
             txtPRE . Properties . ValueMember = "PRE004";
+
+            toolCancellation . Caption = "产线排产";
+
+            table = new DataTable ( );
+            table . Columns . Add ( "P1" ,typeof ( System . String ) );
+            table . Columns . Add ( "P2" ,typeof ( System . String ) );
+            table . Columns . Add ( "P3" ,typeof ( System . DateTime ) );
+            table . Columns . Add ( "P4" ,typeof ( System . DateTime ) );
+            table . Columns . Add ( "P5" ,typeof ( System . Int32 ) );
+            table . Columns . Add ( "P6" ,typeof ( System . Int32 ) );
+
+            controlUnEnable ( );
         }
 
         #region Main
@@ -59,7 +72,7 @@ namespace LineProductMes
             if ( !string . IsNullOrEmpty ( dtEnd . Text ) )
                 dtEndT = Convert . ToDateTime ( dtEnd . Text );
 
-            tableView = _bll . getTableView ( txtPRE.Text ,dtStartT ,dtEndT );
+            tableView = _bll . getTableView ( txtPRE . EditValue == null ? string . Empty : txtPRE . EditValue . ToString ( ) ,dtStartT ,dtEndT );
             if ( tableView != null && tableView . Rows . Count > 0 )
             {
                 foreach ( DataColumn column in tableView . Columns )
@@ -77,6 +90,7 @@ namespace LineProductMes
             tableViewCopy = tableView . Copy ( );
             QueryTool ( );
             toolExport . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+            toolPrint . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
 
             controlUnEnable ( );
 
@@ -84,11 +98,11 @@ namespace LineProductMes
 
             return base . Query ( );
         }
-        protected override int Export ( )
+        protected override int ExportBase ( )
         {
             ViewExport . ExportToExcel ( this . Text ,gridControl1 );
 
-            return base . Export ( );
+            return base . ExportBase ( );
         }
         protected override int Edit ( )
         {
@@ -119,6 +133,9 @@ namespace LineProductMes
                  ClassForMain.FormClosingState.formClost = true;
                 controlUnEnable ( );
                 saveTool ( );
+                toolExport . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+                toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+                toolCancellation . Caption = "产线排产";
             }
             else
             {
@@ -132,11 +149,25 @@ namespace LineProductMes
         {
             controlUnEnable ( );
             cancelltionTool ( "edit" );
+            toolCancellation . Caption = "产线排产";
 
             gridControl1 . DataSource = tableViewCopy;
             gridControl1 . RefreshDataSource ( );
+            toolExport . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
 
             return base . Cancel ( );
+        }
+        protected override int Add ( )
+        {
+            btnAdd_Click ( null ,null );
+
+            return base . Add ( );
+        }
+        protected override int Cancellation ( )
+        {
+            btnLine_Click ( null ,null );
+
+            return base . Cancellation ( );
         }
         #endregion
 
@@ -165,7 +196,7 @@ namespace LineProductMes
         }
         private void btnAdd_Click ( object sender ,EventArgs e )
         {
-            FormProductPlan from = new FormProductPlan ( null );
+            FormProductPlan from = new FormProductPlan ( );
             from . StartPosition = System . Windows . Forms . FormStartPosition . CenterParent;
             if ( from . ShowDialog ( ) == System . Windows . Forms . DialogResult . OK )
             {
@@ -180,12 +211,12 @@ namespace LineProductMes
                 return ;
             }
 
-            FormProductPlan from = new FormProductPlan ( row );
-            from . StartPosition = System . Windows . Forms . FormStartPosition . CenterParent;
-            if ( from . ShowDialog ( ) == System . Windows . Forms . DialogResult . OK )
-            {
-                Query ( );
-            }
+            //FormProductPlan from = new FormProductPlan ( row );
+            //from . StartPosition = System . Windows . Forms . FormStartPosition . CenterParent;
+            //if ( from . ShowDialog ( ) == System . Windows . Forms . DialogResult . OK )
+            //{
+            //    Query ( );
+            //}
         }
         private void gridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
@@ -253,6 +284,8 @@ namespace LineProductMes
                     }
                 }
 
+                if ( columnName == "主件品号" || columnName == "主件品名" || columnName == "订单量" || columnName == "预计生产量" || columnName == "排产量" || columnName == "库存量" || columnName == "库存可用量" || columnName == "未排量" || columnName == "生产车间" || columnName == "仓库" || columnName == "单位" || columnName == "DX$CheckboxSelectorColumn" )
+                    return;
                 gridView1 . SetRowCellValue ( gridView1 . FocusedRowHandle ,columnName ,allOfValue - model . PRF003 + selectColumnValue );
 
                 selectPrevious = selectNow;
@@ -308,6 +341,105 @@ namespace LineProductMes
         {
             CopyUtils . copyResult ( gridView1 ,focuseName );
         }
+        //增加天数
+        private void btnAddDays_Click ( object sender ,EventArgs e )
+        {
+            if ( choiseProduct ( ) == false )
+                return;
+            FormBatOpera from = new FormBatOpera ( "增加排产天数" ,table );
+            if ( from . ShowDialog ( ) == DialogResult . OK )
+            {
+                Query ( );
+            }
+        }
+        //清空
+        private void btnClear_Click ( object sender ,EventArgs e )
+        {
+            if ( choiseProduct ( ) == false )
+                return;
+            FormBatOpera from = new FormBatOpera ( "批量清空" ,table );
+            if ( from . ShowDialog ( ) == DialogResult . OK )
+            {
+                table = from . getTable;
+                DateTime dtOne, dtTwo;
+                int days;
+                foreach ( DataRow row in table . Rows )
+                {
+                    DataRow ro = tableView . Select ( "主件品号='" + row [ "P1" ] + "'" ) [ 0 ];
+                    dtOne = Convert . ToDateTime ( row [ "P3" ] );
+                    dtTwo = Convert . ToDateTime ( row [ "P4" ] );
+                    days = ( dtTwo - dtOne ) . Days;
+                    if ( tableView . Columns . Contains ( dtOne . ToString ( " yyyy-MM-dd " ) ) )
+                    {
+                        ro [ dtOne . ToString ( " yyyy-MM-dd " ) ] = 0;
+                    }
+                    for ( int i = 0 ; i < days ; i++ )
+                    {
+                        if ( tableView . Columns . Contains ( dtOne . ToString ( " yyyy-MM-dd " ) ) )
+                        {
+                            dtOne = dtOne . AddDays ( 1 );
+                            ro [ dtOne . ToString ( " yyyy-MM-dd " ) ] = 0;
+                        }
+                    }
+                }
+                gridControl1 . Refresh ( );
+            }
+        }
+        //排产
+        private void btnPai_Click ( object sender ,EventArgs e )
+        {
+            if ( choiseProduct ( ) == false )
+                return;
+            FormBatOpera from = new FormBatOpera ( "批量分摊" ,table );
+            if ( from . ShowDialog ( ) == DialogResult . OK )
+            {
+                table = from . getTable;
+                DateTime dtOne, dtTwo;
+                int days,proNum;
+                foreach ( DataRow row in table . Rows )
+                {
+                    DataRow ro = tableView . Select ( "主件品号='" + row [ "P1" ] + "'" ) [ 0 ];
+                    dtOne = Convert . ToDateTime ( row [ "P3" ] );
+                    dtTwo = Convert . ToDateTime ( row [ "P4" ] );
+                    proNum = Convert . ToInt32 ( row [ "P6" ] );
+                    days = ( dtTwo - dtOne ) . Days;
+                    if ( tableView . Columns . Contains ( dtOne . ToString ( " yyyy-MM-dd " ) ) )
+                    {
+                        ro [ dtOne . ToString ( " yyyy-MM-dd " ) ] = proNum;
+                    }
+                    for ( int i = 0 ; i < days ; i++ )
+                    {
+                        if ( tableView . Columns . Contains ( dtOne . ToString ( " yyyy-MM-dd " ) ) )
+                        {
+                            dtOne = dtOne . AddDays ( 1 );
+                            ro [ dtOne . ToString ( " yyyy-MM-dd " ) ] = proNum;
+                        }
+                    }
+                }
+                gridControl1 . Refresh ( );
+            }
+        }
+        bool choiseProduct ( )
+        {
+            int [ ] selectRows = gridView1 . GetSelectedRows ( );
+            if ( selectRows . Length < 1 )
+            {
+                XtraMessageBox . Show ( "请选择产品" );
+                return false;
+            }
+            table . Rows . Clear ( );
+            foreach ( int i in selectRows )
+            {
+                DataRow row = gridView1 . GetDataRow ( i );
+                if ( row == null )
+                    continue;
+                DataRow r = table . NewRow ( );
+                r [ "P1" ] = row [ "主件品号" ] . ToString ( );
+                r [ "P2" ] = row [ "主件品名" ] . ToString ( );
+                table . Rows . Add ( r );
+            }
+            return true;
+        }
         #endregion
 
         #region Method
@@ -317,9 +449,11 @@ namespace LineProductMes
                 return;
 
             DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
-
+            string week = string . Empty;
             foreach ( DevExpress . XtraGrid . Columns . GridColumn column in gridView1 . Columns )
             {
+                if ( column . Name . Contains ( "col" ) )
+                    column . Name = column . Name . Replace ( "col" ,"" );
                 column . AppearanceCell . Options . UseTextOptions = true;
                 column . AppearanceCell . TextOptions . HAlignment = DevExpress . Utils . HorzAlignment . Center;
                 column . AppearanceHeader . TextOptions . WordWrap = DevExpress . Utils . WordWrap . Wrap;
@@ -334,6 +468,13 @@ namespace LineProductMes
                     column . Width = 45;
                     if ( ( Convert . ToDateTime ( column . FieldName ) - dt ) . Days < 0 )
                         column . OptionsColumn.AllowEdit = false;
+                    week = System . Globalization . CultureInfo . CurrentCulture . DateTimeFormat . GetDayName ( Convert . ToDateTime ( column . Name ) . DayOfWeek );
+                    column . Caption = column . Name + week;
+                    if ( week . Equals ( "星期日" ) )
+                    {
+                        column . AppearanceHeader . BackColor = System . Drawing . Color . LightCoral;
+                        column . AppearanceCell . BackColor = System . Drawing . Color . LightCoral;
+                    }
                 }
                 else if ( column . FieldName == "主件品号" )
                     column . Summary . Add ( DevExpress . Data . SummaryItemType . Custom ,column . FieldName ,"合计" );
@@ -351,10 +492,12 @@ namespace LineProductMes
         }
         void controlUnEnable ( )
         {
+            btnAddDays . Enabled = btnClear . Enabled = btnPai . Enabled = false;
             gridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
+            btnAddDays . Enabled = btnClear . Enabled = btnPai . Enabled = true;
             gridView1 . OptionsBehavior . Editable = true;
         }
         bool getValue ( )
@@ -371,8 +514,18 @@ namespace LineProductMes
                 foreach ( DataColumn column in tableView . Columns )
                 {
                     if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty && column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" )
+                    {
+                        if ( Convert . ToInt32 ( row [ column ] ) < 0 )
+                        {
+                            XtraMessageBox . Show ( "主件品号:"+row["主件品号"]+"的排产量为负数,请核实" );
+                            result = false;
+                            break;
+                        }
                         total += Convert . ToInt32 ( row [ column ] );
+                    }
                 }
+                if ( result == false )
+                    break;
                 totalValue = Convert . ToInt32 ( row [ "排产量" ] );
                 if ( totalValue != total )
                 {
@@ -381,7 +534,7 @@ namespace LineProductMes
                     break;
                 }
             }
-
+            
             return result;
         }
         #endregion

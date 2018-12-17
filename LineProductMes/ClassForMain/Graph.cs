@@ -1,5 +1,6 @@
 ﻿using System;
 using System . Drawing;
+using System . Drawing . Drawing2D;
 
 namespace LineProductMes . ClassForMain
 {
@@ -117,11 +118,13 @@ namespace LineProductMes . ClassForMain
                         //画填充圆
                         //SolidBrush s = new SolidBrush ( Color . Red );
                         //画空心圆
-                        Pen pen = new Pen ( Color . Red ,4 );
-                        gp . DrawEllipse ( pen ,10 ,sp . Location . Y + 15 ,120 ,60 );
-                        Font myFont = new Font ( "楷体" ,19 ,FontStyle . Bold );
+                        Pen pen = new Pen ( Color . Red ,2 );
+                        Rectangle rec = new Rectangle ( sp . Width  / 8 ,sp . Width / 8 ,40 ,60 );
+                        gp . DrawPath ( pen ,DrawRoundRect ( rec ,12 ) );
+                        //gp . DrawEllipse ( pen ,10 ,sp . Location . Y + 15 ,120 ,60 );
+                        Font myFont = new Font ( "隶书" ,15 ,FontStyle . Bold );
                         Brush bush = new SolidBrush ( Color . Red );
-                        gp . DrawString ( fontName ,myFont ,bush ,105 ,sp . Location . Y + 35 ,new StringFormat ( StringFormatFlags . DirectionRightToLeft ) );
+                        gp . DrawString ( fontName ,myFont ,bush ,sp . Width / 8 + 1 ,sp . Height / 8 + 1 ,new StringFormat ( StringFormatFlags . DirectionVertical ) );
                     }
                 }
                 catch ( Exception ex )
@@ -130,9 +133,9 @@ namespace LineProductMes . ClassForMain
                 }
             };
         }
-        
+
         /// <summary>
-        /// 组装  五金
+        /// 组装  五金  注塑
         /// </summary>
         /// <param name="sp"></param>
         /// <param name="fontName"></param>
@@ -150,11 +153,14 @@ namespace LineProductMes . ClassForMain
                         //画填充圆
                         //SolidBrush s = new SolidBrush ( Color . Red );
                         //画空心圆
-                        Pen pen = new Pen ( Color . Red ,4 );
-                        gp . DrawEllipse ( pen ,10 ,sp . Location . Y ,60 ,120 );
-                        Font myFont = new Font ( "楷体" ,19 ,FontStyle . Bold );
+                        Pen pen = new Pen ( Color . Red ,2 );
+                        Rectangle rec = new Rectangle ( sp . Width / 4 ,sp . Height / 4 ,50 ,90 );
+                        //gp . DrawRectangle ( pen ,rec );
+                        gp . DrawPath ( pen ,DrawRoundRect ( rec ,12 ) );
+                        //gp . DrawEllipse ( pen ,10 ,sp . Location . Y - 5 ,60 ,120 );
+                        Font myFont = new Font ( "隶书" ,15 ,FontStyle . Bold );
                         Brush bush = new SolidBrush ( Color . Red );
-                        gp . DrawString ( fontName ,myFont ,bush ,25 , 35 ,new StringFormat ( StringFormatFlags . DirectionVertical ) );
+                        gp . DrawString ( fontName ,myFont ,bush ,sp . Width / 4 + 2 ,sp . Height / 4 + 5 ,new StringFormat ( StringFormatFlags . DirectionVertical ) );
                     }
                 }
                 catch ( Exception ex )
@@ -162,6 +168,18 @@ namespace LineProductMes . ClassForMain
                     Utility . LogHelper . WriteLog ( ex . Message );
                 }
             };
+        }
+
+        public static GraphicsPath DrawRoundRect ( Rectangle rec ,int radius )
+        {
+            //四边圆角
+            GraphicsPath gp = new GraphicsPath ( );
+            gp . AddArc ( rec.X ,rec . Y ,radius ,radius ,180 ,90 );
+            gp . AddArc ( rec.Width - radius ,rec.Y ,radius ,radius ,270 ,90 );
+            gp . AddArc ( rec.Width - radius ,rec.Height - radius ,radius ,radius ,0 ,90 );
+            gp . AddArc ( rec.X ,rec.Height - radius ,radius ,radius ,90 ,90 );
+            gp . CloseAllFigures ( );
+            return gp;
         }
 
         /// <summary>

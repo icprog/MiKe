@@ -127,6 +127,7 @@
       <HintPath>bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -175,6 +176,12 @@
     </Compile>
     <Compile Include="ChildForm\FormAssNewWorkQuery.Designer.cs">
       <DependentUpon>FormAssNewWorkQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\FormBatOpera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormBatOpera.Designer.cs">
+      <DependentUpon>FormBatOpera.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForm\FormDepartQueryOfPerson.cs">
       <SubType>Form</SubType>
@@ -546,6 +553,9 @@
     <EmbeddedResource Include="ChildForm\FormAssNewWorkQuery.resx">
       <DependentUpon>FormAssNewWorkQuery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormBatOpera.resx">
+      <DependentUpon>FormBatOpera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormDepartQueryOfPerson.resx">
       <DependentUpon>FormDepartQueryOfPerson.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -675,6 +685,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\licenses.licx" />
     <EmbeddedResource Include="FormMouldInformation.resx">

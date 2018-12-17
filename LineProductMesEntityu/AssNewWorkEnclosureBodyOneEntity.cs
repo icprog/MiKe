@@ -20,6 +20,7 @@ namespace LineProductMesEntityu
         private string _anu009;
         private int? _anu010;
         private int? _anu011;
+        private string _anu012;
 
         /// <summary>
         /// 
@@ -187,6 +188,20 @@ namespace LineProductMesEntityu
             get
             {
                 return _anu011;
+            }
+        }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string ANU012
+        {
+            set
+            {
+                _anu012 = value;
+            }
+            get
+            {
+                return _anu012;
             }
         }
     }

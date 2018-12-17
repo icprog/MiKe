@@ -67,7 +67,10 @@ namespace LineProductMesBll . Dao
         public DataTable getTableViewFor ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT A.idx,PRE001,PRE002,PRE003,PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010,PRE011,PRE012 FROM MIKPRE A INNER JOIN MIKPRD B ON A.PRE001=B.PRD001 WHERE PRD003=0 AND PRE004='{0}'" ,oddNum );
+
+            strSql . AppendFormat ( "SELECT idx,PRE001,A.PRE002,PRE003,A.PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010,PRE011,PRE012,B.PRE FROM MIKPRE A INNER JOIN (SELECT PRE002,PRE004,SUM(PRE008) PRE FROM MIKPRE WHERE PRE004='{0}' GROUP BY PRE002,PRE004) B ON A.PRE002=B.PRE002 AND A.PRE004=B.PRE004 WHERE A.PRE004='{0}'" ,oddNum );
+
+            //strSql . AppendFormat ( "SELECT A.idx,PRE001,PRE002,PRE003,PRE004,PRE005,PRE006,PRE007,PRE008,PRE009,PRE010,PRE011,PRE012 FROM MIKPRE A INNER JOIN MIKPRD B ON A.PRE001=B.PRD001 WHERE PRD003=0 AND PRE004='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -279,10 +282,10 @@ namespace LineProductMesBll . Dao
             LineProductMesEntityu . ProductPlanBodyEntity modelBody = new LineProductMesEntityu . ProductPlanBodyEntity ( );
             modelBody . PRE001 = model . PRD001;
 
-            StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT PRF001,PRF002 FROM MIKPRF " );
+            //StringBuilder strSql = new StringBuilder ( );
+            //strSql . Append ( "SELECT PRF001,PRF002 FROM MIKPRF " );
 
-            DataTable tableR = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            //DataTable tableR = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             foreach ( DataRow row in table . Rows )
             {
@@ -304,12 +307,15 @@ namespace LineProductMesBll . Dao
                     modelBody . PRE011 = Convert . ToInt32 ( row [ "PRE011" ] . ToString ( ) );
                 modelBody . PRE008 = modelBody . PRE008 + modelBody . PRE011;
                 AddBody ( SQLString ,modelBody );
-                if ( tableR != null && tableR . Rows . Count > 0 )
-                {
-                    if(tableR.Select("PRF001='"+modelBody.PRE004+"' AND PRF002='"+modelBody.PRE005+"'").Length<1)
-                        Addprf ( SQLString ,modelBody );
-                }else
-                    Addprf ( SQLString ,modelBody );
+                //if ( tableR != null && tableR . Rows . Count > 0 )
+                //{
+                //    if ( tableR . Select ( "PRF001='" + modelBody . PRE004 + "' AND PRF002='" + modelBody . PRE005 + "'" ) . Length < 1 )
+                //        Addprf ( SQLString ,modelBody );
+                //    else
+                //        Editprf ( SQLString ,modelBody );
+                //}
+                //else
+                //    Addprf ( SQLString ,modelBody );
             }
 
             return SqlHelper . ExecuteSqlTranDic ( SQLString );
@@ -329,10 +335,10 @@ namespace LineProductMesBll . Dao
             LineProductMesEntityu . ProductPlanBodyEntity modelBody = new LineProductMesEntityu . ProductPlanBodyEntity ( );
             modelBody . PRE001 = model . PRD001;
 
-            StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT PRF001,PRF002 FROM MIKPRF " );
+            //StringBuilder strSql = new StringBuilder ( );
+            //strSql . Append ( "SELECT PRF001,PRF002 FROM MIKPRF " );
 
-            DataTable tableR = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            //DataTable tableR = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             foreach ( DataRow row in table . Rows )
             {
@@ -355,30 +361,30 @@ namespace LineProductMesBll . Dao
                 if ( modelBody . idx < 1 )
                 {
                     AddBody ( SQLString ,modelBody );
-                    if ( tableR != null && tableR . Rows . Count > 0 )
-                    {
-                        if ( tableR . Select ( "PRF001='" + modelBody . PRE004 + "' AND PRF002='" + modelBody . PRE005 + "'" ) . Length < 1 )
-                            Addprf ( SQLString ,modelBody );
-                        else
-                        {
-                            if ( modelBody . PRE011 != 0 )
-                            {
-                                modelBody . PRE008 = modelBody . PRE011;
-                                Editprf ( SQLString ,modelBody );
-                            }
-                        }
-                    }
-                    else
-                        Addprf ( SQLString ,modelBody );
+                    //if ( tableR != null && tableR . Rows . Count > 0 )
+                    //{
+                    //    if ( tableR . Select ( "PRF001='" + modelBody . PRE004 + "' AND PRF002='" + modelBody . PRE005 + "'" ) . Length < 1 )
+                    //        Addprf ( SQLString ,modelBody );
+                    //    else
+                    //    {
+                    //        if ( modelBody . PRE011 != 0 )
+                    //        {
+                    //            modelBody . PRE008 = modelBody . PRE011;
+                    //            Editprf ( SQLString ,modelBody );
+                    //        }
+                    //    }
+                    //}
+                    //else
+                    //    Addprf ( SQLString ,modelBody );
                 }
                 else
                 {
                     EditBody ( SQLString ,modelBody );
-                    if ( modelBody . PRE011 != 0 )
-                    {
-                        modelBody . PRE008 = modelBody . PRE011;
-                        Editprf ( SQLString ,modelBody );
-                    }
+                    //if ( modelBody . PRE011 != 0 )
+                    //{
+                    //    modelBody . PRE008 = modelBody . PRE011;
+                    //    Editprf ( SQLString ,modelBody );
+                    //}
                 }
             }
 
@@ -571,16 +577,53 @@ namespace LineProductMesBll . Dao
         }
 
         /// <summary>
-        /// 启用或弃用
+        /// 审核
         /// </summary>
         /// <param name="oddNum"></param>
         /// <returns></returns>
-        public bool Examine ( string oddNum ,int resuState )
+        public bool Examine ( LineProductMesEntityu . ProductPlanHeaderEntity _header ,DataTable table )
         {
-            StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "UPDATE MIKPRD SET PRD003={1} WHERE PRD001='{0}'" ,oddNum ,resuState );
+            Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
 
-            return SqlHelper . ExecuteNonQueryBool ( strSql . ToString ( ) );
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "UPDATE MIKPRD SET PRD003=@PRD003 WHERE PRD001=@PRD001" );
+            SqlParameter [ ] parameter = {
+                new SqlParameter("@PRD001",SqlDbType.NVarChar,20),
+                new SqlParameter("@PRD003",SqlDbType.Bit)
+            };
+            parameter [ 0 ] . Value = _header . PRD001;
+            parameter [ 1 ] . Value = _header . PRD003;
+            SQLString . Add ( strSql ,parameter );
+
+            LineProductMesEntityu . ProductPlanBodyEntity modelBody = new LineProductMesEntityu . ProductPlanBodyEntity ( );
+
+            strSql = new StringBuilder ( );
+            strSql . Append ( "SELECT PRF001,PRF002 FROM MIKPRF " );
+
+            DataTable tableR = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+
+            foreach ( DataRow row in table . Rows )
+            {
+                modelBody . PRE004 = row [ "PRE004" ] . ToString ( );
+                modelBody . PRE005 = Convert . ToDateTime ( row [ "PRE005" ] . ToString ( ) );
+                modelBody . PRE008 = Convert . ToInt32 ( row [ "PRE008" ] . ToString ( ) );
+                if ( string . IsNullOrEmpty ( row [ "PRE011" ] . ToString ( ) ) )
+                    modelBody . PRE011 = 0;
+                else
+                    modelBody . PRE011 = Convert . ToInt32 ( row [ "PRE011" ] . ToString ( ) );
+                modelBody . PRE008 = modelBody . PRE008 + modelBody . PRE011;
+                if ( tableR != null && tableR . Rows . Count > 0 )
+                {
+                    if ( tableR . Select ( "PRF001='" + modelBody . PRE004 + "' AND PRF002='" + modelBody . PRE005 + "'" ) . Length < 1 )
+                        Addprf ( SQLString ,modelBody );
+                    else
+                        Editprf ( SQLString ,modelBody );
+                }
+                else
+                    Addprf ( SQLString ,modelBody );
+            }
+
+            return SqlHelper . ExecuteSqlTranDic ( SQLString );
         }
 
         /// <summary>
@@ -591,7 +634,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableColumn ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT DISTINCT PRD001,PRE004 FROM MIKPRD A INNER JOIN MIKPRE B ON A.PRD001=B.PRE001 WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT DISTINCT PRD001,PRE004,PRD003 FROM MIKPRD A INNER JOIN MIKPRE B ON A.PRD001=B.PRE001 WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

@@ -17,9 +17,46 @@ namespace LineProductMesBll . Dao
         public DataTable getTableView ( string code )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT A.idx,WAH001,WAH002,WAH003,WAH023,WAH004,ISNULL(WAH005,0) WAH005,ISNULL(WAH006,0) WAH006,ISNULL(WAH007,0) WAH007,ISNULL(WAH008,0) WAH008,ISNULL(WAH009,0) WAH009,ISNULL(WAH010,0) WAH010,ISNULL(WAH011,0) WAH011,ISNULL(WAH012,0) WAH012,ISNULL(CASE WHEN WAH022=0 THEN 0 ELSE WAH013/WAH022*WAH005 END,0) WAH013,ISNULL(WAH014,0) WAH014,ISNULL(WAH015,0) WAH015,ISNULL(WAH016,0) WAH016,ISNULL(WAH017,0) WAH017,ISNULL(WAH018,0) WAH018,ISNULL(WAH019,0) WAH019,ISNULL(CASE WHEN WAH022=0 THEN 0 ELSE 200/WAH022*WAH005 END,0) WAH020,ISNULL((SELECT SUM(CASE WHEN WAH022=0 THEN 0 ELSE 200/WAH022*WAH005 END) FROM MIKWAH A INNER JOIN MIKWAG B ON A.WAH001=B.WAG001 WHERE WAG002 LIKE '2018%' AND YEAR(B.WAG002)=YEAR(C.WAG002) AND MONTH(B.WAG002)<MONTH(C.WAG002)),0) WAH021,ISNULL(WAH022,0) WAH022,ISNULL(WAH024,0) WAH024 FROM MIKWAH A INNER JOIN MIKWAG C ON A.WAH001=C.WAG001 WHERE WAH001='{0}'" ,code );
-
+            string result = getPower ( );
+            if ( result == string . Empty )
+            {
+                if ( UserInfoMation . userName . Equals ( "系统管理员" ) )
+                    strSql . AppendFormat ( "SELECT A.idx,WAH001,WAH002,WAH003,WAH023,WAH004,CONVERT(FLOAT,ISNULL(WAH005,0)) WAH005,CONVERT(FLOAT,ISNULL(WAH006,0)) WAH006,CONVERT(FLOAT,ISNULL(WAH007,0)) WAH007,CONVERT(FLOAT,ISNULL(WAH008,0)) WAH008,CONVERT(FLOAT,ISNULL(WAH009,0)) WAH009,CONVERT(FLOAT,ISNULL(WAH010,0)) WAH010,CONVERT(FLOAT,ISNULL(WAH011,0)) WAH011,CONVERT(FLOAT,ISNULL(WAH012,0)) WAH012,CONVERT(FLOAT,ISNULL(CASE WHEN WAH022=0 THEN 0 ELSE WAH013/WAH022*WAH005 END,0)) WAH013,CONVERT(FLOAT,ISNULL(WAH014,0)) WAH014,CONVERT(FLOAT,ISNULL(WAH015,0)) WAH015,CONVERT(FLOAT,ISNULL(WAH016,0)) WAH016,CONVERT(FLOAT,ISNULL(WAH017,0)) WAH017,CONVERT(FLOAT,ISNULL(WAH018,0)) WAH018,CONVERT(FLOAT,ISNULL(WAH019,0)) WAH019,CONVERT(FLOAT,ISNULL(CASE WHEN WAH022=0 THEN 0 ELSE 200/WAH022*WAH005 END,0)) WAH020,CONVERT(FLOAT,ISNULL((SELECT SUM(CASE WHEN WAH022=0 THEN 0 ELSE 200/WAH022*WAH005 END) FROM MIKWAH A INNER JOIN MIKWAG B ON A.WAH001=B.WAG001 WHERE WAG002 LIKE '2018%' AND YEAR(B.WAG002)=YEAR(C.WAG002) AND MONTH(B.WAG002)<MONTH(C.WAG002)),0)) WAH021,CONVERT(FLOAT,ISNULL(WAH022,0)) WAH022,CONVERT(FLOAT,ISNULL(WAH024,0)) WAH024 FROM MIKWAH A INNER JOIN MIKWAG C ON A.WAH001=C.WAG001 WHERE WAH001='{0}'" ,code );
+                else
+                    return null;
+            }
+            else
+                strSql . AppendFormat ( "SELECT A.idx,WAH001,WAH002,WAH003,WAH023,WAH004,CONVERT(FLOAT,ISNULL(WAH005,0)) WAH005,CONVERT(FLOAT,ISNULL(WAH006,0)) WAH006,CONVERT(FLOAT,ISNULL(WAH007,0)) WAH007,CONVERT(FLOAT,ISNULL(WAH008,0)) WAH008,CONVERT(FLOAT,ISNULL(WAH009,0)) WAH009,CONVERT(FLOAT,ISNULL(WAH010,0)) WAH010,CONVERT(FLOAT,ISNULL(WAH011,0)) WAH011,CONVERT(FLOAT,ISNULL(WAH012,0)) WAH012,CONVERT(FLOAT,ISNULL(CASE WHEN WAH022=0 THEN 0 ELSE WAH013/WAH022*WAH005 END,0)) WAH013,CONVERT(FLOAT,ISNULL(WAH014,0)) WAH014,CONVERT(FLOAT,ISNULL(WAH015,0)) WAH015,CONVERT(FLOAT,ISNULL(WAH016,0)) WAH016,CONVERT(FLOAT,ISNULL(WAH017,0)) WAH017,CONVERT(FLOAT,ISNULL(WAH018,0)) WAH018,CONVERT(FLOAT,ISNULL(WAH019,0)) WAH019,CONVERT(FLOAT,ISNULL(CASE WHEN WAH022=0 THEN 0 ELSE 200/WAH022*WAH005 END,0)) WAH020,CONVERT(FLOAT,ISNULL((SELECT SUM(CASE WHEN WAH022=0 THEN 0 ELSE 200/WAH022*WAH005 END) FROM MIKWAH A INNER JOIN MIKWAG B ON A.WAH001=B.WAG001 WHERE WAG002 LIKE '2018%' AND YEAR(B.WAG002)=YEAR(C.WAG002) AND MONTH(B.WAG002)<MONTH(C.WAG002)),0)) WAH021,CONVERT(FLOAT,ISNULL(WAH022,0)) WAH022,CONVERT(FLOAT,ISNULL(WAH024,0)) WAH024 FROM MIKWAH A INNER JOIN MIKWAG C ON A.WAH001=C.WAG001 WHERE WAH001='{0}' AND WAH023 IN ({1})" ,code ,result );
+            
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取读取数据权限
+        /// </summary>
+        /// <returns></returns>
+        string getPower ( )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "select EMP038 from MIKEMP where EMP001='{0}'" ,UserInfoMation . userNum );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null && table . Rows . Count < 1 )
+                return string . Empty;
+            string result = string . Empty;
+            DataRow row = table . Rows [ 0 ];
+            if ( row [ "EMP038" ] != null && row [ "EMP038" ] . ToString ( ) != string . Empty )
+            {
+                string [ ] str = row [ "EMP038" ] . ToString ( ) . Split ( ',' );
+                foreach ( string s in str )
+                {
+                    if ( string . IsNullOrEmpty ( result ) )
+                        result = "'" + s . Trim ( ) + "'";
+                    else
+                        result = result + "," + "'" + s . Trim ( ) + "'";
+                }
+            }
+            return result;
         }
 
         /// <summary>
@@ -188,7 +225,8 @@ namespace LineProductMesBll . Dao
                 if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) == false )
                     return false;
                 SQLString . Clear ( );
-            }else
+            }
+            else
                 SQLString . Clear ( );
 
             //报工工资
@@ -266,21 +304,21 @@ namespace LineProductMesBll . Dao
                     }
                 }
             }
-            if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
-            {
-                SQLString . Clear ( );
-                //获取特殊岗位天数
-                table = getTableFiv ( dt );
-                if ( table != null && table . Rows . Count > 0 )
-                {
-                    foreach ( DataRow row in table . Rows )
-                    {
-                        model . WAH002 = row [ "ANX002" ] . ToString ( );
-                        model . WAH012 = 10 * ( string . IsNullOrEmpty ( row [ "ANX" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX" ] . ToString ( ) ) );
-                        EditFiv ( SQLString ,model );
-                    }
-                }
-            }
+            //if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
+            //{
+            //    SQLString . Clear ( );
+            //    //获取特殊岗位天数
+            //    table = getTableFiv ( dt );
+            //    if ( table != null && table . Rows . Count > 0 )
+            //    {
+            //        foreach ( DataRow row in table . Rows )
+            //        {
+            //            model . WAH002 = row [ "ANX002" ] . ToString ( );
+            //            model . WAH012 = 10 * ( string . IsNullOrEmpty ( row [ "ANX" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ANX" ] . ToString ( ) ) );
+            //            EditFiv ( SQLString ,model );
+            //        }
+            //    }
+            //}
             if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
             {
                 SQLString . Clear ( );
@@ -313,6 +351,24 @@ namespace LineProductMesBll . Dao
                 }
             }
 
+            if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
+            {
+                SQLString . Clear ( );
+                //获取养老和技能
+                table = getTableSev ( );
+                if ( table != null && table . Rows . Count > 0 )
+                {
+                    foreach ( DataRow row in table . Rows )
+                    {
+                        model . WAH019 = string . IsNullOrEmpty ( row [ "EMP030" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "EMP030" ] . ToString ( ) );
+                        model . WAH013 = string . IsNullOrEmpty ( row [ "EMP029" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "EMP029" ] . ToString ( ) );
+                        model . WAH002 = row [ "EMP001" ] . ToString ( );
+                        if ( Exists ( model . WAH001 ,model . WAH002 ) )
+                            EditEgi ( SQLString ,model );
+                    }
+                }
+            }
+
             return SqlHelper . ExecuteSqlTranDic ( SQLString );
         }
 
@@ -329,7 +385,7 @@ namespace LineProductMesBll . Dao
             strSql . AppendFormat ( "SELECT ANX002,ANX003,ANX004,CONVERT(FLOAT,SUM(ANX015+ANX016)) AN,CONVERT(FLOAT,SUM(ANX017)) ANW FROM MIKANW A INNER JOIN MIKANX B ON A.ANW001=B.ANX001 WHERE ANW020=1 AND ANX011='在职' AND YEAR(ANW022)={0} AND MONTH(ANW022)={1} GROUP BY ANX002,ANX003,ANX004" ,dt . Year ,dt . Month );
             //组装附件
             strSql . Append ( " UNION ALL " );
-            strSql . AppendFormat ( "SELECT ANV002,ANV003,ANV004,CONVERT(FLOAT,SUM(ANV009)) ANV,CONVERT(FLOAT,SUM(ANV010)) ANT FROM MIKANT A INNER JOIN MIKANV B ON A.ANT001=B.ANV001 WHERE ANT006=1 AND ANV007='在职' AND YEAR(ANT008)={0} AND MONTH(ANT008)={1} GROUP BY ANV002,ANV003,ANV004" ,dt . Year ,dt . Month );
+            strSql . AppendFormat ( "SELECT ANV002,ANV003,ANV004,CONVERT(FLOAT,SUM(ANV009)) ANV,CONVERT(FLOAT,SUM(ANV010)+SUM(ANV015)) ANT FROM MIKANT A INNER JOIN MIKANV B ON A.ANT001=B.ANV001 WHERE ANT006=1 AND ANV007='在职' AND YEAR(ANT008)={0} AND MONTH(ANT008)={1} GROUP BY ANV002,ANV003,ANV004" ,dt . Year ,dt . Month );
             //五金
             strSql . Append ( " UNION ALL " );
             strSql . AppendFormat ( "SELECT HAX002,HAX003,HAX004,CONVERT(FLOAT,SUM(HAX018+HAX019)) HAX,CONVERT(FLOAT,SUM(HAX020)) HAW FROM MIKHAW A INNER JOIN MIKHAX B ON A.HAW001=B.HAX001 WHERE HAW018=1 AND HAX015='在职' AND YEAR(HAW010)={0} AND MONTH(HAW010)={1} GROUP BY HAX002,HAX003,HAX004" ,dt . Year ,dt . Month );
@@ -367,7 +423,7 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "SELECT CJ,SUM(CQ) CQ FROM (" );
             strSql . AppendFormat ( "SELECT ANW013 CJ,COUNT(1) CQ FROM (SELECT DISTINCT ANW013,CASE WHEN ANX005 IS NOT NULL AND ANX005!='' THEN CONVERT(NVARCHAR(20),ANX005,112) WHEN ANX006 IS NOT NULL AND ANX006!='' THEN CONVERT(NVARCHAR(20),ANX006,112) WHEN ANX007 IS NOT NULL AND ANX007!='' THEN CONVERT(NVARCHAR(20),ANX007,112) WHEN ANX008 IS NOT NULL AND ANX008!='' THEN CONVERT(NVARCHAR(20),ANX008,112) END ANX FROM MIKANX A INNER JOIN MIKANW B ON A.ANX001=B.ANW001 WHERE  ANW020=1 AND ANX011='在职' AND (CASE WHEN ANX005  IS NOT NULL AND ANX005!='' THEN CONVERT(NVARCHAR(20),ANX005,112) WHEN ANX006 IS NOT NULL AND ANX006!='' THEN CONVERT(NVARCHAR(20),ANX006,112) WHEN ANX007 IS NOT NULL AND ANX007!='' THEN CONVERT(NVARCHAR(20),ANX007,112) WHEN ANX008 IS NOT NULL AND ANX008!='' THEN CONVERT(NVARCHAR(20),ANX008,112) END) LIKE '{0}%') A GROUP BY ANW013" ,dt . ToString ( "yyyyMM" ) );
             strSql . Append ( " UNION ALL " );
-            strSql . AppendFormat ( "SELECT ANT005 CJ,COUNT(1) CQ FROM (SELECT DISTINCT ANT005,CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) END ANV FROM MIKANT A INNER JOIN MIKANV B ON A.ANT001=B.ANV001 WHERE ANT006=1 AND ANV007='在职' AND (CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) END) LIKE '{0}%') A GROUP BY ANT005" ,dt . ToString ( "yyyyMM" ) );
+            strSql . AppendFormat ( "SELECT ANT005 CJ,COUNT(1) CQ FROM (SELECT DISTINCT ANT005,CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) WHEN ANV013 IS NOT NULL AND ANV013!='' THEN CONVERT(NVARCHAR(20),ANV013,112) WHEN ANV014 IS NOT NULL AND ANV014!='' THEN CONVERT(NVARCHAR(20),ANV014,112) END ANV FROM MIKANT A INNER JOIN MIKANV B ON A.ANT001=B.ANV001 WHERE ANT006=1 AND ANV007='在职' AND (CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) END) LIKE '{0}%') A GROUP BY ANT005" ,dt . ToString ( "yyyyMM" ) );
             strSql . Append ( " UNION ALL " );
             strSql . AppendFormat ( "SELECT HAW015,COUNT(1) CQ FROM (SELECT DISTINCT HAW015,CASE WHEN HAX009 IS NOT NULL AND HAX009!='' THEN CONVERT(NVARCHAR(20),HAX009,112) WHEN HAX010 IS NOT NULL AND HAX010!='' THEN CONVERT(NVARCHAR(20),HAX010,112) WHEN HAX011 IS NOT NULL AND HAX011!='' THEN CONVERT(NVARCHAR(20),HAX011,112) WHEN HAX012 IS NOT NULL AND HAX012!='' THEN CONVERT(NVARCHAR(20),HAX012,112) END HAX FROM MIKHAW A INNER JOIN MIKHAX B ON A.HAW001=B.HAX001 WHERE HAW018=1 AND HAX015='在职' AND (CASE WHEN HAX009 IS NOT NULL AND HAX009!='' THEN CONVERT(NVARCHAR(20),HAX009,112) WHEN HAX010 IS NOT NULL AND HAX010!='' THEN CONVERT(NVARCHAR(20),HAX010,112) WHEN HAX011 IS NOT NULL AND HAX011!='' THEN CONVERT(NVARCHAR(20),HAX011,112) WHEN HAX012 IS NOT NULL AND HAX012!='' THEN CONVERT(NVARCHAR(20),HAX012,112) END) LIKE '{0}%') A GROUP BY HAW015" ,dt . ToString ( "yyyyMM" ) );
             strSql . Append ( " UNION ALL " );
@@ -398,7 +454,7 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "SELECT ANX002,SUM(CQ) CQ FROM (" );
             strSql . AppendFormat ( "SELECT ANX002,COUNT(1) CQ FROM (SELECT DISTINCT ANX002,ANX003,CASE WHEN ANX005 IS NOT NULL AND ANX005!='' THEN CONVERT(NVARCHAR(20),ANX005,112) WHEN ANX006 IS NOT NULL AND ANX006!='' THEN CONVERT(NVARCHAR(20),ANX006,112) WHEN ANX007 IS NOT NULL AND ANX007!='' THEN CONVERT(NVARCHAR(20),ANX007,112) WHEN ANX008 IS NOT NULL AND ANX008!='' THEN CONVERT(NVARCHAR(20),ANX008,112) END ANX FROM MIKANX A INNER JOIN MIKANW B ON A.ANX001=B.ANW001 WHERE ANW020=1 AND ANX011='在职' AND (CASE WHEN ANX005 IS NOT NULL AND ANX005!='' THEN CONVERT(NVARCHAR(20),ANX005,112) WHEN ANX006 IS NOT NULL AND ANX006!='' THEN CONVERT(NVARCHAR(20),ANX006,112) WHEN ANX007 IS NOT NULL AND ANX007!='' THEN CONVERT(NVARCHAR(20),ANX007,112) WHEN ANX008 IS NOT NULL AND ANX008!='' THEN CONVERT(NVARCHAR(20),ANX008,112) END) LIKE '{0}%') A GROUP BY ANX002" ,dt . ToString ( "yyyyMM" ) );
             strSql . Append ( " UNION ALL " );
-            strSql . AppendFormat ( "SELECT ANV002,COUNT(1) CQ FROM (SELECT DISTINCT ANV002,ANV003,CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) END ANV FROM MIKANT A INNER JOIN MIKANV B ON A.ANT001=B.ANV001 WHERE ANT006=1 AND ANV007='在职' AND (CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) END) LIKE '{0}%') A GROUP BY ANV002" ,dt . ToString ( "yyyyMM" ) );
+            strSql . AppendFormat ( "SELECT ANV002,COUNT(1) CQ FROM (SELECT DISTINCT ANV002,ANV003,CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) WHEN ANV013 IS NOT NULL AND ANV013!='' THEN CONVERT(NVARCHAR(20),ANV013,112) WHEN ANV014 IS NOT NULL AND ANV014!='' THEN CONVERT(NVARCHAR(20),ANV014,112) END ANV FROM MIKANT A INNER JOIN MIKANV B ON A.ANT001=B.ANV001 WHERE ANT006=1 AND ANV007='在职' AND (CASE WHEN ANV005 IS NOT NULL AND ANV005!='' THEN CONVERT(NVARCHAR(20),ANV005,112) WHEN ANV006 IS NOT NULL AND ANV006!='' THEN CONVERT(NVARCHAR(20),ANV006,112) END) LIKE '{0}%') A GROUP BY ANV002" ,dt . ToString ( "yyyyMM" ) );
             strSql . Append ( " UNION ALL " );
             strSql . AppendFormat ( "SELECT HAX002,COUNT(1) CQ FROM (SELECT DISTINCT HAX002,HAX003,CASE WHEN HAX009 IS NOT NULL AND HAX009!='' THEN CONVERT(NVARCHAR(20),HAX009,112) WHEN HAX010 IS NOT NULL AND HAX010!='' THEN CONVERT(NVARCHAR(20),HAX010,112) WHEN HAX011 IS NOT NULL AND HAX011!='' THEN CONVERT(NVARCHAR(20),HAX011,112) WHEN HAX012 IS NOT NULL AND HAX012!='' THEN CONVERT(NVARCHAR(20),HAX012,112) END HAX FROM MIKHAW A INNER JOIN MIKHAX B ON A.HAW001=B.HAX001 WHERE HAW018=1 AND HAX015='在职' AND (CASE WHEN HAX009 IS NOT NULL AND HAX009!='' THEN CONVERT(NVARCHAR(20),HAX009,112) WHEN HAX010 IS NOT NULL AND HAX010!='' THEN CONVERT(NVARCHAR(20),HAX010,112) WHEN HAX011 IS NOT NULL AND HAX011!='' THEN CONVERT(NVARCHAR(20),HAX011,112) WHEN HAX012 IS NOT NULL AND HAX012!='' THEN CONVERT(NVARCHAR(20),HAX012,112) END) LIKE '{0}%') A GROUP BY HAX002" ,dt . ToString ( "yyyyMM" ) );
             strSql . Append ( " UNION ALL " );
@@ -472,6 +528,18 @@ namespace LineProductMesBll . Dao
             //strSql . AppendFormat ( "SELECT PPA002,COUNT(1) CQ FROM (SELECT DISTINCT PPA002,PPA003,CASE WHEN PPA005 IS NOT NULL AND PPA005!='' THEN DATEDIFF(DAY,EMP023,PPA005) WHEN PPA006 IS NOT NULL AND PPA006!='' THEN DATEDIFF(DAY,EMP023,PPA006) WHEN PPA007 IS NOT NULL AND PPA007!='' THEN DATEDIFF(DAY,EMP023,PPA007) WHEN PPA008 IS NOT NULL AND PPA008!='' THEN DATEDIFF(DAY,EMP023,PPA008) END PPA FROM MIKPAN A INNER JOIN MIKPAP B ON A.PAN001=B.PAP001 INNER JOIN MIKEMP C ON B.PPA002=C.EMP001 WHERE PAN009=1 AND PPA010='在职' AND (CASE WHEN PPA005 IS NOT NULL AND PPA005!='' THEN CONVERT(NVARCHAR(20),PPA005,112) WHEN PPA006 IS NOT NULL AND PPA006!='' THEN CONVERT(NVARCHAR(20),PPA006,112) WHEN PPA007 IS NOT NULL AND PPA007!='' THEN CONVERT(NVARCHAR(20),PPA007,112) WHEN PPA008 IS NOT NULL AND PPA008!='' THEN CONVERT(NVARCHAR(20),PPA008,112) END) LIKE '{0}%') A WHERE PPA>=0 AND PPA<=7 GROUP BY PPA002) A GROUP BY ANX002" ,dt . ToString ( "yyyyMM" ) );
             //strSql . Append ( " UNION ALL " );
             //strSql . AppendFormat ( "SELECT LGP002,COUNT(1) LG FROM (SELECT DISTINCT LGP002,LGP003,DATEDIFF(DAY,EMP023,LGN002) LG FROM MIKLGN A INNER JOIN MIKLGP B ON A.LGN001=B.LGP001 INNER JOIN MIKEMP C ON B.LGP002=C.EMP001 WHERE LGP005='在职' AND LGN003=1 AND CONVERT(NVARCHAR(20),LGN002,112) LIKE '{0}%') A WHERE LG>=0 AND LG<=7 GROUP BY LGP002" ,dt . ToString ( "yyyyMM" ) );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取养老和技能
+        /// </summary>
+        /// <returns></returns>
+        DataTable getTableSev ( )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "select EMP001,EMP029,EMP030 from MIKEMP " );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -618,6 +686,13 @@ namespace LineProductMesBll . Dao
 
             SQLString . Add ( strSql ,null );
         }
+        void EditEgi ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . WagesBodyEntity model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "UPDATE MIKWAH SET WAH013={0},WAH019={1} WHERE WAH001='{2}' AND WAH002='{3}' " ,model . WAH013 ,model . WAH019 ,model . WAH001 ,model . WAH002 );
+
+            SQLString . Add ( strSql ,null );
+        }
 
         /// <summary>
         /// 审核
@@ -690,9 +765,11 @@ namespace LineProductMesBll . Dao
         /// <param name="dt"></param>
         /// <returns></returns>
         public DataTable getTableView ( DateTime dt )
-        {
+        { 
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT ANW013,SUM(ANX) ANX FROM (SELECT ANW013,CONVERT(FLOAT,SUM(ISNULL(ANX009,0)+ISNULL(ANX010,0))+ANW008*ANW009*0.05) ANX FROM MIKANW A INNER JOIN MIKANX B ON A.ANW001=B.ANX001 WHERE ANW020=1 AND ANX011='在职' AND YEAR(ANW022)={0} AND MONTH(ANW022)={1} GROUP BY ANW013,ANW008,ANW009) A GROUP BY ANW013" ,dt . Year ,dt . Month );
+            strSql . Append ( " UNION ALL " );
+            strSql . AppendFormat ( "SELECT PAN005,(PAO+PPA)*0.05 ANX  FROM MIKPAN A INNER JOIN (SELECT PAO001,SUM(PAO012*PAO006) PAO FROM MIKPAO GROUP BY PAO001) B ON A.PAN001=B.PAO001 INNER JOIN (SELECT PAP001,SUM(PPA009*(DATEDIFF(hh,PPA007,PPA008))) PPA FROM MIKPAP WHERE PPA010='在职' GROUP BY PAP001) C ON A.PAN001=C.PAP001 WHERE YEAR(PAN006)={0} AND MONTH(PAN006)={1} AND PAN009=1" ,dt . Year ,dt . Month );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

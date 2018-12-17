@@ -4,6 +4,7 @@ using System . Data;
 using System;
 using System . Collections . Generic;
 using System . Data . SqlClient;
+using System . Collections;
 
 namespace LineProductMesBll . Dao
 {
@@ -239,6 +240,62 @@ GO
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
+
+        /// <summary>
+        /// 批量增加排产天数
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
+        public bool SaveDay ( DataTable table )
+        {
+            Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
+            StringBuilder strSql = new StringBuilder ( );
+
+            LineProductMesEntityu . ProductPlanPreviewEntity model = new LineProductMesEntityu . ProductPlanPreviewEntity ( );
+
+            int days = 0;
+            foreach ( DataRow row in table . Rows )
+            {
+                model . PRF001 = row [ "P1" ] . ToString ( );
+                model . PRF003 = 0;
+                days = string . IsNullOrEmpty ( row [ "P5" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "P5" ] );
+                model . PRF002 = getTime ( model . PRF001 );
+                if ( model . PRF002 == null )
+                    continue;
+                for ( int i = 0 ; i < days ; i++ )
+                {
+                    model . PRF002 = Convert . ToDateTime ( model . PRF002 ) . AddDays ( 1 );
+                    Addprf ( SQLString ,model );
+                }
+            }
+
+            return SqlHelper . ExecuteSqlTranDic ( SQLString );
+        }
+
+        /// <summary>
+        /// 根据品号获取最大排产日期
+        /// </summary>
+        /// <param name="piNum"></param>
+        /// <returns></returns>
+        DateTime? getTime ( string piNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT MAX(PRF002) PRF002 FROM MIKPRF WHERE PRF001='{0}'" ,piNum );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return null;
+            else
+            {
+                string time = table . Rows [ 0 ] [ "PRF002" ] . ToString ( );
+                if ( time == null )
+                    return null;
+                else
+                    return Convert . ToDateTime ( time );
+            }
+
+        }
+
 
     }
 }

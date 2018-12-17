@@ -179,8 +179,8 @@
             base.OnPaint(e);
             Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
-            Bitmap bitmap = (this.MouseBack == null) ? Resources.frameBorderEffect_mouseDownDraw : this.MouseBack;
-            Bitmap bitmap2 = (this.NormlBack == null) ? Resources.frameBorderEffect_normalDraw : this.NormlBack;
+            Bitmap bitmap = (this.MouseBack == null) ? Resources.white : this.MouseBack;
+            Bitmap bitmap2 = (this.NormlBack == null) ? Resources. white : this.NormlBack;
             Bitmap backgroundImage = (this._mouseState == ControlState.Hover) ? bitmap : bitmap2;
             if (backgroundImage != null)
             {
