@@ -15,7 +15,7 @@ namespace LineProductMes
             InitializeComponent ( );
 
             this . FormClosing += FormChild_FormClosing1;
-            
+
             //Power ( );
         }
 

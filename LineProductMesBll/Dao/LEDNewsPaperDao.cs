@@ -827,5 +827,44 @@ namespace LineProductMesBll . Dao
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
+        /// <summary>
+        /// 获取打印列表 报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LEC001,LEC010,LEC012,LEC013,LEC015,LEC019,LEC020,LEC021,JS,CASE LEC021 WHEN '计件' THEN JJ ELSE 0 END JJ,BT,CASE LEC021 WHEN '计件' THEN JJ+JS-BT ELSE JS-BT END ZGZ,ZGS FROM MIKLEC A INNER JOIN (SELECT LED001,CONVERT(FLOAT,SUM(LED010*LED015)) JS,CONVERT(FLOAT,SUM(LED007)) BT,CONVERT(FLOAT,SUM(LED014+LED015)) ZGS FROM MIKLED WHERE LED001='{0}' GROUP BY LED001) B ON A.LEC001=B.LED001 INNER JOIN (SELECT LEE001,CONVERT(FLOAT,SUM(LEE008*LEE009)) JJ FROM MIKLEE WHERE LEE001='{0}' GROUP BY LEE001) C ON A.LEC001=C.LEE001 WHERE LEC001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表 报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFor ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LEE001,LEE002,LEE003,LEE004,LEE005,LEE006,LEE007,CONVERT(FLOAT,LEE008) LEE008,LEE009,CONVERT(FLOAT,LEE008*LEE009) U6 FROM MIKLEE WHERE LEE001 ='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表 报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFiv ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LED001,LED002,LED003,DATENAME(HOUR,LED005)+':'+DATENAME(MINUTE,LED005) LED005,DATENAME(HOUR,LED006)+':'+DATENAME(MINUTE,LED006) LED006,CONVERT(FLOAT,LED007) LED007,DATENAME(HOUR,LED008)+':'+DATENAME(MINUTE,LED008) LED008,DATENAME(HOUR,LED009)+':'+DATENAME(MINUTE,LED009) LED009,CONVERT(FLOAT,LED010) LED010,LED011,LED012,LED013,CONVERT(FLOAT,LED014) LED014,CONVERT(FLOAT,LED015) LED015,CONVERT(FLOAT,LED016) LED016,CONVERT(FLOAT,LED015*LED010) U2,CONVERT(FLOAT,LED014+LED015) U3 FROM MIKLED WHERE LED001 ='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
     }
 }

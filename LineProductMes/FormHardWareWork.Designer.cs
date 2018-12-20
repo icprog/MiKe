@@ -29,6 +29,7 @@
         private void InitializeComponent ( )
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHardWareWork));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtHAW002 = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -206,6 +207,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // splitContainerControl1
             // 
@@ -421,7 +434,7 @@
             // 
             // txtHAW007
             // 
-            this.txtHAW007.EditValue = "10000";
+            this.txtHAW007.EditValue = "";
             this.txtHAW007.Location = new System.Drawing.Point(511, 72);
             this.txtHAW007.MenuManager = this.barManager1;
             this.txtHAW007.Name = "txtHAW007";
@@ -448,14 +461,14 @@
             // 
             // txtHAW009
             // 
-            this.txtHAW009.EditValue = "10000";
-            this.txtHAW009.Location = new System.Drawing.Point(640, 72);
+            this.txtHAW009.EditValue = "";
+            this.txtHAW009.Location = new System.Drawing.Point(632, 72);
             this.txtHAW009.MenuManager = this.barManager1;
             this.txtHAW009.Name = "txtHAW009";
             this.txtHAW009.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHAW009.Properties.Appearance.Options.UseFont = true;
             this.txtHAW009.Properties.ReadOnly = true;
-            this.txtHAW009.Size = new System.Drawing.Size(58, 26);
+            this.txtHAW009.Size = new System.Drawing.Size(66, 26);
             this.txtHAW009.StyleController = this.layoutControl1;
             this.txtHAW009.TabIndex = 13;
             this.txtHAW009.TextChanged += new System.EventHandler(this.txtHAW009_TextChanged);
@@ -838,7 +851,9 @@
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(131, 39);
             this.layoutControlItem10.Text = "完工数量";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(66, 20);
+            this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(56, 20);
+            this.layoutControlItem10.TextToControlDistance = 5;
             // 
             // layoutControlItem7
             // 
@@ -989,7 +1004,7 @@
             this.gridBand1.Columns.Add(this.HAX008);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 686;
+            this.gridBand1.Width = 611;
             // 
             // HAX015
             // 
@@ -1112,7 +1127,6 @@
             this.HAX004.FieldName = "HAX004";
             this.HAX004.Name = "HAX004";
             this.HAX004.OptionsColumn.AllowEdit = false;
-            this.HAX004.Visible = true;
             // 
             // HAX017
             // 

@@ -105,5 +105,50 @@ namespace LineProductMesBll
             return table . Rows [ 0 ] [ "BAA002" ] . ToString ( );
         }
 
+        /// <summary>
+        /// 组装
+        /// </summary>
+        public static string codeOne="组装";
+
+        /// <summary>
+        /// 组装附件
+        /// </summary>
+        public static string codeTwo="组装附件";
+
+        /// <summary>
+        /// 五金车间
+        /// </summary>
+        public static string codeTre="五金";
+
+        /// <summary>
+        /// 注塑车间  计件
+        /// </summary>
+        public static string codeFor="注塑计件";
+
+        /// <summary>
+        /// 注塑车间  计时
+        /// </summary>
+        public static string codeFiv="注塑计时";
+
+        /// <summary>
+        /// LED
+        /// </summary>
+        public static string codeSix="LED";
+
+        /// <summary>
+        /// 面板
+        /// </summary>
+        public static string codeSev="面板";
+
+        /// <summary>
+        /// 物流组
+        /// </summary>
+        public static string codeEgi="物流组";
+
+        /// <summary>
+        /// 喷漆
+        /// </summary>
+        public static string codeNin="喷漆";
+
     }
 }

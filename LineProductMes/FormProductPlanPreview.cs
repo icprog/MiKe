@@ -8,6 +8,7 @@ using System;
 using System . ComponentModel;
 using System . Windows . Forms;
 using LineProductMes . ChildForm;
+using System . Collections . Generic;
 
 namespace LineProductMes
 {
@@ -303,18 +304,17 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "请选择需要排产的产品" );
                 return;
             }
-            string productName = string . Empty;
+            Dictionary<string ,string> strDic = new Dictionary<string ,string> ( );
+            //string productName = string . Empty, productNum = string . Empty;
             foreach ( int i in selectRows )
             {
                 DataRow row = gridView1 . GetDataRow ( i );
                 if ( row == null )
                     continue;
-                if ( productName == string . Empty )
-                    productName = "'" + row [ "主件品号" ] . ToString ( ) + "'";
-                else
-                    productName = productName + "," + "'" + row [ "主件品号" ] . ToString ( ) + "'";
+
+                strDic . Add ( row [ "主件品号" ] . ToString ( ) ,row [ "主件品名" ] . ToString ( ) );
             }
-            FormLineForAssPlan from = new FormLineForAssPlan ( productName );
+            FormLineForAssPlan from = new FormLineForAssPlan ( strDic );
             from . ShowDialog ( );
         }
         protected override void OnClosing ( CancelEventArgs e )

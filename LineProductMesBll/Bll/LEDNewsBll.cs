@@ -199,5 +199,20 @@ namespace LineProductMesBll . Bll
             return dal . getTableOtherSur ( orderNum ,proNum ,oddNum );
         }
 
+        public DataTable getPrintTre ( string oddNum )
+        {
+            return dal . getPrintTre ( oddNum );
+        }
+
+        public DataTable getPrintFor ( string oddNum )
+        {
+            return dal . getPrintFor ( oddNum );
+        }
+
+        public DataTable getPrintFiv ( string oddNum )
+        {
+            return dal . getPrintFiv ( oddNum );
+        }
+
     }
 }

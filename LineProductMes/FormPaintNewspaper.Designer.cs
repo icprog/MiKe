@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPaintNewspaper));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtu4 = new DevExpress.XtraEditors.TextEdit();
@@ -67,7 +69,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PAO002 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -101,7 +103,7 @@
             this.ART001 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -201,6 +203,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // splitContainerControl1
             // 
@@ -730,6 +744,7 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl1_KeyPress);
             // 
             // contextMenuStrip1
             // 
@@ -1107,6 +1122,7 @@
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
+            this.gridControl2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl2_KeyPress);
             // 
             // contextMenuStrip2
             // 
@@ -1179,7 +1195,7 @@
             this.gridBand1.Columns.Add(this.PPA011);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 340;
+            this.gridBand1.Width = 262;
             // 
             // PPA010
             // 
@@ -1302,7 +1318,6 @@
             this.PPA004.FieldName = "PPA004";
             this.PPA004.Name = "PPA004";
             this.PPA004.OptionsColumn.AllowEdit = false;
-            this.PPA004.Visible = true;
             this.PPA004.Width = 78;
             // 
             // PPA011
@@ -1534,7 +1549,7 @@
             this.gridBand4.Columns.Add(this.bandedGridColumn1);
             this.gridBand4.Name = "gridBand4";
             this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 238;
+            this.gridBand4.Width = 312;
             // 
             // U4
             // 
@@ -1551,7 +1566,7 @@
     "13])";
             this.U4.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U4.Visible = true;
-            this.U4.Width = 73;
+            this.U4.Width = 95;
             // 
             // PPA014
             // 
@@ -1565,7 +1580,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PPA014", "{0:0.##}")});
             this.PPA014.ToolTip = "[总工资]/[总工时]*[个人总工时]";
             this.PPA014.Visible = true;
-            this.PPA014.Width = 66;
+            this.PPA014.Width = 86;
             // 
             // PPA015
             // 
@@ -1573,7 +1588,7 @@
             this.PPA015.FieldName = "PPA015";
             this.PPA015.Name = "PPA015";
             this.PPA015.Visible = true;
-            this.PPA015.Width = 99;
+            this.PPA015.Width = 131;
             // 
             // bandedGridColumn1
             // 
@@ -1787,10 +1802,10 @@
         private DevExpress . XtraEditors . ComboBoxEdit txtPAN013;
         private DevExpress . XtraEditors . TextEdit txtu4;
         private DevExpress . XtraLayout . LayoutControlItem layoutControlItem14;
+        private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
-        private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox1;
     }
 }

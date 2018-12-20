@@ -132,6 +132,7 @@ namespace LineProductMes
             gridControl1 . DataSource = tableView;
             addTool ( );
             layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Always;
+            toolCancellation . Caption = "生成ERP计划";
 
             return base . Add ( );
         }
@@ -141,6 +142,7 @@ namespace LineProductMes
             editTool ( );
             state = "edit";
             check = false;
+            toolCancellation . Caption = "生成ERP计划";
 
             return base . Edit ( );
         }
@@ -192,6 +194,7 @@ namespace LineProductMes
         protected override int Cancel ( )
         {
             cancelTool ( state );
+            toolCancellation . Caption = "生成ERP计划";
 
             //_bll . Cancel ( tableView );
             //this . DialogResult = DialogResult . Cancel;
@@ -231,6 +234,7 @@ namespace LineProductMes
                     toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
                     toolExamin . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
                     layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
+                    toolCancellation . Caption = "生成ERP计划";
                 }
                 //else
                 //{
@@ -370,6 +374,7 @@ namespace LineProductMes
                     toolCancellation . Visibility = DevExpress . XtraBars . BarItemVisibility . Never;
                     layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
                     controlUnEnable ( );
+                    toolCancellation . Caption = "生成ERP计划";
                     //this . DialogResult = DialogResult . OK;
                     //saveTool ( );
                     //toolExamin . Caption = "弃用";

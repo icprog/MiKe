@@ -108,7 +108,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableViewOne ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT 1 idx,LEH001,LEH002,LEH003,LEH004,LEH005,LEH006,LEH007,LEH008,LEH009,0 U4,LEH010 from MIKLEH  WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT idx,LEH001,LEH002,LEH003,LEH004,LEH005,LEH006,LEH007,LEH008,LEH009,0 U4,LEH010 from MIKLEH  WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -795,6 +795,31 @@ namespace LineProductMesBll . Dao
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
+
+        public DataTable getPrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "WITH CET AS (SELECT LEF001,LEF010,LEF012,LEF013,LEF015,LEF019,LEF020,LEF021,JS,CONVERT(FLOAT,CASE WHEN LEF021='计件' THEN JJ WHEN LEF021='计时' THEN 0 ELSE 0 END) JJ,BT,ZGS FROM MIKLEF A INNER JOIN (SELECT LEG001,CONVERT(FLOAT,SUM(LEG015*LEG010)) JS,CONVERT(FLOAT,SUM(LEG007)) BT,CONVERT(FLOAT,SUM(LEG014+LEG015)) ZGS  FROM  MIKLEG WHERE LEG001='{0}' GROUP BY LEG001) B ON A.LEF001=B.LEG001 INNER JOIN (SELECT LEH001,SUM(LEH008*LEH009) JJ FROM MIKLEH WHERE LEH001='{0}' GROUP BY LEH001) C ON A.LEF001=C.LEH001 WHERE LEF001='{0}') SELECT LEF001,LEF010,LEF012,LEF013,LEF015,LEF019,LEF020,LEF021,JS,JJ,BT,JS+JJ-BT ZG,ZGS FROM CET" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        public DataTable getPrintFor ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LEH001,LEH002,LEH003,LEH004,LEH005,LEH006,LEH007,CONVERT(FLOAT,LEH008) LEH008,LEH009,LEH010,CONVERT(FLOAT,LEH009*LEH008) U5 from MIKLEH WHERE LEH001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        public DataTable getPrintFiv ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LEG001,LEG002,LEG003,DATENAME(HOUR,LEG005)+':'+DATENAME(MINUTE,LEG005) LEG005,DATENAME(HOUR,LEG006)+':'+DATENAME(MINUTE,LEG006) LEG006,CONVERT(FLOAT,LEG007) LEG007,DATENAME(HOUR,LEG008)+':'+DATENAME(MINUTE,LEG008) LEG008,DATENAME(HOUR,LEG009)+':'+DATENAME(MINUTE,LEG009) LEG009,CONVERT(FLOAT,LEG010) FLG010,LEG011,LEG012,CONVERT(FLOAT,LEG016) LEG016,LEG013,CONVERT(FLOAT,LEG014) LEG014,CONVERT(FLOAT,LEG015) LEG015,CONVERT(FLOAT,LEG015*LEG010) U2,CONVERT(FLOAT,LEG014+LEG015) U3 FROM MIKLEG WHERE LEG001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
 
     }
 }

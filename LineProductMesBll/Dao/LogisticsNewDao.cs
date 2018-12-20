@@ -612,5 +612,44 @@ namespace LineProductMesBll . Dao
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintOne ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LGN001,LGN002,CONVERT(FLOAT,LGN005) LGN005,CONVERT(FLOAT,LGN006) LGN006,LGN007 FROM MIKLGN WHERE LGN001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintTwo ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LOG001,LOG002,LOG003,LOG004,LOG005,LOG006,CONVERT(FLOAT,LOG007) LOG007,LOG008,CONVERT(FLOAT,LOG009) LOG009 FROM MIKLGO WHERE LOG001 ='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT LGP001,LGP002,LGP003,LGP004,LGP005,LGP006,DATENAME(HOUR,LGP007)+':'+DATENAME(MINUTE,LGP007) LGP007,DATENAME(HOUR,LGP008)+':'+DATENAME(MINUTE,LGP008) LGP008,DATENAME(HOUR,LGP009)+':'+DATENAME(MINUTE,LGP009) LGP009,DATENAME(HOUR,LGP010)+':'+DATENAME(MINUTE,LGP010) LGP010,CONVERT(FLOAT,LGP011) LGP011,CONVERT(FLOAT,LGP012) LGP012,CONVERT(FLOAT,LGP013) LGP013,CONVERT(FLOAT,LGP014) LGP014,CONVERT(FLOAT,LGP012*LGP014) U1,CONVERT(FLOAT,LGP011+LGP012) U0 FROM MIKLGP WHERE LGP001 ='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
     }
 }

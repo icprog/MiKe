@@ -18,7 +18,7 @@ namespace LineProductMes
         LineProductMesEntityu.HardWareWorkHeaderEntity _header=null;
         LineProductMesEntityu.HardWareWorkBodyEntity _body=null;
         LineProductMesBll.Bll.HardWareWorkBll _bll=null;
-        DataTable tableView,tablePInfo,tableWork,tableUser,tableArt,tablePrintOne,tablePrintTwo,tableOtherSur;
+        DataTable tableView,tablePInfo,tableWork,tableUser,tableArt,tablePrintOne,tablePrintTwo,tableOtherSur,tablePrintTre,tablePrintFor;
         DataRow row;
         string strWhere="1=1",state=string.Empty,sign=string.Empty,focuseName=string.Empty;
         bool result=false;
@@ -137,6 +137,13 @@ namespace LineProductMes
                 return 0;
             }
 
+            _body . HAX001 = workShopTime . checkUserForOtherWork ( txtHAW010 . Text ,tableView ,LineProductMesBll . ObtainInfo . codeTre ,txtHAW001 . Text );
+            if ( !string . IsNullOrEmpty ( _body . HAX001 ) )
+            {
+                XtraMessageBox . Show ( _body . HAX001 ,"提示" );
+                return 0;
+            }
+
             wait . Show ( );
             backgroundWorker1 . RunWorkerAsync ( );
 
@@ -249,6 +256,20 @@ namespace LineProductMes
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
             return base . ExportWork ( );
+        }
+        protected override int PrintReport ( )
+        {
+            printOrExportOne ( );
+            Print ( new DataTable [ ] { tablePrintTre ,tablePrintFor } ,"五金报工单.frx" );
+
+            return base . PrintReport ( );
+        }
+        protected override int ExportReport ( )
+        {
+            printOrExportOne ( );
+            Export ( new DataTable [ ] { tablePrintTre ,tablePrintFor } ,"五金报工单.frx" );
+
+            return base . ExportReport ( );
         }
         #endregion
 
@@ -1175,7 +1196,6 @@ namespace LineProductMes
                     _header . HAW009 = 0;
                 }
             }
-
             return result;
         }
         void setValue ( )
@@ -1231,6 +1251,13 @@ namespace LineProductMes
                 return false;
 
             return true;
+        }
+        void printOrExportOne ( )
+        {
+            tablePrintTre = _bll . getPrintTre ( txtHAW001 . Text );
+            tablePrintTre . TableName = "TableOne";
+            tablePrintFor = _bll . getPrintFor ( txtHAW001 . Text );
+            tablePrintFor . TableName = "TableTwo";
         }
         void addRows ( string column,int selectIdx ,object value )
         {

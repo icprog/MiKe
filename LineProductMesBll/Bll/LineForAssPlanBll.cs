@@ -1,4 +1,5 @@
 ﻿using System;
+using System . Collections . Generic;
 using System . Data;
 
 namespace LineProductMesBll . Bll
@@ -16,9 +17,9 @@ namespace LineProductMesBll . Bll
         /// </summary>
         /// <param name="piNum"></param>
         /// <returns></returns>
-        public DataTable getTableView ( DateTime dtStart ,DateTime dtEnd,string productName )
+        public DataTable getTableView ( DateTime dtStart ,DateTime dtEnd ,Dictionary<string ,string> strDic )
         {
-            return dal . getTableView ( dtStart ,dtEnd,productName );
+            return dal . getTableView ( dtStart ,dtEnd,strDic );
         }
 
         /// <summary>

@@ -81,7 +81,7 @@ namespace LineProductMesBll . Dao
                 return getHeader ( table . Rows [ 0 ] );
 
         }
-
+        
         public LineProductMesEntityu . AssNewWorkHeaderEntity getHeader ( DataRow row )
         {
             LineProductMesEntityu . AssNewWorkHeaderEntity model = new LineProductMesEntityu . AssNewWorkHeaderEntity ( );
@@ -734,6 +734,32 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT DISTINCT ANW002,ANW003,ANW004,ANW005,ANW007,ANW006,ANW009,DDA003 DEA008 FROM MIKANX A INNER JOIN MIKANW B ON A.ANX001=B.ANW001 LEFT JOIN TPADEA C ON B.ANW003=C.DEA001 INNER JOIN TPADDA D ON C.DEA008=D.DDA001 WHERE ANW001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getTablePrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT ANW001,ANW002,ANW003,ANW004,ANW005,ANW006,ANW007,CONVERT(FLOAT,ANW008) ANW008,ANW009,ANW010,ANW011,ANW012,ANW013,ANW014,SUBSTRING(CONVERT(varchar(100),ANW015, 22),0,15) ANW015,SUBSTRING(CONVERT(varchar(100),ANW016, 22),0,15) ANW016,ANW017,ANW018,ANW019,ANW020,ANW021,ANW022,CONVERT(FLOAT,ANW023) ANW023,CONVERT(FLOAT,ANW024) ANW024,CONVERT(FLOAT,ANW008*ANW009) ANWPRICE,SUM(CONVERT(FLOAT,ANX015+ANX016)) U3,SUM(CONVERT(FLOAT,ANX016*ANX009)) U4,CASE WHEN ANW014='计件' THEN CONVERT(FLOAT,ANW008*ANW009) WHEN ANW014='计时' THEN SUM(CONVERT(FLOAT,ANX016*ANX009)) ELSE 0 END ANX017,SUM(CONVERT(FLOAT,ANX010)) ANX010,CASE WHEN ANW014='计件' THEN CONVERT(FLOAT,ANW008*ANW009)*0.05  ELSE 0 END U5 FROM MIKANW A INNER JOIN MIKANX B ON A.ANW001=B.ANX001 WHERE ANW001='{0}' GROUP BY ANW001,ANW002,ANW003,ANW004,ANW005,ANW006,ANW007,ANW008,ANW009,ANW010,ANW011,ANW012,ANW013,ANW014,ANW015,ANW016,ANW017,ANW018,ANW019,ANW020,ANW021,ANW022,ANW023,ANW024" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getTablePrintFor ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT ANX002,ANX003,ANX004,ISNULL(SUBSTRING(CONVERT(varchar(100),ANX005, 22),10,5),'') ANX005,ISNULL(SUBSTRING(CONVERT(varchar(100),ANX006, 22),10,5),'') ANX006,ISNULL(SUBSTRING(CONVERT(varchar(100),ANX007, 22),10,5),'') ANX007,ISNULL(SUBSTRING(CONVERT(varchar(100),ANX008, 22),10,5),'') ANX008,CONVERT(FLOAT,ANX009) ANX009,CONVERT(FLOAT,ANX010) ANX010,ANX011,ANX012,ANX013,ANX014,CONVERT(FLOAT,ANX015) ANX015,CONVERT(FLOAT,ANX016) ANX016,CONVERT(FLOAT,ANX017) ANX017,CONVERT(FLOAT,ANX015+ANX016) U3,CONVERT(FLOAT,ANX016*ANX009) U4 FROM MIKANX WHERE ANX001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

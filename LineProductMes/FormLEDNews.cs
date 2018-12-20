@@ -22,7 +22,7 @@ namespace LineProductMes
 
         Thread thread; SynchronizationContext m_SyncContext = null;
     
-        DataTable tableView,tableViewTwo,tableUser,tableWorker,tableLocal,tableProduct,tablePrintOne,tablePrintTwo,tableOtherSur;
+        DataTable tableView,tableViewTwo,tableUser,tableWorker,tableLocal,tableProduct,tablePrintOne,tablePrintTwo,tableOtherSur,tablePrintTre,tablePrintFor,tablePrintFiv;
 
         string state=string.Empty,strWhere="1=1",focuseName=string.Empty;
         bool result=false;
@@ -243,6 +243,20 @@ namespace LineProductMes
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
             return base . ExportWork ( );
+        }
+        protected override int PrintReport ( )
+        {
+            printOrExportOne ( );
+            Print ( new DataTable [ ] { tablePrintTre ,tablePrintFor ,tablePrintFiv } ,"LED报工单.frx" );
+
+            return base . PrintReport ( );
+        }
+        protected override int ExportReport ( )
+        {
+            printOrExportOne ( );
+            Export ( new DataTable [ ] { tablePrintTre ,tablePrintFor ,tablePrintFiv } ,"LED报工单.frx" );
+
+            return base . ExportReport ( );
         }
         #endregion
 
@@ -941,6 +955,13 @@ namespace LineProductMes
                     return false;
             }
 
+            _body . LEG001 = workShopTime . checkUserForOtherWork ( txtLEF013 . Text ,tableView ,LineProductMesBll . ObtainInfo . codeSix ,txtLEF001 . Text );
+            if ( !string . IsNullOrEmpty ( _body . LEG001 ) )
+            {
+                XtraMessageBox . Show ( _body . LEG001 ,"提示" );
+                return false;
+            }
+
             _header . LEF001 = txtLEF001 . Text;
             _header . LEF009 = txtLEF010 . EditValue . ToString ( );
             _header . LEF010 = txtLEF010 . Text;
@@ -1117,6 +1138,15 @@ namespace LineProductMes
             tablePrintOne . TableName = "TableOne";
             tablePrintTwo = _bll . getTablePrintTwo ( txtLEF001 . Text );
             tablePrintTwo . TableName = "TableTwo";
+        }
+        void printOrExportOne ( )
+        {
+            tablePrintTre = _bll . getPrintTre ( txtLEF001 . Text );
+            tablePrintTre . TableName = "TableOne";
+            tablePrintFor = _bll . getPrintFor ( txtLEF001 . Text );
+            tablePrintFor . TableName = "TableTwo";
+            tablePrintFiv = _bll . getPrintFiv ( txtLEF001 . Text );
+            tablePrintFiv . TableName = "TableTre";
         }
         void calcuSalaryByPrice ( )
         {

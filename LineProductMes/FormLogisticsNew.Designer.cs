@@ -74,7 +74,6 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.LGP005 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.cmb = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.LGP002 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -88,7 +87,6 @@
             this.LGP003 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.LGP004 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.LGP006 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.LGP007 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Editd1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.LGP008 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -97,17 +95,19 @@
             this.LGP014 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.U1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.LGP009 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Editd3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.LGP010 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Editd4 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.LGP011 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.U0 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.LGP013 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -202,7 +202,7 @@
             this.txtLGN001.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtLGN001.Properties.Appearance.Options.UseFont = true;
             this.txtLGN001.Properties.ReadOnly = true;
-            this.txtLGN001.Size = new System.Drawing.Size(89, 26);
+            this.txtLGN001.Size = new System.Drawing.Size(124, 26);
             this.txtLGN001.StyleController = this.layoutControl1;
             this.txtLGN001.TabIndex = 4;
             // 
@@ -214,7 +214,7 @@
             this.txtLGN002.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtLGN002.Properties.Appearance.Options.UseFont = true;
             this.txtLGN002.Properties.ReadOnly = true;
-            this.txtLGN002.Size = new System.Drawing.Size(89, 26);
+            this.txtLGN002.Size = new System.Drawing.Size(124, 26);
             this.txtLGN002.StyleController = this.layoutControl1;
             this.txtLGN002.TabIndex = 5;
             // 
@@ -232,7 +232,7 @@
             // 
             // txtLGN005
             // 
-            this.txtLGN005.Location = new System.Drawing.Point(243, 12);
+            this.txtLGN005.Location = new System.Drawing.Point(278, 12);
             this.txtLGN005.MenuManager = this.barManager1;
             this.txtLGN005.Name = "txtLGN005";
             this.txtLGN005.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -245,14 +245,14 @@
             "0.5",
             "1"});
             this.txtLGN005.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtLGN005.Size = new System.Drawing.Size(89, 26);
+            this.txtLGN005.Size = new System.Drawing.Size(102, 26);
             this.txtLGN005.StyleController = this.layoutControl1;
             this.txtLGN005.TabIndex = 7;
             this.txtLGN005.SelectedValueChanged += new System.EventHandler(this.txtLGN005_SelectedValueChanged);
             // 
             // txtLGN006
             // 
-            this.txtLGN006.Location = new System.Drawing.Point(243, 42);
+            this.txtLGN006.Location = new System.Drawing.Point(278, 42);
             this.txtLGN006.MenuManager = this.barManager1;
             this.txtLGN006.Name = "txtLGN006";
             this.txtLGN006.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -265,14 +265,14 @@
             "0.5",
             "1"});
             this.txtLGN006.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtLGN006.Size = new System.Drawing.Size(89, 26);
+            this.txtLGN006.Size = new System.Drawing.Size(102, 26);
             this.txtLGN006.StyleController = this.layoutControl1;
             this.txtLGN006.TabIndex = 8;
             this.txtLGN006.SelectedValueChanged += new System.EventHandler(this.txtLGN006_SelectedValueChanged);
             // 
             // txtLGN007
             // 
-            this.txtLGN007.Location = new System.Drawing.Point(405, 12);
+            this.txtLGN007.Location = new System.Drawing.Point(453, 12);
             this.txtLGN007.MenuManager = this.barManager1;
             this.txtLGN007.Name = "txtLGN007";
             this.txtLGN007.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -283,7 +283,7 @@
             "计件",
             "计时"});
             this.txtLGN007.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtLGN007.Size = new System.Drawing.Size(89, 26);
+            this.txtLGN007.Size = new System.Drawing.Size(134, 26);
             this.txtLGN007.StyleController = this.layoutControl1;
             this.txtLGN007.TabIndex = 9;
             this.txtLGN007.SelectedValueChanged += new System.EventHandler(this.txtLGN007_SelectedValueChanged);
@@ -312,7 +312,7 @@
             this.layoutControlItem1.Control = this.txtLGN001;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(162, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(197, 30);
             this.layoutControlItem1.Text = "单号:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(66, 14);
             // 
@@ -328,9 +328,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(486, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(579, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(654, 64);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(561, 64);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -340,7 +340,7 @@
             this.layoutControlItem2.Control = this.txtLGN002;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(162, 34);
+            this.layoutControlItem2.Size = new System.Drawing.Size(197, 34);
             this.layoutControlItem2.Text = "制单日期:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(66, 14);
             // 
@@ -349,9 +349,9 @@
             this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.txtLGN005;
-            this.layoutControlItem4.Location = new System.Drawing.Point(162, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(197, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(162, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(175, 30);
             this.layoutControlItem4.Text = "午休(小时)";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(66, 20);
             // 
@@ -360,9 +360,9 @@
             this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem5.Control = this.txtLGN006;
-            this.layoutControlItem5.Location = new System.Drawing.Point(162, 30);
+            this.layoutControlItem5.Location = new System.Drawing.Point(197, 30);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(162, 34);
+            this.layoutControlItem5.Size = new System.Drawing.Size(175, 34);
             this.layoutControlItem5.Text = "晚休(小时)";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(66, 20);
             // 
@@ -371,9 +371,9 @@
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.txtLGN007;
-            this.layoutControlItem6.Location = new System.Drawing.Point(324, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(372, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(162, 64);
+            this.layoutControlItem6.Size = new System.Drawing.Size(207, 64);
             this.layoutControlItem6.Text = "工资类型";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(66, 20);
             // 
@@ -722,25 +722,6 @@
             this.bandedGridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.bandedGridView1_RowCellStyle);
             this.bandedGridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.bandedGridView1_CellValueChanged);
             // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridBand1.AppearanceHeader.Options.UseFont = true;
-            this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridBand1.Caption = "基础信息";
-            this.gridBand1.Columns.Add(this.LGP005);
-            this.gridBand1.Columns.Add(this.LGP002);
-            this.gridBand1.Columns.Add(this.LGP003);
-            this.gridBand1.Columns.Add(this.LGP004);
-            this.gridBand1.Columns.Add(this.LGP006);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 337;
-            // 
             // LGP005
             // 
             this.LGP005.Caption = "状态";
@@ -871,25 +852,6 @@
             this.LGP006.OptionsColumn.AllowEdit = false;
             this.LGP006.Visible = true;
             // 
-            // gridBand2
-            // 
-            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridBand2.AppearanceHeader.Options.UseFont = true;
-            this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridBand2.Caption = "计时";
-            this.gridBand2.Columns.Add(this.LGP007);
-            this.gridBand2.Columns.Add(this.LGP008);
-            this.gridBand2.Columns.Add(this.LGP012);
-            this.gridBand2.Columns.Add(this.LGP014);
-            this.gridBand2.Columns.Add(this.U1);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 286;
-            // 
             // LGP007
             // 
             this.LGP007.Caption = "开工时间";
@@ -1003,23 +965,6 @@
             this.U1.Visible = true;
             this.U1.Width = 56;
             // 
-            // gridBand3
-            // 
-            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridBand3.AppearanceHeader.Options.UseFont = true;
-            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand3.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridBand3.Caption = "计件";
-            this.gridBand3.Columns.Add(this.LGP009);
-            this.gridBand3.Columns.Add(this.LGP010);
-            this.gridBand3.Columns.Add(this.LGP011);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 170;
-            // 
             // LGP009
             // 
             this.LGP009.Caption = "开工时间";
@@ -1083,22 +1028,6 @@
             this.LGP011.Visible = true;
             this.LGP011.Width = 44;
             // 
-            // gridBand4
-            // 
-            this.gridBand4.AppearanceHeader.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridBand4.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridBand4.AppearanceHeader.Options.UseFont = true;
-            this.gridBand4.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand4.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridBand4.Caption = "总计";
-            this.gridBand4.Columns.Add(this.U0);
-            this.gridBand4.Columns.Add(this.LGP013);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 218;
-            // 
             // U0
             // 
             this.U0.Caption = "总工时";
@@ -1145,6 +1074,77 @@
             this.wait.Size = new System.Drawing.Size(246, 66);
             this.wait.TabIndex = 37;
             this.wait.Text = "progressPanel1";
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gridBand1.AppearanceHeader.Options.UseFont = true;
+            this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand1.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand1.Caption = "基础信息";
+            this.gridBand1.Columns.Add(this.LGP005);
+            this.gridBand1.Columns.Add(this.LGP002);
+            this.gridBand1.Columns.Add(this.LGP003);
+            this.gridBand1.Columns.Add(this.LGP004);
+            this.gridBand1.Columns.Add(this.LGP006);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 262;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gridBand2.AppearanceHeader.Options.UseFont = true;
+            this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand2.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand2.Caption = "计时";
+            this.gridBand2.Columns.Add(this.LGP007);
+            this.gridBand2.Columns.Add(this.LGP008);
+            this.gridBand2.Columns.Add(this.LGP012);
+            this.gridBand2.Columns.Add(this.LGP014);
+            this.gridBand2.Columns.Add(this.U1);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 286;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gridBand3.AppearanceHeader.Options.UseFont = true;
+            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand3.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand3.Caption = "计件";
+            this.gridBand3.Columns.Add(this.LGP009);
+            this.gridBand3.Columns.Add(this.LGP010);
+            this.gridBand3.Columns.Add(this.LGP011);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 170;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.AppearanceHeader.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBand4.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gridBand4.AppearanceHeader.Options.UseFont = true;
+            this.gridBand4.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand4.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand4.Caption = "总计";
+            this.gridBand4.Columns.Add(this.U0);
+            this.gridBand4.Columns.Add(this.LGP013);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 313;
             // 
             // FormLogisticsNew
             // 
@@ -1275,14 +1275,14 @@
         private DevExpress . XtraEditors . Repository . RepositoryItemDateEdit Editd3;
         private DevExpress . XtraEditors . Repository . RepositoryItemDateEdit Editd4;
         private DevExpress . XtraGrid . Columns . GridColumn U4;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
         private System . Windows . Forms . ContextMenuStrip contextMenuStrip1;
         private System . Windows . Forms . ContextMenuStrip contextMenuStrip2;
         private System . Windows . Forms . ToolStripMenuItem copy;
         private System . Windows . Forms . ToolStripMenuItem copyOne;
         private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
     }
 }

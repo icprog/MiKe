@@ -20,7 +20,7 @@ namespace LineProductMes
         LineProductMesEntityu.PaintNewspaperBodyTwoEntity _bodyTwo;
         LineProductMesBll.Bll.PaintNewspaperBll _bll;
 
-        DataTable tableViewOne,tableViewTwo,tableProduct,tableWorker,tableUser,tableArt,tablePrintOne,tablePrintTwo,tableOtherSur;
+        DataTable tableViewOne,tableViewTwo,tableProduct,tableWorker,tableUser,tableArt,tablePrintOne,tablePrintTwo,tableOtherSur,tablePrintTre,tablePrintFor,tablePrintFiv;
         DataRow row;
 
         string strWhere="1=1",state=string.Empty,focuseName=string.Empty;
@@ -243,6 +243,22 @@ namespace LineProductMes
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
             return base . ExportWork ( );
+        }
+        protected override int PrintReport ( )
+        {
+            printOrExport ( );
+
+            Print ( new DataTable [ ] { tablePrintTre ,tablePrintFor ,tablePrintFiv } ,"喷漆报工单.frx" );
+
+            return base . PrintReport ( );
+        }
+        protected override int ExportReport ( )
+        {
+            printOrExport ( );
+
+            Export ( new DataTable [ ] { tablePrintTre ,tablePrintFor ,tablePrintFiv } ,"喷漆报工单.frx" );
+
+            return base . ExportReport ( );
         }
         #endregion
 
@@ -805,6 +821,38 @@ namespace LineProductMes
                 calcuTimeSum ( );
             }
         }
+        private void gridControl1_KeyPress ( object sender ,KeyPressEventArgs e )
+        {
+            if ( e . KeyChar == ( char ) Keys . Enter )
+            {
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                    return;
+                DataRow row = gridView1 . GetFocusedDataRow ( );
+                if ( row == null )
+                    return;
+                _bodyOne . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] . ToString ( ) );
+                if ( _bodyOne . idx > 0 && !idxListOne . Contains ( _bodyOne . idx . ToString ( ) ) )
+                    idxListOne . Add ( _bodyOne . idx . ToString ( ) );
+                tableViewOne . Rows . Remove ( row );
+                gridControl1 . Refresh ( );
+            }
+        }
+        private void gridControl2_KeyPress ( object sender ,KeyPressEventArgs e )
+        {
+            if ( e . KeyChar == ( char ) Keys . Enter )
+            {
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                    return;
+                DataRow row = bandedGridView1 . GetFocusedDataRow ( );
+                if ( row == null )
+                    return;
+                _bodyTwo . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] . ToString ( ) );
+                if ( _bodyOne . idx > 0 && !idxListTwo . Contains ( _bodyTwo . idx . ToString ( ) ) )
+                    idxListTwo . Add ( _bodyTwo . idx . ToString ( ) );
+                tableViewTwo . Rows . Remove ( row );
+                gridControl2 . Refresh ( );
+            }
+        }
         #endregion
 
         #region Method
@@ -1037,6 +1085,13 @@ namespace LineProductMes
 
             if ( result == false )
                 return false;
+
+            _bodyOne . PAO001 = workShopTime . checkUserForOtherWork ( txtPAN006 . Text ,tableViewTwo ,LineProductMesBll . ObtainInfo . codeNin ,txtPAN001 . Text );
+            if ( !string . IsNullOrEmpty ( _bodyOne . PAO001 ) )
+            {
+                XtraMessageBox . Show ( _bodyOne . PAO001 ,"提示" );
+                return false;
+            }
 
             _header . PAN001 = txtPAN001 . Text;
             _header . PAN002 = txtPAN003 . EditValue . ToString ( );
@@ -1369,6 +1424,15 @@ namespace LineProductMes
             tablePrintOne . TableName = "TableOne";
             tablePrintTwo = _bll . getTablePrintTwo ( txtPAN001 . Text );
             tablePrintTwo . TableName = "TableTwo";
+        }
+        void printOrExport ( )
+        {
+            tablePrintTre = _bll . getPrintTre ( txtPAN001 . Text );
+            tablePrintTre . TableName = "TableOne";
+            tablePrintFor = _bll . getPrintFor ( txtPAN001 . Text );
+            tablePrintFor . TableName = "TableTwo";
+            tablePrintFiv = _bll . getPrintFiv ( txtPAN001 . Text );
+            tablePrintFiv . TableName = "TableTre";
         }
         void addRow ( string column ,int selectIdx,object value )
         {

@@ -22,7 +22,7 @@ namespace LineProductMes
 
         Thread thread; SynchronizationContext m_SyncContext = null;
 
-        DataTable tableView,tableViewOne,tableUser,tableWorker,tableLocal,tableProduct,tablePrintOne,tablePrintTwo,tableOtherSur;
+        DataTable tableView,tableViewOne,tableUser,tableWorker,tableLocal,tableProduct,tablePrintOne,tablePrintTwo,tableOtherSur,tablePrintTre,tablePrintFor,tablePrintFiv;
 
         string state=string.Empty,strWhere="1=1",focuseName=string.Empty;
         bool result=false;
@@ -244,6 +244,22 @@ namespace LineProductMes
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
             return base . ExportWork ( );
+        }
+        protected override int PrintReport ( )
+        {
+            printOrExportOne ( );
+
+            Print ( new DataTable [ ] { tablePrintTre ,tablePrintFor ,tablePrintFiv } ,"面板报工单.frx" );
+
+            return base . PrintReport ( );
+        }
+        protected override int ExportReport ( )
+        {
+            printOrExportOne ( );
+
+            Export ( new DataTable [ ] { tablePrintTre ,tablePrintFor ,tablePrintFiv } ,"面板报工单.frx" );
+
+            return base . ExportReport ( );
         }
         #endregion
 
@@ -911,9 +927,18 @@ namespace LineProductMes
 
             if ( result == false )
                 return false;
-            
+
+            _body . LED001 = workShopTime . checkUserForOtherWork ( txtLEC013 . Text ,tableView ,LineProductMesBll . ObtainInfo . codeSev ,txtLEC001 . Text );
+            if ( !string . IsNullOrEmpty ( _body . LED001 ) )
+            {
+                XtraMessageBox . Show ( _body . LED001 ,"提示" );
+                return false;
+            }
 
             _header . LEC001 = txtLEC001 . Text;
+            _header . LEC002 = _header . LEC003 = _header . LEC004 = _header . LEC005 = _header . LEC006 = string . Empty;
+            _header . LEC007 = 0;
+            _header . LEC008 = 0M;
             _header . LEC009 = txtLEC010 . EditValue . ToString ( );
             _header . LEC010 = txtLEC010 . Text;
             _header . LEC011 = txtLEC012 . EditValue . ToString ( );
@@ -1082,6 +1107,15 @@ namespace LineProductMes
             tablePrintOne . TableName = "TableOne";
             tablePrintTwo = _bll . getTablePrintTwo ( txtLEC001 . Text );
             tablePrintTwo . TableName = "TableTwo";
+        }
+        void printOrExportOne ( )
+        {
+            tablePrintTre = _bll . getPrintTre ( txtLEC001 . Text );
+            tablePrintTre . TableName = "TableOne";
+            tablePrintFor = _bll . getPrintFor ( txtLEC001 . Text );
+            tablePrintFor . TableName = "TableTwo";
+            tablePrintFiv = _bll . getPrintFiv ( txtLEC001 . Text );
+            tablePrintFiv . TableName = "TableTre";
         }
         void calcuSalaryByPrice ( )
         {

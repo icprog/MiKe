@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLEDNewsPaper));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtLEC021 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -67,7 +69,7 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.LEE002 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -91,7 +93,7 @@
             this.LEE009 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.U6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.GridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.LED012 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -115,8 +117,6 @@
             this.LED006 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.dt2 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.LED014 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.LED007 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.cmbSalary = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.LED008 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.dt3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.LED009 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -126,6 +126,8 @@
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.U2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.LED007 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.cmbSalary = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.LED016 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.LED011 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -189,13 +191,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // splitContainerControl1
             // 
@@ -1150,7 +1164,6 @@
             this.LED004.ColumnEdit = this.EditLocal;
             this.LED004.FieldName = "LED004";
             this.LED004.Name = "LED004";
-            this.LED004.Visible = true;
             this.LED004.Width = 68;
             // 
             // EditLocal
@@ -1260,45 +1273,6 @@
             this.LED014.ToolTip = "[完工时间]-[开工时间]";
             this.LED014.Visible = true;
             this.LED014.Width = 38;
-            // 
-            // LED007
-            // 
-            this.LED007.Caption = "补贴工资";
-            this.LED007.ColumnEdit = this.cmbSalary;
-            this.LED007.DisplayFormat.FormatString = "0.###";
-            this.LED007.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.LED007.FieldName = "LED007";
-            this.LED007.Name = "LED007";
-            this.LED007.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LED007", "{0:0.##}")});
-            this.LED007.ToolTip = "配光:10元  打包:8元 质检:8元  技补:5元";
-            this.LED007.Visible = true;
-            this.LED007.Width = 61;
-            // 
-            // cmbSalary
-            // 
-            this.cmbSalary.AutoHeight = false;
-            this.cmbSalary.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSalary.Items.AddRange(new object[] {
-            "",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15"});
-            this.cmbSalary.Name = "cmbSalary";
-            this.cmbSalary.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // LED008
             // 
@@ -1428,6 +1402,45 @@
             this.U3.Visible = true;
             this.U3.Width = 51;
             // 
+            // LED007
+            // 
+            this.LED007.Caption = "补贴工资";
+            this.LED007.ColumnEdit = this.cmbSalary;
+            this.LED007.DisplayFormat.FormatString = "0.###";
+            this.LED007.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.LED007.FieldName = "LED007";
+            this.LED007.Name = "LED007";
+            this.LED007.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LED007", "{0:0.##}")});
+            this.LED007.ToolTip = "配光:10元  打包:8元 质检:8元  技补:5元";
+            this.LED007.Visible = true;
+            this.LED007.Width = 80;
+            // 
+            // cmbSalary
+            // 
+            this.cmbSalary.AutoHeight = false;
+            this.cmbSalary.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbSalary.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
+            this.cmbSalary.Name = "cmbSalary";
+            this.cmbSalary.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
             // LED016
             // 
             this.LED016.Caption = "工资";
@@ -1490,7 +1503,7 @@
             this.gridBand1.Columns.Add(this.LED013);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 313;
+            this.gridBand1.Width = 245;
             // 
             // gridBand2
             // 
@@ -1534,7 +1547,7 @@
             this.gridBand4.Columns.Add(this.LED011);
             this.gridBand4.Name = "gridBand4";
             this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 251;
+            this.gridBand4.Width = 330;
             // 
             // FormLEDNewsPaper
             // 
@@ -1602,12 +1615,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

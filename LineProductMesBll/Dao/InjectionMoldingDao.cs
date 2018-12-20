@@ -964,7 +964,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintTwo ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT DISTINCT IJB004 ANW002,IJB005 ANW003,IJB006 ANW004,IJB007 ANW005,IJB008 ANW007,IJB010 ANW006,IJB015 ANW009,DDA003 DEA008 FROM MIKIJB A LEFT JOIN TPADEA B ON A.IJB005=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001 WHERE IJB001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT IJB004 ANW002,IJB005 ANW003,IJB006 ANW004,IJB007 ANW005,IJB008 ANW007,IJB010 ANW006,SUM(IJB015) ANW009,DDA003 DEA008 FROM MIKIJB A LEFT JOIN TPADEA B ON A.IJB005=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001  WHERE IJB001='{0}' GROUP BY IJB004,IJB005,IJB006,IJB007,IJB008,IJB010,DDA003" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -1008,6 +1008,58 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT IJC002,IJC003,IJC008-SUM(IJC010) IJC010 FROM MIKIJC WHERE IJC001!='{0}' AND IJC002='{1}' AND IJC003='{2}' GROUP BY IJC002,IJC003,IJC008" ,oddNum ,orderNum ,proNum  );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT IJA001,IJA002,IJA004,IJA006,IJA007,IJA008,IJA012,IJA013 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单  计件
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFor ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT IJB002,IJB003,IJB004,IJB005,IJB006,IJB007,IJB008,CONVERT(FLOAT,IJB009) IJB009,IJB010,CONVERT(FLOAT,IJB011) IJB011,IJB012,IJB013,IJB014,IJB015,DATENAME(HOUR,IJB016)+':'+DATENAME(MINUTE,IJB016) IJB016,DATENAME(HOUR,IJB017)+':'+DATENAME(MINUTE,IJB017) IJB017,DATENAME(HOUR,IJB018)+':'+DATENAME(MINUTE,IJB018) IJB018,DATENAME(HOUR,IJB019)+':'+DATENAME(MINUTE,IJB019) IJB019,CONVERT(FLOAT,IJB020) IJB020,IJB021,IJB022,CONVERT(FLOAT,IJB023) IJB023,CONVERT(FLOAT,IJB024) IJB024,CONVERT(FLOAT,IJB025) IJB025,CONVERT(FLOAT,IJB011*IJB015) U1,CONVERT(FLOAT,IJB023*IJB020) U3 FROM MIKIJB WHERE IJB001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单  计时
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFiv ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT IJC001,IJC002,IJC003,IJC004,IJC005,IJC006,CONVERT(FLOAT,IJC007) IJC007,CONVERT(FLOAT,IJC008) IJC008,CONVERT(FLOAT,IJC009) IJC009,IJC010,IJC011 FROM MIKIJC WHERE IJC001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单  计时
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintSix ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT IJD002,IJD003,IJD005,DATENAME(HOUR,IJD006)+':'+DATENAME(MINUTE,IJD006) IJD006,DATENAME(HOUR,IJD007)+':'+DATENAME(MINUTE,IJD007) IJD007,CONVERT(FLOAT,IJD008) IJD008,IJD009,IJD010,IJD011,CONVERT(FLOAT,IJD012) IJD012,CONVERT(FLOAT,IJD013) IJD013 FROM  MIKIJD WHERE IJD001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAssNewWorkEnclosure));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtANT011 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -64,7 +66,7 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ANU003 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -108,10 +110,9 @@
             this.DAA001 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DAA002 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyTwo = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.ANV007 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.cmb = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ANV002 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -125,7 +126,6 @@
             this.ANV003 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.ANV004 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.ANV008 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridColumn9 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.ANV005 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Edit5 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
@@ -135,18 +135,20 @@
             this.ANV016 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.U0 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.ANV013 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Edit9 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.ANV014 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Edit10 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.ANV015 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.U2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.ANV010 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.ANV011 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -208,6 +210,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.Edit10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Edit10.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // splitContainerControl1
             // 
@@ -658,9 +672,9 @@
             // 
             this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
@@ -1217,32 +1231,14 @@
             this.bandedGridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.bandedGridView1_RowCellStyle);
             this.bandedGridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.bandedGridView1_CellValueChanged);
             // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridBand1.AppearanceHeader.Options.UseFont = true;
-            this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "基础信息";
-            this.gridBand1.Columns.Add(this.ANV007);
-            this.gridBand1.Columns.Add(this.ANV002);
-            this.gridBand1.Columns.Add(this.ANV003);
-            this.gridBand1.Columns.Add(this.ANV004);
-            this.gridBand1.Columns.Add(this.ANV008);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 378;
-            // 
             // ANV007
             // 
-            this.ANV007.Caption = "工作状态";
+            this.ANV007.Caption = "状态";
             this.ANV007.ColumnEdit = this.cmb;
             this.ANV007.FieldName = "ANV007";
             this.ANV007.Name = "ANV007";
             this.ANV007.Visible = true;
-            this.ANV007.Width = 63;
+            this.ANV007.Width = 40;
             // 
             // cmb
             // 
@@ -1367,25 +1363,6 @@
             this.ANV008.Visible = true;
             this.ANV008.Width = 76;
             // 
-            // gridBand2
-            // 
-            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridBand2.AppearanceHeader.Options.UseFont = true;
-            this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "计时";
-            this.gridBand2.Columns.Add(this.gridColumn9);
-            this.gridBand2.Columns.Add(this.ANV005);
-            this.gridBand2.Columns.Add(this.ANV006);
-            this.gridBand2.Columns.Add(this.ANV009);
-            this.gridBand2.Columns.Add(this.ANV016);
-            this.gridBand2.Columns.Add(this.U0);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 336;
-            // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "编号";
@@ -1506,22 +1483,6 @@
             this.U0.Visible = true;
             this.U0.Width = 58;
             // 
-            // gridBand3
-            // 
-            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridBand3.AppearanceHeader.Options.UseFont = true;
-            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand3.Caption = "计件";
-            this.gridBand3.Columns.Add(this.ANV013);
-            this.gridBand3.Columns.Add(this.ANV014);
-            this.gridBand3.Columns.Add(this.ANV015);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 170;
-            // 
             // ANV013
             // 
             this.ANV013.Caption = "开工时间";
@@ -1585,15 +1546,6 @@
             this.ANV015.Visible = true;
             this.ANV015.Width = 42;
             // 
-            // gridBand4
-            // 
-            this.gridBand4.Columns.Add(this.U2);
-            this.gridBand4.Columns.Add(this.ANV010);
-            this.gridBand4.Columns.Add(this.ANV011);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 175;
-            // 
             // U2
             // 
             this.U2.Caption = "总工时";
@@ -1649,6 +1601,68 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gridBand1.AppearanceHeader.Options.UseFont = true;
+            this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand1.Caption = "基础信息";
+            this.gridBand1.Columns.Add(this.ANV007);
+            this.gridBand1.Columns.Add(this.ANV002);
+            this.gridBand1.Columns.Add(this.ANV003);
+            this.gridBand1.Columns.Add(this.ANV004);
+            this.gridBand1.Columns.Add(this.ANV008);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 280;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gridBand2.AppearanceHeader.Options.UseFont = true;
+            this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand2.Caption = "计时";
+            this.gridBand2.Columns.Add(this.gridColumn9);
+            this.gridBand2.Columns.Add(this.ANV005);
+            this.gridBand2.Columns.Add(this.ANV006);
+            this.gridBand2.Columns.Add(this.ANV009);
+            this.gridBand2.Columns.Add(this.ANV016);
+            this.gridBand2.Columns.Add(this.U0);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 336;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gridBand3.AppearanceHeader.Options.UseFont = true;
+            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand3.Caption = "计件";
+            this.gridBand3.Columns.Add(this.ANV013);
+            this.gridBand3.Columns.Add(this.ANV014);
+            this.gridBand3.Columns.Add(this.ANV015);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 170;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Columns.Add(this.U2);
+            this.gridBand4.Columns.Add(this.ANV010);
+            this.gridBand4.Columns.Add(this.ANV011);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 243;
             // 
             // FormAssNewWorkEnclosure
             // 
@@ -1840,12 +1854,12 @@
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn ANV015;
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U2;
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U0;
+        private DevExpress . XtraEditors . Repository . RepositoryItemDateEdit Edit9;
+        private DevExpress . XtraEditors . Repository . RepositoryItemDateEdit Edit10;
+        private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
-        private DevExpress . XtraEditors . Repository . RepositoryItemDateEdit Edit9;
-        private DevExpress . XtraEditors . Repository . RepositoryItemDateEdit Edit10;
-        private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox1;
     }
 }

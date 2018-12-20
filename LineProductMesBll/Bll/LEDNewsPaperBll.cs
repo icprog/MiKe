@@ -199,5 +199,35 @@ namespace LineProductMesBll . Bll
             return dal . getTableOtherSur ( orderNum ,proNum ,oddNum );
         }
 
+        /// <summary>
+        /// 获取打印列表 报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintTre ( string oddNum )
+        {
+            return dal . getPrintTre ( oddNum );
+        }
+
+        /// <summary>
+        /// 获取打印列表 报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFor ( string oddNum )
+        {
+            return dal . getPrintFor ( oddNum );
+        }
+
+        /// <summary>
+        /// 获取打印列表 报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFiv ( string oddNum )
+        {
+            return dal . getPrintFiv ( oddNum );
+        }
+
     }
 }

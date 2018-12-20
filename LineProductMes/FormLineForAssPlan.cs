@@ -8,6 +8,8 @@ using System;
 using DevExpress . XtraEditors;
 using System . Linq;
 using System . ComponentModel;
+using System . Collections . Generic;
+using LineProductMes . ChildForm;
 
 namespace LineProductMes
 {
@@ -15,12 +17,14 @@ namespace LineProductMes
     {
         LineProductMesBll.Bll.LineForAssPlanBll _bll=null;
         LineProductMesEntityu.LineForAssPlanEntity model=null;
-        DataTable tableView,table;
+        DataTable tableView,table,tableCheck,tableViewClone;
 
         DateTime dtStart,dtEnd;
-        string productName=string.Empty,focusedName=string.Empty;
-        
-        public FormLineForAssPlan ( string productName )
+        string focusedName=string.Empty;
+
+        Dictionary<string ,string> strDic = new Dictionary<string ,string> ( );
+
+        public FormLineForAssPlan ( Dictionary<string ,string> strDic )
         {
             InitializeComponent ( );
 
@@ -34,7 +38,7 @@ namespace LineProductMes
 
             ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolExport ,toolPrint ,toolCancellation ,toolExamin ,toolDelete ,toolEdit ,toolAdd  } );
 
-            this . productName = productName;
+            this . strDic = strDic;
         }
         
         private void FormLineForAssPlan_Load ( object sender ,EventArgs e )
@@ -45,6 +49,18 @@ namespace LineProductMes
             dtEn . Text = dtEnd . ToString ( "yyyy-MM-dd" );
             InitData ( );
             toolSave . Visibility = toolCanecl . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
+
+            tableCheck = new DataTable ( );
+            tableCheck . Columns . Add ( "F1" ,typeof ( System . String ) );
+            tableCheck . Columns . Add ( "F2" ,typeof ( System . String ) );
+            tableCheck . Columns . Add ( "F3" ,typeof ( System . Boolean ) );
+            tableCheck . Columns . Add ( "F4" ,typeof ( System . Boolean ) );
+            tableCheck . Columns . Add ( "F5" ,typeof ( System . Boolean ) );
+            tableCheck . Columns . Add ( "F6" ,typeof ( System . Boolean ) );
+            tableCheck . Columns . Add ( "F7" ,typeof ( System . Boolean ) );
+            tableCheck . Columns . Add ( "F8" ,typeof ( System . Boolean ) );
+            tableCheck . Columns . Add ( "F9" ,typeof ( System . Boolean ) );
+            tableCheck . Columns . Add ( "F10" ,typeof ( System . Boolean ) );
         }
         
         protected override int Query ( )
@@ -53,7 +69,7 @@ namespace LineProductMes
                 dtStart = Convert . ToDateTime ( dtSt . Text );
             if ( !string . IsNullOrEmpty ( dtEn . Text ) )
                 dtEnd = Convert . ToDateTime ( dtEn . Text );
-            productName = string . Empty;
+            //productName = string . Empty;
 
             InitData ( );
 
@@ -101,7 +117,7 @@ namespace LineProductMes
 
         void InitData ( )
         {
-            tableView = _bll . getTableView ( dtStart ,dtEnd ,productName );
+            tableView = _bll . getTableView ( dtStart ,dtEnd ,strDic );
             if ( tableView != null && tableView . Rows . Count > 0 )
             {
                 foreach ( DataColumn column in tableView . Columns )
@@ -115,6 +131,8 @@ namespace LineProductMes
             }
             gridControl1 . DataSource = tableView;
             gridView1 . PopulateColumns ( );
+
+            tableViewClone = tableView . Copy ( );
             
             column ( );
         }
@@ -167,6 +185,86 @@ namespace LineProductMes
                     model . PRG001 = table . Select ( "PRG001='" + model . PRG001 + "' AND PRG002='" + column . FieldName + "'" ) [ 0 ] [ "PRG006" ] . ToString ( );
                     e . Info . DisplayText = model . PRG001;
                 }
+            }
+        }
+        
+        /// <summary>
+        /// 选择产线
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCheckLine_Click ( object sender ,EventArgs e )
+        {
+            if ( tableCheck . Rows . Count < 1 )
+            {
+                foreach ( string str in strDic . Keys )
+                {
+                    DataRow row = tableCheck . NewRow ( );
+                    row [ "F1" ] = str;
+                    row [ "F2" ] = strDic [ str ];
+                    row [ "F3" ] = false;
+                    row [ "F4" ] = false;
+                    row [ "F5" ] = false;
+                    row [ "F6" ] = false;
+                    row [ "F7" ] = false;
+                    row [ "F8" ] = false;
+                    row [ "F9" ] = false;
+                    row [ "F10" ] = false;
+                    tableCheck . Rows . Add ( row );
+                }
+            }
+            if ( tableCheck == null || tableCheck . Rows . Count < 1 )
+            {
+                XtraMessageBox . Show ( "请查询需要排产的产品信息" );
+                return;
+            }
+            FormCheckLine from = new FormCheckLine ( tableCheck );
+            if ( from . ShowDialog ( ) == DialogResult . OK )
+            {
+                tableCheck = from . getTable;
+                if ( tableCheck == null )
+                    return;
+                string productNum = string . Empty, line = string . Empty;
+                foreach ( DataRow row in tableCheck . Rows )
+                {
+                    productNum = row [ "F1" ] . ToString ( );
+                    DataRow ro, roNew;
+                    DataRow [ ] rows;
+
+                    for ( int i = 3 ; i < 11 ; i++ )
+                    {
+                        line = row [ "F" + i . ToString ( ) ] . ToString ( );
+                        if ( Convert . ToBoolean ( line ) == false )
+                        {
+                            line = ( i - 2 ) . ToString ( ) + "线";
+                            rows = tableView . Select ( "主件品号='" + productNum + "' AND 产线='" + line + "'" );
+                            if ( rows . Length > 0 )
+                            {
+                                ro = rows [ 0 ];
+                                tableView . Rows . Remove ( ro );
+                            }
+                        }
+                        else 
+                        {
+                            line = ( i - 2 ) . ToString ( ) + "线";
+                            rows = tableView . Select ( "主件品号='" + productNum + "' AND 产线='" + line + "'" );
+                            if ( rows . Length < 1 )
+                            {
+                                rows = tableViewClone . Select ( "主件品号='" + productNum + "' AND 产线='" + line + "'" );
+                                if ( rows . Length > 0 )
+                                {
+                                    ro = rows [ 0 ];
+                                    roNew = tableView . NewRow ( );
+                                    roNew . ItemArray = ro . ItemArray;
+                                    tableView . Rows . Add ( roNew );
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+
+                gridControl1 . DataSource = tableView;
             }
         }
 

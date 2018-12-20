@@ -22,7 +22,7 @@ namespace LineProductMes
         LineProductMesEntityu.InjectionMoldingBodyTwoEntity _bodyTwo=null;
         LineProductMesEntityu.InjectionMoldingBodyTreEntity _bodyTre=null;
 
-        DataTable tableViewOne,tableViewTwo,tableViewTre,tableProduce,tableUser,tableProduct,tablePer,tablePrintOne,tablePrintTwo,tableOtherSur;
+        DataTable tableViewOne,tableViewTwo,tableViewTre,tableProduce,tableUser,tableProduct,tablePer,tablePrintOne,tablePrintTwo,tableOtherSur,tablePrintTre,tablePrintFor,tablePrintFiv,tablrPrintSix;
         List<string> idxOne=new List<string>();
         List<string> idxTwo=new List<string>();
         List<string> idxTre=new List<string>();
@@ -264,6 +264,35 @@ namespace LineProductMes
             Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo } ,"入库单.frx" );
 
             return base . ExportWork ( );
+        }
+        protected override int PrintReport ( )
+        {
+            if ( txtIJA002 . Text . Equals ( "计件" ) )
+            {
+                printOrExportOne ( );
+                Print ( new DataTable [ ] { tablePrintTre ,tablePrintFor } ,"注塑计件报工单.frx" );
+            }else if ( txtIJA002 . Text . Equals ( "计时" ) )
+            {
+                printOrExportTwo ( );
+                Print ( new DataTable [ ] { tablePrintTre ,tablePrintFiv,tablrPrintSix } ,"注塑计时报工单.frx" );
+            }
+
+            return base . PrintReport ( );
+        }
+        protected override int ExportReport ( )
+        {
+            if ( txtIJA002 . Text . Equals ( "计件" ) )
+            {
+                printOrExportOne ( );
+                Export ( new DataTable [ ] { tablePrintTre ,tablePrintFor } ,"注塑计件报工单.frx" );
+            }
+            else if ( txtIJA002 . Text . Equals ( "计时" ) )
+            {
+                printOrExportTwo ( );
+                Export ( new DataTable [ ] { tablePrintTre ,tablePrintFiv ,tablrPrintSix } ,"注塑计时报工单.frx" );
+            }
+
+            return base . ExportReport ( );
         }
         #endregion
 
@@ -1004,26 +1033,26 @@ namespace LineProductMes
                 if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
                     return false;
 
-                var qu = from p in tableViewOne . AsEnumerable ( )
-                         group p by new
-                         {
-                             p1 = p . Field<string> ( "IJB004" ) ,
-                             p2 = p . Field<string> ( "IJB005" )
-                         } into m
-                         select new
-                         {
-                             p1 = m . Key . p1 ,
-                             p2 = m . Key . p2 ,
-                             count = m . Count ( )
-                         };
-                if ( qu != null )
-                {
-                    if ( qu . ToArray ( ) . Length > 1 )
-                    {
-                        XtraMessageBox . Show ( "每次只能报工一个来源工单的品号" ,"提示" );
-                        return false;
-                    }
-                }
+                //var qu = from p in tableViewOne . AsEnumerable ( )
+                //         group p by new
+                //         {
+                //             p1 = p . Field<string> ( "IJB004" ) ,
+                //             p2 = p . Field<string> ( "IJB005" )
+                //         } into m
+                //         select new
+                //         {
+                //             p1 = m . Key . p1 ,
+                //             p2 = m . Key . p2 ,
+                //             count = m . Count ( )
+                //         };
+                //if ( qu != null )
+                //{
+                //    if ( qu . ToArray ( ) . Length > 1 )
+                //    {
+                //        XtraMessageBox . Show ( "每次只能报工一个来源工单的品号" ,"提示" );
+                //        return false;
+                //    }
+                //}
 
 
                 bandedGridView1 . ClearColumnErrors ( );
@@ -1065,30 +1094,30 @@ namespace LineProductMes
                 if ( result == false )
                     return false;
 
-                var query = from p in tableViewOne . AsEnumerable ( )
-                            group p by new
-                            {
-                                p1 = p . Field<string> ( "IJB002" )
-                            } into m
-                            select new
-                            {
-                                ijb002 = m . Key . p1 ,
-                                count = m . Count ( )
-                            };
-                if ( query != null )
-                {
-                    foreach ( var x in query )
-                    {
-                        if ( x . count > 1 )
-                        {
-                            XtraMessageBox . Show ( "工号:" + x . ijb002 + "重复,请核实" );
-                            result = false;
-                            break;
-                        }
-                    }
-                }
-                if ( result == false )
-                    return false;
+                //var query = from p in tableViewOne . AsEnumerable ( )
+                //            group p by new
+                //            {
+                //                p1 = p . Field<string> ( "IJB002" )
+                //            } into m
+                //            select new
+                //            {
+                //                ijb002 = m . Key . p1 ,
+                //                count = m . Count ( )
+                //            };
+                //if ( query != null )
+                //{
+                //    foreach ( var x in query )
+                //    {
+                //        if ( x . count > 1 )
+                //        {
+                //            XtraMessageBox . Show ( "工号:" + x . ijb002 + "重复,请核实" );
+                //            result = false;
+                //            break;
+                //        }
+                //    }
+                ////}
+                //if ( result == false )
+                //    return false;
 
                 var que = from p in tableViewOne . AsEnumerable ( )
                           group p by new
@@ -1258,6 +1287,17 @@ namespace LineProductMes
                 }
             }
 
+            if ( "计件" . Equals ( txtIJA002 . Text ) )
+                _bodyOne . IJB001 = workShopTime . checkUserForOtherWork ( txtIJA007 . Text ,tableViewOne ,LineProductMesBll . ObtainInfo . codeFor ,txtIJA001 . Text );
+            else
+                _bodyOne . IJB001 = workShopTime . checkUserForOtherWork ( txtIJA007 . Text ,tableViewTre ,LineProductMesBll . ObtainInfo . codeFiv ,txtIJA001 . Text );
+
+            if ( !string . IsNullOrEmpty ( _bodyOne . IJB001 ) )
+            {
+                XtraMessageBox . Show ( _bodyOne . IJB001 ,"提示" );
+                return false;
+            }
+
             _header . IJA001 = txtIJA001 . Text;
             _header . IJA002 = txtIJA002 . Text;
             _header . IJA003 = txtIJA004 . EditValue . ToString ( );
@@ -1282,6 +1322,22 @@ namespace LineProductMes
             else
                 tablePrintTwo = _bll . getTablePrintTre ( txtIJA001 . Text );
             tablePrintTwo . TableName = "TableTwo";
+        }
+        void printOrExportOne ( )
+        {
+            tablePrintTre = _bll . getPrintTre ( txtIJA001 . Text );
+            tablePrintTre . TableName = "TableOne";
+            tablePrintFor = _bll . getPrintFor ( txtIJA001 . Text );
+            tablePrintFor . TableName = "TableTwo";
+        }
+        void printOrExportTwo ( )
+        {
+            tablePrintTre = _bll . getPrintTre ( txtIJA001 . Text );
+            tablePrintTre . TableName = "TableOne";
+            tablePrintFiv = _bll . getPrintFiv ( txtIJA001 . Text );
+            tablePrintFiv . TableName = "TableTwo";
+            tablrPrintSix = _bll . getPrintSix ( txtIJA001 . Text );
+            tablrPrintSix . TableName = "TableTre";
         }
         void calcuSumTime ( )
         {

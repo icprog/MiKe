@@ -14,7 +14,7 @@ namespace LineProductMesBll . Dao
         /// </summary>
         /// <param name="piNum"></param>
         /// <returns></returns>
-        public DataTable getTableView ( DateTime dtStart,DateTime dtEnd ,string productName )
+        public DataTable getTableView ( DateTime dtStart,DateTime dtEnd ,Dictionary<string ,string> strDic )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT PRF001,PRF002,PRF003 FROM MIKPRF "  );
@@ -55,6 +55,15 @@ namespace LineProductMesBll . Dao
                             Edit ( SQLString ,model );
                     }
                 }
+            }
+
+            string productName = string . Empty;
+            foreach ( string str in strDic . Keys )
+            {
+                if ( string . IsNullOrEmpty ( productName ) )
+                    productName = "'" + str + "'";
+                else
+                    productName = productName + "," + "'" + str + "'";
             }
 
             if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )

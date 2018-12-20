@@ -409,3 +409,4 @@ D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\es\DevExpress.XtraBa
 D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormBatOpera.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormCheckLine.resources

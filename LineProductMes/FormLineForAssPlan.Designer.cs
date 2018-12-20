@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLineForAssPlan));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -38,6 +39,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dtSt = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnCheckLine = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -69,7 +71,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1248, 350);
+            this.gridControl1.Size = new System.Drawing.Size(1248, 359);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -110,8 +112,9 @@
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 26);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 24);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnCheckLine);
             this.splitContainerControl1.Panel1.Controls.Add(this.dtEn);
             this.splitContainerControl1.Panel1.Controls.Add(this.labelControl2);
             this.splitContainerControl1.Panel1.Controls.Add(this.dtSt);
@@ -119,7 +122,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1248, 406);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1248, 408);
             this.splitContainerControl1.SplitterPosition = 44;
             this.splitContainerControl1.TabIndex = 5;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -180,6 +183,17 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "开始日期:";
             // 
+            // btnCheckLine
+            // 
+            this.btnCheckLine.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckLine.Appearance.Options.UseFont = true;
+            this.btnCheckLine.Location = new System.Drawing.Point(491, 10);
+            this.btnCheckLine.Name = "btnCheckLine";
+            this.btnCheckLine.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckLine.TabIndex = 11;
+            this.btnCheckLine.Text = "产线选择";
+            this.btnCheckLine.Click += new System.EventHandler(this.btnCheckLine_Click);
+            // 
             // FormLineForAssPlan
             // 
             this.Appearance.Options.UseFont = true;
@@ -216,5 +230,6 @@
         private DevExpress . XtraEditors . LabelControl labelControl1;
         private System . Windows . Forms . ContextMenuStrip contextMenuStrip1;
         private System . Windows . Forms . ToolStripMenuItem copy;
+        private DevExpress . XtraEditors . SimpleButton btnCheckLine;
     }
 }

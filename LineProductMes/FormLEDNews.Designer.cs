@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLEGNews));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -69,7 +71,7 @@
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.LEH002 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -94,7 +96,7 @@
             this.U5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LEH010 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.GridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.LEG012 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -118,8 +120,6 @@
             this.LEG006 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.dt2 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.LEG014 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.LEG007 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.cmbSalary = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.LEG008 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.dt3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.LEG009 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -129,6 +129,8 @@
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.U2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.LEG007 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.cmbSalary = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.LEG016 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.LEG011 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -191,13 +193,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // splitContainerControl1
             // 
@@ -1188,7 +1202,6 @@
             this.LEG004.ColumnEdit = this.EditLocal;
             this.LEG004.FieldName = "LEG004";
             this.LEG004.Name = "LEG004";
-            this.LEG004.Visible = true;
             this.LEG004.Width = 68;
             // 
             // EditLocal
@@ -1298,45 +1311,6 @@
             this.LEG014.ToolTip = "[完工时间]-[开工时间]";
             this.LEG014.Visible = true;
             this.LEG014.Width = 38;
-            // 
-            // LEG007
-            // 
-            this.LEG007.Caption = "补贴工资";
-            this.LEG007.ColumnEdit = this.cmbSalary;
-            this.LEG007.DisplayFormat.FormatString = "0.###";
-            this.LEG007.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.LEG007.FieldName = "LEG007";
-            this.LEG007.Name = "LEG007";
-            this.LEG007.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LEG007", "{0:0.##}")});
-            this.LEG007.ToolTip = "配光:10元  打包:8元 质检:8元  技补:5元";
-            this.LEG007.Visible = true;
-            this.LEG007.Width = 60;
-            // 
-            // cmbSalary
-            // 
-            this.cmbSalary.AutoHeight = false;
-            this.cmbSalary.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSalary.Items.AddRange(new object[] {
-            "",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15"});
-            this.cmbSalary.Name = "cmbSalary";
-            this.cmbSalary.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // LEG008
             // 
@@ -1467,7 +1441,46 @@
     "15])";
             this.U3.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U3.Visible = true;
-            this.U3.Width = 57;
+            this.U3.Width = 68;
+            // 
+            // LEG007
+            // 
+            this.LEG007.Caption = "补贴工资";
+            this.LEG007.ColumnEdit = this.cmbSalary;
+            this.LEG007.DisplayFormat.FormatString = "0.###";
+            this.LEG007.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.LEG007.FieldName = "LEG007";
+            this.LEG007.Name = "LEG007";
+            this.LEG007.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LEG007", "{0:0.##}")});
+            this.LEG007.ToolTip = "配光:10元  打包:8元 质检:8元  技补:5元";
+            this.LEG007.Visible = true;
+            this.LEG007.Width = 72;
+            // 
+            // cmbSalary
+            // 
+            this.cmbSalary.AutoHeight = false;
+            this.cmbSalary.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbSalary.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
+            this.cmbSalary.Name = "cmbSalary";
+            this.cmbSalary.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // LEG016
             // 
@@ -1480,7 +1493,7 @@
             this.LEG016.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LEG016", "{0:0.##}")});
             this.LEG016.Visible = true;
-            this.LEG016.Width = 60;
+            this.LEG016.Width = 72;
             // 
             // LEG011
             // 
@@ -1488,7 +1501,7 @@
             this.LEG011.FieldName = "LEG011";
             this.LEG011.Name = "LEG011";
             this.LEG011.Visible = true;
-            this.LEG011.Width = 90;
+            this.LEG011.Width = 110;
             // 
             // idx
             // 
@@ -1517,7 +1530,7 @@
             this.gridBand1.Columns.Add(this.LEG013);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 312;
+            this.gridBand1.Width = 244;
             // 
             // gridBand2
             // 
@@ -1561,7 +1574,7 @@
             this.gridBand4.Columns.Add(this.LEG011);
             this.gridBand4.Name = "gridBand4";
             this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 267;
+            this.gridBand4.Width = 322;
             // 
             // FormLEGNews
             // 
@@ -1627,12 +1640,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

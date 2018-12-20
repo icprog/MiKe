@@ -183,6 +183,12 @@
     <Compile Include="ChildForm\FormBatOpera.Designer.cs">
       <DependentUpon>FormBatOpera.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForm\FormCheckLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormCheckLine.Designer.cs">
+      <DependentUpon>FormCheckLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForm\FormDepartQueryOfPerson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -555,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormBatOpera.resx">
       <DependentUpon>FormBatOpera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormCheckLine.resx">
+      <DependentUpon>FormCheckLine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormDepartQueryOfPerson.resx">
       <DependentUpon>FormDepartQueryOfPerson.cs</DependentUpon>

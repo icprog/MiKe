@@ -16,7 +16,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePInfo ( )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT RAA001,RAA015,DEA002,CONVERT(FLOAT,RAA018) RAA018,RAA008,ART003,ART004 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 INNER JOIN MIKART C ON A.RAA015=C.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0507' AND RAA020='N' AND ART003='附件'  AND RAA024='T'" );
+            strSql . Append ( "SELECT RAA001,RAA015,DEA002,CONVERT(FLOAT,RAA018) RAA018,RAA008,ART003,ART004 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 INNER JOIN MIKART C ON A.RAA015=C.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0507' AND RAA020='N' AND ART003 LIKE '附件%'  AND RAA024='T'" );
             
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -739,6 +739,45 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT ANU003,ANU004,ANU011-SUM(ANU010) ANU FROM MIKANU WHERE ANU001!='{0}' AND ANU003='{1}' AND ANU004='{2}' GROUP BY ANU003,ANU004,ANU011" ,oddNum ,orderNum ,proNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getTablePrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "select ANT001,ANT003,ANT005,ANT008,ANT009,CONVERT(FLOAT,ANT010) ANT010,ANT011,ANT012,CONVERT(FLOAT,SUM(ANU007*ANU010)) CZ,CONVERT(FLOAT,SUM(ANU010)) SL,CONVERT(FLOAT,SUM(ANV009+ANV015)) GS from MIKANT A INNER JOIN MIKANU B ON A.ANT001=B.ANU001 INNER JOIN MIKANV C ON A.ANT001=C.ANV001 WHERE ANT001='{0}' GROUP BY ANT001,ANT003,ANT005,ANT006,ANT007,ANT008,ANT009,ANT010,ANT011,ANT012" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getTablePrintFor ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT ANU001,ANU002,ANU003,ANU004,ANU005,ANU006,convert(float,ANU007) ANU007,ANU008,ANU009,ANU010,ANU011,ANU012,CONVERT(FLOAT,ANU007*ANU010) U3 FROM MIKANU WHERE ANU001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getTablePrintFiv ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT ANV002,ANV003,ANV004,ISNULL(SUBSTRING(CONVERT(varchar(100),ANV005, 22),10,5),'') ANV005,ISNULL(SUBSTRING(CONVERT(varchar(100),ANV006, 22),10,5),'') ANV006,ANV007,ANV008,CONVERT(FLOAT,ANV009) ANV009,CONVERT(FLOAT,ANV010) ANV010,ANV011,ANV012,ISNULL(SUBSTRING(CONVERT(varchar(100),ANV013, 22),10,5),'') ANV013,ISNULL(SUBSTRING(CONVERT(varchar(100),ANV014, 22),10,5),'') ANV014,CONVERT(FLOAT,ANV015) ANV015,CONVERT(FLOAT,ANV016) ANV016,CONVERT(FLOAT,ANV009*ANV016) U0,CONVERT(FLOAT,ANV009+ANV015) U2 FROM MIKANV WHERE ANV001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

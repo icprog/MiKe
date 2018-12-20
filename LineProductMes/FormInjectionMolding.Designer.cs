@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInjectionMolding));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtIJA001 = new DevExpress.XtraEditors.TextEdit();
@@ -58,7 +60,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.PageOne = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -195,12 +197,12 @@
             this.dt6 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.IJD012 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.IJD008 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.IJD013 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.IJD009 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -267,6 +269,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt6.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolExport
+            // 
+            this.toolExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.Image")));
+            this.toolExport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolExport.ImageOptions.LargeImage")));
+            this.toolExport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // toolPrint
+            // 
+            this.toolPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.Image")));
+            this.toolPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("toolPrint.ImageOptions.LargeImage")));
+            this.toolPrint.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // splitContainerControl1
             // 
@@ -771,7 +785,7 @@
             this.gridBand1.Columns.Add(this.IJB015);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 1023;
+            this.gridBand1.Width = 948;
             // 
             // IJB003
             // 
@@ -1080,7 +1094,6 @@
             this.IJB013.FieldName = "IJB013";
             this.IJB013.Name = "IJB013";
             this.IJB013.OptionsColumn.AllowEdit = false;
-            this.IJB013.Visible = true;
             // 
             // IJB022
             // 
@@ -2084,8 +2097,6 @@
             this.IJD004.FieldName = "IJD004";
             this.IJD004.Name = "IJD004";
             this.IJD004.OptionsColumn.AllowEdit = false;
-            this.IJD004.Visible = true;
-            this.IJD004.VisibleIndex = 3;
             // 
             // IJD011
             // 
@@ -2094,7 +2105,7 @@
             this.IJD011.Name = "IJD011";
             this.IJD011.OptionsColumn.AllowEdit = false;
             this.IJD011.Visible = true;
-            this.IJD011.VisibleIndex = 4;
+            this.IJD011.VisibleIndex = 3;
             // 
             // IJD005
             // 
@@ -2103,7 +2114,7 @@
             this.IJD005.FieldName = "IJD005";
             this.IJD005.Name = "IJD005";
             this.IJD005.Visible = true;
-            this.IJD005.VisibleIndex = 5;
+            this.IJD005.VisibleIndex = 4;
             // 
             // cmbMo
             // 
@@ -2123,7 +2134,7 @@
             this.IJD006.FieldName = "IJD006";
             this.IJD006.Name = "IJD006";
             this.IJD006.Visible = true;
-            this.IJD006.VisibleIndex = 6;
+            this.IJD006.VisibleIndex = 5;
             // 
             // dt5
             // 
@@ -2146,7 +2157,7 @@
             this.IJD007.FieldName = "IJD007";
             this.IJD007.Name = "IJD007";
             this.IJD007.Visible = true;
-            this.IJD007.VisibleIndex = 7;
+            this.IJD007.VisibleIndex = 6;
             // 
             // dt6
             // 
@@ -2174,7 +2185,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "IJD012", "{0:0.#}")});
             this.IJD012.ToolTip = "[开工时间]-[完工时间]";
             this.IJD012.Visible = true;
-            this.IJD012.VisibleIndex = 8;
+            this.IJD012.VisibleIndex = 7;
             // 
             // IJD008
             // 
@@ -2185,7 +2196,30 @@
             this.IJD008.FieldName = "IJD008";
             this.IJD008.Name = "IJD008";
             this.IJD008.Visible = true;
-            this.IJD008.VisibleIndex = 9;
+            this.IJD008.VisibleIndex = 8;
+            // 
+            // repositoryItemComboBox2
+            // 
+            this.repositoryItemComboBox2.AutoHeight = false;
+            this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox2.Items.AddRange(new object[] {
+            "",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"});
+            this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
+            this.repositoryItemComboBox2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // IJD013
             // 
@@ -2201,7 +2235,7 @@
             this.IJD013.UnboundExpression = "[IJD012] * [IJD008]";
             this.IJD013.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.IJD013.Visible = true;
-            this.IJD013.VisibleIndex = 10;
+            this.IJD013.VisibleIndex = 9;
             // 
             // IJD009
             // 
@@ -2209,7 +2243,7 @@
             this.IJD009.FieldName = "IJD009";
             this.IJD009.Name = "IJD009";
             this.IJD009.Visible = true;
-            this.IJD009.VisibleIndex = 11;
+            this.IJD009.VisibleIndex = 10;
             // 
             // gridColumn51
             // 
@@ -2235,29 +2269,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // repositoryItemComboBox2
-            // 
-            this.repositoryItemComboBox2.AutoHeight = false;
-            this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox2.Items.AddRange(new object[] {
-            "",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20"});
-            this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
-            this.repositoryItemComboBox2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // FormInjectionMolding
             // 
@@ -2508,13 +2519,13 @@
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn IJB025;
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U4;
         private DevExpress . XtraGrid . Columns . GridColumn U41;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
         private System . Windows . Forms . ContextMenuStrip contextMenuStrip1;
         private System . Windows . Forms . ToolStripMenuItem copy;
         private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress . XtraEditors . Repository . RepositoryItemComboBox repositoryItemComboBox2;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
     }
 }

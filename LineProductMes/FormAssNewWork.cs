@@ -17,7 +17,7 @@ namespace LineProductMes
         LineProductMesBll.Bll.AssNewWorkBll _bll=null;
         LineProductMesEntityu.AssNewWorkBodyEntity _body=null;
         LineProductMesEntityu.AssNewWorkHeaderEntity _header=null;
-        DataTable tableWork,tableView,tableUser,tablePInfo,talePrintOne,talePrintTwo;
+        DataTable tableWork,tableView,tableUser,tablePInfo,talePrintOne,talePrintTwo,tablePrintTre,tablePrintFor;
         DataRow row;
         List<string> idxDelete=new List<string>();
         int selectIndex;
@@ -249,6 +249,20 @@ namespace LineProductMes
             Export ( new DataTable [ ] { talePrintOne ,talePrintTwo } ,"入库单.frx" );
 
             return base . ExportWork ( );
+        }
+        protected override int PrintReport ( )
+        {
+            printOrExportOne ( );
+            Print ( new DataTable [ ] { tablePrintTre ,tablePrintFor } ,"组装报工单.frx" );
+
+            return base . PrintReport ( );
+        }
+        protected override int ExportReport ( )
+        {
+            printOrExportOne ( );
+            Export ( new DataTable [ ] { tablePrintTre ,tablePrintFor } ,"组装报工单.frx" );
+
+            return base . ExportReport ( );
         }
         #endregion
 
@@ -1345,6 +1359,13 @@ namespace LineProductMes
             if ( result == false )
                 return false;
 
+            _header . ANW002 = workShopTime . checkUserForOtherWork ( txtANW022 . Text ,tableView ,LineProductMesBll . ObtainInfo . codeOne ,txtANW001 . Text );
+            if ( !string . IsNullOrEmpty ( _header . ANW002 ) )
+            {
+                XtraMessageBox . Show ( _header . ANW002 ,"提示" );
+                return false;
+            }
+
             _header . ANW002 = txtANW002 . Text;
             _header . ANW003 = txtANW003 . Text;
             _header . ANW004 = txtANW004 . Text;
@@ -1387,6 +1408,13 @@ namespace LineProductMes
             talePrintOne . TableName = "TableOne";
             talePrintTwo = _bll . getTablePrintTwo ( txtANW001 . Text );
             talePrintTwo . TableName = "TableTwo";
+        }
+        void printOrExportOne ( )
+        {
+            tablePrintTre = _bll . getTablePrintTre ( txtANW001 . Text );
+            tablePrintTre . TableName = "TableOne";
+            tablePrintFor = _bll . getTablePrintFor ( txtANW001 . Text );
+            tablePrintFor . TableName = "TableTwo";
         }
         void addRows ( string column ,int selectIdx ,object value )
         {

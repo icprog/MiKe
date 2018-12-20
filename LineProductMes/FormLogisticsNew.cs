@@ -19,7 +19,7 @@ namespace LineProductMes
         LineProductMesEntityu.LogisticsNewBodyTwoEntity _bodyTwo=null;
         LineProductMesBll.Bll.LogisticsNewBll _bll=null;
 
-        DataTable tableOne,tableTwo,tableViewOne,tableViewTwo,tableOtherSur;
+        DataTable tableOne,tableTwo,tableViewOne,tableViewTwo,tableOtherSur,tablePrintOne,tablePrintTwo,tablePrintTre;
         DateTime dt;
 
         List<string> listOne=new List<string>();
@@ -37,7 +37,7 @@ namespace LineProductMes
             _bodyOne = new LineProductMesEntityu . LogisticsNewBodyOneEntity ( );
             _bodyTwo = new LineProductMesEntityu . LogisticsNewBodyTwoEntity ( );
 
-            ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolExport ,toolPrint } );
+            //ToolBarContain . ToolbarsC ( barTool ,new DevExpress . XtraBars . BarItem [ ] { toolExport ,toolPrint } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View1 ,View2 } );
@@ -247,6 +247,22 @@ namespace LineProductMes
                 XtraMessageBox . Show ( state + "失败" );
 
             return base . Cancellation ( );
+        }
+        protected override int PrintReport ( )
+        {
+            printOrExport ( );
+
+            Print ( new DataTable [ ] { tablePrintOne ,tablePrintTwo ,tablePrintTre } ,"物流组报工单.frx" );
+
+            return base . PrintReport ( );
+        }
+        protected override int ExportReport ( )
+        {
+            printOrExport ( );
+
+            Export ( new DataTable [ ] { tablePrintOne ,tablePrintTwo ,tablePrintTre } ,"物流组报工单.frx" );
+
+            return base . ExportReport ( );
         }
         #endregion
 
@@ -772,6 +788,13 @@ namespace LineProductMes
                 }
             }
 
+            _bodyOne . LOG001 = workShopTime . checkUserForOtherWork ( txtLGN002 . Text ,tableViewTwo ,LineProductMesBll . ObtainInfo . codeEgi ,txtLGN001 . Text );
+            if ( !string . IsNullOrEmpty ( _bodyOne . LOG001 ) )
+            {
+                XtraMessageBox . Show ( _bodyOne . LOG001 ,"提示" );
+                return false;
+            }
+
             _model . LGN001 = txtLGN001 . Text;
             _model . LGN002 = Convert . ToDateTime ( txtLGN002 . Text );
             _model . LGN005 = string . IsNullOrEmpty ( txtLGN005 . Text ) == true ? 0 : Convert . ToDecimal ( txtLGN005 . Text );
@@ -1140,6 +1163,15 @@ namespace LineProductMes
                     }
                 }
             }
+        }
+        void printOrExport ( )
+        {
+            tablePrintOne = _bll . getPrintOne ( txtLGN001 . Text );
+            tablePrintOne . TableName = "TableOne";
+            tablePrintTwo = _bll . getPrintTwo ( txtLGN001 . Text );
+            tablePrintTwo . TableName = "TableTwo";
+            tablePrintTre = _bll . getPrintTre ( txtLGN001 . Text );
+            tablePrintTre . TableName = "TableTre";
         }
         #endregion
 

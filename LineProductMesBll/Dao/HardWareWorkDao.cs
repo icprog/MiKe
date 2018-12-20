@@ -990,5 +990,31 @@ namespace LineProductMesBll . Dao
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
+        /// <summary>
+        /// 获取打印数据  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "select HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,convert(float,HAW008) HAW008,HAW009,HAW010,HAW011,HAW013,HAW015,HAW016,HAW017,convert(float,HAW020) HAW020,CONVERT(FLOAT,HAW021) HAW021,CONVERT(FLOAT,HAW008*HAW009) U0 FROM MIKHAW WHERE HAW001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印数据  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFor ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT HAX002,HAX003,HAX004,HAX005,HAX006,CONVERT(FLOAT,HAX007) HAX007,HAX008,Datename(HOUR,HAX009)+':'+DATENAME(MINUTE,HAX009) HAX009,Datename(HOUR,HAX010)+':'+DATENAME(MINUTE,HAX010) HAX010,Datename(HOUR,HAX011)+':'+DATENAME(MINUTE,HAX011) HAX011,Datename(HOUR,HAX012)+':'+DATENAME(MINUTE,HAX012) HAX012,CONVERT(FLOAT,HAX013) HAX013,HAX014,HAX015,HAX016,HAX017,CONVERT(FLOAT,HAX018) HAX018,CONVERT(FLOAT,HAX019) HAX019,CONVERT(FLOAT,HAX020) HAX020,CONVERT(FLOAT,HAX013*HAX019) U3,CONVERT(FLOAT,CASE HAW011 WHEN '计件' THEN HAX007*HAX008 WHEN '计时' THEN 0 ELSE 0 END) U1 FROM MIKHAX A INNER JOIN MIKHAW B ON A.HAX001=B.HAW001 WHERE HAX001='{0}'" ,oddNum );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
     }
 }

@@ -806,5 +806,47 @@ namespace LineProductMesBll . Dao
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintTre ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "select PAN001,PAN003,PAN005,PAN006,PAN007,PAN008,PAN011,PAN012,PAN013,JS,CASE WHEN PAN013='计件' THEN JJ ELSE 0 END JJ,CASE WHEN PAN013='计件' THEN JJ+JS WHEN PAN013='计时' THEN JS ELSE 0 END ZGZ,CASE WHEN PAN013='计件' THEN (JJ+JS)*0.05 WHEN PAN013='计时' THEN JS*0.05 ELSE 0 END TL,ZGS from MIKPAN A INNER JOIN (SELECT PAP001,CONVERT(FLOAT,SUM(PPA009*PPA013)) JS,CONVERT(FLOAT,SUM(PPA012+PPA013)) ZGS FROM MIKPAP WHERE PAP001='{0}' GROUP BY PAP001 ) B ON A.PAN001=B.PAP001 INNER JOIN (SELECT PAO001,CONVERT(FLOAT,SUM(PAO006*PAO012)) JJ FROM MIKPAO WHERE PAO001='{0}' GROUP BY PAO001) C ON A.PAN001=C.PAO001 WHERE PAN001='{0}'" ,oddNum );
+
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFor ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT PAO001,PAO002,PAO003,PAO004,PAO005,CONVERT(FLOAT,PAO006) PAO006,PAO007,PAO008,PAO010,PAO012,PAO014,CONVERT(FLOAT,PAO006*PAO012) U0 FROM MIKPAO WHERE PAO001 ='{0}'" ,oddNum );
+
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getPrintFiv ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT PPA002,PPA003,DATENAME(HOUR,PPA005)+':'+DATENAME(MINUTE,PPA005) PPA005,DATENAME(HOUR,PPA006)+':'+DATENAME(MINUTE,PPA006) PPA006,DATENAME(HOUR,PPA007)+':'+DATENAME(MINUTE,PPA007) PPA007,DATENAME(HOUR,PPA008)+':'+DATENAME(MINUTE,PPA008) PPA008,CONVERT(FLOAT,PPA009) PPA009,PPA010,PPA011,CONVERT(FLOAT,PPA012) PPA012,CONVERT(FLOAT,PPA013) PPA013,CONVERT(FLOAT,PPA014) PPA014,PPA015,CONVERT(FLOAT,PPA009*PPA013) U3,CONVERT(FLOAT,PPA012+PPA013) U4 FROM MIKPAP WHERE PAP001 ='{0}'" ,oddNum );
+
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
     }
 }
