@@ -24,7 +24,7 @@ namespace LineProductMes
         bool result=false;
         int numForSGM=0;
         List<string> idxList=new List<string>();
-        DateTime dt;
+        DateTime dt,dtStart,dtEnd;
 
         public FormHardWareWork ( )
         {
@@ -39,7 +39,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
+            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = txtHAW024 . Properties . VistaEditTime = txtHAW025 . Properties . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
 
             wait . Hide ( );
             controlUnEnable ( );
@@ -49,6 +49,8 @@ namespace LineProductMes
             getData ( );
 
             dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
         }
 
         #region Main
@@ -97,6 +99,9 @@ namespace LineProductMes
             txtHAW013 . EditValue = "0501";
             txtHAW010 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
             state = "add";
+
+            txtHAW024 . Text = dtStart . ToString ( );
+            txtHAW025 . Text = dtEnd . ToString ( );
 
             addTool ( );
 
@@ -350,11 +355,9 @@ namespace LineProductMes
         }
         private void txtHAW011_SelectedValueChanged ( object sender ,EventArgs e )
         {
-            if ( txtHAW011 . Text == string . Empty )
-                return;
-
-            startT ( );
-            endT ( );
+            updateBatchTime ( );
+            //startT ( );
+            //endT ( );
         }
         private void txtHAW002_EditValueChanged ( object sender ,EventArgs e )
         {
@@ -796,7 +799,7 @@ namespace LineProductMes
             {
                 e . Appearance . BackColor = System . Drawing . Color . LightSteelBlue;
             }
-            if ( e . Column . FieldName == "U3" )
+            if ( e . Column . FieldName == "HAX020" )
             {
                 if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
                 {
@@ -821,23 +824,63 @@ namespace LineProductMes
         {
             focuseName = e . Column . FieldName; 
         }
+        private void txtHAW024_EditValueChanged ( object sender ,EventArgs e )
+        {
+            updateBatchTime ( );
+        }
+        void updateBatchTime ( )
+        {
+            if ( txtHAW011 . Text == string . Empty )
+                return;
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            if ( tableView == null || tableView . Rows . Count < 1 )
+                return;
+            if ( !string . IsNullOrEmpty ( txtHAW024 . Text ) )
+                dtStart = Convert . ToDateTime ( txtHAW024 . Text );
+            if ( !string . IsNullOrEmpty ( txtHAW025 . Text ) )
+                dtEnd = Convert . ToDateTime ( txtHAW025 . Text );
+
+            foreach ( DataRow row in tableView . Rows )
+            {
+                if ( txtHAW011 . Text . Equals ( "计件" ) )
+                {
+                    row [ "HAX009" ] = dtStart;
+                    row [ "HAX010" ] = dtEnd;
+                    row [ "HAX011" ] = DBNull . Value;
+                    row [ "HAX012" ] = DBNull . Value;
+                    row [ "HAX019" ] = DBNull . Value;
+                }
+                else if ( txtHAW011 . Text . Equals ( "计时" ) )
+                {
+                    row [ "HAX009" ] = DBNull . Value;
+                    row [ "HAX010" ] = DBNull . Value;
+                    row [ "HAX018" ] = DBNull . Value;
+                    row [ "HAX011" ] = dtStart;
+                    row [ "HAX012" ] = dtEnd;
+                }
+            }
+            calcuTsumTime ( );
+        }
         #endregion
 
         #region Method
         void controlUnEnable ( )
         {
-            txtHAW001 . ReadOnly = txtHAW002 . ReadOnly = txtHAW003 . ReadOnly = txtHAW004 . ReadOnly = txtHAW005 . ReadOnly = txtHAW006 . ReadOnly = txtHAW007 . ReadOnly = txtHAW008 . ReadOnly = txtHAW010 . ReadOnly = txtHAW011 . ReadOnly = txtHAW013 . ReadOnly = txtHAW015 . ReadOnly = txtHAW016 . ReadOnly = /*txtHAW017 . Enabled =*/ txtu0 . ReadOnly = txtHAW020.ReadOnly=txtHAW021.ReadOnly= true;
+            txtHAW001 . ReadOnly = txtHAW002 . ReadOnly = txtHAW003 . ReadOnly = txtHAW004 . ReadOnly = txtHAW005 . ReadOnly = txtHAW006 . ReadOnly = txtHAW007 . ReadOnly = txtHAW008 . ReadOnly = txtHAW010 . ReadOnly = txtHAW011 . ReadOnly = txtHAW013 . ReadOnly = txtHAW015 . ReadOnly = txtHAW016 . ReadOnly = /*txtHAW017 . Enabled =*/ txtu0 . ReadOnly = txtHAW020.ReadOnly=txtHAW021.ReadOnly=txtHAW024.ReadOnly=txtHAW025.ReadOnly= true;
             bandedGridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtHAW002 . ReadOnly =  txtHAW011 . ReadOnly = txtHAW013 . ReadOnly = txtHAW015 . ReadOnly = txtHAW016 . ReadOnly /*= txtHAW017 . ReadOnly*/ =  txtHAW020 . ReadOnly = txtHAW021 . ReadOnly = false;
+            txtHAW002 . ReadOnly =  txtHAW011 . ReadOnly = txtHAW013 . ReadOnly = txtHAW015 . ReadOnly = txtHAW016 . ReadOnly /*= txtHAW017 . ReadOnly*/ =  txtHAW020 . ReadOnly = txtHAW021 . ReadOnly = txtHAW024 . ReadOnly = txtHAW025 . ReadOnly = false;
             bandedGridView1 . OptionsBehavior . Editable = true;
         }
         void controlClear ( )
         {
             sign = "clear";
-            txtHAW001 . Text = txtHAW002 . Text = txtHAW003 . Text = txtHAW004 . Text = txtHAW005 . Text = txtHAW006 . Text = txtHAW007 . Text = txtHAW008 . Text = txtHAW009 . Text = txtHAW010 . Text = txtHAW011 . Text = txtHAW013 . Text = txtHAW015 . Text = txtHAW016 . Text = /*txtHAW017 . Text =*/ txtu0 . Text = txtHAW020 . Text = txtHAW021 . Text = string . Empty;
+            txtHAW001 . Text = txtHAW002 . Text = txtHAW003 . Text = txtHAW004 . Text = txtHAW005 . Text = txtHAW006 . Text = txtHAW007 . Text = txtHAW008 . Text = txtHAW009 . Text = txtHAW010 . Text = txtHAW011 . Text = txtHAW013 . Text = txtHAW015 . Text = txtHAW016 . Text = /*txtHAW017 . Text =*/ txtu0 . Text = txtHAW020 . Text = txtHAW021 . Text = txtHAW024 . Text = txtHAW025 . Text = string . Empty;
             gridControl1 . DataSource = null;
             layoutControlItem19 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
         }
@@ -872,6 +915,16 @@ namespace LineProductMes
             if ( string . IsNullOrEmpty ( txtHAW002 . Text ) )
             {
                 XtraMessageBox . Show ( "请选择来源单号" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtHAW024 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择开工时间" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtHAW025 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择完工时间" );
                 return false;
             }
             _header . HAW002 = txtHAW002 . Text;
@@ -920,7 +973,8 @@ namespace LineProductMes
             _header . HAW019 = false;
             _header . HAW020 = string . IsNullOrEmpty ( txtHAW020 . Text ) == true ? 0 : Convert . ToDecimal ( txtHAW020 . Text );
             _header . HAW021 = string . IsNullOrEmpty ( txtHAW021 . Text ) == true ? 0 : Convert . ToDecimal ( txtHAW021 . Text );
-
+            _header . HAW024 = Convert . ToDateTime ( txtHAW024 . Text );
+            _header . HAW025 = Convert . ToDateTime ( txtHAW025 . Text );
 
             bandedGridView1 . CloseEditor ( );
             bandedGridView1 . UpdateCurrentRow ( );
@@ -1217,6 +1271,8 @@ namespace LineProductMes
             //txtHAW017 . Text = _header . HAW017;
             txtHAW020 . Text = Convert . ToDecimal ( _header . HAW020 ) . ToString ( "0.#" );
             txtHAW021 . Text = Convert . ToDecimal ( _header . HAW021 ) . ToString ( "0.#" );
+            txtHAW024 . Text = _header . HAW024 . ToString ( );
+            txtHAW025 . Text = _header . HAW025 . ToString ( );
             layoutControlItem19 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             Graph . grPic ( pictureEdit1 ,"反" );
             if ( _header . HAW018 )
@@ -1479,8 +1535,8 @@ namespace LineProductMes
 
             if ( tableView == null || tableView . Rows . Count < 1 )
                 return;
-            decimal haw020 = txtHAW020 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtHAW020 . Text ) * 60;
-            decimal haw021 = txtHAW021 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtHAW021 . Text ) * 60;
+            decimal haw020 = txtHAW020 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtHAW020 . Text ) ;
+            decimal haw021 = txtHAW021 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtHAW021 . Text ) ;
 
             DateTime dtOne, dtTwo;
             decimal u0 = 0M;
@@ -1500,16 +1556,16 @@ namespace LineProductMes
                     dtOne = Convert . ToDateTime ( row [ "HAX009" ] );
                     dtTwo = Convert . ToDateTime ( row [ "HAX010" ] );
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( haw020 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( haw020 ) - Convert . ToDecimal ( haw021 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( haw021 );
 
                     row [ "HAX018" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }
@@ -1522,15 +1578,15 @@ namespace LineProductMes
                     dtOne = Convert . ToDateTime ( row [ "HAX011" ] );
                     dtTwo = Convert . ToDateTime ( row [ "HAX012" ] );
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw020 ) - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( haw020 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( haw020 ) - Convert . ToDecimal ( haw021 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( haw021 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( haw021 );
 
                     row [ "HAX019" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }

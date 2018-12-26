@@ -44,6 +44,7 @@
     <Compile Include="ArsEntity.cs" />
     <Compile Include="ArtEntity.cs" />
     <Compile Include="AruEntity.cs" />
+    <Compile Include="AssNewWorkBodyAnnEntity.cs" />
     <Compile Include="AssNewWorkBodyEntity.cs" />
     <Compile Include="AssNewWorkEnclosureBodyOneEntity.cs" />
     <Compile Include="AssNewWorkEnclosureBodyTwoEntity.cs" />

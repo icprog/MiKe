@@ -32,6 +32,8 @@ namespace LineProductMesEntityu
         private decimal? _haw021;
         private string _haw022;
         private string _haw023;
+        private DateTime? _haw024;
+        private DateTime? _haw025;
 
         /// <summary>
         /// 
@@ -358,7 +360,7 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 制单
+        /// 制单人
         /// </summary>
         public string HAW023
         {
@@ -370,6 +372,34 @@ namespace LineProductMesEntityu
             set
             {
                 _haw023 = value;
+            }
+        }
+        /// <summary>
+        /// 开工时间
+        /// </summary>
+        public DateTime? HAW024
+        {
+            set
+            {
+                _haw024 = value;
+            }
+            get
+            {
+                return _haw024;
+            }
+        }
+        /// <summary>
+        /// 完工时间
+        /// </summary>
+        public DateTime? HAW025
+        {
+            set
+            {
+                _haw025 = value;
+            }
+            get
+            {
+                return _haw025;
             }
         }
     }

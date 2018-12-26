@@ -153,7 +153,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . InjectionMoldingHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA015,IJA016 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table == null || table . Rows . Count < 1 )
@@ -232,6 +232,14 @@ namespace LineProductMesBll . Dao
                 if ( row [ "IJA013" ] != null && row [ "IJA013" ] . ToString ( ) != "" )
                 {
                     model . IJA013 = decimal . Parse ( row [ "IJA013" ] . ToString ( ) );
+                }
+                if ( row [ "IJA015" ] != null && row [ "IJA015" ] . ToString ( ) != "" )
+                {
+                    model . IJA015 = DateTime . Parse ( row [ "IJA015" ] . ToString ( ) );
+                }
+                if ( row [ "IJA016" ] != null && row [ "IJA016" ] . ToString ( ) != "" )
+                {
+                    model . IJA016 = DateTime . Parse ( row [ "IJA016" ] . ToString ( ) );
                 }
             }
             return model;
@@ -540,9 +548,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKIJA(" );
-            strSql . Append ( "IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA014)" );
+            strSql . Append ( "IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA014,IJA015,IJA016)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@IJA001,@IJA002,@IJA003,@IJA004,@IJA005,@IJA006,@IJA007,@IJA008,@IJA009,@IJA010,@IJA011,@IJA012,@IJA013,@IJA014)" );
+            strSql . Append ( "@IJA001,@IJA002,@IJA003,@IJA004,@IJA005,@IJA006,@IJA007,@IJA008,@IJA009,@IJA010,@IJA011,@IJA012,@IJA013,@IJA014,@IJA015,@IJA016)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJA001", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJA002", SqlDbType.NVarChar,5),
@@ -557,7 +565,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJA011", SqlDbType.Bit,1),
                     new SqlParameter("@IJA012", SqlDbType.Decimal),
                     new SqlParameter("@IJA013", SqlDbType.Decimal),
-                    new SqlParameter("@IJA014", SqlDbType.NVarChar,20)
+                    new SqlParameter("@IJA014", SqlDbType.NVarChar,20),
+                    new SqlParameter("@IJA015", SqlDbType.DateTime),
+                    new SqlParameter("@IJA016", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . IJA001;
             parameters [ 1 ] . Value = model . IJA002;
@@ -573,6 +583,8 @@ namespace LineProductMesBll . Dao
             parameters [ 11 ] . Value = model . IJA012;
             parameters [ 12 ] . Value = model . IJA013;
             parameters [ 13 ] . Value = model . IJA014;
+            parameters [ 14 ] . Value = model . IJA015;
+            parameters [ 15 ] . Value = model . IJA016;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyOneEntity model )
@@ -721,7 +733,9 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "IJA010=@IJA010," );
             strSql . Append ( "IJA011=@IJA011," );
             strSql . Append ( "IJA012=@IJA012," );
-            strSql . Append ( "IJA013=@IJA013" );
+            strSql . Append ( "IJA013=@IJA013," );
+            strSql . Append ( "IJA015=@IJA015," );
+            strSql . Append ( "IJA016=@IJA016" );
             strSql . Append ( " where IJA001=@IJA001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJA002", SqlDbType.NVarChar,5),
@@ -736,7 +750,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJA011", SqlDbType.Bit,1),
                     new SqlParameter("@IJA001", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJA012", SqlDbType.Decimal),
-                    new SqlParameter("@IJA013", SqlDbType.Decimal)
+                    new SqlParameter("@IJA013", SqlDbType.Decimal),
+                    new SqlParameter("@IJA015", SqlDbType.DateTime),
+                    new SqlParameter("@IJA016", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . IJA002;
             parameters [ 1 ] . Value = model . IJA003;
@@ -751,6 +767,8 @@ namespace LineProductMesBll . Dao
             parameters [ 10 ] . Value = model . IJA001;
             parameters [ 11 ] . Value = model . IJA012;
             parameters [ 12 ] . Value = model . IJA013;
+            parameters [ 13 ] . Value = model . IJA015;
+            parameters [ 14 ] . Value = model . IJA016;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyOneEntity model )
@@ -1020,7 +1038,7 @@ namespace LineProductMesBll . Dao
         public DataTable getPrintTre ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJA001,IJA002,IJA004,IJA006,IJA007,IJA008,IJA012,IJA013 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT IJA001,IJA002,IJA004,IJA006,IJA007,IJA008,IJA012,IJA013,IJA015,IJA016 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

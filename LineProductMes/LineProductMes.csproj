@@ -296,6 +296,7 @@
     <Compile Include="ClassForMain\ExportExcel.cs" />
     <Compile Include="ClassForMain\FormClosingState.cs" />
     <Compile Include="ClassForMain\Graph.cs" />
+    <Compile Include="ClassForMain\GridChartStyle.cs" />
     <Compile Include="ClassForMain\GrivColumnStyle.cs" />
     <Compile Include="ClassForMain\JsonUtils.cs" />
     <Compile Include="ClassForMain\NPOIHelper.cs" />

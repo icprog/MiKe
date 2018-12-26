@@ -22,6 +22,8 @@ namespace LineProductMesEntityu
         private string _ant011;
         private string _ant012;
         private string _ant013;
+        private DateTime? _ant014;
+        private DateTime? _ant015;
 
         /// <summary>
         /// 
@@ -221,5 +223,34 @@ namespace LineProductMesEntityu
                 return _ant013;
             }
         }
+        /// <summary>
+        /// 开工时间
+        /// </summary>
+        public DateTime? ANT014
+        {
+            set
+            {
+                _ant014 = value;
+            }
+            get
+            {
+                return _ant014;
+            }
+        }
+        /// <summary>
+        /// 完工时间
+        /// </summary>
+        public DateTime? ANT015
+        {
+            set
+            {
+                _ant015 = value;
+            }
+            get
+            {
+                return _ant015;
+            }
+        }
+
     }
 }

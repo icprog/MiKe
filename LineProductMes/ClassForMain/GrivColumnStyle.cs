@@ -24,7 +24,7 @@ namespace LineProductMes . ClassForMain
                 }
             }
         }
-
+        
         public static void setColumnStyle ( DevExpress . XtraTreeList . TreeList tree )
         {
             foreach ( DevExpress .XtraTreeList.Columns.TreeListColumn co in tree . Columns )
@@ -40,6 +40,18 @@ namespace LineProductMes . ClassForMain
                 co . AppearanceHeader . Options . UseTextOptions = true;
                 co . AppearanceHeader . TextOptions . HAlignment = DevExpress . Utils . HorzAlignment . Center;
                 co . AppearanceHeader . TextOptions . WordWrap = DevExpress . Utils . WordWrap . Wrap;
+            }
+        }
+
+        public static void setColumnFontStyle ( GridView [ ] grids )
+        {
+            foreach ( GridView gv in grids )
+            {
+                foreach ( DevExpress . XtraGrid . Columns . GridColumn co in gv . Columns )
+                {
+                    co . AppearanceCell . ForeColor = System . Drawing . Color . White;
+                    co . AppearanceCell . Options . UseForeColor = true;
+                }
             }
         }
 

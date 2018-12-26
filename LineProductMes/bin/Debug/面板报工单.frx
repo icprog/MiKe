@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="07/16/2018 14:01:50" ReportInfo.Modified="12/19/2018 08:58:21" ReportInfo.CreatorVersion="2013.2.5.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/16/2018 14:01:50" ReportInfo.Modified="12/25/2018 16:18:35" ReportInfo.CreatorVersion="2013.2.5.0">
   <Dictionary>
-    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuDp0rrsGaaTxKZA4VXKlQktJxYWi9z6d5SsjuXHN2sC2g==">
-      <TableDataSource Name="Table" Alias="TableOne" DataType="System.Int32" Enabled="true" SelectCommand="SELECT LEC001,LEC010,LEC012,LEC013,LEC014,LEC015,LEC019,LEC020,LEC021,JS,CASE LEC021 WHEN '计件' THEN JJ ELSE 0 END JJ,BT,CASE LEC021 WHEN '计件' THEN JJ+JS-BT ELSE JS-BT END ZGZ,ZGS FROM MIKLEC A INNER JOIN (SELECT LED001,CONVERT(FLOAT,SUM(LED010*LED015)) JS,CONVERT(FLOAT,SUM(LED007)) BT,CONVERT(FLOAT,SUM(LED014+LED015)) ZGS FROM MIKLED GROUP BY LED001) B ON A.LEC001=B.LED001 INNER JOIN (SELECT LEE001,CONVERT(FLOAT,SUM(LEE008*LEE009)) JJ FROM MIKLEE GROUP BY LEE001) C ON A.LEC001=C.LEE001">
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuDp0rrsGaaTxKZA4VXKlQktMcwF05SeVwRX+NHh+d1j1Q==">
+      <TableDataSource Name="Table" Alias="TableOne" DataType="System.Int32" Enabled="true" SelectCommand="SELECT LEC001,LEC010,LEC012,LEC013,LEC014,LEC015,LEC019,LEC020,LEC023,LEC024,LEC021,JS,CASE LEC021 WHEN '计件' THEN JJ ELSE 0 END JJ,BT,CASE LEC021 WHEN '计件' THEN JJ+JS-BT ELSE JS-BT END ZGZ,ZGS FROM MIKLEC A INNER JOIN (SELECT LED001,CONVERT(FLOAT,SUM(LED010*LED015)) JS,CONVERT(FLOAT,SUM(LED007)) BT,CONVERT(FLOAT,SUM(LED014+LED015)) ZGS FROM MIKLED GROUP BY LED001) B ON A.LEC001=B.LED001 INNER JOIN (SELECT LEE001,CONVERT(FLOAT,SUM(LEE008*LEE009)) JJ FROM MIKLEE GROUP BY LEE001) C ON A.LEC001=C.LEE001">
         <Column Name="JS" DataType="System.Decimal"/>
         <Column Name="JJ" DataType="System.Double"/>
         <Column Name="BT" DataType="System.Double"/>
@@ -17,6 +17,8 @@
         <Column Name="LEC020" DataType="System.Decimal"/>
         <Column Name="LEC021" DataType="System.String"/>
         <Column Name="ZGZ" DataType="System.Double"/>
+        <Column Name="LEC023" DataType="System.DateTime"/>
+        <Column Name="LEC024" DataType="System.DateTime"/>
       </TableDataSource>
       <TableDataSource Name="Table1" Alias="TableTwo" DataType="System.Int32" Enabled="true" SelectCommand="SELECT LEE001,LEE002,LEE003,LEE004,LEE005,LEE006,LEE007,CONVERT(FLOAT,LEE008) LEE008,LEE009,CONVERT(FLOAT,LEE008*LEE009) U6 FROM MIKLEE&#13;&#10;">
         <Column Name="LEE001" DataType="System.String"/>
@@ -61,7 +63,7 @@
     <Total Name="Total9" Expression="[TableTre.LED016]" Evaluator="Data1" PrintOn="ReportSummary1"/>
   </Dictionary>
   <ReportPage Name="Page1" RawPaperSize="9" LeftMargin="2" RightMargin="2" FirstPageSource="1" OtherPagesSource="1">
-    <ReportTitleBand Name="ReportTitle1" Width="778.68" Height="119.07">
+    <ReportTitleBand Name="ReportTitle1" Width="778.68" Height="147.42">
       <TextObject Name="Text1" Left="-18.9" Width="774.9" Height="28.35" Text="面板报工单" HorzAlign="Center" VertAlign="Center" Font="宋体, 18pt"/>
       <TextObject Name="Text38" Top="28.35" Width="66.15" Height="24.57" Text="生产车间:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text39" Left="66.15" Top="28.35" Width="94.5" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC010]" VertAlign="Bottom" Font="宋体, 9pt"/>
@@ -73,12 +75,12 @@
       <TextObject Name="Text49" Left="340.2" Top="28.35" Width="37.8" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC019]" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text50" Left="378" Top="28.35" Width="47.25" Height="24.57" Text="晚休:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text51" Left="425.25" Top="28.35" Width="37.8" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC020]" VertAlign="Bottom" Font="宋体, 9pt"/>
-      <TextObject Name="Text70" Top="85.05" Width="66.15" Height="24.57" Text="制单日期:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
-      <TextObject Name="Text71" Left="66.15" Top="85.05" Width="113.4" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC013]" Format="Date" Format.Format="d" VertAlign="Bottom" Font="宋体, 9pt"/>
-      <TextObject Name="Text72" Left="179.55" Top="85.05" Width="47.25" Height="24.57" Text="单号:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
-      <TextObject Name="Text73" Left="226.8" Top="85.05" Width="94.5" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC001]" VertAlign="Bottom" Font="宋体, 9pt"/>
-      <TextObject Name="Text74" Left="321.3" Top="85.05" Width="47.25" Height="24.57" Text="备注:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
-      <TextObject Name="Text75" Left="368.55" Top="85.05" Width="406.35" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC015]" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text70" Top="113.4" Width="66.15" Height="24.57" Text="制单日期:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text71" Left="66.15" Top="113.4" Width="113.4" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC013]" Format="Date" Format.Format="d" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text72" Left="179.55" Top="113.4" Width="47.25" Height="24.57" Text="单号:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text73" Left="226.8" Top="113.4" Width="94.5" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC001]" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text74" Left="321.3" Top="113.4" Width="47.25" Height="24.57" Text="备注:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text75" Left="368.55" Top="113.4" Width="406.35" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC015]" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text184" Top="56.7" Width="66.15" Height="24.57" Text="计时工资:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text185" Left="66.15" Top="56.7" Width="94.5" Height="24.57" Border.Lines="Bottom" Text="[TableOne.JS]" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text186" Left="160.65" Top="56.7" Width="66.15" Height="24.57" Text="计件工资:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
@@ -88,10 +90,14 @@
       <TextObject Name="Text190" Left="481.95" Top="56.7" Width="56.7" Height="24.57" Text="总工时:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text191" Left="538.65" Top="56.7" Width="94.5" Height="24.57" Border.Lines="Bottom" Text="[TableOne.ZGS]" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text192" Left="633.15" Top="56.7" Width="56.7" Height="24.57" Text="总工资:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
-      <TextObject Name="Text193" Left="689.85" Top="56.7" Width="94.5" Height="24.57" Border.Lines="Bottom" Text="[TableOne.ZGZ]" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text193" Left="689.85" Top="56.7" Width="85.05" Height="24.57" Border.Lines="Bottom" Text="[TableOne.ZGZ]" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text227" Top="85.05" Width="66.15" Height="24.57" Text="开始时间:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text228" Left="66.15" Top="85.05" Width="264.6" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC023]" Format="Date" Format.Format="F" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text229" Left="330.75" Top="85.05" Width="66.15" Height="24.57" Text="结束时间:" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text230" Left="396.9" Top="85.05" Width="321.3" Height="24.57" Border.Lines="Bottom" Text="[TableOne.LEC024]" Format="Date" Format.Format="F" VertAlign="Bottom" Font="宋体, 9pt"/>
     </ReportTitleBand>
-    <GroupHeaderBand Name="GroupHeader1" Top="123.07" Width="778.68" Condition="[TableTwo.LEE001]">
-      <DataBand Name="Data2" Top="168.87" Width="778.68" Height="28.35" DataSource="Table1">
+    <GroupHeaderBand Name="GroupHeader1" Top="151.42" Width="778.68" Condition="[TableTwo.LEE001]">
+      <DataBand Name="Data2" Top="197.22" Width="778.68" Height="28.35" DataSource="Table1">
         <TextObject Name="Text160" Width="75.6" Height="28.35" Border.Lines="All" Text="[TableTwo.LEE002]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
         <TextObject Name="Text161" Left="75.6" Width="75.6" Height="28.35" Border.Lines="All" Text="[TableTwo.LEE003]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
         <TextObject Name="Text162" Left="151.2" Width="141.75" Height="28.35" Border.Lines="All" Text="[TableTwo.LEE004]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
@@ -101,7 +107,7 @@
         <TextObject Name="Text166" Left="519.75" Width="85.05" Height="28.35" Border.Lines="All" Text="[TableTwo.LEE008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
         <TextObject Name="Text167" Left="604.8" Width="85.05" Height="28.35" Border.Lines="All" Text="[TableTwo.U6]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
         <TextObject Name="Text168" Left="689.85" Width="85.05" Height="28.35" Border.Lines="All" Text="[TableTwo.LEE009]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
-        <DataHeaderBand Name="DataHeader2" Top="127.07" Width="778.68" Height="37.8">
+        <DataHeaderBand Name="DataHeader2" Top="155.42" Width="778.68" Height="37.8">
           <TextObject Name="Text150" Width="75.6" Height="37.8" Border.Lines="All" Text="来源工单" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
           <TextObject Name="Text151" Left="75.6" Width="75.6" Height="37.8" Border.Lines="All" Text="品号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
           <TextObject Name="Text152" Left="151.2" Width="141.75" Height="37.8" Border.Lines="All" Text="品名" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -113,7 +119,7 @@
           <TextObject Name="Text158" Left="689.85" Width="85.05" Height="37.8" Border.Lines="All" Text="完工数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         </DataHeaderBand>
       </DataBand>
-      <GroupFooterBand Name="GroupFooter1" Top="201.22" Width="778.68" Height="37.8">
+      <GroupFooterBand Name="GroupFooter1" Top="229.57" Width="778.68" Height="37.8">
         <TextObject Name="Text181" Width="444.15" Height="37.8" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
         <TextObject Name="Text182" Left="689.85" Width="85.05" Height="37.8" Border.Lines="All" Text="[Total3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
         <TextObject Name="Text194" Left="444.15" Width="75.6" Height="37.8" Border.Lines="All" Text="[Total1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
@@ -121,7 +127,7 @@
         <TextObject Name="Text196" Left="519.75" Width="85.05" Height="37.8" Border.Lines="All" Border.Style="Dot" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       </GroupFooterBand>
     </GroupHeaderBand>
-    <DataBand Name="Data1" Top="303.72" Width="778.68" Height="28.35" DataSource="Table2">
+    <DataBand Name="Data1" Top="332.07" Width="778.68" Height="28.35" DataSource="Table2">
       <TextObject Name="Text206" Width="37.8" Height="28.35" Border.Lines="All" Text="[TableTre.LED012]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       <TextObject Name="Text207" Left="37.8" Width="47.25" Height="28.35" Border.Lines="All" Text="[TableTre.LED002]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       <TextObject Name="Text208" Left="85.05" Width="47.25" Height="28.35" Border.Lines="All" Text="[TableTre.LED003]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
@@ -138,7 +144,7 @@
       <TextObject Name="Text219" Left="500.85" Width="47.25" Height="28.35" Border.Lines="All" Text="[TableTre.U3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       <TextObject Name="Text220" Left="548.1" Width="37.8" Height="28.35" Border.Lines="All" Text="[TableTre.LED007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       <TextObject Name="Text221" Left="585.9" Width="47.25" Height="28.35" Border.Lines="All" Text="[TableTre.LED016]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
-      <DataHeaderBand Name="DataHeader1" Top="243.02" Width="778.68" Height="56.7">
+      <DataHeaderBand Name="DataHeader1" Top="271.37" Width="778.68" Height="56.7">
         <TextObject Name="Text12" Top="18.9" Width="37.8" Height="37.8" Border.Lines="All" Text="状态" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text13" Left="37.8" Top="18.9" Width="47.25" Height="37.8" Border.Lines="All" Text="工号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text14" Left="85.05" Top="18.9" Width="47.25" Height="37.8" Border.Lines="All" Text="姓名" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -161,7 +167,7 @@
         <TextObject Name="Text205" Left="585.9" Top="18.9" Width="47.25" Height="37.8" Border.Lines="All" Text="工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       </DataHeaderBand>
     </DataBand>
-    <ReportSummaryBand Name="ReportSummary1" Top="336.07" Width="778.68" Height="37.8">
+    <ReportSummaryBand Name="ReportSummary1" Top="364.42" Width="778.68" Height="37.8">
       <TextObject Name="Text115" Left="425.25" Width="37.8" Height="37.8" Border.Lines="All" Border.Style="Dot" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       <TextObject Name="Text117" Left="548.1" Width="37.8" Height="37.8" Border.Lines="All" Text="[Total8]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       <TextObject Name="Text118" Width="274.05" Height="37.8" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
@@ -173,7 +179,7 @@
       <TextObject Name="Text225" Left="500.85" Width="47.25" Height="37.8" Border.Lines="All" Text="[Total7]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
       <TextObject Name="Text226" Left="585.9" Width="47.25" Height="37.8" Border.Lines="All" Text="[Total9]" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt"/>
     </ReportSummaryBand>
-    <PageFooterBand Name="PageFooter1" Top="377.87" Width="778.68" Height="18.9">
+    <PageFooterBand Name="PageFooter1" Top="406.22" Width="778.68" Height="18.9">
       <TextObject Name="Text6" Left="198.45" Width="113.4" Height="18.9" Text="共[TotalPages#]页" VertAlign="Bottom" Font="宋体, 9pt"/>
       <TextObject Name="Text7" Left="425.25" Width="56.7" Height="18.9" Text="[PageN]" VertAlign="Bottom" Font="宋体, 9pt"/>
     </PageFooterBand>

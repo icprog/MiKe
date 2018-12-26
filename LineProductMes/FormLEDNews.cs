@@ -30,7 +30,7 @@ namespace LineProductMes
         List<string> idxList=new List<string>();
         List<string> idxListOne=new List<string>();
 
-        DateTime dt;
+        DateTime dt,dtStart,dtEnd;
 
         public FormLEGNews ( )
         {
@@ -46,7 +46,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
+            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = txtLEF023 . Properties . VistaEditTime = txtLEF024 . Properties . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
 
             controlUnEnable ( );
             controlClear ( );
@@ -59,6 +59,8 @@ namespace LineProductMes
             thread . Start ( );
 
             dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
         }
 
         #region Main
@@ -107,10 +109,14 @@ namespace LineProductMes
             gridControl1 . DataSource = tableView;
             tableViewTwo = _bll . getTableViewOne ( "1=2" );
             gridControl2 . DataSource = tableViewTwo;
+
             txtLEF010 . EditValue = "0506";
             txtLEF021 . Text = "计件";
             txtLEF013 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
             addTool ( );
+
+            txtLEF023 . Text = dtStart . ToString ( );
+            txtLEF024 . Text = dtEnd . ToString ( );
 
             return base . Add ( );
         }
@@ -664,7 +670,7 @@ namespace LineProductMes
         }
         private void GridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
         {
-            if ( e . Column . FieldName == "U2" )
+            if ( e . Column . FieldName == "LEG016" )
             {
                 if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
                 {
@@ -675,18 +681,34 @@ namespace LineProductMes
         }
         private void txtLEF021_SelectedValueChanged ( object sender ,EventArgs e )
         {
+            updateBatchTime ( );
+        }
+        private void txtLEF023_EditValueChanged ( object sender ,EventArgs e )
+        {
+            updateBatchTime ( );
+        }
+        void updateBatchTime ( )
+        {
+            if ( string . IsNullOrEmpty ( txtLEF021 . Text ) )
+                return;
+
             GridView1 . CloseEditor ( );
             GridView1 . UpdateCurrentRow ( );
 
             if ( tableView == null || tableView . Rows . Count < 1 )
                 return;
 
+            if ( !string . IsNullOrEmpty ( txtLEF023 . Text ) )
+                dtStart = Convert . ToDateTime ( txtLEF023 . Text );
+            if ( !string . IsNullOrEmpty ( txtLEF024 . Text ) )
+                dtEnd = Convert . ToDateTime ( txtLEF024 . Text );
+
             foreach ( DataRow row in tableView . Rows )
             {
                 if ( txtLEF021 . Text . Equals ( "计件" ) )
                 {
-                    row [ "LEG005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    row [ "LEG006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "LEG005" ] = dtStart;
+                    row [ "LEG006" ] = dtEnd;
                     //row [ "LEG014" ] = null;
                     row [ "LEG008" ] = DBNull . Value;
                     row [ "LEG009" ] = DBNull . Value;
@@ -697,27 +719,28 @@ namespace LineProductMes
                     row [ "LEG005" ] = DBNull . Value;
                     row [ "LEG006" ] = DBNull . Value;
                     row [ "LEG014" ] = DBNull . Value;
-                    row [ "LEG008" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    row [ "LEG009" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "LEG008" ] = dtStart;
+                    row [ "LEG009" ] = dtEnd;
                     //row [ "LEG015" ] = null;
                 }
             }
 
             calcuTimeSum ( );
             calcuSalaryByPrice ( );
+            calcuSalaryTimeSum ( );
         }
         #endregion
 
         #region Method
         void controlUnEnable ( )
         {
-            txtLEF010 . ReadOnly = txtLEF012 . ReadOnly = txtLEF015 . ReadOnly =  txtLEF019 . ReadOnly = txtLEF020 . ReadOnly =txtLEF021.ReadOnly= true;
+            txtLEF010 . ReadOnly = txtLEF012 . ReadOnly = txtLEF015 . ReadOnly =  txtLEF019 . ReadOnly = txtLEF020 . ReadOnly =txtLEF021.ReadOnly= txtLEF023 . ReadOnly = txtLEF024 . ReadOnly = true;
             GridView1 . OptionsBehavior . Editable = false;
             gridView2 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtLEF010 . ReadOnly = txtLEF012 . ReadOnly =  txtLEF015 . ReadOnly = txtLEF019 . ReadOnly = txtLEF020 . ReadOnly = txtLEF021 . ReadOnly = false;
+            txtLEF010 . ReadOnly = txtLEF012 . ReadOnly =  txtLEF015 . ReadOnly = txtLEF019 . ReadOnly = txtLEF020 . ReadOnly = txtLEF021 . ReadOnly = txtLEF023 . ReadOnly = txtLEF024 . ReadOnly = false;
             GridView1 . OptionsBehavior . Editable = true;
             gridView2 . OptionsBehavior . Editable = true;
         }
@@ -725,8 +748,8 @@ namespace LineProductMes
         {
             gridControl1 . DataSource = null;
             gridControl2 . DataSource = null;
-            txtLEF001 . Text = txtLEF010 . Text = txtLEF012 . Text = txtLEF013 . Text = txtLEF015 . Text =   txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text = txtu5 . Text =txtLEF019.Text=txtLEF020.Text=txtLEF021.Text= string . Empty;
-            txtLEF001 . Text = txtLEF010 . Text = txtLEF012 . Text = txtLEF013 . Text = txtLEF015 . Text =  txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text = txtu5 . Text = txtLEF019 . Text = txtLEF020 . Text = txtLEF021 . Text = string . Empty;
+            txtLEF001 . Text = txtLEF010 . Text = txtLEF012 . Text = txtLEF013 . Text = txtLEF015 . Text =   txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text = txtu5 . Text =txtLEF019.Text=txtLEF020.Text=txtLEF021.Text = txtLEF023 . Text = txtLEF024 . Text = string . Empty;
+            txtLEF001 . Text = txtLEF010 . Text = txtLEF012 . Text = txtLEF013 . Text = txtLEF015 . Text =  txtu1 . Text = txtu2 . Text = txtu3 . Text = txtu4 . Text = txtu5 . Text = txtLEF019 . Text = txtLEF020 . Text = txtLEF021 . Text = txtLEF023 . Text = txtLEF024 . Text = string . Empty;
             layoutControlItem21 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
         }
         void ThreadPost ( )
@@ -767,6 +790,8 @@ namespace LineProductMes
             txtLEF019 . Text = Convert . ToDecimal ( _header . LEF019 ) . ToString ( "0.#" );
             txtLEF020 . Text = Convert . ToDecimal ( _header . LEF020 ) . ToString ( "0.#" );
             txtLEF021 . Text = _header . LEF021;
+            txtLEF023 . Text = _header . LEF023 . ToString ( );
+            txtLEF024 . Text = _header . LEF024 . ToString ( );
             layoutControlItem21 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             Graph . grPic ( pictureEdit1 ,"反" );
             if ( _header . LEF017 )
@@ -962,6 +987,21 @@ namespace LineProductMes
                 return false;
             }
 
+            if ( string . IsNullOrEmpty ( txtLEF023 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择开工时间" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtLEF024 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择完工时间" );
+                return false;
+            }
+
+            _header . LEF023 = Convert . ToDateTime ( txtLEF023 . Text );
+            _header . LEF024 = Convert . ToDateTime ( txtLEF024 . Text );
+
+
             _header . LEF001 = txtLEF001 . Text;
             _header . LEF009 = txtLEF010 . EditValue . ToString ( );
             _header . LEF010 = txtLEF010 . Text;
@@ -988,8 +1028,8 @@ namespace LineProductMes
                 return;
             }
             decimal u0 = 0;
-            decimal lef019 = txtLEF019 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLEF019 . Text ) * 60;
-            decimal lef020 = txtLEF020 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLEF020 . Text ) * 60;
+            decimal lef019 = txtLEF019 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLEF019 . Text ) ;
+            decimal lef020 = txtLEF020 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLEF020 . Text ) ;
             DateTime dtOne, dtTwo;
 
 
@@ -1008,16 +1048,16 @@ namespace LineProductMes
                     dtOne = Convert . ToDateTime ( row [ "LEG005" ] );
                     dtTwo = Convert . ToDateTime ( row [ "LEG006" ] );
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( lef019 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( lef019 ) - Convert . ToDecimal ( lef020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( lef019 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( lef019 ) - Convert . ToDecimal ( lef020 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( lef020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( lef020 );
 
                     row [ "LEG014" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }
@@ -1029,16 +1069,16 @@ namespace LineProductMes
                     dtOne = Convert . ToDateTime ( row [ "LEG008" ] );
                     dtTwo = Convert . ToDateTime ( row [ "LEG009" ] );
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( lef019 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( lef019 ) - Convert . ToDecimal ( lef020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( lef019 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( lef019 ) - Convert . ToDecimal ( lef020 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( lef020 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( lef020 );
 
                     row [ "LEG015" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }

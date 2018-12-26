@@ -509,8 +509,8 @@ namespace LineProductMes . ClassForMain
                 break;
                 case "注塑计时":
                 columnUse = "IJD002";
-                columnStartTime = "IJD007";
-                columnEndTime = "IJD008";
+                columnStartTime = "IJD006";
+                columnEndTime = "IJD007";
                 columnStart = string . Empty;
                 columnEnd = string . Empty;
                 break;
@@ -653,8 +653,8 @@ namespace LineProductMes . ClassForMain
                 work = LineProductMesBll . ObtainInfo . codeFiv;
                 userCode = "IJD002";
                 codeOdd = "IJD001";
-                sTime = "IJD007";
-                eTime = "IJD008";
+                sTime = "IJD006";
+                eTime = "IJD007";
                 sjTime = string . Empty;
                 ejTime = string . Empty;
                 checkTime ( table ,tableOne );

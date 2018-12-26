@@ -7,6 +7,9 @@ using System . Linq;
 using DevExpress . XtraCharts;
 using System;
 using System . Windows . Forms;
+using System . Runtime . InteropServices;
+using System . Drawing;
+using System . Drawing . Drawing2D;
 
 namespace LineProductMes
 {
@@ -32,8 +35,12 @@ namespace LineProductMes
             _bll = new LineProductMesBll . Bll . AssBoardBll ( );
 
             GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1  } );
+            
+            GridChartStyle . setChartStyle ( new ChartControl [ ] { chartControl1 ,chartControl3 ,chartControl2 } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
+
+            GrivColumnStyle . setColumnFontStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
 
             this . Text = this . Text + ( "(日期:" + LineProductMesBll . ObtainInfo . getDate ( "组装车间" ) + ")" );
         }
@@ -87,9 +94,10 @@ namespace LineProductMes
                     gridView1 . PopulateColumns ( );
                     columnSet ( );
                     gridView1 . BestFitColumns ( );
-                    chartData ( );
-                    chartP ( );
-                    chartGroup ( );
+                    gridControl1 . Refresh ( );
+                    //chartData ( );
+                    //chartP ( );
+                    //chartGroup ( );
                     //chartProduct ( );
                 } ) );
             }
@@ -153,6 +161,12 @@ namespace LineProductMes
             {
                 e . Info . DisplayText = ( e . RowHandle + 1 ) . ToString ( );
             }
+
+            e . Appearance . BackColor = Color . DarkBlue;
+            e . Appearance . Options . UseForeColor = true;
+
+            e . Appearance . ForeColor = Color . White;
+            e . Appearance . Options . UseForeColor = true;
         }
 
         void chartData ( )
@@ -194,7 +208,7 @@ namespace LineProductMes
             if ( row [ "PRF" ] != null && row [ "PRF" ] . ToString ( ) != string . Empty )
             {
                 if ( Convert . ToInt32 ( row [ "PRF" ] ) != 0 )
-                    e . Appearance . BackColor = System . Drawing . Color . MistyRose;
+                    e . Appearance . BackColor = System . Drawing . Color . Red;
             }
 
         }
@@ -330,6 +344,15 @@ namespace LineProductMes
                 return;
             foreach ( DevExpress . XtraGrid . Columns . GridColumn column in gridView1 . Columns )
             {
+                column . AppearanceCell . ForeColor = Color . White;
+                column . AppearanceCell . Options . UseForeColor = true;
+
+                column . AppearanceHeader . BackColor = Color . DarkBlue;
+                column . AppearanceHeader . Options . UseBackColor = true;
+
+                column . AppearanceHeader . ForeColor = Color . White;
+                column . AppearanceHeader . Options . UseForeColor = true;
+
                 column . Name = column . Name . Replace ( "col" ,"" );
                 if ( column . FieldName == "PRG005" )
                     column . Caption = "产线";
@@ -371,6 +394,11 @@ namespace LineProductMes
                 else
                     column . Caption = column . Name + "计划量";
             }
+        }
+
+        private void gridControl1_Paint ( object sender ,PaintEventArgs e )
+        {
+            this . BackColor = System . Drawing . Color . Blue;
         }
 
     }

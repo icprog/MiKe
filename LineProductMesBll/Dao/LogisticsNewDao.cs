@@ -287,16 +287,18 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKLGN(" );
-            strSql . Append ( "LGN001,LGN002,LGN005,LGN006,LGN007,LGN008)" );
+            strSql . Append ( "LGN001,LGN002,LGN005,LGN006,LGN007,LGN008,LGN009,LGN010)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@LGN001,@LGN002,@LGN005,@LGN006,@LGN007,@LGN008)" );
+            strSql . Append ( "@LGN001,@LGN002,@LGN005,@LGN006,@LGN007,@LGN008,@LGN009,@LGN010)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LGN001", SqlDbType.NVarChar,20),
                     new SqlParameter("@LGN002", SqlDbType.Date,3),
                     new SqlParameter("@LGN005", SqlDbType.Decimal,9),
                     new SqlParameter("@LGN006", SqlDbType.Decimal,9),
                     new SqlParameter("@LGN007", SqlDbType.NVarChar,20),
-                    new SqlParameter("@LGN008", SqlDbType.NVarChar,20)
+                    new SqlParameter("@LGN008", SqlDbType.NVarChar,20),
+                    new SqlParameter("@LGN009", SqlDbType.DateTime),
+                    new SqlParameter("@LGN010", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . LGN001;
             parameters [ 1 ] . Value = model . LGN002;
@@ -304,6 +306,8 @@ namespace LineProductMesBll . Dao
             parameters [ 3 ] . Value = model . LGN006;
             parameters [ 4 ] . Value = model . LGN007;
             parameters [ 5 ] . Value = model . LGN008;
+            parameters [ 6 ] . Value = model . LGN009;
+            parameters [ 7 ] . Value = model . LGN010;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LogisticsNewBodyOneEntity model )
@@ -378,17 +382,21 @@ namespace LineProductMesBll . Dao
         void EditHeader ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LogisticsNewHeaderEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "UPDATE MIKLGN SET LGN005=@LGN005,LGN006=@LGN006,LGN007=@LGN007  WHERE LGN001=@LGN001" );
+            strSql . Append ( "UPDATE MIKLGN SET LGN005=@LGN005,LGN006=@LGN006,LGN007=@LGN007,LGN009=@LGN009,LGN010=@LGN010  WHERE LGN001=@LGN001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LGN001", SqlDbType.NVarChar,20),
                     new SqlParameter("@LGN005", SqlDbType.Decimal,9),
                     new SqlParameter("@LGN006", SqlDbType.Decimal,9),
-                    new SqlParameter("@LGN007", SqlDbType.NVarChar,20)
+                    new SqlParameter("@LGN007", SqlDbType.NVarChar,20),
+                    new SqlParameter("@LGN009", SqlDbType.DateTime),
+                    new SqlParameter("@LGN010", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . LGN001;
             parameters [ 1 ] . Value = model . LGN005;
             parameters [ 2 ] . Value = model . LGN006;
             parameters [ 3 ] . Value = model . LGN007;
+            parameters [ 4 ] . Value = model . LGN009;
+            parameters [ 5 ] . Value = model . LGN010;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -524,7 +532,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . LogisticsNewHeaderEntity getModel ( string code )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT LGN001,LGN002,LGN003,LGN004,LGN005,LGN006,LGN007 FROM MIKLGN WHERE LGN001='{0}'" ,code );
+            strSql . AppendFormat ( "SELECT LGN001,LGN002,LGN003,LGN004,LGN005,LGN006,LGN007,LGN009,LGN010 FROM MIKLGN WHERE LGN001='{0}'" ,code );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table == null || table . Rows . Count < 1 )
@@ -551,6 +559,10 @@ namespace LineProductMesBll . Dao
                     model . LGN006 = Convert . ToDecimal ( row [ "LGN006" ] . ToString ( ) );
                 if ( row [ "LGN007" ] != null && row [ "LGN007" ] . ToString ( ) != string . Empty )
                     model . LGN007 = row [ "LGN007" ] . ToString ( );
+                if ( row [ "LGN009" ] != null && row [ "LGN009" ] . ToString ( ) != string . Empty )
+                    model . LGN009 = Convert . ToDateTime ( row [ "LGN009" ] . ToString ( ) );
+                if ( row [ "LGN010" ] != null && row [ "LGN010" ] . ToString ( ) != string . Empty )
+                    model . LGN010 = Convert . ToDateTime ( row [ "LGN010" ] . ToString ( ) );
             }
             return model;
         }
@@ -620,7 +632,7 @@ namespace LineProductMesBll . Dao
         public DataTable getPrintOne ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT LGN001,LGN002,CONVERT(FLOAT,LGN005) LGN005,CONVERT(FLOAT,LGN006) LGN006,LGN007 FROM MIKLGN WHERE LGN001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT LGN001,LGN002,CONVERT(FLOAT,LGN005) LGN005,CONVERT(FLOAT,LGN006) LGN006,LGN007,LGN009,LGN010 FROM MIKLGN WHERE LGN001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

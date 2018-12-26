@@ -295,9 +295,9 @@ namespace LineProductMesBll . Dao
         {
             strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKHAW(" );
-            strSql . Append ( "HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021,HAW023)" );
+            strSql . Append ( "HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021,HAW023,HAW024,HAW025)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@HAW001,@HAW002,@HAW003,@HAW004,@HAW005,@HAW006,@HAW007,@HAW008,@HAW009,@HAW010,@HAW011,@HAW012,@HAW013,@HAW014,@HAW015,@HAW016,@HAW017,@HAW018,@HAW019,@HAW020,@HAW021,@HAW023)" );
+            strSql . Append ( "@HAW001,@HAW002,@HAW003,@HAW004,@HAW005,@HAW006,@HAW007,@HAW008,@HAW009,@HAW010,@HAW011,@HAW012,@HAW013,@HAW014,@HAW015,@HAW016,@HAW017,@HAW018,@HAW019,@HAW020,@HAW021,@HAW023,@HAW024,@HAW025)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@HAW001", SqlDbType.NVarChar,20),
                     new SqlParameter("@HAW002", SqlDbType.NVarChar,20),
@@ -320,7 +320,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@HAW019", SqlDbType.Bit,1),
                     new SqlParameter("@HAW020", SqlDbType.Decimal),
                     new SqlParameter("@HAW021", SqlDbType.Decimal),
-                    new SqlParameter("@HAW023", SqlDbType.NVarChar,20)
+                    new SqlParameter("@HAW023", SqlDbType.NVarChar,20),
+                    new SqlParameter("@HAW024", SqlDbType.DateTime),
+                    new SqlParameter("@HAW025", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . HAW001;
             parameters [ 1 ] . Value = model . HAW002;
@@ -344,6 +346,8 @@ namespace LineProductMesBll . Dao
             parameters [ 19 ] . Value = model . HAW020;
             parameters [ 20 ] . Value = model . HAW021;
             parameters [ 21 ] . Value = model . HAW023;
+            parameters [ 22 ] . Value = model . HAW024;
+            parameters [ 23 ] . Value = model . HAW025;
 
             SQLString . Add ( strSql ,parameters );
         }
@@ -422,7 +426,9 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "HAW018=@HAW018," );
             strSql . Append ( "HAW019=@HAW019," );
             strSql . Append ( "HAW020=@HAW020," );
-            strSql . Append ( "HAW021=@HAW021 " );
+            strSql . Append ( "HAW021=@HAW021," );
+            strSql . Append ( "HAW024=@HAW024," );
+            strSql . Append ( "HAW025=@HAW025 " );
             strSql . Append ( " where HAW001=@HAW001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@HAW002", SqlDbType.NVarChar,20),
@@ -445,7 +451,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@HAW019", SqlDbType.Bit,1),
                     new SqlParameter("@HAW001", SqlDbType.NVarChar,20),
                     new SqlParameter("@HAW020", SqlDbType.Decimal),
-                    new SqlParameter("@HAW021", SqlDbType.Decimal)
+                    new SqlParameter("@HAW021", SqlDbType.Decimal),
+                    new SqlParameter("@HAW024", SqlDbType.DateTime),
+                    new SqlParameter("@HAW025", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . HAW002;
             parameters [ 1 ] . Value = model . HAW003;
@@ -468,6 +476,8 @@ namespace LineProductMesBll . Dao
             parameters [ 18 ] . Value = model . HAW001;
             parameters [ 19 ] . Value = model . HAW020;
             parameters [ 20 ] . Value = model . HAW021;
+            parameters [ 21 ] . Value = model . HAW024;
+            parameters [ 22 ] . Value = model . HAW025;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBody ( Dictionary<object ,object> SQLString ,StringBuilder strSql ,LineProductMesEntityu . HardWareWorkBodyEntity model )
@@ -806,7 +816,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . HardWareWorkHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "select idx,HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021,HAW022 FROM MIKHAW " );
+            strSql . Append ( "select idx,HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021,HAW022,HAW024,HAW025 FROM MIKHAW " );
             strSql . Append ( " where HAW001=@HAW001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@HAW001", SqlDbType.NVarChar,20)
@@ -931,6 +941,14 @@ namespace LineProductMesBll . Dao
                 {
                     model . HAW022 = row [ "HAW022" ] . ToString ( );
                 }
+                if ( row [ "HAW024" ] != null && row [ "HAW024" ] . ToString ( ) != "" )
+                {
+                    model . HAW024 = DateTime . Parse ( row [ "HAW024" ] . ToString ( ) );
+                }
+                if ( row [ "HAW025" ] != null && row [ "HAW025" ] . ToString ( ) != "" )
+                {
+                    model . HAW025 = DateTime . Parse ( row [ "HAW025" ] . ToString ( ) );
+                }
             }
             return model;
         }
@@ -998,7 +1016,7 @@ namespace LineProductMesBll . Dao
         public DataTable getPrintTre ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "select HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,convert(float,HAW008) HAW008,HAW009,HAW010,HAW011,HAW013,HAW015,HAW016,HAW017,convert(float,HAW020) HAW020,CONVERT(FLOAT,HAW021) HAW021,CONVERT(FLOAT,HAW008*HAW009) U0 FROM MIKHAW WHERE HAW001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "select HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,convert(float,HAW008) HAW008,HAW009,HAW010,HAW011,HAW013,HAW015,HAW016,HAW017,convert(float,HAW020) HAW020,CONVERT(FLOAT,HAW021) HAW021,CONVERT(FLOAT,HAW008*HAW009) U0,HAW024,HAW025 FROM MIKHAW WHERE HAW001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

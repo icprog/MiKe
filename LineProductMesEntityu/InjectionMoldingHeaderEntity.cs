@@ -23,6 +23,8 @@ namespace LineProductMesEntityu
         private decimal? _ija012;
         private decimal? _ija013;
         private string _ija014;
+        private DateTime? _ija015;
+        private DateTime? _ija016;
 
 
         /// <summary>
@@ -236,6 +238,34 @@ namespace LineProductMesEntityu
             set
             {
                 _ija014 = value;
+            }
+        }
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        public DateTime? IJA015
+        {
+            set
+            {
+                _ija015 = value;
+            }
+            get
+            {
+                return _ija015;
+            }
+        }
+        /// <summary>
+        /// 完工时间
+        /// </summary>
+        public DateTime? IJA016
+        {
+            set
+            {
+                _ija016 = value;
+            }
+            get
+            {
+                return _ija016;
             }
         }
     }

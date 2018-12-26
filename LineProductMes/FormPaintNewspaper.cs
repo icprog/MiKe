@@ -31,7 +31,7 @@ namespace LineProductMes
         List<string> idxListOne=new List<string>();
         List<string> idxListTwo=new List<string>();
 
-        DateTime dt;
+        DateTime dt,dtStart,dtEnd;
 
         public FormPaintNewspaper ( )
         {
@@ -47,7 +47,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
+            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = txtPAN015 . Properties . VistaEditTime = txtPAN016 . Properties . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
 
             controlClear ( );
             controlUnEnable ( );
@@ -58,6 +58,8 @@ namespace LineProductMes
             thread . Start ( );
 
             dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
         }
 
         #region Main
@@ -109,6 +111,8 @@ namespace LineProductMes
             txtPAN013 . Text = "计件";
             txtPAN006 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
             addTool ( );
+            txtPAN015 . Text = dtStart . ToString ( );
+            txtPAN016 . Text = dtEnd . ToString ( );
 
             return base . Add ( );
         }
@@ -773,7 +777,7 @@ namespace LineProductMes
         }
         private void bandedGridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
         {
-            if ( e . Column . FieldName == "U3" )
+            if ( e . Column . FieldName == "PPA014" )
             {
                 if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
                 {
@@ -784,42 +788,7 @@ namespace LineProductMes
         }
         private void txtPAN013_SelectedValueChanged ( object sender ,EventArgs e )
         {
-            bandedGridView1 . CloseEditor ( );
-            bandedGridView1 . UpdateCurrentRow ( );
-
-            if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
-                return;
-
-            foreach ( DataRow row in tableViewTwo . Rows )
-            {
-                if ( txtPAN013 . Text == string . Empty )
-                {
-                    row [ "PPA005" ] = DBNull . Value;
-                    row [ "PPA006" ] = DBNull . Value;
-                    row [ "PPA007" ] = DBNull . Value;
-                    row [ "PPA008" ] = DBNull . Value;
-                    row [ "PPA012" ] = DBNull . Value;
-                    row [ "PPA013" ] = DBNull . Value;
-                }
-                else if ( txtPAN013 . Text . Equals ( "计件" ) )
-                {
-                    row [ "PPA005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    row [ "PPA006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-                    row [ "PPA007" ] = DBNull . Value;
-                    row [ "PPA008" ] = DBNull . Value;
-                    row [ "PPA013" ] = DBNull . Value;
-                }
-                else if ( txtPAN013 . Text . Equals ( "计时" ) )
-                {
-                    row [ "PPA005" ] = DBNull . Value;
-                    row [ "PPA006" ] = DBNull . Value;
-                    row [ "PPA012" ] = DBNull . Value;
-                    row [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    row [ "PPA008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-                    //row [ "PPA013" ] = DBNull . Value;
-                }
-                calcuTimeSum ( );
-            }
+            updateBatchTime ( );
         }
         private void gridControl1_KeyPress ( object sender ,KeyPressEventArgs e )
         {
@@ -853,22 +822,64 @@ namespace LineProductMes
                 gridControl2 . Refresh ( );
             }
         }
+        private void txtPAN016_EditValueChanged ( object sender ,EventArgs e )
+        {
+            updateBatchTime ( );
+        }
+        void updateBatchTime ( )
+        {
+            if ( txtPAN013 . Text == string . Empty )
+                return;
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
+                return;
+
+            if ( !string . IsNullOrEmpty ( txtPAN015 . Text ) )
+                dtStart = Convert . ToDateTime ( txtPAN015 . Text );
+            if ( !string . IsNullOrEmpty ( txtPAN016 . Text ) )
+                dtEnd = Convert . ToDateTime ( txtPAN016 . Text );
+
+            foreach ( DataRow row in tableViewTwo . Rows )
+            {
+                 if ( txtPAN013 . Text . Equals ( "计件" ) )
+                {
+                    row [ "PPA005" ] = dtStart;
+                    row [ "PPA006" ] = dtEnd;
+                    row [ "PPA007" ] = DBNull . Value;
+                    row [ "PPA008" ] = DBNull . Value;
+                    row [ "PPA013" ] = DBNull . Value;
+                }
+                else if ( txtPAN013 . Text . Equals ( "计时" ) )
+                {
+                    row [ "PPA005" ] = DBNull . Value;
+                    row [ "PPA006" ] = DBNull . Value;
+                    row [ "PPA012" ] = DBNull . Value;
+                    row [ "PPA007" ] = dtStart;
+                    row [ "PPA008" ] = dtEnd;
+                    //row [ "PPA013" ] = DBNull . Value;
+                }
+                calcuTimeSum ( );
+            }
+        }
         #endregion
 
         #region Method
         void controlUnEnable ( )
         {
-             txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly =txtPAN011.ReadOnly=txtPAN012.ReadOnly=txtPAN013.ReadOnly= true;
+             txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly =txtPAN011.ReadOnly=txtPAN012.ReadOnly=txtPAN013.ReadOnly= txtPAN015 . ReadOnly = txtPAN016 . ReadOnly = true;
             bandedGridView1 . OptionsBehavior . Editable = gridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly = txtPAN011 . ReadOnly = txtPAN012 . ReadOnly = txtPAN013 . ReadOnly = false;
+            txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly = txtPAN011 . ReadOnly = txtPAN012 . ReadOnly = txtPAN013 . ReadOnly = txtPAN015 . ReadOnly = txtPAN016 . ReadOnly = false;
             bandedGridView1 . OptionsBehavior . Editable = gridView1 . OptionsBehavior . Editable = true;
         }
         void controlClear ( )
         {
-            txtPAN001 . Text = txtPAN003 . Text = txtPAN005 . Text = txtPAN006 . Text = txtPAN007 . Text = txtPAN011 . Text = txtPAN012 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text =txtPAN013.Text= string . Empty;
+            txtPAN001 . Text = txtPAN003 . Text = txtPAN005 . Text = txtPAN006 . Text = txtPAN007 . Text = txtPAN011 . Text = txtPAN012 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text =txtPAN013.Text= txtPAN015 . Text = txtPAN016 . Text = string . Empty;
             gridControl1 . DataSource = gridControl2 . DataSource = null;
             layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             wait . Hide ( );
@@ -911,6 +922,9 @@ namespace LineProductMes
             txtPAN011 . Text = Convert . ToDecimal ( _header . PAN011 ) . ToString ( "0.#" );
             txtPAN012 . Text = Convert . ToDecimal ( _header . PAN012 ) . ToString ( "0.#" );
             txtPAN013 . Text = _header . PAN013;
+            txtPAN015 . Text = _header . PAN015 . ToString ( );
+            txtPAN016 . Text = _header . PAN016 . ToString ( );
+
             layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             Graph . grPic ( pictureEdit1 ,"反" );
             if ( _header . PAN009 )
@@ -1010,35 +1024,6 @@ namespace LineProductMes
             if ( result == false )
                 return false;
 
-            //var query = from p in tableViewOne . AsEnumerable ( )
-            //            group p by new
-            //            {
-            //                p1 = p . Field<string> ( "PAO002" ),
-            //                p2 = p . Field<string> ( "PAO013" )
-            //            } into m
-            //            select new
-            //            {
-            //                pao002 = m . Key . p1 ,
-            //                pao013 = m . Key . p2 ,
-            //                count = m . Count ( )
-            //            };
-
-            //if ( query != null )
-            //{
-            //    foreach ( var x in query )
-            //    {
-            //        if ( x . count > 1 )
-            //        {
-            //            XtraMessageBox . Show ( "来源工单:" + x . pao002 + "\n\r序号:" + x . pao013 + "\n\r重复,请核实" );
-            //            result = false;
-            //            break;
-            //        }
-            //    }
-            //}
-
-            //if ( result == false )
-            //    return false;
-
             bandedGridView1 . CloseEditor ( );
             bandedGridView1 . UpdateCurrentRow ( );
             if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
@@ -1093,6 +1078,18 @@ namespace LineProductMes
                 return false;
             }
 
+            if ( string . IsNullOrEmpty ( txtPAN015 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择开工日期" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtPAN016 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择完工日期" );
+                return false;
+            }
+            _header . PAN015 = Convert . ToDateTime ( txtPAN015 . Text );
+            _header . PAN016 = Convert . ToDateTime ( txtPAN016 . Text );
             _header . PAN001 = txtPAN001 . Text;
             _header . PAN002 = txtPAN003 . EditValue . ToString ( );
             _header . PAN003 = txtPAN003 . Text;
@@ -1138,8 +1135,8 @@ namespace LineProductMes
             if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
                 return;
 
-            decimal pan011 = txtPAN011 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtPAN011 . Text ) * 60;
-            decimal pan012 = txtPAN012 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtPAN012 . Text ) * 60;
+            decimal pan011 = txtPAN011 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtPAN011 . Text );
+            decimal pan012 = txtPAN012 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtPAN012 . Text );
 
             DateTime dtOne, dtTwo;
             decimal u0 = 0M;
@@ -1159,16 +1156,16 @@ namespace LineProductMes
                     dtOne = Convert . ToDateTime ( row [ "PPA005" ] );
                     dtTwo = Convert . ToDateTime ( row [ "PPA006" ] );
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( pan011 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( pan011 ) - Convert . ToDecimal ( pan012 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( pan012 );
 
                     row [ "PPA012" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }
@@ -1179,16 +1176,16 @@ namespace LineProductMes
                     dtOne = Convert . ToDateTime ( row [ "PPA007" ] );
                     dtTwo = Convert . ToDateTime ( row [ "PPA008" ] );
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan011 ) - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( pan011 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( pan011 ) - Convert . ToDecimal ( pan012 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( pan012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( pan012 );
 
                     row [ "PPA013" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }

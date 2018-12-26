@@ -6,20 +6,20 @@ using System . Threading . Tasks;
 
 namespace LineProductMesEntityu
 {
-    public class LogisticsNewHeaderEntity
+    public class AssNewWorkBodyAnnEntity
     {
+        #region Model
         private int _idx;
-        private string _lgn001;
-        private DateTime? _lgn002;
-        private bool _lgn003;
-        private bool _lgn004;
-        private decimal? _lgn005;
-        private decimal? _lgn006;
-        private string _lgn007;
-        private string _lgn008;
-        private DateTime? _lgn009;
-        private DateTime? _lgn010;
-
+        private string _ann001;
+        private string _ann002;
+        private string _ann003;
+        private string _ann004;
+        private string _ann005;
+        private string _ann006;
+        private int? _ann007;
+        private decimal? _ann008;
+        private int? _ann009;
+        private string _ann010;
         /// <summary>
         /// 
         /// </summary>
@@ -37,145 +37,143 @@ namespace LineProductMesEntityu
         /// <summary>
         /// 单号
         /// </summary>
-        public string LGN001
+        public string ANN001
         {
             set
             {
-                _lgn001 = value;
+                _ann001 = value;
             }
             get
             {
-                return _lgn001;
+                return _ann001;
             }
         }
         /// <summary>
-        /// 日期
+        /// 来源工单
         /// </summary>
-        public DateTime? LGN002
+        public string ANN002
         {
             set
             {
-                _lgn002 = value;
+                _ann002 = value;
             }
             get
             {
-                return _lgn002;
+                return _ann002;
             }
         }
         /// <summary>
-        /// 审核
+        /// 品号
         /// </summary>
-        public bool LGN003
+        public string ANN003
         {
             set
             {
-                _lgn003 = value;
+                _ann003 = value;
             }
             get
             {
-                return _lgn003;
+                return _ann003;
             }
         }
         /// <summary>
-        /// 注销
+        /// 品名
         /// </summary>
-        public bool LGN004
+        public string ANN004
         {
             set
             {
-                _lgn004 = value;
+                _ann004 = value;
             }
             get
             {
-                return _lgn004;
+                return _ann004;
             }
         }
         /// <summary>
-        /// 午休
+        /// 规格
         /// </summary>
-        public decimal? LGN005
+        public string ANN005
         {
             set
             {
-                _lgn005 = value;
+                _ann005 = value;
             }
             get
             {
-                return _lgn005;
+                return _ann005;
             }
         }
         /// <summary>
-        /// 晚休
+        /// 单位
         /// </summary>
-        public decimal? LGN006
+        public string ANN006
         {
-            get
-            {
-                return _lgn006;
-            }
-
             set
             {
-                _lgn006 = value;
+                _ann006 = value;
+            }
+            get
+            {
+                return _ann006;
             }
         }
         /// <summary>
-        /// 工资类型
+        /// 工单数量
         /// </summary>
-        public string LGN007
+        public int? ANN007
         {
-            get
-            {
-                return _lgn007;
-            }
-
             set
             {
-                _lgn007 = value;
+                _ann007 = value;
+            }
+            get
+            {
+                return _ann007;
             }
         }
         /// <summary>
-        /// 制单
+        /// 产品单价
         /// </summary>
-        public string LGN008
+        public decimal? ANN008
         {
-            get
-            {
-                return _lgn008;
-            }
-
             set
             {
-                _lgn008 = value;
+                _ann008 = value;
+            }
+            get
+            {
+                return _ann008;
             }
         }
         /// <summary>
-        /// 开工时间
+        /// 完工数量
         /// </summary>
-        public DateTime? LGN009
+        public int? ANN009
         {
             set
             {
-                _lgn009 = value;
+                _ann009 = value;
             }
             get
             {
-                return _lgn009;
+                return _ann009;
             }
         }
         /// <summary>
-        /// 完工时间
+        /// 备注
         /// </summary>
-        public DateTime? LGN010
+        public string ANN010
         {
             set
             {
-                _lgn010 = value;
+                _ann010 = value;
             }
             get
             {
-                return _lgn010;
+                return _ann010;
             }
         }
+        #endregion Model
     }
 }

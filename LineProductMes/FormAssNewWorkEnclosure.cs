@@ -25,7 +25,7 @@ namespace LineProductMes
         int selectIdx;
         List<string> idxOne;
         List<string> idxTwo;
-        DateTime dt;
+        DateTime dt,dtStart,dtEnd;
 
         public FormAssNewWorkEnclosure ( )
         {
@@ -43,7 +43,7 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            Edit5 . VistaEditTime = Edit6 . VistaEditTime =Edit9.VistaEditTime=Edit10.VistaEditTime= DevExpress . Utils . DefaultBoolean . True;
+            Edit5 . VistaEditTime = Edit6 . VistaEditTime = Edit9 . VistaEditTime = Edit10 . VistaEditTime = txtANT014 . Properties . VistaEditTime = txtANT015 . Properties . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
 
             layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
 
@@ -52,6 +52,10 @@ namespace LineProductMes
             wait . Hide ( );
 
             dt = LineProductMesBll . UserInfoMation . sysTime;
+
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
+
             InitData ( );
         }
 
@@ -103,7 +107,9 @@ namespace LineProductMes
             txtANT003 . EditValue = "0507";
             txtANT008 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
             txtANT011 . Text = "计时";
-           
+
+            txtANT014 . Text = dtStart . ToString ( );
+            txtANT015 . Text = dtEnd . ToString ( );
 
             layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
 
@@ -473,11 +479,11 @@ namespace LineProductMes
                 {
                     if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        row [ "ANV005" ] = dtStart;
                     }
                     if ( row [ "ANV006" ] == null || row [ "ANV006" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        row [ "ANV006" ] = dtEnd;
                     }
                     row [ "ANV013" ] = DBNull . Value;
                     row [ "ANV014" ] = DBNull . Value;
@@ -486,11 +492,11 @@ namespace LineProductMes
                 {
                     if ( row [ "ANV013" ] == null || row [ "ANV013" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "ANV013" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        row [ "ANV013" ] = dtStart;
                     }
                     if ( row [ "ANV014" ] == null || row [ "ANV014" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "ANV014" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        row [ "ANV014" ] = dtEnd;
                     }
                     row [ "ANV005" ] = DBNull . Value;
                     row [ "ANV006" ] = DBNull . Value;
@@ -519,11 +525,11 @@ namespace LineProductMes
                     {
                         if ( row [ "ANV005" ] == null || row [ "ANV005" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "ANV005" ] = dtStart;
                         }
                         if ( row [ "ANV006" ] == null || row [ "ANV006" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "ANV006" ] = dtEnd;
                         }
                         row [ "ANV013" ] = DBNull . Value;
                         row [ "ANV014" ] = DBNull . Value;
@@ -532,11 +538,11 @@ namespace LineProductMes
                     {
                         if ( row [ "ANV013" ] == null || row [ "ANV013" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "ANV013" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "ANV013" ] = dtStart;
                         }
                         if ( row [ "ANV014" ] == null || row [ "ANV014" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "ANV014" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "ANV014" ] = dtEnd;
                         }
                         row [ "ANV005" ] = DBNull . Value;
                         row [ "ANV006" ] = DBNull . Value;
@@ -650,13 +656,13 @@ namespace LineProductMes
                         row [ "ANV008" ] = ro [ "DAA002" ];
                         if ( "计时" . Equals ( txtANT011 . Text ) )
                         {
-                            row [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                            row [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "ANV005" ] = dtStart;
+                            row [ "ANV006" ] = dtEnd;
                         }
                         else if ( "计件" . Equals ( txtANT011 . Text ) )
                         {
-                            row [ "ANV013" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                            row [ "ANV014" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "ANV013" ] = dtStart;
+                            row [ "ANV014" ] = dtEnd;
                         }
                         row [ "ANV007" ] = "在职";
                         tableViewTwo . Rows . Add ( row );
@@ -677,13 +683,13 @@ namespace LineProductMes
                         row [ "ANV008" ] = ro [ "DAA002" ];
                         if ( "计时" . Equals ( txtANT011 . Text ) )
                         {
-                            row [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                            row [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "ANV005" ] = dtStart;
+                            row [ "ANV006" ] = dtEnd;
                         }
                         else if ( "计件" . Equals ( txtANT011 . Text ) )
                         {
-                            row [ "ANV013" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                            row [ "ANV014" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "ANV013" ] = dtStart;
+                            row [ "ANV014" ] = dtEnd;
                         }
                         row [ "ANV007" ] = "在职";
                         tableViewTwo . Rows . Add ( row );
@@ -776,26 +782,45 @@ namespace LineProductMes
             if ( string . IsNullOrEmpty ( txtANT011 . Text ) )
                 return;
 
+            updateBatchTime ( );
+        }
+        private void txtANT014_EditValueChanged ( object sender ,EventArgs e )
+        {
+            //开工
+            updateBatchTime ( );
+        }
+        private void txtANT015_EditValueChanged ( object sender ,EventArgs e )
+        {
+            //完工
+            updateBatchTime ( );
+        }
+        void updateBatchTime ( )
+        {
             bandedGridView1 . CloseEditor ( );
             bandedGridView1 . UpdateCurrentRow ( );
 
             if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
                 return;
 
+            if ( !string . IsNullOrEmpty ( txtANT014 . Text ) )
+                dtStart = Convert . ToDateTime ( txtANT014 . Text );
+            if ( !string . IsNullOrEmpty ( txtANT015 . Text ) )
+                dtEnd = Convert . ToDateTime ( txtANT015 . Text );
+
             foreach ( DataRow row in tableViewTwo . Rows )
             {
                 if ( "计时" . Equals ( txtANT011 . Text ) )
                 {
-                    row [ "ANV005" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    row [ "ANV006" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "ANV005" ] = dtStart;
+                    row [ "ANV006" ] = dtEnd;
                     row [ "ANV013" ] = DBNull . Value;
                     row [ "ANV014" ] = DBNull . Value;
                     row [ "ANV015" ] = DBNull . Value;
                 }
                 else if ( "计件" . Equals ( txtANT011 . Text ) )
                 {
-                    row [ "ANV013" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    row [ "ANV014" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "ANV013" ] = dtStart;
+                    row [ "ANV014" ] = dtEnd;
                     row [ "ANV005" ] = DBNull . Value;
                     row [ "ANV006" ] = DBNull . Value;
                     row [ "ANV009" ] = DBNull . Value;
@@ -808,17 +833,17 @@ namespace LineProductMes
         #region Method
         void controlUnEnable ( )
         {
-            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = txtANT011.ReadOnly = txtANT012 . ReadOnly = true;
+            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = txtANT011 . ReadOnly = txtANT012 . ReadOnly = txtANT014 . ReadOnly = txtANT015 . ReadOnly = true;
             gridView1 . OptionsBehavior . Editable = bandedGridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = txtANT011 . ReadOnly = txtANT012 . ReadOnly = false;
+            txtANT003 . ReadOnly = txtANT005 . ReadOnly = txtANT009 . ReadOnly = txtANT010 . ReadOnly = txtANT011 . ReadOnly = txtANT012 . ReadOnly = txtANT014 . ReadOnly = txtANT015 . ReadOnly = false;
             gridView1 . OptionsBehavior . Editable = bandedGridView1 . OptionsBehavior . Editable = true;
         }
         void controlClear ( )
         {
-            txtANT001 . Text = txtANT003 . Text = txtANT005 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtANT009 . Text = txtANT010 . Text = txtANT011.Text=txtANT012.Text= string . Empty;
+            txtANT001 . Text = txtANT003 . Text = txtANT005 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtANT009 . Text = txtANT010 . Text = txtANT011.Text=txtANT012.Text= txtANT014 . Text = txtANT015 . Text = string . Empty;
             gridControl1 . DataSource = null;
             gridControl2 . DataSource = null;
         }
@@ -863,6 +888,16 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "请选择班组" );
                 return false;
             }
+            if ( string . IsNullOrEmpty ( txtANT014 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择开工时间" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtANT015 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择完工时间" );
+                return false;
+            }
             gridView1 . CloseEditor ( );
             gridView1 . UpdateCurrentRow ( );
             if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
@@ -883,6 +918,8 @@ namespace LineProductMes
             _header . ANT010 = string . IsNullOrEmpty ( txtANT010 . Text ) == true ? 0 : Convert . ToDecimal ( txtANT010 . Text );
             _header . ANT011 = txtANT011 . Text;
             _header . ANT012 = txtANT012 . Text;
+            _header . ANT014 = Convert . ToDateTime ( txtANT014 . Text );
+            _header . ANT015 = Convert . ToDateTime ( txtANT015 . Text );
             gridView1 . ClearColumnErrors ( );
             for ( int i = 0 ; i < gridView1 . RowCount ; i++ )
             {
@@ -1008,6 +1045,8 @@ namespace LineProductMes
             txtANT008 . Text = Convert . ToDateTime ( _header . ANT008 ) . ToString ( "yyyy-MM-dd" );
             txtANT011 . Text = _header . ANT011;
             txtANT012 . Text = _header . ANT012;
+            txtANT014 . Text = _header . ANT014 . ToString ( );
+            txtANT015 . Text = _header . ANT015 . ToString ( );
             Graph . grPic ( pictureEdit1 ,"反" );
             layoutControlItem7 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             if ( _header . ANT006 )
@@ -1078,9 +1117,9 @@ namespace LineProductMes
             DateTime dtOne, dtTwo;
             decimal sunNum = 0, tTime = 0;
 
-            decimal ant009 = txtANT009 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtANT009 . Text ) * 60;
-            decimal ant010 = txtANT010 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtANT010 . Text ) * 60;
-
+            decimal ant009 = txtANT009 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtANT009 . Text );
+            decimal ant010 = txtANT010 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtANT010 . Text );
+            
             foreach ( DataRow row in tableViewTwo . Rows )
             {
                 //ANV007
@@ -1096,15 +1135,15 @@ namespace LineProductMes
                 {
                     dtOne = Convert . ToDateTime ( row [ "ANV005" ] . ToString ( ) );
                     dtTwo = Convert . ToDateTime ( row [ "ANV006" ] . ToString ( ) );
-                    sunNum = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if (dtTwo.CompareTo(Convert.ToDateTime("17:30"))>0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ant009 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ant009 ) - Convert . ToDecimal ( ant010 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ant010 );
                     row [ "ANV009" ] = Math . Round ( sunNum ,1 ,MidpointRounding . AwayFromZero );
                  
                 }
@@ -1117,15 +1156,15 @@ namespace LineProductMes
                 {
                     dtOne = Convert . ToDateTime ( row [ "ANV013" ] . ToString ( ) );
                     dtTwo = Convert . ToDateTime ( row [ "ANV014" ] . ToString ( ) );
-                    sunNum = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant009 ) - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ant009 );
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ant009 ) - Convert . ToDecimal ( ant010 );
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        sunNum = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ant010 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        sunNum = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ant010 );
                     row [ "ANV015" ] = Math . Round ( sunNum ,1 ,MidpointRounding . AwayFromZero );
                 }
                 else
@@ -1194,8 +1233,8 @@ namespace LineProductMes
                     rows [ "ANV003" ] = ro [ "EMP002" ] . ToString ( );
                     rows [ "ANV004" ] = ro [ "EMP007" ] . ToString ( );
                     rows [ "ANV008" ] = ro [ "DAA002" ] . ToString ( );
-                    rows [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                    rows [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                    rows [ "ANV005" ] = dtStart;
+                    rows [ "ANV006" ] = dtEnd;
                     rows [ "ANV007" ] = "在职";
                     tableViewTwo . Rows . Add ( rows );
                 }
@@ -1211,8 +1250,8 @@ namespace LineProductMes
                         rows [ "ANV003" ] = ro [ "EMP002" ] . ToString ( );
                         rows [ "ANV004" ] = ro [ "EMP007" ] . ToString ( );
                         rows [ "ANV008" ] = ro [ "DAA002" ] . ToString ( );
-                        rows [ "ANV005" ] = dtNow . ToString ( "yyyy-MM-dd 08:00" );
-                        rows [ "ANV006" ] = dtNow . ToString ( "yyyy-MM-dd 17:00" );
+                        rows [ "ANV005" ] = dtStart;
+                        rows [ "ANV006" ] = dtEnd;
                         rows [ "ANV007" ] = "在职";
                         tableViewTwo . Rows . Add ( rows );
                     }

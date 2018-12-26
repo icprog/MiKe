@@ -16,7 +16,7 @@ namespace LineProductMes
         Thread thread; SynchronizationContext m_SyncContext = null;
         DataTable tableView,tablColumn;
         string oddNum=string.Empty;
-
+        
         public FormLEDNewsQuery ( )
         {
             InitializeComponent ( );

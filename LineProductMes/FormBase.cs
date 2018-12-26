@@ -14,7 +14,7 @@ namespace LineProductMes
         public FormBase ( )
         {
             InitializeComponent ( );
-
+            
             //strFeel = config . AppSettings . Settings [ "Feed" ] . Value;
             //if ( string . IsNullOrEmpty ( strFeel ) )
             //    strFeel = "Office 2013 Light Gray";

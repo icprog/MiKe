@@ -65,6 +65,15 @@ namespace LineProductMesBll . Bll
         {
             return dal . getTableView ( strWhere );
         }
+        /// <summary>
+        /// 获取数据列表
+        /// </summary>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public DataTable getTableViewOne ( string strWhere )
+        {
+            return dal . getTableViewOne ( strWhere );
+        }
 
         /// <summary>
         /// 获取来源工单等信息
@@ -120,9 +129,9 @@ namespace LineProductMesBll . Bll
         /// <param name="_header"></param>
         /// <param name="tableView"></param>
         /// <returns></returns>
-        public bool Save ( LineProductMesEntityu . AssNewWorkHeaderEntity _header ,DataTable tableView )
+        public bool Save ( LineProductMesEntityu . AssNewWorkHeaderEntity _header ,DataTable tableView ,DataTable tableViewTwo )
         {
-            return dal . Save ( _header ,tableView );
+            return dal . Save ( _header ,tableView ,tableViewTwo );
         }
 
         /// <summary>
@@ -132,9 +141,9 @@ namespace LineProductMesBll . Bll
         /// <param name="tableView"></param>
         /// <param name="idxList"></param>
         /// <returns></returns>
-        public bool Edit ( LineProductMesEntityu . AssNewWorkHeaderEntity _header ,DataTable tableView ,List<string> idxList )
+        public bool Edit ( LineProductMesEntityu . AssNewWorkHeaderEntity _header ,DataTable tableView ,List<string> idxList ,DataTable tableViewTwo ,List<string> idxListOne )
         {
-            return dal . Edit ( _header ,tableView ,idxList );
+            return dal . Edit ( _header ,tableView ,idxList ,tableViewTwo ,idxListOne );
         }
 
         /// <summary>
@@ -207,6 +216,29 @@ namespace LineProductMesBll . Bll
         public DataTable getTablePrintFor ( string oddNum )
         {
             return dal . getTablePrintFor ( oddNum );
+        }
+
+
+        /// <summary>
+        /// 获取打印列表  报工单
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getTablePrintFiv ( string oddNum )
+        {
+            return dal . getTablePrintFiv ( oddNum );
+        }
+
+        /// <summary>
+        /// 获取未完工数量
+        /// </summary>
+        /// <param name="orderNum"></param>
+        /// <param name="proNum"></param>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        public DataTable getTableOtherSur ( string orderNum ,string proNum ,string oddNum )
+        {
+            return dal . getTableOtherSur ( orderNum ,proNum ,oddNum );
         }
 
     }

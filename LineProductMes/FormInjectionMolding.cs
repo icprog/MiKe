@@ -34,6 +34,8 @@ namespace LineProductMes
         string state=string.Empty,strWhere=string.Empty,focuseName=string.Empty;
         bool result=false;
 
+        DateTime dt,dtStart,dtEnd;
+
         public FormInjectionMolding ( )
         {
             InitializeComponent ( );
@@ -52,18 +54,23 @@ namespace LineProductMes
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
-            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = dt5 . VistaEditTime = dt6 . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
+            dt1 . VistaEditTime = dt2 . VistaEditTime = dt3 . VistaEditTime = dt4 . VistaEditTime = dt5 . VistaEditTime = dt6 . VistaEditTime = txtIJA015 . Properties . VistaEditTime = txtIJA016 . Properties . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
 
             wait . Hide ( );
 
             controlClear ( );
             controlUnEnable ( );
 
-            Task task = new Task ( InitData );
-            task . Start ( );
+            //Task task = new Task ( InitData );
+            //task . Start ( );
+            InitData ( );
 
             this . thread = new Thread ( new ThreadStart ( this . ThreadProcSafePost ) );
             this . thread . Start ( );
+
+            dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
         }
 
         #region Main
@@ -88,9 +95,7 @@ namespace LineProductMes
 
                 calcuSumTime ( );
 
-
                 editOther ( string . Empty ,string . Empty );
-
 
                 controlUnEnable ( );
                 QueryTool ( );
@@ -107,6 +112,9 @@ namespace LineProductMes
             //txtIJA002 . Text = "计件";
             txtIJA004 . EditValue = "0502";
             txtIJA007 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
+
+            txtIJA015 . Text = dtStart . ToString ( );
+            txtIJA016 . Text = dtEnd . ToString ( );
 
             addTool ( );
 
@@ -350,90 +358,7 @@ namespace LineProductMes
                 xtraTabControl1 . SelectedTabPage = PageTwo;
             }
 
-            calcuSumTime ( );
-
-            //if ( txtIJA006 . EditValue == null || txtIJA006 . EditValue . ToString ( ) == string . Empty )
-            //    return;
-
-            //DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
-            //if ( txtIJA002 . Text . Equals ( "计件" ) )
-            //{
-            //    if ( tableViewOne == null )
-            //        return;
-            //        DataRow [ ] rows = tableUser . Select ( "EMP005='" + txtIJA006 . EditValue + "'" );
-            //    if ( rows == null )
-            //        return;
-            //    if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
-            //    {
-            //        foreach ( DataRow r in rows )
-            //        {
-            //            row = tableViewOne . NewRow ( );
-            //            row [ "IJB003" ] = "在职";
-            //            row [ "IJB002" ] = r [ "EMP001" ];
-            //            row [ "IJB012" ] = r [ "EMP002" ];
-            //            row [ "IJB013" ] = r [ "EMP007" ];
-            //            row [ "IJB016" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-            //            row [ "IJB017" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-            //            tableViewOne . Rows . Add ( row );
-            //        }
-            //    }
-            //    else
-            //    {
-            //        foreach ( DataRow r in rows )
-            //        {
-            //            if ( tableViewOne . Select ( "IJB002='" + r [ "EMP001" ] + "'" ) . Length < 1 )
-            //            {
-            //                row = tableViewOne . NewRow ( );
-            //                row [ "IJB003" ] = "在职";
-            //                row [ "IJB002" ] = r [ "EMP001" ];
-            //                row [ "IJB012" ] = r [ "EMP002" ];
-            //                row [ "IJB013" ] = r [ "EMP007" ];
-            //                row [ "IJB016" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-            //                row [ "IJB017" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-            //                tableViewOne . Rows . Add ( row );
-            //            }
-            //        }
-            //    }
-            //}
-            //else if ( txtIJA002 . Text . Equals ( "计时" ) )
-            //{
-            //    if ( tableViewTre == null )
-            //        return;
-            //    DataRow [ ] rows = tablePer . Select ( "EMP005='" + txtIJA006 . EditValue + "'" );
-            //    if ( rows == null )
-            //        return;
-            //    if ( tableViewTre == null || tableViewTre . Rows . Count < 1 )
-            //    {
-            //        foreach ( DataRow r in rows )
-            //        {
-            //            row = tableViewTre . NewRow ( );
-            //            row [ "IJD002" ] = r [ "EMP001" ];
-            //            row [ "IJD003" ] = r [ "EMP002" ];
-            //            row [ "IJD004" ] = r [ "EMP007" ];
-            //            row [ "IJD006" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-            //            row [ "IJD007" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-            //            row [ "IJD010" ] = "在职";
-            //            tableViewTre . Rows . Add ( row );
-            //        }
-            //    }
-            //    else
-            //    {
-            //        foreach ( DataRow r in rows )
-            //        {
-            //            if ( tableViewTre . Select ( "IJD002='" + r [ "EMP001" ] + "'" ) . Length < 1 )
-            //            {
-            //                row = tableViewTre . NewRow ( );
-            //                row [ "IJD002" ] = r [ "EMP001" ];
-            //                row [ "IJD003" ] = r [ "EMP002" ];
-            //                row [ "IJD004" ] = r [ "EMP007" ];
-            //                row [ "IJD006" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-            //                row [ "IJD007" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-            //                row [ "IJD010" ] = "在职";
-            //                tableViewTre . Rows . Add ( row );
-            //            }
-            //        }
-            //    }
-            //}
+            updateBatchTime ( );
         }
         private void txtIJA006_EditValueChanged ( object sender ,EventArgs e )
         {
@@ -575,14 +500,14 @@ namespace LineProductMes
             }
             else if ( e . Column . FieldName == "IJB002" || e . Column . FieldName == "IJB004" )
             {
-                DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
+                
                 if ( row [ "IJB016" ] == null || row [ "IJB016" ] . ToString ( ) == string . Empty )
                 {
-                    row [ "IJB016" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    row [ "IJB016" ] = dtStart;
                 }
                 if ( row [ "IJB017" ] == null || row [ "IJB017" ] . ToString ( ) == string . Empty )
                 {
-                    row [ "IJB017" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "IJB017" ] = dtEnd;
                 }
                 if ( row [ "IJB003" ] == null || row [ "IJB003" ] . ToString ( ) == string . Empty )
                 {
@@ -713,11 +638,11 @@ namespace LineProductMes
                 DateTime dt = LineProductMesBll . UserInfoMation . sysTime;
                 if ( row [ "IJD006" ] == null || row [ "IJD006" ] . ToString ( ) == string . Empty )
                 {
-                    row [ "IJD006" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                    row [ "IJD006" ] = dtStart;
                 }
                 if ( row [ "IJD007" ] == null || row [ "IJD007" ] . ToString ( ) == string . Empty )
                 {
-                    row [ "IJD007" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "IJD007" ] = dtEnd;
                 }
                 if ( row [ "IJD010" ] == null || row [ "IJD010" ] . ToString ( ) == string . Empty )
                 {
@@ -912,7 +837,7 @@ namespace LineProductMes
             {
                 e . Appearance . BackColor = System . Drawing . Color . LightSteelBlue;
             }
-            if ( e . Column . FieldName == "U3" )
+            if ( e . Column . FieldName == "IJB025" )
             {
                 if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
                 {
@@ -928,6 +853,17 @@ namespace LineProductMes
                 e . Appearance . BackColor = System . Drawing . Color . LightSteelBlue;
             }
         }
+        private void gridView4_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
+        {
+            if ( e . Column . FieldName == "IJD013" )
+            {
+                if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
+                {
+                    if ( Convert . ToDecimal ( e . CellValue ) >= 200 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
+        }
         private void bandedGridView1_RowCellClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellClickEventArgs e )
         {
             focuseName = e . Column . FieldName;
@@ -936,38 +872,80 @@ namespace LineProductMes
         {
             CopyUtils . copyResult ( bandedGridView1 ,focuseName );
         }
+        private void txtIJA016_EditValueChanged_1 ( object sender ,EventArgs e )
+        {
+            updateBatchTime ( );
+        }
+        void updateBatchTime ( )
+        {
+            if ( string . IsNullOrEmpty ( txtIJA002 . Text ) )
+                return;
+
+            if ( !string . IsNullOrEmpty ( txtIJA015 . Text ) )
+                dtStart = Convert . ToDateTime ( txtIJA015 . Text );
+            if ( !string . IsNullOrEmpty ( txtIJA016 . Text ) )
+                dtEnd = Convert . ToDateTime ( txtIJA016 . Text );
+
+            if ( "计件" . Equals ( txtIJA002 . Text ) )
+            {
+                bandedGridView1 . CloseEditor ( );
+                bandedGridView1 . UpdateCurrentRow ( );
+
+                if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
+                    return;
+                foreach ( DataRow row in tableViewOne . Rows )
+                {
+                    row [ "IJB016" ] = dtStart;
+                    row [ "IJB017" ] = dtEnd;
+                }
+            }
+            else if ( "计时" . Equals ( txtIJA002 . Text ) )
+            {
+                gridView4 . CloseEditor ( );
+                gridView4 . UpdateCurrentRow ( );
+
+                if ( tableViewTre == null || tableViewTre . Rows . Count < 1 )
+                    return;
+                foreach ( DataRow row in tableViewTre . Rows )
+                {
+                    row [ "IJD006" ] = dtStart;
+                    row [ "IJD007" ] = dtEnd;
+                }
+            }
+            calcuSumTime ( );
+        }
         #endregion
 
         #region Method
         void controlUnEnable ( )
         {
-            txtIJA002 . ReadOnly = txtIJA004 . ReadOnly = txtIJA006 . ReadOnly = txtIJA008 . ReadOnly = txtIJA012 . ReadOnly = txtIJA013 . ReadOnly = true;
+            txtIJA002 . ReadOnly = txtIJA004 . ReadOnly = txtIJA006 . ReadOnly = txtIJA008 . ReadOnly = txtIJA012 . ReadOnly = txtIJA013 . ReadOnly =txtIJA015.ReadOnly=txtIJA016.ReadOnly= true;
             bandedGridView1 . OptionsBehavior . Editable = gridView2 . OptionsBehavior . Editable = gridView4 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtIJA002 . ReadOnly = txtIJA004 . ReadOnly = txtIJA006 . ReadOnly = txtIJA008 . ReadOnly = txtIJA012 . ReadOnly = txtIJA013 . ReadOnly = false;
+            txtIJA002 . ReadOnly = txtIJA004 . ReadOnly = txtIJA006 . ReadOnly = txtIJA008 . ReadOnly = txtIJA012 . ReadOnly = txtIJA013 . ReadOnly = txtIJA015 . ReadOnly = txtIJA016 . ReadOnly = false;
             bandedGridView1 . OptionsBehavior . Editable = gridView2 . OptionsBehavior . Editable = gridView4 . OptionsBehavior . Editable = true;
         }
         void controlClear ( )
         {
-            txtIJA001 . Text = txtIJA002 . Text = txtIJA004 . Text = txtIJA006 . Text = txtIJA007 . Text = txtIJA008 . Text = txtIJA012 . Text = txtIJA013 . Text = string . Empty;
+            txtIJA001 . Text = txtIJA002 . Text = txtIJA004 . Text = txtIJA006 . Text = txtIJA007 . Text = txtIJA008 . Text = txtIJA012 . Text = txtIJA013 . Text = txtIJA015 . Text = txtIJA016 . Text = string . Empty;
             gridControl1 . DataSource = gridControl2 . DataSource = gridControl3 . DataSource = null;
             layoutControlItem8 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
         }
         void InitData ( )
         {
             DataTable tableWork = _bll . getDepart ( );
-            if ( txtIJA004 . InvokeRequired )
-            {
-                Action<string> ij004 = ( x ) =>
-                    {
+            //if ( txtIJA004 . InvokeRequired )
+            //{
+            //    Action<string> ij004 = ( x ) =>
+            //        {
                         txtIJA004 . Properties . DataSource = tableWork;
                         txtIJA004 . Properties . DisplayMember = "DAA002";
                         txtIJA004 . Properties . ValueMember = "DAA001";
-                    };
-                this . txtIJA004 . Invoke ( ij004 ,string . Empty );
-            }
+            //        };
+            //    this . txtIJA004 . Invoke ( ij004 ,string . Empty );
+            //}
         }
         void setValue ( )
         {
@@ -980,6 +958,8 @@ namespace LineProductMes
             //txtIJA009 . Text = _header . IJA009;
             txtIJA012 . Text = Convert . ToDecimal ( _header . IJA012 ) . ToString ( "0.#" );
             txtIJA013 . Text = Convert . ToDecimal ( _header . IJA013 ) . ToString ( "0.#" );
+            txtIJA015 . Text = _header . IJA015 . ToString ( );
+            txtIJA016 . Text = _header . IJA016 . ToString ( );
             layoutControlItem8 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             Graph . grPicS ( pictureEdit1 ,"反" );
             if ( _header . IJA010 )
@@ -1033,27 +1013,6 @@ namespace LineProductMes
                 if ( tableViewOne == null || tableViewOne . Rows . Count < 1 )
                     return false;
 
-                //var qu = from p in tableViewOne . AsEnumerable ( )
-                //         group p by new
-                //         {
-                //             p1 = p . Field<string> ( "IJB004" ) ,
-                //             p2 = p . Field<string> ( "IJB005" )
-                //         } into m
-                //         select new
-                //         {
-                //             p1 = m . Key . p1 ,
-                //             p2 = m . Key . p2 ,
-                //             count = m . Count ( )
-                //         };
-                //if ( qu != null )
-                //{
-                //    if ( qu . ToArray ( ) . Length > 1 )
-                //    {
-                //        XtraMessageBox . Show ( "每次只能报工一个来源工单的品号" ,"提示" );
-                //        return false;
-                //    }
-                //}
-
 
                 bandedGridView1 . ClearColumnErrors ( );
                 DataRow row;
@@ -1094,48 +1053,31 @@ namespace LineProductMes
                 if ( result == false )
                     return false;
 
-                //var query = from p in tableViewOne . AsEnumerable ( )
-                //            group p by new
-                //            {
-                //                p1 = p . Field<string> ( "IJB002" )
-                //            } into m
-                //            select new
-                //            {
-                //                ijb002 = m . Key . p1 ,
-                //                count = m . Count ( )
-                //            };
-                //if ( query != null )
-                //{
-                //    foreach ( var x in query )
-                //    {
-                //        if ( x . count > 1 )
-                //        {
-                //            XtraMessageBox . Show ( "工号:" + x . ijb002 + "重复,请核实" );
-                //            result = false;
-                //            break;
-                //        }
-                //    }
-                ////}
-                //if ( result == false )
-                //    return false;
 
                 var que = from p in tableViewOne . AsEnumerable ( )
                           group p by new
                           {
-                              p1 = p . Field<int?> ( "U4" ) == null ? 0 : p . Field<int> ( "U4" )
+                              p1 = p . Field<int?> ( "U4" ) == null ? 0 : p . Field<int> ( "U4" ) ,
+                              p2 = p . Field<string> ( "IJB004" ) ,
+                              p3 = p . Field<string> ( "IJB005" )
                           } into m
                           let sum = m . Sum ( t => t . Field<int?> ( "IJB015" ) == null ? 0 : t . Field<int> ( "IJB015" ) )
                           select new
                           {
                               u4 = m . Key . p1 ,
+                              ijb004 = m . Key . p2 ,
+                              ijb005 = m . Key . p3 ,
                               sum = sum
                           };
                 if ( que != null )
                 {
-                    if ( que . ToArray ( ) [ 0 ] . sum > que . ToArray ( ) [ 0 ] . u4 )
+                    foreach ( var x in que )
                     {
-                        XtraMessageBox . Show ( "完工数量之和多于工单未完工数量" ,"提示" );
-                        return false;
+                        if ( x . sum > x . u4 )
+                        {
+                            XtraMessageBox . Show ( "来源工单:"+x.ijb004+"\n\r品号:"+x.ijb005+"\n\r完工数量之和多于工单未完工数量" ,"提示" );
+                            return false;
+                        }
                     }
                 }
             }
@@ -1298,6 +1240,17 @@ namespace LineProductMes
                 return false;
             }
 
+            if ( string . IsNullOrEmpty ( txtIJA015 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择开工时间" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtIJA016 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择完工时间" );
+                return false;
+            }
+
             _header . IJA001 = txtIJA001 . Text;
             _header . IJA002 = txtIJA002 . Text;
             _header . IJA003 = txtIJA004 . EditValue . ToString ( );
@@ -1310,6 +1263,8 @@ namespace LineProductMes
             _header . IJA010 = _header . IJA011 = false;
             _header . IJA012 = string . IsNullOrEmpty ( txtIJA012 . Text ) == true ? 0 : Convert . ToDecimal ( txtIJA012 . Text );
             _header . IJA013 = string . IsNullOrEmpty ( txtIJA013 . Text ) == true ? 0 : Convert . ToDecimal ( txtIJA013 . Text );
+            _header . IJA015 = Convert . ToDateTime ( txtIJA015 . Text );
+            _header . IJA016 = Convert . ToDateTime ( txtIJA016 . Text );
 
             return result;
         }
@@ -1347,8 +1302,8 @@ namespace LineProductMes
             DateTime dtOne, dtTwo;
             decimal u0 = 0M;
 
-            decimal ija012 = txtIJA012 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtIJA012 . Text ) * 60;
-            decimal ija013 = txtIJA013 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtIJA013 . Text ) * 60;
+            decimal ija012 = txtIJA012 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtIJA012 . Text );
+            decimal ija013 = txtIJA013 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtIJA013 . Text );
 
             if ( txtIJA002 . Text . Equals ( "计件" ) )
             {
@@ -1374,16 +1329,16 @@ namespace LineProductMes
                         dtOne = Convert . ToDateTime ( row [ "IJB016" ] );
                         dtTwo = Convert . ToDateTime ( row [ "IJB017" ] );
                         //判断开始上班时间和中午休息时间、下午下班时间
-                        u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                        if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                        if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                         {
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                                u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija012 );
+                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                                u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 );
                         }
-                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija013 );
 
                         row [ "IJB024" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                     }
@@ -1395,16 +1350,16 @@ namespace LineProductMes
                         dtOne = Convert . ToDateTime ( row [ "IJB018" ] );
                         dtTwo = Convert . ToDateTime ( row [ "IJB019" ] );
                         //判断开始上班时间和中午休息时间、下午下班时间
-                        u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                        if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                        if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                         {
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                                u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija012 );
+                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                                u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 );
                         }
-                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30 */)
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30 */)
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija013 );
 
                         row [ "IJB023" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                     }
@@ -1438,16 +1393,16 @@ namespace LineProductMes
                         dtOne = Convert . ToDateTime ( row [ "IJD006" ] );
                         dtTwo = Convert . ToDateTime ( row [ "IJD007" ] );
                         //判断开始上班时间和中午休息时间、下午下班时间
-                        u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                        if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                        if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                         {
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
-                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                                u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija012 );
+                            if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                                u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija012 ) - Convert . ToDecimal ( ija013 );
                         }
-                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - Convert . ToDecimal ( ija013 ) ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - Convert . ToDecimal ( ija013 );
 
                         row [ "IJD012" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                     }

@@ -14,7 +14,7 @@ namespace LineProductMes . ChildForm
     public partial class FormAssNewList :FormBaseChild
     {
         LineProductMesBll.Bll.AssNewWorkEnclosureBll _bll=null;
-
+        
         public FormAssNewList ( DataTable table )
         {
             InitializeComponent ( );

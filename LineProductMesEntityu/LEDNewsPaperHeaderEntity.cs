@@ -31,6 +31,8 @@ namespace LineProductMesEntityu
         private decimal? _lec020;
         private string _lec021;
         private string _lec022;
+        private DateTime? _lec023;
+        private DateTime? _lec024;
 
         /// <summary>
         /// 
@@ -353,6 +355,34 @@ namespace LineProductMesEntityu
             set
             {
                 _lec022 = value;
+            }
+        }
+        /// <summary>
+        /// 开工时间
+        /// </summary>
+        public DateTime? LEC023
+        {
+            set
+            {
+                _lec023 = value;
+            }
+            get
+            {
+                return _lec023;
+            }
+        }
+        /// <summary>
+        /// 完工时间
+        /// </summary>
+        public DateTime? LEC024
+        {
+            set
+            {
+                _lec024 = value;
+            }
+            get
+            {
+                return _lec024;
             }
         }
     }

@@ -20,7 +20,7 @@ namespace LineProductMes
         LineProductMesBll.Bll.LogisticsNewBll _bll=null;
 
         DataTable tableOne,tableTwo,tableViewOne,tableViewTwo,tableOtherSur,tablePrintOne,tablePrintTwo,tablePrintTre;
-        DateTime dt;
+        DateTime dt,dtStart,dtEnd;
 
         List<string> listOne=new List<string>();
         List<string> listTwo=new List<string>();
@@ -43,8 +43,10 @@ namespace LineProductMes
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View1 ,View2 } );
 
             dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
 
-            Editd1 . VistaEditTime = Editd2 . VistaEditTime = Editd3 . VistaEditTime = Editd4 . VistaEditTime = DevExpress . Utils . DefaultBoolean . True;
+            Editd1 . VistaEditTime = Editd2 . VistaEditTime = Editd3 . VistaEditTime = Editd4 . VistaEditTime =txtLGN009.Properties.VistaEditTime=txtLGN010.Properties.VistaEditTime= DevExpress . Utils . DefaultBoolean . True;
 
             InitData ( );
             controlUnEnable ( );
@@ -67,6 +69,8 @@ namespace LineProductMes
                 txtLGN005 . Text = Convert . ToDecimal ( _model . LGN005 ) . ToString ( "0.#" );
                 txtLGN006 . Text = Convert . ToDecimal ( _model . LGN006 ) . ToString ( "0.#" );
                 txtLGN007 . Text = _model . LGN007;
+                txtLGN009 . Text = _model . LGN009 . ToString ( );
+                txtLGN010 . Text = _model . LGN010 . ToString ( );
 
                 layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
                 Graph . grPicW ( pictureEdit1 ,"反" );
@@ -120,6 +124,8 @@ namespace LineProductMes
 
             addUser ( );
             txtLGN007 . Text = "计件";
+            txtLGN009 . Text = dtStart . ToString ( );
+            txtLGN010 . Text = dtEnd . ToString ( );
 
             addTool ( );
 
@@ -593,7 +599,7 @@ namespace LineProductMes
         }
         private void txtLGN007_SelectedValueChanged ( object sender ,EventArgs e )
         {
-            addTime ( );
+            updateBatchTime ( );
         }
         private void gridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
         {
@@ -620,7 +626,7 @@ namespace LineProductMes
         }
         private void bandedGridView1_RowCellStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowCellStyleEventArgs e )
         {
-            if ( e . Column . FieldName == "U1" )
+            if ( e . Column . FieldName == "LGP013" )
             {
                 if ( e . CellValue != null && e . CellValue . ToString ( ) != string . Empty )
                 {
@@ -629,24 +635,65 @@ namespace LineProductMes
                 }
             }
         }
+        private void txtLGN009_EditValueChanged ( object sender ,EventArgs e )
+        {
+            updateBatchTime ( );
+        }
+        void updateBatchTime ( )
+        {
+            if ( string . IsNullOrEmpty ( txtLGN007 . Text ) )
+                return;
+
+            bandedGridView1 . CloseEditor ( );
+            bandedGridView1 . UpdateCurrentRow ( );
+
+            if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
+                return;
+
+            if ( !string . IsNullOrEmpty ( txtLGN009 . Text ) )
+                dtStart = Convert . ToDateTime ( txtLGN009 . Text );
+            if ( !string . IsNullOrEmpty ( txtLGN010 . Text ) )
+                dtEnd = Convert . ToDateTime ( txtLGN010 . Text );
+
+            foreach ( DataRow row in tableViewTwo . Rows )
+            {
+                if ( "计件" . Equals ( txtLGN007 . Text ) )
+                {
+                    row [ "LGP007" ] = DBNull . Value;
+                    row [ "LGP008" ] = DBNull . Value;
+                    row [ "LGP012" ] = DBNull . Value;
+                    row [ "LGP009" ] = dtStart;
+                    row [ "LGP010" ] = dtEnd;
+                }
+                else if ( "计时" . Equals ( txtLGN007 . Text ) )
+                {
+                    row [ "LGP007" ] = dtStart;
+                    row [ "LGP008" ] = dtEnd;
+                    row [ "LGP009" ] = DBNull . Value;
+                    row [ "LGP010" ] = DBNull . Value;
+                    row [ "LGP011" ] = DBNull . Value;
+                }
+            }
+            calcuTsumTime ( );
+        }
         #endregion
 
         #region Method
         void controlClear ( )
         {
-            txtLGN001 . Text = txtLGN002 . Text = txtLGN005 . Text = txtLGN006 . Text = txtLGN007 . Text = string . Empty;
+            txtLGN001 . Text = txtLGN002 . Text = txtLGN005 . Text = txtLGN006 . Text = txtLGN007 . Text = txtLGN009 . Text = txtLGN010 . Text = string . Empty;
             gridControl1 . DataSource = null;
             gridControl2 . DataSource = null;
         }
         void controlUnEnable ( )
         {
-            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly =txtLGN007.ReadOnly= true;
+            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly =txtLGN007.ReadOnly= txtLGN009 . ReadOnly = txtLGN010 . ReadOnly = true;
             gridView1 . OptionsBehavior.Editable = false;
             bandedGridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly = txtLGN007 . ReadOnly = false;
+            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly = txtLGN007 . ReadOnly = txtLGN009 . ReadOnly = txtLGN010 . ReadOnly = false;
             gridView1 . OptionsBehavior . Editable = true;
             bandedGridView1 . OptionsBehavior . Editable = true;
         }
@@ -727,43 +774,7 @@ namespace LineProductMes
             if ( result == false )
                 return false;
 
-            //var que = from p in tableViewOne . AsEnumerable ( )
-            //          group p by new
-            //          {
-            //              p1 = p . Field<string> ( "LOG002" ) ,
-            //              p2 = p . Field<string> ( "LOG003" ) ,
-            //              p3 = p . Field<int?> ( "LOG006" ) == null ? 0 : p . Field<int> ( "LOG006" ) ,
-            //              p4 = p . Field<int?> ( "LOG008" ) == null ? 0 : p . Field<int> ( "LOG008" )
-            //          } into m
-            //          select new
-            //          {
-            //              log002 = m . Key . p1 ,
-            //              log003 = m . Key . p2 ,
-            //              log006 = m . Key . p3 ,
-            //              log008 = m . Key . p4
-            //          };
-
-            //if ( que != null )
-            //{
-            //    _bodyOne . LOG001 = txtLGN001 . Text;
-            //    foreach ( var x in que )
-            //    {
-            //        _bodyOne . LOG006 = x . log006;
-            //        _bodyOne . LOG008 = x . log008;
-            //        _bodyOne . LOG002 = x . log002;
-            //        _bodyOne . LOG003 = x . log003;
-            //        if ( _bll . Exists ( _bodyOne ) )
-            //        {
-            //            XtraMessageBox . Show ( "销货单号: " + _bodyOne . LOG002 + "\n\r序号: " + _bodyOne . LOG003 + "\n\r完工数量多于销货单数量" );
-            //            result = false;
-            //            break;
-            //        }
-            //    }
-            //}
-
-            //if ( result == false )
-            //    return false;
-
+       
             var qu = from p in tableViewTwo . AsEnumerable ( )
                      group p by new
                      {
@@ -795,6 +806,20 @@ namespace LineProductMes
                 return false;
             }
 
+            if ( string . IsNullOrEmpty ( txtLGN009 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择开工时间" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtLGN010 . Text ) )
+            {
+                XtraMessageBox . Show ( "请选择完工时间" );
+                return false;
+            }
+
+            _model . LGN009 = Convert . ToDateTime ( txtLGN009 . Text );
+            _model . LGN010 = Convert . ToDateTime ( txtLGN010 . Text );
+
             _model . LGN001 = txtLGN001 . Text;
             _model . LGN002 = Convert . ToDateTime ( txtLGN002 . Text );
             _model . LGN005 = string . IsNullOrEmpty ( txtLGN005 . Text ) == true ? 0 : Convert . ToDecimal ( txtLGN005 . Text );
@@ -812,8 +837,8 @@ namespace LineProductMes
                 return;
             //要不要加午休和晚休
 
-            decimal lgn005 = txtLGN005 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLGN005 . Text ) * 60;
-            decimal lgn006 = txtLGN006 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLGN006 . Text ) * 60;
+            decimal lgn005 = txtLGN005 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLGN005 . Text );
+            decimal lgn006 = txtLGN006 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLGN006 . Text );
 
             DateTime dtOne, dtTwo;
             decimal u0 = 0M;
@@ -834,16 +859,16 @@ namespace LineProductMes
                     dtTwo = Convert . ToDateTime ( row [ "LGP008" ] );
 
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
 
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - lgn005;
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - lgn005 - lgn006;
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - lgn006;
 
                     row [ "LGP012" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }
@@ -855,15 +880,15 @@ namespace LineProductMes
                     dtOne = Convert . ToDateTime ( row [ "LGP009" ] );
                     dtTwo = Convert . ToDateTime ( row [ "LGP010" ] );
                     //判断开始上班时间和中午休息时间、下午下班时间
-                    u0 = ( dtTwo - dtOne ) . Hours + ( dtTwo - dtOne ) . Minutes * Convert . ToDecimal ( 1.0 ) / 60;
-                    if ( dtOne . Hour <= 11 && dtTwo . Hour >= 12 )
+                    u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours );
+                    if ( dtOne . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 11:00" ) ) ) <= 0 && dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 12:00" ) ) ) >= 0 )
                     {
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 ) * Convert . ToDecimal ( 1.0 ) / 60;
-                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                            u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn005 - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - lgn005;
+                        if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                            u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - lgn005 - lgn006;
                     }
-                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( "17:30" ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
-                        u0 = ( dtTwo - dtOne ) . Hours + ( ( dtTwo - dtOne ) . Minutes - lgn006 ) * Convert . ToDecimal ( 1.0 ) / 60;
+                    else if ( dtTwo . CompareTo ( Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:30" ) ) ) > 0 /*dtTwo . Hour >= 17 && dtTwo . Minute >= 30*/ )
+                        u0 = Convert . ToDecimal ( ( dtTwo - dtOne ) . TotalHours ) - lgn006;
 
                     row [ "LGP011" ] = Math . Round ( u0 ,1 ,MidpointRounding . AwayFromZero );
                 }

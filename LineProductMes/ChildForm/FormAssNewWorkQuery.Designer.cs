@@ -48,6 +48,7 @@
             this.txtANW013 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.View6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -55,26 +56,25 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ANW001 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ANW002 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ANW003 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ANW004 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ANW006 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ANW009 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ANN002 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ANN003 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ANN004 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ANN007 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ANN009 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ANW013 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ANW022 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ANW020 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ANW021 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -89,6 +89,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.View5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtANW013.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -96,17 +98,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -216,7 +216,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "来源单号";
-            this.gridColumn2.FieldName = "ANW002";
+            this.gridColumn2.FieldName = "ANN002";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
@@ -275,7 +275,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "品号";
-            this.gridColumn3.FieldName = "ANW003";
+            this.gridColumn3.FieldName = "ANN003";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
@@ -314,7 +314,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "品名";
-            this.gridColumn4.FieldName = "ANW004";
+            this.gridColumn4.FieldName = "ANN004";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 0;
@@ -369,6 +369,19 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 0;
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(322, 36);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(219, 20);
+            this.dateEdit1.StyleController = this.layoutControl1;
+            this.dateEdit1.TabIndex = 14;
             // 
             // layoutControlGroup1
             // 
@@ -448,14 +461,6 @@
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(533, 24);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(380, 30);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
@@ -498,13 +503,30 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(30, 30);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.dateEdit1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(259, 24);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(274, 30);
+            this.layoutControlItem5.Text = "报工日期";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(48, 14);
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(533, 24);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(380, 30);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1164, 256);
+            this.gridControl1.Size = new System.Drawing.Size(1164, 263);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -518,11 +540,11 @@
             this.gridView1.Appearance.FocusedRow.Options.UseBorderColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ANW001,
-            this.ANW002,
-            this.ANW003,
-            this.ANW004,
-            this.ANW006,
-            this.ANW009,
+            this.ANN002,
+            this.ANN003,
+            this.ANN004,
+            this.ANN007,
+            this.ANN009,
             this.ANW013,
             this.ANW022,
             this.ANW020,
@@ -542,50 +564,50 @@
             this.ANW001.VisibleIndex = 0;
             this.ANW001.Width = 122;
             // 
-            // ANW002
+            // ANN002
             // 
-            this.ANW002.Caption = "来源单号";
-            this.ANW002.FieldName = "ANW002";
-            this.ANW002.Name = "ANW002";
-            this.ANW002.Visible = true;
-            this.ANW002.VisibleIndex = 1;
-            this.ANW002.Width = 133;
+            this.ANN002.Caption = "来源单号";
+            this.ANN002.FieldName = "ANN002";
+            this.ANN002.Name = "ANN002";
+            this.ANN002.Visible = true;
+            this.ANN002.VisibleIndex = 1;
+            this.ANN002.Width = 133;
             // 
-            // ANW003
+            // ANN003
             // 
-            this.ANW003.Caption = "品号";
-            this.ANW003.FieldName = "ANW003";
-            this.ANW003.Name = "ANW003";
-            this.ANW003.Visible = true;
-            this.ANW003.VisibleIndex = 2;
-            this.ANW003.Width = 128;
+            this.ANN003.Caption = "品号";
+            this.ANN003.FieldName = "ANN003";
+            this.ANN003.Name = "ANN003";
+            this.ANN003.Visible = true;
+            this.ANN003.VisibleIndex = 2;
+            this.ANN003.Width = 128;
             // 
-            // ANW004
+            // ANN004
             // 
-            this.ANW004.Caption = "品名";
-            this.ANW004.FieldName = "ANW004";
-            this.ANW004.Name = "ANW004";
-            this.ANW004.Visible = true;
-            this.ANW004.VisibleIndex = 3;
-            this.ANW004.Width = 221;
+            this.ANN004.Caption = "品名";
+            this.ANN004.FieldName = "ANN004";
+            this.ANN004.Name = "ANN004";
+            this.ANN004.Visible = true;
+            this.ANN004.VisibleIndex = 3;
+            this.ANN004.Width = 221;
             // 
-            // ANW006
+            // ANN007
             // 
-            this.ANW006.Caption = "工单数量";
-            this.ANW006.FieldName = "ANW006";
-            this.ANW006.Name = "ANW006";
-            this.ANW006.Visible = true;
-            this.ANW006.VisibleIndex = 5;
-            this.ANW006.Width = 95;
+            this.ANN007.Caption = "工单数量";
+            this.ANN007.FieldName = "ANN007";
+            this.ANN007.Name = "ANN007";
+            this.ANN007.Visible = true;
+            this.ANN007.VisibleIndex = 5;
+            this.ANN007.Width = 95;
             // 
-            // ANW009
+            // ANN009
             // 
-            this.ANW009.Caption = "报工数量";
-            this.ANW009.FieldName = "ANW009";
-            this.ANW009.Name = "ANW009";
-            this.ANW009.Visible = true;
-            this.ANW009.VisibleIndex = 6;
-            this.ANW009.Width = 91;
+            this.ANN009.Caption = "完工数量";
+            this.ANN009.FieldName = "ANN009";
+            this.ANN009.Name = "ANN009";
+            this.ANN009.Visible = true;
+            this.ANN009.VisibleIndex = 6;
+            this.ANN009.Width = 91;
             // 
             // ANW013
             // 
@@ -623,28 +645,6 @@
             this.ANW021.VisibleIndex = 9;
             this.ANW021.Width = 60;
             // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(322, 36);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(219, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 14;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.dateEdit1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(259, 24);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(274, 30);
-            this.layoutControlItem5.Text = "报工日期";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(48, 14);
-            // 
             // FormAssNewWorkQuery
             // 
             this.Appearance.Options.UseFont = true;
@@ -668,6 +668,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.View5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtANW013.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -675,17 +677,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -717,11 +717,11 @@
         private DevExpress . XtraLayout . EmptySpaceItem emptySpaceItem2;
         private DevExpress . XtraLayout . EmptySpaceItem emptySpaceItem3;
         private DevExpress . XtraGrid . Columns . GridColumn ANW001;
-        private DevExpress . XtraGrid . Columns . GridColumn ANW002;
-        private DevExpress . XtraGrid . Columns . GridColumn ANW003;
-        private DevExpress . XtraGrid . Columns . GridColumn ANW004;
-        private DevExpress . XtraGrid . Columns . GridColumn ANW006;
-        private DevExpress . XtraGrid . Columns . GridColumn ANW009;
+        private DevExpress . XtraGrid . Columns . GridColumn ANN002;
+        private DevExpress . XtraGrid . Columns . GridColumn ANN003;
+        private DevExpress . XtraGrid . Columns . GridColumn ANN004;
+        private DevExpress . XtraGrid . Columns . GridColumn ANN007;
+        private DevExpress . XtraGrid . Columns . GridColumn ANN009;
         private DevExpress . XtraGrid . Columns . GridColumn ANW020;
         private DevExpress . XtraGrid . Columns . GridColumn ANW021;
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn1;

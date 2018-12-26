@@ -31,8 +31,10 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.StackedBarSeriesLabel stackedBarSeriesLabel1 = new DevExpress.XtraCharts.StackedBarSeriesLabel();
             DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView1 = new DevExpress.XtraCharts.StackedBarSeriesView();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.StackedBarSeriesLabel stackedBarSeriesLabel2 = new DevExpress.XtraCharts.StackedBarSeriesLabel();
             DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView2 = new DevExpress.XtraCharts.StackedBarSeriesView();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
@@ -79,8 +81,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
@@ -104,7 +108,7 @@
             this.ANW009.Name = "ANW009";
             this.ANW009.Visible = true;
             this.ANW009.VisibleIndex = 8;
-            this.ANW009.Width = 109;
+            this.ANW009.Width = 113;
             // 
             // repositoryItemProgressBar1
             // 
@@ -122,7 +126,7 @@
             this.ANW09.Name = "ANW09";
             this.ANW09.Visible = true;
             this.ANW09.VisibleIndex = 9;
-            this.ANW09.Width = 109;
+            this.ANW09.Width = 113;
             // 
             // repositoryItemProgressBar2
             // 
@@ -134,6 +138,16 @@
             // 
             // splitContainerControl1
             // 
+            this.splitContainerControl1.Appearance.BackColor = System.Drawing.Color.DarkBlue;
+            this.splitContainerControl1.Appearance.BackColor2 = System.Drawing.Color.DarkBlue;
+            this.splitContainerControl1.Appearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.splitContainerControl1.Appearance.Options.UseBackColor = true;
+            this.splitContainerControl1.Appearance.Options.UseBorderColor = true;
+            this.splitContainerControl1.AppearanceCaption.BackColor = System.Drawing.Color.DarkBlue;
+            this.splitContainerControl1.AppearanceCaption.BackColor2 = System.Drawing.Color.DarkBlue;
+            this.splitContainerControl1.AppearanceCaption.BorderColor = System.Drawing.Color.DarkBlue;
+            this.splitContainerControl1.AppearanceCaption.Options.UseBackColor = true;
+            this.splitContainerControl1.AppearanceCaption.Options.UseBorderColor = true;
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl1.Horizontal = false;
@@ -152,23 +166,37 @@
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.LookAndFeel.SkinMaskColor = System.Drawing.Color.DarkBlue;
+            this.gridControl1.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.DarkBlue;
+            this.gridControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemProgressBar2});
-            this.gridControl1.Size = new System.Drawing.Size(1229, 219);
+            this.gridControl1.Size = new System.Drawing.Size(1229, 226);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.gridControl1_Paint);
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.gridView1.Appearance.FocusedRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.DarkBlue;
+            this.gridView1.Appearance.Empty.BackColor2 = System.Drawing.Color.DarkBlue;
+            this.gridView1.Appearance.Empty.BorderColor = System.Drawing.Color.DarkBlue;
+            this.gridView1.Appearance.Empty.Options.UseBackColor = true;
+            this.gridView1.Appearance.Empty.Options.UseBorderColor = true;
+            this.gridView1.Appearance.HorzLine.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HorzLine.Options.UseFont = true;
+            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.DarkBlue;
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
+            this.gridView1.Appearance.ViewCaption.BackColor = System.Drawing.Color.DarkBlue;
+            this.gridView1.Appearance.ViewCaption.BackColor2 = System.Drawing.Color.DarkBlue;
+            this.gridView1.Appearance.ViewCaption.BorderColor = System.Drawing.Color.DarkBlue;
+            this.gridView1.Appearance.ViewCaption.Options.UseBackColor = true;
+            this.gridView1.Appearance.ViewCaption.Options.UseBorderColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.PRG005,
             this.PRG001,
@@ -197,12 +225,19 @@
             // 
             // PRG005
             // 
+            this.PRG005.AppearanceCell.ForeColor = System.Drawing.Color.White;
+            this.PRG005.AppearanceCell.Options.UseForeColor = true;
+            this.PRG005.AppearanceHeader.BackColor = System.Drawing.Color.DarkBlue;
+            this.PRG005.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkBlue;
+            this.PRG005.AppearanceHeader.BorderColor = System.Drawing.Color.DarkBlue;
+            this.PRG005.AppearanceHeader.Options.UseBackColor = true;
+            this.PRG005.AppearanceHeader.Options.UseBorderColor = true;
             this.PRG005.Caption = "产线";
             this.PRG005.FieldName = "PRG005";
             this.PRG005.Name = "PRG005";
             this.PRG005.Visible = true;
             this.PRG005.VisibleIndex = 0;
-            this.PRG005.Width = 52;
+            this.PRG005.Width = 54;
             // 
             // PRG001
             // 
@@ -211,7 +246,7 @@
             this.PRG001.Name = "PRG001";
             this.PRG001.Visible = true;
             this.PRG001.VisibleIndex = 1;
-            this.PRG001.Width = 101;
+            this.PRG001.Width = 105;
             // 
             // DEA002
             // 
@@ -220,7 +255,7 @@
             this.DEA002.Name = "DEA002";
             this.DEA002.Visible = true;
             this.DEA002.VisibleIndex = 2;
-            this.DEA002.Width = 101;
+            this.DEA002.Width = 105;
             // 
             // PRF3
             // 
@@ -229,6 +264,7 @@
             this.PRF3.Name = "PRF3";
             this.PRF3.Visible = true;
             this.PRF3.VisibleIndex = 3;
+            this.PRF3.Width = 78;
             // 
             // PRF003
             // 
@@ -237,7 +273,7 @@
             this.PRF003.Name = "PRF003";
             this.PRF003.Visible = true;
             this.PRF003.VisibleIndex = 4;
-            this.PRF003.Width = 76;
+            this.PRF003.Width = 79;
             // 
             // PRG003
             // 
@@ -246,7 +282,7 @@
             this.PRG003.Name = "PRG003";
             this.PRG003.Visible = true;
             this.PRG003.VisibleIndex = 6;
-            this.PRG003.Width = 85;
+            this.PRG003.Width = 88;
             // 
             // ANW9
             // 
@@ -255,7 +291,7 @@
             this.ANW9.Name = "ANW9";
             this.ANW9.Visible = true;
             this.ANW9.VisibleIndex = 7;
-            this.ANW9.Width = 109;
+            this.ANW9.Width = 113;
             // 
             // PRF
             // 
@@ -264,7 +300,7 @@
             this.PRF.Name = "PRF";
             this.PRF.Visible = true;
             this.PRF.VisibleIndex = 10;
-            this.PRF.Width = 117;
+            this.PRF.Width = 125;
             // 
             // LEH
             // 
@@ -273,7 +309,7 @@
             this.LEH.Name = "LEH";
             this.LEH.Visible = true;
             this.LEH.VisibleIndex = 5;
-            this.LEH.Width = 83;
+            this.LEH.Width = 86;
             // 
             // layoutControl1
             // 
@@ -290,6 +326,7 @@
             // 
             // chartControl3
             // 
+            this.chartControl3.BackColor = System.Drawing.Color.DarkBlue;
             this.chartControl3.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.chartControl3.DataBindings = null;
             xyDiagram1.AxisX.GridLines.MinorVisible = true;
@@ -301,24 +338,35 @@
             xyDiagram1.AxisX.VisualRange.MaxValueSerializable = "9";
             xyDiagram1.AxisX.VisualRange.MinValueSerializable = "0";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.DarkBlue;
             this.chartControl3.Diagram = xyDiagram1;
+            this.chartControl3.Legend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.chartControl3.Legend.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.chartControl3.Legend.Border.Thickness = 2;
             this.chartControl3.Legend.Name = "Default Legend";
+            this.chartControl3.Legend.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.chartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.chartControl3.Location = new System.Drawing.Point(486, 12);
             this.chartControl3.Name = "chartControl3";
             this.chartControl3.SelectionMode = DevExpress.XtraCharts.ElementSelectionMode.Single;
+            stackedBarSeriesLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            stackedBarSeriesLabel1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series1.Label = stackedBarSeriesLabel1;
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.LegendName = "Default Legend";
             series1.Name = "总欠产";
-            stackedBarSeriesView1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            stackedBarSeriesView1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             stackedBarSeriesView1.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            stackedBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            stackedBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             series1.View = stackedBarSeriesView1;
+            stackedBarSeriesLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            stackedBarSeriesLabel2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series2.Label = stackedBarSeriesLabel2;
             series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series2.Name = "总完成";
-            stackedBarSeriesView2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
+            stackedBarSeriesView2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(108)))), ((int)(((byte)(9)))));
             stackedBarSeriesView2.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            stackedBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(187)))), ((int)(((byte)(89)))));
+            stackedBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(108)))), ((int)(((byte)(9)))));
             series2.View = stackedBarSeriesView2;
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
@@ -327,18 +375,28 @@
             this.chartControl3.TabIndex = 6;
             chartTitle1.Font = new System.Drawing.Font("Tahoma", 12F);
             chartTitle1.Text = "组总完成率";
+            chartTitle1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.chartControl3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
             // 
             // chartControl2
             // 
+            this.chartControl2.BackColor = System.Drawing.Color.DarkBlue;
             this.chartControl2.DataBindings = null;
+            xyDiagram2.AxisX.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            xyDiagram2.AxisX.GridLines.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             xyDiagram2.AxisX.Interlaced = true;
+            xyDiagram2.AxisX.Label.BackColor = System.Drawing.Color.DarkBlue;
+            xyDiagram2.AxisX.Label.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             xyDiagram2.AxisX.MinorCount = 7;
             xyDiagram2.AxisX.Title.Text = "";
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.Color = System.Drawing.Color.White;
             xyDiagram2.AxisY.GridLines.MinorVisible = true;
+            xyDiagram2.AxisY.Label.BackColor = System.Drawing.Color.DarkBlue;
+            xyDiagram2.AxisY.Label.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram2.DefaultPane.BackColor = System.Drawing.Color.DarkBlue;
             this.chartControl2.Diagram = xyDiagram2;
             this.chartControl2.Legend.Name = "Default Legend";
             this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -352,13 +410,15 @@
             this.chartControl2.Size = new System.Drawing.Size(470, 127);
             this.chartControl2.TabIndex = 5;
             chartTitle2.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left;
-            chartTitle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartTitle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             chartTitle2.Text = "产品欠产量";
+            chartTitle2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.chartControl2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle2});
             // 
             // chartControl1
             // 
+            this.chartControl1.BackColor = System.Drawing.Color.DarkBlue;
             this.chartControl1.DataBindings = null;
             xyDiagram3.AxisX.Interlaced = true;
             xyDiagram3.AxisX.MinorCount = 7;
@@ -434,6 +494,11 @@
             // 
             // FormAssBoard
             // 
+            this.Appearance.BackColor = System.Drawing.Color.DarkBlue;
+            this.Appearance.BackColor2 = System.Drawing.Color.DarkBlue;
+            this.Appearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -451,8 +516,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();

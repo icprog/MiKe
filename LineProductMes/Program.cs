@@ -53,15 +53,15 @@ namespace LineProductMes
         static void startFromMain ( )
         {
             //检查更新
-            //AppUpdate au = new AppUpdate ( );
-            //string msg = "";
-            //bool result = au . CheckAppVersion ( ref msg );
+            AppUpdate au = new AppUpdate ( );
+            string msg = "";
+            bool result = au . CheckAppVersion ( ref msg );
 
-            //if ( result == true )
-            //    System . Diagnostics . Process . Start ( Application . StartupPath + @"\AutoUpdate.exe" );
+            if ( result == true )
+                System . Diagnostics . Process . Start ( Application . StartupPath + @"\AutoUpdate.exe" );
 
-            //if ( !LineProductMesBll . Dao . EncryptQuery . getResult ( ) . Equals ( "D094" ,StringComparison . CurrentCultureIgnoreCase ) )
-            //    return;
+            if ( !LineProductMesBll . Dao . EncryptQuery . getResult ( ) . Equals ( "D094" ,StringComparison . CurrentCultureIgnoreCase ) )
+                return;
             //加载主窗体
             FormMain from = new FormMain ( );
             if ( from != null )

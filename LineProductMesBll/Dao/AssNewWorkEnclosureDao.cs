@@ -250,9 +250,9 @@ namespace LineProductMesBll . Dao
             strSql = new StringBuilder ( );
             strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKANT(" );
-            strSql . Append ( "ANT001,ANT002,ANT003,ANT004,ANT005,ANT008,ANT009,ANT010,ANT011,ANT012,ANT013)" );
+            strSql . Append ( "ANT001,ANT002,ANT003,ANT004,ANT005,ANT008,ANT009,ANT010,ANT011,ANT012,ANT013,ANT014,ANT015)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@ANT001,@ANT002,@ANT003,@ANT004,@ANT005,@ANT008,@ANT009,@ANT010,@ANT011,@ANT012,@ANT013)" );
+            strSql . Append ( "@ANT001,@ANT002,@ANT003,@ANT004,@ANT005,@ANT008,@ANT009,@ANT010,@ANT011,@ANT012,@ANT013,@ANT014,@ANT015)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@ANT001", SqlDbType.NVarChar,20),
                     new SqlParameter("@ANT002", SqlDbType.NVarChar,20),
@@ -264,7 +264,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@ANT010", SqlDbType.Decimal),
                     new SqlParameter("@ANT011", SqlDbType.NVarChar,20),
                     new SqlParameter("@ANT012", SqlDbType.NVarChar,100),
-                    new SqlParameter("@ANT013", SqlDbType.NVarChar,20)
+                    new SqlParameter("@ANT013", SqlDbType.NVarChar,20),
+                    new SqlParameter("@ANT014", SqlDbType.DateTime),
+                    new SqlParameter("@ANT015", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . ANT001;
             parameters [ 1 ] . Value = model . ANT002;
@@ -277,6 +279,8 @@ namespace LineProductMesBll . Dao
             parameters [ 8 ] . Value = model . ANT011;
             parameters [ 9 ] . Value = model . ANT012;
             parameters [ 10 ] . Value = model . ANT013;
+            parameters [ 11 ] . Value = model . ANT014;
+            parameters [ 12 ] . Value = model . ANT015;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,StringBuilder strSql ,LineProductMesEntityu . AssNewWorkEnclosureBodyOneEntity model )
@@ -369,7 +373,9 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "ANT009=@ANT009," );
             strSql . Append ( "ANT010=@ANT010," );
             strSql . Append ( "ANT011=@ANT011," );
-            strSql . Append ( "ANT012=@ANT012 " );
+            strSql . Append ( "ANT012=@ANT012," );
+            strSql . Append ( "ANT014=@ANT014," );
+            strSql . Append ( "ANT015=@ANT015 " );
             strSql . Append ( " where ANT001=@ANT001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@ANT002", SqlDbType.NVarChar,20),
@@ -382,7 +388,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@ANT009", SqlDbType.Decimal),
                     new SqlParameter("@ANT010", SqlDbType.Decimal),
                     new SqlParameter("@ANT011", SqlDbType.NVarChar,20),
-                    new SqlParameter("@ANT012", SqlDbType.NVarChar,100)
+                    new SqlParameter("@ANT012", SqlDbType.NVarChar,100),
+                    new SqlParameter("@ANT014", SqlDbType.DateTime),
+                    new SqlParameter("@ANT015", SqlDbType.DateTime)
             };
             parameters [ 0 ] . Value = model . ANT002;
             parameters [ 1 ] . Value = model . ANT003;
@@ -395,6 +403,8 @@ namespace LineProductMesBll . Dao
             parameters [ 8 ] . Value = model . ANT010;
             parameters [ 9 ] . Value = model . ANT011;
             parameters [ 10 ] . Value = model . ANT012;
+            parameters [ 11 ] . Value = model . ANT014;
+            parameters [ 12 ] . Value = model . ANT015;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBodyOne ( Dictionary<object ,object> SQLString ,StringBuilder strSql ,LineProductMesEntityu . AssNewWorkEnclosureBodyOneEntity model )
@@ -563,7 +573,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableOrder ( string orderNum ,string proNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT ANW001,ANW012,ANW009,ANW013,ANW002,ANW003 FROM MIKANW WHERE ANW021=0 AND ANW002!='' AND ANW002='{0}' AND ANW003='{1}'",orderNum ,proNum );
+            strSql . AppendFormat ( "SELECT ANW001,ANW012,ANN009 ANW009,ANW013,ANN002 ANW002,ANN003 ANW003 FROM MIKANW A INNER JOIN MIKANN B ON A.ANW001=B.ANN001 WHERE ANW021 =0 AND ANN002!='' AND ANN002='{0}' AND ANN003='{1}'",orderNum ,proNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -600,7 +610,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . AssNewWorkEnclosureHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "select ANT001,ANT002,ANT003,ANT004,ANT005,ANT006,ANT007,ANT008,ANT009,ANT010,ANT011,ANT012 from MIKANT " );
+            strSql . Append ( "select ANT001,ANT002,ANT003,ANT004,ANT005,ANT006,ANT007,ANT008,ANT009,ANT010,ANT011,ANT012,ANT014,ANT015 from MIKANT " );
             strSql . Append ( " where ANT001=@ANT001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@ANT001", SqlDbType.NVarChar,20)
@@ -685,6 +695,14 @@ namespace LineProductMesBll . Dao
                 {
                     model . ANT012 = row [ "ANT012" ] . ToString ( );
                 }
+                if ( row [ "ANT014" ] != null && row [ "ANT014" ] . ToString ( ) != "" )
+                {
+                    model . ANT014 = DateTime . Parse ( row [ "ANT014" ] . ToString ( ) );
+                }
+                if ( row [ "ANT015" ] != null && row [ "ANT015" ] . ToString ( ) != "" )
+                {
+                    model . ANT015 = DateTime . Parse ( row [ "ANT015" ] . ToString ( ) );
+                }
             }
             return model;
         }
@@ -751,7 +769,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintTre ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "select ANT001,ANT003,ANT005,ANT008,ANT009,CONVERT(FLOAT,ANT010) ANT010,ANT011,ANT012,CONVERT(FLOAT,SUM(ANU007*ANU010)) CZ,CONVERT(FLOAT,SUM(ANU010)) SL,CONVERT(FLOAT,SUM(ANV009+ANV015)) GS from MIKANT A INNER JOIN MIKANU B ON A.ANT001=B.ANU001 INNER JOIN MIKANV C ON A.ANT001=C.ANV001 WHERE ANT001='{0}' GROUP BY ANT001,ANT003,ANT005,ANT006,ANT007,ANT008,ANT009,ANT010,ANT011,ANT012" ,oddNum );
+            strSql . AppendFormat ( "select ANT001,ANT003,ANT005,ANT008,ANT009,CONVERT(FLOAT,ANT010) ANT010,ANT011,ANT012,CONVERT(FLOAT,SUM(ANU007*ANU010)) CZ,CONVERT(FLOAT,SUM(ANU010)) SL,CONVERT(FLOAT,SUM(ANV009+ANV015)) GS,ANT014,ANT015 from MIKANT A INNER JOIN MIKANU B ON A.ANT001=B.ANU001 INNER JOIN MIKANV C ON A.ANT001=C.ANV001 WHERE ANT001='{0}' GROUP BY ANT001,ANT003,ANT005,ANT006,ANT007,ANT008,ANT009,ANT010,ANT011,ANT012,ANT014,ANT015" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

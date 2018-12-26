@@ -46,9 +46,9 @@ namespace LineProductMes . ChildForm
             {
                 Action<string> actionANW002 = ( x ) =>
                 {
-                    txtANW002 . Properties . DataSource = table . DefaultView . ToTable ( true ,"ANW002" );
-                    txtANW002 . Properties . DisplayMember = "ANW002";
-                    txtANW002 . Properties . ValueMember = "ANW002";
+                    txtANW002 . Properties . DataSource = table . DefaultView . ToTable ( true ,"ANN002" );
+                    txtANW002 . Properties . DisplayMember = "ANN002";
+                    txtANW002 . Properties . ValueMember = "ANN002";
                 };
                 txtANW002 . Invoke ( actionANW002 ,string . Empty );
             }
@@ -56,9 +56,9 @@ namespace LineProductMes . ChildForm
             {
                 Action<string> actionANW003 = ( x ) =>
                 {
-                    txtANW003 . Properties . DataSource = table . DefaultView . ToTable ( true ,"ANW003" );
-                    txtANW003 . Properties . DisplayMember = "ANW003";
-                    txtANW003 . Properties . ValueMember = "ANW003";
+                    txtANW003 . Properties . DataSource = table . DefaultView . ToTable ( true ,"ANN003" );
+                    txtANW003 . Properties . DisplayMember = "ANN003";
+                    txtANW003 . Properties . ValueMember = "ANN003";
                 };
                 txtANW003 . Invoke ( actionANW003 ,string . Empty );
             }
@@ -66,9 +66,9 @@ namespace LineProductMes . ChildForm
             {
                 Action<string> actionANW004 = ( x ) =>
                 {
-                    txtANW004 . Properties . DataSource = table . DefaultView . ToTable ( true ,"ANW004" );
-                    txtANW004 . Properties . DisplayMember = "ANW004";
-                    txtANW004 . Properties . ValueMember = "ANW004";
+                    txtANW004 . Properties . DataSource = table . DefaultView . ToTable ( true ,"ANN004" );
+                    txtANW004 . Properties . DisplayMember = "ANN004";
+                    txtANW004 . Properties . ValueMember = "ANN004";
                 };
                 txtANW004 . Invoke ( actionANW004 ,string . Empty );
             }
@@ -90,11 +90,11 @@ namespace LineProductMes . ChildForm
             if ( !string . IsNullOrEmpty ( txtANW001 . Text ) )
                 strWhere += " AND ANW001='" + txtANW001 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtANW002 . Text ) )
-                strWhere += " AND ANW002='" + txtANW002 . Text + "'";
+                strWhere += " AND ANN002='" + txtANW002 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtANW003 . Text ) )
-                strWhere += " AND ANW003='" + txtANW003 . Text + "'";
+                strWhere += " AND ANN003='" + txtANW003 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtANW004 . Text ) )
-                strWhere += " AND ANW004='" + txtANW004 . Text + "'";
+                strWhere += " AND ANN004='" + txtANW004 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtANW013 . Text ) )
                 strWhere += " AND ANW013='" + txtANW013 . Text + "'";
             if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
