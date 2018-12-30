@@ -75,6 +75,7 @@
             this.EMP032 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EMP034 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EMP037 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EMP038 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -175,7 +176,6 @@
             this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabPageTwo = new DevExpress.XtraTab.XtraTabPage();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.EMP038 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -888,6 +888,18 @@
             this.EMP037.Name = "EMP037";
             this.EMP037.Visible = true;
             this.EMP037.VisibleIndex = 33;
+            // 
+            // EMP038
+            // 
+            this.EMP038.AppearanceCell.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.EMP038.AppearanceCell.Options.UseFont = true;
+            this.EMP038.AppearanceHeader.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.EMP038.AppearanceHeader.Options.UseFont = true;
+            this.EMP038.Caption = "工资权限";
+            this.EMP038.FieldName = "EMP038";
+            this.EMP038.Name = "EMP038";
+            this.EMP038.Visible = true;
+            this.EMP038.VisibleIndex = 34;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -2223,18 +2235,6 @@
             this.wait.Size = new System.Drawing.Size(246, 66);
             this.wait.TabIndex = 35;
             this.wait.Text = "progressPanel1";
-            // 
-            // EMP038
-            // 
-            this.EMP038.AppearanceCell.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.EMP038.AppearanceCell.Options.UseFont = true;
-            this.EMP038.AppearanceHeader.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.EMP038.AppearanceHeader.Options.UseFont = true;
-            this.EMP038.Caption = "工资权限";
-            this.EMP038.FieldName = "EMP038";
-            this.EMP038.Name = "EMP038";
-            this.EMP038.Visible = true;
-            this.EMP038.VisibleIndex = 34;
             // 
             // FormEmployee
             // 

@@ -139,5 +139,16 @@ namespace LineProductMesBll . Bll
             return dal . getDepartPower ( );
         }
 
+
+        /// <summary>
+        /// 是否存在多个身份证
+        /// </summary>
+        /// <param name="card"></param>
+        /// <returns></returns>
+        public bool checkCode ( string card )
+        {
+            return dal . checkCode ( card );
+        }
+
     }
 }

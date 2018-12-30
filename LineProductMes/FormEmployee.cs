@@ -180,6 +180,7 @@ namespace LineProductMes
         protected override int Cancel ( )
         {
             cancelTool ( state );
+            errorProvider1 . Clear ( );
 
             if ( state . Equals ( "add" ) )
             {
@@ -565,6 +566,13 @@ namespace LineProductMes
             _model . EMP014 = txtEMP014 . Text;
             _model . EMP015 = txtEMP015 . Text;
             _model . EMP016 = txtEMP016 . Text;
+
+            if ( _bll . checkCode ( _model . EMP016 ) )
+            {
+                errorProvider1 . SetError ( txtEMP016 ,"身份证号重复,请核实" );
+                return false;
+            }
+
             _model . EMP017 = txtEMP017 . Text;
             _model . EMP018 = txtEMP018 . Text;
             _model . EMP019 = txtEMP019 . Text;
@@ -585,6 +593,8 @@ namespace LineProductMes
             _model . EMP038 = txtEMP038 . Text;
 
             errorProvider1 . Clear ( );
+
+
 
             return true;
         }

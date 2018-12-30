@@ -16,8 +16,17 @@ namespace LineProductMesBll . Dao
         /// <returns></returns>
         public DataTable getTableView ( DateTime dtStart,DateTime dtEnd ,Dictionary<string ,string> strDic )
         {
+            string productName = string . Empty;
+            foreach ( string str in strDic . Keys )
+            {
+                if ( string . IsNullOrEmpty ( productName ) )
+                    productName = "'" + str + "'";
+                else
+                    productName = productName + "," + "'" + str + "'";
+            }
+
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT PRF001,PRF002,PRF003 FROM MIKPRF "  );
+            strSql . AppendFormat ( "SELECT PRF001,PRF002,PRF003 FROM MIKPRF WHERE PRF001 IN ({0}) " ,productName );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table == null || table . Rows . Count < 1 )
@@ -28,9 +37,9 @@ namespace LineProductMesBll . Dao
             DataTable work = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( work == null || work . Rows . Count < 1 )
                 return null;
-
+            
             strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT PRG002,PRG004 FROM MIKPRG "  );
+            strSql . AppendFormat ( "SELECT PRG001,PRG002,PRG004 FROM MIKPRG WHERE PRG001 IN ({0})" ,productName );
             DataTable tableOne = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             LineProductMesEntityu . LineForAssPlanEntity model = new LineProductMesEntityu . LineForAssPlanEntity ( );
@@ -49,7 +58,7 @@ namespace LineProductMesBll . Dao
                         Add ( SQLString ,model );
                     else
                     {
-                        if ( tableOne . Select ( "PRG002='" + model . PRG002 + "' AND PRG004='" + model . PRG004 + "'" ) . Length < 1 )
+                        if ( tableOne . Select ( "PRG002='" + model . PRG002 + "' AND PRG004='" + model . PRG004 + "' AND PRG001='" + model . PRG001 + "'" ) . Length < 1 )
                             Add ( SQLString ,model );
                         else
                             Edit ( SQLString ,model );
@@ -57,14 +66,7 @@ namespace LineProductMesBll . Dao
                 }
             }
 
-            string productName = string . Empty;
-            foreach ( string str in strDic . Keys )
-            {
-                if ( string . IsNullOrEmpty ( productName ) )
-                    productName = "'" + str + "'";
-                else
-                    productName = productName + "," + "'" + str + "'";
-            }
+            
 
             if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
             {

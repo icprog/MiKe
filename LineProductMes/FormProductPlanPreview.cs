@@ -268,8 +268,10 @@ namespace LineProductMes
                 int selectColumnValue = 0, allOfValue = 0;
 
                 columnName = gridView1 . FocusedColumn . FieldName;
+                if ( columnName == "DX$CheckboxSelectorColumn" )
+                    return;
                 model . PRF003 = 0;
-                if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName != "DX$CheckboxSelectorColumn" )
+                if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName != "未生产量" && columnName != "DX$CheckboxSelectorColumn" )
                     selectColumnValue = string . IsNullOrEmpty ( row [ columnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ columnName ] . ToString ( ) );
 
                 allOfValue = string . IsNullOrEmpty ( row [ "排产量" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "排产量" ] . ToString ( ) );
@@ -277,25 +279,25 @@ namespace LineProductMes
                 gridView1 . CloseEditor ( );
                 gridView1 . UpdateCurrentRow ( );
 
+
                 foreach ( DataColumn column in tableView . Columns )
                 {
-                    if ( column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "排产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "DX$CheckboxSelectorColumn" )
+                    if ( column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "排产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "DX$CheckboxSelectorColumn" && column . ColumnName != "未生产量" && column . ColumnName != columnName )
                     {
                         model . PRF003 = model . PRF003 + ( string . IsNullOrEmpty ( row [ column . ColumnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ column . ColumnName ] . ToString ( ) ) );
                     }
                 }
 
-                if ( columnName == "主件品号" || columnName == "主件品名" || columnName == "订单量" || columnName == "预计生产量" || columnName == "排产量" || columnName == "库存量" || columnName == "库存可用量" || columnName == "未排量" || columnName == "生产车间" || columnName == "仓库" || columnName == "单位" || columnName == "DX$CheckboxSelectorColumn" )
+                if ( columnName == "主件品号" || columnName == "主件品名" || columnName == "订单量" || columnName == "预计生产量" || columnName == "排产量" || columnName == "库存量" || columnName == "库存可用量" || columnName == "未排量" || columnName == "生产车间" || columnName == "仓库" || columnName == "单位" || columnName == "DX$CheckboxSelectorColumn" || columnName == "未生产量" )
                     return;
-                gridView1 . SetRowCellValue ( gridView1 . FocusedRowHandle ,columnName ,allOfValue - model . PRF003 + selectColumnValue );
+
+                gridView1 . SetRowCellValue ( gridView1 . FocusedRowHandle ,columnName ,allOfValue - model . PRF003  );
 
                 selectPrevious = selectNow;
             }
             //}
         }
-        private void gridView1_DoubleClick ( object sender ,EventArgs e )
-        {
-        }
+
         private void btnLine_Click ( object sender ,EventArgs e )
         {
             int [ ] selectRows = gridView1 . GetSelectedRows ( );
@@ -460,14 +462,14 @@ namespace LineProductMes
                 column . BestFit ( );
                 column . Summary . Clear ( );
                 column . OptionsColumn . AllowEdit = false;
-                if ( column . FieldName != "主件品号" && column . FieldName != "主件品名" && column . FieldName != "订单量" && column . FieldName != "预计生产量" && column . FieldName != "排产量" && column . FieldName != "库存量" && column . FieldName != "库存可用量" && column . FieldName != "未排量" && column . FieldName != "生产车间" && column . FieldName != "仓库" && column . FieldName != "单位" )
+                if ( column . FieldName != "主件品号" && column . FieldName != "主件品名" && column . FieldName != "订单量" && column . FieldName != "预计生产量" && column . FieldName != "排产量" && column . FieldName != "库存量" && column . FieldName != "库存可用量" && column . FieldName != "未排量" && column . FieldName != "生产车间" && column . FieldName != "仓库" && column . FieldName != "单位" && column . FieldName != "未生产量" )
                 {
                     object obj = tableView . Compute ( "COUNT([" + column . FieldName + "])" ,"[" + column . FieldName + "]>0" );
                     column . Summary . Add ( DevExpress . Data . SummaryItemType . Custom ,column . FieldName ,obj . ToString ( ) );
                     column . OptionsColumn . AllowEdit = true;
                     column . Width = 45;
-                    if ( ( Convert . ToDateTime ( column . FieldName ) - dt ) . Days < 0 )
-                        column . OptionsColumn.AllowEdit = false;
+                    //if ( ( Convert . ToDateTime ( column . FieldName ) - dt ) . Days < 0 )
+                    //    column . OptionsColumn.AllowEdit = false;
                     week = System . Globalization . CultureInfo . CurrentCulture . DateTimeFormat . GetDayName ( Convert . ToDateTime ( column . Name ) . DayOfWeek );
                     column . Caption = column . Name + week;
                     if ( week . Equals ( "星期日" ) )
@@ -479,15 +481,17 @@ namespace LineProductMes
                 else if ( column . FieldName == "主件品号" )
                     column . Summary . Add ( DevExpress . Data . SummaryItemType . Custom ,column . FieldName ,"合计" );
                 else if ( column . FieldName == "订单量" )
-                    column . ToolTip = "同品号所有未结束订单总量";
+                    column . ToolTip = "同品号所有未结束订单总量     ";
                 else if ( column . FieldName == "预计生产量" )
-                    column . ToolTip = "工单单头未完成量=计划生产量-已完工量";
+                    column . ToolTip = "工单单头未完成量=计划生产量-已完工量          ";
                 else if ( column . FieldName == "库存量" )
-                    column . ToolTip = "现有库存量";
+                    column . ToolTip = "现有库存量     ";
                 else if ( column . FieldName == "库存可用量" )
-                    column . ToolTip = "库存量+预计生产量-订单量";
+                    column . ToolTip = "库存量+预计生产量-订单量     ";
                 else if ( column . FieldName == "未排量" )
-                    column . ToolTip = "订单量-排产量";
+                    column . ToolTip = "订单量-排产量     ";
+                else if ( column . FieldName == "未生产量" )
+                    column . ToolTip = "(已领料量-入库耗用量)/(预计用量/产品数量)     ";
             }
         }
         void controlUnEnable ( )
@@ -513,7 +517,7 @@ namespace LineProductMes
                 total = 0;
                 foreach ( DataColumn column in tableView . Columns )
                 {
-                    if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty && column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" )
+                    if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty && column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "未生产量" )
                     {
                         if ( Convert . ToInt32 ( row [ column ] ) < 0 )
                         {

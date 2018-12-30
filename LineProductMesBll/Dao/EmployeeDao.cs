@@ -398,7 +398,7 @@ namespace LineProductMesBll . Dao
         public DataTable GetDataTableAll ( )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT idx,EMP001,EMP002,EMP003,EMP004,EMP005,EMP006,EMP007,CASE WHEN EMP008=0 THEN '男' ELSE '女' END EMP008,EMP009,EMP010,EMP011,EMP012,EMP013,EMP014,EMP015,EMP016,EMP017,EMP018,EMP019,EMP020,EMP021,EMP022,EMP023,EMP024,CASE WHEN EMP025=0 THEN '离职' ELSE '在职' END EMP025,EMP026,CONVERT(FLOAT,EMP027) EMP027,CONVERT(FLOAT,EMP028) EMP028,CONVERT(FLOAT,EMP029) EMP029,CONVERT(FLOAT,EMP030) EMP030,CONVERT(FLOAT,EMP031) EMP031,CONVERT(FLOAT,EMP032) EMP032,EMP034,EMP035,EMP036,EMP010+' '+EMP011+' '+EMP035+''+EMP014 U2,EMP012+' '+EMP013+' '+EMP036 U3,DATEDIFF(YEAR,EMP009,GETDATE()) U0,DATEDIFF(YEAR,EMP023,GETDATE()) U1,EMP037,EMP038 FROM MIKEMP WHERE EMP001!='DS'  ORDER BY EMP001" );
+            strSql . Append ( "SELECT idx,EMP001,EMP002,EMP003,EMP004,EMP005,EMP006,EMP007,CASE WHEN EMP008=0 THEN '男' ELSE '女' END EMP008,EMP009,EMP010,EMP011,EMP012,EMP013,EMP014,EMP015,EMP016,EMP017,EMP018,EMP019,EMP020,EMP021,EMP022,EMP023,EMP024,CASE WHEN EMP025=0 THEN '离职' ELSE '在职' END EMP025,EMP026,CONVERT(FLOAT,EMP027) EMP027,CONVERT(FLOAT,EMP028) EMP028,CONVERT(FLOAT,EMP029) EMP029,CONVERT(FLOAT,EMP030) EMP030,CONVERT(FLOAT,EMP031) EMP031,CONVERT(FLOAT,EMP032) EMP032,EMP034,EMP035,EMP036,ISNULL(EMP010,'')+' '+ISNULL(EMP011,'')+' '+ISNULL(EMP035,'')+''+EMP014 U2,EMP012+' '+EMP013+' '+EMP036 U3,DATEDIFF(YEAR,EMP009,GETDATE()) U0,DATEDIFF(YEAR,EMP023,GETDATE()) U1,EMP037,EMP038 FROM MIKEMP WHERE EMP001!='DS'  ORDER BY EMP001" );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -439,6 +439,24 @@ namespace LineProductMesBll . Dao
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 
+        /// <summary>
+        /// 是否存在多个身份证
+        /// </summary>
+        /// <param name="card"></param>
+        /// <returns></returns>
+        public bool checkCode ( string card )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT COUNT(1) c FROM MIKEMP WHERE EMP016='{0}'" ,card );
 
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table != null && table . Rows . Count > 0 )
+            {
+                int cards = string . IsNullOrEmpty ( table . Rows [ 0 ] [ "c" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ 0 ] [ "c" ] );
+                return cards > 1 ? true : false;
+            }
+            else
+                return false;
+        }
     }
 }
