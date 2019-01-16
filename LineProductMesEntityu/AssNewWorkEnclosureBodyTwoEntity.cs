@@ -24,6 +24,7 @@ namespace LineProductMesEntityu
         private DateTime? _anv014;
         private decimal? _anv015;
         private decimal? _anv016;
+        private decimal? _anv017;
 
         /// <summary>
         /// 
@@ -253,6 +254,21 @@ namespace LineProductMesEntityu
             set
             {
                 _anv016 = value;
+            }
+        }
+        /// <summary>
+        /// 分配工资
+        /// </summary>
+        public decimal? ANV017
+        {
+            get
+            {
+                return _anv017;
+            }
+
+            set
+            {
+                _anv017 = value;
             }
         }
     }

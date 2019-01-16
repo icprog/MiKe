@@ -447,7 +447,7 @@ namespace LineProductMes
             {
                 if ( ClassForMain . FormClosingState . formClost == true )
                 {
-                    if ( XtraMessageBox . Show ( "还有其他窗体未关闭,确认关闭?" ,"提示" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                    if ( XtraMessageBox . Show ( "还有其他窗体未关闭,确认关闭?" ,"提示" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                         e . Cancel = true;
                 }
             }

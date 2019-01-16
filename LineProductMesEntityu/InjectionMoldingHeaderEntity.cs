@@ -25,6 +25,7 @@ namespace LineProductMesEntityu
         private string _ija014;
         private DateTime? _ija015;
         private DateTime? _ija016;
+        private string _ija017;
 
 
         /// <summary>
@@ -266,6 +267,21 @@ namespace LineProductMesEntityu
             get
             {
                 return _ija016;
+            }
+        }
+        /// <summary>
+        /// 班次
+        /// </summary>
+        public string IJA017
+        {
+            get
+            {
+                return _ija017;
+            }
+
+            set
+            {
+                _ija017 = value;
             }
         }
     }

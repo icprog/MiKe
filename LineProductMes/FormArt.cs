@@ -359,7 +359,7 @@ namespace LineProductMes
                 return;
             if ( e . KeyChar == ( char ) Keys . Enter && toolSave . Visibility == DevExpress . XtraBars . BarItemVisibility . Always )
             {
-                if ( XtraMessageBox . Show ( "确认删除?" ,"提示" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"提示" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                     return;
                 model . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] );
                 if ( model . idx > 0 && !idxList . Contains ( model . idx . ToString ( ) ) )
@@ -375,7 +375,7 @@ namespace LineProductMes
                 return;
             if ( e . KeyChar == ( char ) Keys . Enter && toolSave . Visibility == DevExpress . XtraBars . BarItemVisibility . Always )
             {
-                if ( XtraMessageBox . Show ( "确认删除?" ,"提示" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"提示" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                     return;
                 _bodyOne . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] );
                 if ( _bodyOne . idx > 0 && !idxListOne . Contains ( _bodyOne . idx . ToString ( ) ) )
@@ -624,7 +624,7 @@ namespace LineProductMes
             {
                 if ( txtARS001 . Text == string . Empty || tableBody == null || tableBody . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )

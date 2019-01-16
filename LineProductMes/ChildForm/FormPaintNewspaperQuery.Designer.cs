@@ -45,6 +45,7 @@
             this.txtPAO004 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.View4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -53,7 +54,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PAN001 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,8 +66,9 @@
             this.PAO005 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PAO012 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PAN006 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtSa = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.PAN013 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -79,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.View3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPAO004.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -87,12 +91,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSa.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -120,6 +123,7 @@
             this.layoutControl1.Controls.Add(this.txtPAO003);
             this.layoutControl1.Controls.Add(this.txtPAO004);
             this.layoutControl1.Controls.Add(this.dateEdit1);
+            this.layoutControl1.Controls.Add(this.txtSa);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -314,6 +318,19 @@
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 0;
             // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(387, 36);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(198, 20);
+            this.dateEdit1.StyleController = this.layoutControl1;
+            this.dateEdit1.TabIndex = 11;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -327,7 +344,7 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem8,
-            this.emptySpaceItem1});
+            this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1030, 73);
@@ -396,13 +413,14 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // emptySpaceItem1
+            // layoutControlItem8
             // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(577, 24);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(193, 29);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.Control = this.dateEdit1;
+            this.layoutControlItem8.Location = new System.Drawing.Point(324, 24);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(253, 29);
+            this.layoutControlItem8.Text = "报工日期";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(48, 14);
             // 
             // gridControl1
             // 
@@ -410,7 +428,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1030, 289);
+            this.gridControl1.Size = new System.Drawing.Size(1030, 296);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -431,7 +449,8 @@
             this.PAO004,
             this.PAO005,
             this.PAO012,
-            this.PAN006});
+            this.PAN006,
+            this.PAN013});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -453,7 +472,7 @@
             this.PAN009.FieldName = "PAN009";
             this.PAN009.Name = "PAN009";
             this.PAN009.Visible = true;
-            this.PAN009.VisibleIndex = 7;
+            this.PAN009.VisibleIndex = 8;
             this.PAN009.Width = 65;
             // 
             // PAN010
@@ -462,7 +481,7 @@
             this.PAN010.FieldName = "PAN010";
             this.PAN010.Name = "PAN010";
             this.PAN010.Visible = true;
-            this.PAN010.VisibleIndex = 8;
+            this.PAN010.VisibleIndex = 9;
             this.PAN010.Width = 77;
             // 
             // PAO002
@@ -519,27 +538,36 @@
             this.PAN006.VisibleIndex = 6;
             this.PAN006.Width = 81;
             // 
-            // dateEdit1
+            // layoutControlItem9
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(387, 36);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.layoutControlItem9.Control = this.txtSa;
+            this.layoutControlItem9.Location = new System.Drawing.Point(577, 24);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(193, 29);
+            this.layoutControlItem9.Text = "工资类型";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(48, 14);
+            // 
+            // txtSa
+            // 
+            this.txtSa.Location = new System.Drawing.Point(640, 36);
+            this.txtSa.Name = "txtSa";
+            this.txtSa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(198, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 11;
+            this.txtSa.Properties.Items.AddRange(new object[] {
+            "",
+            "计件",
+            "计时"});
+            this.txtSa.Size = new System.Drawing.Size(138, 20);
+            this.txtSa.StyleController = this.layoutControl1;
+            this.txtSa.TabIndex = 12;
             // 
-            // layoutControlItem8
+            // PAN013
             // 
-            this.layoutControlItem8.Control = this.dateEdit1;
-            this.layoutControlItem8.Location = new System.Drawing.Point(324, 24);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(253, 29);
-            this.layoutControlItem8.Text = "报工日期";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(48, 14);
+            this.PAN013.Caption = "工资类型";
+            this.PAN013.FieldName = "PAN013";
+            this.PAN013.Name = "PAN013";
+            this.PAN013.Visible = true;
+            this.PAN013.VisibleIndex = 7;
             // 
             // FormPaintNewspaperQuery
             // 
@@ -563,6 +591,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.View3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPAO004.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -571,12 +601,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSa.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -619,8 +648,10 @@
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn3;
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn4;
         private DevExpress . XtraGrid . Columns . GridColumn PAN006;
-        private DevExpress . XtraLayout . EmptySpaceItem emptySpaceItem1;
         private DevExpress . XtraEditors . DateEdit dateEdit1;
         private DevExpress . XtraLayout . LayoutControlItem layoutControlItem8;
+        private DevExpress . XtraEditors . ComboBoxEdit txtSa;
+        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem9;
+        private DevExpress . XtraGrid . Columns . GridColumn PAN013;
     }
 }

@@ -215,9 +215,9 @@ namespace LineProductMesBll . Bll
         /// <param name="proNum"></param>
         /// <param name="oddNum"></param>
         /// <returns></returns>
-        public DataTable getTableSur ( string orderNum ,string proNum ,string oddNum )
+        public int getTableSur ( string orderNum ,string proNum ,string oddNum ,int? nums)
         {
-            return dal . getTableSur ( orderNum ,proNum ,oddNum );
+            return dal . getTableSur ( orderNum ,proNum ,oddNum ,nums );
         }
 
         /// <summary>
@@ -227,9 +227,9 @@ namespace LineProductMesBll . Bll
         /// <param name="proNum"></param>
         /// <param name="oddNum"></param>
         /// <returns></returns>
-        public DataTable getTableSurTime ( string oddNum ,string orderNum ,string proNum )
+        public int getTableSurTime ( string oddNum ,string orderNum ,string proNum ,int? nums )
         {
-            return dal . getTableSurTime ( oddNum ,orderNum ,proNum );
+            return dal . getTableSurTime ( oddNum ,orderNum ,proNum ,nums );
         }
 
 

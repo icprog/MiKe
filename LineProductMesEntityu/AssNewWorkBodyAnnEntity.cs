@@ -20,6 +20,7 @@ namespace LineProductMesEntityu
         private decimal? _ann008;
         private int? _ann009;
         private string _ann010;
+
         /// <summary>
         /// 
         /// </summary>

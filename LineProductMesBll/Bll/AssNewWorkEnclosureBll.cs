@@ -134,9 +134,9 @@ namespace LineProductMesBll . Bll
         /// 获取组装报工单的单号
         /// </summary>
         /// <returns></returns>
-        public DataTable getTableOrder ( string orderNum,string proNum )
+        public DataTable getTableOrder (  )
         {
-            return dal . getTableOrder ( orderNum ,proNum );
+            return dal . getTableOrder (  );
         }
 
         /// <summary>
@@ -195,9 +195,9 @@ namespace LineProductMesBll . Bll
         /// <param name="proNum"></param>
         /// <param name="oddNum"></param>
         /// <returns></returns>
-        public DataTable getTableOtherSur ( string orderNum ,string proNum ,string oddNum )
+        public DataTable getTableOtherSur ( string orderNum ,string proNum ,string oddNum ,string workOrderNum)
         {
-            return dal . getTableOtherSur ( orderNum ,proNum ,oddNum );
+            return dal . getTableOtherSur ( orderNum ,proNum ,oddNum ,workOrderNum );
         }
 
         /// <summary>

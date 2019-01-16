@@ -159,7 +159,7 @@ namespace LineProductMes
                     column . Summary . Add ( DevExpress . Data . SummaryItemType . Sum ,column . FieldName );
                     column . OptionsColumn . AllowEdit = true;
                     column . Width = 45;
-                    if ( ( Convert . ToDateTime ( column . FieldName ) - dt ) . Days <= 0 )
+                    if ( ( Convert . ToDateTime ( column . FieldName ) - dt ) . Days < 0 )
                         column . OptionsColumn . AllowEdit = false;
 
                     gridView1 . GroupSummary . Add (

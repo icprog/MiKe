@@ -18,7 +18,7 @@ namespace LineProductMes . ChildForm
     {
         LineProductMesBll.Bll.LogisticsNewBll _bll=null;
         DataTable tableView,table;
-
+        
         public FormLogisticsQuery ( )
         {
             InitializeComponent ( );
@@ -78,6 +78,8 @@ namespace LineProductMes . ChildForm
                 strWhere = strWhere + " AND LOG005='" + txtLOG005 . Text + "'";
             if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
                 strWhere = strWhere + " AND LGN002='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
+            if ( !string . IsNullOrEmpty ( txtSa . Text ) )
+                strWhere = strWhere + " AND LGN007='" + txtSa . Text + "'";
 
             tableView = _bll . getTableView ( strWhere );
             gridControl1 . DataSource = tableView;

@@ -24,8 +24,8 @@ namespace LineProductMesEntityu
         private decimal? _ppa013;
         private decimal? _ppa014;
         private string _ppa015;
-        private string _ppa016;
-        private string _ppa017;
+        private decimal? _ppa016;
+        private decimal? _ppa017;
         private string _ppa018;
         private string _ppa019;
         private string _ppa020;
@@ -255,9 +255,9 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 分配工资
         /// </summary>
-        public string PPA016
+        public decimal? PPA016
         {
             set
             {
@@ -271,7 +271,7 @@ namespace LineProductMesEntityu
         /// <summary>
         /// 
         /// </summary>
-        public string PPA017
+        public decimal? PPA017
         {
             set
             {

@@ -96,7 +96,7 @@ namespace LineProductMes
                 return 0;
             }
 
-            if ( XtraMessageBox . Show ( "确定要删除整条信息?" ,"删除" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+            if ( XtraMessageBox . Show ( "确定要删除整条信息?" ,"删除" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
             {
                 bool result = _bll . Delete ( Convert . ToInt32 ( txtEMP001 . Tag ) );
                 if ( result )
@@ -866,7 +866,7 @@ namespace LineProductMes
             {
                 if ( txtEMP002 . Text == string . Empty )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )

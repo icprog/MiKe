@@ -5,6 +5,7 @@ using System;
 using System . Collections . Generic;
 using System . Data . SqlClient;
 using System . Collections;
+using DevExpress . XtraEditors;
 
 namespace LineProductMesBll . Dao
 {
@@ -176,12 +177,12 @@ GO
                 {
                     if ( column . ColumnName == "主件品号" )
                         model . PRF001 = row [ column ] . ToString ( );
-                    else if ( column . ColumnName != "主件品名" && column . ColumnName != "TOTAL" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "未生产量" )
+                    else if ( column . ColumnName != "主件品名" && column . ColumnName != "TOTAL" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "开单未入量" && column . ColumnName != "客户名称" )
                     {
                         model . PRF002 = Convert . ToDateTime ( column . ColumnName );
-                        if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty )
-                        {
-                            model . PRF003 = Convert . ToInt32 ( row [ column ] );
+                        //if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty )
+                        //{
+                            model . PRF003 =string.IsNullOrEmpty( row [ column ] . ToString ( ) ) ==true?0: Convert . ToInt32 ( row [ column ] );
                             if ( tableOne != null && tableOne . Rows . Count > 0 )
                             {
                                 if ( tableOne . Select ( "PRF001='" + model . PRF001 + "' AND PRF002='" + model . PRF002 + "'" ) . Length < 1 )
@@ -189,7 +190,7 @@ GO
                                 else
                                     Editprf ( SQLString ,model );
                             }
-                        }
+                        //}
                     }
                 }
             }

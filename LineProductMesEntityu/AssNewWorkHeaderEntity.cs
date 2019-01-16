@@ -34,6 +34,8 @@ namespace LineProductMesEntityu
         private decimal? _anw023;
         private decimal? _anw024;
         private string _anw025;
+        private decimal? _anw026;
+        private decimal? _anw027;
 
         /// <summary>
         /// 
@@ -402,5 +404,34 @@ namespace LineProductMesEntityu
                 _anw025 = value;
             }
         }
+        /// <summary>
+        /// 补贴工时
+        /// </summary>
+        public decimal? ANW026
+        {
+            set
+            {
+                _anw026 = value;
+            }
+            get
+            {
+                return _anw026;
+            }
+        }
+        /// <summary>
+        /// 补贴单价
+        /// </summary>
+        public decimal? ANW027
+        {
+            set
+            {
+                _anw027 = value;
+            }
+            get
+            {
+                return _anw027;
+            }
+        }
+
     }
 }

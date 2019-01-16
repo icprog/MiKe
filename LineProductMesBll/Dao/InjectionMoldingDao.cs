@@ -44,7 +44,7 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             //strSql . Append ( "SELECT DISTINCT RAA001,RAA015,DEA002,DEA003,DEA057,CONVERT(FLOAT,RAA018) RAA018,ISNULL(ART04,0) DEA050,RAA008,CONVERT(FLOAT,ISNULL(ART004,0)) ART004 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 LEFT JOIN MIKART C ON A.RAA015=C.ART001 LEFT JOIN (SELECT ART001,CONVERT(FLOAT,SUM(ART004)) ART04 FROM MIKART GROUP BY ART001) D ON A.RAA015=D.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0502' AND RAA020='N' AND RAA024='T'" );
-            strSql . Append ( "SELECT DISTINCT RAA001,RAA015,DEA002,DEA003,DEA057,CONVERT(FLOAT,RAA018) RAA018,ISNULL(ART04,0) DEA050,RAA008,CONVERT(FLOAT,ISNULL(ART004,0)) ART004 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 LEFT JOIN MIKART C ON A.RAA015=C.ART001 LEFT JOIN (SELECT ART001,CONVERT(FLOAT,SUM(ART004)) ART04 FROM MIKART GROUP BY ART001) D ON A.RAA015=D.ART001 WHERE DEA009 IN ('M','S') AND DEA076='0502' AND RAA020='N' AND RAA024='T'" );
+            strSql . Append ( "SELECT DISTINCT RAA001,RAA015,DEA002,DEA003,DEA057,CONVERT(FLOAT,RAA018) RAA018,ISNULL(ART04,0) DEA050,RAA008,CONVERT(FLOAT,ISNULL(ART004,0)) ART004,DDA003 FROM SGMRAA A INNER JOIN TPADEA B ON A.RAA015=B.DEA001 LEFT JOIN MIKART C ON A.RAA015=C.ART001 LEFT JOIN (SELECT ART001,CONVERT(FLOAT,SUM(ART004)) ART04 FROM MIKART GROUP BY ART001) D ON A.RAA015=D.ART001 LEFT JOIN TPADDA E ON B.DEA008=E.DDA001 WHERE DEA009 IN ('M','S') AND DEA076='0502' AND RAA020='N' AND RAA024='T'" );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -124,25 +124,26 @@ namespace LineProductMesBll . Dao
         /// <returns></returns>
         public string getOddNum ( )
         {
-            StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT MAX(IJA001) IJA001 FROM MIKIJA" );
+            return GetCodeUtils . getOddNum ( "MIKIJA" ,"IJA001" );
+            //StringBuilder strSql = new StringBuilder ( );
+            //strSql . Append ( "SELECT MAX(IJA001) IJA001 FROM MIKIJA" );
 
-            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
-            if ( table == null || table . Rows . Count < 0 )
-                return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-            else
-            {
-                string code = table . Rows [ 0 ] [ "IJA001" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( code ) )
-                    return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-                else
-                {
-                    if ( code . Substring ( 0 ,8 ) . Equals ( UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) ) )
-                        return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
-                    else
-                        return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-                }
-            }
+            //DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            //if ( table == null || table . Rows . Count < 0 )
+            //    return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //else
+            //{
+            //    string code = table . Rows [ 0 ] [ "IJA001" ] . ToString ( );
+            //    if ( string . IsNullOrEmpty ( code ) )
+            //        return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //    else
+            //    {
+            //        if ( code . Substring ( 0 ,8 ) . Equals ( UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) ) )
+            //            return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
+            //        else
+            //            return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //    }
+            //}
         }
 
         /// <summary>
@@ -153,7 +154,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . InjectionMoldingHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA015,IJA016 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA014,IJA015,IJA016,IJA017 FROM MIKIJA WHERE IJA001='{0}'" ,oddNum );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table == null || table . Rows . Count < 1 )
@@ -233,6 +234,10 @@ namespace LineProductMesBll . Dao
                 {
                     model . IJA013 = decimal . Parse ( row [ "IJA013" ] . ToString ( ) );
                 }
+                if ( row [ "IJA014" ] != null && row [ "IJA014" ] . ToString ( ) != "" )
+                {
+                    model . IJA014 = row [ "IJA014" ] . ToString ( );
+                }
                 if ( row [ "IJA015" ] != null && row [ "IJA015" ] . ToString ( ) != "" )
                 {
                     model . IJA015 = DateTime . Parse ( row [ "IJA015" ] . ToString ( ) );
@@ -240,6 +245,10 @@ namespace LineProductMesBll . Dao
                 if ( row [ "IJA016" ] != null && row [ "IJA016" ] . ToString ( ) != "" )
                 {
                     model . IJA016 = DateTime . Parse ( row [ "IJA016" ] . ToString ( ) );
+                }
+                if ( row [ "IJA017" ] != null )
+                {
+                    model . IJA017 = row [ "IJA017" ] . ToString ( );
                 }
             }
             return model;
@@ -253,7 +262,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableHeader ( string strWhere,string strWhere1 ,string strWhere2 )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJA001,IJA007,IJA010,IJA011,IJB004,IJB005,IJB006,IJB010,IJB015 FROM MIKIJA A INNER JOIN MIKIJB B ON A.IJA001=B.IJB001 WHERE {0} UNION SELECT IJC001,IJA007,IJA010,IJA011,IJC002,IJC003,IJC004,IJC008,IJC010 FROM MIKIJC A INNER JOIN MIKIJA B ON A.IJC001=B.IJA001 WHERE {1} UNION SELECT IJD001,IJA007,IJA010,IJA011,'' IJC002,''IJC003,'' IJC004,''IJC008,'' IJC010 FROM MIKIJD A INNER JOIN MIKIJA B ON A.IJD001=B.IJA001 WHERE {2}" ,strWhere ,strWhere1 ,strWhere2 );
+            strSql . AppendFormat ( "SELECT IJA001,IJA007,IJA010,IJA011,IJB004,IJB005,IJB006,IJB010,IJB015,IJA002 FROM MIKIJA A INNER JOIN MIKIJB B ON A.IJA001=B.IJB001 WHERE {0} UNION SELECT IJC001,IJA007,IJA010,IJA011,IJC002,IJC003,IJC004,IJC008,IJC010,IJA002 FROM MIKIJC A INNER JOIN MIKIJA B ON A.IJC001=B.IJA001 WHERE {1} UNION SELECT IJD001,IJA007,IJA010,IJA011,'' IJC002,''IJC003,'' IJC004,''IJC008,'' IJC010,IJA002 FROM MIKIJD A INNER JOIN MIKIJA B ON A.IJD001=B.IJA001 WHERE {2}" ,strWhere ,strWhere1 ,strWhere2 );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -266,7 +275,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableOne ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,IJB001,IJB002,IJB003,IJB004,IJB005,IJB006,IJB007,IJB008,IJB009,IJB010,IJB011,IJB012,IJB013,IJB014,IJB015,IJB016,IJB017,IJB018,IJB019,IJB020,IJB021,IJB022,IJB023,IJB024,IJB025,0 U4 FROM MIKIJB WHERE IJB001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT idx,IJB001,IJB002,IJB003,IJB004,IJB005,IJB006,IJB007,IJB008,IJB009,IJB010,IJB011,IJB012,IJB013,IJB014,IJB015,IJB016,IJB017,IJB018,IJB019,IJB020,IJB021,IJB022,IJB023,IJB024,IJB025,IJB026,IJB027,IJB028,0 U4 FROM MIKIJB WHERE IJB001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -279,7 +288,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableTwo ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,IJC001,IJC002,IJC003,IJC004,IJC005,IJC006,IJC007,IJC008,IJC009,IJC010,IJC011,0 U4 FROM MIKIJC WHERE IJC001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT idx,IJC001,IJC002,IJC003,IJC004,IJC005,IJC006,IJC007,IJC008,IJC009,IJC010,IJC011,IJC012,0 U4 FROM MIKIJC WHERE IJC001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -292,7 +301,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableTre ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,IJD001,IJD002,IJD003,IJD004,IJD005,IJD006,IJD007,IJD008,IJD009,IJD010,IJD011,IJD012,IJD013 FROM  MIKIJD WHERE IJD001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT idx,IJD001,IJD002,IJD003,IJD004,IJD005,IJD006,IJD007,IJD008,IJD009,IJD010,IJD011,IJD012,IJD013,IJD014 FROM  MIKIJD WHERE IJD001='{0}'" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -355,6 +364,15 @@ namespace LineProductMesBll . Dao
                     modelOne . IJB023 = string . IsNullOrEmpty ( row [ "IJB023" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "IJB023" ] . ToString ( ) );
                     modelOne . IJB024 = string . IsNullOrEmpty ( row [ "IJB024" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "IJB024" ] . ToString ( ) );
                     modelOne . IJB025 = string . IsNullOrEmpty ( row [ "IJB025" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "IJB025" ] . ToString ( ) );
+                    modelOne . IJB026 = row [ "IJB026" ] . ToString ( );
+                    if ( string . IsNullOrEmpty ( row [ "IJB027" ] . ToString ( ) ) )
+                        modelOne . IJB027 = null;
+                    else
+                        modelOne . IJB027 = Convert . ToDecimal ( row [ "IJB027" ] . ToString ( ) );
+                    if ( string . IsNullOrEmpty ( row [ "IJB028" ] . ToString ( ) ) )
+                        modelOne . IJB028 = null;
+                    else
+                        modelOne . IJB028 = Convert . ToDecimal ( row [ "IJB028" ] . ToString ( ) );
                     AddBodyOne ( SQLString ,modelOne );
                 }
             }
@@ -374,6 +392,7 @@ namespace LineProductMesBll . Dao
                     modelTwo . IJC009 = string . IsNullOrEmpty ( row [ "IJC009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "IJC009" ] . ToString ( ) );
                     modelTwo . IJC010 = string . IsNullOrEmpty ( row [ "IJC010" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "IJC010" ] . ToString ( ) );
                     modelTwo . IJC011 = row [ "IJC011" ] . ToString ( );
+                    modelTwo . IJC012 = row [ "IJC012" ] . ToString ( );
                     AddBodyTwo ( SQLString ,modelTwo );
                 }
 
@@ -465,6 +484,15 @@ namespace LineProductMesBll . Dao
                     modelOne . IJB023 = string . IsNullOrEmpty ( row [ "IJB023" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "IJB023" ] . ToString ( ) );
                     modelOne . IJB024 = string . IsNullOrEmpty ( row [ "IJB024" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "IJB024" ] . ToString ( ) );
                     modelOne . IJB025 = string . IsNullOrEmpty ( row [ "IJB025" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "IJB025" ] . ToString ( ) );
+                    modelOne . IJB026 = row [ "IJB026" ] . ToString ( );
+                    if ( string . IsNullOrEmpty ( row [ "IJB027" ] . ToString ( ) ) )
+                        modelOne . IJB027 = null;
+                    else
+                        modelOne . IJB027 = Convert . ToDecimal ( row [ "IJB027" ] . ToString ( ) );
+                    if ( string . IsNullOrEmpty ( row [ "IJB028" ] . ToString ( ) ) )
+                        modelOne . IJB028 = null;
+                    else
+                        modelOne . IJB028 = Convert . ToDecimal ( row [ "IJB028" ] . ToString ( ) );
                     if ( modelOne . idx < 1 )
                         AddBodyOne ( SQLString ,modelOne );
                     else
@@ -548,9 +576,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKIJA(" );
-            strSql . Append ( "IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA014,IJA015,IJA016)" );
+            strSql . Append ( "IJA001,IJA002,IJA003,IJA004,IJA005,IJA006,IJA007,IJA008,IJA009,IJA010,IJA011,IJA012,IJA013,IJA014,IJA015,IJA016,IJA017)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@IJA001,@IJA002,@IJA003,@IJA004,@IJA005,@IJA006,@IJA007,@IJA008,@IJA009,@IJA010,@IJA011,@IJA012,@IJA013,@IJA014,@IJA015,@IJA016)" );
+            strSql . Append ( "@IJA001,@IJA002,@IJA003,@IJA004,@IJA005,@IJA006,@IJA007,@IJA008,@IJA009,@IJA010,@IJA011,@IJA012,@IJA013,@IJA014,@IJA015,@IJA016,@IJA017)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJA001", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJA002", SqlDbType.NVarChar,5),
@@ -567,7 +595,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJA013", SqlDbType.Decimal),
                     new SqlParameter("@IJA014", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJA015", SqlDbType.DateTime),
-                    new SqlParameter("@IJA016", SqlDbType.DateTime)
+                    new SqlParameter("@IJA016", SqlDbType.DateTime),
+                    new SqlParameter("@IJA017", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . IJA001;
             parameters [ 1 ] . Value = model . IJA002;
@@ -585,15 +614,16 @@ namespace LineProductMesBll . Dao
             parameters [ 13 ] . Value = model . IJA014;
             parameters [ 14 ] . Value = model . IJA015;
             parameters [ 15 ] . Value = model . IJA016;
+            parameters [ 16 ] . Value = model . IJA017;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyOneEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKIJB(" );
-            strSql . Append ( "IJB001,IJB002,IJB003,IJB004,IJB005,IJB006,IJB007,IJB008,IJB009,IJB010,IJB011,IJB012,IJB013,IJB014,IJB015,IJB016,IJB017,IJB018,IJB019,IJB020,IJB021,IJB022,IJB023,IJB024,IJB025)" );
+            strSql . Append ( "IJB001,IJB002,IJB003,IJB004,IJB005,IJB006,IJB007,IJB008,IJB009,IJB010,IJB011,IJB012,IJB013,IJB014,IJB015,IJB016,IJB017,IJB018,IJB019,IJB020,IJB021,IJB022,IJB023,IJB024,IJB025,IJB026,IJB027,IJB028)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@IJB001,@IJB002,@IJB003,@IJB004,@IJB005,@IJB006,@IJB007,@IJB008,@IJB009,@IJB010,@IJB011,@IJB012,@IJB013,@IJB014,@IJB015,@IJB016,@IJB017,@IJB018,@IJB019,@IJB020,@IJB021,@IJB022,@IJB023,@IJB024,@IJB025)" );
+            strSql . Append ( "@IJB001,@IJB002,@IJB003,@IJB004,@IJB005,@IJB006,@IJB007,@IJB008,@IJB009,@IJB010,@IJB011,@IJB012,@IJB013,@IJB014,@IJB015,@IJB016,@IJB017,@IJB018,@IJB019,@IJB020,@IJB021,@IJB022,@IJB023,@IJB024,@IJB025,@IJB026,@IJB027,@IJB028)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJB001", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJB002", SqlDbType.NVarChar,20),
@@ -619,7 +649,10 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJB022", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJB023", SqlDbType.Decimal),
                     new SqlParameter("@IJB024", SqlDbType.Decimal),
-                    new SqlParameter("@IJB025", SqlDbType.Decimal)
+                    new SqlParameter("@IJB025", SqlDbType.Decimal),
+                    new SqlParameter("@IJB026", SqlDbType.NVarChar,20),
+                    new SqlParameter("@IJB027", SqlDbType.Decimal),
+                    new SqlParameter("@IJB028", SqlDbType.Decimal)
             };
             parameters [ 0 ] . Value = model . IJB001;
             parameters [ 1 ] . Value = model . IJB002;
@@ -646,15 +679,18 @@ namespace LineProductMesBll . Dao
             parameters [ 22 ] . Value = model . IJB023;
             parameters [ 23 ] . Value = model . IJB024;
             parameters [ 24 ] . Value = model . IJB025;
+            parameters [ 25 ] . Value = model . IJB026;
+            parameters [ 26 ] . Value = model . IJB027;
+            parameters [ 27 ] . Value = model . IJB028;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyTwo ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyTwoEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKIJC(" );
-            strSql . Append ( "IJC001,IJC002,IJC003,IJC004,IJC005,IJC006,IJC007,IJC008,IJC009,IJC010,IJC011)" );
+            strSql . Append ( "IJC001,IJC002,IJC003,IJC004,IJC005,IJC006,IJC007,IJC008,IJC009,IJC010,IJC011,IJC012)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@IJC001,@IJC002,@IJC003,@IJC004,@IJC005,@IJC006,@IJC007,@IJC008,@IJC009,@IJC010,@IJC011)" );
+            strSql . Append ( "@IJC001,@IJC002,@IJC003,@IJC004,@IJC005,@IJC006,@IJC007,@IJC008,@IJC009,@IJC010,@IJC011,@IJC012)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJC001", SqlDbType.NVarChar,20),
                     new SqlParameter("@IJC002", SqlDbType.NVarChar,20),
@@ -666,7 +702,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJC008", SqlDbType.Int,4),
                     new SqlParameter("@IJC009", SqlDbType.Decimal,9),
                     new SqlParameter("@IJC010", SqlDbType.Int,4),
-                    new SqlParameter("@IJC011", SqlDbType.NVarChar,100)};
+                    new SqlParameter("@IJC011", SqlDbType.NVarChar,100),
+                    new SqlParameter("@IJC012", SqlDbType.NVarChar,20)
+            };
             parameters [ 0 ] . Value = model . IJC001;
             parameters [ 1 ] . Value = model . IJC002;
             parameters [ 2 ] . Value = model . IJC003;
@@ -678,6 +716,7 @@ namespace LineProductMesBll . Dao
             parameters [ 8 ] . Value = model . IJC009;
             parameters [ 9 ] . Value = model . IJC010;
             parameters [ 10 ] . Value = model . IJC011;
+            parameters [ 11 ] . Value = model . IJC012;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyTre ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyTreEntity model )
@@ -735,7 +774,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "IJA012=@IJA012," );
             strSql . Append ( "IJA013=@IJA013," );
             strSql . Append ( "IJA015=@IJA015," );
-            strSql . Append ( "IJA016=@IJA016" );
+            strSql . Append ( "IJA016=@IJA016," );
+            strSql . Append ( "IJA017=@IJA017" );
             strSql . Append ( " where IJA001=@IJA001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJA002", SqlDbType.NVarChar,5),
@@ -752,7 +792,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJA012", SqlDbType.Decimal),
                     new SqlParameter("@IJA013", SqlDbType.Decimal),
                     new SqlParameter("@IJA015", SqlDbType.DateTime),
-                    new SqlParameter("@IJA016", SqlDbType.DateTime)
+                    new SqlParameter("@IJA016", SqlDbType.DateTime),
+                    new SqlParameter("@IJA017", SqlDbType.NVarChar,20)
             };
             parameters [ 0 ] . Value = model . IJA002;
             parameters [ 1 ] . Value = model . IJA003;
@@ -769,6 +810,7 @@ namespace LineProductMesBll . Dao
             parameters [ 12 ] . Value = model . IJA013;
             parameters [ 13 ] . Value = model . IJA015;
             parameters [ 14 ] . Value = model . IJA016;
+            parameters [ 15 ] . Value = model . IJA017;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyOneEntity model )
@@ -798,7 +840,10 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "IJB022=@IJB022," );
             strSql . Append ( "IJB023=@IJB023," );
             strSql . Append ( "IJB024=@IJB024," );
-            strSql . Append ( "IJB025=@IJB025 " );
+            strSql . Append ( "IJB025=@IJB025," );
+            strSql . Append ( "IJB026=@IJB026," );
+            strSql . Append ( "IJB027=@IJB027," );
+            strSql . Append ( "IJB028=@IJB028 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJB003", SqlDbType.NVarChar,5),
@@ -825,7 +870,10 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJB023", SqlDbType.Decimal,9),
                     new SqlParameter("@IJB024", SqlDbType.Decimal,9),
                     new SqlParameter("@IJB025", SqlDbType.Decimal,9),
-                    new SqlParameter("@idx", SqlDbType.Int,4)
+                    new SqlParameter("@idx", SqlDbType.Int,4),
+                    new SqlParameter("@IJB026", SqlDbType.NVarChar,20),
+                    new SqlParameter("@IJB027", SqlDbType.Decimal,9),
+                    new SqlParameter("@IJB028", SqlDbType.Decimal,9)
             };
             parameters [ 0 ] . Value = model . IJB003;
             parameters [ 1 ] . Value = model . IJB004;
@@ -852,6 +900,9 @@ namespace LineProductMesBll . Dao
             parameters [ 22 ] . Value = model . IJB024;
             parameters [ 23 ] . Value = model . IJB025;
             parameters [ 24 ] . Value = model . idx;
+            parameters [ 25 ] . Value = model . IJB026;
+            parameters [ 26 ] . Value = model . IJB027;
+            parameters [ 27 ] . Value = model . IJB028;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBodyTwo ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyTwoEntity model )
@@ -867,7 +918,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "IJC008=@IJC008," );
             strSql . Append ( "IJC009=@IJC009," );
             strSql . Append ( "IJC010=@IJC010," );
-            strSql . Append ( "IJC011=@IJC011" );
+            strSql . Append ( "IJC011=@IJC011," );
+            strSql . Append ( "IJC012=@IJC012 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@IJC003", SqlDbType.NVarChar,20),
@@ -880,7 +932,9 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@IJC010", SqlDbType.Int,4),
                     new SqlParameter("@IJC011", SqlDbType.NVarChar,100),
                     new SqlParameter("@idx", SqlDbType.Int,4),
-                    new SqlParameter("@IJC002", SqlDbType.NVarChar,20)};
+                    new SqlParameter("@IJC002", SqlDbType.NVarChar,20),
+                    new SqlParameter("@IJC012", SqlDbType.NVarChar,20)
+            };
             parameters [ 0 ] . Value = model . IJC003;
             parameters [ 1 ] . Value = model . IJC004;
             parameters [ 2 ] . Value = model . IJC005;
@@ -892,6 +946,7 @@ namespace LineProductMesBll . Dao
             parameters [ 8 ] . Value = model . IJC011;
             parameters [ 9 ] . Value = model . idx;
             parameters [ 10 ] . Value = model . IJC002;
+            parameters [ 11 ] . Value = model . IJC012;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBodyTre ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . InjectionMoldingBodyTreEntity model )
@@ -909,7 +964,7 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "IJD010=@IJD010," );
             strSql . Append ( "IJD011=@IJD011," );
             strSql . Append ( "IJD012=@IJD012," );
-            strSql . Append ( "IJD013=@IJD013 " );
+            strSql . Append ( "IJD013=@IJD013" );
             strSql . Append ( " where idx=@idx " );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@idx", SqlDbType.Int,4),
@@ -982,7 +1037,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintTwo ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJB004 ANW002,IJB005 ANW003,IJB006 ANW004,IJB007 ANW005,IJB008 ANW007,IJB010 ANW006,SUM(IJB015) ANW009,DDA003 DEA008 FROM MIKIJB A LEFT JOIN TPADEA B ON A.IJB005=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001  WHERE IJB001='{0}' GROUP BY IJB004,IJB005,IJB006,IJB007,IJB008,IJB010,DDA003" ,oddNum );
+            strSql . AppendFormat ( "SELECT IJB004 ANW002,IJB005 ANW003,IJB006 ANW004,IJB007 ANW005,IJB008 ANW007,SUM(IJB015) ANW006,IJB010-(SELECT SUM(IJB015) FROM MIKIJB E WHERE A.IJB004=E.IJB004 AND A.IJB005=E.IJB005)-ISNULL((SELECT SUM(IJC010) FROM MIKIJC F WHERE A.IJB004=F.IJC002 AND A.IJB005=F.IJC003),0) ANW009,DDA003 DEA008 FROM MIKIJB A LEFT JOIN TPADEA B ON A.IJB005=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001 WHERE IJB001='{0}' GROUP BY IJB004,IJB005,IJB006,IJB007,IJB008,IJB010,DDA003" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -995,7 +1050,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintTre ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT DISTINCT IJC002 ANW002,IJC003 ANW003,IJC004 ANW004,IJC005 ANW005,IJC006 ANW007,IJC008 ANW006,IJC010 ANW009,DDA003 DEA008 FROM MIKIJC A LEFT JOIN TPADEA B ON A.IJC003=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001 WHERE IJC001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT DISTINCT IJC002 ANW002,IJC003 ANW003,IJC004 ANW004,IJC005 ANW005,IJC006 ANW007,SUM(IJC010) ANW006,IJC008-(SELECT SUM(IJC010) FROM MIKIJC E WHERE A.IJC002=E.IJC002 AND A.IJC003=E.IJC003)-ISNULL((SELECT SUM(IJB015) FROM MIKIJB F WHERE A.IJC002=F.IJB004 AND A.IJC003=F.IJB005),0) ANW009,DDA003 DEA008 FROM MIKIJC A LEFT JOIN TPADEA B ON A.IJC003=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001 WHERE IJC001='{0}' GROUP BY IJC002,IJC003,IJC004,IJC005,IJC006,DDA003,IJC008" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -1007,12 +1062,40 @@ namespace LineProductMesBll . Dao
         /// <param name="proNum"></param>
         /// <param name="oddNum"></param>
         /// <returns></returns>
-        public DataTable getTableSur ( string orderNum ,string proNum ,string oddNum )
+        public int getTableSur ( string orderNum ,string proNum ,string oddNum ,int? nums )
         {
+            int num = 0;
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJB004,IJB005,IJB010-SUM(IJB015) IJB015 FROM MIKIJB WHERE IJB001!='{0}' AND IJB004='{1}' AND IJB005='{2}' GROUP BY IJB004,IJB005,IJB010" ,oddNum ,orderNum ,proNum  );
+            strSql . AppendFormat ( "SELECT IJB004,IJB005,SUM(IJB015) IJB015 FROM MIKIJB WHERE IJB001!='{0}' AND IJB004='{1}' AND IJB005='{2}' GROUP BY IJB004,IJB005,IJB010" ,oddNum ,orderNum ,proNum );
 
-            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+            {
+                strSql = new StringBuilder ( );
+                strSql . AppendFormat ( "SELECT IJC002 IJB004,IJC003 IJB005,SUM(IJC010) IJB015 FROM MIKIJC WHERE IJC001!='{0}' AND IJC002='{1}' AND IJC003='{2}' GROUP BY IJC002,IJC003,IJC008" ,oddNum ,orderNum ,proNum );
+
+                table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+                if ( table == null || table . Rows . Count < 1 )
+                    return Convert . ToInt32 ( nums );
+                else
+                    return Convert.ToInt32( nums )- ( string . IsNullOrEmpty ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) ) );
+            }
+            else
+            {
+                num = string . IsNullOrEmpty ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) );
+
+                strSql = new StringBuilder ( );
+                strSql . AppendFormat ( "SELECT IJC002 IJB004,IJC003 IJB005,SUM(IJC010) IJB015 FROM MIKIJC WHERE IJC001!='{0}' AND IJC002='{1}' AND IJC003='{2}' GROUP BY IJC002,IJC003,IJC008" ,oddNum ,orderNum ,proNum );
+
+                table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+                if ( table == null || table . Rows . Count < 1 )
+                    return Convert . ToInt32 ( nums ) - num;
+                else
+                {
+                    num += string . IsNullOrEmpty ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) );
+                    return Convert . ToInt32 ( nums ) - num;
+                }
+            }
         }
 
         /// <summary>
@@ -1022,12 +1105,43 @@ namespace LineProductMesBll . Dao
         /// <param name="proNum"></param>
         /// <param name="oddNum"></param>
         /// <returns></returns>
-        public DataTable getTableSurTime ( string oddNum ,string orderNum ,string proNum )
+        public int getTableSurTime ( string oddNum ,string orderNum ,string proNum ,int? nums )
         {
+            int num = 0, num1 = 0;
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT IJC002,IJC003,IJC008-SUM(IJC010) IJC010 FROM MIKIJC WHERE IJC001!='{0}' AND IJC002='{1}' AND IJC003='{2}' GROUP BY IJC002,IJC003,IJC008" ,oddNum ,orderNum ,proNum  );
+            strSql . AppendFormat ( "SELECT IJC002,IJC003,SUM(IJC010) IJB015 FROM MIKIJC WHERE IJC001!='{0}' AND IJC002='{1}' AND IJC003='{2}' GROUP BY IJC002,IJC003,IJC008" ,oddNum ,orderNum ,proNum  );
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+            {
+                strSql = new StringBuilder ( );
+                strSql . AppendFormat ( "SELECT IJB004,IJB005,SUM(IJB015) IJB015 FROM MIKIJB WHERE IJB001!='{0}' AND IJB004='{1}' AND IJB005='{2}' GROUP BY IJB004,IJB005,IJB010" ,oddNum ,orderNum ,proNum );
 
-            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+                table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+                if ( table == null || table . Rows . Count < 1 )
+                    return Convert . ToInt32 ( nums );
+                else
+                {
+                    num = string . IsNullOrEmpty ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) );
+                    return Convert . ToInt32 ( nums ) - num;
+                }
+            }
+            else
+            {
+                num = string . IsNullOrEmpty ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) );
+
+                strSql = new StringBuilder ( );
+                strSql . AppendFormat ( "SELECT IJB004,IJB005,SUM(IJB015) IJB015 FROM MIKIJB WHERE IJB001!='{0}' AND IJB004='{1}' AND IJB005='{2}' GROUP BY IJB004,IJB005,IJB010" ,oddNum ,orderNum ,proNum );
+
+                table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+                if ( table == null || table . Rows . Count < 1 )
+                    return Convert . ToInt32 ( nums )-num;
+                else
+                {
+                    num1 = string . IsNullOrEmpty ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ 0 ] [ "IJB015" ] . ToString ( ) );
+                    num += num1;
+                    return Convert . ToInt32 ( nums ) - num;
+                }
+            }
         }
 
         /// <summary>

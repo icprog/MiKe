@@ -53,6 +53,16 @@ namespace LineProductMesBll . Bll
         }
 
         /// <summary>
+        /// 是否存在本年本月的数据
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public bool ExistsYearMonth ( DateTime dt )
+        {
+            return dal . ExistsYearMonth ( dt );
+        }
+
+        /// <summary>
         /// 读取工资
         /// </summary>
         /// <param name="dt"></param>

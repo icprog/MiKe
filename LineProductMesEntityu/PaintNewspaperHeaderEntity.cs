@@ -25,6 +25,8 @@ namespace LineProductMesEntityu
         private string _pan014;
         private DateTime? _pan015;
         private DateTime? _pan016;
+        private decimal? _pan017;
+        private decimal? _pan018;
 
         /// <summary>
         /// 
@@ -263,6 +265,34 @@ namespace LineProductMesEntityu
             get
             {
                 return _pan016;
+            }
+        }
+        /// <summary>
+        /// 补贴工时
+        /// </summary>
+        public decimal? PAN017
+        {
+            set
+            {
+                _pan017 = value;
+            }
+            get
+            {
+                return _pan017;
+            }
+        }
+        /// <summary>
+        /// 补贴单价
+        /// </summary>
+        public decimal? PAN018
+        {
+            set
+            {
+                _pan018 = value;
+            }
+            get
+            {
+                return _pan018;
             }
         }
     }

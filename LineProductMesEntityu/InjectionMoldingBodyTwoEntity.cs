@@ -20,6 +20,8 @@ namespace LineProductMesEntityu
         private decimal? _ijc009;
         private int? _ijc010;
         private string _ijc011;
+        private string _ijc012;
+
         /// <summary>
         /// 
         /// </summary>
@@ -186,6 +188,20 @@ namespace LineProductMesEntityu
             get
             {
                 return _ijc011;
+            }
+        }
+        /// <summary>
+        /// 仓库
+        /// </summary>
+        public string IJC012
+        {
+            set
+            {
+                _ijc012 = value;
+            }
+            get
+            {
+                return _ijc012;
             }
         }
     }

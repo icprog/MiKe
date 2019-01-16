@@ -1,0 +1,183 @@
+10:10:10.080 @EMP002 系统管理员
+10:10:10.080 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+10:12:21.272 @EMP002 系统管理员
+10:12:21.272 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+10:14:11.610 @EMP002 系统管理员
+10:14:11.610 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+10:14:19.925 'WHERE' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 StudentMgr.SqlHelper.ExecuteDataTable(SqlConnection conn, String cmdText, SqlParameter[] parameters) 位置 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\SqlHelper.cs:行号 278
+10:14:19.925 SELECT PAN001,PAN010,PAN006,PAN009,PAN010,PAO002,PAO003,PAO004,PAO005,PAO012,PAN013 FROM MIKPAN A LEFT JOIN MIKPAO B ON A.PAN001=B.PAO001 WHERE 
+10:14:47.468 @EMP002 系统管理员
+10:14:47.468 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+10:55:53.790 @EMP002 系统管理员
+10:55:53.790 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+11:46:35.176 @EMP002 系统管理员
+11:46:35.176 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:00:17.124 @EMP002 系统管理员
+13:00:17.139 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:01:05.200 @EMP002 系统管理员
+13:01:05.200 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:05:26.371 @EMP002 系统管理员
+13:05:26.371 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:06:25.807 @EMP002 系统管理员
+13:06:25.807 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:07:19.769 @EMP002 系统管理员
+13:07:19.769 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:13:44.053 @EMP002 系统管理员
+13:13:44.055 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:29:11.086 @EMP002 系统管理员
+13:29:11.088 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:32:50.434 @HAW001 W20190108005
+13:32:50.434 @HAW018 False
+13:38:03.445 @EMP002 系统管理员
+13:38:03.445 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:38:19.373 @HAW001 W20190108005
+13:38:19.373 @HAW018 True
+13:38:19.373 @RBA001 82
+13:38:19.373 @RBA002 LL201901090001
+13:38:19.373 @RBA003 
+13:38:19.373 @RBA004 20190109
+13:38:19.373 @RBA005 DS
+13:38:19.373 @RBA006 GD201901040015
+13:38:19.373 @RBA012 F
+13:38:19.373 @RBA022 F
+13:38:19.390 @RBB001 82
+13:38:19.390 @RBB002 LL201901090001
+13:38:19.390 @RBB003 001
+13:38:19.390 @RBB004 101050010
+13:38:19.390 @RBB005 冷轧卷410*0.35(ST12)
+13:38:19.390 @RBB006 吨
+13:38:19.390 @RBB007 007
+13:38:19.390 @RBB008 XC15
+13:38:19.390 @RBB009 1
+13:38:19.390 @RBB010 GD201901040015
+13:38:19.390 @RBB011 001
+13:38:19.390 @RBB013 F
+13:38:19.390 @RBB021 ********************
+13:38:19.390 @RBB022 410*0.35mm
+13:38:19.390 @RBB023 81
+13:38:19.390 @RBB012 倒扣料:W20190108005
+13:48:17.265 @EMP002 系统管理员
+13:48:17.265 @EMP033 9af7f2b45fff5ca168dd7081681fadd
+13:50:21.752 @HAW001 W20190109001
+13:50:21.752 @HAW002 GD201901040015
+13:50:21.752 @HAW003 202151412
+13:50:21.752 @HAW004 13款四灯浴霸铁箱
+13:50:21.752 @HAW005 
+13:50:21.752 @HAW006 PCS
+13:50:21.752 @HAW007 1000
+13:50:21.752 @HAW008 0.184
+13:50:21.752 @HAW009 100
+13:50:21.752 @HAW010 2019/1/9 0:00:00
+13:50:21.752 @HAW011 计件
+13:50:21.752 @HAW012 0501
+13:50:21.752 @HAW013 五金车间
+13:50:21.752 @HAW014 0501
+13:50:21.752 @HAW015 五金车间
+13:50:21.752 @HAW016 
+13:50:21.752 @HAW017 
+13:50:21.752 @HAW018 False
+13:50:21.752 @HAW019 False
+13:50:21.752 @HAW020 0
+13:50:21.752 @HAW021 0
+13:50:21.752 @HAW023 系统管理员
+13:50:21.752 @HAW024 2019/1/9 8:00:00
+13:50:21.752 @HAW025 2019/1/9 17:00:00
+13:50:21.768 @HAX001 W20190109001
+13:50:21.768 @HAX002 10015
+13:50:21.768 @HAX003 郭婧
+13:50:21.768 @HAX004 装配工
+13:50:21.768 @HAX005 1003
+13:50:21.768 @HAX006 冲边
+13:50:21.768 @HAX007 0.036
+13:50:21.768 @HAX008 100
+13:50:21.768 @HAX009 2019/1/9 8:00:00
+13:50:21.768 @HAX010 2019/1/9 17:00:00
+13:50:21.768 @HAX011 
+13:50:21.768 @HAX012 
+13:50:21.768 @HAX013 0
+13:50:21.768 @HAX014 
+13:50:21.768 @HAX015 在职
+13:50:21.768 @HAX016 002
+13:50:21.768 @HAX017 LED车间
+13:50:21.768 @HAX018 9
+13:50:21.768 @HAX019 0
+13:50:21.768 @HAX020 3.6
+13:50:21.768 @HAX001 W20190109001
+13:50:21.768 @HAX002 10024
+13:50:21.768 @HAX003 平单单
+13:50:21.768 @HAX004 装配工
+13:50:21.768 @HAX005 1005
+13:50:21.768 @HAX006 冲孔
+13:50:21.768 @HAX007 0.03
+13:50:21.768 @HAX008 100
+13:50:21.768 @HAX009 2019/1/9 8:00:00
+13:50:21.768 @HAX010 2019/1/9 17:00:00
+13:50:21.768 @HAX011 
+13:50:21.768 @HAX012 
+13:50:21.768 @HAX013 0
+13:50:21.768 @HAX014 
+13:50:21.768 @HAX015 在职
+13:50:21.768 @HAX016 003
+13:50:21.768 @HAX017 LED车间
+13:50:21.768 @HAX018 9
+13:50:21.768 @HAX019 0
+13:50:21.768 @HAX020 3.0
+13:50:21.783 @HAX001 W20190109001
+13:50:21.783 @HAX002 10026
+13:50:21.783 @HAX003 胡孝明
+13:50:21.783 @HAX004 装配工
+13:50:21.783 @HAX005 1009
+13:50:21.783 @HAX006 压筋
+13:50:21.783 @HAX007 0.033
+13:50:21.783 @HAX008 100
+13:50:21.783 @HAX009 2019/1/9 8:00:00
+13:50:21.783 @HAX010 2019/1/9 17:00:00
+13:50:21.783 @HAX011 
+13:50:21.783 @HAX012 
+13:50:21.783 @HAX013 0
+13:50:21.783 @HAX014 
+13:50:21.783 @HAX015 在职
+13:50:21.783 @HAX016 004
+13:50:21.783 @HAX017 LED车间
+13:50:21.783 @HAX018 9
+13:50:21.783 @HAX019 0
+13:50:21.783 @HAX020 3.3
+13:50:21.783 @HAX001 W20190109001
+13:50:21.783 @HAX002 10043
+13:50:21.783 @HAX003 唐春凤
+13:50:21.783 @HAX004 装配工
+13:50:21.783 @HAX005 1006
+13:50:21.783 @HAX006 翻孔
+13:50:21.783 @HAX007 0.029
+13:50:21.783 @HAX008 100
+13:50:21.783 @HAX009 2019/1/9 8:00:00
+13:50:21.783 @HAX010 2019/1/9 17:00:00
+13:50:21.783 @HAX011 
+13:50:21.783 @HAX012 
+13:50:21.783 @HAX013 0
+13:50:21.783 @HAX014 
+13:50:21.783 @HAX015 在职
+13:50:21.783 @HAX016 005
+13:50:21.783 @HAX017 LED车间
+13:50:21.783 @HAX018 9
+13:50:21.783 @HAX019 0
+13:50:21.783 @HAX020 2.9
+13:50:24.765 @HAW001 W20190109001
+13:50:24.765 @HAW018 True

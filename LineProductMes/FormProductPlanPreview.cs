@@ -9,6 +9,7 @@ using System . ComponentModel;
 using System . Windows . Forms;
 using LineProductMes . ChildForm;
 using System . Collections . Generic;
+using LineProductMesBll;
 
 namespace LineProductMes
 {
@@ -156,6 +157,8 @@ namespace LineProductMes
             gridControl1 . RefreshDataSource ( );
             toolExport . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
 
+            txtAllow . Text = string . Empty;
+
             return base . Cancel ( );
         }
         protected override int Add ( )
@@ -197,6 +200,7 @@ namespace LineProductMes
         }
         private void btnAdd_Click ( object sender ,EventArgs e )
         {
+            UserInfoMation . programName = "FormProductPlan";
             FormProductPlan from = new FormProductPlan ( );
             from . StartPosition = System . Windows . Forms . FormStartPosition . CenterParent;
             if ( from . ShowDialog ( ) == System . Windows . Forms . DialogResult . OK )
@@ -221,29 +225,35 @@ namespace LineProductMes
         }
         private void gridView1_CellValueChanged ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
-            //if ( row == null )
-            //    return;
-            //if ( model . PRF003 == 0 )
-            //    return;
-            //DataRow r = gridView1 . GetDataRow ( selectIdx );
-            //if ( row == null )
-            //    return;
-            //int changedResult = string . IsNullOrEmpty ( e . Value . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( e . Value );
-            //if ( model . PRF003 < changedResult )
-            //    return;
-            //gridView1 . CloseEditor ( );
-            //gridView1 . UpdateCurrentRow ( );
+            row = gridView1 . GetFocusedDataRow ( );
+            if ( row == null )
+                return;
+            columnName = gridView1 . FocusedColumn . FieldName;
+            int selectColumnValue = 0, allOfValue = 0;
+            if ( columnName == "DX$CheckboxSelectorColumn" )
+                return;
+            model . PRF003 = 0;
+            if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单未交量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName != "开单未入量" && columnName != "DX$CheckboxSelectorColumn" && columnName != "客户名称" )
+                selectColumnValue = string . IsNullOrEmpty ( row [ columnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ columnName ] . ToString ( ) );
 
-            //int nextColumn = selectColumn ;
-            //if ( nextColumn > gridView1 . Columns . Count - 1 )
-            //{
-            //    //check = false;
-            //    return;
-            //}
-            //string coluName = gridView1 . Columns [ nextColumn ] . FieldName;
-            //string nextValue = row [ coluName ] . ToString ( );
-            //r [ coluName ] = model . PRF003 - changedResult + ( string . IsNullOrEmpty ( nextValue ) == true ? 0 : Convert . ToInt32 ( nextValue ) );
-            //check = false;
+            allOfValue = string . IsNullOrEmpty ( row [ "预计生产量" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "预计生产量" ] . ToString ( ) );
+
+            gridView1 . CloseEditor ( );
+            gridView1 . UpdateCurrentRow ( );
+
+            foreach ( DataColumn column in tableView . Columns )
+            {
+                if ( column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "订单未交量" && column . ColumnName != "预计生产量" && column . ColumnName != "排产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "DX$CheckboxSelectorColumn" && column . ColumnName != "开单未入量" && column . ColumnName != columnName && column . ColumnName != "客户名称" )
+                {
+                    model . PRF003 = model . PRF003 + ( string . IsNullOrEmpty ( row [ column . ColumnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ column . ColumnName ] . ToString ( ) ) );
+                }
+            }
+
+            txtAllow . Text = ( allOfValue - model . PRF003 - selectColumnValue ) . ToString ( );
+            if ( allOfValue - model . PRF003 - selectColumnValue < 0 )
+            {
+                XtraMessageBox . Show ( "品号:" + row [ "主件品号" ] + "\n\r剩余量小于0,请核实" ,"提示" );
+            }
         }
         private void gridView1_CellValueChanging ( object sender ,DevExpress . XtraGrid . Views . Base . CellValueChangedEventArgs e )
         {
@@ -254,50 +264,47 @@ namespace LineProductMes
         int selectPrevious=0;
         private void gridView1_MouseEnter ( object sender ,EventArgs e )
         {
-            //if ( check == false )
+
+            //int selectNow = gridView1 . FocusedColumn . VisibleIndex;
+
+            //if ( selectPrevious != selectNow )
             //{
+            //    row = gridView1 . GetFocusedDataRow ( );
+            //    if ( row == null )
+            //        return;
 
-            int selectNow = gridView1 . FocusedColumn . VisibleIndex;
+            //    int selectColumnValue = 0, allOfValue = 0;
 
-            if ( selectPrevious != selectNow )
-            {
-                row = gridView1 . GetFocusedDataRow ( );
-                if ( row == null )
-                    return;
+            //    columnName = gridView1 . FocusedColumn . FieldName;
+            //    if ( columnName == "DX$CheckboxSelectorColumn" )
+            //        return;
+            //    model . PRF003 = 0;
+            //    if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName != "未生产量" && columnName != "DX$CheckboxSelectorColumn" )
+            //        selectColumnValue = string . IsNullOrEmpty ( row [ columnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ columnName ] . ToString ( ) );
 
-                int selectColumnValue = 0, allOfValue = 0;
+            //    allOfValue = string . IsNullOrEmpty ( row [ "排产量" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "排产量" ] . ToString ( ) );
 
-                columnName = gridView1 . FocusedColumn . FieldName;
-                if ( columnName == "DX$CheckboxSelectorColumn" )
-                    return;
-                model . PRF003 = 0;
-                if ( columnName != "主件品号" && columnName != "主件品名" && columnName != "订单量" && columnName != "预计生产量" && columnName != "排产量" && columnName != "库存量" && columnName != "库存可用量" && columnName != "未排量" && columnName != "生产车间" && columnName != "仓库" && columnName != "单位" && columnName != "未生产量" && columnName != "DX$CheckboxSelectorColumn" )
-                    selectColumnValue = string . IsNullOrEmpty ( row [ columnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ columnName ] . ToString ( ) );
-
-                allOfValue = string . IsNullOrEmpty ( row [ "排产量" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "排产量" ] . ToString ( ) );
-
-                gridView1 . CloseEditor ( );
-                gridView1 . UpdateCurrentRow ( );
+            //    gridView1 . CloseEditor ( );
+            //    gridView1 . UpdateCurrentRow ( );
 
 
-                foreach ( DataColumn column in tableView . Columns )
-                {
-                    if ( column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "排产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "DX$CheckboxSelectorColumn" && column . ColumnName != "未生产量" && column . ColumnName != columnName )
-                    {
-                        model . PRF003 = model . PRF003 + ( string . IsNullOrEmpty ( row [ column . ColumnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ column . ColumnName ] . ToString ( ) ) );
-                    }
-                }
+            //    foreach ( DataColumn column in tableView . Columns )
+            //    {
+            //        if ( column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "排产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "DX$CheckboxSelectorColumn" && column . ColumnName != "未生产量" && column . ColumnName != columnName )
+            //        {
+            //            model . PRF003 = model . PRF003 + ( string . IsNullOrEmpty ( row [ column . ColumnName ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ column . ColumnName ] . ToString ( ) ) );
+            //        }
+            //    }
 
-                if ( columnName == "主件品号" || columnName == "主件品名" || columnName == "订单量" || columnName == "预计生产量" || columnName == "排产量" || columnName == "库存量" || columnName == "库存可用量" || columnName == "未排量" || columnName == "生产车间" || columnName == "仓库" || columnName == "单位" || columnName == "DX$CheckboxSelectorColumn" || columnName == "未生产量" )
-                    return;
+            //    if ( columnName == "主件品号" || columnName == "主件品名" || columnName == "订单量" || columnName == "预计生产量" || columnName == "排产量" || columnName == "库存量" || columnName == "库存可用量" || columnName == "未排量" || columnName == "生产车间" || columnName == "仓库" || columnName == "单位" || columnName == "DX$CheckboxSelectorColumn" || columnName == "未生产量" )
+            //        return;
 
-                gridView1 . SetRowCellValue ( gridView1 . FocusedRowHandle ,columnName ,allOfValue - model . PRF003  );
+            //    gridView1 . SetRowCellValue ( gridView1 . FocusedRowHandle ,columnName ,allOfValue - model . PRF003  );
 
-                selectPrevious = selectNow;
-            }
+            //    selectPrevious = selectNow;
             //}
-        }
 
+        }
         private void btnLine_Click ( object sender ,EventArgs e )
         {
             int [ ] selectRows = gridView1 . GetSelectedRows ( );
@@ -316,6 +323,8 @@ namespace LineProductMes
 
                 strDic . Add ( row [ "主件品号" ] . ToString ( ) ,row [ "主件品名" ] . ToString ( ) );
             }
+
+            UserInfoMation . programName = "FormLineForAssPlan";
             FormLineForAssPlan from = new FormLineForAssPlan ( strDic );
             from . ShowDialog ( );
         }
@@ -325,7 +334,7 @@ namespace LineProductMes
             {
                 if (  tableView == null || tableView . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )
@@ -397,24 +406,41 @@ namespace LineProductMes
             {
                 table = from . getTable;
                 DateTime dtOne, dtTwo;
-                int days,proNum;
+                int days, proNum, totalNum = 0, sumNum = 0;
                 foreach ( DataRow row in table . Rows )
                 {
                     DataRow ro = tableView . Select ( "主件品号='" + row [ "P1" ] + "'" ) [ 0 ];
+                    foreach ( DataColumn column in tableView . Columns )
+                    {
+                        if ( column . ColumnName == "预计生产量" )
+                            sumNum = Convert . ToInt32 ( ro [ column . ColumnName ] );
+                        if ( column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "订单未交量" && column . ColumnName != "预计生产量" && column . ColumnName != "排产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "开单未入量" && column . ColumnName != "客户名称" )
+                        {
+                            if ( ro [ column . ColumnName ] != null && !string . IsNullOrEmpty ( ro [ column . ColumnName ] . ToString ( ) ) )
+                                totalNum += Convert . ToInt32 ( ro [ column . ColumnName ] );
+                        }
+                    }
                     dtOne = Convert . ToDateTime ( row [ "P3" ] );
                     dtTwo = Convert . ToDateTime ( row [ "P4" ] );
                     proNum = Convert . ToInt32 ( row [ "P6" ] );
                     days = ( dtTwo - dtOne ) . Days;
+
                     if ( tableView . Columns . Contains ( dtOne . ToString ( " yyyy-MM-dd " ) ) )
                     {
+                        if ( proNum + totalNum > sumNum )
+                            proNum = sumNum - totalNum;
                         ro [ dtOne . ToString ( " yyyy-MM-dd " ) ] = proNum;
+                        totalNum += proNum;
                     }
                     for ( int i = 0 ; i < days ; i++ )
                     {
                         if ( tableView . Columns . Contains ( dtOne . ToString ( " yyyy-MM-dd " ) ) )
                         {
+                            if ( proNum + totalNum > sumNum )
+                                proNum = sumNum - totalNum;
                             dtOne = dtOne . AddDays ( 1 );
                             ro [ dtOne . ToString ( " yyyy-MM-dd " ) ] = proNum;
+                            totalNum += proNum;
                         }
                     }
                 }
@@ -462,7 +488,7 @@ namespace LineProductMes
                 column . BestFit ( );
                 column . Summary . Clear ( );
                 column . OptionsColumn . AllowEdit = false;
-                if ( column . FieldName != "主件品号" && column . FieldName != "主件品名" && column . FieldName != "订单量" && column . FieldName != "预计生产量" && column . FieldName != "排产量" && column . FieldName != "库存量" && column . FieldName != "库存可用量" && column . FieldName != "未排量" && column . FieldName != "生产车间" && column . FieldName != "仓库" && column . FieldName != "单位" && column . FieldName != "未生产量" )
+                if ( column . FieldName != "主件品号" && column . FieldName != "主件品名" && column . FieldName != "订单未交量" && column . FieldName != "预计生产量" && column . FieldName != "排产量" && column . FieldName != "库存量" && column . FieldName != "库存可用量" && column . FieldName != "未排量" && column . FieldName != "生产车间" && column . FieldName != "仓库" && column . FieldName != "单位" && column . FieldName != "开单未入量" && column . FieldName != "客户名称" )
                 {
                     object obj = tableView . Compute ( "COUNT([" + column . FieldName + "])" ,"[" + column . FieldName + "]>0" );
                     column . Summary . Add ( DevExpress . Data . SummaryItemType . Custom ,column . FieldName ,obj . ToString ( ) );
@@ -471,27 +497,34 @@ namespace LineProductMes
                     //if ( ( Convert . ToDateTime ( column . FieldName ) - dt ) . Days < 0 )
                     //    column . OptionsColumn.AllowEdit = false;
                     week = System . Globalization . CultureInfo . CurrentCulture . DateTimeFormat . GetDayName ( Convert . ToDateTime ( column . Name ) . DayOfWeek );
-                    column . Caption = column . Name + week;
+                    column . Caption = column . Name + week . Substring ( 2 ,1 );
                     if ( week . Equals ( "星期日" ) )
                     {
-                        column . AppearanceHeader . BackColor = System . Drawing . Color . LightCoral;
-                        column . AppearanceCell . BackColor = System . Drawing . Color . LightCoral;
+                        column . AppearanceHeader . BackColor = System . Drawing . Color . Lavender;
+                        column . AppearanceCell . BackColor = System . Drawing . Color . Lavender;
                     }
                 }
                 else if ( column . FieldName == "主件品号" )
+                {
                     column . Summary . Add ( DevExpress . Data . SummaryItemType . Custom ,column . FieldName ,"合计" );
-                else if ( column . FieldName == "订单量" )
-                    column . ToolTip = "同品号所有未结束订单总量     ";
+                    column . Fixed = DevExpress . XtraGrid . Columns . FixedStyle . Left;
+                }
+                else if ( column . FieldName == "订单未交量" )
+                    column . ToolTip = "同品号所有未结束订单(数量-已交量)之和     ";
                 else if ( column . FieldName == "预计生产量" )
                     column . ToolTip = "工单单头未完成量=计划生产量-已完工量          ";
                 else if ( column . FieldName == "库存量" )
                     column . ToolTip = "现有库存量     ";
                 else if ( column . FieldName == "库存可用量" )
-                    column . ToolTip = "库存量+预计生产量-订单量     ";
+                    column . ToolTip = "库存量+预计生产量-订单未交量     ";
+                else if ( column . FieldName == "排产量" )
+                    column . ToolTip = "当前时间段内的排产数量     ";
                 else if ( column . FieldName == "未排量" )
-                    column . ToolTip = "订单量-排产量     ";
-                else if ( column . FieldName == "未生产量" )
+                    column . ToolTip = "预计生产量-排产量     ";
+                else if ( column . FieldName == "开单未入量" )
                     column . ToolTip = "(已领料量-入库耗用量)/(预计用量/产品数量)     ";
+                else if ( column . FieldName == "客户名称" )
+                    column . Fixed = DevExpress . XtraGrid . Columns . FixedStyle . Left;
             }
         }
         void controlUnEnable ( )
@@ -517,7 +550,7 @@ namespace LineProductMes
                 total = 0;
                 foreach ( DataColumn column in tableView . Columns )
                 {
-                    if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty && column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "排产量" && column . ColumnName != "订单量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "未生产量" )
+                    if ( row [ column ] != null && row [ column ] . ToString ( ) != string . Empty && column . ColumnName != "主件品号" && column . ColumnName != "主件品名" && column . ColumnName != "排产量" && column . ColumnName != "订单未交量" && column . ColumnName != "预计生产量" && column . ColumnName != "库存量" && column . ColumnName != "库存可用量" && column . ColumnName != "未排量" && column . ColumnName != "生产车间" && column . ColumnName != "仓库" && column . ColumnName != "单位" && column . ColumnName != "开单未入量" && column . ColumnName != "客户名称" )
                     {
                         if ( Convert . ToInt32 ( row [ column ] ) < 0 )
                         {
@@ -530,10 +563,10 @@ namespace LineProductMes
                 }
                 if ( result == false )
                     break;
-                totalValue = Convert . ToInt32 ( row [ "排产量" ] );
-                if ( totalValue != total )
+                totalValue = Convert . ToInt32 ( row [ "预计生产量" ] );
+                if ( totalValue < total )
                 {
-                    XtraMessageBox . Show ( "主件品号:" + row [ "主件品号" ] + "\n\r总排产量:" + totalValue + "\n\r您的排量:" + total + "\n\r请核实" ,"提示" );
+                    XtraMessageBox . Show ( "主件品号:" + row [ "主件品号" ] + "\n\r预计生产量:" + totalValue + "小于您的排量:" + total + "\n\r请核实" ,"提示" );
                     result = false;
                     break;
                 }

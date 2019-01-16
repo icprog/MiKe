@@ -29,6 +29,9 @@ namespace LineProductMesEntityu
         private string _lef022;
         private DateTime? _lef023;
         private DateTime? _lef024;
+        private decimal? _lef025;
+        private decimal? _lef026;
+        private decimal? _lef027;
 
         /// <summary>
         /// 
@@ -379,6 +382,48 @@ namespace LineProductMesEntityu
             get
             {
                 return _lef024;
+            }
+        }
+        /// <summary>
+        /// 其他补贴
+        /// </summary>
+        public decimal? LEF025
+        {
+            set
+            {
+                _lef025 = value;
+            }
+            get
+            {
+                return _lef025;
+            }
+        }
+        /// <summary>
+        /// 补贴工时
+        /// </summary>
+        public decimal? LEF026
+        {
+            set
+            {
+                _lef026 = value;
+            }
+            get
+            {
+                return _lef026;
+            }
+        }
+        /// <summary>
+          /// 补贴单价
+          /// </summary>
+        public decimal? LEF027
+        {
+            set
+            {
+                _lef027 = value;
+            }
+            get
+            {
+                return _lef027;
             }
         }
     }

@@ -241,7 +241,7 @@ namespace LineProductMes
         private void toolDelete_ItemClick ( object sender ,DevExpress . XtraBars . ItemClickEventArgs e )
         {
             UserInfoMation . TypeOfOper = "删除";
-            if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+            if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 Delete ( );
         }
 

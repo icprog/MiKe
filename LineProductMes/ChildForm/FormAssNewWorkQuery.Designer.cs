@@ -75,6 +75,9 @@
             this.ANW022 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ANW020 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ANW021 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtSa = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ANW014 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -107,6 +110,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSa.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -135,6 +140,7 @@
             this.layoutControl1.Controls.Add(this.btnClear);
             this.layoutControl1.Controls.Add(this.txtANW013);
             this.layoutControl1.Controls.Add(this.dateEdit1);
+            this.layoutControl1.Controls.Add(this.txtSa);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -223,9 +229,9 @@
             // 
             // btnQuery
             // 
-            this.btnQuery.Location = new System.Drawing.Point(1000, 36);
+            this.btnQuery.Location = new System.Drawing.Point(1006, 36);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(47, 22);
+            this.btnQuery.Size = new System.Drawing.Size(45, 22);
             this.btnQuery.StyleController = this.layoutControl1;
             this.btnQuery.TabIndex = 11;
             this.btnQuery.Text = "查询";
@@ -233,9 +239,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(1078, 36);
+            this.btnCancel.Location = new System.Drawing.Point(1081, 36);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(44, 22);
+            this.btnCancel.Size = new System.Drawing.Size(42, 22);
             this.btnCancel.StyleController = this.layoutControl1;
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "取消";
@@ -321,9 +327,9 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(925, 36);
+            this.btnClear.Location = new System.Drawing.Point(934, 36);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(44, 22);
+            this.btnClear.Size = new System.Drawing.Size(42, 22);
             this.btnClear.StyleController = this.layoutControl1;
             this.btnClear.TabIndex = 13;
             this.btnClear.Text = "清除";
@@ -400,6 +406,7 @@
             this.layoutControlItem9,
             this.emptySpaceItem1,
             this.layoutControlItem5,
+            this.layoutControlItem7,
             this.emptySpaceItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
@@ -454,9 +461,9 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnClear;
-            this.layoutControlItem10.Location = new System.Drawing.Point(913, 24);
+            this.layoutControlItem10.Location = new System.Drawing.Point(922, 24);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(48, 30);
+            this.layoutControlItem10.Size = new System.Drawing.Size(46, 30);
             this.layoutControlItem10.Text = "清除";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
@@ -464,43 +471,43 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(961, 24);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(968, 24);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(27, 30);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(26, 30);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnQuery;
-            this.layoutControlItem8.Location = new System.Drawing.Point(988, 24);
+            this.layoutControlItem8.Location = new System.Drawing.Point(994, 24);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(51, 30);
+            this.layoutControlItem8.Size = new System.Drawing.Size(49, 30);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(1039, 24);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(1043, 24);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(27, 30);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(26, 30);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnCancel;
-            this.layoutControlItem9.Location = new System.Drawing.Point(1066, 24);
+            this.layoutControlItem9.Location = new System.Drawing.Point(1069, 24);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(48, 30);
+            this.layoutControlItem9.Size = new System.Drawing.Size(46, 30);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(1114, 24);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(1115, 24);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(30, 30);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(29, 30);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -515,9 +522,9 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(533, 24);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(832, 24);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(380, 30);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(90, 30);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // gridControl1
@@ -548,7 +555,8 @@
             this.ANW013,
             this.ANW022,
             this.ANW020,
-            this.ANW021});
+            this.ANW021,
+            this.ANW014});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -633,7 +641,7 @@
             this.ANW020.FieldName = "ANW020";
             this.ANW020.Name = "ANW020";
             this.ANW020.Visible = true;
-            this.ANW020.VisibleIndex = 8;
+            this.ANW020.VisibleIndex = 9;
             this.ANW020.Width = 60;
             // 
             // ANW021
@@ -642,8 +650,40 @@
             this.ANW021.FieldName = "ANW021";
             this.ANW021.Name = "ANW021";
             this.ANW021.Visible = true;
-            this.ANW021.VisibleIndex = 9;
+            this.ANW021.VisibleIndex = 10;
             this.ANW021.Width = 60;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.txtSa;
+            this.layoutControlItem7.Location = new System.Drawing.Point(533, 24);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(299, 30);
+            this.layoutControlItem7.Text = "工资类型";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(48, 14);
+            // 
+            // txtSa
+            // 
+            this.txtSa.Location = new System.Drawing.Point(596, 36);
+            this.txtSa.Name = "txtSa";
+            this.txtSa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSa.Properties.Items.AddRange(new object[] {
+            "",
+            "计件",
+            "计时"});
+            this.txtSa.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtSa.Size = new System.Drawing.Size(244, 20);
+            this.txtSa.StyleController = this.layoutControl1;
+            this.txtSa.TabIndex = 15;
+            // 
+            // ANW014
+            // 
+            this.ANW014.Caption = "工资类型";
+            this.ANW014.FieldName = "ANW014";
+            this.ANW014.Name = "ANW014";
+            this.ANW014.Visible = true;
+            this.ANW014.VisibleIndex = 8;
             // 
             // FormAssNewWorkQuery
             // 
@@ -686,6 +726,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSa.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -739,5 +781,8 @@
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn5;
         private DevExpress . XtraEditors . DateEdit dateEdit1;
         private DevExpress . XtraLayout . LayoutControlItem layoutControlItem5;
+        private DevExpress . XtraEditors . ComboBoxEdit txtSa;
+        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem7;
+        private DevExpress . XtraGrid . Columns . GridColumn ANW014;
     }
 }

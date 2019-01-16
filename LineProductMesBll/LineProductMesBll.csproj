@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="LineProductMesEntityu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\LineProductMesEntityu\bin\Debug\LineProductMesEntityu.dll</HintPath>
@@ -109,6 +110,7 @@
     <Compile Include="Dao\SemiProductPlanDao.cs" />
     <Compile Include="Dao\SupplierForMouldDao.cs" />
     <Compile Include="Dao\WagesDao.cs" />
+    <Compile Include="GetCodeUtils.cs" />
     <Compile Include="LogHelperToSql.cs" />
     <Compile Include="ObtainInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

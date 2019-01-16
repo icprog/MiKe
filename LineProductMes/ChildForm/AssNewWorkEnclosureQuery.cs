@@ -13,7 +13,7 @@ namespace LineProductMes . ChildForm
     {
         LineProductMesBll.Bll.AssNewWorkEnclosureBll _bll=null;
         string oddNum=string.Empty;
-
+        
         public AssNewWorkEnclosureQuery ( )
         {
             InitializeComponent ( );
@@ -92,6 +92,8 @@ namespace LineProductMes . ChildForm
                 strWhere += " AND ANU005='" + txtANU005 . Text + "'";
             if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
                 strWhere += " AND ANT008='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
+            if ( !string . IsNullOrEmpty ( txtSa . Text ) )
+                strWhere += " AND ANT011='" + txtSa . Text + "'";
 
             DataTable tableView = _bll . getTableColumn ( strWhere );
             gridControl1 . DataSource = tableView;

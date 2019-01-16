@@ -410,3 +410,10 @@ D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ja\DevExpress.XtraBa
 D:\ProjectData\MiKe\LineProductMes\LineProductMes\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll
 D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormBatOpera.resources
 D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormCheckLine.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormAssOrder.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormHardOrder.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormInjecOrder.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ClassForMain.FormLEDOrder.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormLEDNOrder.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormPaintOrder.resources
+D:\ProjectData\MiKe\LineProductMes\LineProductMes\obj\Debug\LineProductMes.ChildForm.FormUserChoise.resources

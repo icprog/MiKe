@@ -18,24 +18,25 @@ namespace LineProductMesBll . Dao
         /// <returns></returns>
         public string getCode ( )
         {
-            StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT MAX(HAW001) HAW001 FROM MIKHAW " );
+            return GetCodeUtils . getOddNum ( "MIKHAW" ,"HAW001" );
+            //StringBuilder strSql = new StringBuilder ( );
+            //strSql . Append ( "SELECT MAX(HAW001) HAW001 FROM MIKHAW " );
 
-            DateTime dt = UserInfoMation . sysTime;
+            //DateTime dt = UserInfoMation . sysTime;
 
-            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
-            if ( table == null || table . Rows . Count < 1 )
-                return dt . ToString ( "yyyyMMdd" ) + "001";
-            else
-            {
-                string code = table . Rows [ 0 ] [ "HAW001" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( code ) )
-                    return dt . ToString ( "yyyyMMdd" ) + "001";
-                else if ( code . Substring ( 0 ,8 ) . Equals ( dt . ToString ( "yyyyMMdd" ) ) )
-                    return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
-                else
-                    return dt . ToString ( "yyyyMMdd" ) + "001";
-            }
+            //DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            //if ( table == null || table . Rows . Count < 1 )
+            //    return dt . ToString ( "yyyyMMdd" ) + "001";
+            //else
+            //{
+            //    string code = table . Rows [ 0 ] [ "HAW001" ] . ToString ( );
+            //    if ( string . IsNullOrEmpty ( code ) )
+            //        return dt . ToString ( "yyyyMMdd" ) + "001";
+            //    else if ( code . Substring ( 0 ,8 ) . Equals ( dt . ToString ( "yyyyMMdd" ) ) )
+            //        return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
+            //    else
+            //        return dt . ToString ( "yyyyMMdd" ) + "001";
+            //}
         }
 
         /// <summary>
@@ -83,7 +84,7 @@ namespace LineProductMesBll . Dao
         public DataTable getUserInfo ( )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT EMP001,EMP002,EMP007,EMP005,DAA002 FROM MIKEMP A INNER JOIN TPADAA B ON A.EMP005=B.DAA001 WHERE EMP003='05' AND EMP034=0 AND EMP037=1 " );
+            strSql . Append ( "SELECT EMP001,EMP002,EMP007,EMP005,DAA002,EMP023 FROM MIKEMP A INNER JOIN TPADAA B ON A.EMP005=B.DAA001 WHERE EMP003='05' AND EMP034=0 AND EMP037=1 " );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -574,7 +575,7 @@ namespace LineProductMesBll . Dao
 
             if ( state )
             {
-                if ( string . IsNullOrEmpty ( _header . HAW022 ) )
+                if ( string . IsNullOrEmpty ( _header . HAW022 ) && numbers!=0 )
                     addSGM ( SQLString ,numbers ,_header );
             }
             else
@@ -653,7 +654,7 @@ namespace LineProductMesBll . Dao
                 rbb . RBB006 = row [ "RBB006" ] . ToString ( );
                 rbb . RBB007 = row [ "DEA008" ] . ToString ( );
                 rbb . RBB008 = "XC15";
-                rbb . RBB009 = numbers * ( string . IsNullOrEmpty ( row [ "RAB007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "RAB007" ] ) );
+                rbb . RBB009 = Math . Ceiling ( numbers * ( string . IsNullOrEmpty ( row [ "RAB007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "RAB007" ] ) ) );
                 rbb . RBB010 = row [ "RBB010" ] . ToString ( );
                 rbb . RBB011 = row [ "RBB011" ] . ToString ( );
                 rbb . RBB013 = "F";
@@ -803,7 +804,7 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             //strSql . AppendFormat ( "SELECT HAW001,HAW002,HAW003,HAW004,HAW007,HAW010,HAW018,HAW019,(SELECT SUM(HAX008) FROM MIKHAX A INNER JOIN (SELECT HAX001,MAX(HAX016) HAX016 FROM MIKHAX WHERE HAX001=HAW001 GROUP BY HAX001) B ON A.HAX001=B.HAX001 AND A.HAX016=B.HAX016) HAX008 FROM MIKHAW WHERE  {0}" ,strWhere );
-            strSql . AppendFormat ( "SELECT HAW001,HAW002,HAW003,HAW004,HAW007,HAW010,HAW018,HAW019,HAW009 FROM MIKHAW WHERE  {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT HAW001,HAW002,HAW003,HAW004,HAW007,HAW010,HAW018,HAW019,HAW009,HAW011 FROM MIKHAW WHERE  {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -816,7 +817,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . HardWareWorkHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "select idx,HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021,HAW022,HAW024,HAW025 FROM MIKHAW " );
+            strSql . Append ( "select idx,HAW001,HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,HAW008,HAW009,HAW010,HAW011,HAW012,HAW013,HAW014,HAW015,HAW016,HAW017,HAW018,HAW019,HAW020,HAW021,HAW022,HAW024,HAW025,HAW023 FROM MIKHAW " );
             strSql . Append ( " where HAW001=@HAW001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@HAW001", SqlDbType.NVarChar,20)
@@ -941,6 +942,10 @@ namespace LineProductMesBll . Dao
                 {
                     model . HAW022 = row [ "HAW022" ] . ToString ( );
                 }
+                if ( row [ "HAW023" ] != null )
+                {
+                    model . HAW023 = row [ "HAW023" ] . ToString ( );
+                }
                 if ( row [ "HAW024" ] != null && row [ "HAW024" ] . ToString ( ) != "" )
                 {
                     model . HAW024 = DateTime . Parse ( row [ "HAW024" ] . ToString ( ) );
@@ -974,7 +979,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintTwo ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT DISTINCT HAW002 ANW002,HAW003 ANW003,HAW004 ANW004,HAW005 ANW005,HAW006 ANW007,HAW007 ANW006,HAW009 ANW009,DDA003 DEA008 FROM MIKHAX A INNER JOIN MIKHAW B ON A.HAX001=B.HAW001 LEFT JOIN TPADEA C ON B.HAW003=C.DEA001 INNER JOIN MIKART D ON B.HAW003=D.ART001 AND A.HAX016=D.ART011 INNER JOIN TPADDA E ON C.DEA008=E.DDA001 WHERE ART010='是'AND HAX008 > 0 AND HAW001 ='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT DISTINCT HAW002 ANW002,HAW003 ANW003,HAW004 ANW004,HAW005 ANW005,HAW006 ANW007,HAW009 ANW006,HAW007-(SELECT SUM(HAW009) FROM MIKHAW E WHERE B.HAW002=E.HAW002 AND B.HAW003=E.HAW003) ANW009,DDA003 DEA008 FROM MIKHAX A INNER JOIN MIKHAW B ON A.HAX001=B.HAW001 LEFT JOIN TPADEA C ON B.HAW003=C.DEA001 INNER JOIN MIKART D ON B.HAW003=D.ART001 AND A.HAX016=D.ART011 INNER JOIN TPADDA E ON C.DEA008=E.DDA001 WHERE ART010='是'AND HAX008 > 0 AND HAW001 ='{0}' GROUP BY HAW002,HAW003,HAW004,HAW005,HAW006,HAW007,DDA003,HAW009" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

@@ -26,7 +26,7 @@ namespace LineProductMesEntityu
         private decimal? _anx015;
         private decimal? _anx016;
         private decimal? _anx017;
-        private string _anx018;
+        private decimal? _anx018;
         private string _anx019;
         private string _anx020;
         
@@ -283,9 +283,9 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 分配工资
         /// </summary>
-        public string ANX018
+        public decimal? ANX018
         {
             set
             {

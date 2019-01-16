@@ -23,6 +23,7 @@ namespace LineProductMesEntityu
         private decimal? _lgp012;
         private decimal? _lgp013;
         private decimal? _lgp014;
+        private decimal? _lgp015;
 
         /// <summary>
         /// 
@@ -238,6 +239,21 @@ namespace LineProductMesEntityu
             set
             {
                 _lgp014 = value;
+            }
+        }
+        /// <summary>
+        /// 分配工资
+        /// </summary>
+        public decimal? LGP015
+        {
+            get
+            {
+                return _lgp015;
+            }
+
+            set
+            {
+                _lgp015 = value;
             }
         }
     }

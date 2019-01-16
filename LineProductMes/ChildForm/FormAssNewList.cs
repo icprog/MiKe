@@ -8,6 +8,10 @@ using System . Linq;
 using System . Threading . Tasks;
 using System . Windows . Forms;
 using DevExpress . XtraEditors;
+using Utility;
+using LineProductMes . ClassForMain;
+using System . Reflection;
+using DevExpress . Utils . Paint;
 
 namespace LineProductMes . ChildForm
 {
@@ -20,7 +24,15 @@ namespace LineProductMes . ChildForm
             InitializeComponent ( );
 
             _bll = new LineProductMesBll . Bll . AssNewWorkEnclosureBll ( );
+
+            GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
+            GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1  } );
+            FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
+            fi . SetValue ( null ,new DrawXPaint ( ) );
+
+
             gridControl1 . DataSource = table;
+            gridView1 . BestFitColumns ( );
         }
         DataRow row;
         private void gridView1_DoubleClick ( object sender ,EventArgs e )
@@ -30,7 +42,7 @@ namespace LineProductMes . ChildForm
                 return;
             this . DialogResult = DialogResult . OK;
         }
-
+        
         public DataRow getDataRow
         {
             get

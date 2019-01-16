@@ -185,8 +185,4 @@ D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\bin\Debug\ja\DevExpress.Off
 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\obj\Debug\LineProductMesBll.dll
 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\obj\Debug\LineProductMesBll.pdb
-D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\bin\Debug\zh-Hans\DevExpress.Utils.v16.2.resources.dll
-D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\bin\Debug\zh-Hans\DevExpress.Data.v16.2.resources.dll
-D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\bin\Debug\zh-Hans\DevExpress.Printing.v16.2.Core.resources.dll
 D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\bin\Debug\zh-Hans\DevExpress.XtraTreeList.v16.2.resources.dll
-D:\ProjectData\MiKe\LineProductMes\LineProductMesBll\bin\Debug\zh-Hans\DevExpress.Pdf.v16.2.Core.resources.dll

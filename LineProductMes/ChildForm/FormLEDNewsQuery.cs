@@ -76,7 +76,9 @@ namespace LineProductMes
                 strWhere += " AND LEH004='" + txtLEF004 . Text + "'";
             if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
                 strWhere += " AND LEF013='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
-            
+            if ( !string . IsNullOrEmpty ( txtSa . Text ) )
+                strWhere += " AND LEF021='" + txtSa . Text + "'";
+
             tableView = _bll . getTableQuery ( strWhere );
             gridControl1 . DataSource = tableView;
         }

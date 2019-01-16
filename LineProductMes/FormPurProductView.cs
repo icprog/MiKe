@@ -65,7 +65,6 @@ namespace LineProductMes
             column ( );
 
             toolExport . Visibility = DevExpress . XtraBars . BarItemVisibility . Always;
-
             return base . Query ( );
         }
 
@@ -103,7 +102,7 @@ namespace LineProductMes
                 column . AppearanceHeader . TextOptions . WordWrap = DevExpress . Utils . WordWrap . Wrap;
                 column . BestFit ( );
                 column . Summary . Clear ( );
-                if ( column . FieldName != "品号" && column . FieldName != "品名" && column . FieldName != "规格" && column . FieldName != "总量" && column . FieldName != "主要供应商" && column . FieldName != "仓库" && column . FieldName != "单位" )
+                if ( column . FieldName != "品号" && column . FieldName != "品名" && column . FieldName != "规格" && column . FieldName != "总量" && column . FieldName != "主要供应商" && column . FieldName != "仓库" && column . FieldName != "单位" && column . FieldName != "可用库存量" )
                 {
                     object obj = tableView . Compute ( "COUNT([" + column . FieldName + "])" ,"[" + column . FieldName + "]>0" );
                     column . Summary . Add ( DevExpress . Data . SummaryItemType . Custom ,column . FieldName ,obj . ToString ( ) );

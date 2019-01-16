@@ -96,11 +96,11 @@ namespace LineProductMesBll
         public static DataTable getTableFiv ( string oddNum ,string time ,string numForUser )
         {
             StringBuilder strSql = new StringBuilder ( );
-
+            
             if ( oddNum == string . Empty )
-                strSql . AppendFormat ( "SELECT IJD001,IJD002,IJD007,IJD008 FROM MIKIJA A INNER JOIN MIKIJD B ON A.IJA001=B.IJD001 WHERE IJA007='{0}' AND IJD002 IN ({1}) " ,time ,numForUser );
+                strSql . AppendFormat ( "SELECT IJD001,IJD002,IJD007,IJD006,IJD014,IJD015 FROM MIKIJA A INNER JOIN MIKIJD B ON A.IJA001=B.IJD001 WHERE IJA007='{0}' AND IJD002 IN ({1}) " ,time ,numForUser );
             else
-                strSql . AppendFormat ( "SELECT IJD001,IJD002,IJD007,IJD008 FROM MIKIJA A INNER JOIN MIKIJD B ON A.IJA001=B.IJD001 WHERE IJA007='{0}' AND IJD002 IN ({1}) AND IJD001 !='{2}' " ,time ,numForUser ,oddNum );
+                strSql . AppendFormat ( "SELECT IJD001,IJD002,IJD007,IJD006,IJD014,IJD015 FROM MIKIJA A INNER JOIN MIKIJD B ON A.IJA001=B.IJD001 WHERE IJA007='{0}' AND IJD002 IN ({1}) AND IJD001 !='{2}' " ,time ,numForUser ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

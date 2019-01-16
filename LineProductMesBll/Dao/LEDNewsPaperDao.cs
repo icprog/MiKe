@@ -66,25 +66,26 @@ namespace LineProductMesBll . Dao
         /// <returns></returns>
         public string getOddNum ( )
         {
-            StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT MAX(LEC001) LEC001 FROM MIKLEC" );
+            return GetCodeUtils . getOddNum ( "MIKLEC" ,"LEC001" );
+            //StringBuilder strSql = new StringBuilder ( );
+            //strSql . Append ( "SELECT MAX(LEC001) LEC001 FROM MIKLEC" );
 
-            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
-            if ( table == null || table . Rows . Count < 0 )
-                return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-            else
-            {
-                string code = table . Rows [ 0 ] [ "LEC001" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( code ) )
-                    return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-                else
-                {
-                    if ( code . Substring ( 0 ,8 ) . Equals ( UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) ) )
-                        return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
-                    else
-                        return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-                }
-            }
+            //DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            //if ( table == null || table . Rows . Count < 0 )
+            //    return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //else
+            //{
+            //    string code = table . Rows [ 0 ] [ "LEC001" ] . ToString ( );
+            //    if ( string . IsNullOrEmpty ( code ) )
+            //        return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //    else
+            //    {
+            //        if ( code . Substring ( 0 ,8 ) . Equals ( UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) ) )
+            //            return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
+            //        else
+            //            return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //    }
+            //}
         }
 
         /// <summary>

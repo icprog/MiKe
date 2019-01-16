@@ -10,6 +10,7 @@ using DevExpress . XtraEditors;
 using System . Linq;
 using System . Windows . Forms;
 using System . ComponentModel;
+using LineProductMes . ChildForm;
 
 namespace LineProductMes
 {
@@ -58,9 +59,7 @@ namespace LineProductMes
             thread = new Thread ( new ThreadStart ( ThreadPost ) );
             thread . Start ( );
 
-            dt = LineProductMesBll . UserInfoMation . sysTime;
-            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
-            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
+            queryTime ( );
         }
 
         #region Main
@@ -113,6 +112,9 @@ namespace LineProductMes
             txtLEC021 . Text = "计件";
             txtLEC013 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
             addTool ( );
+
+            queryTime ( );
+
             txtLEC023 . Text = dtStart . ToString ( );
             txtLEC024 . Text = dtEnd . ToString ( );
 
@@ -529,7 +531,7 @@ namespace LineProductMes
                 return;
             if ( e . KeyChar == ( char ) Keys . Enter && toolSave . Visibility == DevExpress . XtraBars . BarItemVisibility . Always )
             {
-                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
                 {
                     _body . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] . ToString ( ) );
                     if ( _body . idx > 0 && !idxList . Contains ( _body . idx . ToString ( ) ) )
@@ -706,6 +708,53 @@ namespace LineProductMes
             calcuTimeSum ( );
             calcuSalaryTimeSum ( );
         }
+        private void txtLEC023_EditValueChanged ( object sender ,EventArgs e )
+        {
+            if ( !string . IsNullOrEmpty ( txtLEC023 . Text ) )
+            {
+                dtStart = Convert . ToDateTime ( txtLEC023 . Text );
+                dt = dtStart;
+            }
+            updateBatchTime ( );
+        }
+        private void btnEdit_ButtonClick ( object sender ,DevExpress . XtraEditors . Controls . ButtonPressedEventArgs e )
+        {
+            DataRow row = gridView2 . GetFocusedDataRow ( );
+
+            FormLEDNOrder form = new FormLEDNOrder ( tableProduct );
+            if ( form . ShowDialog ( ) == DialogResult . OK )
+            {
+                DataRow ro = form . getRow;
+                _bodyOne . LEE002 = ro [ "RAA001" ] . ToString ( );
+                _bodyOne . LEE003 = ro [ "RAA015" ] . ToString ( );
+                _bodyOne . LEE004 = ro [ "DEA002" ] . ToString ( );
+                _bodyOne . LEE005 = ro [ "DEA057" ] . ToString ( );
+                _bodyOne . LEE006 = ro [ "DEA003" ] . ToString ( );
+                _bodyOne . LEE007 = string . IsNullOrEmpty ( ro [ "RAA018" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( ro [ "RAA018" ] . ToString ( ) );
+                _bodyOne . LEE008 = string . IsNullOrEmpty ( ro [ "DEA050" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( ro [ "DEA050" ] . ToString ( ) );
+
+                if ( row == null )
+                {
+                    row = tableViewOne . NewRow ( );
+                    rowEdit ( row );
+                    tableViewOne . Rows . Add ( row );
+                }
+                else
+                    rowEdit ( row );
+
+                editOtherSur ( _bodyOne . LEE002 ,_bodyOne . LEE003 );
+            }
+        }
+        void rowEdit ( DataRow row )
+        {
+            row [ "LEE002" ] = _bodyOne . LEE002;
+            row [ "LEE003" ] = _bodyOne . LEE003;
+            row [ "LEE004" ] = _bodyOne . LEE004;
+            row [ "LEE005" ] = _bodyOne . LEE005;
+            row [ "LEE006" ] = _bodyOne . LEE006;
+            row [ "LEE007" ] = _bodyOne . LEE007;
+            row [ "LEE008" ] = _bodyOne . LEE008;
+        }
         #endregion
 
         #region Method
@@ -769,6 +818,10 @@ namespace LineProductMes
             txtLEC021 . Text = _header . LEC021;
             txtLEC023 . Text = _header . LEC023 . ToString ( );
             txtLEC024 . Text = _header . LEC024 . ToString ( );
+
+            dtStart = Convert . ToDateTime ( _header . LEC023 );
+            dtEnd = Convert . ToDateTime ( _header . LEC024 );
+
             layoutControlItem21 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             Graph . grPic ( pictureEdit1 ,"反" );
             if ( _header . LEC017 )
@@ -812,7 +865,10 @@ namespace LineProductMes
             GridView1 . UpdateCurrentRow ( );
 
             if ( tableView == null || tableView . Rows . Count < 1 )
+            {
+                XtraMessageBox . Show ( "请选择人员等信息" );
                 return false;
+            }
 
             for ( int i=0 ;i<GridView1.RowCount ;i++ )
             {
@@ -880,6 +936,11 @@ namespace LineProductMes
                     XtraMessageBox . Show ( "请选择工单等信息" );
                     return false;
                 }
+            }
+            else if ( "计时" . Equals ( txtLEC021 . Text ) && ( tableViewOne == null || tableViewOne . Rows . Count < 1 ) )
+            {
+                if ( XtraMessageBox . Show ( "是否选择来源工单?" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
+                    return false;
             }
 
             gridView2 . ClearColumnErrors ( );
@@ -1188,9 +1249,9 @@ namespace LineProductMes
                     {
                         if ( column . Equals ( "LED005" ) )
                         {
-                            if ( workShopTime . startTime ( row ,row [ "LED005" ] ,"LED006" ,"LED008" ,"LED009" ) )
+                            if ( workShopTime . startTime ( row ,/*row [ "LED005" ]*/value ,"LED006" ,"LED008" ,"LED009" ) )
                             {
-                                ro = tableView . Rows [ i + 1 ];
+                                ro = tableView . Rows [ i /*+ 1*/ ];
                                 if ( ro [ "LED005" ] == null || ro [ "LED005" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1201,9 +1262,9 @@ namespace LineProductMes
                         }
                         else if ( column . Equals ( "LED006" ) )
                         {
-                            if ( workShopTime . endTime ( row ,row [ "LED006" ] ,"LED005" ,"LED008" ,"LED009" ) )
+                            if ( workShopTime . endTime ( row ,/*row [ "LED006" ]*/value ,"LED005" ,"LED008" ,"LED009" ) )
                             {
-                                ro = tableView . Rows [ i + 1 ];
+                                ro = tableView . Rows [ i /*+ 1*/ ];
                                 if ( ro [ "LED006" ] == null || ro [ "LED006" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1214,9 +1275,9 @@ namespace LineProductMes
                         }
                         if ( column . Equals ( "LED008" ) )
                         {
-                            if ( workShopTime . startCenTime ( row ,row [ "LED008" ] ,"LED006" ,"LED009" ,"LED005" ) )
+                            if ( workShopTime . startCenTime ( row ,/*row [ "LED008" ]*/value ,"LED006" ,"LED009" ,"LED005" ) )
                             {
-                                ro = tableView . Rows [ i + 1 ];
+                                ro = tableView . Rows [ i /*+ 1*/ ];
                                 if ( ro [ "LED008" ] == null || ro [ "LED008" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1227,9 +1288,9 @@ namespace LineProductMes
                         }
                         else if ( column . Equals ( "LED009" ) )
                         {
-                            if ( workShopTime . endCenTime ( row ,row [ "LED009" ] ,"LED008" ,"LED005" ,"LED006" ) )
+                            if ( workShopTime . endCenTime ( row ,/*row [ "LED009" ]*/value ,"LED008" ,"LED005" ,"LED006" ) )
                             {
-                                ro = tableView . Rows [ i + 1 ];
+                                ro = tableView . Rows [ i /*+ 1*/ ];
                                 if ( ro [ "LED009" ] == null || ro [ "LED009" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1293,6 +1354,12 @@ namespace LineProductMes
                 }
             }
 
+        }
+        void queryTime ( )
+        {
+            dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
         }
         #endregion
 

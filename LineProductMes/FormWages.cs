@@ -17,7 +17,7 @@ namespace LineProductMes
         LineProductMesEntityu.WagesHeaderEntity model=null;
         DataTable tableView;
         bool result=false;
-        string focuseName=string.Empty;
+        string focuseName=string.Empty,state=string.Empty;
 
         public FormWages ( )
         {
@@ -82,6 +82,8 @@ namespace LineProductMes
             controlEnable ( );
             addTool ( );
 
+            state = "add";
+
             dateEdit1 . Text = string . Empty;
             layoutControlItem4 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
 
@@ -92,14 +94,14 @@ namespace LineProductMes
             controlEnable ( );
             editTool ( );
 
+            state = "edit";
+
             dateEdit1 . Enabled = false;
 
             return base . Edit ( );
         }
         protected override int Delete ( )
         {
-            if ( XtraMessageBox . Show ( "确认删除?" ,"提示" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
-                return 0;
             result = _bll . Delete ( txtCode . Text );
             if ( result )
             {
@@ -200,6 +202,13 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "请选择日期" );
                 return;
             }
+
+            if (state.Equals("add") && _bll . ExistsYearMonth ( Convert . ToDateTime ( dateEdit1 . Text ) ) )
+            {
+                XtraMessageBox . Show ( "已经存在本年月的工资,请查询" );
+                return;
+            }
+
             wait . Show ( );
             backgroundWorker1 . RunWorkerAsync ( );
         }
@@ -229,7 +238,7 @@ namespace LineProductMes
             {
                 if ( txtCode . Text == string . Empty || tableView == null || tableView . Rows . Count < 1 )
                     return;
-                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+                if ( XtraMessageBox . Show ( "是否保存?" ,"提示" ,MessageBoxButtons . YesNo  ) == DialogResult . Yes  )
                 {
                     Save ( );
                     if (  ClassForMain.FormClosingState.formClost == false )

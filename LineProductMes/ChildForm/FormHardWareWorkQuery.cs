@@ -83,6 +83,8 @@ namespace LineProductMes . ChildForm
                 strWhere += " AND HAW004='" + txtHAW004 . Text + "'";
             if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
                 strWhere += " AND HAW010='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
+            if ( !string . IsNullOrEmpty ( txtHAW011 . Text ) )
+                strWhere += " AND HAW011='" + txtHAW011 . Text + "'";
 
             DataTable tableView = _bll . getTableColumn ( strWhere );
             gridControl1 . DataSource = tableView;

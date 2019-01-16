@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLEDNewsPaper));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -73,7 +72,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.LEE002 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -97,7 +96,7 @@
             this.LEE009 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.U6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
             this.copyOne = new System.Windows.Forms.ToolStripMenuItem();
             this.GridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -141,6 +140,7 @@
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -207,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt4.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // toolExport
@@ -550,6 +551,7 @@
             this.txtLEC023.Size = new System.Drawing.Size(174, 26);
             this.txtLEC023.StyleController = this.layoutControl1;
             this.txtLEC023.TabIndex = 28;
+            this.txtLEC023.EditValueChanged += new System.EventHandler(this.txtLEC023_EditValueChanged);
             // 
             // txtLEC024
             // 
@@ -783,7 +785,8 @@
             this.gridControl2.MenuManager = this.barManager1;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.EditOrder});
+            this.EditOrder,
+            this.btnEdit});
             this.gridControl2.Size = new System.Drawing.Size(1208, 145);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -833,7 +836,7 @@
             // LEE002
             // 
             this.LEE002.Caption = "来源工单";
-            this.LEE002.ColumnEdit = this.EditOrder;
+            this.LEE002.ColumnEdit = this.btnEdit;
             this.LEE002.FieldName = "LEE002";
             this.LEE002.Name = "LEE002";
             this.LEE002.Visible = true;
@@ -1628,6 +1631,15 @@
             this.wait.TabIndex = 39;
             this.wait.Text = "progressPanel1";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.AutoHeight = false;
+            this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.btnEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEdit_ButtonClick);
+            // 
             // FormLEDNewsPaper
             // 
             this.Appearance.Options.UseFont = true;
@@ -1706,6 +1718,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1824,5 +1837,6 @@
         private DevExpress . XtraEditors . DateEdit txtLEC024;
         private DevExpress . XtraLayout . LayoutControlItem layoutControlItem4;
         private DevExpress . XtraLayout . LayoutControlItem layoutControlItem5;
+        private DevExpress . XtraEditors . Repository . RepositoryItemButtonEdit btnEdit;
     }
 }

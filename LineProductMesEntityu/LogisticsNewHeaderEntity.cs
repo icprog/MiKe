@@ -19,6 +19,8 @@ namespace LineProductMesEntityu
         private string _lgn008;
         private DateTime? _lgn009;
         private DateTime? _lgn010;
+        private decimal? _lgn011;
+        private decimal? _lgn012;
 
         /// <summary>
         /// 
@@ -175,6 +177,34 @@ namespace LineProductMesEntityu
             get
             {
                 return _lgn010;
+            }
+        }
+        /// <summary>
+        /// 补贴工时
+        /// </summary>
+        public decimal? LGN011
+        {
+            set
+            {
+                _lgn011 = value;
+            }
+            get
+            {
+                return _lgn011;
+            }
+        }
+        /// <summary>
+        /// 补贴单价
+        /// </summary>
+        public decimal? LGN012
+        {
+            set
+            {
+                _lgn012 = value;
+            }
+            get
+            {
+                return _lgn012;
             }
         }
     }

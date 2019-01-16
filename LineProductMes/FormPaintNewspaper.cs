@@ -10,6 +10,7 @@ using System . Reflection;
 using DevExpress . Utils . Paint;
 using System . Threading;
 using System . Windows . Forms;
+using LineProductMes . ChildForm;
 
 namespace LineProductMes
 {
@@ -25,6 +26,7 @@ namespace LineProductMes
 
         string strWhere="1=1",state=string.Empty,focuseName=string.Empty;
         bool result=false;
+        decimal outResult=0M;
 
         Thread thread;
         SynchronizationContext m_SyncContext = null;
@@ -57,9 +59,7 @@ namespace LineProductMes
             thread = new Thread ( new ThreadStart ( ThreadPost ) );
             thread . Start ( );
 
-            dt = LineProductMesBll . UserInfoMation . sysTime;
-            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
-            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
+            queryTime ( );
         }
 
         #region Main
@@ -109,10 +109,15 @@ namespace LineProductMes
             gridControl2 . DataSource = tableViewTwo;
             txtPAN003 . EditValue = "0503";
             txtPAN013 . Text = "计件";
-            txtPAN006 . Text = LineProductMesBll . UserInfoMation . sysTime . ToString ( "yyyy-MM-dd" );
+            txtPAN006 . Text = dt . ToString ( "yyyy-MM-dd" );
             addTool ( );
+
+            queryTime ( );
+
             txtPAN015 . Text = dtStart . ToString ( );
             txtPAN016 . Text = dtEnd . ToString ( );
+
+            txtPAN014 . Text = LineProductMesBll . UserInfoMation . userName;
 
             return base . Add ( );
         }
@@ -497,14 +502,7 @@ namespace LineProductMes
                 return;
             if ( e . Column . FieldName == "PPA002" || e . Column . FieldName == "PPA003" || e . Column . FieldName == "PPA004" || e . Column . FieldName == "PPA011" )
             {
-                if ( rows [ "PPA007" ] == null || rows [ "PPA007" ] . ToString ( ) == string . Empty )
-                {
-                    rows [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                }
-                if ( rows [ "PPA008" ] == null || rows [ "PPA008" ] . ToString ( ) == string . Empty )
-                {
-                    rows [ "PPA008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-                }
+                timeEdit ( rows );
                 if ( rows [ "PPA010" ] == null || rows [ "PPA010" ] . ToString ( ) == string . Empty )
                 {
                     rows [ "PPA010" ] = "在职";
@@ -522,17 +520,14 @@ namespace LineProductMes
                     rows [ "PPA012" ] = DBNull . Value;
                     rows [ "PPA013" ] = DBNull . Value;
                 }
-                else if ( _bodyTwo . PPA010 . Equals ( "在职" ) )
+                else if ( _bodyTwo . PPA010 . Equals ( "在职" ) || _bodyTwo . PPA010 . Equals ( "请假" ) )
                 {
-                    if ( rows [ "PPA007" ] == null || rows [ "PPA007" ] . ToString ( ) == string . Empty )
-                    {
-                        rows [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    }
-                    if ( rows [ "PPA008" ] == null || rows [ "PPA008" ] . ToString ( ) == string . Empty )
-                    {
-                        rows [ "PPA008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
-                    }
+                    timeEdit ( rows );
                 }
+                calcuTimeSum ( );
+            }
+            if ( e . Column . FieldName == "PPA016" )
+            {
                 calcuTimeSum ( );
             }
             if ( e . Column . FieldName == "PPA009" )
@@ -650,6 +645,33 @@ namespace LineProductMes
                 addRow ( "PPA008" ,e . RowHandle ,e . Value );
             }
         }
+        void timeEdit ( DataRow rows )
+        {
+            if ( string . IsNullOrEmpty ( txtPAN013 . Text ) )
+                return;
+            if ( "计件" . Equals ( txtPAN013 . Text . Trim ( ) ) )
+            {
+                if ( rows [ "PPA005" ] == null || rows [ "PPA005" ] . ToString ( ) == string . Empty )
+                {
+                    rows [ "PPA005" ] = dtStart;
+                }
+                if ( rows [ "PPA006" ] == null || rows [ "PPA006" ] . ToString ( ) == string . Empty )
+                {
+                    rows [ "PPA006" ] = dtEnd;
+                }
+            }
+            else
+            {
+                if ( rows [ "PPA007" ] == null || rows [ "PPA007" ] . ToString ( ) == string . Empty )
+                {
+                    rows [ "PPA007" ] = dtStart;
+                }
+                if ( rows [ "PPA008" ] == null || rows [ "PPA008" ] . ToString ( ) == string . Empty )
+                {
+                    rows [ "PPA008" ] = dtEnd;
+                }
+            }
+        }
         private void txtu2_TextChanged ( object sender ,EventArgs e )
         {
             calcuSalaaryEveryWork ( );
@@ -677,8 +699,8 @@ namespace LineProductMes
                     row [ "PPA003" ] = r [ "EMP002" ];
                     row [ "PPA004" ] = r [ "EMP007" ];
                     row [ "PPA011" ] = r [ "DAA002" ];
-                    row [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                    row [ "PPA008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                    row [ "PPA007" ] = dtStart;
+                    row [ "PPA008" ] = dtEnd;
                     row [ "PPA010" ] = "在职";
                     tableViewTwo . Rows . Add ( row );
                 }
@@ -694,8 +716,8 @@ namespace LineProductMes
                         row [ "PPA003" ] = r [ "EMP002" ];
                         row [ "PPA004" ] = r [ "EMP007" ];
                         row [ "PPA011" ] = r [ "DAA002" ];
-                        row [ "PPA007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
-                        row [ "PPA008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        row [ "PPA007" ] = dtStart;
+                        row [ "PPA008" ] = dtEnd;
                         row [ "PPA010" ] = "在职";
                         tableViewTwo . Rows . Add ( row );
                     }
@@ -706,25 +728,39 @@ namespace LineProductMes
         private void btnEdit_ButtonClick ( object sender ,DevExpress . XtraEditors . Controls . ButtonPressedEventArgs e )
         {
             DataRow row = gridView1 . GetFocusedDataRow ( );
-            if ( row == null )
-                return;
-            if ( row [ "PAO003" ] == null || row [ "PAO003" ] . ToString ( ) == string . Empty )
-                return;
-            DataTable tableArt = _bll . getTableArt ( row [ "PAO003" ] . ToString ( ) );
-            if ( tableArt == null || tableArt . Rows . Count < 1 )
-                return;
-            ChildForm . PaintNewsArt from = new ChildForm . PaintNewsArt ( row [ "PAO003" ] . ToString ( ) ,tableArt );
-            if ( from . ShowDialog ( ) == System . Windows . Forms . DialogResult . OK )
+            FormPaintOrder form = new FormPaintOrder ( tableProduct );
+            if ( form . ShowDialog ( ) == DialogResult . OK )
             {
-                DataRow rows = from . getRow;
-                if ( rows == null )
-                    return;
-                row [ "PAO009" ] = rows [ "ART002" ];
-                row [ "PAO010" ] = rows [ "ART003" ];
-                row [ "PAO011" ] = rows [ "ART004" ];
-                row [ "PAO013" ] = rows [ "ART011" ];
-                gridControl1 . RefreshDataSource ( );
+                DataRow ro = form . getRow;
+                _bodyOne . PAO002 = ro [ "RAA001" ] . ToString ( );
+                _bodyOne . PAO003 = ro [ "RAA015" ] . ToString ( );
+                _bodyOne . PAO004 = ro [ "DEA002" ] . ToString ( );
+                _bodyOne . PAO005 = string . IsNullOrEmpty ( ro [ "RAA018" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( ro [ "RAA018" ] . ToString ( ) );
+                _bodyOne . PAO006 = string . IsNullOrEmpty ( ro [ "DEA050" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( ro [ "DEA050" ] . ToString ( ) );
+                _bodyOne . PAO007 = ro [ "DEA003" ] . ToString ( );
+                _bodyOne . PAO008 = ro [ "DEA057" ] . ToString ( );
+
+                if ( row == null )
+                {
+                    row = tableViewOne . NewRow ( );
+                    rowEdit ( row );
+                    tableViewOne . Rows . Add ( row );
+                }
+                else
+                    rowEdit ( row );
+
+                editOtherSur ( _bodyOne . PAO002 ,_bodyOne . PAO003 );
             }
+        }
+        void rowEdit ( DataRow row )
+        {
+            row [ "PAO002" ] = _bodyOne . PAO002;
+            row [ "PAO003" ] = _bodyOne . PAO003;
+            row [ "PAO004" ] = _bodyOne . PAO004;
+            row [ "PAO005" ] = _bodyOne . PAO005;
+            row [ "PAO006" ] = _bodyOne . PAO006;
+            row [ "PAO007" ] = _bodyOne . PAO007;
+            row [ "PAO008" ] = _bodyOne . PAO008;
         }
         protected override void OnClosing ( CancelEventArgs e )
         {
@@ -794,7 +830,7 @@ namespace LineProductMes
         {
             if ( e . KeyChar == ( char ) Keys . Enter )
             {
-                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                     return;
                 DataRow row = gridView1 . GetFocusedDataRow ( );
                 if ( row == null )
@@ -810,7 +846,7 @@ namespace LineProductMes
         {
             if ( e . KeyChar == ( char ) Keys . Enter )
             {
-                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                     return;
                 DataRow row = bandedGridView1 . GetFocusedDataRow ( );
                 if ( row == null )
@@ -824,6 +860,11 @@ namespace LineProductMes
         }
         private void txtPAN016_EditValueChanged ( object sender ,EventArgs e )
         {
+            if ( !string . IsNullOrEmpty ( txtPAN015 . Text ) )
+            {
+                dtStart = Convert . ToDateTime ( txtPAN015 . Text );
+                dt = dtStart;
+            }
             updateBatchTime ( );
         }
         void updateBatchTime ( )
@@ -864,22 +905,63 @@ namespace LineProductMes
                 calcuTimeSum ( );
             }
         }
+        private void btnUser_ButtonClick ( object sender ,DevExpress . XtraEditors . Controls . ButtonPressedEventArgs e )
+        {
+            DataRow row = bandedGridView1 . GetFocusedDataRow ( );
+            FormUserChoise form = new FormUserChoise ( tableUser );
+            if ( form . ShowDialog ( ) == DialogResult . OK )
+            {
+                DataRow ro = form . getRow;
+                _bodyTwo . PPA002 = ro [ "EMP001" ] . ToString ( );
+                _bodyTwo . PPA003 = ro [ "EMP002" ] . ToString ( );
+                _bodyTwo . PPA004 = ro [ "EMP007" ] . ToString ( );
+                _bodyTwo . PPA010 = "在职";
+                _bodyTwo . PPA011 = ro [ "DAA002" ] . ToString ( );
+
+                if ( row == null )
+                {
+                    row = tableViewTwo . NewRow ( );
+                    rowUser ( row );
+                    tableViewTwo . Rows . Add ( row );
+                }
+                else
+                    rowUser ( row );
+            }
+        }
+        void rowUser ( DataRow row )
+        {
+            row [ "PPA002" ] = _bodyTwo . PPA002;
+            row [ "PPA003" ] = _bodyTwo . PPA003;
+            row [ "PPA004" ] = _bodyTwo . PPA004;
+            row [ "PPA010" ] = _bodyTwo . PPA010;
+            row [ "PPA011" ] = _bodyTwo . PPA011;
+        }
+        private void txtPAN017_TextChanged ( object sender ,EventArgs e )
+        {
+            calcuSalarySum ( );
+            calcuTimeSum ( );
+        }
+        private void txtPAN018_TextChanged ( object sender ,EventArgs e )
+        {
+            calcuSalarySum ( );
+            calcuTimeSum ( );
+        }
         #endregion
 
         #region Method
         void controlUnEnable ( )
         {
-             txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly =txtPAN011.ReadOnly=txtPAN012.ReadOnly=txtPAN013.ReadOnly= txtPAN015 . ReadOnly = txtPAN016 . ReadOnly = true;
+             txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly =txtPAN011.ReadOnly=txtPAN012.ReadOnly=txtPAN013.ReadOnly= txtPAN015 . ReadOnly = txtPAN016 . ReadOnly =txtPAN017.ReadOnly=txtPAN018.ReadOnly= true;
             bandedGridView1 . OptionsBehavior . Editable = gridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly = txtPAN011 . ReadOnly = txtPAN012 . ReadOnly = txtPAN013 . ReadOnly = txtPAN015 . ReadOnly = txtPAN016 . ReadOnly = false;
+            txtPAN003 . ReadOnly = txtPAN005 . ReadOnly = txtPAN007 . ReadOnly = txtPAN011 . ReadOnly = txtPAN012 . ReadOnly = txtPAN013 . ReadOnly = txtPAN015 . ReadOnly = txtPAN016 . ReadOnly = txtPAN017 . ReadOnly = txtPAN018 . ReadOnly = false;
             bandedGridView1 . OptionsBehavior . Editable = gridView1 . OptionsBehavior . Editable = true;
         }
         void controlClear ( )
         {
-            txtPAN001 . Text = txtPAN003 . Text = txtPAN005 . Text = txtPAN006 . Text = txtPAN007 . Text = txtPAN011 . Text = txtPAN012 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text =txtPAN013.Text= txtPAN015 . Text = txtPAN016 . Text = string . Empty;
+            txtPAN001 . Text = txtPAN003 . Text = txtPAN005 . Text = txtPAN006 . Text = txtPAN007 . Text = txtPAN011 . Text = txtPAN012 . Text = txtu0 . Text = txtu1 . Text = txtu2 . Text = txtu3 . Text = txtPAN013 . Text = txtPAN015 . Text = txtPAN016 . Text = txtPAN017 . Text = txtPAN018 . Text = string . Empty;
             gridControl1 . DataSource = gridControl2 . DataSource = null;
             layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             wait . Hide ( );
@@ -924,6 +1006,9 @@ namespace LineProductMes
             txtPAN013 . Text = _header . PAN013;
             txtPAN015 . Text = _header . PAN015 . ToString ( );
             txtPAN016 . Text = _header . PAN016 . ToString ( );
+            txtPAN014 . Text = _header . PAN014;
+            txtPAN017 . Text = _header . PAN017 . ToString ( );
+            txtPAN018 . Text = _header . PAN018 . ToString ( );
 
             layoutControlItem11 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
             Graph . grPic ( pictureEdit1 ,"反" );
@@ -980,6 +1065,11 @@ namespace LineProductMes
                     XtraMessageBox . Show ( "请选择来源工单等信息" );
                     return false;
                 }
+            }
+            else if ( "计时" . Equals ( txtPAN013 . Text ) && ( tableViewOne == null || tableViewOne . Rows . Count < 1 ) )
+            {
+                if ( XtraMessageBox . Show ( "是否选择来源工单" ,"提示" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
+                    return false;
             }
 
             gridView1 . ClearColumnErrors ( );
@@ -1088,6 +1178,22 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "请选择完工日期" );
                 return false;
             }
+
+            outResult = 0M;
+            if ( !string . IsNullOrEmpty ( txtPAN017 . Text ) && decimal . TryParse ( txtPAN017 . Text ,out outResult ) == false )
+            {
+                XtraMessageBox . Show ( "补贴工资为数字" );
+                return false;
+            }
+            _header . PAN017 = outResult;
+            outResult = 0M;
+            if ( !string . IsNullOrEmpty ( txtPAN018 . Text ) && decimal . TryParse ( txtPAN018 . Text ,out outResult ) == false )
+            {
+                XtraMessageBox . Show ( "补贴单价为数字" );
+                return false;
+            }
+            _header . PAN018 = outResult;
+
             _header . PAN015 = Convert . ToDateTime ( txtPAN015 . Text );
             _header . PAN016 = Convert . ToDateTime ( txtPAN016 . Text );
             _header . PAN001 = txtPAN001 . Text;
@@ -1118,6 +1224,19 @@ namespace LineProductMes
         void calcuSalarySum ( )
         {
             txtu2 . Text = ( ( string . IsNullOrEmpty ( txtu0 . Text ) == true ? 0 : Convert . ToDecimal ( txtu0 . Text ) ) + ( string . IsNullOrEmpty ( txtu1 . Text ) == true ? 0 : Convert . ToDecimal ( txtu1 . Text ) ) ) . ToString ( "0.##" );
+            if ( "计时" . Equals ( txtPAN013 . Text ) )
+                return;
+            if ( !string . IsNullOrEmpty ( txtPAN017 . Text ) && decimal . TryParse ( txtPAN017 . Text ,out outResult ) == false )
+            {
+                XtraMessageBox . Show ( "补贴工资为数字" );
+                return;
+            }
+            if ( !string . IsNullOrEmpty ( txtPAN018 . Text ) && decimal . TryParse ( txtPAN018 . Text ,out outResult ) == false )
+            {
+                XtraMessageBox . Show ( "补贴单价为数字" );
+                return ;
+            }
+            txtu2 . Text = ( string . IsNullOrEmpty ( txtu2 . Text ) == true ? 0 : Convert . ToDecimal ( txtu2 . Text ) + ( string . IsNullOrEmpty ( txtPAN017 . Text ) == true ? 0 : Convert . ToDecimal ( txtPAN017 . Text ) * ( string . IsNullOrEmpty ( txtPAN018 . Text ) == true ? 0 : Convert . ToDecimal ( txtPAN018 . Text ) ) ) ) . ToString ( "0.######" );
         }
         void calcuSalaryTimeSum ( )
         {
@@ -1127,6 +1246,9 @@ namespace LineProductMes
             txtu1 . Text = U3 . SummaryItem . SummaryValue == null ? 0 . ToString ( ) :Convert.ToDecimal( U3 . SummaryItem . SummaryValue) . ToString ( "0.#" );
             calcuSalaaryEveryWork ( );
         }
+        /// <summary>
+        /// 个人工时
+        /// </summary>
         void calcuTimeSum ( )
         {
             bandedGridView1 . CloseEditor ( );
@@ -1139,7 +1261,7 @@ namespace LineProductMes
             decimal pan012 = txtPAN012 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtPAN012 . Text );
 
             DateTime dtOne, dtTwo;
-            decimal u0 = 0M;
+            decimal u0 = 0M, totalTime = 0;
 
             foreach ( DataRow row in tableViewTwo . Rows )
             {
@@ -1171,6 +1293,11 @@ namespace LineProductMes
                 }
                 else
                     row [ "PPA012" ] = 0;
+
+                if ( !"请假" . Equals ( row [ "PPA010" ] . ToString ( ) . Trim ( ) ) )
+                    totalTime += u0;
+
+                u0 = 0;
                 if ( !string . IsNullOrEmpty ( row [ "PPA007" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "PPA008" ] . ToString ( ) ) )
                 {
                     dtOne = Convert . ToDateTime ( row [ "PPA007" ] );
@@ -1191,18 +1318,26 @@ namespace LineProductMes
                 }
                 else
                     row [ "PPA013" ] = 0;
+
+                if ( !"请假" . Equals ( row [ "PPA010" ] . ToString ( ) . Trim ( ) ) )
+                    totalTime += u0;
+
             }
 
-            txtu3 . Text = U4 . SummaryItem . SummaryValue == null ? 0 . ToString ( ) : Convert . ToDecimal ( U4 . SummaryItem . SummaryValue ) . ToString ( "0.#" );
-            calcuSalaaryEveryWork ( );
+            //txtu3 . Text = U4 . SummaryItem . SummaryValue == null ? 0 . ToString ( ) : Convert . ToDecimal ( U4 . SummaryItem . SummaryValue ) . ToString ( "0.#" );
+            txtu3 . Text = u0 . ToString ( "0.######" );
+           calcuSalaaryEveryWork ( );
             calcuSalaryTimeSum ( );
             calcuSalaryNumSum ( );
         }
+        /// <summary>
+        /// 个人工资
+        /// </summary>
         void calcuSalaaryEveryWork ( )
         {
             txtu4 . Text = ( ( string . IsNullOrEmpty ( txtu2 . Text ) == true ? 0 : Convert . ToDecimal ( txtu2 . Text ) ) * Convert . ToDecimal ( 0.05 ) ) . ToString ( "0.######" );
 
-            decimal timeSum = 0, timeAll = 0, salarySum = 0M;
+            decimal timeSum = 0, timeAll = 0, salarySum = 0M, totalO = string . IsNullOrEmpty ( txtPAN017 . Text ) == true ? 0 : Convert . ToDecimal ( txtPAN017 . Text ) * ( string . IsNullOrEmpty ( txtPAN018 . Text ) == true ? 0 : Convert . ToDecimal ( txtPAN018 . Text ) );
 
             gridView1 . CloseEditor ( );
             gridView1 . UpdateCurrentRow ( );
@@ -1212,6 +1347,7 @@ namespace LineProductMes
 
             string piNum = string . Empty;
 
+            //各岗位的总产值
             Dictionary<string ,decimal> gs = new Dictionary<string ,decimal> ( );
 
             if ( "计件" . Equals ( txtPAN013 . Text ) )
@@ -1234,11 +1370,13 @@ namespace LineProductMes
                             _bodyOne . PAO013 = row [ "ART013" ] . ToString ( );
                             _bodyOne . PAO011 = string . IsNullOrEmpty ( row [ "ART004" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "ART004" ] );
                             DataRow rowSe = tableViewOne . Select ( "PAO003='" + _bodyOne . PAO009 + "'" ) [ 0 ];
+                            if ( rowSe == null )
+                                continue;
                             _bodyOne . PAO012 = Convert . ToInt32 ( rowSe [ "PAO012" ] );
                             if ( gs . ContainsKey ( _bodyOne . PAO013 ) )
-                                gs [ _bodyOne . PAO013 ] = Convert . ToDecimal ( _bodyOne . PAO011 * _bodyOne . PAO012 ) * Convert . ToDecimal ( 0.95 ) + gs [ _bodyOne . PAO013 ];
+                                gs [ _bodyOne . PAO013 ] = Convert . ToDecimal ( _bodyOne . PAO011 * _bodyOne . PAO012 ) /** Convert . ToDecimal ( 0.95 )*/ + gs [ _bodyOne . PAO013 ];
                             else
-                                gs . Add ( _bodyOne . PAO013 ,Convert . ToDecimal ( _bodyOne . PAO011 * _bodyOne . PAO012 * Convert . ToDecimal ( 0.95 ) ) );
+                                gs . Add ( _bodyOne . PAO013 ,Convert . ToDecimal ( _bodyOne . PAO011 * _bodyOne . PAO012 /** Convert . ToDecimal ( 0.95 )*/ ) );
                         }
                     }
                 }
@@ -1246,14 +1384,18 @@ namespace LineProductMes
 
             if ( tableViewTwo != null && tableViewTwo . Rows . Count > 0 )
             {
+                //各岗位的总工时
                 Dictionary<string ,decimal> ut = new Dictionary<string ,decimal> ( );
+                //个人分配工资
+                Dictionary<string ,decimal> fp = new Dictionary<string ,decimal> ( );
+
                 foreach ( DataRow row in tableViewTwo . Rows )
                 {
                     _bodyTwo . PPA010 = row [ "PPA010" ] . ToString ( );
-                    if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010.Trim() . Equals ( "在职" ) )
+                    _bodyTwo . PPA004 = row [ "PPA004" ] . ToString ( );
+                    if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010 . Trim ( ) . Equals ( "在职" ) )
                     {
-                        _bodyTwo . PPA004 = row [ "PPA004" ] . ToString ( );
-                        _bodyTwo . PPA014 = string . IsNullOrEmpty ( row [ "PPA009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA009" ] ) * ( string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] ) ) * Convert . ToDecimal ( 0.95 );
+                        _bodyTwo . PPA014 = string . IsNullOrEmpty ( row [ "PPA009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA009" ] ) * ( string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] ) ) /** Convert . ToDecimal ( 0.95 )*/;
                         if ( gs . ContainsKey ( _bodyTwo . PPA004 ) )
                             gs [ _bodyTwo . PPA004 ] = Convert . ToDecimal ( _bodyTwo . PPA014 ) + gs [ _bodyTwo . PPA004 ];
                         else
@@ -1265,24 +1407,52 @@ namespace LineProductMes
                         else
                             ut . Add ( _bodyTwo . PPA004 ,Convert . ToDecimal ( _bodyTwo . PPA014 ) );
                     }
+                    else if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010 . Trim ( ) . Equals ( "请假" ) )
+                    {
+                        _bodyTwo . PPA016 = string . IsNullOrEmpty ( row [ "PPA016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA016" ] );
+                        if ( fp . ContainsKey ( _bodyTwo . PPA004 ) )
+                            fp [ _bodyTwo . PPA004 ] = Convert . ToDecimal ( _bodyTwo . PPA016 ) + fp [ _bodyTwo . PPA004 ];
+                        else
+                            fp . Add ( _bodyTwo . PPA004 ,Convert . ToDecimal ( _bodyTwo . PPA016 ) );
+                    }
                 }
 
                 if ( gs . Count < 1 )
                     return;
 
+                List<string> strKey = new List<string> ( );
+                foreach ( string key in gs . Keys )
+                {
+                    strKey . Add ( key );
+                }
+
+                foreach ( string s in strKey )
+                {
+                    gs [ s ] = ( gs [ s ] + totalO / 2 ) * Convert . ToDecimal ( 0.95 );
+                }
+
+                decimal everyFP = 0;
+
                 foreach ( DataRow row in tableViewTwo . Rows )
                 {
+                    everyFP = 0;
                     _bodyTwo . PPA010 = row [ "PPA010" ] . ToString ( );
                     _bodyTwo . PPA002 = row [ "PPA002" ] . ToString ( );
                     _bodyTwo . PPA004 = row [ "PPA004" ] . ToString ( );
                     timeSum = ( string . IsNullOrEmpty ( row [ "PPA012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA012" ] ) + ( string . IsNullOrEmpty ( row [ "PPA013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "PPA013" ] ) ) );
-                    if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010.Trim() . Equals ( "在职" ) )
+                    if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010 . Trim ( ) . Equals ( "在职" ) )
                     {
                         salarySum = gs [ _bodyTwo . PPA004 ];
                         timeAll = 0;
                         if ( ut . Count > 0 )
                             timeAll = ut [ _bodyTwo . PPA004 ];
-                        row [ "PPA014" ] = timeAll == 0 ? 0 . ToString ( ) : ( salarySum / timeAll * timeSum ) . ToString ( "0.##" );
+                        if ( fp . Count > 0 && fp . ContainsKey ( _bodyTwo . PPA004 ) )
+                            everyFP = fp [ _bodyTwo . PPA004 ];
+                        row [ "PPA014" ] = timeAll == 0 ? 0 . ToString ( ) : ( ( salarySum - everyFP ) / timeAll * timeSum ) . ToString ( "0.##" );
+                    }
+                    else if ( _bodyTwo . PPA010 != string . Empty && _bodyTwo . PPA010 . Trim ( ) . Equals ( "请假" ) )
+                    {
+                        row [ "PPA014" ] = row [ "PPA016" ];
                     }
                 }
 
@@ -1445,9 +1615,9 @@ namespace LineProductMes
                     {
                         if ( column . Equals ( "PPA005" ) )
                         {
-                            if ( workShopTime . startTime ( row ,row [ "PPA005" ] ,"PPA006" ,"PPA007" ,"PPA008" ) )
+                            if ( workShopTime . startTime ( row ,/*row [ "PPA005" ]*/value ,"PPA006" ,"PPA007" ,"PPA008" ) )
                             {
-                                ro = tableViewTwo . Rows [ i + 1 ];
+                                ro = tableViewTwo . Rows [ i /*+ 1*/ ];
                                 if ( ro [ "PPA005" ] == null || ro [ "PPA005" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1458,9 +1628,9 @@ namespace LineProductMes
                         }
                         else if ( column . Equals ( "PPA006" ) )
                         {
-                            if ( workShopTime . endTime ( row ,row [ "PPA006" ] ,"PPA005" ,"PPA007" ,"PPA008" ) )
+                            if ( workShopTime . endTime ( row ,/*row [ "PPA006" ]*/value ,"PPA005" ,"PPA007" ,"PPA008" ) )
                             {
-                                ro = tableViewTwo . Rows [ i + 1 ];
+                                ro = tableViewTwo . Rows [ i/* + 1*/ ];
                                 if ( ro [ "PPA006" ] == null || ro [ "PPA006" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1471,9 +1641,9 @@ namespace LineProductMes
                         }
                         if ( column . Equals ( "PPA007" ) )
                         {
-                            if ( workShopTime . startCenTime ( row ,row [ "PPA007" ] ,"PPA006" ,"PPA008" ,"PPA005" ) )
+                            if ( workShopTime . startCenTime ( row ,/*row [ "PPA007" ]*/value ,"PPA006" ,"PPA008" ,"PPA005" ) )
                             {
-                                ro = tableViewTwo . Rows [ i + 1 ];
+                                ro = tableViewTwo . Rows [ i/* + 1 */];
                                 if ( ro [ "PPA007" ] == null || ro [ "PPA007" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1484,9 +1654,9 @@ namespace LineProductMes
                         }
                         else if ( column . Equals ( "PPA008" ) )
                         {
-                            if ( workShopTime . endCenTime ( row ,row [ "PPA008" ] ,"PPA007" ,"PPA005" ,"PPA006" ) )
+                            if ( workShopTime . endCenTime ( row ,/*row [ "PPA008" ]*/value ,"PPA007" ,"PPA005" ,"PPA006" ) )
                             {
-                                ro = tableViewTwo . Rows [ i + 1 ];
+                                ro = tableViewTwo . Rows [ i /*+ 1*/ ];
                                 if ( ro [ "PPA008" ] == null || ro [ "PPA008" ] . ToString ( ) == string . Empty )
                                 {
                                     ro . BeginEdit ( );
@@ -1570,6 +1740,12 @@ namespace LineProductMes
                     }
                 }
             }
+        }
+        void queryTime ( )
+        {
+            dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
         }
         #endregion
 

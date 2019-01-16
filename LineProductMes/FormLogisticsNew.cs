@@ -9,6 +9,7 @@ using LineProductMes . ClassForMain;
 using System . Reflection;
 using DevExpress . Utils . Paint;
 using Utility;
+using LineProductMes . ChildForm;
 
 namespace LineProductMes
 {
@@ -27,6 +28,7 @@ namespace LineProductMes
 
         string state=string.Empty,focuseName=string.Empty;
         bool result=false;
+        decimal outResult=0M;
 
         public FormLogisticsNew ( )
         {
@@ -42,9 +44,7 @@ namespace LineProductMes
             fi . SetValue ( null ,new DrawXPaint ( ) );
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View1 ,View2 } );
 
-            dt = LineProductMesBll . UserInfoMation . sysTime;
-            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
-            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
+            queryTime ( );
 
             Editd1 . VistaEditTime = Editd2 . VistaEditTime = Editd3 . VistaEditTime = Editd4 . VistaEditTime =txtLGN009.Properties.VistaEditTime=txtLGN010.Properties.VistaEditTime= DevExpress . Utils . DefaultBoolean . True;
 
@@ -69,8 +69,15 @@ namespace LineProductMes
                 txtLGN005 . Text = Convert . ToDecimal ( _model . LGN005 ) . ToString ( "0.#" );
                 txtLGN006 . Text = Convert . ToDecimal ( _model . LGN006 ) . ToString ( "0.#" );
                 txtLGN007 . Text = _model . LGN007;
+                txtLGN008 . Text = _model . LGN008;
                 txtLGN009 . Text = _model . LGN009 . ToString ( );
                 txtLGN010 . Text = _model . LGN010 . ToString ( );
+
+                dtStart = Convert . ToDateTime ( _model . LGN009 );
+                dtEnd = Convert . ToDateTime ( _model . LGN010 );
+
+                txtLGN011 . Text = _model . LGN011 . ToString ( );
+                txtLGN012 . Text = _model . LGN012 . ToString ( );
 
                 layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
                 Graph . grPicW ( pictureEdit1 ,"反" );
@@ -112,6 +119,8 @@ namespace LineProductMes
             controlClear ( );
             controlEnable ( );
 
+
+
             state = "add";
 
             _model . LGN001 = txtLGN001 . Text = _bll . getCode ( );
@@ -124,8 +133,13 @@ namespace LineProductMes
 
             addUser ( );
             txtLGN007 . Text = "计件";
+
+            queryTime ( );
+
             txtLGN009 . Text = dtStart . ToString ( );
             txtLGN010 . Text = dtEnd . ToString ( );
+
+            txtLGN008 . Text = LineProductMesBll . UserInfoMation . userName;
 
             addTool ( );
 
@@ -143,7 +157,7 @@ namespace LineProductMes
         }
         protected override int Delete ( )
         {
-            if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+            if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                 return 0;
             if ( string . IsNullOrEmpty ( txtLGN001 . Text ) )
             {
@@ -329,7 +343,7 @@ namespace LineProductMes
         {
             if ( e . Column . FieldName == "LOG008" )
             {
-                setSalary ( );
+                calcuTsumTime ( );
             }
             else if ( e . Column . FieldName == "LOG007" )
             {
@@ -352,28 +366,32 @@ namespace LineProductMes
                 {
                     if ( row [ "LGP009" ] == null || row [ "LGP009" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "LGP009" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        row [ "LGP009" ] = dtStart;
                     }
                     if ( row [ "LGP010" ] == null || row [ "LGP010" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "LGP010" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        row [ "LGP010" ] = dtEnd;
                     }
                 }
                 else if ( txtLGN007 . Text . Equals ( "计时" ) )
                 {
                     if ( row [ "LGP007" ] == null || row [ "LGP007" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "LGP007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                        row [ "LGP007" ] = dtStart;
                     }
                     if ( row [ "LGP008" ] == null || row [ "LGP008" ] . ToString ( ) == string . Empty )
                     {
-                        row [ "LGP008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                        row [ "LGP008" ] = dtEnd;
                     }
                 }
                 if ( row [ "LGP005" ] == null || row [ "LGP005" ] . ToString ( ) == string . Empty )
                 {
                     row [ "LGP005" ] = "在职";
                 }
+                calcuTsumTime ( );
+            }
+            else if ( e . Column . FieldName == "LGP015" )
+            {
                 calcuTsumTime ( );
             }
             else if ( e . Column . FieldName == "LGP005" )
@@ -389,28 +407,28 @@ namespace LineProductMes
                     row [ "LGP012" ] = DBNull . Value;
                     row [ "LGP013" ] = DBNull . Value;
                 }
-                else if ( _bodyTwo . LGP005 . Equals ( "在职" ) )
+                else if ( _bodyTwo . LGP005 . Equals ( "在职" ) || _bodyTwo . LGP005 . Equals ( "请假" ) )
                 {
                     if ( txtLGN007 . Text . Equals ( "计件" ) )
                     {
                         if ( row [ "LGP009" ] == null || row [ "LGP009" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "LGP009" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "LGP009" ] = dtStart;
                         }
                         if ( row [ "LGP010" ] == null || row [ "LGP010" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "LGP010" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "LGP010" ] = dtEnd;
                         }
                     }
                     else if ( txtLGN007 . Text . Equals ( "计时" ) )
                     {
                         if ( row [ "LGP007" ] == null || row [ "LGP007" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "LGP007" ] = dt . ToString ( "yyyy-MM-dd 08:00" );
+                            row [ "LGP007" ] = dtStart;
                         }
                         if ( row [ "LGP008" ] == null || row [ "LGP008" ] . ToString ( ) == string . Empty )
                         {
-                            row [ "LGP008" ] = dt . ToString ( "yyyy-MM-dd 17:00" );
+                            row [ "LGP008" ] = dtEnd;
                         }
                     }
                     calcuTsumTime ( );
@@ -477,7 +495,7 @@ namespace LineProductMes
                 }
                 gridControl2 . Refresh ( );
 
-                setSalary ( );
+                calcuTsumTime ( );
             }
         }
         private void Edit2_EditValueChanged ( object sender ,EventArgs e )
@@ -545,7 +563,7 @@ namespace LineProductMes
         {
             if ( e . KeyChar == ( char ) Keys . Enter )
             {
-                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                     return;
                 DataRow row = gridView1 . GetFocusedDataRow ( );
                 if ( row == null )
@@ -561,7 +579,7 @@ namespace LineProductMes
         {
             if ( e . KeyChar == ( char ) Keys . Enter )
             {
-                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                     return;
                 DataRow row = bandedGridView1 . GetFocusedDataRow ( );
                 if ( row == null )
@@ -637,6 +655,11 @@ namespace LineProductMes
         }
         private void txtLGN009_EditValueChanged ( object sender ,EventArgs e )
         {
+            if ( !string . IsNullOrEmpty ( txtLGN009 . Text ) )
+            {
+                dtStart = Convert . ToDateTime ( txtLGN009 . Text );
+                dt = dtStart;
+            }
             updateBatchTime ( );
         }
         void updateBatchTime ( )
@@ -676,24 +699,64 @@ namespace LineProductMes
             }
             calcuTsumTime ( );
         }
+        private void benUser_ButtonClick ( object sender ,DevExpress . XtraEditors . Controls . ButtonPressedEventArgs e )
+        {
+            DataRow row = bandedGridView1 . GetFocusedDataRow ( );
+            FormUserChoise form = new FormUserChoise ( tableOne );
+            if ( form . ShowDialog ( ) == DialogResult . OK )
+            {
+                DataRow ro = form . getRow;
+                _bodyTwo . LGP002 = ro [ "EMP001" ] . ToString ( );
+                _bodyTwo . LGP003 = ro [ "EMP002" ] . ToString ( );
+                _bodyTwo . LGP004 = ro [ "EMP007" ] . ToString ( );
+                _bodyTwo . LGP005 = "在职";
+                _bodyTwo . LGP006 = ro [ "DAA002" ] . ToString ( );
+
+                if ( row == null )
+                {
+                    row = tableViewTwo . NewRow ( );
+                    rowUser ( row );
+                    tableViewTwo . Rows . Add ( row );
+                }
+                else
+                    rowUser ( row );
+            }
+        }
+        void rowUser (DataRow row )
+        {
+            row [ "LGP002" ] = _bodyTwo . LGP002;
+            row [ "LGP003" ] = _bodyTwo . LGP003;
+            row [ "LGP004" ] = _bodyTwo . LGP004;
+            row [ "LGP005" ] = _bodyTwo . LGP005;
+            row [ "LGP006" ] = _bodyTwo . LGP006;
+        }
+        private void txtLGN011_TextChanged ( object sender ,EventArgs e )
+        {
+            calcuTsumTime ( );
+        }
+        private void txtLGN012_TextChanged ( object sender ,EventArgs e )
+        {
+            calcuTsumTime ( );
+        }
         #endregion
 
         #region Method
         void controlClear ( )
         {
-            txtLGN001 . Text = txtLGN002 . Text = txtLGN005 . Text = txtLGN006 . Text = txtLGN007 . Text = txtLGN009 . Text = txtLGN010 . Text = string . Empty;
+            txtLGN001 . Text = txtLGN002 . Text = txtLGN005 . Text = txtLGN006 . Text = txtLGN007 . Text = txtLGN009 . Text = txtLGN010 . Text = txtLGN011 . Text = txtLGN012 . Text = txtLGN008.Text= string . Empty;
             gridControl1 . DataSource = null;
             gridControl2 . DataSource = null;
+            layoutControlItem3 . Visibility = DevExpress . XtraLayout . Utils . LayoutVisibility . Never;
         }
         void controlUnEnable ( )
         {
-            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly =txtLGN007.ReadOnly= txtLGN009 . ReadOnly = txtLGN010 . ReadOnly = true;
+            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly =txtLGN007.ReadOnly= txtLGN009 . ReadOnly = txtLGN010 . ReadOnly =txtLGN011.ReadOnly=txtLGN012.ReadOnly= true;
             gridView1 . OptionsBehavior.Editable = false;
             bandedGridView1 . OptionsBehavior . Editable = false;
         }
         void controlEnable ( )
         {
-            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly = txtLGN007 . ReadOnly = txtLGN009 . ReadOnly = txtLGN010 . ReadOnly = false;
+            txtLGN005 . ReadOnly = txtLGN006 . ReadOnly = txtLGN007 . ReadOnly = txtLGN009 . ReadOnly = txtLGN010 . ReadOnly = txtLGN011 . ReadOnly = txtLGN012 . ReadOnly = false;
             gridView1 . OptionsBehavior . Editable = true;
             bandedGridView1 . OptionsBehavior . Editable = true;
         }
@@ -817,6 +880,21 @@ namespace LineProductMes
                 return false;
             }
 
+            outResult = 0M;
+            if ( !string . IsNullOrEmpty ( txtLGN011 . Text ) && decimal . TryParse ( txtLGN011 . Text ,out outResult ) == false )
+            {
+                XtraMessageBox . Show ( "补贴工时为数字" );
+                return false;
+            }
+            _model . LGN011 = outResult;
+            outResult = 0M;
+            if ( !string . IsNullOrEmpty ( txtLGN012 . Text ) && decimal . TryParse ( txtLGN012 . Text ,out outResult ) == false )
+            {
+                XtraMessageBox . Show ( "补贴单价为数字" );
+                return false;
+            }
+            _model . LGN012 = outResult;
+
             _model . LGN009 = Convert . ToDateTime ( txtLGN009 . Text );
             _model . LGN010 = Convert . ToDateTime ( txtLGN010 . Text );
 
@@ -841,7 +919,7 @@ namespace LineProductMes
             decimal lgn006 = txtLGN006 . Text == string . Empty ? 0 : Convert . ToDecimal ( txtLGN006 . Text );
 
             DateTime dtOne, dtTwo;
-            decimal u0 = 0M;
+            decimal u0 = 0M, totalTime = 0M, totalFP = 0M;
 
             foreach ( DataRow row in tableViewTwo . Rows )
             {
@@ -875,6 +953,11 @@ namespace LineProductMes
                 else
                     row [ "LGP012" ] = 0;
 
+                if ( !"请假" . Equals ( row [ "LGP005" ] . ToString ( ) . Trim ( ) ) )
+                    totalTime += u0;
+                else
+                    totalFP = string . IsNullOrEmpty ( row [ "LGP015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LGP015" ] );
+
                 if ( !string . IsNullOrEmpty ( row [ "LGP009" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "LGP010" ] . ToString ( ) ) )
                 {
                     dtOne = Convert . ToDateTime ( row [ "LGP009" ] );
@@ -894,15 +977,21 @@ namespace LineProductMes
                 }
                 else
                     row [ "LGP011" ] = 0;
+
+                if ( !"请假" . Equals ( row [ "LGP005" ] . ToString ( ) . Trim ( ) ) )
+                    totalTime += u0;
             }
-            setSalary ( );
+            setSalary ( totalTime ,totalFP );
         }
-        void setSalary ( )
+        void setSalary ( decimal totalTime,decimal totalFP )
         {
             gridView1 . CloseEditor ( );
             gridView1 . UpdateCurrentRow ( );
 
-            decimal numFor = 0M, totalTime = 0, userTime = 0;
+            if ( tableViewTwo == null || tableViewTwo . Rows . Count < 1 )
+                return;
+
+            decimal numFor = 0M, userTime = 0;
 
             if ( "计件" . Equals ( txtLGN007 . Text ) )
             {
@@ -916,11 +1005,29 @@ namespace LineProductMes
             }
 
             numFor += ( U1 . SummaryItem . SummaryValue == null ? 0 : Convert . ToDecimal ( U1 . SummaryItem . SummaryValue ) );
-            totalTime = ( U0 . SummaryItem . SummaryValue == null ? 0 : Convert . ToDecimal ( U0 . SummaryItem . SummaryValue ) );
+            if ( "计件" . Equals ( txtLGN007 . Text ) )
+            {
+                if ( !string . IsNullOrEmpty ( txtLGN011 . Text ) && decimal . TryParse ( txtLGN011 . Text ,out outResult ) == false )
+                {
+                    XtraMessageBox . Show ( "补贴工时为数字" );
+                    return ;
+                }
+                if ( !string . IsNullOrEmpty ( txtLGN012 . Text ) && decimal . TryParse ( txtLGN012 . Text ,out outResult ) == false )
+                {
+                    XtraMessageBox . Show ( "补贴单价为数字" );
+                    return ;
+                }
+                numFor += ( string . IsNullOrEmpty ( txtLGN011 . Text ) == true ? 0 : Convert . ToDecimal ( txtLGN011 . Text ) ) * ( string . IsNullOrEmpty ( txtLGN012 . Text ) == true ? 0 : Convert . ToDecimal ( txtLGN012 . Text ) );
+            }
+
             foreach ( DataRow row in tableViewTwo . Rows )
             {
                 userTime = ( string . IsNullOrEmpty ( row [ "LGP011" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LGP011" ] ) ) + ( string . IsNullOrEmpty ( row [ "LGP012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LGP012" ] ) );
-                row [ "LGP013" ] = totalTime == 0 ? 0 . ToString ( ) : ( numFor / totalTime * userTime ) . ToString ( "0.#" );
+
+                if ( !"请假" . Equals ( row [ "LGP005" ] . ToString ( ).Trim() ) )
+                    row [ "LGP013" ] = totalTime == 0 ? 0 . ToString ( ) : ( ( numFor - totalFP ) / totalTime * userTime ) . ToString ( "0.#####" );
+                else
+                    row [ "LGP013" ] = row [ "LGP015" ];
             }
         }
         void addUser ( )
@@ -1080,9 +1187,9 @@ namespace LineProductMes
                         {
                             if ( column . Equals ( "LGP009" ) )
                             {
-                                if ( workShopTime . startTime ( row ,row [ "LGP009" ] ,"LGP010" ,"LGP007" ,"LGP008" ) )
+                                if ( workShopTime . startTime ( row ,/*row [ "LGP009" ]*/value ,"LGP010" ,"LGP007" ,"LGP008" ) )
                                 {
-                                    ro = tableViewTwo . Rows [ i + 1 ];
+                                    ro = tableViewTwo . Rows [ i /*+ 1*/ ];
                                     if ( ro [ "LGP009" ] == null || ro [ "LGP009" ] . ToString ( ) == string . Empty )
                                     {
                                         ro . BeginEdit ( );
@@ -1093,9 +1200,9 @@ namespace LineProductMes
                             }
                             else if ( column . Equals ( "LGP010" ) )
                             {
-                                if ( workShopTime . endTime ( row ,row [ "LGP010" ] ,"LGP009" ,"LGP007" ,"LGP008" ) )
+                                if ( workShopTime . endTime ( row ,/*row [ "LGP010" ]*/value ,"LGP009" ,"LGP007" ,"LGP008" ) )
                                 {
-                                    ro = tableViewTwo . Rows [ i + 1 ];
+                                    ro = tableViewTwo . Rows [ i /*+ 1*/ ];
                                     if ( ro [ "LGP010" ] == null || ro [ "LGP010" ] . ToString ( ) == string . Empty )
                                     {
                                         ro . BeginEdit ( );
@@ -1109,9 +1216,9 @@ namespace LineProductMes
                         {
                             if ( column . Equals ( "LGP007" ) )
                             {
-                                if ( workShopTime . startCenTime ( row ,row [ "LGP007" ] ,"LGP010" ,"LGP008" ,"LGP009 " ) )
+                                if ( workShopTime . startCenTime ( row ,/*row [ "LGP007" ]*/value ,"LGP010" ,"LGP008" ,"LGP009 " ) )
                                 {
-                                    ro = tableViewTwo . Rows [ i + 1 ];
+                                    ro = tableViewTwo . Rows [ i/* + 1*/ ];
                                     if ( ro [ "LGP007" ] == null || ro [ "LGP007" ] . ToString ( ) == string . Empty )
                                     {
                                         ro . BeginEdit ( );
@@ -1122,9 +1229,9 @@ namespace LineProductMes
                             }
                             else if ( column . Equals ( "LGP008" ) )
                             {
-                                if ( workShopTime . endCenTime ( row ,row [ "LGP008" ] ,"LGP009" ,"LGP007" ,"LGP008" ) )
+                                if ( workShopTime . endCenTime ( row ,/*row [ "LGP008" ]*/value ,"LGP009" ,"LGP007" ,"LGP008" ) )
                                 {
-                                    ro = tableViewTwo . Rows [ i + 1 ];
+                                    ro = tableViewTwo . Rows [ i /*+ 1*/ ];
                                     if ( ro [ "LGP008" ] == null || ro [ "LGP008" ] . ToString ( ) == string . Empty )
                                     {
                                         ro . BeginEdit ( );
@@ -1197,6 +1304,12 @@ namespace LineProductMes
             tablePrintTwo . TableName = "TableTwo";
             tablePrintTre = _bll . getPrintTre ( txtLGN001 . Text );
             tablePrintTre . TableName = "TableTre";
+        }
+        void queryTime ( )
+        {
+            dt = LineProductMesBll . UserInfoMation . sysTime;
+            dtStart = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 08:00" ) );
+            dtEnd = Convert . ToDateTime ( dt . ToString ( "yyyy-MM-dd 17:00" ) );
         }
         #endregion
 

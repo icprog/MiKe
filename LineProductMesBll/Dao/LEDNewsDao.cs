@@ -43,7 +43,7 @@ namespace LineProductMesBll . Dao
         public DataTable getUserInfo ( )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT EMP001,EMP002,EMP007,EMP005,DAA002 FROM MIKEMP A INNER JOIN TPADAA B ON A.EMP005=B.DAA001 WHERE EMP003='05' AND EMP034=0 AND EMP037=1 " );
+            strSql . Append ( "SELECT EMP001,EMP002,EMP007,EMP005,DAA002,EMP023 FROM MIKEMP A INNER JOIN TPADAA B ON A.EMP005=B.DAA001 WHERE EMP003='05' AND EMP034=0 AND EMP037=1 " );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -66,25 +66,26 @@ namespace LineProductMesBll . Dao
         /// <returns></returns>
         public string getOddNum ( )
         {
-            StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT MAX(LEF001) LEF001 FROM MIKLEF" );
+            return GetCodeUtils . getOddNum ( "MIKLEF" ,"LEF001" );
+            //StringBuilder strSql = new StringBuilder ( );
+            //strSql . Append ( "SELECT MAX(LEF001) LEF001 FROM MIKLEF" );
 
-            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
-            if ( table == null || table . Rows . Count < 0 )
-                return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-            else
-            {
-                string code = table . Rows [ 0 ] [ "LEF001" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( code ) )
-                    return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-                else
-                {
-                    if ( code . Substring ( 0 ,8 ) . Equals ( UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) ) )
-                        return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
-                    else
-                        return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
-                }
-            }
+            //DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            //if ( table == null || table . Rows . Count < 0 )
+            //    return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //else
+            //{
+            //    string code = table . Rows [ 0 ] [ "LEF001" ] . ToString ( );
+            //    if ( string . IsNullOrEmpty ( code ) )
+            //        return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //    else
+            //    {
+            //        if ( code . Substring ( 0 ,8 ) . Equals ( UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) ) )
+            //            return ( Convert . ToInt64 ( code ) + 1 ) . ToString ( );
+            //        else
+            //            return UserInfoMation . sysTime . ToString ( "yyyyMMdd" ) + "001";
+            //    }
+            //}
         }
 
         /// <summary>
@@ -95,7 +96,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableView ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,LEG001,LEG002,LEG003,LEG004,LEG005,LEG006,LEG007,LEG008,LEG009,LEG010,LEG011,LEG012,LEG016,LEG013,LEG014,LEG015 FROM MIKLEG WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT idx,LEG001,LEG002,LEG003,LEG004,LEG005,LEG006,LEG007,LEG008,LEG009,LEG010,LEG011,LEG012,LEG016,LEG013,LEG014,LEG015,LEG017 FROM MIKLEG WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -213,6 +214,10 @@ namespace LineProductMesBll . Dao
                 modelBody . LEG014 = string . IsNullOrEmpty ( row [ "LEG014" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LEG014" ] . ToString ( ) );
                 modelBody . LEG015 = string . IsNullOrEmpty ( row [ "LEG015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LEG015" ] . ToString ( ) );
                 modelBody . LEG016 = string . IsNullOrEmpty ( row [ "LEG016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LEG016" ] . ToString ( ) );
+                if ( row [ "LEG017" ] == null || row [ "LEG017" ] . ToString ( ) == string . Empty )
+                    modelBody . LEG017 = null;
+                else
+                    modelBody . LEG017 = Convert . ToDecimal ( row [ "LEG017" ] . ToString ( ) );
                 AddBody ( SQLString ,modelBody );
             }
 
@@ -279,6 +284,10 @@ namespace LineProductMesBll . Dao
                 modelBody . LEG014 = string . IsNullOrEmpty ( row [ "LEG014" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LEG014" ] . ToString ( ) );
                 modelBody . LEG015 = string . IsNullOrEmpty ( row [ "LEG015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LEG015" ] . ToString ( ) );
                 modelBody . LEG016 = string . IsNullOrEmpty ( row [ "LEG016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LEG016" ] . ToString ( ) );
+                if ( row [ "LEG017" ] == null || row [ "LEG017" ] . ToString ( ) == string . Empty )
+                    modelBody . LEG017 = null;
+                else
+                    modelBody . LEG017 = Convert . ToDecimal ( row [ "LEG017" ] . ToString ( ) );
                 if ( modelBody . idx < 1 )
                     AddBody ( SQLString ,modelBody );
                 else
@@ -322,9 +331,9 @@ namespace LineProductMesBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKLEF(" );
-            strSql . Append ( "LEF001,LEF009,LEF010,LEF011,LEF012,LEF013,LEF015,LEF016,LEF017,LEF018,LEF019,LEF020,LEF021,LEF022,LEF023,LEF024)" );
+            strSql . Append ( "LEF001,LEF009,LEF010,LEF011,LEF012,LEF013,LEF015,LEF016,LEF017,LEF018,LEF019,LEF020,LEF021,LEF022,LEF023,LEF024,LEF025,LEF026,LEF027)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@LEF001,@LEF009,@LEF010,@LEF011,@LEF012,@LEF013,@LEF015,@LEF016,@LEF017,@LEF018,@LEF019,@LEF020,@LEF021,@LEF022,@LEF023,@LEF024)" );
+            strSql . Append ( "@LEF001,@LEF009,@LEF010,@LEF011,@LEF012,@LEF013,@LEF015,@LEF016,@LEF017,@LEF018,@LEF019,@LEF020,@LEF021,@LEF022,@LEF023,@LEF024,@LEF025,@LEF026,@LEF027)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LEF001", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEF009", SqlDbType.NVarChar,20),
@@ -341,7 +350,10 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@LEF021", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEF022", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEF023", SqlDbType.DateTime),
-                    new SqlParameter("@LEF024", SqlDbType.DateTime)
+                    new SqlParameter("@LEF024", SqlDbType.DateTime),
+                    new SqlParameter("@LEF025", SqlDbType.Decimal),
+                    new SqlParameter("@LEF026", SqlDbType.Decimal),
+                    new SqlParameter("@LEF027", SqlDbType.Decimal)
             };
             parameters [ 0 ] . Value = model . LEF001;
             parameters [ 1 ] . Value = model . LEF009;
@@ -359,15 +371,18 @@ namespace LineProductMesBll . Dao
             parameters [ 13 ] . Value = model . LEF022;
             parameters [ 14 ] . Value = model . LEF023;
             parameters [ 15 ] . Value = model . LEF024;
+            parameters [ 16 ] . Value = model . LEF025;
+            parameters [ 17 ] . Value = model . LEF026;
+            parameters [ 18 ] . Value = model . LEF027;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBody ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LEDNewsBodyEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "insert into MIKLEG(" );
-            strSql . Append ( "LEG001,LEG002,LEG003,LEG004,LEG005,LEG006,LEG007,LEG008,LEG009,LEG010,LEG011,LEG012,LEG013,LEG014,LEG015,LEG016)" );
+            strSql . Append ( "LEG001,LEG002,LEG003,LEG004,LEG005,LEG006,LEG007,LEG008,LEG009,LEG010,LEG011,LEG012,LEG013,LEG014,LEG015,LEG016,LEG017)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@LEG001,@LEG002,@LEG003,@LEG004,@LEG005,@LEG006,@LEG007,@LEG008,@LEG009,@LEG010,@LEG011,@LEG012,@LEG013,@LEG014,@LEG015,@LEG016)" );
+            strSql . Append ( "@LEG001,@LEG002,@LEG003,@LEG004,@LEG005,@LEG006,@LEG007,@LEG008,@LEG009,@LEG010,@LEG011,@LEG012,@LEG013,@LEG014,@LEG015,@LEG016,@LEG017)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LEG001", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEG002", SqlDbType.NVarChar,20),
@@ -384,7 +399,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@LEG013", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEG014", SqlDbType.Decimal,9),
                     new SqlParameter("@LEG015", SqlDbType.Decimal,9),
-                    new SqlParameter("@LEG016", SqlDbType.Decimal,9)
+                    new SqlParameter("@LEG016", SqlDbType.Decimal,9),
+                    new SqlParameter("@LEG017", SqlDbType.Decimal,9)
             };
             parameters [ 0 ] . Value = model . LEG001;
             parameters [ 1 ] . Value = model . LEG002;
@@ -402,6 +418,7 @@ namespace LineProductMesBll . Dao
             parameters [ 13 ] . Value = model . LEG014;
             parameters [ 14 ] . Value = model . LEG015;
             parameters [ 15 ] . Value = model . LEG016;
+            parameters [ 16 ] . Value = model . LEG017;
             SQLString . Add ( strSql ,parameters );
         }
         void AddBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LEHNewsBodyEntity model )
@@ -454,7 +471,10 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "LEF020=@LEF020," );
             strSql . Append ( "LEF021=@LEF021," );
             strSql . Append ( "LEF023=@LEF023," );
-            strSql . Append ( "LEF024=@LEF024 " );
+            strSql . Append ( "LEF024=@LEF024," );
+            strSql . Append ( "LEF025=@LEF025," );
+            strSql . Append ( "LEF026=@LEF026," );
+            strSql . Append ( "LEF027=@LEF027 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LEF009", SqlDbType.NVarChar,20),
@@ -472,7 +492,10 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@idx", SqlDbType.Int,4),
                     new SqlParameter("@LEF021", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEF023", SqlDbType.DateTime),
-                    new SqlParameter("@LEF024", SqlDbType.DateTime)
+                    new SqlParameter("@LEF024", SqlDbType.DateTime),
+                    new SqlParameter("@LEF025", SqlDbType.Decimal),
+                    new SqlParameter("@LEF026", SqlDbType.Decimal),
+                    new SqlParameter("@LEF027", SqlDbType.Decimal)
             };
             parameters [ 0 ] . Value = model . LEF009;
             parameters [ 1 ] . Value = model . LEF010;
@@ -489,6 +512,9 @@ namespace LineProductMesBll . Dao
             parameters [ 12 ] . Value = model . LEF021;
             parameters [ 13 ] . Value = model . LEF023;
             parameters [ 14 ] . Value = model . LEF024;
+            parameters [ 15 ] . Value = model . LEF025;
+            parameters [ 16 ] . Value = model . LEF026;
+            parameters [ 17 ] . Value = model . LEF027;
             SQLString . Add ( strSql ,parameters );
         }
         void EditBody ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LEDNewsBodyEntity model )
@@ -509,7 +535,8 @@ namespace LineProductMesBll . Dao
             strSql . Append ( "LEG013=@LEG013," );
             strSql . Append ( "LEG014=@LEG014," );
             strSql . Append ( "LEG015=@LEG015," );
-            strSql . Append ( "LEG016=@LEG016 " );
+            strSql . Append ( "LEG016=@LEG016," );
+            strSql . Append ( "LEG017=@LEG017 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@LEG003", SqlDbType.NVarChar,20),
@@ -527,7 +554,8 @@ namespace LineProductMesBll . Dao
                     new SqlParameter("@LEG013", SqlDbType.NVarChar,20),
                     new SqlParameter("@LEG014", SqlDbType.Decimal),
                     new SqlParameter("@LEG015", SqlDbType.Decimal),
-                    new SqlParameter("@LEG016", SqlDbType.Decimal)
+                    new SqlParameter("@LEG016", SqlDbType.Decimal),
+                    new SqlParameter("@LEG017", SqlDbType.Decimal)
             };
             parameters [ 0 ] . Value = model . LEG003;
             parameters [ 1 ] . Value = model . LEG004;
@@ -545,6 +573,7 @@ namespace LineProductMesBll . Dao
             parameters [ 13 ] . Value = model . LEG014;
             parameters [ 14 ] . Value = model . LEG015;
             parameters [ 15 ] . Value = model . LEG016;
+            parameters [ 16 ] . Value = model . LEG017;
             SQLString . Add ( strSql ,parameters );
         }
         void EidtBodyOne ( Dictionary<object ,object> SQLString ,LineProductMesEntityu . LEHNewsBodyEntity model )
@@ -609,7 +638,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTableQuery ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT LEF001,LEH002,LEH003,LEH004,LEF017,LEF018,LEF013,LEH007,LEH009 FROM MIKLEF A LEFT JOIN MIKLEH B ON A.LEF001=B.LEH001 WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT LEF001,LEH002,LEH003,LEH004,LEF017,LEF018,LEF013,LEH007,LEH009,LEF021 FROM MIKLEF A LEFT JOIN MIKLEH B ON A.LEF001=B.LEH001 WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -622,7 +651,7 @@ namespace LineProductMesBll . Dao
         public LineProductMesEntityu . LEDNewsHeaderEntity getModel ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT idx,LEF001,LEF002,LEF003,LEF004,LEF005,LEF006,LEF007,LEF008,LEF009,LEF010,LEF011,LEF012,LEF013,LEF014,LEF015,LEF016,LEF017,LEF018,LEF019,LEF020,LEF021,LEF023,LEF024 FROM MIKLEF WHERE LEF001='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT idx,LEF001,LEF002,LEF003,LEF004,LEF005,LEF006,LEF007,LEF008,LEF009,LEF010,LEF011,LEF012,LEF013,LEF014,LEF015,LEF016,LEF017,LEF018,LEF019,LEF020,LEF021,LEF022,LEF023,LEF024,LEF025,CONVERT(FLOAT,LEF026) LEF026,CONVERT(FLOAT,LEF027) LEF027 FROM MIKLEF WHERE LEF001='{0}'" ,oddNum );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table != null && table . Rows . Count > 0 )
@@ -738,6 +767,10 @@ namespace LineProductMesBll . Dao
                 {
                     model . LEF021 = row [ "LEF021" ] . ToString ( );
                 }
+                if ( row [ "LEF022" ] != null && row [ "LEF022" ] . ToString ( ) != "" )
+                {
+                    model . LEF022 = row [ "LEF022" ] . ToString ( );
+                }
                 if ( row [ "LEF023" ] != null && row [ "LEF023" ] . ToString ( ) != "" )
                 {
                     model . LEF023 = DateTime . Parse ( row [ "LEF023" ] . ToString ( ) );
@@ -745,6 +778,18 @@ namespace LineProductMesBll . Dao
                 if ( row [ "LEF024" ] != null && row [ "LEF024" ] . ToString ( ) != "" )
                 {
                     model . LEF024 = DateTime . Parse ( row [ "LEF024" ] . ToString ( ) );
+                }
+                if ( row [ "LEF025" ] != null && row [ "LEF025" ] . ToString ( ) != "" )
+                {
+                    model . LEF025 = decimal . Parse ( row [ "LEF025" ] . ToString ( ) );
+                }
+                if ( row [ "LEF026" ] != null && row [ "LEF026" ] . ToString ( ) != "" )
+                {
+                    model . LEF026 = decimal . Parse ( row [ "LEF026" ] . ToString ( ) );
+                }
+                if ( row [ "LEF027" ] != null && row [ "LEF027" ] . ToString ( ) != "" )
+                {
+                    model . LEF027 = decimal . Parse ( row [ "LEF027" ] . ToString ( ) );
                 }
             }
             return model;
@@ -794,7 +839,7 @@ namespace LineProductMesBll . Dao
         public DataTable getTablePrintTwo ( string oddNum )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT DISTINCT LEH002 ANW002,LEH003 ANW003,LEH004 ANW004,LEH005 ANW005,LEH006 ANW007,LEH007 ANW006,LEH009 ANW009,DDA003 DEA008 FROM MIKLEG A INNER JOIN MIKLEF B ON A.LEG001=B.LEF001 INNER JOIN MIKLEH D ON A.LEG001=D.LEH001 LEFT JOIN TPADEA C ON D.LEH003=C.DEA001 INNER JOIN TPADDA E ON C.DEA008=E.DDA001 WHERE LEF001 ='{0}'" ,oddNum );
+            strSql . AppendFormat ( "SELECT LEH002 ANW002,LEH003 ANW003,LEH004 ANW004,LEH005 ANW005,LEH006 ANW007,SUM(LEH009) ANW006,LEH007-(SELECT SUM(LEH009) FROM MIKLEH E WHERE D.LEH002=E.LEH002 AND D.LEH003=E.LEH003) ANW009,DDA003 DEA008 FROM MIKLEF B INNER JOIN MIKLEH D ON B.LEF001=D.LEH001 LEFT JOIN TPADEA C ON D.LEH003=C.DEA001 INNER JOIN TPADDA E ON C.DEA008=E.DDA001 WHERE LEF001 ='{0}' GROUP BY LEH002,LEH003,LEH004,LEH005,LEH006,LEH007,DDA003" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

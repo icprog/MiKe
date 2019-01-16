@@ -68,7 +68,7 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "请选择需要删除的内容" );
                 return 0;
             }
-            if ( XtraMessageBox . Show ( "确定删除选中内容?" ,"删除?" ,MessageBoxButtons . OKCancel ) == DialogResult . OK )
+            if ( XtraMessageBox . Show ( "确定删除选中内容?" ,"删除?" ,MessageBoxButtons . YesNo ) == DialogResult . Yes )
             {
                 result = _bll . Delete ( _model . idx );
                 if ( result == true )

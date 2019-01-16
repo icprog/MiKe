@@ -35,8 +35,8 @@ namespace LineProductMesEntityu
         private decimal? _ijb024;
         private decimal? _ijb025;
         private string _ijb026;
-        private string _ijb027;
-        private string _ijb028;
+        private decimal? _ijb027;
+        private decimal? _ijb028;
         private string _ijb029;
         private string _ijb030;
 
@@ -405,7 +405,7 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 仓库
         /// </summary>
         public string IJB026
         {
@@ -419,9 +419,9 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 换模工时
         /// </summary>
-        public string IJB027
+        public decimal? IJB027
         {
             set
             {
@@ -433,9 +433,9 @@ namespace LineProductMesEntityu
             }
         }
         /// <summary>
-        /// 
+        /// 换模小时工资
         /// </summary>
-        public string IJB028
+        public decimal? IJB028
         {
             set
             {

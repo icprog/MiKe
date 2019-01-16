@@ -19,16 +19,21 @@ namespace LineProductMes . ChildForm
     {
         LineProductMesBll.Bll.InjectionMoldingBll _bll=null;
         string oddNum=string.Empty;
-        DataTable tableView;
+        DataTable tableColumn;
         
         public FormInjectionMoldingQuery ( )
         {
             InitializeComponent ( );
 
+           
+        }
+
+        private void FormInjectionMoldingQuery_Load ( object sender ,EventArgs e )
+        {
             _bll = new LineProductMesBll . Bll . InjectionMoldingBll ( );
-            
-            GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View2 ,View3 ,View4   ,View } );
-            GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View2 ,View3 ,View4   ,View } );
+
+            GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View2 ,View3 ,View4 ,View } );
+            GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 ,View2 ,View3 ,View4 ,View } );
             FieldInfo fi = typeof ( XPaint ) . GetField ( "graphics" ,BindingFlags . Static | BindingFlags . NonPublic );
             fi . SetValue ( null ,new DrawXPaint ( ) );
 
@@ -38,10 +43,10 @@ namespace LineProductMes . ChildForm
 
         string InitData ( )
         {
-            tableView = _bll . getTableHeader ( "1=1" ,"1=1" ,"1=1" );
+            tableColumn = _bll . getTableHeader ( "1=1" ,"1=1" ,"1=1" );
             return string . Empty;
         }
-
+        
         delegate void AsynUpdateUI ( );
 
         void UI ( IAsyncResult result )
@@ -50,19 +55,19 @@ namespace LineProductMes . ChildForm
             {
                 this . Invoke ( new AsynUpdateUI ( delegate ( )
                 {
-                    txtIJA001 . Properties . DataSource = tableView . DefaultView . ToTable ( true ,"IJA001" );
+                    txtIJA001 . Properties . DataSource = tableColumn . DefaultView . ToTable ( true ,"IJA001" );
                     txtIJA001 . Properties . DisplayMember = "IJA001";
                     txtIJA001 . Properties . ValueMember = "IJA001";
 
-                    txtIJB004 . Properties . DataSource = tableView . DefaultView . ToTable ( true ,"IJB004" );
+                    txtIJB004 . Properties . DataSource = tableColumn . DefaultView . ToTable ( true ,"IJB004" );
                     txtIJB004 . Properties . DisplayMember = "IJB004";
                     txtIJB004 . Properties . ValueMember = "IJB004";
 
-                    txtIJB005 . Properties . DataSource = tableView . DefaultView . ToTable ( true ,"IJB005" );
+                    txtIJB005 . Properties . DataSource = tableColumn . DefaultView . ToTable ( true ,"IJB005" );
                     txtIJB005 . Properties . DisplayMember = "IJB005";
                     txtIJB005 . Properties . ValueMember = "IJB005";
 
-                    txtIJB006 . Properties . DataSource = tableView . DefaultView . ToTable ( true ,"IJB006" );
+                    txtIJB006 . Properties . DataSource = tableColumn . DefaultView . ToTable ( true ,"IJB006" );
                     txtIJB006 . Properties . DisplayMember = "IJB006";
                     txtIJB006 . Properties . ValueMember = "IJB006";
                 } ) );
@@ -71,7 +76,7 @@ namespace LineProductMes . ChildForm
 
         private void btnClear_Click ( object sender ,EventArgs e )
         {
-            txtIJA001 . EditValue = txtIJB004 . EditValue = txtIJB005 . EditValue = txtIJB006 . EditValue =dateEdit1.Text= null;
+            txtIJA001 . EditValue = txtIJB004 . EditValue = txtIJB005 . EditValue = txtIJB006 . EditValue =dateEdit1.Text=txtSa.Text= null;
         }
 
         private void btnQuery_Click ( object sender ,EventArgs e )
@@ -104,6 +109,12 @@ namespace LineProductMes . ChildForm
                 strWhere1 += " AND IJA007='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
                 strWhere2 += " AND IJA007='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
             }
+            if ( !string . IsNullOrEmpty ( txtSa . Text ) )
+            {
+                strWhere += " AND IJA002='" + txtSa.Text + "'";
+                strWhere1 += " AND IJA002='" + txtSa . Text + "'";
+                strWhere2 += " AND IJA002='" + txtSa . Text + "'";
+            }
 
             DataTable tableView = _bll . getTableHeader ( strWhere ,strWhere1 ,strWhere2 );
             gridControl1 . DataSource = tableView;
@@ -128,5 +139,6 @@ namespace LineProductMes . ChildForm
                 return oddNum;
             }
         }
+
     }
 }

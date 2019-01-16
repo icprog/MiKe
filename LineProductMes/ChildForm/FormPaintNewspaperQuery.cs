@@ -12,7 +12,7 @@ namespace LineProductMes . ChildForm
     {
         LineProductMesBll.Bll.PaintNewspaperBll _bll;
         DataTable tableView;
-        string oddNum=string.Empty;
+        string oddNum=string.Empty,strWhere=string.Empty;
         
         public FormPaintNewspaperQuery ( )
         {
@@ -30,7 +30,9 @@ namespace LineProductMes . ChildForm
 
         string InitData ( )
         {
-            tableView = _bll . tableViewQuery ( "1=1" );
+            if ( strWhere == string . Empty )
+                strWhere = "1=1";
+            tableView = _bll . tableViewQuery ( strWhere );
 
             return string . Empty;
         }
@@ -69,7 +71,7 @@ namespace LineProductMes . ChildForm
 
         private void btnQuery_Click ( object sender ,EventArgs e )
         {
-            string strWhere = "1=1";
+             strWhere = "1=1";
             if ( !string . IsNullOrEmpty ( txtPAN001 . Text ) )
                 strWhere += " AND PAN001='" + txtPAN001 . Text + "'";
             if ( !string . IsNullOrEmpty ( txtPAO002 . Text ) )
@@ -80,6 +82,8 @@ namespace LineProductMes . ChildForm
                 strWhere += " AND PAO004='" + txtPAO004 . Text + "'";
             if ( !string . IsNullOrEmpty ( dateEdit1 . Text ) )
                 strWhere += " AND PAN006='" + Convert . ToDateTime ( dateEdit1 . Text ) . ToString ( "yyyyMMdd" ) + "'";
+            if ( !string . IsNullOrEmpty ( txtSa . Text ) )
+                strWhere += " AND PAN013='" + txtSa . Text + "'";
 
             tableView = _bll . tableViewQuery ( strWhere );
             gridControl1 . DataSource = tableView;

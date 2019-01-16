@@ -177,6 +177,12 @@
     <Compile Include="ChildForm\FormAssNewWorkQuery.Designer.cs">
       <DependentUpon>FormAssNewWorkQuery.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForm\FormAssOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormAssOrder.Designer.cs">
+      <DependentUpon>FormAssOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForm\FormBatOpera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,11 +201,23 @@
     <Compile Include="ChildForm\FormDepartQueryOfPerson.Designer.cs">
       <DependentUpon>FormDepartQueryOfPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForm\FormHardOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormHardOrder.Designer.cs">
+      <DependentUpon>FormHardOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForm\FormHardWareWorkQuery.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForm\FormHardWareWorkQuery.Designer.cs">
       <DependentUpon>FormHardWareWorkQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\FormInjecOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormInjecOrder.Designer.cs">
+      <DependentUpon>FormInjecOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForm\FormInjectionMoldingQuery.cs">
       <SubType>Form</SubType>
@@ -212,6 +230,12 @@
     </Compile>
     <Compile Include="ChildForm\FormLEDNewsQuery.Designer.cs">
       <DependentUpon>FormLEDNewsQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\FormLEDNOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormLEDNOrder.Designer.cs">
+      <DependentUpon>FormLEDNOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForm\FormLogisticsNewQuery.cs">
       <SubType>Form</SubType>
@@ -237,6 +261,12 @@
     <Compile Include="ChildForm\FormPaintNewspaperQuery.Designer.cs">
       <DependentUpon>FormPaintNewspaperQuery.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForm\FormPaintOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormPaintOrder.Designer.cs">
+      <DependentUpon>FormPaintOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForm\FormProductPlanQuery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +290,12 @@
     </Compile>
     <Compile Include="ChildForm\FormTPADEAInfo.Designer.cs">
       <DependentUpon>FormTPADEAInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\FormUserChoise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormUserChoise.Designer.cs">
+      <DependentUpon>FormUserChoise.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForm\FormWagesQuery.cs">
       <SubType>Form</SubType>
@@ -295,6 +331,12 @@
     <Compile Include="ClassForMain\CopyUtils.cs" />
     <Compile Include="ClassForMain\ExportExcel.cs" />
     <Compile Include="ClassForMain\FormClosingState.cs" />
+    <Compile Include="ChildForm\FormLEDOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\FormLEDOrder.Designer.cs">
+      <DependentUpon>FormLEDOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassForMain\Graph.cs" />
     <Compile Include="ClassForMain\GridChartStyle.cs" />
     <Compile Include="ClassForMain\GrivColumnStyle.cs" />
@@ -560,6 +602,9 @@
     <EmbeddedResource Include="ChildForm\FormAssNewWorkQuery.resx">
       <DependentUpon>FormAssNewWorkQuery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormAssOrder.resx">
+      <DependentUpon>FormAssOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormBatOpera.resx">
       <DependentUpon>FormBatOpera.cs</DependentUpon>
     </EmbeddedResource>
@@ -570,14 +615,23 @@
       <DependentUpon>FormDepartQueryOfPerson.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormHardOrder.resx">
+      <DependentUpon>FormHardOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormHardWareWorkQuery.resx">
       <DependentUpon>FormHardWareWorkQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormInjecOrder.resx">
+      <DependentUpon>FormInjecOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormInjectionMoldingQuery.resx">
       <DependentUpon>FormInjectionMoldingQuery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormLEDNewsQuery.resx">
       <DependentUpon>FormLEDNewsQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormLEDNOrder.resx">
+      <DependentUpon>FormLEDNOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormLogisticsNewQuery.resx">
       <DependentUpon>FormLogisticsNewQuery.cs</DependentUpon>
@@ -591,6 +645,9 @@
     <EmbeddedResource Include="ChildForm\FormPaintNewspaperQuery.resx">
       <DependentUpon>FormPaintNewspaperQuery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormPaintOrder.resx">
+      <DependentUpon>FormPaintOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormProductPlanQuery.resx">
       <DependentUpon>FormProductPlanQuery.cs</DependentUpon>
     </EmbeddedResource>
@@ -602,6 +659,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormTPADEAInfo.resx">
       <DependentUpon>FormTPADEAInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormUserChoise.resx">
+      <DependentUpon>FormUserChoise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\FormWagesQuery.resx">
       <DependentUpon>FormWagesQuery.cs</DependentUpon>
@@ -617,6 +677,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\ProControlChild.resx">
       <DependentUpon>ProControlChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\FormLEDOrder.resx">
+      <DependentUpon>FormLEDOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
@@ -694,8 +757,6 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\licenses.licx" />
     <EmbeddedResource Include="FormMouldInformation.resx">

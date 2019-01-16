@@ -329,7 +329,7 @@ namespace LineProductMes
                     XtraMessageBox . Show ( "已经写入主计划一览表,不允许删除" );
                     return;
                 }
-                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . OKCancel ) != DialogResult . OK )
+                if ( XtraMessageBox . Show ( "确认删除?" ,"删除" ,MessageBoxButtons . YesNo ) != DialogResult . Yes )
                     return;           
                 if ( _body . idx > 0 && !idxList . Contains ( _body . idx . ToString ( ) ) )
                     idxList . Add ( _body . idx . ToString ( ) );

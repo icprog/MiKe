@@ -655,8 +655,8 @@ namespace LineProductMes . ClassForMain
                 codeOdd = "IJD001";
                 sTime = "IJD006";
                 eTime = "IJD007";
-                sjTime = string . Empty;
-                ejTime = string . Empty;
+                sjTime = "IJD014";
+                ejTime = "IJD015";
                 checkTime ( table ,tableOne );
                 if ( !string . IsNullOrEmpty ( messageInfo ) )
                     return messageInfo;
