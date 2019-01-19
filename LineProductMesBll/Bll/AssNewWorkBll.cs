@@ -152,9 +152,9 @@ namespace LineProductMesBll . Bll
         /// <param name="oddNum"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool result )
+        public bool Exanmie ( string oddNum ,bool result ,string department)
         {
-            return dal . Exanmie ( oddNum ,result );
+            return dal . Exanmie ( oddNum ,result ,department );
         }
 
         /// <summary>

@@ -11,6 +11,7 @@ using System . Linq;
 using System . Windows . Forms;
 using System . ComponentModel;
 using LineProductMes . ChildForm;
+using LineProductMesBll;
 
 namespace LineProductMes
 {
@@ -180,12 +181,26 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "单号不可为空" );
                 return 0;
             }
+
+            _header . LEF001 = txtLEF001 . Text;
+            _header . LEF011 = txtLEF012 . EditValue . ToString ( );
+
             state = toolExamin . Caption;
             if ( state . Equals ( "审核" ) )
                 _header . LEF017 = true;
             else
                 _header . LEF017 = false;
-            result = _bll . Exanmie ( txtLEF001 . Text ,_header . LEF017 );
+
+            if ( _header . LEF017 == false )
+            {
+                if ( GenerateSGMRCACB . Exists ( _header . LEF001 ) )
+                {
+                    XtraMessageBox . Show ( "已入库,不允许反审核" );
+                    return 0;
+                }
+            }
+
+            result = _bll . Exanmie ( _header );
             if ( result )
             {
                 XtraMessageBox . Show ( state + "成功" );
@@ -1170,6 +1185,7 @@ namespace LineProductMes
                     continue;
                 }
 
+                u0 = 0;
                 if ( !string . IsNullOrEmpty ( row [ "LEG005" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "LEG006" ] . ToString ( ) ) )
                 {
                     dtOne = Convert . ToDateTime ( row [ "LEG005" ] );

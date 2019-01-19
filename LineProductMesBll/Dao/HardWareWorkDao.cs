@@ -559,7 +559,7 @@ namespace LineProductMesBll . Dao
         /// <param name="oddNum"></param>
         /// <param name="state"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool state,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity _header )
+        public bool Exanmie ( int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity _header )
         {
             Dictionary<Object ,Object> SQLString = new Dictionary<Object ,Object> ( );
 
@@ -569,14 +569,22 @@ namespace LineProductMesBll . Dao
                 new SqlParameter("@HAW001",SqlDbType.NVarChar,20),
                 new SqlParameter("@HAW018",SqlDbType.Bit,1)
             };
-            parameter [ 0 ] . Value = oddNum;
-            parameter [ 1 ] . Value = state;
+            parameter [ 0 ] . Value = _header . HAW001;
+            parameter [ 1 ] . Value = _header . HAW018;
             SQLString . Add ( strSql ,parameter );
 
-            if ( state )
+            if ( _header . HAW018 )
             {
                 if ( string . IsNullOrEmpty ( _header . HAW022 ) && numbers!=0 )
                     addSGM ( SQLString ,numbers ,_header );
+
+                if ( _header . HAW009 > 0 )
+                {
+                    strSql = new StringBuilder ( );
+                    strSql . AppendFormat ( "SELECT HAW002 ANN002,HAW003 ANN003,HAW005 ANN005,HAW009 ANN009,DDA001 FROM MIKHAW A LEFT JOIN TPADEA B ON A.HAW003=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001 WHERE HAW001='{0}'" ,_header . HAW001 );
+
+                    GenerateSGMRCACB . GenerateSGM ( SQLString ,strSql ,_header . HAW001 ,_header . HAW014 );
+                }
             }
             else
             {

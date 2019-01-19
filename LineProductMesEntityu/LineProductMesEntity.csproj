@@ -84,6 +84,9 @@
     <Compile Include="PurchaseBoardEntity.cs" />
     <Compile Include="SemiProductPlanEntity.cs" />
     <Compile Include="SGMRBBEntity.cs" />
+    <Compile Include="SGMRCA.cs" />
+    <Compile Include="SGMRCB.cs" />
+    <Compile Include="SGMRCC.cs" />
     <Compile Include="SGMSAAEntity.cs" />
     <Compile Include="SGMSABEntity.cs" />
     <Compile Include="SGMSACEntity.cs" />

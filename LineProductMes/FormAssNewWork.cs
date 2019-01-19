@@ -10,6 +10,7 @@ using System . Reflection;
 using DevExpress . Utils . Paint;
 using System . Linq;
 using LineProductMes . ChildForm;
+using LineProductMesBll;
 
 namespace LineProductMes
 {
@@ -192,7 +193,19 @@ namespace LineProductMes
                 _header . ANW020 = true;
             else
                 _header . ANW020 = false;
-            result = _bll . Exanmie ( txtANW001 . Text ,_header . ANW020 );
+
+            _header . ANW001 = txtANW001 . Text;
+            _header . ANW012 = txtANW013 . EditValue . ToString ( );
+            if ( _header . ANW020 == false )
+            {
+                if ( GenerateSGMRCACB . Exists ( _header . ANW001 ) )
+                {
+                    XtraMessageBox . Show ( "已入库,不允许反审核" );
+                    return 0;
+                }
+            }
+
+            result = _bll . Exanmie ( txtANW001 . Text ,_header . ANW020 ,_header . ANW012 );
             if ( result )
             {
                 XtraMessageBox . Show ( state + "成功" );

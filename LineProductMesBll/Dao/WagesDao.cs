@@ -4,6 +4,7 @@ using System . Text;
 using StudentMgr;
 using System . Data;
 using System . Data . SqlClient;
+using System . Linq;
 
 namespace LineProductMesBll . Dao
 {
@@ -286,21 +287,21 @@ namespace LineProductMesBll . Dao
                 }
             }
 
-            if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
-            {
-                SQLString . Clear ( );
-                //本月各车间考勤天数
-                table = getTableTwo ( dt );
-                if ( table != null && table . Rows . Count > 0 )
-                {
-                    foreach ( DataRow row in table . Rows )
-                    {
-                        model . WAH022 = string . IsNullOrEmpty ( row [ "CQ" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "CQ" ] . ToString ( ) );
-                        model . WAH023 = row [ "CJ" ] . ToString ( );
-                        EditTwo ( SQLString ,model );
-                    }
-                }
-            }
+            //if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
+            //{
+            //    SQLString . Clear ( );
+            //    //本月各车间考勤天数
+            //    table = getTableTwo ( dt );
+            //    if ( table != null && table . Rows . Count > 0 )
+            //    {
+            //        foreach ( DataRow row in table . Rows )
+            //        {
+            //            model . WAH022 = string . IsNullOrEmpty ( row [ "CQ" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "CQ" ] . ToString ( ) );
+            //            model . WAH023 = row [ "CJ" ] . ToString ( );
+            //            EditTwo ( SQLString ,model );
+            //        }
+            //    }
+            //}
 
             if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
             {
@@ -317,6 +318,23 @@ namespace LineProductMesBll . Dao
                     }
                 }
             }
+
+
+            if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
+            {
+                SQLString . Clear ( );
+                table = getTableNin ( model . WAH001 );
+                if ( table != null && table . Rows . Count > 0 )
+                {
+                    foreach ( DataRow row in table . Rows )
+                    {
+                        model . WAH022 = string . IsNullOrEmpty ( row [ "WAH005" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "WAH005" ] . ToString ( ) );
+                        model . WAH023 = row [ "WAH023" ] . ToString ( );
+                        EditTwo ( SQLString ,model );
+                    }
+                }
+            }
+
 
             if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
             {
@@ -367,6 +385,12 @@ namespace LineProductMesBll . Dao
                             EditEgi ( SQLString ,model );
                     }
                 }
+            }
+
+            if ( SqlHelper . ExecuteSqlTranDic ( SQLString ) )
+            {
+                SQLString . Clear ( );
+
             }
 
             return SqlHelper . ExecuteSqlTranDic ( SQLString );
@@ -470,6 +494,19 @@ namespace LineProductMesBll . Dao
             strSql . Append ( " UNION ALL " );
             strSql . AppendFormat ( "SELECT LGP002,COUNT(1) CQ FROM (SELECT DISTINCT LGP002,CASE WHEN LGP009 IS NOT NULL AND LGP009!='' THEN CONVERT(NVARCHAR(20),LGP009,112) WHEN LGP010 IS NOT NULL AND LGP010!='' THEN CONVERT(NVARCHAR(20),LGP010,112) WHEN LGP007 IS NOT NULL AND LGP007!='' THEN CONVERT(NVARCHAR(20),LGP007,112) WHEN LGP008 IS NOT NULL AND LGP008!='' THEN CONVERT(NVARCHAR(20),LGP008,112) END PPA FROM MIKLGN A INNER JOIN MIKLGP B ON A.LGN001=B.LGP001 WHERE LGN003=1 AND LGP005 IN ('在职','请假') AND (CASE WHEN LGP009 IS NOT NULL AND LGP009!='' THEN CONVERT(NVARCHAR(20),LGP009,112) WHEN LGP010 IS NOT NULL AND LGP010!='' THEN CONVERT(NVARCHAR(20),LGP010,112) WHEN LGP007 IS NOT NULL AND LGP007!='' THEN CONVERT(NVARCHAR(20),LGP007,112) WHEN LGP008 IS NOT NULL AND LGP008!='' THEN CONVERT(NVARCHAR(20),LGP008,112) END) LIKE '{0}%') A GROUP BY LGP002" ,dt . ToString ( "yyyyMM" ) );
             strSql . Append ( ") A GROUP BY ANX002" );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取车间的考勤天数为本车间最多考勤的员工
+        /// </summary>
+        /// <param name="oddNum"></param>
+        /// <returns></returns>
+        DataTable getTableNin ( string oddNum )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT MAX(WAH005) WAH005,WAH023 FROM MIKWAH WHERE WAH001='{0}' GROUP BY WAH023" ,oddNum );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

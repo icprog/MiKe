@@ -47,6 +47,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.copy = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiliu = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.WAH003 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.WAH023 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,7 +79,6 @@
             this.WAH022 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.wait = new DevExpress.XtraWaitForm.ProgressPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tiliu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -312,14 +312,20 @@
             this.copy,
             this.tiliu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 48);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // copy
             // 
             this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(152, 22);
+            this.copy.Size = new System.Drawing.Size(148, 22);
             this.copy.Text = "复制";
+            // 
+            // tiliu
+            // 
+            this.tiliu.Name = "tiliu";
+            this.tiliu.Size = new System.Drawing.Size(148, 22);
+            this.tiliu.Text = "平均分配提留";
             // 
             // gridView1
             // 
@@ -631,6 +637,7 @@
             this.WAH020.OptionsColumn.AllowEdit = false;
             this.WAH020.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WAH020", "{0:0.#}")});
+            this.WAH020.ToolTip = "200/全勤天数*出勤天数";
             this.WAH020.Visible = true;
             this.WAH020.VisibleIndex = 21;
             // 
@@ -736,12 +743,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // tiliu
-            // 
-            this.tiliu.Name = "tiliu";
-            this.tiliu.Size = new System.Drawing.Size(152, 22);
-            this.tiliu.Text = "平均分配提留";
             // 
             // FormWages
             // 

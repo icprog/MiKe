@@ -97,9 +97,9 @@ namespace LineProductMesBll . Bll
         /// <param name="oddNum"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool result )
+        public bool Exanmie ( LineProductMesEntityu . LEDNewsHeaderEntity model )
         {
-            return dal . Exanmie ( oddNum ,result );
+            return dal . Exanmie ( model );
         }
 
         /// <summary>

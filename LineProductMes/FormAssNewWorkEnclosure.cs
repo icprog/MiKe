@@ -2,6 +2,7 @@
 using DevExpress . XtraEditors;
 using LineProductMes . ChildForm;
 using LineProductMes . ClassForMain;
+using LineProductMesBll;
 using System;
 using System . Collections . Generic;
 using System . ComponentModel;
@@ -175,11 +176,13 @@ namespace LineProductMes
             }
 
             _header . ANT001 = txtANT001 . Text;
+
             state = toolExamin . Caption;
             if ( state . Equals ( "审核" ) )
                 _header . ANT006 = true;
             else
                 _header . ANT006 = false;
+
             result = _bll . Examine ( _header );
             if ( result )
             {

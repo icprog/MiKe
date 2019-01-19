@@ -11,6 +11,7 @@ using DevExpress . Utils . Paint;
 using System . Threading;
 using System . Windows . Forms;
 using LineProductMes . ChildForm;
+using LineProductMesBll;
 
 namespace LineProductMes
 {
@@ -183,7 +184,20 @@ namespace LineProductMes
                 _header . PAN009 = true;
             else
                 _header . PAN009 = false;
-            result = _bll . Exanmie ( txtPAN001 . Text ,_header . PAN009 );
+
+            _header . PAN001 = txtPAN001 . Text;
+            _header . PAN004 = txtPAN005 . EditValue . ToString ( );
+
+            if ( _header . PAN009 == false )
+            {
+                if ( GenerateSGMRCACB . Exists ( _header . PAN001 ) )
+                {
+                    XtraMessageBox . Show ( "已入库,不允许反审核" );
+                    return 0;
+                }
+            }
+
+            result = _bll . Exanmie ( _header );
             if ( result )
             {
                 XtraMessageBox . Show ( state + "成功" );

@@ -562,6 +562,8 @@ namespace LineProductMesBll . Dao
         /// <returns></returns>
         public bool Examine ( LineProductMesEntityu . AssNewWorkEnclosureHeaderEntity model )
         {
+            Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
+
             StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "UPDATE MIKANT SET ANT006=@ANT006 WHERE ANT001=@ANT001" );
             SqlParameter [ ] parameter = {
@@ -570,8 +572,9 @@ namespace LineProductMesBll . Dao
             };
             parameter [ 0 ] . Value = model . ANT006;
             parameter [ 1 ] . Value = model . ANT001;
+            SQLString . Add ( strSql ,parameter );
 
-            return SqlHelper . ExecuteNonQueryResult ( strSql . ToString ( ) ,parameter );
+            return SqlHelper . ExecuteSqlTranDic ( SQLString );
         }
 
         /// <summary>

@@ -154,9 +154,9 @@ namespace LineProductMesBll . Bll
         /// <param name="oddNum"></param>
         /// <param name="state"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool state ,int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity _header )
+        public bool Exanmie ( int numbers ,LineProductMesEntityu . HardWareWorkHeaderEntity _header )
         {
-            return dal . Exanmie ( oddNum ,state ,numbers ,_header );
+            return dal . Exanmie ( numbers ,_header );
         }
 
         /// <summary>

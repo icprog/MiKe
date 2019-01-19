@@ -930,7 +930,7 @@ namespace LineProductMes
                     row [ "LGP013" ] = 0;
                     continue;
                 }
-
+                u0 = 0;
                 if ( !string . IsNullOrEmpty ( row [ "LGP007" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "LGP008" ] . ToString ( ) ) )
                 {
                     dtOne = Convert . ToDateTime ( row [ "LGP007" ] );
@@ -958,6 +958,7 @@ namespace LineProductMes
                 else
                     totalFP = string . IsNullOrEmpty ( row [ "LGP015" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row [ "LGP015" ] );
 
+                u0 = 0;
                 if ( !string . IsNullOrEmpty ( row [ "LGP009" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "LGP010" ] . ToString ( ) ) )
                 {
                     dtOne = Convert . ToDateTime ( row [ "LGP009" ] );

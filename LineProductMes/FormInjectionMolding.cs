@@ -12,6 +12,7 @@ using System . Collections . Generic;
 using System . Linq;
 using System . Windows . Forms;
 using LineProductMes . ChildForm;
+using LineProductMesBll;
 
 namespace LineProductMes
 {
@@ -180,12 +181,26 @@ namespace LineProductMes
                 XtraMessageBox . Show ( "单号不可为空" );
                 return 0;
             }
+            _header . IJA001 = txtIJA001 . Text;
+            _header . IJA005 = txtIJA006 . EditValue . ToString ( );
+            _header . IJA002 = txtIJA002 . Text;
+
             state = toolExamin . Caption;
             if ( state . Equals ( "审核" ) )
                 _header . IJA010 = true;
             else
                 _header . IJA010 = false;
-            result = _bll . Exanmie ( txtIJA001 . Text ,_header . IJA010 );
+
+            if ( _header . IJA010 == false )
+            {
+                if ( GenerateSGMRCACB . Exists ( _header . IJA001 ) )
+                {
+                    XtraMessageBox . Show ( "已入库,不允许反审核" );
+                    return 0;
+                }
+            }
+
+            result = _bll . Exanmie ( _header );
             if ( result )
             {
                 XtraMessageBox . Show ( state + "成功" );
@@ -1605,6 +1620,7 @@ namespace LineProductMes
                     }
                     else
                         row [ "IJB024" ] = 0;
+
                     u0 = 0;
                     if ( !string . IsNullOrEmpty ( row [ "IJB018" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "IJB019" ] . ToString ( ) ) )
                     {

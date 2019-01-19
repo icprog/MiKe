@@ -11,6 +11,7 @@ using System . Linq;
 using System . Windows . Forms;
 using System . Collections . Generic;
 using LineProductMes . ChildForm;
+using LineProductMesBll;
 
 namespace LineProductMes
 {
@@ -170,6 +171,10 @@ namespace LineProductMes
             if ( getValue ( ) == false )
                 return 0;
 
+            _header . HAW001 = txtHAW001 . Text;
+            _header . HAW014 = txtHAW015 . EditValue . ToString ( );
+            _header . HAW009 = string . IsNullOrEmpty ( txtHAW009 . Text ) == true ? 0 : Convert . ToInt32 ( txtHAW009 . Text );
+
             state = toolExamin . Caption;
             if ( state . Equals ( "审核" ) )
                 _header . HAW018 = true;
@@ -185,7 +190,16 @@ namespace LineProductMes
                 }
             }
 
-            result = _bll . Exanmie ( txtHAW001 . Text ,_header . HAW018 ,numForSGM ,_header );
+            if ( _header . HAW018 == false )
+            {
+                if ( GenerateSGMRCACB . Exists ( _header . HAW001 ) )
+                {
+                    XtraMessageBox . Show ( "已入库,不允许反审核" );
+                    return 0;
+                }
+            }
+
+            result = _bll . Exanmie ( numForSGM ,_header );
             if ( result )
             {
                 XtraMessageBox . Show ( state + "成功" );
@@ -1594,7 +1608,7 @@ namespace LineProductMes
                     row [ "U1" ] = 0;
                     continue;
                 }
-
+                u0 = 0;
                 if ( !string . IsNullOrEmpty ( row [ "HAX009" ] . ToString ( ) ) && !string . IsNullOrEmpty ( row [ "HAX010" ] . ToString ( ) ) )
                 {
                     dtOne = Convert . ToDateTime ( row [ "HAX009" ] );

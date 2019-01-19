@@ -82,7 +82,7 @@ namespace LineProductMesBll . Dao
         /// <param name="oddNum"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool result )
+        public bool Exanmie ( LineProductMesEntityu . InjectionMoldingHeaderEntity model )
         {
             Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
             StringBuilder strSql = new StringBuilder ( );
@@ -91,9 +91,20 @@ namespace LineProductMesBll . Dao
                 new SqlParameter("@IJA001",SqlDbType.NVarChar,20),
                 new SqlParameter("@IJA010",SqlDbType.Bit)
             };
-            parameter [ 0 ] . Value = oddNum;
-            parameter [ 1 ] . Value = result;
+            parameter [ 0 ] . Value = model . IJA001;
+            parameter [ 1 ] . Value = model . IJA010;
             SQLString . Add ( strSql ,parameter );
+
+            if ( model . IJA010 )
+            {
+                strSql = new StringBuilder ( );
+                if ( model . IJA002 . Equals ( "计件" ) )
+                    strSql . AppendFormat ( "SELECT IJB004 ANN002,IJB005 ANN003,IJB007 ANN005,IJB015 ANN009,DDA001 FROM MIKIJB A LEFT JOIN TPADEA B ON A.IJB005=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001 WHERE IJB001='{0}'" ,model . IJA001 );
+                else if ( model . IJA002 . Equals ( "计时" ) )
+                    strSql . AppendFormat ( "SELECT IJC002 ANN002,IJC003 ANN003,IJC005 ANN005,IJC010 ANN009,DDA001 FROM MIKIJC A LEFT JOIN TPADEA B ON A.IJC003=B.DEA001 INNER JOIN TPADDA C ON B.DEA008=C.DDA001 WHERE IJC001='{0}'" ,model . IJA001 );
+
+                GenerateSGMRCACB . GenerateSGM ( SQLString ,strSql ,model . IJA001 ,model . IJA005 );
+            }
 
             return SqlHelper . ExecuteSqlTranDic ( SQLString );
         }

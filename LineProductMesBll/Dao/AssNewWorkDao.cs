@@ -785,7 +785,7 @@ namespace LineProductMesBll . Dao
         /// <param name="oddNum"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public bool Exanmie ( string oddNum ,bool result )
+        public bool Exanmie ( string oddNum ,bool result ,string department )
         {
             Dictionary<object ,object> SQLString = new Dictionary<object ,object> ( );
             StringBuilder strSql = new StringBuilder ( );
@@ -797,12 +797,14 @@ namespace LineProductMesBll . Dao
             parameter [ 0 ] . Value = oddNum;
             parameter [ 1 ] . Value = result;
             SQLString . Add ( strSql ,parameter );
-            //if ( result )
-            //{
-            //    strSql = new StringBuilder ( );
-            //    //
-            //}
-            //回写生产入库单
+
+            if ( result )
+            {
+                strSql = new StringBuilder ( );
+                strSql . AppendFormat ( "SELECT ANN002,ANN003,ANN005,ANN009,DDA001 FROM MIKANN A LEFT JOIN TPADEA C ON A.ANN003=C.DEA001 INNER JOIN TPADDA D ON C.DEA008=D.DDA001 WHERE ANN001='{0}'" ,oddNum );
+
+                GenerateSGMRCACB . GenerateSGM ( SQLString ,strSql ,oddNum ,department );
+            }
 
             return SqlHelper . ExecuteSqlTranDic ( SQLString );
         }
